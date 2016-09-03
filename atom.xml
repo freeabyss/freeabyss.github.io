@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-09-03T09:09:30.000Z</updated>
+  <updated>2016-09-03T09:31:03.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.freeabyss.com/2016/09/03/%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/"/>
     <id>http://blog.freeabyss.com/2016/09/03/初等函数/</id>
     <published>2016-09-03T08:47:57.000Z</published>
-    <updated>2016-09-03T09:09:30.000Z</updated>
+    <updated>2016-09-03T09:31:03.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>设${A，B}$是非空的数集，如果按照某种对应关系${f}$，使对于集合A中任意一个数${x}$，在集合B中都有唯一确定的数${f(x)}$和它对应，那么就称${f:A\to B}$为集合A到集合B的一个元素。记作：${y=f(x), x\in A}$<br>${x}$称为自变量，其取值范围${A}$叫做函数的定义域。<br>${y}$称为函数值，其取值范围称为函数的值域。</p>
 <h3 id="区间的概念"><a href="#区间的概念" class="headerlink" title="区间的概念"></a>区间的概念</h3><ul>
@@ -46,7 +46,13 @@
 <blockquote>
 <p>${a^ra^s=a^{r+s}}$ ${(a&gt;0 , r,s \in Q)}$<br>${(a^r)^s=a^{rs}}$ ${(a&gt;0 , r,s \in Q)}$<br>${(ab)^r=a^rb^s}$ ${(a&gt;0 , b&gt;0, r,s \in Q)}$<br>${a^{m\over n}=\sqrt[n]{a^m}}$ ${(a&gt;0 ; m,n \in N^+ 且n&gt;1)}$<br>${a^{-{m\over n}}= {1\over {a^{m\over n}}} }$ ${(a&gt;0 ; m,n \in N^+ 且n&gt;1)}$  </p>
 </blockquote>
-<h4 id="指数函数及其性质"><a href="#指数函数及其性质" class="headerlink" title="指数函数及其性质"></a>指数函数及其性质</h4><p>一般的，函数${y=a^x} (a&gt;0,且a\neq 1) x\in R $ 具有以下性质<br><img src="../images/math_function_1.png" alt=""></p>
+<h4 id="指数函数及其性质"><a href="#指数函数及其性质" class="headerlink" title="指数函数及其性质"></a>指数函数及其性质</h4><p>一般的，函数${y=a^x} (a&gt;0,且a\neq 1) x\in R$ 具有以下性质<br><img src="../images/math_function_1.png" alt=""></p>
+<h3 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h3><h4 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h4><p>如果 $a^x=N (a&gt;0,且a\neq 1)$.那么$x$叫做以$a$为底，$N$的对数，记作:<br>$$<br>    x=\log_a N<br>$$<br>其中，$a$叫做对数的底数，$N$叫做真数。<br>常用对数：以10为底的对数，记作 $\lg N$<br>自然对数：以$e$为底的对数，记作$In N$</p>
+<p>运算公式: </p>
+<blockquote>
+<p>前提条件，$a&gt;0 且a\neq 1,M&gt;0, N&gt;0$<br>$\log_a (M*N) = \log_a M + \log_a N$<br>$\log_a {M\over N} = \log_a M -\log_a N $<br>$\log_a {M^n}= n\log_a M (n\in R)$</p>
+</blockquote>
+<h4 id="对数函数及性质"><a href="#对数函数及性质" class="headerlink" title="对数函数及性质"></a>对数函数及性质</h4><p>一般的，函数$y=\log_a x (a&gt;0 且 a\neq 1) x\in (0,+\infty)$<br><img src="../images/math_function_2.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -71,7 +77,7 @@
     <link href="http://blog.freeabyss.com/2016/09/03/JavaScript%E4%B9%8B%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     <id>http://blog.freeabyss.com/2016/09/03/JavaScript之表达式和运算符/</id>
     <published>2016-09-03T07:33:59.000Z</published>
-    <updated>2016-09-03T07:40:55.000Z</updated>
+    <updated>2016-09-03T10:15:57.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-表达式"><a href="#1-表达式" class="headerlink" title="1 表达式"></a>1 表达式</h1><ul>
 <li>数组初始化表达式中，逗号之间的元素可以省略，空位会填充<code>undefined</code>。 </li>
@@ -322,10 +328,7 @@
 <li>ECMAScript规范允许内置函数返回一个左值，但是自定义函数不能返回左值，不过如果返回的是对象的话，可以访问其属性。   </li>
 </ul>
 <h2 id="2-2-运算法"><a href="#2-2-运算法" class="headerlink" title="2.2 + 运算法"></a>2.2 + 运算法</h2><ul>
-<li><ul>
-<li>运算法即可以作为加法运算，也可以作为字符串连接，但是优先考虑字符串连接。  </li>
-</ul>
-</li>
+<li>+ 运算法即可以作为加法运算，也可以作为字符串连接，但是优先考虑字符串连接。  </li>
 <li>如果操作数中没有字符串，则都转化为数字。    </li>
 <li>加法操作符的行为表现为：<ul>
 <li>如果其中一个操作时是对象，则尊照对象到原始值的转换规则转为原始值。  </li>
@@ -457,6 +460,68 @@
       <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
     
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Effective Java》笔记－对象的创建和销毁</title>
+    <link href="http://blog.freeabyss.com/2016/08/18/%E3%80%8AEffective-Java%E3%80%8B%E7%AC%94%E8%AE%B0%EF%BC%8D%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81/"/>
+    <id>http://blog.freeabyss.com/2016/08/18/《Effective-Java》笔记－对象的创建和销毁/</id>
+    <published>2016-08-18T10:18:03.000Z</published>
+    <updated>2016-09-03T10:20:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="使用静态方法代替构造器"><a href="#使用静态方法代替构造器" class="headerlink" title="使用静态方法代替构造器"></a>使用静态方法代替构造器</h2><blockquote>
+<ul>
+<li>静态方法有名称，便于理解</li>
+<li>静态方法可以返回已存在的对象，避免创建不必要的重复对象</li>
+<li>静态方法可以返回原返回类型的任何子类型，增加灵活性</li>
+<li>在创建参数化类型实例的时候，使代码更加简洁</li>
+</ul>
+</blockquote>
+<h2 id="存在多个构造器参数时考虑使用构造器"><a href="#存在多个构造器参数时考虑使用构造器" class="headerlink" title="存在多个构造器参数时考虑使用构造器"></a>存在多个构造器参数时考虑使用构造器</h2><blockquote>
+<ul>
+<li>易于阅读</li>
+<li>加强参数的约束条件，一旦有一个参数违反约束条件就创建不成功</li>
+<li>可以非常灵活的增加参数数量</li>
+<li>Builder模式适用于有多个参数构造时使用，一般是4个或多个。</li>
+<li>通常最好一开始就使用Builder模式</li>
+</ul>
+</blockquote>
+<p>以下是使用构造器的示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NutritionFacts</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> calories;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> fat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> sodium;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> carbohydrate;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 带默认值的</div><div class="line">         */</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> calories = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> fat = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> sodium = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> carbohydrate = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(<span class="keyword">int</span> servingSize, <span class="keyword">int</span> servings)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.servings = servings;</div><div class="line">            <span class="keyword">this</span>.servingSize = servingSize;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">calories</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            calories=val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">fat</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            fat = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">carbohydrate</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            carbohydrate = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">sodium</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            sodium = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="keyword">public</span>  NutritionFacts <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> NutritionFacts(<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NutritionFacts</span><span class="params">(Builder builder)</span> </span>&#123;</div><div class="line">        servings = builder.servings;</div><div class="line">        servingSize = builder.servingSize;</div><div class="line">        calories = builder.calories;</div><div class="line">        fat = builder.fat;</div><div class="line">        carbohydrate = builder.carbohydrate;</div><div class="line">        sodium = builder.sodium;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        NutritionFacts nutritionFacts = <span class="keyword">new</span> NutritionFacts.Builder(<span class="number">20</span>, <span class="number">20</span>)</div><div class="line">                .calories(<span class="number">10</span>).carbohydrate(<span class="number">12</span>).build();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用枚举类型实现单例模式"><a href="#使用枚举类型实现单例模式" class="headerlink" title="使用枚举类型实现单例模式"></a>使用枚举类型实现单例模式</h3><blockquote>
+<p>单元素的枚举类型是实现单例模式的最佳方法 ，详情可参考<a href="http://blog.csdn.net/abyss521/article/details/52232409" target="_blank" rel="external">设计模式之单例模式</a></p>
+</blockquote>
+<h3 id="对于不想被实例化的类添加私有构造器"><a href="#对于不想被实例化的类添加私有构造器" class="headerlink" title="对于不想被实例化的类添加私有构造器"></a>对于不想被实例化的类添加私有构造器</h3><blockquote>
+<p>例如<code>java.lang.Math</code>这种的工具类，不希望被实例化，最好添加私有构造器避免被实例化</p>
+</blockquote>
+<h3 id="避免创建不必要的对象"><a href="#避免创建不必要的对象" class="headerlink" title="避免创建不必要的对象"></a>避免创建不必要的对象</h3><blockquote>
+<p>尤其是要避免在大规模应用场景中使用字符串连接符<code>+</code>连接字符串，以及对包装类<code>Integer</code>、<code>Long</code>等类型使用运算符。 </p>
+</blockquote>
+<h3 id="避免使用finalize"><a href="#避免使用finalize" class="headerlink" title="避免使用finalize"></a>避免使用finalize</h3><blockquote>
+<ul>
+<li><code>finalize()</code>不能保证被及时地执行，甚至根本不保证它们会执行</li>
+<li>在<code>finalize()</code>中创建和销毁对象对性能损耗非常大</li>
+<li>在<code>finalize()</code> 中抛出的异常会被忽略，使对象处于破坏状态</li>
+<li>假如需要释放资源，推荐使用<code>try-finally</code> </li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;使用静态方法代替构造器&quot;&gt;&lt;a href=&quot;#使用静态方法代替构造器&quot; class=&quot;headerlink&quot; title=&quot;使用静态方法代替构造器&quot;&gt;&lt;/a&gt;使用静态方法代替构造器&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;静态方法有名称，便于理解&lt;/l
+    
+    </summary>
+    
+      <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
+    
+      <category term="Effective" scheme="http://blog.freeabyss.com/tags/Effective/"/>
     
   </entry>
   

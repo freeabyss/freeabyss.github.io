@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-09-10T12:02:45.000Z</updated>
+  <updated>2016-09-10T16:07:25.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -20,12 +20,94 @@
     <link href="http://blog.freeabyss.com/2016/09/10/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%EF%BC%8D%E3%80%8A%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8%E3%80%8B/"/>
     <id>http://blog.freeabyss.com/2016/09/10/向量空间－《线性代数及应用》/</id>
     <published>2016-09-10T12:02:45.000Z</published>
-    <updated>2016-09-10T12:02:45.000Z</updated>
+    <updated>2016-09-10T16:07:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$   </p>
+</blockquote>
+<h2 id="向量空间和子空间"><a href="#向量空间和子空间" class="headerlink" title="向量空间和子空间"></a>向量空间和子空间</h2><h3 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h3><p>一个向量空间是由一些被称为向量的对象构成的非空集合$V$，在这个集合上定义两个运算，称为加法和标量乘法，服从以下公理，这些公理必须对$V$中所有向量$\mathbf u,\mathbf v,\mathbf w$及所有标量$c,d$均成立。</p>
+<ul>
+<li>$\mathbf u, \mathbf v$之和表示为$\mathbf u+\mathbf v$，仍在$V$中</li>
+<li>$V$中存在一个零向量$0$，使得$\mathbf u+0=\mathbf u$</li>
+<li>对$V$中每个向量$\mathbf u$，存在$V$中向量$-\mathbf u$，使得$\mathbf u+(-\mathbf u)=0$</li>
+<li>$\mathbf u$与标量$c$的标量乘法记为，$c\mathbf u$，仍在$V$中<br>$$<br>  \mathbf u+\mathbf v ＝ \mathbf v+\mathbf u \\<br>  (\mathbf u+\mathbf v)+\mathbf w=\mathbf u+(\mathbf v+\mathbf w) \\<br>  c(\mathbf u+\mathbf v)=c\mathbf u+c\mathbf v \\<br>  (c+d)\mathbf u=c\mathbf u+d\mathbf u \\<br>  c(d\mathbf u)=(cd)\mathbf u \\<br>  1\mathbf u=\mathbf u  \\<br>  0\mathbf u=0 \\<br>  c0=0 \\<br>  -\mathbf u=(-1)\mathbf u\\<br>$$</li>
+</ul>
+<h2 id="零空间、列空间和线性变换"><a href="#零空间、列空间和线性变换" class="headerlink" title="零空间、列空间和线性变换"></a>零空间、列空间和线性变换</h2><h3 id="零空间"><a href="#零空间" class="headerlink" title="零空间"></a>零空间</h3><p>$m\times n$矩阵$A$的零空间写成$NulA$，是齐次方程$A\mathbf x=0$的全体解的集合，用集合符号表示即：<br>$$<br>    NulA = {\mathbf x:\mathbf x \in \mathbb R^n, A\mathbf x =0}<br>$$<br>$NulA$可以进一步的描述为$\mathbb R^n$中在线性变换$\mathbf x \mapsto A\mathbf x$下映射到$\mathbb R^m$中的零向量的全体向量的集合。</p>
+<h3 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h3><p>向量空间$V$的一个子空间是$V$的一个满足以下三个性质的子集$H$：</p>
+<ul>
+<li>$V$中的零向量在$H$中</li>
+<li>$H$对向量加法封闭，即对$H$中任意向量$\mathbf u,\mathbf v$，和$\mathbf u+\mathbf v$仍在$H$中</li>
+<li>$H$对标量乘法封闭，即对$H$中任意向量$\mathbf u$和任意标量$c$，向量$c\mathbf u$仍在$H$中</li>
+</ul>
+<h3 id="矩阵的列空间"><a href="#矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间</h3><p>$m\times n$矩阵的列空间(记为$ColA$)是由$A$的列的所有线性组合组成的集合，若$A=[\mathbf a_1,\cdots,\mathbf a_n]$，则$ColA = Span\{\mathbf a_1,\cdots,\mathbf a_n\}$<br>$ColA$)可写成$A\mathbf x$的形式，其中$\mathbf x$为某向量，$A\mathbf x$表示$A$的列向量的一个线性组合，即<br>$$<br>    ColA = {\mathbf b:\mathbf b = A\mathbf x, \mathbf x \in \mathbb R^n}<br>$$<br>$m\times n$矩阵的列空间等于$\mathbb R^m$当且仅当方程$A\mathbf x=\mathbf b$对$\mathbb R^m$中每个$\mathbf b$有解</p>
+<h3 id="NulA-与-ColA-的对比"><a href="#NulA-与-ColA-的对比" class="headerlink" title="$NulA$与$ColA$的对比"></a>$NulA$与$ColA$的对比</h3><p>对于$m\times n$矩阵$A$，$NulA$与$ColA$之间的对比</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">$NulA$</th>
+<th style="text-align:left">$ColA$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$NulA$是$\mathbb R^n$的一个子空间</td>
+<td style="text-align:left">$ColA$是$\mathbb R^m$的子空间</td>
+</tr>
+<tr>
+<td style="text-align:left">$NulA$是隐式定义的，即仅给出了一个$NulA$中向量必须满足的条件($A\mathbf x=0$)</td>
+<td style="text-align:left">$ColA$是显式定义，即明确指出如何建立$ColA$中的向量</td>
+</tr>
+<tr>
+<td style="text-align:left">求$NulA$中的向量需要对$[A 0]$做行变换</td>
+<td style="text-align:left">$A$中的列就是$ColA$的向量，其余的可由$A$的列表示出来</td>
+</tr>
+<tr>
+<td style="text-align:left">$NulA$与$A$的数值之间没有明显的关系</td>
+<td style="text-align:left">$ColA$与$A$的数值由明显的关系，因为$A$的列就在$ColA$中</td>
+</tr>
+<tr>
+<td style="text-align:left">$NulA$的一个典型向量$\mathbf v$具有$A\mathbf v=0$的特质</td>
+<td style="text-align:left">$ColA$中一个典型的向量$v$具有方程$A\mathbf x=\mathbf v$是相容的性质</td>
+</tr>
+<tr>
+<td style="text-align:left">给一个特定的向量$\mathbf v$，容易判断$\mathbf v$是否在$NulA$中，仅需计算$A\mathbf v$</td>
+<td style="text-align:left">给一个特定的向量$\mathbf v$，判断$\mathbf v$是否在$ColA$中，需对$[A \mathbf v]$作行变换</td>
+</tr>
+<tr>
+<td style="text-align:left">$NulA ={0}$ 当且仅当方程$A\mathbf x=0$仅有平凡解</td>
+<td style="text-align:left">$ColA =\mathbb R^m$当且仅当方程$A\mathbf x=\mathbf b$对每一个$\mathbf b \in \mathbb R^m$有一个解</td>
+</tr>
+<tr>
+<td style="text-align:left">$NulA ={0}$ 当且仅当线性变换$\mathbf x\mapsto A\mathbf x$是一对一的</td>
+<td style="text-align:left">$ColA =\mathbb R^m$当且仅当线性变换$\mathbf x\mapsto A\mathbf x$将$\mathbb R^n$映射到$\mathbb R^m$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="线性变换的核与值域"><a href="#线性变换的核与值域" class="headerlink" title="线性变换的核与值域"></a>线性变换的核与值域</h3><p>由向量空间$V$映射到向量空间$W$内的线性变换$T$是一个规则，它将$V$中每个向量$\mathbf x$映射城$W$中惟一向量$T(\mathbf x)$，且满足<br>$$<br>    T(\mathbf u+\mathbf v) = T(\mathbf u)+T(\mathbf v), 对V中所有\mathbf u,\mathbf v 均成立 \\<br>    T(c\mathbf u) = cT(\mathbf u),对V中所有\mathbf u及所有数c均成立<br>$$<br>线性变换$T$的<em>核</em>(或称零空间)是$V$中所有满足$T(\mathbf u)=0$的向量$\mathbf u$的集合。<br>$T$的<em>值域</em>是$W$中所有具有形式$T(\mathbf x)$的向量的集合。<br>如果$T$是由一个矩阵变换得到的，例如$T(\mathbf x)=A\mathbf x$，则$T$的核与值域对应$A$的零空间和列空间。 </p>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><ol>
+<li>若$\mathbf v_1,\cdots,\mathbf v_p$在向量空间$V$中，则$Span\{\mathbf v_1,\cdots,\mathbf v_p\}$是$V$的一个子空间</li>
+<li>$m\times n$矩阵$A$的零空间是$\mathbb R^n$的一个子空间，也就是说，$m$个方程、$n$个未知数的齐次线性方程组$A\mathbf x=0$的全体解的集合是$\mathbb R^n$的一个子空间。</li>
+<li>$m\times n$矩阵$A$的列空间是$\mathbb R^m$的一个子空间</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
+      &lt;blockquote&gt;
+&lt;p&gt;加粗小写字母代表向量，例如$\mathbf u, \mathbf v$&lt;br&gt;不加粗小写字母代表标量也就是实数，例如$a,c$   &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;向量空间和子空间&quot;&gt;&lt;a href=&quot;#向量空间和子空间&quot; c
+    
     </summary>
     
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
   </entry>
   
@@ -34,7 +116,7 @@
     <link href="http://blog.freeabyss.com/2016/09/08/%E8%A1%8C%E5%88%97%E5%BC%8F%EF%BC%8D%E3%80%8A%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8%E3%80%8B/"/>
     <id>http://blog.freeabyss.com/2016/09/08/行列式－《线性代数及应用》/</id>
     <published>2016-09-08T12:44:04.000Z</published>
-    <updated>2016-09-10T12:02:26.000Z</updated>
+    <updated>2016-09-10T12:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
@@ -73,9 +155,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -198,9 +280,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -347,9 +429,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -802,9 +884,9 @@
       <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
     
     
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
       <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
       <category term="Effective" scheme="http://blog.freeabyss.com/tags/Effective/"/>
     
@@ -984,13 +1066,13 @@
       <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
     
     
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
       <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
     
       <category term="QuartZ" scheme="http://blog.freeabyss.com/tags/QuartZ/"/>
     
       <category term="Cron" scheme="http://blog.freeabyss.com/tags/Cron/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
   </entry>
   

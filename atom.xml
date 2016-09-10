@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-09-05T12:00:00.000Z</updated>
+  <updated>2016-09-10T12:02:45.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>向量空间－《线性代数及应用》</title>
+    <link href="http://blog.freeabyss.com/2016/09/10/%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%EF%BC%8D%E3%80%8A%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8%E3%80%8B/"/>
+    <id>http://blog.freeabyss.com/2016/09/10/向量空间－《线性代数及应用》/</id>
+    <published>2016-09-10T12:02:45.000Z</published>
+    <updated>2016-09-10T12:02:45.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>行列式－《线性代数及应用》</title>
+    <link href="http://blog.freeabyss.com/2016/09/08/%E8%A1%8C%E5%88%97%E5%BC%8F%EF%BC%8D%E3%80%8A%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8%E3%80%8B/"/>
+    <id>http://blog.freeabyss.com/2016/09/08/行列式－《线性代数及应用》/</id>
+    <published>2016-09-08T12:44:04.000Z</published>
+    <updated>2016-09-10T12:02:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
+</blockquote>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>当$n\ge 2$时，$n\times n$矩阵$A=[a_{ij}]$的行列式是形如$\pm a_{1j}detA_{1j}$的$n$个项的和，其中加号和减号交替出现，这里元素$a_{11},a_{12},\cdots,a_{1n}$来自$A$的第一行，即<br>$$<br>    detA=a_{11}\cdot detA_{11}-a_{12}\cdot detA_{12}+\cdots+(-1)^{1+n}a_{1n}\cdot detA_{1n} \\<br>    = \sum_{j=1}^n (-1)^{1+j}a_{1j}detA_{1j}<br>$$<br>其中，$A_{ij}$表示通过划去$A$中第$i$行和第$j$列而得到的子矩阵。</p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><h3 id="行列式函数"><a href="#行列式函数" class="headerlink" title="行列式函数"></a>行列式函数</h3><p>若$A$为$n\times n$矩阵，我们可以将$detA$看作$A$中$n$个列向量的函数。如果将$A$其中一列作为可变列，则$detA$可作为可变列向量的线性函数。<br>$$<br>    A=[\mathbf a_1 \cdots \mathbf a_{j-1} \mathbf x  \mathbf a_{j+1} \cdots \mathbf a_n]<br>$$<br>定义由$R^n$到$R$的变化T为<br>$$<br>    T(\mathbf x) = det[[\mathbf a_1 \cdots \mathbf a_{j-1} \mathbf x \mathbf a_{j+1} \cdots \mathbf a_n]]<br>$$<br>则有有以下性质<br>$$<br>    T(c\mathbf x) = cT(\mathbf x), 对任意常数c和R^n中的任意\mathbf x成立 \\<br>    T(\mathbf u+\mathbf v)=T(\mathbf u)+T(\mathbf v), 对R^n中所有\mathbf u,\mathbf v成立<br>$$</p>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><ol>
+<li>$n\times n$矩阵$A$的行列式可按任意行或列的余因子展开式来计算。<br>按第$i$行展开<br>$$<br> C_{ij} = (-1)^{i+j}detA_{ij} \\<br> detA = a_{i1}C_{i1}+a_{i2}C_{i2}+\cdots+a_{in}C_{in}<br>$$<br>按第$j$列展开<br>$$<br> C_{ij} = (-1)^{i+j}detA_{ij} \\<br> detA = a_{1j}C_{1j}+a_{2j}C_{2j}+\cdots+a_{nj}C_{nj}<br>$$</li>
+<li>若$A$为三角阵，则$detA$等于$A$的主对角线上元素的乘积</li>
+<li>行变换，令$A$是一个方阵<ul>
+<li>若$A$的某一行的倍数加到另一行得矩阵$B$，则$detB=detA$</li>
+<li>若$A$的两行互换得矩阵$B$，则$detB=-detA$</li>
+<li>若$A$的某行乘以$k$倍得到矩阵$B$，则$detB=k\cdot detA$</li>
+</ul>
+</li>
+<li>方阵$A$是可逆的当且仅当$detA\neq 0$</li>
+<li>若$A$为一个$n\times n$矩阵，则$detA^T = detA$</li>
+<li>若$A$和$B$均为$n\times n$矩阵，则$detAB = (detA)(detB)$</li>
+<li>克拉默法则，设$A$是一个可逆的$n\times n$矩阵，对$R^n$中任意向量$\mathbf b$，方程$A\mathbf x=\mathbf b$的唯一解可由下式给出，其中$detA_i(\mathbf b)$表示$A$中第$i$列由向量$\mathbf b$替换得到的矩阵<br>$$<br> x_i = {detA_i(\mathbf b)\over {detA}}, i=1,2,\cdots,n<br>$$</li>
+<li>逆矩阵公式， 设$A$是一个可逆的$n\times n$矩阵，则$A^{-1}={1\over detA}adjA$</li>
+<li>若$A$是一个$2\times 2$矩阵，则由$A$的列确定的平行四边形的面积为$|detA|$，若$A$是一个$3\times 3$矩阵，则由$A$列确定的平行六面体的体积为$|detA|$</li>
+<li>设$T:R^2\to R^2$是由一个$2\times 2$矩阵$A$确定的线性变换，若$S$是$R^2$中一个平行四边形，则<br>$$<br>\{T(S)的面积\}=|detA|\cdot\{S的面积\}<br>$$<br>若$T$是一个由$3\times 3$矩阵$A$确定的线性变换，而$S$是$R^3$中的一个平行六面体，则<br>$$<br>\{T(S)的体积\}=|detA|\cdot \{S的体积\}<br>$$</li>
+</ol>
+<h2 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h2><h3 id="adjA-可逆"><a href="#adjA-可逆" class="headerlink" title="$adjA$可逆"></a>$adjA$可逆</h3><p>若$A$可逆，则$adjA$也可逆，且$(adjA)^{-1}={1\over detA}A$<br>$$<br>    A^{-1} = {1\over detA}adjA \\<br>    adjA = (detA)A^{-1} \\<br>    adjA(adjA)^{-1} = I \\<br>    adjA \cdot {1\over detA}A = I \\<br>    (detA)A^{-1} \cdot {1\over detA}A = I \\<br>    A^{-1}A = I<br>$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;加粗小写字母代表向量，例如$\mathbf u, \mathbf v$&lt;br&gt;不加粗小写字母代表标量也就是实数，例如$a,c$&lt;br&gt;大写字母代表矩阵，例如 $A,B$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
+    
+  </entry>
   
   <entry>
     <title>矩阵代数－《线性代数及应用》笔记</title>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-09-11T12:17:45.000Z</updated>
+  <updated>2016-09-11T12:48:58.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -20,13 +20,26 @@
     <link href="http://blog.freeabyss.com/2016/09/11/MathJax-tutorial/"/>
     <id>http://blog.freeabyss.com/2016/09/11/MathJax-tutorial/</id>
     <published>2016-09-11T12:04:07.000Z</published>
-    <updated>2016-09-11T12:17:45.000Z</updated>
+    <updated>2016-09-11T12:48:58.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h2><table><br><tr><td>$\alpha$</td><td>$\beta$</td><td>$\gamma$</td><td>$\delta$</td><br><td>$\epsilon$</td><td>$\zeta$</td><td>$\eta$</td><td>$\theta$</td><br><td>$\iota$</td><td>$\kappa$</td><td>$\lambda$</td><td>$\mu$</td><br><td>$\nu$</td><td>$\xi$</td><td>$\omicron$</td><td>$\pi$</td><br><td>$\rho$</td><td>$\sigma$</td><td>$\tau$</td><td>$\upsilon$</td><br><td>$\phi$</td><td>$\chi$</td><td>$\psi$</td><td>$\omega$</td></tr><br><tr><td>\alpha</td><td>\beta</td><td>\gamma</td><td>\delta</td><br><td>\epsilon</td><td>\zeta</td><td>\eta</td><td>\theta</td><br><td>\iota</td><td>\kappa</td><td>\lambda</td><td>\mu</td><br><td>\nu</td><td>\xi</td><td>\omicron</td><td>\pi</td><br><td>\rho</td><td>\sigma</td><td>\tau</td><td>\upsilon</td><br><td>\phi</td><td>\chi</td><td>\psi</td><td>\omega</td></tr><br></table>]]></content>
+    <content type="html"><![CDATA[<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><table><br><tr><td>$\alpha$</td><td>$\beta$</td><td>$\gamma$</td><td>$\delta$</td><br><td>$\epsilon$</td><td>$\zeta$</td><td>$\eta$</td><td>$\theta$</td></tr><br><tr><td>\alpha</td><td>\beta</td><td>\gamma</td><td>\delta</td><br><td>\epsilon</td><td>\zeta</td><td>\eta</td><td>\theta</td></tr><br><tr><td>$\iota$</td><td>$\kappa$</td><td>$\lambda$</td><td>$\mu$</td><br><td>$\nu$</td><td>$\xi$</td><td>$\omicron$</td><td>$\pi$</td></tr><br><tr><td>\iota</td><td>\kappa</td><td>\lambda</td><td>\mu</td><br><td>\nu</td><td>\xi</td><td>\omicron</td><td>\pi</td></tr><br><tr><td>$\rho$</td><td>$\sigma$</td><td>$\tau$</td><td>$\upsilon$</td><br><td>$\phi$</td><td>$\chi$</td><td>$\psi$</td><td>$\omega$</td></tr><br><tr><td>\rho</td><td>\sigma</td><td>\tau</td><td>\upsilon</td><br><td>\phi</td><td>\chi</td><td>\psi</td><td>\omega</td></tr><br></table><br><table><br><tr><td>$\Gamma$</td><td>$\Delta$</td><td>$\Theta$</td><td>$\Lambda$</td><br><td>$\Xi$</td><td>$\Pi$</td><td>$\Phi$</td><td>$\Psi$</td></tr><br><tr><td>\Gamma</td><td>\Delta</td><td>\Theta</td><td>\Lambda</td><br><td>\Xi</td><td>\Pi</td><td>\Phi</td><td>\Psi</td></tr><br><tr><td>$\Sigma$</td><td>$\Upsilon$</td><td>$\Omega$</td></tr><br><tr><td>\Sigma</td><td>\Upsilon</td><td>\Omega</td></tr><br></table>
+
+<h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><table><br><tr><td>$\lt$</td><td>$\gt$</td><td>$\le$</td><td>$\ge$</td><td>$\neq$</td></tr><br><tr><td>\lt</td><td>\gt</td><td>\le</td><td>\ge</td><td>\neq</td></tr><br></table>
+
+<table><br><tr><td>$\times$</td><td>$\div$</td><td>$\pm$</td><td>$\mp$</td><td>$\cdot$</td></tr><br><tr><td>\times</td><td>\div</td><td>\pm</td><td>\mp</td><td>\cdot</td></tr><br></table>
+
+<table><br><tr><td>$\cup$</td><td>$\cap$</td><td>$\setminus$</td><td>$\subset$</td><td>$\subseteq$</td><td>$\subsetneq$</td><td>$\supset$</td><td>$\in$</td><td>$\notin$</td><td>$\emptyset$</td><td>$\varnothing$</td></tr><br><tr><td>\cup</td><td>\cap</td><td>\setminus</td><td>\subset</td><td>\subseteq</td><td>\subsetneq</td><td>\supset</td><td>\in</td><td>\notin</td><td>\emptyset</td><td>\varnothing</td></tr><br></table>
+
+<table><br><tr><td>$\to$</td><td>$\rightarrow$</td><td>$\leftarrow$</td><td>$\Rightarrow$</td><td>$\Leftarrow$</td><td>$\mapsto$</td></tr><br><tr><td>\to</td><td>\rightarrow</td><td>\leftarrow</td><td>\Rightarrow</td><td>\Leftarrow</td><td>\mapsto</td></tr><br></table>
+
+<table><br><tr><td>$\land$</td><td>$\lor$</td><td>$\lnot$</td><td>$\forall$</td><td>$\exists$</td><td>$\top$</td><td>$\bot$</td><td>$\vdash$</td><td>$\vDash$</td></tr><br><tr><td>\land</td><td>\lor</td><td>\lnot</td><td>\forall</td><td>\exists</td><td>\top</td><td>\bot</td><td>\vdash</td><td>\vDash</td></tr><br></table>
+
+
+]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;希腊字母&quot;&gt;&lt;a href=&quot;#希腊字母&quot; class=&quot;headerlink&quot; title=&quot;希腊字母&quot;&gt;&lt;/a&gt;希腊字母&lt;/h2&gt;&lt;table&gt;&lt;br&gt;&lt;tr&gt;&lt;td&gt;$\alpha$&lt;/td&gt;&lt;td&gt;$\beta$&lt;/td&gt;&lt;td&gt;$\gamma$&lt;/td&gt;
+      &lt;h2 id=&quot;字符&quot;&gt;&lt;a href=&quot;#字符&quot; class=&quot;headerlink&quot; title=&quot;字符&quot;&gt;&lt;/a&gt;字符&lt;/h2&gt;&lt;h3 id=&quot;希腊字母&quot;&gt;&lt;a href=&quot;#希腊字母&quot; class=&quot;headerlink&quot; title=&quot;希腊字母&quot;&gt;&lt;/a&gt;希腊字母&lt;/h
     
     </summary>
     

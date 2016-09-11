@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-09-10T16:07:25.000Z</updated>
+  <updated>2016-09-11T12:17:45.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MathJax tutorial</title>
+    <link href="http://blog.freeabyss.com/2016/09/11/MathJax-tutorial/"/>
+    <id>http://blog.freeabyss.com/2016/09/11/MathJax-tutorial/</id>
+    <published>2016-09-11T12:04:07.000Z</published>
+    <updated>2016-09-11T12:17:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h2><table><br><tr><td>$\alpha$</td><td>$\beta$</td><td>$\gamma$</td><td>$\delta$</td><br><td>$\epsilon$</td><td>$\zeta$</td><td>$\eta$</td><td>$\theta$</td><br><td>$\iota$</td><td>$\kappa$</td><td>$\lambda$</td><td>$\mu$</td><br><td>$\nu$</td><td>$\xi$</td><td>$\omicron$</td><td>$\pi$</td><br><td>$\rho$</td><td>$\sigma$</td><td>$\tau$</td><td>$\upsilon$</td><br><td>$\phi$</td><td>$\chi$</td><td>$\psi$</td><td>$\omega$</td></tr><br><tr><td>\alpha</td><td>\beta</td><td>\gamma</td><td>\delta</td><br><td>\epsilon</td><td>\zeta</td><td>\eta</td><td>\theta</td><br><td>\iota</td><td>\kappa</td><td>\lambda</td><td>\mu</td><br><td>\nu</td><td>\xi</td><td>\omicron</td><td>\pi</td><br><td>\rho</td><td>\sigma</td><td>\tau</td><td>\upsilon</td><br><td>\phi</td><td>\chi</td><td>\psi</td><td>\omega</td></tr><br></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;希腊字母&quot;&gt;&lt;a href=&quot;#希腊字母&quot; class=&quot;headerlink&quot; title=&quot;希腊字母&quot;&gt;&lt;/a&gt;希腊字母&lt;/h2&gt;&lt;table&gt;&lt;br&gt;&lt;tr&gt;&lt;td&gt;$\alpha$&lt;/td&gt;&lt;td&gt;$\beta$&lt;/td&gt;&lt;td&gt;$\gamma$&lt;/td&gt;
+    
+    </summary>
+    
+      <category term="MathJax" scheme="http://blog.freeabyss.com/categories/MathJax/"/>
+    
+    
+      <category term="MathJax" scheme="http://blog.freeabyss.com/tags/MathJax/"/>
+    
+      <category term="markdown" scheme="http://blog.freeabyss.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>预备知识－《托马斯微积分》</title>
+    <link href="http://blog.freeabyss.com/2016/09/11/%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%EF%BC%8D%E3%80%8A%E6%89%98%E9%A9%AC%E6%96%AF%E5%BE%AE%E7%A7%AF%E5%88%86%E3%80%8B/"/>
+    <id>http://blog.freeabyss.com/2016/09/11/预备知识－《托马斯微积分》/</id>
+    <published>2016-09-11T11:56:42.000Z</published>
+    <updated>2016-09-11T12:03:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h2><h3 id="直线的斜率"><a href="#直线的斜率" class="headerlink" title="直线的斜率"></a>直线的斜率</h3><p>设点$P(x_1, y_1)$和$P(x_2, y_2)$是非垂直直线$L$上的两个点。$L$的斜率为<br>$$<br>    m =<br>$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;直线&quot;&gt;&lt;a href=&quot;#直线&quot; class=&quot;headerlink&quot; title=&quot;直线&quot;&gt;&lt;/a&gt;直线&lt;/h2&gt;&lt;h3 id=&quot;直线的斜率&quot;&gt;&lt;a href=&quot;#直线的斜率&quot; class=&quot;headerlink&quot; title=&quot;直线的斜率&quot;&gt;&lt;/a&gt;直线的斜
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="Calculus" scheme="http://blog.freeabyss.com/tags/Calculus/"/>
+    
+  </entry>
   
   <entry>
     <title>向量空间－《线性代数及应用》</title>
@@ -820,11 +871,11 @@
       <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
     
     
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
       <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
     
       <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
   </entry>
   
@@ -884,9 +935,9 @@
       <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
     
       <category term="Effective" scheme="http://blog.freeabyss.com/tags/Effective/"/>
     
@@ -1066,13 +1117,13 @@
       <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
     
     
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
       <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
     
       <category term="QuartZ" scheme="http://blog.freeabyss.com/tags/QuartZ/"/>
     
       <category term="Cron" scheme="http://blog.freeabyss.com/tags/Cron/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
   </entry>
   

@@ -276,6 +276,253 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/12/设计模式概述/" itemprop="url">
+                  设计模式概述
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-12T23:21:32+08:00" content="2016-09-12">
+              2016-09-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/12/设计模式概述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/12/设计模式概述/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/12/设计模式概述/" class="leancloud_visitors" data-flag-title="设计模式概述">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">策略模式</td>
+<td style="text-align:left">封装了算法，为不同的算法提供统一的接口</td>
+</tr>
+<tr>
+<td style="text-align:left">单一职责</td>
+<td style="text-align:left">就一个类而言，应当仅有一个引起它变化的原因</td>
+</tr>
+<tr>
+<td style="text-align:left">开放封闭原则</td>
+<td style="text-align:left">类、模块、函数可以扩展，但是不可以修改</td>
+</tr>
+<tr>
+<td style="text-align:left">依赖倒转原则</td>
+<td style="text-align:left">抽象不应该依赖细节，细节应该依赖于抽象</td>
+</tr>
+<tr>
+<td style="text-align:left">里氏替换原则</td>
+<td style="text-align:left">子类型必须能够替换掉它们的父类型</td>
+</tr>
+<tr>
+<td style="text-align:left">装饰模式</td>
+<td style="text-align:left">动态的给对象添加额外的职责</td>
+</tr>
+<tr>
+<td style="text-align:left">代理模式</td>
+<td style="text-align:left">为其他对象提供一种代理以控制对这个对象的访问</td>
+</tr>
+<tr>
+<td style="text-align:left">工厂模式</td>
+<td style="text-align:left">定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类</td>
+</tr>
+<tr>
+<td style="text-align:left">模版方法</td>
+<td style="text-align:left">定义封装算法的骨架，而将特定的细节交由子类实现</td>
+</tr>
+<tr>
+<td style="text-align:left">建造者模式</td>
+<td style="text-align:left">将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的应用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变换不会影响到使用算法的客户</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>策略模式定义了一系列算法，这些算法完成相同的工作，只是实现不同，策略模式可以以相同的方式调用所有算法，减少了算法和使用算法类之间的耦合。</li>
+<li>易于进行单元测试</li>
+</ul>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>测旅模式可以封装任何类型的规则，只要在分析过程中需要在不同时间应用的业务规则，就可以使用策略模式处理这种变化的可能性。</p>
+<h2 id="单一职责"><a href="#单一职责" class="headerlink" title="单一职责"></a>单一职责</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>就一个类而言，应当仅有一个引起它变化的原因</p>
+<h3 id="为何需要单一职责"><a href="#为何需要单一职责" class="headerlink" title="为何需要单一职责"></a>为何需要单一职责</h3><p>当一个类承担的职责太多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或抑制这个类完成其他职责的能力，这种耦合会导致脆弱的设计，当变化发生时，设计会遭到意想不到的破坏</p>
+<h3 id="何时需要职责分离"><a href="#何时需要职责分离" class="headerlink" title="何时需要职责分离"></a>何时需要职责分离</h3><p>如果你能够想到多于一个的动机去改变一个类，那么这个类就具有多于一个的职责</p>
+<h2 id="开放封闭原则"><a href="#开放封闭原则" class="headerlink" title="开放封闭原则"></a>开放封闭原则</h2><ul>
+<li>无论模块是多么的”封闭”，都会存在一些无法对之封闭的变化，既然不可能完全封闭，设计人员必须对他设计的模块应该对那种变化封闭做出选择，他必须先猜测出最有可能发生的变化种类，然后构造抽象来隔离那么变化。</li>
+<li>等到变化发生时立即采取行动</li>
+<li>面对需求，对程序的改动是通过增加薪代码进行的，而不是更改现有的代码</li>
+<li>开发人员应改仅对程序中频繁变化的那些部分做出抽象</li>
+</ul>
+<h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h2><ul>
+<li>高层模块不应该依赖低层模块，两个都应该依赖抽象</li>
+<li>抽象不应该依赖细节。细节应该依赖抽象</li>
+<li>依赖倒转可以说是面向对象设计的标志，如果编写时考虑的都是如何针对抽象编程而不是针对细节编程，即程序中所有的依赖关系都是终止于抽象类或者接口，那就是面向对象的设计。</li>
+</ul>
+<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><ul>
+<li>只有当子类可以替换掉父类，软件单位的功能不受影响时，父类才能真正被复用，而子类也能够在父类基础上增加新的行为。</li>
+<li>由于子类的可替换性才使得使用父类类型的模块在无需修改的情况下可以扩展。</li>
+</ul>
+<h2 id="装饰模式-Decorator"><a href="#装饰模式-Decorator" class="headerlink" title="装饰模式(Decorator)"></a>装饰模式(Decorator)</h2><p>动态地给对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。</p>
+<ul>
+<li>装饰模式是为已有功能动态的添加更多功能的一种方式</li>
+<li>当系统需要新的功能时，把每个要装饰的功能放在单独的类中，并让这个类包装它所要装饰的对象。</li>
+<li>装饰模式有效的将核心职责和装饰功能区分开，而且可以去除相关类中重复的装饰逻辑。</li>
+</ul>
+<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>为其他对象提供一种代理以控制对这个对象的访问。</p>
+<ul>
+<li>远程代理，为一个对象在不同的地址空间提供局部代表。这样可以隐藏一个对象存在于不同地址空间的事实。</li>
+<li>虚拟代理，是根据需要创建开销很大的对象，通过它存放实例化需要很长时间的真实对象。</li>
+<li>安全代理，用来控制真实对象访问时的权限。</li>
+<li>智能指引，是指当调用真实对象时，代理处理另外一些事。</li>
+</ul>
+<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><ul>
+<li>简单工厂模式的最大优点在于工厂类中包含必要的逻辑判断，根据客户端的选择条件动态实例化相关类，对客户端来说，去除了于具体产品的依赖。</li>
+<li>工厂方法模式实现时，客户端需要决定实例化哪一个工厂来实现运算类，选择判断的问题还是存在，也就是说工厂方法把简单工厂的内部逻辑判断移到来客户端代码来进行。</li>
+</ul>
+<h2 id="模版方法"><a href="#模版方法" class="headerlink" title="模版方法"></a>模版方法</h2><p>定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模版方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
+<ul>
+<li>模版方法模式是通过把不变行为搬移到超类，去除子类中重复的代码来体现它的优势</li>
+<li>当不变的和可变的行为在方法的子类实现中混合在一起的时候，不变的行为就会在子类中重复出现。我们通过模版方法模式把这些行为搬移到单一的地方，这样就帮助子类摆脱重复的不变行为的纠缠。</li>
+</ul>
+<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。</p>
+<ul>
+<li>迪米特法则的前提是，每个类都应当尽量降低成员的访问权限</li>
+<li>迪米特法则的根本思想是强调类与类之间的松耦合。</li>
+<li>类之间的耦合越弱，越有利于复用。</li>
+</ul>
+<h2 id="外观-Facade-模式"><a href="#外观-Facade-模式" class="headerlink" title="外观(Facade )模式"></a>外观(Facade )模式</h2><p>为子系统中的一组接口提供一个一致的界面，此模式定义来一个高层接口，这个接口使得这一子系统更加容易使用</p>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>在设计初期应该有意识的将不同的两个层分离，例如典型的MVN结构</li>
+<li>在开发阶段，随着系统不断重构演化而变得越来越复杂，增加外观可以提供一个简单的接口，减少它们之间的依赖</li>
+<li>维护一个遗留的大型系统时，可能这个系统已经非常难以维护和扩展，为新系统开发一个外观Facade类，来提供设计粗糙或高度复杂的遗留代码的比较清晰简单的接口，让新系统与Facade对象交互。</li>
+</ul>
+<h2 id="建造者模式-Builder"><a href="#建造者模式-Builder" class="headerlink" title="建造者模式(Builder)"></a>建造者模式(Builder)</h2><h3 id="用途-1"><a href="#用途-1" class="headerlink" title="用途"></a>用途</h3><p>主要用于创建一些复杂的对象，这些对象内部构建间的建造顺序通常是稳定的，但对象内部的构建通常面临着复杂的变化。<br>建造者模式是在当创建复杂对象的算法应该独立与该对象的组成部分以及它们的装配方式时适用的模式</p>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>使得建造代码与表示代码分离，由于建造者隐藏了该产品是如何组装的，所以若需要改变一个产品的内部表示，只需要再定义一个具体的建造者就可以了。</p>
+<h2 id="观察者模式-Observer"><a href="#观察者模式-Observer" class="headerlink" title="观察者模式(Observer)"></a>观察者模式(Observer)</h2><p>又称发布订阅模式(Publish/Subscribe)<br>观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一主题对象，这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己。</p>
+<h3 id="优势-1"><a href="#优势-1" class="headerlink" title="优势"></a>优势</h3><ul>
+<li>观察者模式所做的工作其实就是在解除耦合。让偶和的双方都依赖于抽象，而不是具体的实现。</li>
+<li>一个抽象模型有两个方面，其中一个方面依赖于另一个方面，这时用观察者模式可以将这两者封装在独立的对象中使它们各自独立的改变和复用。</li>
+</ul>
+<h3 id="用途-2"><a href="#用途-2" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>将一个系统分割成一系列相互协作的类有一个很不好的副作用，那就是需要维护相关对象间的一致性。我们不希望为了维持一致性而使得各类紧密耦合。</li>
+<li>当一个对象的改变需要同时改变其他对象时，而且它不知道有多少个对象有待改变。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/11/MathJax-tutorial/" itemprop="url">
                   MathJax tutorial
                 </a>
@@ -718,7 +965,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/11/Math－直线与方程/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/11/Math-直线与方程/" itemprop="url">
                   直线与方程
                 </a>
               
@@ -762,8 +1009,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/11/Math－直线与方程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/Math－直线与方程/" itemprop="commentsCount"></span>
+                <a href="/2016/09/11/Math-直线与方程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/Math-直线与方程/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -773,7 +1020,7 @@
 
           
           
-             <span id="/2016/09/11/Math－直线与方程/" class="leancloud_visitors" data-flag-title="直线与方程">
+             <span id="/2016/09/11/Math-直线与方程/" class="leancloud_visitors" data-flag-title="直线与方程">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -853,7 +1100,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/10/向量空间－《线性代数及应用》/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/10/Math-向量空间－《线性代数及应用》/" itemprop="url">
                   向量空间－《线性代数及应用》
                 </a>
               
@@ -897,8 +1144,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/10/向量空间－《线性代数及应用》/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/10/向量空间－《线性代数及应用》/" itemprop="commentsCount"></span>
+                <a href="/2016/09/10/Math-向量空间－《线性代数及应用》/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/10/Math-向量空间－《线性代数及应用》/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -908,7 +1155,7 @@
 
           
           
-             <span id="/2016/09/10/向量空间－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="向量空间－《线性代数及应用》">
+             <span id="/2016/09/10/Math-向量空间－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="向量空间－《线性代数及应用》">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -943,6 +1190,13 @@
 <li>$\mathbf u$与标量$c$的标量乘法记为，$c\mathbf u$，仍在$V$中<br>$$<br>  \mathbf u+\mathbf v ＝ \mathbf v+\mathbf u \\<br>  (\mathbf u+\mathbf v)+\mathbf w=\mathbf u+(\mathbf v+\mathbf w) \\<br>  c(\mathbf u+\mathbf v)=c\mathbf u+c\mathbf v \\<br>  (c+d)\mathbf u=c\mathbf u+d\mathbf u \\<br>  c(d\mathbf u)=(cd)\mathbf u \\<br>  1\mathbf u=\mathbf u  \\<br>  0\mathbf u=0 \\<br>  c0=0 \\<br>  -\mathbf u=(-1)\mathbf u\\<br>$$</li>
 </ul>
 <h2 id="零空间、列空间和线性变换"><a href="#零空间、列空间和线性变换" class="headerlink" title="零空间、列空间和线性变换"></a>零空间、列空间和线性变换</h2><h3 id="零空间"><a href="#零空间" class="headerlink" title="零空间"></a>零空间</h3><p>$m\times n$矩阵$A$的零空间写成$NulA$，是齐次方程$A\mathbf x=0$的全体解的集合，用集合符号表示即：<br>$$<br>    NulA = {\mathbf x:\mathbf x \in \mathbb R^n, A\mathbf x =0}<br>$$<br>$NulA$可以进一步的描述为$\mathbb R^n$中在线性变换$\mathbf x \mapsto A\mathbf x$下映射到$\mathbb R^m$中的零向量的全体向量的集合。</p>
+<p>求矩阵$A$的零空间生成集的过程，就是解方程$A\mathbf x=0$的过程。</p>
+<blockquote>
+<ul>
+<li>由该方法产生的生成集必然是线性无关的。</li>
+<li>生成集中向量的个数等于方程$A\mathbx x=0$中自由变量的个数</li>
+</ul>
+</blockquote>
 <h3 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h3><p>向量空间$V$的一个子空间是$V$的一个满足以下三个性质的子集$H$：</p>
 <ul>
 <li>$V$中的零向量在$H$中</li>
@@ -994,10 +1248,29 @@
 </tbody>
 </table>
 <h3 id="线性变换的核与值域"><a href="#线性变换的核与值域" class="headerlink" title="线性变换的核与值域"></a>线性变换的核与值域</h3><p>由向量空间$V$映射到向量空间$W$内的线性变换$T$是一个规则，它将$V$中每个向量$\mathbf x$映射城$W$中惟一向量$T(\mathbf x)$，且满足<br>$$<br>    T(\mathbf u+\mathbf v) = T(\mathbf u)+T(\mathbf v), 对V中所有\mathbf u,\mathbf v 均成立 \\<br>    T(c\mathbf u) = cT(\mathbf u),对V中所有\mathbf u及所有数c均成立<br>$$<br>线性变换$T$的<em>核</em>(或称零空间)是$V$中所有满足$T(\mathbf u)=0$的向量$\mathbf u$的集合。<br>$T$的<em>值域</em>是$W$中所有具有形式$T(\mathbf x)$的向量的集合。<br>如果$T$是由一个矩阵变换得到的，例如$T(\mathbf x)=A\mathbf x$，则$T$的核与值域对应$A$的零空间和列空间。 </p>
+<h2 id="线性无关集和基"><a href="#线性无关集和基" class="headerlink" title="线性无关集和基"></a>线性无关集和基</h2><h3 id="线性无关集"><a href="#线性无关集" class="headerlink" title="线性无关集"></a>线性无关集</h3><p>$V$中向量的一个指标集$\{\mathbf v_1,\cdots,\mathbf v_p\}$，称为线性无关的，如果向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p = 0<br>$$<br>只有平凡解。<br><em>矩阵的行初等变换不影响矩阵的列的线性相关关系</em></p>
+<h3 id="基"><a href="#基" class="headerlink" title="基"></a>基</h3><p>令$H$是向量空间$V$的一个子空间，$V$中向量的指标集$B＝\{\mathbf b_1,\cdots,\mathbf b_p\}$称为$H$的一个基，如果</p>
+<ul>
+<li>$B$是现象无关集</li>
+<li>由$B$生成的子空间与$H$相同，即$H=Span\{\mathbf b_1,\cdots,\mathbf b_p\}$</li>
+</ul>
+<h4 id="基的两个特性"><a href="#基的两个特性" class="headerlink" title="基的两个特性"></a>基的两个特性</h4><blockquote>
+<ul>
+<li>基是一个尽可能小的生成集</li>
+<li>基是尽可能大的线性无关集</li>
+</ul>
+</blockquote>
+<h3 id="NulA-和-ColA-的基"><a href="#NulA-和-ColA-的基" class="headerlink" title="$NulA$和$ColA$的基"></a>$NulA$和$ColA$的基</h3><p>通过解$A\mathbf x=0$的出的生成集总是线性无关的，即$NulA$的基。<br>$ColA$的基由矩阵$A$的主元列构成。</p>
 <h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><ol>
 <li>若$\mathbf v_1,\cdots,\mathbf v_p$在向量空间$V$中，则$Span\{\mathbf v_1,\cdots,\mathbf v_p\}$是$V$的一个子空间</li>
 <li>$m\times n$矩阵$A$的零空间是$\mathbb R^n$的一个子空间，也就是说，$m$个方程、$n$个未知数的齐次线性方程组$A\mathbf x=0$的全体解的集合是$\mathbb R^n$的一个子空间。</li>
 <li>$m\times n$矩阵$A$的列空间是$\mathbb R^m$的一个子空间</li>
+<li>不少于两个有编号的向量的集合$\{\mathbf v_1,\cdots,\mathbf v_p\}$，如果有$\mathbf v_1 \neq0$，则$\{\mathbf v_1,\cdots,\mathbf v_p\}$是线性相关的，当且仅当某$\mathbf v_1(j&gt;1)$是其前面向量$v_1,\cdots,v_{j-1}$的线性组合</li>
+<li>生成集定理: 令$S=\{\mathbf v_1,\cdots,\mathbf v_p\}$是$V$中的向量集，$H=Span\{\mathbf v_1,\cdots,\mathbf v_p\}$.<ul>
+<li>若$S$中某一向量，比如说$v_k$，是$S$中其余向量的线性组合，则$S$中去掉$v_k$之后形成的集合仍然可以生成$H$。</li>
+<li>若$H\neq\{0\}$，则$S$的某一子集是$H$的一个基<br>6.矩阵$A$的主元列构成$ColA$的一个基</li>
+</ul>
+</li>
 </ol>
 
           
@@ -1048,7 +1321,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/08/行列式－《线性代数及应用》/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="url">
                   行列式－《线性代数及应用》
                 </a>
               
@@ -1092,8 +1365,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/08/行列式－《线性代数及应用》/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/行列式－《线性代数及应用》/" itemprop="commentsCount"></span>
+                <a href="/2016/09/08/Math-行列式－《线性代数及应用》/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1103,7 +1376,7 @@
 
           
           
-             <span id="/2016/09/08/行列式－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="行列式－《线性代数及应用》">
+             <span id="/2016/09/08/Math-行列式－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="行列式－《线性代数及应用》">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1199,8 +1472,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/04/矩阵代数－《线性代数及应用》笔记/" itemprop="url">
-                  矩阵代数－《线性代数及应用》笔记
+                <a class="post-title-link" href="/2016/09/04/Math-矩阵代数－《线性代数及应用》/" itemprop="url">
+                  矩阵代数－《线性代数及应用》
                 </a>
               
             
@@ -1243,8 +1516,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/04/矩阵代数－《线性代数及应用》笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/04/矩阵代数－《线性代数及应用》笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/09/04/Math-矩阵代数－《线性代数及应用》/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/04/Math-矩阵代数－《线性代数及应用》/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1254,7 +1527,7 @@
 
           
           
-             <span id="/2016/09/04/矩阵代数－《线性代数及应用》笔记/" class="leancloud_visitors" data-flag-title="矩阵代数－《线性代数及应用》笔记">
+             <span id="/2016/09/04/Math-矩阵代数－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="矩阵代数－《线性代数及应用》">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1572,8 +1845,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/03/线性方程组－《线性代数及应用》笔记/" itemprop="url">
-                  线性方程组－《线性代数及应用》笔记
+                <a class="post-title-link" href="/2016/09/03/Math-线性方程组－《线性代数及应用》/" itemprop="url">
+                  线性方程组－《线性代数及应用》
                 </a>
               
             
@@ -1616,8 +1889,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/03/线性方程组－《线性代数及应用》笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/线性方程组－《线性代数及应用》笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/09/03/Math-线性方程组－《线性代数及应用》/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/Math-线性方程组－《线性代数及应用》/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1627,7 +1900,7 @@
 
           
           
-             <span id="/2016/09/03/线性方程组－《线性代数及应用》笔记/" class="leancloud_visitors" data-flag-title="线性方程组－《线性代数及应用》笔记">
+             <span id="/2016/09/03/Math-线性方程组－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="线性方程组－《线性代数及应用》">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -3074,7 +3347,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -3082,7 +3355,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -3091,7 +3364,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

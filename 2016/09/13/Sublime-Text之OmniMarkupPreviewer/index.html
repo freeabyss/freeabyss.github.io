@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,IntelliJ IDEA,skill," />
+  <meta name="keywords" content="sublime,markdown," />
 
 
 
@@ -92,28 +92,91 @@
 
 
 
-<meta name="description" content="在catalina.bat文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
+<meta name="description" content="OmniMarkupPreviewer功能概述
+实时预览，多设备同时刷新
+扩展语法
+MathJax 公式
+文档内标题导航
+支持HTML、PDF格式导出
 
--Xdebug：启用调试特性
--Xrunjdwp：启用JDWP实现，包含">
+OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅python-markdown
+快捷键
+
+
+快捷键
+说明
+
+
+
+
+option+command+O
+打开浏览器进行预览
+
+
+
+配置
+
+
+配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在IDEA上远程调试Java Web项目">
-<meta property="og:url" content="http://blog.freeabyss.com/2015/12/28/在IDEA上远程调试Java-Web项目/index.html">
+<meta property="og:title" content="Sublime Text之OmniMarkupPreviewer">
+<meta property="og:url" content="http://blog.freeabyss.com/2016/09/13/Sublime-Text之OmniMarkupPreviewer/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="在catalina.bat文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
+<meta property="og:description" content="OmniMarkupPreviewer功能概述
+实时预览，多设备同时刷新
+扩展语法
+MathJax 公式
+文档内标题导航
+支持HTML、PDF格式导出
 
--Xdebug：启用调试特性
--Xrunjdwp：启用JDWP实现，包含">
-<meta property="og:image" content="http://blog.freeabyss.com/../images/java_idea_1.png">
-<meta property="og:image" content="http://blog.freeabyss.com/../images/java_idea_2.png">
-<meta property="og:updated_time" content="2016-09-03T16:19:32.000Z">
+OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅python-markdown
+快捷键
+
+
+快捷键
+说明
+
+
+
+
+option+command+O
+打开浏览器进行预览
+
+
+
+配置
+
+
+配置">
+<meta property="og:updated_time" content="2016-09-13T13:38:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在IDEA上远程调试Java Web项目">
-<meta name="twitter:description" content="在catalina.bat文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
+<meta name="twitter:title" content="Sublime Text之OmniMarkupPreviewer">
+<meta name="twitter:description" content="OmniMarkupPreviewer功能概述
+实时预览，多设备同时刷新
+扩展语法
+MathJax 公式
+文档内标题导航
+支持HTML、PDF格式导出
 
--Xdebug：启用调试特性
--Xrunjdwp：启用JDWP实现，包含">
-<meta name="twitter:image" content="http://blog.freeabyss.com/../images/java_idea_1.png">
+OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅python-markdown
+快捷键
+
+
+快捷键
+说明
+
+
+
+
+option+command+O
+打开浏览器进行预览
+
+
+
+配置
+
+
+配置">
 
 
 
@@ -134,9 +197,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.freeabyss.com/2015/12/28/在IDEA上远程调试Java-Web项目/"/>
+  <link rel="canonical" href="http://blog.freeabyss.com/2016/09/13/Sublime-Text之OmniMarkupPreviewer/"/>
 
-  <title> 在IDEA上远程调试Java Web项目 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Sublime Text之OmniMarkupPreviewer | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +349,7 @@
             
             
               
-                在IDEA上远程调试Java Web项目
+                Sublime Text之OmniMarkupPreviewer
               
             
           </h1>
@@ -298,8 +361,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-28T00:12:59+08:00" content="2015-12-28">
-              2015-12-28
+            <time itemprop="dateCreated" datetime="2016-09-13T21:37:44+08:00" content="2016-09-13">
+              2016-09-13
             </time>
           </span>
 
@@ -312,8 +375,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/IDEA/" itemprop="url" rel="index">
-                    <span itemprop="name">IDEA</span>
+                  <a href="/categories/sublime/" itemprop="url" rel="index">
+                    <span itemprop="name">sublime</span>
                   </a>
                 </span>
 
@@ -328,8 +391,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/28/在IDEA上远程调试Java-Web项目/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/在IDEA上远程调试Java-Web项目/" itemprop="commentsCount"></span>
+                <a href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,7 +402,7 @@
 
           
           
-             <span id="/2015/12/28/在IDEA上远程调试Java-Web项目/" class="leancloud_visitors" data-flag-title="在IDEA上远程调试Java Web项目">
+             <span id="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" class="leancloud_visitors" data-flag-title="Sublime Text之OmniMarkupPreviewer">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -361,16 +424,86 @@
       
 
       
-        <p>在catalina.bat文件的，最上方添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n</div></pre></td></tr></table></figure></p>
-<ul>
-<li>-Xdebug：启用调试特性</li>
-<li>-Xrunjdwp：启用JDWP实现，包含以下选项：<ul>
-<li>transport=dt_socket：JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输</li>
-<li>address=9999：JVM在9999端口上监听请求</li>
-<li>server=y：y表示启动的JVM是被调试者，n表示启动的JVM是调试器</li>
-<li>suspend=y：y表示启动的JVM会暂停等待，直到调试器连接上（如果从tomcat一开始就进行调试，那么必须设置suspend=y<br>接下来再IDEA上新增一个Remote Tomcat<br><img src="../images/java_idea_1.png" alt=""><br>Host地址不用加Http<br>Port：为tomcat的端口<br><img src="../images/java_idea_2.png" alt=""><br>这里的port为调试端口，1中所设置的端口一直</li>
+        <h1 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h1><h2 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h2><ul>
+<li>实时预览，多设备同时刷新</li>
+<li>扩展语法</li>
+<li>MathJax 公式</li>
+<li>文档内标题导航</li>
+<li>支持HTML、PDF格式导出</li>
 </ul>
-</li>
+<p>OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅<a href="https://pythonhosted.org/Markdown/extensions/index.html" target="_blank" rel="external">python-markdown</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>option</code>+<code>command</code>+O</td>
+<td style="text-align:left">打开浏览器进行预览</td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">server_host</td>
+<td style="text-align:left">开启预览服务的IP地址，建议为本机固定IP，这样可实现局域网内的设备均可访问，不需要的话默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">server_port</td>
+<td style="text-align:left">访问端口号，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_modified</td>
+<td style="text-align:left">是否开启实时刷新，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_modified_delay</td>
+<td style="text-align:left">刷新延时，单位毫秒，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_saved</td>
+<td style="text-align:left">保存时刷新预览，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">browser_command</td>
+<td style="text-align:left">设置预览的浏览器</td>
+</tr>
+<tr>
+<td style="text-align:left">html_template_name</td>
+<td style="text-align:left">预览模版</td>
+</tr>
+<tr>
+<td style="text-align:left">ignored_renderers</td>
+<td style="text-align:left">忽略标记语言的渲染器</td>
+</tr>
+<tr>
+<td style="text-align:left">mathjax_enabled</td>
+<td style="text-align:left">开启LaTex</td>
+</tr>
+<tr>
+<td style="text-align:left">renderer_options-MarkdownRenderer</td>
+<td style="text-align:left">渲染扩展，扩展Markdown的语法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="渲染说明"><a href="#渲染说明" class="headerlink" title="渲染说明"></a>渲染说明</h3><ul>
+<li>attr_list ：开启文档内跳转</li>
+<li>footnotes ：文档脚注  </li>
+<li>codehilite：代码语法高亮     </li>
+<li>toc ：在文章开头自动生成目录，并附带跳转链接  </li>
+<li>strikeout：删除线   ~~ 删除线 ~~</li>
+<li>superscript ：上标  H^2^</li>
+<li>subscript：下标   H~2~  </li>
 </ul>
 
       
@@ -394,11 +527,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
+            <a href="/tags/sublime/" rel="tag">#sublime</a>
           
-            <a href="/tags/IntelliJ-IDEA/" rel="tag">#IntelliJ IDEA</a>
-          
-            <a href="/tags/skill/" rel="tag">#skill</a>
+            <a href="/tags/markdown/" rel="tag">#markdown</a>
           
         </div>
       
@@ -407,17 +538,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/22/Python语法预览/" rel="next" title="Python快速预览">
-                <i class="fa fa-chevron-left"></i> Python快速预览
+              <a href="/2016/09/13/My-Sublime-Text-Setting/" rel="next" title="My Sublime Text Setting">
+                <i class="fa fa-chevron-left"></i> My Sublime Text Setting
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/29/Quart表达式详解/" rel="prev" title="QuartZ Cron表达式详解">
-                QuartZ Cron表达式详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -443,8 +570,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/28/在IDEA上远程调试Java-Web项目/"
-           data-title="在IDEA上远程调试Java Web项目" data-url="http://blog.freeabyss.com/2015/12/28/在IDEA上远程调试Java-Web项目/">
+      <div class="ds-thread" data-thread-key="2016/09/13/Sublime-Text之OmniMarkupPreviewer/"
+           data-title="Sublime Text之OmniMarkupPreviewer" data-url="http://blog.freeabyss.com/2016/09/13/Sublime-Text之OmniMarkupPreviewer/">
       </div>
     
   </div>
@@ -562,7 +689,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OmniMarkupPreviewer"><span class="nav-number">1.</span> <span class="nav-text">OmniMarkupPreviewer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能概述"><span class="nav-number">1.1.</span> <span class="nav-text">功能概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">1.2.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#渲染说明"><span class="nav-number">1.3.1.</span> <span class="nav-text">渲染说明</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

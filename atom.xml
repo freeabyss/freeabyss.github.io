@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-09-12T16:17:06.000Z</updated>
+  <updated>2016-09-13T13:38:25.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -14,6 +14,426 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sublime Text之OmniMarkupPreviewer</title>
+    <link href="http://blog.freeabyss.com/2016/09/13/Sublime-Text%E4%B9%8BOmniMarkupPreviewer/"/>
+    <id>http://blog.freeabyss.com/2016/09/13/Sublime-Text之OmniMarkupPreviewer/</id>
+    <published>2016-09-13T13:37:44.000Z</published>
+    <updated>2016-09-13T13:38:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h1><h2 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h2><ul>
+<li>实时预览，多设备同时刷新</li>
+<li>扩展语法</li>
+<li>MathJax 公式</li>
+<li>文档内标题导航</li>
+<li>支持HTML、PDF格式导出</li>
+</ul>
+<p>OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅<a href="https://pythonhosted.org/Markdown/extensions/index.html" target="_blank" rel="external">python-markdown</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>option</code>+<code>command</code>+O</td>
+<td style="text-align:left">打开浏览器进行预览</td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">server_host</td>
+<td style="text-align:left">开启预览服务的IP地址，建议为本机固定IP，这样可实现局域网内的设备均可访问，不需要的话默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">server_port</td>
+<td style="text-align:left">访问端口号，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_modified</td>
+<td style="text-align:left">是否开启实时刷新，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_modified_delay</td>
+<td style="text-align:left">刷新延时，单位毫秒，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_saved</td>
+<td style="text-align:left">保存时刷新预览，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">browser_command</td>
+<td style="text-align:left">设置预览的浏览器</td>
+</tr>
+<tr>
+<td style="text-align:left">html_template_name</td>
+<td style="text-align:left">预览模版</td>
+</tr>
+<tr>
+<td style="text-align:left">ignored_renderers</td>
+<td style="text-align:left">忽略标记语言的渲染器</td>
+</tr>
+<tr>
+<td style="text-align:left">mathjax_enabled</td>
+<td style="text-align:left">开启LaTex</td>
+</tr>
+<tr>
+<td style="text-align:left">renderer_options-MarkdownRenderer</td>
+<td style="text-align:left">渲染扩展，扩展Markdown的语法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="渲染说明"><a href="#渲染说明" class="headerlink" title="渲染说明"></a>渲染说明</h3><ul>
+<li>attr_list ：开启文档内跳转</li>
+<li>footnotes ：文档脚注  </li>
+<li>codehilite：代码语法高亮     </li>
+<li>toc ：在文章开头自动生成目录，并附带跳转链接  </li>
+<li>strikeout：删除线   ~~ 删除线 ~~</li>
+<li>superscript ：上标  H^2^</li>
+<li>subscript：下标   H~2~  </li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;OmniMarkupPreviewer&quot;&gt;&lt;a href=&quot;#OmniMarkupPreviewer&quot; class=&quot;headerlink&quot; title=&quot;OmniMarkupPreviewer&quot;&gt;&lt;/a&gt;OmniMarkupPreviewer&lt;/h1&gt;&lt;h2 i
+    
+    </summary>
+    
+      <category term="sublime" scheme="http://blog.freeabyss.com/categories/sublime/"/>
+    
+    
+      <category term="sublime" scheme="http://blog.freeabyss.com/tags/sublime/"/>
+    
+      <category term="markdown" scheme="http://blog.freeabyss.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Sublime Text Setting</title>
+    <link href="http://blog.freeabyss.com/2016/09/13/My-Sublime-Text-Setting/"/>
+    <id>http://blog.freeabyss.com/2016/09/13/My-Sublime-Text-Setting/</id>
+    <published>2016-09-13T13:30:25.000Z</published>
+    <updated>2016-09-13T13:39:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="My-Sublime-Text-Package"><a href="#My-Sublime-Text-Package" class="headerlink" title="My Sublime Text Package"></a>My Sublime Text Package</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">插件</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://blog.freeabyss.science:4000/2016/09/13/Sublime-Text%E4%B9%8BOmniMarkupPreviewer/" target="_blank" rel="external">OmniMarkdownPerviwer</a></td>
+<td style="text-align:left">预览、导出Markdown</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://blog.freeabyss.science:4000/2016/09/13/Sublime-Text%E4%B9%8BEvernote/" target="_blank" rel="external">Evernote</a></td>
+<td style="text-align:left">实现用Markdown 编写印象笔记</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Sublime-Text-Package"><a href="#Sublime-Text-Package" class="headerlink" title="Sublime Text Package"></a>Sublime Text Package</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">插件</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">advenceNewfile</td>
+<td style="text-align:left">快速新建文件，文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">httpRequest</td>
+<td style="text-align:left">测试HTTP请求。<a href="https://github.com/braindamageinc/SublimeHttpRequester" target="_blank" rel="external">说明文档</a></td>
+</tr>
+<tr>
+<td style="text-align:left">fetch</td>
+<td style="text-align:left">管理和下载类库</td>
+</tr>
+<tr>
+<td style="text-align:left">sidebarEnhancement</td>
+<td style="text-align:left">增强side bar的功能</td>
+</tr>
+<tr>
+<td style="text-align:left">docblockr</td>
+<td style="text-align:left">js注释</td>
+</tr>
+<tr>
+<td style="text-align:left">sublimeLinter</td>
+<td style="text-align:left">ublimeLinter用语代码语法和风格的检查，sublimeLinter是个基类插件，若想支持对应语言的检查需要安装对应的插件。</td>
+</tr>
+<tr>
+<td style="text-align:left">SublimeLinter-jshint</td>
+<td style="text-align:left">针对js语法检查的插件。安装后还需要用npm安装jshint，因为该插件依赖与nodejs的jshint模块。</td>
+</tr>
+<tr>
+<td style="text-align:left">SublimeREPL</td>
+<td style="text-align:left">支持在 Sublime 中运行交互式开发环境｜</td>
+</tr>
+<tr>
+<td style="text-align:left">Anaconda</td>
+<td style="text-align:left">python扩展包</td>
+</tr>
+<tr>
+<td style="text-align:left">htmlpretty</td>
+<td style="text-align:left">格式化html、js、json插件</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;My-Sublime-Text-Package&quot;&gt;&lt;a href=&quot;#My-Sublime-Text-Package&quot; class=&quot;headerlink&quot; title=&quot;My Sublime Text Package&quot;&gt;&lt;/a&gt;My Sublime Text P
+    
+    </summary>
+    
+      <category term="sublime" scheme="http://blog.freeabyss.com/categories/sublime/"/>
+    
+    
+      <category term="sublime" scheme="http://blog.freeabyss.com/tags/sublime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime Text之Evernote</title>
+    <link href="http://blog.freeabyss.com/2016/09/13/Sublime-Text%E4%B9%8BEvernote/"/>
+    <id>http://blog.freeabyss.com/2016/09/13/Sublime-Text之Evernote/</id>
+    <published>2016-09-13T13:27:26.000Z</published>
+    <updated>2016-09-13T13:34:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Evernote"><a href="#Evernote" class="headerlink" title="Evernote"></a>Evernote</h1><p>下载了<code>Evernote</code>之后可以用Markdown编写印象笔记了。 <a href="https://github.com/bordaigorl/sublime-evernote" target="_blank" rel="external">sublime evernote主页</a></p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">commond</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Delete Node</td>
+<td style="text-align:left">删除笔记</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Search Note</td>
+<td style="text-align:left">搜索笔记</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Show Attachments</td>
+<td style="text-align:left">显示当前笔记的附件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Attach current file to a note</td>
+<td style="text-align:left">将当前文件作为附件发送给指定笔记</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Insert Attachment Here</td>
+<td style="text-align:left">在光标处插入附件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Delete Attachment</td>
+<td style="text-align:left">删除附件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">View Note in Web App</td>
+<td style="text-align:left">打开该笔记的网页版</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">View Note in Evernote client</td>
+<td style="text-align:left">在客户端中打开该笔记</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Update Evernote Note</td>
+<td style="text-align:left">更新笔记</td>
+<td style="text-align:left">save_evernote_note</td>
+</tr>
+<tr>
+<td style="text-align:left">Send to Evernote as new note</td>
+<td style="text-align:left">创建新笔记send_to_evernote</td>
+</tr>
+<tr>
+<td style="text-align:left">Create New Notebook</td>
+<td style="text-align:left">创建新的笔记本</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Open Evernote Note</td>
+<td style="text-align:left">打开笔记</td>
+<td style="text-align:left">open_evernote_note</td>
+</tr>
+<tr>
+<td style="text-align:left">Clip to Evernote as new note</td>
+<td style="text-align:left">将当前选中的内容作为新的笔记创建</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">List linked notes</td>
+<td style="text-align:left">显示当前笔记引用的其它笔记链接</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Insert link to a note</td>
+<td style="text-align:left">插入其它笔记的链接</td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>访问<a href="https://app.yinxiang.com/api/DeveloperToken.action" target="_blank" rel="external">Developer Tokens</a>获取Token，打开Evernote.sublime-settings</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;noteStoreUrl&quot;: &quot;https://app.yinxiang.com/shard/s1/notestore&quot;,</div><div class="line">    &quot;token&quot;: &quot;&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="添加快捷键示例"><a href="#添加快捷键示例" class="headerlink" title="添加快捷键示例"></a>添加快捷键示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123; &quot;keys&quot;: [&quot;super+e&quot;], &quot;command&quot;: &quot;show_overlay&quot;, &quot;args&quot;: &#123;&quot;overlay&quot;: &quot;command_palette&quot;, &quot;text&quot;: &quot;Evernote: &quot;&#125; &#125;,</div><div class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+s&quot;], &quot;command&quot;: &quot;send_to_evernote&quot; &#125;,</div><div class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+o&quot;], &quot;command&quot;: &quot;open_evernote_note&quot; &#125;,</div><div class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+u&quot;], &quot;command&quot;: &quot;save_evernote_note&quot; &#125;,</div></pre></td></tr></table></figure>
+<h3 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h3><ul>
+<li>md_syntax：定义md语法</li>
+<li>inline_css：定义部分CSS样式</li>
+<li>code_highlighting_style：代码高亮样式，autumn, default, github, monokai, perldoc, vim, borland, emacs, igor, murphy, rrt, vs, bw, friendly, native, tango, xcode, colorful, fruity, manni, pastie, trac</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Evernote&quot;&gt;&lt;a href=&quot;#Evernote&quot; class=&quot;headerlink&quot; title=&quot;Evernote&quot;&gt;&lt;/a&gt;Evernote&lt;/h1&gt;&lt;p&gt;下载了&lt;code&gt;Evernote&lt;/code&gt;之后可以用Markdown编写印象笔记了。 
+    
+    </summary>
+    
+      <category term="sublime" scheme="http://blog.freeabyss.com/categories/sublime/"/>
+    
+    
+      <category term="sublime" scheme="http://blog.freeabyss.com/tags/sublime/"/>
+    
+      <category term="markdown" scheme="http://blog.freeabyss.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python资料收集</title>
+    <link href="http://blog.freeabyss.com/2016/09/13/Python%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86/"/>
+    <id>http://blog.freeabyss.com/2016/09/13/Python资料收集/</id>
+    <published>2016-09-13T13:18:05.000Z</published>
+    <updated>2016-09-13T14:26:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="常用网站"><a href="#常用网站" class="headerlink" title="常用网站"></a>常用网站</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">网站</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://www.python.org/" target="_blank" rel="external">Python 官方网站</a></td>
+<td style="text-align:left">Python 官方网站</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">pip主页</a></td>
+<td style="text-align:left">pip主页</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="http://pip.readthedocs.io/en/stable/" target="_blank" rel="external">pip文档</a></td>
+<td style="text-align:left">pip文档</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="external">Pycharm</a></td>
+<td style="text-align:left">最流行的Python IDE</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://www.continuum.io/downloads" target="_blank" rel="external">ANACONDA</a></td>
+<td style="text-align:left">最适合做科学计算的IDE</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://groups.google.com/forum/#!forum/python-virtualenv" target="_blank" rel="external">python-virtualenv</a></td>
+<td style="text-align:left">Google python社区</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="http://awesome-python.com/" target="_blank" rel="external">awesome python</a></td>
+<td style="text-align:left">Python 资料大全</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://github.com/rougier/numpy-100" target="_blank" rel="external">numpy exercises</a></td>
+<td style="text-align:left">numpy 练习</td>
+</tr>
+</tbody>
+</table>
+<h2 id="常用包"><a href="#常用包" class="headerlink" title="常用包"></a>常用包</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">网站</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://scrapy.org/" target="_blank" rel="external">scrapy</a></td>
+<td style="text-align:left">最出名的网络爬虫</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://github.com/gawel/pyquery" target="_blank" rel="external">PyQuery</a></td>
+<td style="text-align:left">仿照jQuery的实现，语法与jQuery相同</td>
+</tr>
+</tbody>
+</table>
+<h2 id="书籍推荐"><a href="#书籍推荐" class="headerlink" title="书籍推荐"></a>书籍推荐</h2><ul>
+<li>《Python 学习手册》:对 Python 介绍最全面的书了，包含了绝大多数 Python 语言的关键内容。推荐初学者看</li>
+<li>《Python 语言及其应用》：适合初学者入门</li>
+<li>《Python 高级编程》：进阶书籍</li>
+<li>《Python 高手之路》：本书的作者是开源项目 OpenStack 的 PTL（项目技术负责人）之一的 Julien Danjou。这本书虽然只有 2 百多页，但是本书对项目的结构设计，对模块和库的管理，如何编写文档，如何分发，以及如何通过虚拟环境对项目进行测试都有自己的见解。此外，本书还涉及了很多高级主题，如性能优化、插件化结构的设计与架构、Python 3 的支持策略等。</li>
+<li>《Python 编程实战：运用设计模式、并发和程序库创建高质量程序》</li>
+<li>Effective Python: 编写高质量 Python 代码的 59 个有效方法》</li>
+<li>《Python Web 开发实战》</li>
+</ul>
+<h2 id="技术文章"><a href="#技术文章" class="headerlink" title="技术文章"></a>技术文章</h2><ul>
+<li><a href="https://xueqiu.com/7381621247/64925383?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">量化编程、Python 入门及量化策略、量化知识总结贴</a></li>
+<li><a href="http://python.jobbole.com/86296/" target="_blank" rel="external">网络爬虫：使用 Scrapy 框架编写一个抓取书籍信息的爬虫服务</a></li>
+<li><a href="http://python.jobbole.com/86332/" target="_blank" rel="external">Python 不能不知的模块</a></li>
+<li><a href="https://yuez.me/python-zhong-de-guan-jian-zi-with-xiang-jie/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">Python 中的关键字 with 详解</a></li>
+<li><a href="http://qingyunha.github.io/taotao/" target="_blank" rel="external">A Python Interpreter Written in Python</a></li>
+<li><a href="Python 包、模块、类以及代码文件和目录的一种管理方案">Python 包、模块、类以及代码文件和目录的一种管理方案</a></li>
+<li><a href="http://blogread.cn/it/article/6159?f=wb" target="_blank" rel="external">Python 高效编程技巧</a></li>
+<li><a href="http://www.imooc.com/article/3831" target="_blank" rel="external">2015 年十大流行 Python 库</a></li>
+<li><a href="http://www.imooc.com/article/2994" target="_blank" rel="external">我理解的 Python 最佳实践</a></li>
+<li><a href="https://linux.cn/article-7765-1.html?utm_source=weibo&amp;utm_medium=weibo" target="_blank" rel="external">从零构建一个简单的 Python 框架</a></li>
+<li><a href="http://www.tuicool.com/articles/r2yyei" target="_blank" rel="external">NumPy 的详细教程</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;常用网站&quot;&gt;&lt;a href=&quot;#常用网站&quot; class=&quot;headerlink&quot; title=&quot;常用网站&quot;&gt;&lt;/a&gt;常用网站&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;网站&lt;/th&gt;
+&lt;th st
+    
+    </summary>
+    
+      <category term="Python" scheme="http://blog.freeabyss.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://blog.freeabyss.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式概述</title>
@@ -523,9 +943,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Calculus" scheme="http://blog.freeabyss.com/tags/Calculus/"/>
     
@@ -645,9 +1065,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -697,9 +1117,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -822,9 +1242,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -971,9 +1391,9 @@
       <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
       <category term="Linear Algebra" scheme="http://blog.freeabyss.com/tags/Linear-Algebra/"/>
     
@@ -1362,11 +1782,11 @@
       <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
     
     
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
       <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
     
       <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
   </entry>
   

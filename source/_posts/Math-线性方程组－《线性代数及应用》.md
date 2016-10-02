@@ -1,5 +1,5 @@
 ---
-title: 线性方程组－《线性代数及应用》笔记
+title: 线性方程组－《线性代数及应用》
 date: 2016-09-03 18:27:24
 tags: [Math, Linear Algebra, note]
 categories: Math

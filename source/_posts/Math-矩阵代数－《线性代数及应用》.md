@@ -1,5 +1,5 @@
 ---
-title: 矩阵代数－《线性代数及应用》笔记
+title: 矩阵代数－《线性代数及应用》
 date: 2016-09-04 16:27:24
 updated: 2016-09-05 20:00:00
 tags: [Math, Linear Algebra, note]

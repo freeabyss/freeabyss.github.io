@@ -1,0 +1,911 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="note,Math,Linear Algebra," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="加粗小写字母代表向量，例如$\mathbf u, \mathbf v$不加粗小写字母代表标量也就是实数，例如$a,c$大写字母代表矩阵，例如 $A,B$
+
+方程以及方程的解方程以下为同一方程组的不同表示形式
+线性方程组$$    a_1 x_1 + a_2 x_2 +…+a_n x_n=b_1\\    c_1 x_1 + c_2 x_2 +…+c_n x_n=b_2\\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性方程组－《线性代数及应用》">
+<meta property="og:url" content="http://blog.freeabyss.com/2016/09/03/Math-线性方程组－《线性代数及应用》/index.html">
+<meta property="og:site_name" content="Abyss's blog">
+<meta property="og:description" content="加粗小写字母代表向量，例如$\mathbf u, \mathbf v$不加粗小写字母代表标量也就是实数，例如$a,c$大写字母代表矩阵，例如 $A,B$
+
+方程以及方程的解方程以下为同一方程组的不同表示形式
+线性方程组$$    a_1 x_1 + a_2 x_2 +…+a_n x_n=b_1\\    c_1 x_1 + c_2 x_2 +…+c_n x_n=b_2\\">
+<meta property="og:updated_time" content="2016-09-12T15:00:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线性方程组－《线性代数及应用》">
+<meta name="twitter:description" content="加粗小写字母代表向量，例如$\mathbf u, \mathbf v$不加粗小写字母代表标量也就是实数，例如$a,c$大写字母代表矩阵，例如 $A,B$
+
+方程以及方程的解方程以下为同一方程组的不同表示形式
+线性方程组$$    a_1 x_1 + a_2 x_2 +…+a_n x_n=b_1\\    c_1 x_1 + c_2 x_2 +…+c_n x_n=b_2\\">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.com/2016/09/03/Math-线性方程组－《线性代数及应用》/"/>
+
+  <title> 线性方程组－《线性代数及应用》 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Abyss's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                线性方程组－《线性代数及应用》
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-03T18:27:24+08:00" content="2016-09-03">
+              2016-09-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/03/Math-线性方程组－《线性代数及应用》/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/Math-线性方程组－《线性代数及应用》/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/03/Math-线性方程组－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="线性方程组－《线性代数及应用》">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
+</blockquote>
+<h2 id="方程以及方程的解"><a href="#方程以及方程的解" class="headerlink" title="方程以及方程的解"></a>方程以及方程的解</h2><h3 id="方程"><a href="#方程" class="headerlink" title="方程"></a>方程</h3><p>以下为同一方程组的不同表示形式</p>
+<h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>$$<br>    a_1 x_1 + a_2 x_2 +…+a_n x_n=b_1\\<br>    c_1 x_1 + c_2 x_2 +…+c_n x_n=b_2\\<br>            …<br>$$</p>
+<h4 id="增广矩阵"><a href="#增广矩阵" class="headerlink" title="增广矩阵"></a>增广矩阵</h4><p>$$<br>    \begin{matrix}<br>    a_1 &amp; a_2 &amp; \cdots &amp; a_n &amp; b_1\\<br>    c_1 &amp; c_2 &amp; \cdots &amp; c_n &amp; b_1\\<br>    \end{matrix}<br>$$</p>
+<h4 id="向量方程"><a href="#向量方程" class="headerlink" title="向量方程"></a>向量方程</h4><p>$v_1 ,v_2 ,\cdots,v_n$是$R^n$中的向量<br>$$<br>    x_1 \mathbf v_1 + x_2 \mathbf v_2 +\cdots+ x_n \mathbf v_n =\mathbf b<br>$$</p>
+<h4 id="矩阵方程"><a href="#矩阵方程" class="headerlink" title="矩阵方程"></a>矩阵方程</h4><p>$$<br>    A\mathbf x =\mathbf b<br>$$</p>
+<h3 id="解集"><a href="#解集" class="headerlink" title="解集"></a>解集</h3><h4 id="阶梯形矩阵定义"><a href="#阶梯形矩阵定义" class="headerlink" title="阶梯形矩阵定义"></a>阶梯形矩阵定义</h4><ol>
+<li>每一个非零行在每一零行上</li>
+<li>某一行的先导元素所在列位于前一行先导元素的右面</li>
+<li>某一先导元素所在列下方元素都是零，若一个阶梯形矩阵还满足以下性质，称它为简化阶梯形</li>
+<li>每一非零行的先导元素都是1</li>
+<li>每一先导元素1是该元素所在列的唯一非零元素</li>
+</ol>
+<h4 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h4><p>称$A\mathbf x=0$的形式的方程为齐次方程。当该方程只有一个解时，即$\mathbf x=0$，这个解称为平凡解。若齐次方程右多个解，称齐次方程有非平凡解。</p>
+<h4 id="解方程组的算法"><a href="#解方程组的算法" class="headerlink" title="解方程组的算法"></a>解方程组的算法</h4><h5 id="行初等变换"><a href="#行初等变换" class="headerlink" title="行初等变换"></a>行初等变换</h5><ul>
+<li>倍加变换：把某一行换成它本身与另外一行的倍数的和</li>
+<li>对换变换：把两行对换</li>
+<li>倍乘变换：把某一行的所有元素乘以同一个非零元素</li>
+</ul>
+<h5 id="行化简算法"><a href="#行化简算法" class="headerlink" title="行化简算法"></a>行化简算法</h5><p>任何情况下，线性方程组、向量方程、矩阵方程都可用相同方法来解－行化简算法来化简增广矩阵。</p>
+<ol>
+<li>由最左边的非零列开始，这是一个主元列，主元位置在该列顶端</li>
+<li>在主元列中选取一个非零元作为主元。若有必要的话，可对换两行使这个元素移到主元位置上</li>
+<li>用倍加行变换将主元下面的元素变成0</li>
+<li>暂时不管包含主元位置的行以及它上面的各行，对剩下的子矩阵使用上述的三个步骤直到没有非零行需要处理为止。</li>
+<li>由最右面的主元开始，把每个主元上方的各元素变成0，若某个主元不是1，用倍乘将其变为1</li>
+</ol>
+<h5 id="线性方程组的解"><a href="#线性方程组的解" class="headerlink" title="线性方程组的解"></a>线性方程组的解</h5><ol>
+<li>写出方程组的增广矩阵</li>
+<li>应用行化简算法把增广矩阵化为阶梯形，确定方程组是否有解，如果没有解则停止；否则进行下一步</li>
+<li>继续行化简算法得到它的简化阶梯形</li>
+<li>写出由第3步所得矩阵所对应的方程组</li>
+<li>把第4步所得的每个方程改写为用自由变量(假如有自由变量)表示基本变了的形式</li>
+</ol>
+<h5 id="参数向量形式的解集"><a href="#参数向量形式的解集" class="headerlink" title="参数向量形式的解集"></a>参数向量形式的解集</h5><ol>
+<li>把增广矩阵行化简为简化阶梯形</li>
+<li>把每个基本变量用自由变量表示</li>
+<li>把一般解$\mathbf x$表示成向量，如果有自由变量，其元素依赖于自由变量</li>
+<li>把$\mathbf x$分解为向量的线性组合，用自由变量作为参数</li>
+</ol>
+<h2 id="线性组合和线性变换"><a href="#线性组合和线性变换" class="headerlink" title="线性组合和线性变换"></a>线性组合和线性变换</h2><h3 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h3><p>给定$R^n$中向量$\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$和标量$c_1,c_2,\cdots,c_p$,向量<br>$$<br>    \mathbf y=c_1\mathbf v_1+\cdots+c_p\mathbf v_p<br>$$<br>称为向量$\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$，以$c_1,c_2,\cdots,c_p$为权的<em>线性组合</em>，其中所有向量$y$的集合用记号$Span\{\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p\}$表示。</p>
+<h3 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h3><p>对于$R^n$中一组向量$\{\mathbf v_1,\cdots,\mathbf v_p\}$，若向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p=0<br>$$<br>仅有平凡解，则称向量组(集)$\{\mathbf v_1,\cdots,\mathbf v_p\}$线性无关，否则称为线性相关。<br>由此可以推论出，当方程$A\mathbf x=0$仅有平凡解时，矩阵$A$中各列线性无关。</p>
+<h3 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h3><p>由$R^n$到$R^m$的一个变换(映射、函数)$T$，它将$R^n$中的每个向量$\mathbf x$对应$R^m$中的一个向量$T(\mathbf x)$，集$R^n$称为$T$的定义域，$R^m$称为$T$的语定义域。记作 $T:R^n \to R^m$<br>$R^m$中的向量$T(\mathbf x)$称为$\mathbf x$在$T$作用下的像。<br>若$T$为线性的，则它满足以下性质<br>$$<br>    T(c\mathbf u+d\mathbf v)=cT(\mathbf u)+dT(\mathbf v)\\<br>    T(0)=0\\<br>    T(c\mathbf u)=cT(\mathbf u)\\<br>$$</p>
+<h4 id="线性变换中的矩阵"><a href="#线性变换中的矩阵" class="headerlink" title="线性变换中的矩阵"></a>线性变换中的矩阵</h4><p>从$R^n$到$R^m$的每一个线性变换，实际上都是一个矩阵变换$\mathbf x\mapsto A\mathbf x$。<br>$$<br>    T(\mathbf x)= A\mathbf x<br>$$</p>
+<h2 id="定理和性质"><a href="#定理和性质" class="headerlink" title="定理和性质"></a>定理和性质</h2><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><ol>
+<li>简化阶梯形矩阵的唯一性：每个矩阵行等价于唯一的简化阶梯形矩阵</li>
+<li>存在与唯一性定理：线性方程组相容的充要条件是增广矩阵的最右列不是主元列</li>
+<li><p>若$A$是$m\times n$矩阵，它的各列为$a_1,a_2,\cdots,a_n$，而$b$属于$R^n$，则矩阵方程<br>$$<br> A\mathbf x=\mathbf b<br>$$<br>与向量方程<br>$$<br> x_1 \mathbf a_1+x_2 \mathbf a_2+\cdots +x_n \mathbf a_n =\mathbf b<br>$$<br>有相同的解集，它有与增广矩阵为<br>$$<br> [\mathbf a_1,\mathbf a_2,\cdots,\mathbf a_n,\mathbf b]<br>$$<br>的线性方程组有相同的解集</p>
+</li>
+<li><p>设$A$是$m\times n$矩阵(系数矩阵)，则下列命题是逻辑上等价的，也就是说，对于某个A，它们都成立或都不成立</p>
+<ul>
+<li>对于$R^n$中的每个$b$，方程$Ax=b$都有解</li>
+<li>$R^n$中的每个$b$都是$A$的列的一个线性组合</li>
+<li>$A$的各列生成$R^m$</li>
+<li>$A$在每一行都有一个主元位置</li>
+</ul>
+</li>
+<li>若$A$是$m\times n$矩阵，$\mathbf u$和$\mathbf v$是$R^n$的向量，$c$是标量，则<br>$$<br> A(\mathbf u+\mathbf v)=A\mathbf u + A\mathbf v\\<br> A(c\mathbf u)=c(A\mathbf u)<br>$$</li>
+<li>设方程$A\mathbf x=\mathbf b$对某个$\mathbf b$是相容的，$\mathbf p$作为一个特解，则$A\mathbf x=\mathbf b$的解集是所有形如$\mathbf w=\mathbf p+\mathbf v_h$的向量的集，其中，$\mathbf v_h$ 是齐次方程$A\mathbf x=0$的任意一个解。</li>
+<li>线性相关集的特征：两个或更多个向量的集合$S=\{\mathbf v_1,\cdots,\mathbf v_p\}$线性相关，当且仅当$S$中至少有一个向量是其他向量的线性组合。事实上，若$S$线性相关，且$\mathbf v_1 \neq 0$，则某个$\mathbf v_j (j&gt;1)$ 是它前面几个向量$\mathbf v_1,\cdots,\mathbf v_{j-1}$的线性组合。</li>
+<li>若一个向量组的向量个数超过每个向量元素个数，那么这个向量组线性相关，就是说，$R^n$中任意向量组$\{\mathbf v_1,\cdots,v_n\}$，当$p&gt;n$时线性相关。</li>
+<li>若向量组$S=\{\mathbf v_1,\cdots,v_n\}$包含零向量，则它线性相关。</li>
+<li>设$T:R^n \to R^m$线性变换，则存在唯一的矩阵$A$，使$T(\mathbf x)=A\mathbf x$，对$R^n$中一切$\mathbf x$。事实上，$A$是$m\times n$矩阵，它的第$j$列是向量$T(\mathbf e_j)$，其中$\mathbf e_j$是单位矩阵$I_n$的第$j$列：<br>$$<br>A=[T(\mathbf e_1) \cdots T(\mathbf e_n)]<br>$$</li>
+<li>设$T:R^n \to R^m$为线性变换，则$T$是一对一当且仅当方程$A\mathbf x=0$仅有平凡解。</li>
+</ol>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><h4 id="R-n-中向量的代数性质"><a href="#R-n-中向量的代数性质" class="headerlink" title="$R^n$中向量的代数性质"></a>$R^n$中向量的代数性质</h4><ul>
+<li>$\mathbf u+\mathbf v=\mathbf v+\mathbf u$</li>
+<li>$(\mathbf u+\mathbf v)+\mathbf w=\mathbf u+(\mathbf v+\mathbf w)$</li>
+<li>$\mathbf u+0=0+\mathbf u=\mathbf u$</li>
+<li>$\mathbf u+(-\mathbf u)=-\mathbf u+\mathbf u=0$</li>
+<li>$c(\mathbf u+\mathbf v)=c\mathbf u+c\mathbf v$</li>
+<li>$(c+d)\mathbf u=c\mathbf u+d\mathbf u$</li>
+<li>$c(d\mathbf u)=(cd)(\mathbf u)$</li>
+<li>$1\mathbf u=\mathbf y$</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/Linear-Algebra/" rel="tag">#Linear Algebra</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/03/JavaScript之表达式和运算符/" rel="next" title="JavaScript之表达式和运算符">
+                <i class="fa fa-chevron-left"></i> JavaScript之表达式和运算符
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/03/开源项目推荐/" rel="prev" title="开源项目推荐">
+                开源项目推荐 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/03/Math-线性方程组－《线性代数及应用》/"
+           data-title="线性方程组－《线性代数及应用》" data-url="http://blog.freeabyss.com/2016/09/03/Math-线性方程组－《线性代数及应用》/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Abyss" />
+          <p class="site-author-name" itemprop="name">Abyss</p>
+          <p class="site-description motion-element" itemprop="description">苟利国家生死以，岂因祸福避趋之</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方程以及方程的解"><span class="nav-number">1.</span> <span class="nav-text">方程以及方程的解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方程"><span class="nav-number">1.1.</span> <span class="nav-text">方程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性方程组"><span class="nav-number">1.1.1.</span> <span class="nav-text">线性方程组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增广矩阵"><span class="nav-number">1.1.2.</span> <span class="nav-text">增广矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量方程"><span class="nav-number">1.1.3.</span> <span class="nav-text">向量方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵方程"><span class="nav-number">1.1.4.</span> <span class="nav-text">矩阵方程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解集"><span class="nav-number">1.2.</span> <span class="nav-text">解集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#阶梯形矩阵定义"><span class="nav-number">1.2.1.</span> <span class="nav-text">阶梯形矩阵定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#齐次方程"><span class="nav-number">1.2.2.</span> <span class="nav-text">齐次方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解方程组的算法"><span class="nav-number">1.2.3.</span> <span class="nav-text">解方程组的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#行初等变换"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">行初等变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#行化简算法"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">行化简算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#线性方程组的解"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">线性方程组的解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参数向量形式的解集"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">参数向量形式的解集</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性组合和线性变换"><span class="nav-number">2.</span> <span class="nav-text">线性组合和线性变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性组合"><span class="nav-number">2.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性相关"><span class="nav-number">2.2.</span> <span class="nav-text">线性相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性变换"><span class="nav-number">2.3.</span> <span class="nav-text">线性变换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性变换中的矩阵"><span class="nav-number">2.3.1.</span> <span class="nav-text">线性变换中的矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理和性质"><span class="nav-number">3.</span> <span class="nav-text">定理和性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">3.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质"><span class="nav-number">3.2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#R-n-中向量的代数性质"><span class="nav-number">3.2.1.</span> <span class="nav-text">$R^n$中向量的代数性质</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+</body>
+</html>

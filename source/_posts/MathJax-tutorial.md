@@ -59,3 +59,5 @@ categories: MathJax
 |$\ldots$|$\ell$|$\epsilon$|$\varepsilon$|$\varphi$|
 |:------:|:----:|:--------:|:-----------:|:-------:|
 |\ldots|\ell|\epsilon|\varepsilon|\varphi|
+
+[更多](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)

@@ -2,73 +2,10 @@
 title: 逻辑和证明-离散数学
 date: 2016-09-21 21:07:01
 updated: 2016-10-02 19:10:00
-tags: [Discrete Mathematics, Math]
+tags: [Discrete Mathematics, Math, note]
 categories: [Math]
 ---
-## 命题逻辑
-命题是一个或真或假的陈述语句。
-### 逻辑运算
-* 非 ：令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作"非$p$"。
-* 与 ：令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。
-* 或 ：令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。
-* 异或 ： 令$p$和$q$为命题。$p$和$q$的异或是一个命题。当$p$和$q$($p\oplus q$)中只有一个为真时命题为真，否则为假。
-* 条件语句 ： 令$p$和$q$为命题，条件语句$p\rightarrow q$是命题“若$p$，则$q$”。当$p$为真而$q$为假时，条件语句$p\rightarrow q$为假，否则为真。在条件语句$p\rightarrow q$中，$p$称为假设、前提，$q$称为结论。
-* 双条件 ：令$p$和$q$为命题。双条件语句$p↔︎q$是命题“$p$当且仅当$q$”。当$p$和$q$有相同真值时，双条件语句为真，否则为假。
 
-|p <span style="margin-left:20px">q</span>| $\lnot p$| $p\land q$|$p\lor q$|$p\oplus q$|$p\rightarrow q$|$p↔︎q$|
-|:----:|:--------:|:---------:|:-------:|:---------:|:--------------:|:---:|
-|T <span style="margin-left:20px">T</span>| F|T|T|F|T|T|
-|T <span style="margin-left:20px">F</span>| F|F|T|T|F|F|
-|F <span style="margin-left:20px">T</span>| T|F|T|T|T|F|
-|F <span style="margin-left:20px">F</span>| F|F|F|F|T|T|
-
-
-
-## 命题等价
-永真式：真值永远为真的复合命题。   
-矛盾：真值永远为假的复合命题。   
-可能式：既不是永真式也不是矛盾的复合命题   
-
-### 逻辑等价
-在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。即    
-如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。
-
-#### 摩根定律及应用
-$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。
-
-|名称 | 等价关系|
-|:---|:-------|
-|摩根定律|$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$ |
-|恒等律|$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$|
-|支配律|$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$|
-|幂等律|$p\land p \equiv p$ <br> $p\lor p \equiv p$|
-|双非律|$\lnot(\lnot p) \equiv p$|
-|交换律|$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$|
-|结合律|$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$|
-|分配律|$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$|
-|吸收律|$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$|
-|否定律|$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$|
-
-##### 涉及条件语句的逻辑等价
-$$
-p\rightarrow q\equiv \lnot p\lor q \\
-p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\
-p\lor q\equiv \lnot p\rightarrow q\\
-p\land q\equiv \lnot(p\rightarrow \lnot q) \\
-\lnot(p\rightarrow q)\equiv p\land \lnot q\\
-(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\
-(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\
-(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\
-(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\
-$$
-
-##### 涉及双条件语句的逻辑等价
-$$
-p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\
-p↔︎q \equiv \lnot p↔︎ \lnot q \\
-p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\
-\lnot (p↔︎q) \equiv p↔︎\lnot q
-$$
 
 ## 谓词和量词
 ### 谓词

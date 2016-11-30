@@ -120,7 +120,7 @@
 函数的增长$\mathrm O$记号用于描述$g(x)$的上限，$\Omega$用于描述$g(x)$的下限，$\Theta$用于描述$g(x)$的上下限。
 
 令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常">
-<meta property="og:updated_time" content="2016-10-06T11:45:06.000Z">
+<meta property="og:updated_time" content="2016-10-06T15:05:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法-整数－矩阵">
 <meta name="twitter:description" content="算法常用算法搜索算法
@@ -487,8 +487,18 @@
 </ul>
 <h4 id="求最大公约数算法"><a href="#求最大公约数算法" class="headerlink" title="求最大公约数算法"></a>求最大公约数算法</h4><ul>
 <li>假定两个不全为$0$的整数$a$和$b$的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出<br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br>例如，求$120$和$500$的最大公约数：<br>$$<br>  120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\\<br>  gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\\<br>  = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</li>
+<li>另一个求最大公约数的算法就是欧几里得算法。</li>
+<li>令$a=bq+r$，其中$a,b,c,q$均为整数，则$gcd(a, b)＝gcd(b,r)$。</li>
 </ul>
 <h4 id="求最小公倍数算法"><a href="#求最小公倍数算法" class="headerlink" title="求最小公倍数算法"></a>求最小公倍数算法</h4><p>同最大公约数算法类似，最小公倍数的由以下公式给出：<br>$$<br>lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}<br>$$</p>
+<h3 id="整数和进制"><a href="#整数和进制" class="headerlink" title="整数和进制"></a>整数和进制</h3><p>令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：<br>$$<br>    n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0<br>$$<br>其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。</p>
+<h3 id="数论应用"><a href="#数论应用" class="headerlink" title="数论应用"></a>数论应用</h3><p>*$a$和$b$为正整数，则存在整数$s$和$t$，使得为$gcd(a,b)=sa+tb$。</p>
+<ul>
+<li>如果$a,b,c$为正整数，使得$gcd(a, b)=1$且$a\mid bc$，那么$a\mid c$。</li>
+<li>如果$p$是素数，且$p\mid a_1a_2\cdots a_n$，其中$a_j$为整数，则对某个$i$，$p\mid a_i$</li>
+<li>令$m$为正整数，$a,b,c$为整数，如果$ac\equiv bc\pmod m$且$gcd(c, m)=1$，那么$a\equiv b\pmod m$</li>
+<li></li>
+</ul>
 
       
     </div>
@@ -531,6 +541,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/26/Application/" rel="prev" title="软件推荐">
+                软件推荐 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -602,7 +616,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -619,7 +633,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -675,7 +689,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用算法"><span class="nav-number">1.1.</span> <span class="nav-text">常用算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索算法"><span class="nav-number">1.1.1.</span> <span class="nav-text">搜索算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.1.2.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贪心算法"><span class="nav-number">1.1.3.</span> <span class="nav-text">贪心算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的增长"><span class="nav-number">1.2.</span> <span class="nav-text">函数的增长</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的组合增长"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数的组合增长</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法复杂度"><span class="nav-number">1.3.</span> <span class="nav-text">算法复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数"><span class="nav-number">2.</span> <span class="nav-text">整数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同余"><span class="nav-number">2.1.</span> <span class="nav-text">同余</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同余应用"><span class="nav-number">2.2.</span> <span class="nav-text">同余应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#素数和最大公约数"><span class="nav-number">2.3.</span> <span class="nav-text">素数和最大公约数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#求最大公约数算法"><span class="nav-number">2.3.1.</span> <span class="nav-text">求最大公约数算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求最小公倍数算法"><span class="nav-number">2.3.2.</span> <span class="nav-text">求最小公倍数算法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用算法"><span class="nav-number">1.1.</span> <span class="nav-text">常用算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索算法"><span class="nav-number">1.1.1.</span> <span class="nav-text">搜索算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.1.2.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贪心算法"><span class="nav-number">1.1.3.</span> <span class="nav-text">贪心算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的增长"><span class="nav-number">1.2.</span> <span class="nav-text">函数的增长</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的组合增长"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数的组合增长</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法复杂度"><span class="nav-number">1.3.</span> <span class="nav-text">算法复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数"><span class="nav-number">2.</span> <span class="nav-text">整数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同余"><span class="nav-number">2.1.</span> <span class="nav-text">同余</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同余应用"><span class="nav-number">2.2.</span> <span class="nav-text">同余应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#素数和最大公约数"><span class="nav-number">2.3.</span> <span class="nav-text">素数和最大公约数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#求最大公约数算法"><span class="nav-number">2.3.1.</span> <span class="nav-text">求最大公约数算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求最小公倍数算法"><span class="nav-number">2.3.2.</span> <span class="nav-text">求最小公倍数算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数和进制"><span class="nav-number">2.4.</span> <span class="nav-text">整数和进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数论应用"><span class="nav-number">2.5.</span> <span class="nav-text">数论应用</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

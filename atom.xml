@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-10-06T11:45:06.000Z</updated>
+  <updated>2016-11-26T09:11:17.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,11 +16,331 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Math-DM-02-逻辑等价</title>
+    <link href="http://blog.freeabyss.com/2016/11/26/Math-DM-02-%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7/"/>
+    <id>http://blog.freeabyss.com/2016/11/26/Math-DM-02-逻辑等价/</id>
+    <published>2016-11-26T08:58:58.000Z</published>
+    <updated>2016-11-26T09:11:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。</p>
+<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。用如下定义这一概念：  </p>
+<ul>
+<li>如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。<blockquote>
+<p>符号$\equiv$不是逻辑链接符，因为$p\equiv q$不是复合命题。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="摩根定律及应用"><a href="#摩根定律及应用" class="headerlink" title="摩根定律及应用"></a>摩根定律及应用</h2><p>$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">等价关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">摩根定律</td>
+<td style="text-align:left">$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$</td>
+</tr>
+<tr>
+<td style="text-align:left">恒等律</td>
+<td style="text-align:left">$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$</td>
+</tr>
+<tr>
+<td style="text-align:left">支配律</td>
+<td style="text-align:left">$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$</td>
+</tr>
+<tr>
+<td style="text-align:left">幂等律</td>
+<td style="text-align:left">$p\land p \equiv p$ <br> $p\lor p \equiv p$</td>
+</tr>
+<tr>
+<td style="text-align:left">双非律</td>
+<td style="text-align:left">$\lnot(\lnot p) \equiv p$</td>
+</tr>
+<tr>
+<td style="text-align:left">交换律</td>
+<td style="text-align:left">$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$</td>
+</tr>
+<tr>
+<td style="text-align:left">结合律</td>
+<td style="text-align:left">$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$</td>
+</tr>
+<tr>
+<td style="text-align:left">分配律</td>
+<td style="text-align:left">$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$</td>
+</tr>
+<tr>
+<td style="text-align:left">吸收律</td>
+<td style="text-align:left">$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$</td>
+</tr>
+<tr>
+<td style="text-align:left">否定律</td>
+<td style="text-align:left">$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><p>$$<br>p\rightarrow q\equiv \lnot p\lor q \\<br>p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\<br>p\lor q\equiv \lnot p\rightarrow q\\<br>p\land q\equiv \lnot(p\rightarrow \lnot q) \\<br>\lnot(p\rightarrow q)\equiv p\land \lnot q\\<br>(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\<br>(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\<br>(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\<br>(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\<br>$$</p>
+<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><p>$$<br>p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\<br>p↔︎q \equiv \lnot p↔︎ \lnot q \\<br>p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\<br>\lnot (p↔︎q) \equiv p↔︎\lnot q<br>$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Math-DM-01-基本逻辑</title>
+    <link href="http://blog.freeabyss.com/2016/11/26/Math-DM-01-%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91/"/>
+    <id>http://blog.freeabyss.com/2016/11/26/Math-DM-01-基本逻辑/</id>
+    <published>2016-11-26T08:33:43.000Z</published>
+    <updated>2016-11-28T14:57:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="命题"><a href="#命题" class="headerlink" title="命题"></a>命题</h2><p>逻辑的基本成分是命题，命题是一个或真或假的陈述语句，即一个陈述事实的句子，但不能既真又假。<br>涉及命题的逻辑领域称为命题演算或命题逻辑。</p>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><h3 id="非"><a href="#非" class="headerlink" title="非"></a>非</h3><p>令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。</p>
+<h3 id="与-合取"><a href="#与-合取" class="headerlink" title="与(合取)"></a>与(合取)</h3><p>令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。</p>
+<h3 id="或-析取"><a href="#或-析取" class="headerlink" title="或(析取)"></a>或(析取)</h3><p>令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。</p>
+<h3 id="异或"><a href="#异或" class="headerlink" title="异或"></a>异或</h3><p>令$p$和$q$为命题。$p$和$q$的异或是一个命题。当$p$和$q$($p\oplus q$)中只有一个为真时命题为真，否则为假。</p>
+<h3 id="与非"><a href="#与非" class="headerlink" title="与非"></a>与非</h3><p>命题$p NAND q$(也记作$p\vert q$)在$p$和$q$均为真时为假，否则为真。</p>
+<h3 id="或非"><a href="#或非" class="headerlink" title="或非"></a>或非</h3><p>命题$p NOR q $(也记作$p\downarrow q$)在$p$和$q$均为假时为真，否则为假。</p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>令$p$和$q$为命题，条件语句$p\rightarrow q$ 是命题“若$p$，则$q$”。    当$p$为真而$q$为假时，条件语句$p\rightarrow q$为假，否则为真。<br>在条件语句$p\rightarrow q$中，$p$称为假设、前提，$q$称为结论。<br>条件语句也称蕴含。</p>
+<h4 id="逆、倒置和反"><a href="#逆、倒置和反" class="headerlink" title="逆、倒置和反"></a>逆、倒置和反</h4><p>命题$q\rightarrow p$称为$p\rightarrow q$的逆蕴含。<br>命题$\lnot q\rightarrow \lnot p$称为$p\rightarrow q$的倒置蕴含。<br>命题$\lnot p\rightarrow \lnot q$称为$p\rightarrow q$的反蕴含。  </p>
+<h3 id="双条件语句"><a href="#双条件语句" class="headerlink" title="双条件语句"></a>双条件语句</h3><p>令$p$和$q$为命题。双条件语句$p↔︎q$是命题“$p$当且仅当$q$”。当$p$和$q$有相同真值时，双条件语句为真，否则为假。<br>双条件语句也称双蕴含。  </p>
+<h3 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">p <span style="margin-left:20px">q</span></th>
+<th style="text-align:center">$\lnot p$</th>
+<th style="text-align:center">$p\land q$</th>
+<th style="text-align:center">$p\lor q$</th>
+<th style="text-align:center">$p\oplus q$</th>
+<th style="text-align:center">$p\rightarrow q$</th>
+<th style="text-align:center">$p↔︎q$</th>
+<th style="text-align:center">$p \vert q$</th>
+<th style="text-align:center">$p\downarrow q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T <span style="margin-left:20px">T</span></td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">T <span style="margin-left:20px">F</span></td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F <span style="margin-left:20px">T</span></td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F <span style="margin-left:20px">F</span></td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+<h3 id="逻辑运算符的优先级"><a href="#逻辑运算符的优先级" class="headerlink" title="逻辑运算符的优先级"></a>逻辑运算符的优先级</h3><ul>
+<li>否定运算符在其他所有逻辑运算符之前执行。</li>
+<li>合取运算优先于析取运算。</li>
+<li>条件运算和双条件运算优先级低于合取和析取运算。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;命题&quot;&gt;&lt;a href=&quot;#命题&quot; class=&quot;headerlink&quot; title=&quot;命题&quot;&gt;&lt;/a&gt;命题&lt;/h2&gt;&lt;p&gt;逻辑的基本成分是命题，命题是一个或真或假的陈述语句，即一个陈述事实的句子，但不能既真又假。&lt;br&gt;涉及命题的逻辑领域称为命题演算或命题逻辑。
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件推荐</title>
+    <link href="http://blog.freeabyss.com/2016/11/26/Application/"/>
+    <id>http://blog.freeabyss.com/2016/11/26/Application/</id>
+    <published>2016-11-26T06:56:00.000Z</published>
+    <updated>2016-11-26T07:11:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">平台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.toggl.com/" target="_blank" rel="external">Toogl</a></td>
+<td style="text-align:left">时间管理软件</td>
+<td style="text-align:left">all</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://pomotodo.com/app/" target="_blank" rel="external">Pomotodo</a></td>
+<td style="text-align:left">番茄工作法</td>
+<td style="text-align:left">all</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.alfredapp.com/powerpack/" target="_blank" rel="external">Alfred</a> <a href="http://alfredworkflow.com/" target="_blank" rel="external">Alfred 插件集合</a></td>
+<td style="text-align:left">Mac最好用的快速启动工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://manytricks.com/moom/" target="_blank" rel="external">Moom</a></td>
+<td style="text-align:left">分屏工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://zipzapmac.com/Go2Shell" target="_blank" rel="external">Go2Shell</a></td>
+<td style="text-align:left">在Finder打开terminal</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.omnigroup.com/" target="_blank" rel="external">OmniFocus</a></td>
+<td style="text-align:left">GTD管理软件</td>
+<td style="text-align:left">Mac iOS</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://wwww.snappy-app.com" target="_blank" rel="external">Snappy</a></td>
+<td style="text-align:left">截屏软件</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://nearlock.me/" target="_blank" rel="external">Near Lock</a></td>
+<td style="text-align:left">用iPhone解锁Mac</td>
+<td style="text-align:left">Mac iOS</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.dropbox.com/" target="_blank" rel="external">Dropbox</a></td>
+<td style="text-align:left">Dropbox 软件</td>
+<td style="text-align:left">Mac Window Linux iPhone Android</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.jetbrains.com/idea/" target="_blank" rel="external">Intellij IDEA</a></td>
+<td style="text-align:left">最好用，最智能的Java IDE</td>
+<td style="text-align:left">Mac Window</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a></td>
+<td style="text-align:left">流行的跨平台编辑器</td>
+<td style="text-align:left">Mac Window</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.typhoonsystems.com.au/projects/tybase/" target="_blank" rel="external">TyBase</a></td>
+<td style="text-align:left">数据库设计</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/basejump/id1060639224?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">Basejump</a></td>
+<td style="text-align:left">base64编码工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/fhash/id1055555711?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">fHash</a></td>
+<td style="text-align:left">哈希计算工具，支持MD5,SHA1,SHA256,CRC32</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/noodle/id1048842988?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">noodle</a></td>
+<td style="text-align:left">SSH 连接工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://minifyapp.com/" target="_blank" rel="external">Minity</a></td>
+<td style="text-align:left">代码压缩</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left">AVPlayer</td>
+<td style="text-align:left">视频播放器，可通过FTP，web等多种方式播放视频</td>
+<td style="text-align:left">iOS</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;名称&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;描述&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;平台&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/the
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
+    
+    
+      <category term="app" scheme="http://blog.freeabyss.com/tags/app/"/>
+    
+      <category term="Mac" scheme="http://blog.freeabyss.com/tags/Mac/"/>
+    
+      <category term="Window" scheme="http://blog.freeabyss.com/tags/Window/"/>
+    
+      <category term="Linux" scheme="http://blog.freeabyss.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法-整数－矩阵</title>
     <link href="http://blog.freeabyss.com/2016/10/05/Math-%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%EF%BC%8D%E7%9F%A9%E9%98%B5/"/>
     <id>http://blog.freeabyss.com/2016/10/05/Math-算法-整数－矩阵/</id>
     <published>2016-10-05T02:36:08.000Z</published>
-    <updated>2016-10-06T11:45:06.000Z</updated>
+    <updated>2016-10-06T15:05:58.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="常用算法"><a href="#常用算法" class="headerlink" title="常用算法"></a>常用算法</h3><h4 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h4><ul>
 <li>线性搜索或顺序搜索</li>
@@ -127,8 +447,18 @@
 </ul>
 <h4 id="求最大公约数算法"><a href="#求最大公约数算法" class="headerlink" title="求最大公约数算法"></a>求最大公约数算法</h4><ul>
 <li>假定两个不全为$0$的整数$a$和$b$的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出<br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br>例如，求$120$和$500$的最大公约数：<br>$$<br>  120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\\<br>  gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\\<br>  = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</li>
+<li>另一个求最大公约数的算法就是欧几里得算法。</li>
+<li>令$a=bq+r$，其中$a,b,c,q$均为整数，则$gcd(a, b)＝gcd(b,r)$。</li>
 </ul>
 <h4 id="求最小公倍数算法"><a href="#求最小公倍数算法" class="headerlink" title="求最小公倍数算法"></a>求最小公倍数算法</h4><p>同最大公约数算法类似，最小公倍数的由以下公式给出：<br>$$<br>lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}<br>$$</p>
+<h3 id="整数和进制"><a href="#整数和进制" class="headerlink" title="整数和进制"></a>整数和进制</h3><p>令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：<br>$$<br>    n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0<br>$$<br>其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。</p>
+<h3 id="数论应用"><a href="#数论应用" class="headerlink" title="数论应用"></a>数论应用</h3><p>*$a$和$b$为正整数，则存在整数$s$和$t$，使得为$gcd(a,b)=sa+tb$。</p>
+<ul>
+<li>如果$a,b,c$为正整数，使得$gcd(a, b)=1$且$a\mid bc$，那么$a\mid c$。</li>
+<li>如果$p$是素数，且$p\mid a_1a_2\cdots a_n$，其中$a_j$为整数，则对某个$i$，$p\mid a_i$</li>
+<li>令$m$为正整数，$a,b,c$为整数，如果$ac\equiv bc\pmod m$且$gcd(c, m)=1$，那么$a\equiv b\pmod m$</li>
+<li></li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -323,122 +653,7 @@
     <published>2016-09-21T13:07:01.000Z</published>
     <updated>2016-10-02T11:10:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p>命题是一个或真或假的陈述语句。</p>
-<h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
-<li>非 ：令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。</li>
-<li>与 ：令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。</li>
-<li>或 ：令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。</li>
-<li>异或 ： 令$p$和$q$为命题。$p$和$q$的异或是一个命题。当$p$和$q$($p\oplus q$)中只有一个为真时命题为真，否则为假。</li>
-<li>条件语句 ： 令$p$和$q$为命题，条件语句$p\rightarrow q$是命题“若$p$，则$q$”。当$p$为真而$q$为假时，条件语句$p\rightarrow q$为假，否则为真。在条件语句$p\rightarrow q$中，$p$称为假设、前提，$q$称为结论。</li>
-<li>双条件 ：令$p$和$q$为命题。双条件语句$p↔︎q$是命题“$p$当且仅当$q$”。当$p$和$q$有相同真值时，双条件语句为真，否则为假。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">p <span style="margin-left:20px">q</span></th>
-<th style="text-align:center">$\lnot p$</th>
-<th style="text-align:center">$p\land q$</th>
-<th style="text-align:center">$p\lor q$</th>
-<th style="text-align:center">$p\oplus q$</th>
-<th style="text-align:center">$p\rightarrow q$</th>
-<th style="text-align:center">$p↔︎q$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">T <span style="margin-left:20px">T</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-<tr>
-<td style="text-align:center">T <span style="margin-left:20px">F</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F <span style="margin-left:20px">T</span></td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F <span style="margin-left:20px">F</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-</tbody>
-</table>
-<h2 id="命题等价"><a href="#命题等价" class="headerlink" title="命题等价"></a>命题等价</h2><p>永真式：真值永远为真的复合命题。<br>矛盾：真值永远为假的复合命题。<br>可能式：既不是永真式也不是矛盾的复合命题   </p>
-<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。即<br>如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。</p>
-<h4 id="摩根定律及应用"><a href="#摩根定律及应用" class="headerlink" title="摩根定律及应用"></a>摩根定律及应用</h4><p>$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">名称</th>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">摩根定律</td>
-<td style="text-align:left">$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$</td>
-</tr>
-<tr>
-<td style="text-align:left">恒等律</td>
-<td style="text-align:left">$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">支配律</td>
-<td style="text-align:left">$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$</td>
-</tr>
-<tr>
-<td style="text-align:left">幂等律</td>
-<td style="text-align:left">$p\land p \equiv p$ <br> $p\lor p \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">双非律</td>
-<td style="text-align:left">$\lnot(\lnot p) \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">交换律</td>
-<td style="text-align:left">$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$</td>
-</tr>
-<tr>
-<td style="text-align:left">结合律</td>
-<td style="text-align:left">$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">分配律</td>
-<td style="text-align:left">$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">吸收律</td>
-<td style="text-align:left">$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">否定律</td>
-<td style="text-align:left">$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$</td>
-</tr>
-</tbody>
-</table>
-<h5 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h5><p>$$<br>p\rightarrow q\equiv \lnot p\lor q \\<br>p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\<br>p\lor q\equiv \lnot p\rightarrow q\\<br>p\land q\equiv \lnot(p\rightarrow \lnot q) \\<br>\lnot(p\rightarrow q)\equiv p\land \lnot q\\<br>(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\<br>(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\<br>(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\<br>(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\<br>$$</p>
-<h5 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h5><p>$$<br>p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\<br>p↔︎q \equiv \lnot p↔︎ \lnot q \\<br>p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\<br>\lnot (p↔︎q) \equiv p↔︎\lnot q<br>$$</p>
-<h2 id="谓词和量词"><a href="#谓词和量词" class="headerlink" title="谓词和量词"></a>谓词和量词</h2><h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。<br>一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。</p>
+    <content type="html"><![CDATA[<h2 id="谓词和量词"><a href="#谓词和量词" class="headerlink" title="谓词和量词"></a>谓词和量词</h2><h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。<br>一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。</p>
 <h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><ul>
 <li>全称量化：对于论域内的每一个$x$，$P(x)$都为真值，记作$\forall xP(x)$，其中$\forall$称为全称量词。</li>
 <li>存在量化：对于论域内至少有一个$x$，使$P(x)$为真，记作$\exists xP(x)$，其中$\exists$称为存在量词。</li>
@@ -529,8 +744,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;命题逻辑&quot;&gt;&lt;a href=&quot;#命题逻辑&quot; class=&quot;headerlink&quot; title=&quot;命题逻辑&quot;&gt;&lt;/a&gt;命题逻辑&lt;/h2&gt;&lt;p&gt;命题是一个或真或假的陈述语句。&lt;/p&gt;
-&lt;h3 id=&quot;逻辑运算&quot;&gt;&lt;a href=&quot;#逻辑运算&quot; class=&quot;heade
+      &lt;h2 id=&quot;谓词和量词&quot;&gt;&lt;a href=&quot;#谓词和量词&quot; class=&quot;headerlink&quot; title=&quot;谓词和量词&quot;&gt;&lt;/a&gt;谓词和量词&lt;/h2&gt;&lt;h3 id=&quot;谓词&quot;&gt;&lt;a href=&quot;#谓词&quot; class=&quot;headerlink&quot; title=&quot;谓词&quot;&gt;&lt;/a&gt;谓
     
     </summary>
     
@@ -1120,7 +1334,7 @@
     <link href="http://blog.freeabyss.com/2016/09/11/MathJax-tutorial/"/>
     <id>http://blog.freeabyss.com/2016/09/11/MathJax-tutorial/</id>
     <published>2016-09-11T12:04:07.000Z</published>
-    <updated>2016-09-11T13:27:26.000Z</updated>
+    <updated>2016-11-28T14:37:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><table>
 <thead>
@@ -1436,6 +1650,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">更多</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1480,9 +1695,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Calculus" scheme="http://blog.freeabyss.com/tags/Calculus/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Calculus" scheme="http://blog.freeabyss.com/tags/Calculus/"/>
     
   </entry>
   
@@ -2386,323 +2601,6 @@
       <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
     
       <category term="Effective" scheme="http://blog.freeabyss.com/tags/Effective/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QuartZ Cron表达式详解</title>
-    <link href="http://blog.freeabyss.com/2016/05/29/Quart%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://blog.freeabyss.com/2016/05/29/Quart表达式详解/</id>
-    <published>2016-05-28T16:29:57.000Z</published>
-    <updated>2016-09-03T16:33:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Cron表达式"><a href="#Cron表达式" class="headerlink" title="Cron表达式"></a>Cron表达式</h2><blockquote>
-<p>格式：{seconds} {minutes} {hours} {day of month} {month} {day of week} [year]<br>year是可选的</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">允许的值</th>
-<th style="text-align:left">允许的字符</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">秒</td>
-<td style="text-align:center">0-59</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">分</td>
-<td style="text-align:center">0-59</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">小时</td>
-<td style="text-align:center">0-23</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">日</td>
-<td style="text-align:center">1-32</td>
-<td style="text-align:left">, - * / ? L W C</td>
-</tr>
-<tr>
-<td style="text-align:center">月</td>
-<td style="text-align:center">1-12 or JAN-DEC</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">周</td>
-<td style="text-align:center">1-7 or SUN-SAT</td>
-<td style="text-align:left">, - * / ? L #</td>
-</tr>
-<tr>
-<td style="text-align:center">年</td>
-<td style="text-align:center">empty,1970-2099</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>day of month : 可以用数字1-31中的任一一个值，但要注意一些特别的月份。<br>day of week : 可以用1-7数字表示，1代表周日，或者用字符: SUN,MON,TUE,WED,THU,FRI,SAT。<br>month: 可以用1-12，或者字符: JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC。 </p>
-</blockquote>
-<h2 id="字符解释"><a href="#字符解释" class="headerlink" title="字符解释"></a>字符解释</h2><blockquote>
-<p>* :匹配该域的任意值，如* 用在分所在的域，表示每分钟都会触发事件。<br>?  :该字符仅用在<code>day of month</code>与<code>day of week</code>两个域中，并且两个域的?互斥，当其中一个被指定值后，另外一个为避免冲突需要将值设为?。<br>- :匹配一个特定范围值，例如，10-12，表示10、11、12的时候触发事件。<br>,  :匹配多个值，例如，10,12,13，表示10、12、13的时候触发事件。<br>/  :左边表示开始触发时间，右边是每隔固定时间触发一次事件，如<code>senconds</code>的值为’5/15’ 表示 5 秒、20 秒、35 秒、50 秒的时候都触发一次事件。<br>L  :表示最后的意思。   </p>
-<ul>
-<li>在<code>day of month</code>表示每月最后一天；</li>
-<li>在<code>day of week</code>表示周日；</li>
-<li>如果前面加上数字，表示本月最后一天，例如’6L’表示每月最后一个周五；</li>
-<li>还可以指定从最后一天到开始时间，例如，’L-2’表示每月的第2天到最后一天。</li>
-</ul>
-<p>W  :表示工作日，例如，值为’15W’，表示在最近的工作日触发，如果15日是周六那么将在周五触发，如果是周日将在周一触发，如果是周一到周五则当天触发。<br>   <strong> <em>‘L’可以与’W’结合使用，’LW’表示当月最后一个工作日</em> </strong><br>#  :用来表示每个月的第几个星期几，例如，’6#3’表示某个月的第3个星期五。  </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">表达式</th>
-<th style="text-align:left">意思</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">0 0 12 <em> </em> ?</td>
-<td style="text-align:left">Fire at 12pm (noon) every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? <em> </em></td>
-<td style="text-align:left">Fire at 10:15am every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 <em> </em> ?</td>
-<td style="text-align:left">Fire at 10:15am every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 <em> </em> ? *</td>
-<td style="text-align:left">Fire at 10:15am every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 <em> </em> ? 2005</td>
-<td style="text-align:left">Fire at 10:15am every day during the year 2005</td>
-</tr>
-<tr>
-<td style="text-align:left">0 <em> 14 </em> * ?</td>
-<td style="text-align:left">Fire every minute starting at 2pm and ending at 2:59pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0/5 14 <em> </em> ?</td>
-<td style="text-align:left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0/5 14,18 <em> </em> ?</td>
-<td style="text-align:left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0-5 14 <em> </em> ?</td>
-<td style="text-align:left">Fire every minute starting at 2pm and ending at 2:05pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 10,44 14 ? 3 WED</td>
-<td style="text-align:left">Fire at 2:10pm and at 2:44pm every Wednesday in the month of March.</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * MON-FRI</td>
-<td style="text-align:left">Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 15 * ?</td>
-<td style="text-align:left">Fire at 10:15am on the 15th day of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 L * ?</td>
-<td style="text-align:left">Fire at 10:15am on the last day of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 L-2 * ?</td>
-<td style="text-align:left">Fire at 10:15am on the 2nd-to-last last day of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6L</td>
-<td style="text-align:left">Fire at 10:15am on the last Friday of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6L</td>
-<td style="text-align:left">Fire at 10:15am on the last Friday of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6L 2002-2005</td>
-<td style="text-align:left">Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004 and 2005</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6#3</td>
-<td style="text-align:left">Fire at 10:15am on the third Friday of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0 12 1/5 * ?</td>
-<td style="text-align:left">Fire at 12pm (noon) every 5 days every month, starting on the first day of the month.</td>
-</tr>
-<tr>
-<td style="text-align:left">0 11 11 11 11 ?</td>
-<td style="text-align:left">Fire every November 11th at 11:11am.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
-<p><a href="http://quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger" target="_blank" rel="external">官方说明</a></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Cron表达式&quot;&gt;&lt;a href=&quot;#Cron表达式&quot; class=&quot;headerlink&quot; title=&quot;Cron表达式&quot;&gt;&lt;/a&gt;Cron表达式&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;格式：{seconds} {minutes} {hours} {day o
-    
-    </summary>
-    
-      <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
-    
-      <category term="QuartZ" scheme="http://blog.freeabyss.com/tags/QuartZ/"/>
-    
-      <category term="Cron" scheme="http://blog.freeabyss.com/tags/Cron/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在IDEA上远程调试Java Web项目</title>
-    <link href="http://blog.freeabyss.com/2015/12/28/%E5%9C%A8IDEA%E4%B8%8A%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95Java-Web%E9%A1%B9%E7%9B%AE/"/>
-    <id>http://blog.freeabyss.com/2015/12/28/在IDEA上远程调试Java-Web项目/</id>
-    <published>2015-12-27T16:12:59.000Z</published>
-    <updated>2016-09-03T16:19:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在catalina.bat文件的，最上方添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n</div></pre></td></tr></table></figure></p>
-<ul>
-<li>-Xdebug：启用调试特性</li>
-<li>-Xrunjdwp：启用JDWP实现，包含以下选项：<ul>
-<li>transport=dt_socket：JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输</li>
-<li>address=9999：JVM在9999端口上监听请求</li>
-<li>server=y：y表示启动的JVM是被调试者，n表示启动的JVM是调试器</li>
-<li>suspend=y：y表示启动的JVM会暂停等待，直到调试器连接上（如果从tomcat一开始就进行调试，那么必须设置suspend=y<br>接下来再IDEA上新增一个Remote Tomcat<br><img src="../images/java_idea_1.png" alt=""><br>Host地址不用加Http<br>Port：为tomcat的端口<br><img src="../images/java_idea_2.png" alt=""><br>这里的port为调试端口，1中所设置的端口一直</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在catalina.bat文件的，最上方添加以下代码&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td 
-    
-    </summary>
-    
-      <category term="IDEA" scheme="http://blog.freeabyss.com/categories/IDEA/"/>
-    
-    
-      <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
-    
-      <category term="IntelliJ IDEA" scheme="http://blog.freeabyss.com/tags/IntelliJ-IDEA/"/>
-    
-      <category term="skill" scheme="http://blog.freeabyss.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python快速预览</title>
-    <link href="http://blog.freeabyss.com/2015/08/22/Python%E8%AF%AD%E6%B3%95%E9%A2%84%E8%A7%88/"/>
-    <id>http://blog.freeabyss.com/2015/08/22/Python语法预览/</id>
-    <published>2015-08-22T15:18:04.000Z</published>
-    <updated>2016-09-03T15:46:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><p>python语言是动态语言</p>
-<h2 id="字符串和编码"><a href="#字符串和编码" class="headerlink" title="字符串和编码"></a>字符串和编码</h2><ul>
-<li>UTF-8是可变长编码，用来转化Unicode编码，UTF-8一个Unicode字符根据不同的数字大小编码成1-6个字节。</li>
-<li>在python中，Unicode表示的字符串用u’…’表示.</li>
-<li>将Unicode字符转化为UTF-8字符用<code>encode(&#39;utf-8&#39;)</code>:</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">u'ABC'</span>.encode(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
-<ul>
-<li>将UTF-8字符转化为Unicode字符用<code>decode(&#39;utf&#39;)</code>:</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'abc'</span>.decode(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
-<ul>
-<li>让python解释器按照UTF-8编码读取文件,需要在文件开头写上如下:<br><code>#-*- coding:utf-8 -*-</code></li>
-<li>python的格式化方法与C 语言一致,用%实现,如:</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">'hello, %s'</span> %<span class="string">'world'</span></div><div class="line">hello, world</div><div class="line"><span class="string">'Hi, %s, you have $%d.'</span> %(<span class="string">'Michael'</span>, <span class="number">10000</span>)</div><div class="line">Hi, Michael, you have $<span class="number">1000.</span></div></pre></td></tr></table></figure>
-<ul>
-<li>有几个%占位符,后面就跟多少个变量,顺序要对应好,如果只有一个%,可省略括号.<ul>
-<li>常见的占位符有,%d整数, %f浮点数,%s字符串,%x十六进制数.</li>
-<li>格式化整数和浮点数还可以指定是否补0和整数与小数的位数.</li>
-<li>在格式化字符串中,需要转义%时,可用%%表示.</li>
-</ul>
-</li>
-<li>在python 3.x中,’xxxx’和u’xxxx’ 统一成Unicode编码.</li>
-</ul>
-<h2 id="使用list和tuple"><a href="#使用list和tuple" class="headerlink" title="使用list和tuple"></a>使用list和tuple</h2><h3 id="list的使用"><a href="#list的使用" class="headerlink" title="list的使用"></a>list的使用</h3><p>list里面的元素类型可以不同，也可以添加另外一个list   </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">classmates = [<span class="string">'Box'</span>, <span class="string">'Ads'</span>] <span class="comment">#创建list变量</span></div><div class="line">classmates[<span class="number">0</span>] <span class="comment">#访问list中的元素</span></div><div class="line">output:<span class="string">'Box'</span></div><div class="line"><span class="comment">#访问list最后一个元素</span></div><div class="line">classmates[<span class="number">-1</span>] </div><div class="line">output: <span class="string">'Ads'</span></div><div class="line"><span class="comment">#添加元素到末尾</span></div><div class="line">classmates.append(<span class="string">'and'</span>)</div><div class="line"><span class="comment">#插入元素到指定位置</span></div><div class="line">classmates.insert(<span class="number">1</span>, <span class="string">'sdd'</span>)</div><div class="line"><span class="comment">#删除末尾的元素</span></div><div class="line">classmates.pop()</div><div class="line"><span class="comment">#删除指定位置的元素</span></div><div class="line">classmates.pop(i)</div><div class="line"><span class="comment">#获得list的长度</span></div><div class="line">len(classmates)</div></pre></td></tr></table></figure>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>tuple类似与list，只是tuple一旦初始化就不可以修改。tuple没有append和insert方法，  获得元素的方法与list一样。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建一个tuple</span></div><div class="line">classmates= (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="comment">#需要注意的是，当创建只有一个元素的tuple时，需要这样作来消除歧义：</span></div><div class="line">classmates = (<span class="number">1</span>,)</div></pre></td></tr></table></figure>
-<p>tuple可以包含list元素，tuple所包含的list元素中的元素内容可以更改。</p>
-<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>dict类似与其他编程语言中的map</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建一个dict</span></div><div class="line">d=&#123;<span class="string">'misc'</span>:<span class="number">93</span>,<span class="string">'sds'</span>:<span class="number">82</span>&#125;</div><div class="line"><span class="comment">#还可以通过key来放入value：</span></div><div class="line">d[<span class="string">'misc'</span>] = <span class="number">23</span></div><div class="line"><span class="comment">#判断key是否存在</span></div><div class="line"><span class="string">'sidh'</span> <span class="keyword">in</span> d</div><div class="line"><span class="comment">#当key不存在时，用get方法返回的是None，或者自己指定的返回值</span></div><div class="line">d.get(<span class="string">'sd'</span>, <span class="number">-1</span>)</div></pre></td></tr></table></figure>
-<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set类似与dict，但是只有key，没有对应的value，在set没有重复的key，创建set需要提供一个list</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">s= set([<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line"><span class="comment">#在set重复的元素会自动被过滤，可以通过add(key)来添加元素，但是添加重复的元素没有效果。</span></div><div class="line"><span class="comment">#可以通过remove(key)来移除元素。</span></div><div class="line"><span class="comment"># set可以作数学意义上的交集、并集等操作</span></div><div class="line">s1 = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line">s2 = set([<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line">s1 &amp; s2</div><div class="line">s1 | s2</div><div class="line">```      </div><div class="line">set和dict不可放入可变对象，另外对于不可变对象，调用自身任何方法都不会改变自己,而是会创造一个新的对象并返回。  </div><div class="line"></div><div class="line"><span class="comment">## 条件判断和循环</span></div><div class="line"><span class="comment">### if表达式格式</span></div><div class="line"></div><div class="line">```python</div><div class="line"><span class="keyword">if</span> &lt;条件判断<span class="number">1</span>&gt;:</div><div class="line">    &lt;执行<span class="number">1</span>&gt;</div><div class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">2</span>&gt;:</div><div class="line">    &lt;执行<span class="number">2</span>&gt;</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    &lt;执行<span class="number">3</span>&gt;</div></pre></td></tr></table></figure>
-<h3 id="for循环格式"><a href="#for循环格式" class="headerlink" title="for循环格式"></a>for循环格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">4</span>):  <span class="comment">#range()可以生成整数序列</span></div></pre></td></tr></table></figure>
-<h3 id="while-循环格式"><a href="#while-循环格式" class="headerlink" title="while 循环格式"></a>while 循环格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> &lt;条件判断&gt; :</div></pre></td></tr></table></figure>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>python的函数相当与一个对象的引用。因此，可以将函数赋予一个变量，相当于给函数起了一个       别名。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#函数定义</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">function_name</span><span class="params">(parameter1, parameter2...)</span> :</span></div><div class="line">    &lt;函数体&gt;</div></pre></td></tr></table></figure>
-<p>没有写return的函数会返回None。定义一个空函数可以用pass语句</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">nothing</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
-<p>pass语句什么都不作，可以用来当占位符使用。   函数不会检查参数类型，我们可以自己加上类型检查，使用<code>isinstance</code>函数实现</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_abs</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> isintance(x,(int,float)):</div><div class="line">        <span class="keyword">raise</span> TypeError(<span class="string">'bad operand type'</span>)</div><div class="line">    <span class="keyword">if</span> x &gt;=<span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> x</div><div class="line">    <span class="keyword">else</span> :</div><div class="line">        <span class="keyword">return</span> -x</div></pre></td></tr></table></figure>
-<p>python函数可以返回多个返回值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x,y = move(x,y)</div></pre></td></tr></table></figure>
-<p>实际上，返回的只是一个tuple，只是写法上简化了。</p>
-<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">call_city</span><span class="params">(x,y, city=<span class="string">'beijing'</span>,age=<span class="number">12</span>)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
-<p>默认参数原则：默认值写在最后面,也可以不按顺序提供部分默认参数，当需要指名参数名：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call_city(x,y, age=<span class="number">12</span>)</div></pre></td></tr></table></figure>
-<p>默认参数，最好指向不变对象。</p>
-<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>可变参数与定义list参数的区别就是在参数前面加个*，例如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc_sum</span><span class="params">(*numbers)</span>:</span></div><div class="line">    sum =<span class="number">0</span></div><div class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> numbers:</div><div class="line">           sum += n</div><div class="line">    <span class="keyword">return</span> sum</div></pre></td></tr></table></figure>
-<p>对于函数体内部来说，<code>numbers</code>接受的是一个<code>tuple</code>。   如果有一个list或者tuple变量，要调用可变参数的话，可以在变量前加*，把list和tuple转化为可变参数</p>
-<h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><p>关键字参数会在函数内部自动组装成一个dict。示例</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">def person(name, age, **kw)</div><div class="line">    print 'name:',name, 'age:',age,'other:', kw</div><div class="line">person('Michael', 30,city='beijing')</div></pre></td></tr></table></figure>
-<p>在调用函数时，可以只传入必选参数，也可以传入任意数量的关键字参数。</p>
-<h2 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h2><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>切片操作可以轻松的切成一段数列,例如<code>L</code>是一个<code>list</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 取前3个元素</span></div><div class="line">L[<span class="number">0</span>:<span class="number">3</span>]</div><div class="line"><span class="comment">#或</span></div><div class="line">L[:<span class="number">3</span>]</div><div class="line"><span class="comment">#取后10个元素</span></div><div class="line">L[<span class="number">-10</span>:]</div><div class="line"><span class="comment">#前十个数,每个2个取一个</span></div><div class="line">L[:<span class="number">10</span>:<span class="number">2</span>]</div><div class="line"><span class="comment">#所有数,每隔5个取一个</span></div><div class="line">L[::<span class="number">5</span>]</div><div class="line"><span class="comment">#字符串同样支持切片操作.</span></div></pre></td></tr></table></figure>
-<h3 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h3><p>dict可以同时迭代key和value:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems()</div></pre></td></tr></table></figure>
-<p>判断一个对象是否可以迭代,可以用collections模块里的iterable类型:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">isinstance(<span class="string">'abd'</span>, Iterable)</div><div class="line">output: <span class="keyword">True</span></div></pre></td></tr></table></figure>
-<p>同时迭代索引和元素<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i, value <span class="keyword">in</span> enumerate(list):  </div><div class="line">```           </div><div class="line"><span class="comment">### 列表生成式</span></div><div class="line">列表生成式可以看成对<span class="keyword">for</span>循环语句的简化.例如</div><div class="line"></div><div class="line">```python</div><div class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</div><div class="line">output:   [<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>,<span class="number">36</span>,<span class="number">4964</span>,<span class="number">81</span>,<span class="number">100</span>]</div><div class="line"><span class="comment">#将生成的元素x*x放在前面,后面跟for循环.for循环后还可以加上if判断</span></div><div class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>) <span class="keyword">if</span> x%<span class="number">2</span>==<span class="number">0</span>]</div><div class="line">output:[<span class="number">4</span>,<span class="number">16</span>,<span class="number">36</span>,<span class="number">64</span>,<span class="number">100</span>]</div><div class="line"><span class="comment">#还可以使用两层循环          </span></div><div class="line">[m+n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'XYZ'</span>]</div><div class="line">output:[<span class="string">'AX'</span>,<span class="string">'AY'</span>,<span class="string">'AZ'</span>,<span class="string">'BX'</span>,<span class="string">'BY'</span>,<span class="string">'BZ'</span>,<span class="string">'CX'</span>,<span class="string">'CY'</span>,<span class="string">'CZ'</span>]</div></pre></td></tr></table></figure></p>
-<h3 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h3><p>生成器只存储算法,需要时才会将后续的元素计算出来,从而节省大量的空间.将上述列表生成式的[]改成()就创建了一个<code>generator</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g = (x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>))</div></pre></td></tr></table></figure>
-<p>创建一个<code>generator</code>后,可以通过<code>next()</code>来打印里面的元素,或者使用<code>for</code>循环迭代.还可以使用<code>yield</code>关键字,将函数定义成<code>generator</code>,例如:    </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">odd</span><span class="params">()</span>:</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">print</span> <span class="string">'step1'</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">yield</span> <span class="number">1</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">print</span> <span class="string">'step2'</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">yield</span> <span class="number">2</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">print</span> <span class="string">'step3'</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">yield</span> <span class="number">3</span></div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o = odd()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o.next()</div><div class="line">step1</div><div class="line"><span class="number">1</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o.next()</div><div class="line">step2</div><div class="line"><span class="number">2</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o.next()</div><div class="line">step3</div><div class="line"><span class="number">3</span></div></pre></td></tr></table></figure>
-<p>每当调用<code>next()</code>的时候,遇到<code>yield</code>语句返回,再次执行时,会从上次返回的<code>yield</code>语句处继续执行.</p>
-<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><p>所谓高阶函数可以理解为,可以接受另外一个函数作为参数的函数,还可将函数作为返回值.</p>
-<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">lambda</span> x: x*x</div></pre></td></tr></table></figure>
-<p>lambda表示匿名函数,冒号前面的x表示参数,匿名函数只能有一个表达式.返回值就是该表达式的结果.</p>
-<h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><p>函数也是个对象,赋给变量,函数还有个<strong>name</strong>属性,可以获得函数名称.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数据类型和变量&quot;&gt;&lt;a href=&quot;#数据类型和变量&quot; class=&quot;headerlink&quot; title=&quot;数据类型和变量&quot;&gt;&lt;/a&gt;数据类型和变量&lt;/h2&gt;&lt;p&gt;python语言是动态语言&lt;/p&gt;
-&lt;h2 id=&quot;字符串和编码&quot;&gt;&lt;a href=&quot;#字符串和编码
-    
-    </summary>
-    
-      <category term="Python" scheme="http://blog.freeabyss.com/categories/Python/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Python" scheme="http://blog.freeabyss.com/tags/Python/"/>
     
   </entry>
   

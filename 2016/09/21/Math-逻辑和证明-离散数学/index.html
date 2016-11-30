@@ -92,33 +92,24 @@
 
 
 
-<meta name="description" content="命题逻辑命题是一个或真或假的陈述语句。
-逻辑运算
-非 ：令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。
-与 ：令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。
-或 ：令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。
-异或 ： 令$p$和$q$为命题。$p$和$q$">
+<meta name="description" content="谓词和量词谓词我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。
+量词
+全称量化：对于论域内的每一个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="逻辑和证明-离散数学">
 <meta property="og:url" content="http://blog.freeabyss.com/2016/09/21/Math-逻辑和证明-离散数学/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="命题逻辑命题是一个或真或假的陈述语句。
-逻辑运算
-非 ：令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。
-与 ：令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。
-或 ：令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。
-异或 ： 令$p$和$q$为命题。$p$和$q$">
+<meta property="og:description" content="谓词和量词谓词我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。
+量词
+全称量化：对于论域内的每一个">
 <meta property="og:image" content="http://blog.freeabyss.com/../images/inference_rule.png">
 <meta property="og:image" content="http://blog.freeabyss.com/../images/inference_rule_!.png">
 <meta property="og:updated_time" content="2016-10-02T11:10:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逻辑和证明-离散数学">
-<meta name="twitter:description" content="命题逻辑命题是一个或真或假的陈述语句。
-逻辑运算
-非 ：令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。
-与 ：令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。
-或 ：令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。
-异或 ： 令$p$和$q$为命题。$p$和$q$">
+<meta name="twitter:description" content="谓词和量词谓词我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。
+量词
+全称量化：对于论域内的每一个">
 <meta name="twitter:image" content="http://blog.freeabyss.com/../images/inference_rule.png">
 
 
@@ -367,122 +358,7 @@
       
 
       
-        <h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p>命题是一个或真或假的陈述语句。</p>
-<h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><ul>
-<li>非 ：令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。</li>
-<li>与 ：令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。</li>
-<li>或 ：令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。</li>
-<li>异或 ： 令$p$和$q$为命题。$p$和$q$的异或是一个命题。当$p$和$q$($p\oplus q$)中只有一个为真时命题为真，否则为假。</li>
-<li>条件语句 ： 令$p$和$q$为命题，条件语句$p\rightarrow q$是命题“若$p$，则$q$”。当$p$为真而$q$为假时，条件语句$p\rightarrow q$为假，否则为真。在条件语句$p\rightarrow q$中，$p$称为假设、前提，$q$称为结论。</li>
-<li>双条件 ：令$p$和$q$为命题。双条件语句$p↔︎q$是命题“$p$当且仅当$q$”。当$p$和$q$有相同真值时，双条件语句为真，否则为假。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">p <span style="margin-left:20px">q</span></th>
-<th style="text-align:center">$\lnot p$</th>
-<th style="text-align:center">$p\land q$</th>
-<th style="text-align:center">$p\lor q$</th>
-<th style="text-align:center">$p\oplus q$</th>
-<th style="text-align:center">$p\rightarrow q$</th>
-<th style="text-align:center">$p↔︎q$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">T <span style="margin-left:20px">T</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-<tr>
-<td style="text-align:center">T <span style="margin-left:20px">F</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F <span style="margin-left:20px">T</span></td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F <span style="margin-left:20px">F</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-</tbody>
-</table>
-<h2 id="命题等价"><a href="#命题等价" class="headerlink" title="命题等价"></a>命题等价</h2><p>永真式：真值永远为真的复合命题。<br>矛盾：真值永远为假的复合命题。<br>可能式：既不是永真式也不是矛盾的复合命题   </p>
-<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。即<br>如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。</p>
-<h4 id="摩根定律及应用"><a href="#摩根定律及应用" class="headerlink" title="摩根定律及应用"></a>摩根定律及应用</h4><p>$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">名称</th>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">摩根定律</td>
-<td style="text-align:left">$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$</td>
-</tr>
-<tr>
-<td style="text-align:left">恒等律</td>
-<td style="text-align:left">$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">支配律</td>
-<td style="text-align:left">$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$</td>
-</tr>
-<tr>
-<td style="text-align:left">幂等律</td>
-<td style="text-align:left">$p\land p \equiv p$ <br> $p\lor p \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">双非律</td>
-<td style="text-align:left">$\lnot(\lnot p) \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">交换律</td>
-<td style="text-align:left">$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$</td>
-</tr>
-<tr>
-<td style="text-align:left">结合律</td>
-<td style="text-align:left">$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">分配律</td>
-<td style="text-align:left">$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">吸收律</td>
-<td style="text-align:left">$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">否定律</td>
-<td style="text-align:left">$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$</td>
-</tr>
-</tbody>
-</table>
-<h5 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h5><p>$$<br>p\rightarrow q\equiv \lnot p\lor q \\<br>p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\<br>p\lor q\equiv \lnot p\rightarrow q\\<br>p\land q\equiv \lnot(p\rightarrow \lnot q) \\<br>\lnot(p\rightarrow q)\equiv p\land \lnot q\\<br>(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\<br>(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\<br>(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\<br>(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\<br>$$</p>
-<h5 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h5><p>$$<br>p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\<br>p↔︎q \equiv \lnot p↔︎ \lnot q \\<br>p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\<br>\lnot (p↔︎q) \equiv p↔︎\lnot q<br>$$</p>
-<h2 id="谓词和量词"><a href="#谓词和量词" class="headerlink" title="谓词和量词"></a>谓词和量词</h2><h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。<br>一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。</p>
+        <h2 id="谓词和量词"><a href="#谓词和量词" class="headerlink" title="谓词和量词"></a>谓词和量词</h2><h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。<br>一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。</p>
 <h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><ul>
 <li>全称量化：对于论域内的每一个$x$，$P(x)$都为真值，记作$\forall xP(x)$，其中$\forall$称为全称量词。</li>
 <li>存在量化：对于论域内至少有一个$x$，使$P(x)$为真，记作$\exists xP(x)$，其中$\exists$称为存在量词。</li>
@@ -686,7 +562,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -703,7 +579,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -759,7 +635,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算"><span class="nav-number">1.1.</span> <span class="nav-text">逻辑运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题等价"><span class="nav-number">2.</span> <span class="nav-text">命题等价</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑等价"><span class="nav-number">2.1.</span> <span class="nav-text">逻辑等价</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#摩根定律及应用"><span class="nav-number">2.1.1.</span> <span class="nav-text">摩根定律及应用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#涉及条件语句的逻辑等价"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">涉及条件语句的逻辑等价</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#涉及双条件语句的逻辑等价"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">涉及双条件语句的逻辑等价</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词和量词"><span class="nav-number">3.</span> <span class="nav-text">谓词和量词</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词"><span class="nav-number">3.1.</span> <span class="nav-text">谓词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">3.2.</span> <span class="nav-text">量词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#约束论域量词"><span class="nav-number">3.2.1.</span> <span class="nav-text">约束论域量词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#量词的逻辑等价"><span class="nav-number">3.2.2.</span> <span class="nav-text">量词的逻辑等价</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#等价关系"><span class="nav-number">3.2.3.</span> <span class="nav-text">等价关系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套量词"><span class="nav-number">3.3.</span> <span class="nav-text">嵌套量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推理规则"><span class="nav-number">4.</span> <span class="nav-text">推理规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的推理规则"><span class="nav-number">4.1.</span> <span class="nav-text">常用的推理规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带量词命题的推理规则"><span class="nav-number">4.2.</span> <span class="nav-text">带量词命题的推理规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#证明导论"><span class="nav-number">5.</span> <span class="nav-text">证明导论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#证明定理的方法"><span class="nav-number">5.1.</span> <span class="nav-text">证明定理的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明的方法和策略"><span class="nav-number">5.2.</span> <span class="nav-text">证明的方法和策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明的方法"><span class="nav-number">5.2.1.</span> <span class="nav-text">证明的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明策略"><span class="nav-number">5.2.2.</span> <span class="nav-text">证明策略</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词和量词"><span class="nav-number">1.</span> <span class="nav-text">谓词和量词</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#谓词"><span class="nav-number">1.1.</span> <span class="nav-text">谓词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">1.2.</span> <span class="nav-text">量词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#约束论域量词"><span class="nav-number">1.2.1.</span> <span class="nav-text">约束论域量词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#量词的逻辑等价"><span class="nav-number">1.2.2.</span> <span class="nav-text">量词的逻辑等价</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#等价关系"><span class="nav-number">1.2.3.</span> <span class="nav-text">等价关系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套量词"><span class="nav-number">1.3.</span> <span class="nav-text">嵌套量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推理规则"><span class="nav-number">2.</span> <span class="nav-text">推理规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的推理规则"><span class="nav-number">2.1.</span> <span class="nav-text">常用的推理规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带量词命题的推理规则"><span class="nav-number">2.2.</span> <span class="nav-text">带量词命题的推理规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#证明导论"><span class="nav-number">3.</span> <span class="nav-text">证明导论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#证明定理的方法"><span class="nav-number">3.1.</span> <span class="nav-text">证明定理的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明的方法和策略"><span class="nav-number">3.2.</span> <span class="nav-text">证明的方法和策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明的方法"><span class="nav-number">3.2.1.</span> <span class="nav-text">证明的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明策略"><span class="nav-number">3.2.2.</span> <span class="nav-text">证明策略</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="note,Math,Discrete Mathematics," />
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
 
 
 
@@ -106,7 +106,7 @@
 
 如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。
 符号$\equiv$不是逻辑链接符，">
-<meta property="og:updated_time" content="2016-11-26T09:11:17.000Z">
+<meta property="og:updated_time" content="2016-12-03T14:16:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Math-DM-02-逻辑等价">
 <meta name="twitter:description" content="引言复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。
@@ -420,8 +420,63 @@
 </tr>
 </tbody>
 </table>
-<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><p>$$<br>p\rightarrow q\equiv \lnot p\lor q \\<br>p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\<br>p\lor q\equiv \lnot p\rightarrow q\\<br>p\land q\equiv \lnot(p\rightarrow \lnot q) \\<br>\lnot(p\rightarrow q)\equiv p\land \lnot q\\<br>(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\<br>(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\<br>(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\<br>(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\<br>$$</p>
-<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><p>$$<br>p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\<br>p↔︎q \equiv \lnot p↔︎ \lnot q \\<br>p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\<br>\lnot (p↔︎q) \equiv p↔︎\lnot q<br>$$</p>
+<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">等价关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$p\rightarrow q\equiv \lnot p\lor q $</td>
+</tr>
+<tr>
+<td style="text-align:left">$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$</td>
+</tr>
+<tr>
+<td style="text-align:left">$p\lor q\equiv \lnot p\rightarrow q$</td>
+</tr>
+<tr>
+<td style="text-align:left">$p\land q\equiv \lnot(p\rightarrow \lnot q) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot(p\rightarrow q)\equiv p\land \lnot q $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">等价关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$p↔︎q \equiv \lnot p↔︎ \lnot q $</td>
+</tr>
+<tr>
+<td style="text-align:left">$p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot (p↔︎q) \equiv p↔︎\lnot q $</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -444,9 +499,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/note/" rel="tag">#note</a>
-          
             <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
           
             <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
           
@@ -539,7 +594,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

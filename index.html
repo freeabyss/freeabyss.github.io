@@ -276,6 +276,395 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/04/Math-DM-06-证明导论/" itemprop="url">
+                  Math-DM-06-证明导论
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-04T10:44:13+08:00" content="2016-12-04">
+              2016-12-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/04/Math-DM-06-证明导论/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/04/Math-DM-06-证明导论/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/04/Math-DM-06-证明导论/" class="leancloud_visitors" data-flag-title="Math-DM-06-证明导论">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><ul>
+<li>定理：是一个能够表明为真的语句，有时把不太重要的定理称为命题。</li>
+<li>引理：在其他结果证明中很有帮助的不大重要的定理</li>
+<li>推论：从定理直接建立被证明的定理</li>
+<li>猜想：被提出为真的命题，通常是在一些依据的基础上，启发式论证，未被证实。</li>
+</ul>
+<p>##证明定理的方法</p>
+<h3 id="直接证明"><a href="#直接证明" class="headerlink" title="直接证明"></a>直接证明</h3><p>直接证明用于$p\rightarrow q$类型语句的方法。<br>第一步假设$p$为真，然后用定理、定义和前面的证明过的定理以及推理规则，来证明出$q$也肯定为真。</p>
+<h3 id="反证法"><a href="#反证法" class="headerlink" title="反证法"></a>反证法</h3><p>反证法基于$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$，也就是说$p\rightarrow q$可以用它的倒置$\lnot q\rightarrow \lnot p$来证明。<br>在反证法中，将$\lnot q$作为假设，用公理、定义和前面证明过的定理以及推理规则，证明$\lnot p$。</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>前提定义： 整数$n$是偶数，如果存在一个整数$k$使得$n=2k$；整数$n$是奇数，如果存在一个整数$k$使得$n=2k+1$。<br>证明”若$\3n+2$是奇数，则$n$也是奇数”。<br>假设$n$为偶数，则有$n=2k$，将其带入，得到$3n+2=3(2k)+2=6k+2=2(3k+1)$，由偶数定义得知$3n+2$是偶数，这与定理前提矛盾，因此$n$是奇数。</p>
+<h3 id="空证明"><a href="#空证明" class="headerlink" title="空证明"></a>空证明</h3><p>在条件语句$p\rightarrow q$中，如果能够证明$p$为假，那么$p\rightarrow q$一定为真，这就得到证明$p\rightarrow q$的证明方法。</p>
+<h3 id="平凡证明"><a href="#平凡证明" class="headerlink" title="平凡证明"></a>平凡证明</h3><p>在条件语句$p\rightarrow q$中，如果能够证明$q$为假，那么$p\rightarrow q$一定为真，这就得到证明$p\rightarrow q$的证明方法。</p>
+<h3 id="归谬证明"><a href="#归谬证明" class="headerlink" title="归谬证明"></a>归谬证明</h3><p>假设我们要证明$p$是真的，我们可以假定$\lnot p$为真，然后推导出一个矛盾式$q$，使得$\lnot p\rightarrow q$为真，因为$\lnot p\rightarrow q$为真，$\lnot p$必然为假，从而得出$p$为真。<br>也可用矛盾式证明$p\rightarrow q$是真的，通过假设$p$和$\lnot q$都为真，来证明$q$也一定为真。这意味着$q$和$\lnot q$都为真，矛盾。 </p>
+<h4 id="归谬证明实例"><a href="#归谬证明实例" class="headerlink" title="归谬证明实例"></a>归谬证明实例</h4><p>前提定义：若存在整数$p$和$q(q\neq 0)$使得$r=p/q$。实数$r$是有理数。<br>证明：$\sqrt 2$是无理数<br>假定$\sqrt 2$是有理数，则存在整数$a$和$b$满足$\sqrt 2=a/b$，其中$a$和$b$没有公因子。<br>将等式两边平方，得$2=a^2/b^2$ $2b^2=a^2$。<br>根据偶数定义，$a^2$是偶数，若$a^2$是偶数，则$a$也是偶数，那么存在一个整数$c$，由$a=2c$。因此$2b^2=4c^2$。<br>等式两边除以$2$，得到$b^2=2c^2$。<br>由偶数定义，$b^2$是偶数，$b$也是偶数。<br>我们已经由$\lnot p$得出等式$\sqrt 2=a/b$，其中$a$和$b$没有公因子，这与$a$和$b$都是偶数矛盾，因此$\lnot p$为假，从而得出$p$为真。</p>
+<h3 id="等价性证明"><a href="#等价性证明" class="headerlink" title="等价性证明"></a>等价性证明</h3><p>为了证明一个定理是双条件的，即形如$p↔︎q$的语句，我们来证明$p\rightarrow q$和$q\rightarrow p$都是真的。这个方法的有效性基于:<br>$$ (p↔︎q)↔︎[(p\rightarrow q)\land (q\rightarrow p)]$$<br>有时候定理说几个命题都是等价的。这样的定理说命题$p_1,p_2,p_3,…,p_n$都是等价的。这个定理可以写成: $$p_1↔︎p_2↔︎…↔︎p_n$$</p>
+<h3 id="反例"><a href="#反例" class="headerlink" title="反例"></a>反例</h3><p>证明形如$\forall xP(x)$的语句为假，只要能找到一个反例，即存在一个例子使$P(x)$为假。</p>
+<h3 id="穷举证明"><a href="#穷举证明" class="headerlink" title="穷举证明"></a>穷举证明</h3><p>有些定理能够通过有关的小数量例子测试来证明。这些证明通过穷举所有可能进行。穷举是分情形证明的特殊类型。</p>
+<h3 id="分情形证明"><a href="#分情形证明" class="headerlink" title="分情形证明"></a>分情形证明</h3><p>为了证明形如$(p_1 ∨ p_2 ∨ \dots ∨ p_n)→q$的条件语句，可以用永真式$[(p_1 ∨ p_2 ∨ \dots ∨ p_n)→q]↔︎[(p_1 →q)∧(p_2 →q)∧\dots ∧(p_n →q)]$作为推理规则。这个推理规则说明，可以通过分别证明每个条件语句$p_i→q$来证明命题$p_1,p_2,\dots p_n$的析取式组成前提的原条件语句。</p>
+<h3 id="存在性证明"><a href="#存在性证明" class="headerlink" title="存在性证明"></a>存在性证明</h3><p>对于形如$∃P(x)$的命题的证明。</p>
+<ul>
+<li>构造性的存在性证明：找出一个使得$P(x)$为真的元素$a$。</li>
+<li>非构造性的存在性证明：一个普通方法是，使用归缪证明，证明该存在量词化的否定式蕴含着矛盾。</li>
+</ul>
+<h3 id="唯一性证明"><a href="#唯一性证明" class="headerlink" title="唯一性证明"></a>唯一性证明</h3><p>断言具有特定性质的元素惟一存在。证明分为两部分：</p>
+<ul>
+<li>存在性：证明存在某个元素$x$具有期望的性质</li>
+<li>唯一性：证明若$y≠x$，则$y$不具有期望的性质。或者我们可以证明如果$x$和$y$都具有期望的性质，则$x=y$。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/03/Math-DM-05-推理规则/" itemprop="url">
+                  Math-DM-05-推理规则
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-03T17:55:52+08:00" content="2016-12-03">
+              2016-12-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/03/Math-DM-05-推理规则/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/03/Math-DM-05-推理规则/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/03/Math-DM-05-推理规则/" class="leancloud_visitors" data-flag-title="Math-DM-05-推理规则">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h2><p>证明是建立在数学命题真实性之上的有效论证。<br>为从已有的命题中推出新的命题，应用推理规则，它是构造有效论证的模板。推理规则是建立命题真实性的基本工具。     </p>
+<h3 id="命题逻辑的推理规则"><a href="#命题逻辑的推理规则" class="headerlink" title="命题逻辑的推理规则"></a>命题逻辑的推理规则</h3><p>命理逻辑中的论证是一连串的命题。除了论证中最后一个命题外都叫前提，最后的命题叫结论。当所有前提为真意味着结论为真时，一个论证是有效的。<br>表示命题逻辑论证有效的关键是表示出它的<strong>论证形式</strong>有效。<br>我们可以先建立一些简单的论证形式，称为<strong>推理规则</strong>这些推理规则可以作为模板来构造更多复杂的有效论证形式。     </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">推理规则</th>
+<th style="text-align:left">永真式</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p \\ &amp; \underline {p\rightarrow q} \\ \therefore &amp; q \\ \end{array}$</td>
+<td style="text-align:left">$[p\land(p\rightarrow q)]\rightarrow q$</td>
+<td style="text-align:left">假言推理</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp;\lnot p \\ &amp; \underline {p\rightarrow q} \\ \therefore &amp; \lnot p \\ \end{array}$</td>
+<td style="text-align:left">$[\lnot q\land (p\rightarrow q)]\rightarrow \lnot p$</td>
+<td style="text-align:left">取拒式</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p\rightarrow q \\ &amp; \underline {q\rightarrow r} \\ \therefore &amp; p\rightarrow r \\ \end{array}$</td>
+<td style="text-align:left">$[(p\rightarrow q)\land (q\rightarrow r)]\rightarrow (p\rightarrow r)$</td>
+<td style="text-align:left">假言三段论</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p\lor q \\ &amp; \underline {\lnot p} \\ \therefore &amp; q \\ \end{array}$</td>
+<td style="text-align:left">$[(p\lor q)\land \lnot p]\rightarrow q$</td>
+<td style="text-align:left">析取三段论</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline p \\ \therefore &amp; p\lor q \\ \end{array}$</td>
+<td style="text-align:left">$p\rightarrow (p\lor q)$</td>
+<td style="text-align:left">附加</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp;\underline {p\land q} \\\therefore &amp; p\\ \end{array}$</td>
+<td style="text-align:left">$(p\land q)\rightarrow p$</td>
+<td style="text-align:left">化简</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p \\ &amp; \underline q \\ \therefore &amp; p\land q \\ \end{array}$</td>
+<td style="text-align:left">$(p\land q)\rightarrow (p\land q)$</td>
+<td style="text-align:left">合取</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p\lor q \\ &amp; \underline {\lnot p\lor r} \\ \therefore &amp; q\lor r \\ \end{array}$</td>
+<td style="text-align:left">$[(p\lor q)\land (\lnot p\lor r)]\rightarrow (q\lor r)$</td>
+<td style="text-align:left">消解</td>
+</tr>
+</tbody>
+</table>
+<h3 id="量词命题的推理规则"><a href="#量词命题的推理规则" class="headerlink" title="量词命题的推理规则"></a>量词命题的推理规则</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">推理规则</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {\forall xP(x)} \\ \therefore &amp; P(c) \\ \end{array}$</td>
+<td style="text-align:left">全称示例</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {P(x),任意c} \\ \therefore &amp; \forall xP(x)\\ \end{array}$</td>
+<td style="text-align:left">全称生成</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {\exists P(x)} \\ \therefore &amp; P(c),对某个元素\\ \end{array}$</td>
+<td style="text-align:left">存在示例</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {P(c),对某个元素} \\ \therefore &amp; \exists xP(x)\\ \end{array}$</td>
+<td style="text-align:left">存在生成</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \\ &amp; \underline {P(a), 其中a是论域中一个特定的元素} \\ \therefore &amp; Q(a) \\ \end{array}$</td>
+<td style="text-align:left">全称假言推理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="命题逻辑推理规则和量化语句的推理规则结合"><a href="#命题逻辑推理规则和量化语句的推理规则结合" class="headerlink" title="命题逻辑推理规则和量化语句的推理规则结合"></a>命题逻辑推理规则和量化语句的推理规则结合</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">推理规则</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \\ &amp; \underline {P(a), 其中a是论域中一个特定的元素} \\ \therefore &amp; Q(a) \\ \end{array}$</td>
+<td style="text-align:left">全称假言推理</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \\ &amp; \underline {\lnot Q(a), 其中a是论域中一个特定的元素} \\ \therefore &amp; \lnot P(a) \\ \end{array}$</td>
+<td style="text-align:left">全称取拒推理</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \\ &amp; \underline {\forall x(Q(x)\rightarrow R(x))} \\ \therefore &amp; \forall x(P(x)\rightarrow R(x)) \\ \end{array}$</td>
+<td style="text-align:left">全称传递性</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/03/Math-DM-04-嵌套量词/" itemprop="url">
                   Math-DM-04-嵌套量词
                 </a>
@@ -718,8 +1107,63 @@
 </tr>
 </tbody>
 </table>
-<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><p>$$<br>p\rightarrow q\equiv \lnot p\lor q \\<br>p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\<br>p\lor q\equiv \lnot p\rightarrow q\\<br>p\land q\equiv \lnot(p\rightarrow \lnot q) \\<br>\lnot(p\rightarrow q)\equiv p\land \lnot q\\<br>(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\<br>(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\<br>(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\<br>(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\<br>$$</p>
-<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><p>$$<br>p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\<br>p↔︎q \equiv \lnot p↔︎ \lnot q \\<br>p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\<br>\lnot (p↔︎q) \equiv p↔︎\lnot q<br>$$</p>
+<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">等价关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$p\rightarrow q\equiv \lnot p\lor q $</td>
+</tr>
+<tr>
+<td style="text-align:left">$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$</td>
+</tr>
+<tr>
+<td style="text-align:left">$p\lor q\equiv \lnot p\rightarrow q$</td>
+</tr>
+<tr>
+<td style="text-align:left">$p\land q\equiv \lnot(p\rightarrow \lnot q) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot(p\rightarrow q)\equiv p\land \lnot q $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">等价关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$p↔︎q \equiv \lnot p↔︎ \lnot q $</td>
+</tr>
+<tr>
+<td style="text-align:left">$p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q) $</td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot (p↔︎q) \equiv p↔︎\lnot q $</td>
+</tr>
+</tbody>
+</table>
 
           
         
@@ -1662,221 +2106,6 @@
 <li>集合$A$与集合$B$有相同的基数，当且仅当存在从$A$到$B$的一一对应</li>
 <li>有限集或与自然数集基数相同的无限集称为可数的，反之称为不可数的。</li>
 <li>如果无穷集合$S$是可数的，我们用符号$\aleph_0$来表示集合$S$的基数。记作$\mid S\mid=\aleph_0$，且说$S$有基数希伯来零。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/21/Math-逻辑和证明-离散数学/" itemprop="url">
-                  逻辑和证明-离散数学
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-21T21:07:01+08:00" content="2016-09-21">
-              2016-09-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/21/Math-逻辑和证明-离散数学/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/Math-逻辑和证明-离散数学/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/21/Math-逻辑和证明-离散数学/" class="leancloud_visitors" data-flag-title="逻辑和证明-离散数学">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="谓词和量词"><a href="#谓词和量词" class="headerlink" title="谓词和量词"></a>谓词和量词</h2><h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>我们可以讲含有变量的语句用函数表示。例如“计算机x被一个人攻击”。<br>一般涉及$n$个变量$x_1,x_2,\cdots,x_n$的语句可以用$P(x_1,x_2,\cdots,x_n)$表示。形为$P(x_1,x_2,\cdots,x_n)$的语句是命题函数$P$在$n$元组$(x_1,x_2,\cdots,x_n)$的值，$P$也称为$n$元谓词。</p>
-<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><ul>
-<li>全称量化：对于论域内的每一个$x$，$P(x)$都为真值，记作$\forall xP(x)$，其中$\forall$称为全称量词。</li>
-<li>存在量化：对于论域内至少有一个$x$，使$P(x)$为真，记作$\exists xP(x)$，其中$\exists$称为存在量词。</li>
-<li>唯一量词：存在惟一一个$x$使$P(x)$为真。记作$\exists!xP(x)$或$\exists_1xP(x)$。</li>
-</ul>
-<h4 id="约束论域量词"><a href="#约束论域量词" class="headerlink" title="约束论域量词"></a>约束论域量词</h4><ul>
-<li>全称量化的约束和一个条件语句的全称量化等价。例如$\forall x\lt 0(x^2 \gt 0)$等价于$\forall x(x\lt 0\rightarrow x^2 \gt 0)$ </li>
-<li>存在量化的约束和一个合取的存在量化等价。例如$\exists z\gt 0(z^2 =2)$等价于$\exists z(z\gt 0\land z^2 =2)$</li>
-</ul>
-<h4 id="量词的逻辑等价"><a href="#量词的逻辑等价" class="headerlink" title="量词的逻辑等价"></a>量词的逻辑等价</h4><p>涉及谓词和量词的语句是逻辑等价的，当且仅当无论什么谓词代入这些语句，也无论用哪个个体论域于这些命题函数里的变量上，它们都有相同的真值。用符号$S\equiv T$表示涉及谓词和量词的两个语句逻辑等价。 </p>
-<h4 id="等价关系"><a href="#等价关系" class="headerlink" title="等价关系"></a>等价关系</h4><p>$$<br>\forall x(P(x) \land Q(x)) \equiv \forall xP(x) \land \forall xQ(x)\\<br>\lnot \forall xP(x) \equiv \exists x\lnot P(x) \\<br>\lnot \exists xQ(x) \equiv \forall x\lnot Q(x)<br>$$</p>
-<h3 id="嵌套量词"><a href="#嵌套量词" class="headerlink" title="嵌套量词"></a>嵌套量词</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">语句</th>
-<th style="text-align:center">何时为真</th>
-<th style="text-align:center">何时为假</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$\forall x\forall yP(x, y)$<br>$\forall y\forall xP(x, y)$</td>
-<td style="text-align:center">对每一对$x$、$y$，$P(x, y)$均为真</td>
-<td style="text-align:center">有一对$x$、$y$使$P(x ,y)$为假</td>
-</tr>
-<tr>
-<td style="text-align:center">$\forall x\exists yP(x, y)$</td>
-<td style="text-align:center">对每个$x$，都有$y$使$P(x, y)$为真</td>
-<td style="text-align:center">有$x$，使$P(x, y)$对每个$y$总是假</td>
-</tr>
-<tr>
-<td style="text-align:center">$\exists x\forall yP(x, y)$</td>
-<td style="text-align:center">有一个$x$，使$P(x, y)$对所有$y$为真</td>
-<td style="text-align:center">对于每一个$x$都有$y$使$P(x, y)$均为假</td>
-</tr>
-<tr>
-<td style="text-align:center">$\exists x\exists yP(x, y)$<br>$\exists y\exists xP(x, y)$</td>
-<td style="text-align:center">有一对$x$、$y$使$P(x, y$)¥为真</td>
-<td style="text-align:center">对每一对$x$、$y$，$P(x, y)$均为假</td>
-</tr>
-</tbody>
-</table>
-<h2 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h2><ul>
-<li>命理逻辑中的论证是一连串的命题。除了论证中最后一个命题外都叫前提，最后的命题叫结论。当所有前提为真意味着结论为真时，一个论证是有效的。</li>
-<li>表示命题逻辑论证有效的关键是表示出它的论证形式有效。</li>
-</ul>
-<h3 id="常用的推理规则"><a href="#常用的推理规则" class="headerlink" title="常用的推理规则"></a>常用的推理规则</h3><p><img src="../images/inference_rule.png" alt=""></p>
-<h3 id="带量词命题的推理规则"><a href="#带量词命题的推理规则" class="headerlink" title="带量词命题的推理规则"></a>带量词命题的推理规则</h3><ul>
-<li>全称例示：用它从前提$\forall xP(x)$得出$P(x)$为真，其中$c$是论域里的具体成员。</li>
-<li>全称生成：它说明对于论域里所有元素$c$来说$P(x)$为真的前提下，$\forall xP(x)$为真。当通过论域里拿出一个任意元素$c$并证明$P(c)$为真来证明$\forall xP(x)$为真的前提下，就使用了全称生成。</li>
-<li>存在例示：在允许从已经$\exists xP(x)$为真，得出在论域里存在一个使得$P(x)$为真的元素$c$。在这里不能选择一个任意值的$c$，必须是使得$P(c)$为真的那个$c$。</li>
-<li>存在生成：已知使$P(x)$为真的一个具体的$c$时，得出$\exists xP(x)$为真。</li>
-</ul>
-<p><img src="../images/inference_rule_!.png" alt=""></p>
-<h2 id="证明导论"><a href="#证明导论" class="headerlink" title="证明导论"></a>证明导论</h2><ul>
-<li>定理：是一个能够表明为真的语句，有时把不太重要的定理称为命题。</li>
-<li>引理：在其他结果证明中很有帮助的不大重要的定理</li>
-<li>推论：从定理直接建立被证明的定理</li>
-<li>猜想：被提出为真的命题，通常是在一些依据的基础上，启发式论证，未被证实。</li>
-</ul>
-<h3 id="证明定理的方法"><a href="#证明定理的方法" class="headerlink" title="证明定理的方法"></a>证明定理的方法</h3><ul>
-<li>直接证明</li>
-<li>反证法</li>
-<li>空证明：只要证明$p→q$中的$p$为假，则$p→q$为真。</li>
-<li>平凡证明：只要证明$p→q$中的$q$为真，则$p→q$为真。</li>
-<li>归缪证明：$¬p→(r∧¬r)$为真，则$p$为真。</li>
-</ul>
-<h3 id="证明的方法和策略"><a href="#证明的方法和策略" class="headerlink" title="证明的方法和策略"></a>证明的方法和策略</h3><h4 id="证明的方法"><a href="#证明的方法" class="headerlink" title="证明的方法"></a>证明的方法</h4><ul>
-<li>分情形证明：为了证明形如$(p_1 ∨ p_2 ∨ \dots ∨ p_n)→q$的条件语句，可以用永真式$[(p_1 ∨ p_2 ∨ \dots ∨ p_n)→q]↔︎[(p_1 →q)∧(p_2 →q)∧\dots ∧(p_n →q)]$作为推理规则。这个推理规则说明，可以通过分别证明每个条件语句$p_i→q$来证明命题$p_1,p_2,\dots p_n$的析取式组成前提的原条件语句。</li>
-<li>穷举证明：有些定理能够通过有关的小数量例子测试来证明。这些证明通过穷举所有可能进行。穷举是分情形证明的特殊类型。</li>
-<li>存在性证明：对于形如$∃P(x)$的命题的证明。<ul>
-<li>构造性的存在性证明：找出一个使得$P(x)$为真的元素$a$。</li>
-<li>非构造性的存在性证明：一个普通方法是，使用归缪证明，证明该存在量词化的否定式蕴含着矛盾。</li>
-</ul>
-</li>
-<li>唯一性证明：断言具有特定性质的元素惟一存在。证明分为两部分：<ul>
-<li>存在性：证明存在某个元素$x$具有期望的性质</li>
-<li>唯一性：证明若$y≠x$，则$y$不具有期望的性质。或者我们可以证明如果$x$和$y$都具有期望的性质，则$x=y$。</li>
-</ul>
-</li>
-</ul>
-<h4 id="证明策略"><a href="#证明策略" class="headerlink" title="证明策略"></a>证明策略</h4><ul>
-<li>前推和后推</li>
-<li>改造现有证明</li>
-<li>寻找反例</li>
 </ul>
 
           
@@ -4317,211 +4546,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/03/Math-线性方程组－《线性代数及应用》/" itemprop="url">
-                  线性方程组－《线性代数及应用》
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-03T18:27:24+08:00" content="2016-09-03">
-              2016-09-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/03/Math-线性方程组－《线性代数及应用》/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/Math-线性方程组－《线性代数及应用》/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/03/Math-线性方程组－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="线性方程组－《线性代数及应用》">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
-</blockquote>
-<h2 id="方程以及方程的解"><a href="#方程以及方程的解" class="headerlink" title="方程以及方程的解"></a>方程以及方程的解</h2><h3 id="方程"><a href="#方程" class="headerlink" title="方程"></a>方程</h3><p>以下为同一方程组的不同表示形式</p>
-<h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>$$<br>    a_1 x_1 + a_2 x_2 +…+a_n x_n=b_1\\<br>    c_1 x_1 + c_2 x_2 +…+c_n x_n=b_2\\<br>            …<br>$$</p>
-<h4 id="增广矩阵"><a href="#增广矩阵" class="headerlink" title="增广矩阵"></a>增广矩阵</h4><p>$$<br>    \begin{matrix}<br>    a_1 &amp; a_2 &amp; \cdots &amp; a_n &amp; b_1\\<br>    c_1 &amp; c_2 &amp; \cdots &amp; c_n &amp; b_1\\<br>    \end{matrix}<br>$$</p>
-<h4 id="向量方程"><a href="#向量方程" class="headerlink" title="向量方程"></a>向量方程</h4><p>$v_1 ,v_2 ,\cdots,v_n$是$R^n$中的向量<br>$$<br>    x_1 \mathbf v_1 + x_2 \mathbf v_2 +\cdots+ x_n \mathbf v_n =\mathbf b<br>$$</p>
-<h4 id="矩阵方程"><a href="#矩阵方程" class="headerlink" title="矩阵方程"></a>矩阵方程</h4><p>$$<br>    A\mathbf x =\mathbf b<br>$$</p>
-<h3 id="解集"><a href="#解集" class="headerlink" title="解集"></a>解集</h3><h4 id="阶梯形矩阵定义"><a href="#阶梯形矩阵定义" class="headerlink" title="阶梯形矩阵定义"></a>阶梯形矩阵定义</h4><ol>
-<li>每一个非零行在每一零行上</li>
-<li>某一行的先导元素所在列位于前一行先导元素的右面</li>
-<li>某一先导元素所在列下方元素都是零，若一个阶梯形矩阵还满足以下性质，称它为简化阶梯形</li>
-<li>每一非零行的先导元素都是1</li>
-<li>每一先导元素1是该元素所在列的唯一非零元素</li>
-</ol>
-<h4 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h4><p>称$A\mathbf x=0$的形式的方程为齐次方程。当该方程只有一个解时，即$\mathbf x=0$，这个解称为平凡解。若齐次方程右多个解，称齐次方程有非平凡解。</p>
-<h4 id="解方程组的算法"><a href="#解方程组的算法" class="headerlink" title="解方程组的算法"></a>解方程组的算法</h4><h5 id="行初等变换"><a href="#行初等变换" class="headerlink" title="行初等变换"></a>行初等变换</h5><ul>
-<li>倍加变换：把某一行换成它本身与另外一行的倍数的和</li>
-<li>对换变换：把两行对换</li>
-<li>倍乘变换：把某一行的所有元素乘以同一个非零元素</li>
-</ul>
-<h5 id="行化简算法"><a href="#行化简算法" class="headerlink" title="行化简算法"></a>行化简算法</h5><p>任何情况下，线性方程组、向量方程、矩阵方程都可用相同方法来解－行化简算法来化简增广矩阵。</p>
-<ol>
-<li>由最左边的非零列开始，这是一个主元列，主元位置在该列顶端</li>
-<li>在主元列中选取一个非零元作为主元。若有必要的话，可对换两行使这个元素移到主元位置上</li>
-<li>用倍加行变换将主元下面的元素变成0</li>
-<li>暂时不管包含主元位置的行以及它上面的各行，对剩下的子矩阵使用上述的三个步骤直到没有非零行需要处理为止。</li>
-<li>由最右面的主元开始，把每个主元上方的各元素变成0，若某个主元不是1，用倍乘将其变为1</li>
-</ol>
-<h5 id="线性方程组的解"><a href="#线性方程组的解" class="headerlink" title="线性方程组的解"></a>线性方程组的解</h5><ol>
-<li>写出方程组的增广矩阵</li>
-<li>应用行化简算法把增广矩阵化为阶梯形，确定方程组是否有解，如果没有解则停止；否则进行下一步</li>
-<li>继续行化简算法得到它的简化阶梯形</li>
-<li>写出由第3步所得矩阵所对应的方程组</li>
-<li>把第4步所得的每个方程改写为用自由变量(假如有自由变量)表示基本变了的形式</li>
-</ol>
-<h5 id="参数向量形式的解集"><a href="#参数向量形式的解集" class="headerlink" title="参数向量形式的解集"></a>参数向量形式的解集</h5><ol>
-<li>把增广矩阵行化简为简化阶梯形</li>
-<li>把每个基本变量用自由变量表示</li>
-<li>把一般解$\mathbf x$表示成向量，如果有自由变量，其元素依赖于自由变量</li>
-<li>把$\mathbf x$分解为向量的线性组合，用自由变量作为参数</li>
-</ol>
-<h2 id="线性组合和线性变换"><a href="#线性组合和线性变换" class="headerlink" title="线性组合和线性变换"></a>线性组合和线性变换</h2><h3 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h3><p>给定$R^n$中向量$\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$和标量$c_1,c_2,\cdots,c_p$,向量<br>$$<br>    \mathbf y=c_1\mathbf v_1+\cdots+c_p\mathbf v_p<br>$$<br>称为向量$\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$，以$c_1,c_2,\cdots,c_p$为权的<em>线性组合</em>，其中所有向量$y$的集合用记号$Span\{\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p\}$表示。</p>
-<h3 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h3><p>对于$R^n$中一组向量$\{\mathbf v_1,\cdots,\mathbf v_p\}$，若向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p=0<br>$$<br>仅有平凡解，则称向量组(集)$\{\mathbf v_1,\cdots,\mathbf v_p\}$线性无关，否则称为线性相关。<br>由此可以推论出，当方程$A\mathbf x=0$仅有平凡解时，矩阵$A$中各列线性无关。</p>
-<h3 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h3><p>由$R^n$到$R^m$的一个变换(映射、函数)$T$，它将$R^n$中的每个向量$\mathbf x$对应$R^m$中的一个向量$T(\mathbf x)$，集$R^n$称为$T$的定义域，$R^m$称为$T$的语定义域。记作 $T:R^n \to R^m$<br>$R^m$中的向量$T(\mathbf x)$称为$\mathbf x$在$T$作用下的像。<br>若$T$为线性的，则它满足以下性质<br>$$<br>    T(c\mathbf u+d\mathbf v)=cT(\mathbf u)+dT(\mathbf v)\\<br>    T(0)=0\\<br>    T(c\mathbf u)=cT(\mathbf u)\\<br>$$</p>
-<h4 id="线性变换中的矩阵"><a href="#线性变换中的矩阵" class="headerlink" title="线性变换中的矩阵"></a>线性变换中的矩阵</h4><p>从$R^n$到$R^m$的每一个线性变换，实际上都是一个矩阵变换$\mathbf x\mapsto A\mathbf x$。<br>$$<br>    T(\mathbf x)= A\mathbf x<br>$$</p>
-<h2 id="定理和性质"><a href="#定理和性质" class="headerlink" title="定理和性质"></a>定理和性质</h2><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><ol>
-<li>简化阶梯形矩阵的唯一性：每个矩阵行等价于唯一的简化阶梯形矩阵</li>
-<li>存在与唯一性定理：线性方程组相容的充要条件是增广矩阵的最右列不是主元列</li>
-<li><p>若$A$是$m\times n$矩阵，它的各列为$a_1,a_2,\cdots,a_n$，而$b$属于$R^n$，则矩阵方程<br>$$<br> A\mathbf x=\mathbf b<br>$$<br>与向量方程<br>$$<br> x_1 \mathbf a_1+x_2 \mathbf a_2+\cdots +x_n \mathbf a_n =\mathbf b<br>$$<br>有相同的解集，它有与增广矩阵为<br>$$<br> [\mathbf a_1,\mathbf a_2,\cdots,\mathbf a_n,\mathbf b]<br>$$<br>的线性方程组有相同的解集</p>
-</li>
-<li><p>设$A$是$m\times n$矩阵(系数矩阵)，则下列命题是逻辑上等价的，也就是说，对于某个A，它们都成立或都不成立</p>
-<ul>
-<li>对于$R^n$中的每个$b$，方程$Ax=b$都有解</li>
-<li>$R^n$中的每个$b$都是$A$的列的一个线性组合</li>
-<li>$A$的各列生成$R^m$</li>
-<li>$A$在每一行都有一个主元位置</li>
-</ul>
-</li>
-<li>若$A$是$m\times n$矩阵，$\mathbf u$和$\mathbf v$是$R^n$的向量，$c$是标量，则<br>$$<br> A(\mathbf u+\mathbf v)=A\mathbf u + A\mathbf v\\<br> A(c\mathbf u)=c(A\mathbf u)<br>$$</li>
-<li>设方程$A\mathbf x=\mathbf b$对某个$\mathbf b$是相容的，$\mathbf p$作为一个特解，则$A\mathbf x=\mathbf b$的解集是所有形如$\mathbf w=\mathbf p+\mathbf v_h$的向量的集，其中，$\mathbf v_h$ 是齐次方程$A\mathbf x=0$的任意一个解。</li>
-<li>线性相关集的特征：两个或更多个向量的集合$S=\{\mathbf v_1,\cdots,\mathbf v_p\}$线性相关，当且仅当$S$中至少有一个向量是其他向量的线性组合。事实上，若$S$线性相关，且$\mathbf v_1 \neq 0$，则某个$\mathbf v_j (j&gt;1)$ 是它前面几个向量$\mathbf v_1,\cdots,\mathbf v_{j-1}$的线性组合。</li>
-<li>若一个向量组的向量个数超过每个向量元素个数，那么这个向量组线性相关，就是说，$R^n$中任意向量组$\{\mathbf v_1,\cdots,v_n\}$，当$p&gt;n$时线性相关。</li>
-<li>若向量组$S=\{\mathbf v_1,\cdots,v_n\}$包含零向量，则它线性相关。</li>
-<li>设$T:R^n \to R^m$线性变换，则存在唯一的矩阵$A$，使$T(\mathbf x)=A\mathbf x$，对$R^n$中一切$\mathbf x$。事实上，$A$是$m\times n$矩阵，它的第$j$列是向量$T(\mathbf e_j)$，其中$\mathbf e_j$是单位矩阵$I_n$的第$j$列：<br>$$<br>A=[T(\mathbf e_1) \cdots T(\mathbf e_n)]<br>$$</li>
-<li>设$T:R^n \to R^m$为线性变换，则$T$是一对一当且仅当方程$A\mathbf x=0$仅有平凡解。</li>
-</ol>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><h4 id="R-n-中向量的代数性质"><a href="#R-n-中向量的代数性质" class="headerlink" title="$R^n$中向量的代数性质"></a>$R^n$中向量的代数性质</h4><ul>
-<li>$\mathbf u+\mathbf v=\mathbf v+\mathbf u$</li>
-<li>$(\mathbf u+\mathbf v)+\mathbf w=\mathbf u+(\mathbf v+\mathbf w)$</li>
-<li>$\mathbf u+0=0+\mathbf u=\mathbf u$</li>
-<li>$\mathbf u+(-\mathbf u)=-\mathbf u+\mathbf u=0$</li>
-<li>$c(\mathbf u+\mathbf v)=c\mathbf u+c\mathbf v$</li>
-<li>$(c+d)\mathbf u=c\mathbf u+d\mathbf u$</li>
-<li>$c(d\mathbf u)=(cd)(\mathbf u)$</li>
-<li>$1\mathbf u=\mathbf y$</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -4567,7 +4591,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

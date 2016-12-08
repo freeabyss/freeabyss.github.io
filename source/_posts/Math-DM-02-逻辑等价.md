@@ -30,22 +30,23 @@ $\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的�
 |否定律|$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$|
 
 ### 涉及条件语句的逻辑等价
-$$
-p\rightarrow q\equiv \lnot p\lor q \\
-p\rightarrow q\equiv \lnot q\rightarrow \lnot p \\
-p\lor q\equiv \lnot p\rightarrow q\\
-p\land q\equiv \lnot(p\rightarrow \lnot q) \\
-\lnot(p\rightarrow q)\equiv p\land \lnot q\\
-(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)\\
-(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r\\
-(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)\\
-(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r\\
-$$
+|等价关系|
+|:----|
+|$p\rightarrow q\equiv \lnot p\lor q $|
+|$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$|
+|$p\lor q\equiv \lnot p\rightarrow q$| 
+|$p\land q\equiv \lnot(p\rightarrow \lnot q) $|
+|$\lnot(p\rightarrow q)\equiv p\land \lnot q $|
+|$(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r) $|
+|$(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r $|
+|$(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r) $|
+|$(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$|
+
 
 ### 涉及双条件语句的逻辑等价
-$$
-p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p)\\
-p↔︎q \equiv \lnot p↔︎ \lnot q \\
-p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q)\\
-\lnot (p↔︎q) \equiv p↔︎\lnot q
-$$
+|等价关系|
+|:----|
+|$p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p) $|
+|$p↔︎q \equiv \lnot p↔︎ \lnot q $|
+|$p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q) $|
+|$\lnot (p↔︎q) \equiv p↔︎\lnot q $|

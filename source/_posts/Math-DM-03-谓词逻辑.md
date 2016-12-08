@@ -38,4 +38,3 @@ $$
 \lnot \forall xP(x) \equiv \exists x\lnot P(x) \\
 \lnot \exists xQ(x) \equiv \forall x\lnot Q(x)
 $$
-

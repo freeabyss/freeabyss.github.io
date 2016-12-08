@@ -33,8 +33,8 @@ categories: MathJax
 |$\cup$|$\cap$|$\setminus$|$\subset$|$\subseteq$|$\subsetneq$|
 |:----:|:----:|:---------:|:-------:|:---------:|:----------:|
 |\cup|\cap|\setminus|\subset|\subseteq|\subsetneq|
-|$\supset$|$\in$|$\notin$|$\emptyset$|$\varnothing$|
-|\supset|\in|\notin|\emptyset|\varnothing|
+|$\supset$|$\in$|$\notin$|$\emptyset$|$\varnothing$|$\mid$|
+|\supset|\in|\notin|\emptyset|\varnothing|\mid|
 
 |$\to$|$\rightarrow$|$\leftarrow$|$\Rightarrow$|$\Leftarrow$|$\mapsto$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -59,5 +59,45 @@ categories: MathJax
 |$\ldots$|$\ell$|$\epsilon$|$\varepsilon$|$\varphi$|
 |:------:|:----:|:--------:|:-----------:|:-------:|
 |\ldots|\ell|\epsilon|\varepsilon|\varphi|
+
+
+### 字体
+* blackboard bold: \mathbb or\Bbb $\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* boldface: \mathbf $\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* typewriter: \mathtt $\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* roman font: \mathrm $\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* sans-serif font: \mathsf $\mathsf {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* calligraphic: \mathcal $\mathcal {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* script:\mathscr $\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+* Fraktur:\mathfrak $\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$
+
+### 实例
+`A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i`
+$$A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i$$
+`A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i`
+$$A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i$$
+```shell
+\begin{align}
+\overline {A\cap B} &= \{x\mid x\notin A\cap B\} \\
+&   =\{x\mid \lnot(x\in(A\cap B))\} \\
+&   =\{x\mid \lnot(x\in A\land x\in B)\} \\
+&   =\{x\mid \lnot (x\in A)\lor \lnot(x\in B)\}\\
+&   =\{x\mid x\notin A\lor x\notin B\}\\
+&   =\{x\mid x\in \overline{A}\lor x\in \overline{B}\} \\
+&   =\{x\mid x\in \overline{A}\cup\overline{B}\} \\
+&   =\overline{A}\cup\overline{B}
+\end{align}
+```
+$$ \begin{align}
+\overline {A\cap B} &= \{x\mid x\notin A\cap B\} \\
+&   =\{x\mid \lnot(x\in(A\cap B))\} \\
+&   =\{x\mid \lnot(x\in A\land x\in B)\} \\
+&   =\{x\mid \lnot (x\in A)\lor \lnot(x\in B)\}\\
+&   =\{x\mid x\notin A\lor x\notin B\}\\
+&   =\{x\mid x\in \overline{A}\lor x\in \overline{B}\} \\
+&   =\{x\mid x\in \overline{A}\cup\overline{B}\} \\
+&   =\overline{A}\cup\overline{B}
+\end{align}
+$$
 
 [更多](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)

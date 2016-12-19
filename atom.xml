@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-12-17T06:36:45.000Z</updated>
+  <updated>2016-12-17T06:41:20.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-%E6%8C%87%E7%A4%BA%E5%99%A8/"/>
     <id>http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-指示器/</id>
     <published>2016-12-17T06:35:57.000Z</published>
-    <updated>2016-12-17T06:36:45.000Z</updated>
+    <updated>2016-12-17T06:41:20.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="指示器"><a href="#指示器" class="headerlink" title="指示器"></a>指示器</h2><p>通过指示器可以控制在文档中使用元素的方式。    </p>
 <h3 id="Order-指示器"><a href="#Order-指示器" class="headerlink" title="Order 指示器"></a>Order 指示器</h3><p>Order 用于定义元素的顺序</p>
@@ -332,7 +332,7 @@
     <link href="http://blog.freeabyss.com/2016/12/16/Math-DM-10-%E7%AE%97%E6%B3%95/"/>
     <id>http://blog.freeabyss.com/2016/12/16/Math-DM-10-算法/</id>
     <published>2016-12-16T09:49:21.000Z</published>
-    <updated>2016-12-16T10:32:48.000Z</updated>
+    <updated>2016-12-17T10:34:20.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>算法是进行一项计算或解决一个问题的一组有限多条准确的指令。</p>
 <h3 id="算法的性质"><a href="#算法的性质" class="headerlink" title="算法的性质"></a>算法的性质</h3><ul>
@@ -344,7 +344,10 @@
 <li>有效性 算法的每一步都应能够准确地在有限时间内完成</li>
 <li>通用性 算法过程应该用于期望形式的所有问题，而不只是用于特定的值</li>
 </ul>
-]]></content>
+<h2 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h2><h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>从$a_1$开始逐一比较表中每一项。  </p>
+<h3 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h3><p>二分搜索用于搜索以排序后的表。 这个算法比较要搜索的元素与表的中间项。然后此表就分成两个较小的长度相等的子表，根据比较结果，搜索将限于两个子表中的一个进行。    </p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序是最简单的排序算法之一，冒泡排序把一个表排列成升序：<br>一次次的比较相邻的元素，若相邻元素顺序不对，就交换相邻元素。从表头开始对整个表执行该操作，迭代这个过程直到排序完成。 </p>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3>]]></content>
     
     <summary type="html">
     

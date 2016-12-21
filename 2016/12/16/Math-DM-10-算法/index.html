@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Math,note,function,Discrete Mathematics," />
+  <meta name="keywords" content="Math,note,Alg,Discrete Mathematics," />
 
 
 
@@ -102,7 +102,7 @@
 有效性 算法的每一步都应能够准确地在有限时间内完成
 通用性 算法过程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="离散数学学习笔记 算法 11">
+<meta property="og:title" content="离散数学学习笔记 算法 10">
 <meta property="og:url" content="http://blog.freeabyss.com/2016/12/16/Math-DM-10-算法/index.html">
 <meta property="og:site_name" content="Abyss's blog">
 <meta property="og:description" content="算法算法是进行一项计算或解决一个问题的一组有限多条准确的指令。
@@ -114,9 +114,9 @@
 有限性 对任何输入算法都应在有限步之后产出所求值
 有效性 算法的每一步都应能够准确地在有限时间内完成
 通用性 算法过程">
-<meta property="og:updated_time" content="2016-12-17T10:34:20.000Z">
+<meta property="og:updated_time" content="2016-12-21T12:30:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="离散数学学习笔记 算法 11">
+<meta name="twitter:title" content="离散数学学习笔记 算法 10">
 <meta name="twitter:description" content="算法算法是进行一项计算或解决一个问题的一组有限多条准确的指令。
 算法的性质
 输入 算法从一个指定的集合得到输入值
@@ -148,7 +148,7 @@
 
   <link rel="canonical" href="http://blog.freeabyss.com/2016/12/16/Math-DM-10-算法/"/>
 
-  <title> 离散数学学习笔记 算法 11 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 离散数学学习笔记 算法 10 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +298,7 @@
             
             
               
-                离散数学学习笔记 算法 11
+                离散数学学习笔记 算法 10
               
             
           </h1>
@@ -351,7 +351,7 @@
 
           
           
-             <span id="/2016/12/16/Math-DM-10-算法/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 算法 11">
+             <span id="/2016/12/16/Math-DM-10-算法/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 算法 10">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,10 +383,13 @@
 <li>有效性 算法的每一步都应能够准确地在有限时间内完成</li>
 <li>通用性 算法过程应该用于期望形式的所有问题，而不只是用于特定的值</li>
 </ul>
-<h2 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h2><h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>从$a_1$开始逐一比较表中每一项。  </p>
-<h3 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h3><p>二分搜索用于搜索以排序后的表。 这个算法比较要搜索的元素与表的中间项。然后此表就分成两个较小的长度相等的子表，根据比较结果，搜索将限于两个子表中的一个进行。    </p>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序是最简单的排序算法之一，冒泡排序把一个表排列成升序：<br>一次次的比较相邻的元素，若相邻元素顺序不对，就交换相邻元素。从表头开始对整个表执行该操作，迭代这个过程直到排序完成。 </p>
-<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3>
+<h2 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h2><h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {linear\; search} (x:integer, a_1,a_2,\dots,a_n:integer)\\<br>i:=1 \\<br>\mathbf {while}(i\le and\; x\neq a_i) \\<br>\qquad i:=i+1 \\<br>\mathbf {if} \, i\le n\;\mathbf {then} \; location :=i \\<br>\mathbf {else} \;\; location := 0 \\<br>\{location是等于x的项的下标，或是0(若找不到x)\}<br>\end{array}<br>$$</p>
+<h3 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {binary \; search}(x:integer,a_1,a_2,\dots,a_n:integer 递增) \\<br>i:=1 \{i是搜索区间的左端点\} \\<br>j:=1 \{j是搜索区间的右端点\} \\<br>\mathbf {while}\; i<j \\="" \mathbf="" {begin}="" \qquad="" m:="\lfloor" (i+j)="" 2\rfloor="" {if}\;="" x="">a_m\; \mathbf {then}\; i:=m+1 \\<br>\qquad \mathbf {else}\; j:=m \\<br>\mathbf {end}\\<br>\mathbf {if}\; x=a_i \;\mathbf {then}\; location:=i\\<br>\mathbf {else}\; location:=0 \\<br>\{location 是等于x的项的下标，或是0(若找不到x)\}<br>\end{array}<br>$$  </j></p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {bubble \; sort}(a_1,a_2,\dots,a_n:double,n\ge 2) \\<br>\mathbf {for}\; i:=1\mathbf {to}\; n-1 \\<br>\qquad\mathbf {for}\; j:=1\mathbf {to}\; n-i\\<br>\qquad\qquad\mathbf {if}\; a_j&gt;a_{j+1}\;\mathbf {then}\; swap(a_j,a_{j+1}) \\<br>\{a_1,\dots,a_n 按升序排列\}<br>\end{array}<br>$$ </p>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure}\; insertion\; sort(a_1,a_2,\dots,a_n:double,n\ge 2)\\<br>\mathbf {for}\; j:=2\;\mathbf {to}\; n\\<br>\mathbf {begin} \\<br>\qquad i:=1\\<br>\qquad\mathbf {while}\; a_j&gt;a_i\\<br>\qquad\qquad i:=i+1\\<br>\qquad m:=a_j\\<br>\mathbf {for}\; k:=0\;\mathbf {to}\; j-i-1\\<br>\qquad\qquad a_{j-k} :=a_{j-k-1}\\<br>\qquad a_i:=m\\<br>\mathbf {end}\\<br>\{a_1,a_2,\dots,a_n已排序\}<br>\end{array}<br>$$</p>
+<h3 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h3><p>有很多算法用于解决优化问题，这种问题的目标是求给定问题把某个参数值最小化或最大化的解。例如，求两个城市总长度最短路径，网络结点之间使用最少量光纤的一组光纤连接。<br>一种最简单的方法求优化问题的解，这种方法在每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列。这种在每一步都选择最好选项的算法称为贪心算法。</p>
+<h3 id="停机问题"><a href="#停机问题" class="headerlink" title="停机问题"></a>停机问题</h3><p>该问题无解。<br>该程序的输入部分是某个计算机程序，以该程序是否能正常结束作为输出结果。<br>证：假设停机问题有解，比如某个程序${H(P,I)}$，它包括两个输入项，即程序$P$和程序$I$，假设$P$在输入$I$时可停机，将输出字符串”停机”,反之输出”死循环”。现在可以用反证法证明这样的$H$不存在。<br>当编写一个程序的时候，程序本身可以看做是一行字符；字符串可以被解释为比特序列，也就是说，程序本身就可以当作数据使用，因此一个程序可以作为另一个程序甚至自身的输入，$H$可以判断当$P$自身作为输入时，$P$是否会停机。<br>为了证明不存在程序$H$能够求解停机问题，我们构造一个简单过程${K(P)}$，它利用的是${H(P,P)}$的输出。如果${H(P,P)}$的输出是死循环，即$P$自身作为输入时会死循环，那么${K(P)}$停机。如果${H(P,P)}$的输出是”停机”，即$P$自身作为输入时会停机，那么${K(P)}$死循环。也就是说${K(P)}$和${H(P,P)}$的输出相反。<br>现在假设把$K$作为$K$的输入，需要注意，如果${H(K,K)}$的输出是”死循环”，那么根据上面的定义$K(K)$停机。否则，如果$H(K,K)$的输出是”停机”,根据上面的定义$K(K)$的输出是”死循环”。而这与$H$的定义是相违背的。这两种情况下，都会产生矛盾。 </p>
+
       
     </div>
 
@@ -412,7 +415,7 @@
           
             <a href="/tags/note/" rel="tag">#note</a>
           
-            <a href="/tags/function/" rel="tag">#function</a>
+            <a href="/tags/Alg/" rel="tag">#Alg</a>
           
             <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
           
@@ -460,7 +463,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/12/16/Math-DM-10-算法/"
-           data-title="离散数学学习笔记 算法 11" data-url="http://blog.freeabyss.com/2016/12/16/Math-DM-10-算法/">
+           data-title="离散数学学习笔记 算法 10" data-url="http://blog.freeabyss.com/2016/12/16/Math-DM-10-算法/">
       </div>
     
   </div>
@@ -505,7 +508,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">42</span>
+              <span class="site-state-item-count">46</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -522,7 +525,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -578,7 +581,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的性质"><span class="nav-number">1.1.</span> <span class="nav-text">算法的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索算法"><span class="nav-number">2.</span> <span class="nav-text">搜索算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性搜索"><span class="nav-number">2.1.</span> <span class="nav-text">线性搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分搜索"><span class="nav-number">2.2.</span> <span class="nav-text">二分搜索</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">3.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">3.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">3.2.</span> <span class="nav-text">插入排序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的性质"><span class="nav-number">1.1.</span> <span class="nav-text">算法的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索算法"><span class="nav-number">2.</span> <span class="nav-text">搜索算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性搜索"><span class="nav-number">2.1.</span> <span class="nav-text">线性搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分搜索"><span class="nav-number">2.2.</span> <span class="nav-text">二分搜索</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">3.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">3.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">3.2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贪心算法"><span class="nav-number">3.3.</span> <span class="nav-text">贪心算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停机问题"><span class="nav-number">3.4.</span> <span class="nav-text">停机问题</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

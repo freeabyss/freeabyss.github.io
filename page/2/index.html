@@ -276,6 +276,422 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" itemprop="url">
+                  Java8下使用wsdl2java命令报错解决方案
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-13T20:23:40+08:00" content="2016-12-13">
+              2016-12-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" class="leancloud_visitors" data-flag-title="Java8下使用wsdl2java命令报错解决方案">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>JDK:1.8<br>apache-cxf: 2.7.x</p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>使用<code>wsdl2java</code>命令生产代码时抛出如下异常：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xmlschema/bindinfo/binding.xsd; lineNumber: 52; columnNumber: 88; schema_reference: Failed to read schema document &apos;xjc.xsd&apos;, because&apos;file&apos; access is not allowed due to restriction set by the accessExternalSchema property.</div></pre></td></tr></table></figure></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将以下内容保存为<code>jaxp.properties</code>文件，然后放到<code>%JAVA_HOME%\jre\lib</code>目录下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javax.xml.accessExternalSchema = all</div></pre></td></tr></table></figure></p>
+<p>引用 <a href="http://stackoverflow.com/questions/23011547/webservice-client-generation-error-with-jdk8" target="_blank" rel="external">http://stackoverflow.com/questions/23011547/webservice-client-generation-error-with-jdk8</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/13/Math-DM-08-函数/" itemprop="url">
+                  离散数学学习笔记 函数 08
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-13T20:07:23+08:00" content="2016-12-13">
+              2016-12-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/13/Math-DM-08-函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/13/Math-DM-08-函数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/13/Math-DM-08-函数/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 函数 08">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数有很多概念，这里只介绍与离散数学相关的基本概念。 </p>
+<h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p>令$A$和$B$为非空集合，从$A$到$B$的函数$f$是对元素的一种指派，对$A$的每个元素恰好指派$B$的一个元素。如果$f$指派给$A$中元素$a$的唯一的$B$中元素是$b$，就写成$f(a)=b$。如果$f$是从$A$到$B$的函数，就写成$f:A\rightarrow B$。</p>
+<blockquote>
+<p>函数有时候也称为映射或变换</p>
+</blockquote>
+<h3 id="定义域和伴域"><a href="#定义域和伴域" class="headerlink" title="定义域和伴域"></a>定义域和伴域</h3><p>如果$f$是从$A$到$B$的函数，就说$A$是$f$的定义域，而$B$是$f$的伴域。如果$f(a)=b$就说$b$是$a$的像，而$a$是$b$的原像。$A$中元素的所有像元素的集合称为$f$的值域。若$f$是从$A$到$B$的函数，有时也说成$f$把$A$映射到$B$。</p>
+<h3 id="相加和相乘"><a href="#相加和相乘" class="headerlink" title="相加和相乘"></a>相加和相乘</h3><p>令$f_1$和$f_2$是从$A$到$B$的函数，那么$f_1+f_2$和$f_1f_2$也是从$A$到$\mathbf R$的函数，其定义为： $$(f_1+f_2)(x)=f_1(x)f_2(x)\(f_1f_2)(x)=f_1(x)f_2(x)$$。  </p>
+<h3 id="定义域子集的像"><a href="#定义域子集的像" class="headerlink" title="定义域子集的像"></a>定义域子集的像</h3><p>令$f$为$A$到$B$的函数，$S$为$A$的一个子集，$S$的像是由$S$中元素的像组成的$B$的子集。我们用$f(S)$表示$S$的像，于是 $$f(S)=\{t\mid \exists s\in S(t=f(s))\}$$,也可以简写为，$$\{f(s)\mid s\in S\}$$</p>
+<h3 id="一对一函数"><a href="#一对一函数" class="headerlink" title="一对一函数"></a>一对一函数</h3><p>函数$f$称为一对一的或单射的，当且仅当对于$f$的定义域中的所有$a$和$b$，$f(a)=f(b)$蕴含$a=b$。一对一的函数称为单射。</p>
+<blockquote>
+<p>用量词来表达$f$是一对一的，$\forall a\forall b(f(a)=f(b)\rightarrow a=b)$</p>
+</blockquote>
+<h3 id="递增递减函数"><a href="#递增递减函数" class="headerlink" title="递增递减函数"></a>递增递减函数</h3><p>定义域和伴域都是实数集子集的函数$f$称为递增的，如果对$f$的定义域中的$x$和$y$，只要$x&lt;y$就有$f(x)\le f(y)$(若对于$x&lt;y$，恒有$f(x)&lt;f(y)，则称函数$f$为严格递增)。类似的有递减和严格递减。</p>
+<blockquote>
+<p>用量词表达：$\forall x\forall y(x&lt;y\rightarrow f(x)\le f(y))</p>
+</blockquote>
+<h3 id="满射"><a href="#满射" class="headerlink" title="满射"></a>满射</h3><p>从$A$到$B$的函数称为映上或满射的，当且仅当对每个$b\in B$，有元素$a\in A$使得$f(a)=b$，如果函数$f$是映上的，就说它是满射函数。</p>
+<blockquote>
+<p>$\forall x\exists x(f(x)=y)$</p>
+<h3 id="双射"><a href="#双射" class="headerlink" title="双射"></a>双射</h3><p>若函数既是一对一的，也是映上的，就说它是一一对应或双射的。</p>
+<h3 id="反函数"><a href="#反函数" class="headerlink" title="反函数"></a>反函数</h3><p>令$f$为从$A$到$B$的一一对应函数，$f$的反函数为$f(a)=b$时,$f^{-1}(b)=a$。</p>
+<h3 id="复合函数"><a href="#复合函数" class="headerlink" title="复合函数"></a>复合函数</h3><p>令$g$为从集合$A$到集合$B$的函数，$f$是从集合$B$到集合$C$的函数，函数$f$和$g$的组合用$f·g$表示 $$(f·g)(a)=f(g(a))$$<br>如果$g$的值域不是$f$的定义域的子集，就无法定义$f·g$。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/09/Linux-清空或删除文件/" itemprop="url">
+                  Linux 清空或删除文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-09T22:35:00+08:00" content="2016-12-09">
+              2016-12-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/shell/" itemprop="url" rel="index">
+                    <span itemprop="name">shell</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/09/Linux-清空或删除文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/09/Linux-清空或删除文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/09/Linux-清空或删除文件/" class="leancloud_visitors" data-flag-title="Linux 清空或删除文件">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="使用重定向的方式清空文件"><a href="#使用重定向的方式清空文件" class="headerlink" title="使用重定向的方式清空文件"></a>使用重定向的方式清空文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt; access.log # 在Mac下没有成功</div><div class="line">: &gt; access.log # 在Mac下成功</div><div class="line">cat /dev/null &gt; access.log # 使用cat 显示/dev/null中的内容，然后重定向access.log文件中</div><div class="line">cp /dev/null access.log # 复制/dev/null 的内容到access.log文件，达到清空的目的。</div><div class="line">echo &quot; &quot; &gt; access.log #使用echo 将空白字符重定向access.log中</div><div class="line">echo &gt; access.log # 同上</div><div class="line">echo -n &gt; access.log</div></pre></td></tr></table></figure>
+<blockquote>
+<p>在Linux中，<code>null</code>设备基本上被用来丢弃某个进程不再需要的输出流，或者作为某个输入流的空白文件。</p>
+</blockquote>
+<h2 id="使用truncate"><a href="#使用truncate" class="headerlink" title="使用truncate"></a>使用<code>truncate</code></h2><p><code>truncate</code>可用来将一个文件缩小或者扩展到某个给定的大小。Mac中不存在该命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">truncate -s 0 access.log #使用-s 指定文件大小</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/08/Math-DM-07-集合/" itemprop="url">
                   离散数学学习笔记 集合 07
                 </a>
@@ -1868,6 +2284,11 @@
 <td style="text-align:left">视频播放器，可通过FTP，web等多种方式播放视频</td>
 <td style="text-align:left">iOS</td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="https://aria2.github.io/" target="_blank" rel="external">Aria2</a></td>
+<td style="text-align:left">实现百度云、迅雷离线满速下载</td>
+<td style="text-align:left">Window, Mac, iOS</td>
+</tr>
 </tbody>
 </table>
 
@@ -1998,99 +2419,7 @@
       
         
           
-            <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="常用算法"><a href="#常用算法" class="headerlink" title="常用算法"></a>常用算法</h3><h4 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h4><ul>
-<li>线性搜索或顺序搜索</li>
-<li>二分搜索：用于搜索排序后的集合</li>
-</ul>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><ul>
-<li>冒泡排序</li>
-<li>插入排序</li>
-</ul>
-<h4 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h4><p>每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列</p>
-<h3 id="函数的增长"><a href="#函数的增长" class="headerlink" title="函数的增长"></a>函数的增长</h3><p>$\mathrm O$记号用于描述$g(x)$的上限，$\Omega$用于描述$g(x)$的下限，$\Theta$用于描述$g(x)$的上下限。</p>
-<ul>
-<li>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常数$C$和$k$，使得只要$x&gt;k$，就有<br>$$<br>  \mid f(x)\mid \le C\mid g(x)\mid<br>$$我们就说$f(x)$是$\mathrm O(g(x))$    </li>
-<li>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$，使得只要$x&gt;k$，就有<br>$$<br>  \mid f(x)\mid\ge C\mid g(x)\mid<br>$$</li>
-<li>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果$f(x)$是$\mathrm O(g(x))$及$f(x)$是$\Omega (g(x))$，就说$f(x)$是$\Theta (g(x))$。</li>
-</ul>
-<h4 id="函数的组合增长"><a href="#函数的组合增长" class="headerlink" title="函数的组合增长"></a>函数的组合增长</h4><ul>
-<li>假定$f_1(x)$是$\mathrm O(g_1(x))$，$f_2(x)$是$\mathrm O(g_2(x))$，那么$(f_1+f_2)(x)$是<br>$$<br>  \mathrm O(max(\mid g_1(x)\mid , \mid g_2(x)\mid))<br>$$</li>
-<li>假定$f_1(x)$是$\mathrm O(g_1(x))$，$f_2(x)$是$\mathrm O(g_2(x))$，那么$(f_1 f_2)(x)$是$\mathrm O(g_1(x)g_2(x))$</li>
-</ul>
-<h3 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">复杂度</th>
-<th style="text-align:left">术语</th>
-<th style="text-align:left">复杂度</th>
-<th style="text-align:left">术语</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$\Theta (1)$</td>
-<td style="text-align:left">常数复杂度</td>
-<td style="text-align:left">$\Theta (n^b)$</td>
-<td style="text-align:left">多项式复杂度</td>
-</tr>
-<tr>
-<td style="text-align:left">$\Theta (logn)$</td>
-<td style="text-align:left">对数复杂度</td>
-<td style="text-align:left">$\Theta (b^n),b&gt;1$</td>
-<td style="text-align:left">指数复杂度</td>
-</tr>
-<tr>
-<td style="text-align:left">$\Theta (n)$</td>
-<td style="text-align:left">线性复杂度</td>
-<td style="text-align:left">$\Theta (n!)$</td>
-<td style="text-align:left">阶乘复杂度</td>
-</tr>
-<tr>
-<td style="text-align:left">$\Theta (nlogn)$</td>
-<td style="text-align:left">$nlogn$复杂度</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>一般来讲，能用多项式复杂度的算法解决的问题都是易解的，反之是难解的。   </li>
-<li>能用多项式时间验证解的问题属于NP类，易解的问题属于P类。</li>
-<li>NP完全问题，这类问题的性质是，只要其中任何一个问题能用一个多项式时间最坏情形算法来解答，那么所有这些问题都能用多项式时间最坏情形算法解答。</li>
-</ul>
-<h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><ul>
-<li>如果$a$和$b$是整数，$a\neq 0$，若有整数$c$使$b=ac$，就说$a$整除$b$。在$a$整除$b$时，$a$是$b$的一个因子，$b$是$a$的倍数，符号$a\mid b$表示$a$整除$b$。当$a$不能整除$b$时写成$a∤b$</li>
-<li>$a\mid b$也可以表示成$\exists c(ac=b)$，论域是整个整数集合。</li>
-<li>令$a$，$b$，$c$为整数。则<ul>
-<li>若$a\mid b$和$a\mid c$，则$a\mid (b+c)$；</li>
-<li>若$a\mid b$和$a\mid c$，则$a\mid mb+nc$，其中$m$和$n$为整数；</li>
-<li>若$a\mid b$，那么对所有整数$c$都有$a\mid bc$；</li>
-<li>若$a\mid b$，$b\mid c$，则$a\mid c$；</li>
-</ul>
-</li>
-</ul>
-<h3 id="同余"><a href="#同余" class="headerlink" title="同余"></a>同余</h3><ul>
-<li>带余除法：令$a$为整数，$d$为正整数，有唯一的整数$q$和$r$，并且$0\le rlt d$，满足$a=dq+r$。</li>
-<li>若$a$和$b$为整数而$m$为正整数，如果$m$整除$a-b$，就说$a$模m同余$b$。用$a\equiv b\pmod m$。也就是说$a\equiv b\pmod m$当且仅当$a \mod m=b\mod m$</li>
-<li>令$m$为正整数，整数$a$和$b$模$m$同余的充分必要条件是存在整数$k$，使$a=b+km$</li>
-<li>整数$a$模$m$所有整数同余的集合称为$a$模$m$的同余类</li>
-<li>令$m$为正整数。若$a\equiv b\pmod m$，$c\equiv d\pmod m$，那么<br>$$<br>  a+c\equiv b+d\pmod m\\<br>  ac\equiv bd\pmod m<br>$$</li>
-<li>令$m$是正整数，$a$和$b$是整数，则有<br>$$<br>  (a+b)\mod m = ((a\mod m)+(b\mod m))\mod m\\<br>  ab\mod m = ((a\mod m)(b\mod m))mod m<br>$$</li>
-<li>根据$\mod m$和关于模$m$同余的定义，可得$a\equiv (a\mod m)(\mod m)$，并且$b\equiv (b\mod m)(\mod m)$，因此<br>$$<br>  a+b\equiv (a\mod m)+(b\mod m)(\mod m)\\<br>  ab\equiv (a\mod m)(b\mod m)(\mod m)<br>$$</li>
-</ul>
-<h3 id="同余应用"><a href="#同余应用" class="headerlink" title="同余应用"></a>同余应用</h3><ul>
-<li>散列函数</li>
-<li>伪随机数</li>
-</ul>
-<blockquote>
-<p>最常用的产生伪随机数的过程称为线性同余。选择4个数：模数$m$，乘数$a$，增量$c$和种子$x_0$，使得$2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列$\{x_n\}$，使得对所有$n$，$0\le x_n \lt m$。生成的办法是逐次同余：<br>$$<br>x_{n+1} = (ax_n +c)\mod m<br>$$</p>
-</blockquote>
-<ul>
-<li>密码学</li>
-</ul>
-<blockquote>
-<p>凯撒密码：<br>$$<br>  f(p)=(p+k)\mod 26\\<br>  f(p)=(ap+b)\mod 26<br>$$</p>
-</blockquote>
-<h3 id="素数和最大公约数"><a href="#素数和最大公约数" class="headerlink" title="素数和最大公约数"></a>素数和最大公约数</h3><ul>
+            <h3 id="素数和最大公约数"><a href="#素数和最大公约数" class="headerlink" title="素数和最大公约数"></a>素数和最大公约数</h3><ul>
 <li>每个大于1的正整数都可以唯一写为素数的乘积。对大整数进行素因子分解所需的时限在密码学中起着重要的作用。</li>
 <li>如果$n$是个合数，那么$n$必有小于或等于$\sqrt n$的一个素因子。</li>
 <li>梅森素数，是形如$2^p-1$这样的整数。目前已知最大的素数都是这种形式，可用卢卡斯－莱莫尔(Lucas-Lehmer)检验的方法判断$2^p-1$是否为素数。</li>
@@ -4044,530 +4373,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="url">
-                  行列式－《线性代数及应用》
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-08T20:44:04+08:00" content="2016-09-08">
-              2016-09-08
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/08/Math-行列式－《线性代数及应用》/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/08/Math-行列式－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="行列式－《线性代数及应用》">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
-</blockquote>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>当$n\ge 2$时，$n\times n$矩阵$A=[a_{ij}]$的行列式是形如$\pm a_{1j}detA_{1j}$的$n$个项的和，其中加号和减号交替出现，这里元素$a_{11},a_{12},\cdots,a_{1n}$来自$A$的第一行，即<br>$$<br>    detA=a_{11}\cdot detA_{11}-a_{12}\cdot detA_{12}+\cdots+(-1)^{1+n}a_{1n}\cdot detA_{1n} \\<br>    = \sum_{j=1}^n (-1)^{1+j}a_{1j}detA_{1j}<br>$$<br>其中，$A_{ij}$表示通过划去$A$中第$i$行和第$j$列而得到的子矩阵。</p>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><h3 id="行列式函数"><a href="#行列式函数" class="headerlink" title="行列式函数"></a>行列式函数</h3><p>若$A$为$n\times n$矩阵，我们可以将$detA$看作$A$中$n$个列向量的函数。如果将$A$其中一列作为可变列，则$detA$可作为可变列向量的线性函数。<br>$$<br>    A=[\mathbf a_1 \cdots \mathbf a_{j-1} \mathbf x  \mathbf a_{j+1} \cdots \mathbf a_n]<br>$$<br>定义由$R^n$到$R$的变化T为<br>$$<br>    T(\mathbf x) = det[[\mathbf a_1 \cdots \mathbf a_{j-1} \mathbf x \mathbf a_{j+1} \cdots \mathbf a_n]]<br>$$<br>则有有以下性质<br>$$<br>    T(c\mathbf x) = cT(\mathbf x), 对任意常数c和R^n中的任意\mathbf x成立 \\<br>    T(\mathbf u+\mathbf v)=T(\mathbf u)+T(\mathbf v), 对R^n中所有\mathbf u,\mathbf v成立<br>$$</p>
-<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><ol>
-<li>$n\times n$矩阵$A$的行列式可按任意行或列的余因子展开式来计算。<br>按第$i$行展开<br>$$<br> C_{ij} = (-1)^{i+j}detA_{ij} \\<br> detA = a_{i1}C_{i1}+a_{i2}C_{i2}+\cdots+a_{in}C_{in}<br>$$<br>按第$j$列展开<br>$$<br> C_{ij} = (-1)^{i+j}detA_{ij} \\<br> detA = a_{1j}C_{1j}+a_{2j}C_{2j}+\cdots+a_{nj}C_{nj}<br>$$</li>
-<li>若$A$为三角阵，则$detA$等于$A$的主对角线上元素的乘积</li>
-<li>行变换，令$A$是一个方阵<ul>
-<li>若$A$的某一行的倍数加到另一行得矩阵$B$，则$detB=detA$</li>
-<li>若$A$的两行互换得矩阵$B$，则$detB=-detA$</li>
-<li>若$A$的某行乘以$k$倍得到矩阵$B$，则$detB=k\cdot detA$</li>
-</ul>
-</li>
-<li>方阵$A$是可逆的当且仅当$detA\neq 0$</li>
-<li>若$A$为一个$n\times n$矩阵，则$detA^T = detA$</li>
-<li>若$A$和$B$均为$n\times n$矩阵，则$detAB = (detA)(detB)$</li>
-<li>克拉默法则，设$A$是一个可逆的$n\times n$矩阵，对$R^n$中任意向量$\mathbf b$，方程$A\mathbf x=\mathbf b$的唯一解可由下式给出，其中$detA_i(\mathbf b)$表示$A$中第$i$列由向量$\mathbf b$替换得到的矩阵<br>$$<br> x_i = {detA_i(\mathbf b)\over {detA}}, i=1,2,\cdots,n<br>$$</li>
-<li>逆矩阵公式， 设$A$是一个可逆的$n\times n$矩阵，则$A^{-1}={1\over detA}adjA$</li>
-<li>若$A$是一个$2\times 2$矩阵，则由$A$的列确定的平行四边形的面积为$|detA|$，若$A$是一个$3\times 3$矩阵，则由$A$列确定的平行六面体的体积为$|detA|$</li>
-<li>设$T:R^2\to R^2$是由一个$2\times 2$矩阵$A$确定的线性变换，若$S$是$R^2$中一个平行四边形，则<br>$$<br>\{T(S)的面积\}=|detA|\cdot\{S的面积\}<br>$$<br>若$T$是一个由$3\times 3$矩阵$A$确定的线性变换，而$S$是$R^3$中的一个平行六面体，则<br>$$<br>\{T(S)的体积\}=|detA|\cdot \{S的体积\}<br>$$</li>
-</ol>
-<h2 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h2><h3 id="adjA-可逆"><a href="#adjA-可逆" class="headerlink" title="$adjA$可逆"></a>$adjA$可逆</h3><p>若$A$可逆，则$adjA$也可逆，且$(adjA)^{-1}={1\over detA}A$<br>$$<br>    A^{-1} = {1\over detA}adjA \\<br>    adjA = (detA)A^{-1} \\<br>    adjA(adjA)^{-1} = I \\<br>    adjA \cdot {1\over detA}A = I \\<br>    (detA)A^{-1} \cdot {1\over detA}A = I \\<br>    A^{-1}A = I<br>$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/04/Math-矩阵代数－《线性代数及应用》/" itemprop="url">
-                  矩阵代数－《线性代数及应用》
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-04T16:27:24+08:00" content="2016-09-04">
-              2016-09-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/04/Math-矩阵代数－《线性代数及应用》/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/04/Math-矩阵代数－《线性代数及应用》/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/04/Math-矩阵代数－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="矩阵代数－《线性代数及应用》">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
-</blockquote>
-<h2 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h2><h3 id="与标量相乘"><a href="#与标量相乘" class="headerlink" title="与标量相乘"></a>与标量相乘</h3><p>$A,B,C$是维数相同的矩阵，$r,s$为实数   </p>
-<ul>
-<li>$A+B=B+A$</li>
-<li>$(A+B)+C=A+(B+C)$</li>
-<li>$A+0=A$</li>
-<li>$r(A+B)=rA+rB$</li>
-<li>$(r+s)A=rA+sA$</li>
-<li>$r(sA)=(rs)A$</li>
-</ul>
-<h3 id="矩阵相乘"><a href="#矩阵相乘" class="headerlink" title="矩阵相乘"></a>矩阵相乘</h3><ul>
-<li>$A(BC)=(AB)C$</li>
-<li>$A(B+C)=AB+AC$</li>
-<li>$(B+C)A=BA+CA$</li>
-<li>$r(AB)=(rA)B=A(rB)$</li>
-<li>$I_mA=A=AI_n$</li>
-</ul>
-<h3 id="矩阵的乘幂"><a href="#矩阵的乘幂" class="headerlink" title="矩阵的乘幂"></a>矩阵的乘幂</h3><p>$A^k$表示$k$个$A$的乘积，$A^k\mathbf x$表示$\mathbf x$被A连续左乘$k$次。$A^0$解释为单位矩阵。</p>
-<h2 id="矩阵的性质"><a href="#矩阵的性质" class="headerlink" title="矩阵的性质"></a>矩阵的性质</h2><h3 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h3><p>若$A$为$m\times n$矩阵，则$A^T$为$n\times m$矩阵，它的列由$A$对应的行组成。</p>
-<ul>
-<li>$(A^T)^T=A$</li>
-<li>$(A+B)^T=A^T+B^T$</li>
-<li>$(rA)^T=rA^T$</li>
-<li>$(AB)^T=B^TA^T$</li>
-</ul>
-<h3 id="矩阵的逆"><a href="#矩阵的逆" class="headerlink" title="矩阵的逆"></a>矩阵的逆</h3><p>对于一个$n\times n$矩阵A,若存在一个$n\times n$矩阵C使<br>$$<br>    AC=I 且CA=I<br>$$<br>$I$为$n\times n$的单位矩阵，$C$是$A$的逆阵，记为$A^{-1}$，于是<br>$$<br>    AA^{-1}=I 且 A^{-1}A=I<br>$$<br>不可逆矩阵称为奇异矩阵，可逆矩阵称为非奇异矩阵</p>
-<h4 id="求-A-1-的算法"><a href="#求-A-1-的算法" class="headerlink" title="求$A^{-1}$的算法"></a>求$A^{-1}$的算法</h4><p>把增广矩阵$[A I]$进行行化简，若$A$行等价于$I$，则$[A I]$行等价于$[I A^{-1}]$，否则$A$没有逆。</p>
-<h4 id="可逆矩阵的性质"><a href="#可逆矩阵的性质" class="headerlink" title="可逆矩阵的性质"></a>可逆矩阵的性质</h4><p>参见下面的定理8</p>
-<h3 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h3><p>矩阵的维数太多时，可以将矩阵进行分割，每一块是一个子矩阵。</p>
-<h4 id="分块矩阵的乘法"><a href="#分块矩阵的乘法" class="headerlink" title="分块矩阵的乘法"></a>分块矩阵的乘法</h4><p>$$<br>    A=<br>    \left[<br>    \begin{array}{ccc|cc}<br>    2 &amp; -3 &amp; 1 &amp; 0 &amp; 4\\<br>    \hline<br>    1 &amp; 5 &amp; -2 &amp; 3 &amp; -1\\<br>    0 &amp; -4 &amp; -2 &amp; 7 &amp; -1\\<br>    \end{array}<br>    \right]<br>    =<br>    \begin{bmatrix}<br>    A_{11} &amp; A_{12}\\<br>    A_{21} &amp; A_{22}\\<br>    \end{bmatrix} \\<br>    B=<br>    \begin{bmatrix}<br>    6 &amp; 4\\<br>    -2 &amp; 1\\<br>    -3 &amp; 7\\<br>    \hline<br>    -1 &amp; 3\\<br>    5 &amp; 2\\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    B_1 \\<br>    B_2 \\<br>    \end{bmatrix} \\<br>    AB=<br>    \begin{bmatrix}<br>    A_{11} &amp; A_{12}\\<br>    A_{21} &amp; A_{22}\\<br>    \end{bmatrix}<br>    \begin{bmatrix}<br>    B_1 \\<br>    B_2 \\<br>    \end{bmatrix}<br>    =<br>     \begin{bmatrix}<br>    A_{11}B_1 + A_{12}B_2 \\<br>    A_{21}B_1 + A_{22}B_2 \\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    -5 &amp; 4 \\<br>    -6 &amp; 2 \\<br>    \hline<br>    2 &amp; 1<br>    \end{bmatrix}<br>$$</p>
-<h2 id="矩阵因式分解"><a href="#矩阵因式分解" class="headerlink" title="矩阵因式分解"></a>矩阵因式分解</h2><p>矩阵的乘法是将多个矩阵结合成一个矩阵，而矩阵的因式分解是将一个矩阵分成多个矩阵</p>
-<h3 id="LU分解"><a href="#LU分解" class="headerlink" title="LU分解"></a>LU分解</h3><p>LU分解一般用于解一系列具有相同系数矩阵的线性方程，例如<br>$$<br>    A\mathbf x=b_1, A\mathbf x=b_2,\cdots ,A\mathbf x=b_n<br>$$</p>
-<h4 id="LU分解算法"><a href="#LU分解算法" class="headerlink" title="LU分解算法"></a>LU分解算法</h4><p>设$A$可以化为阶梯形$U$，化简过程仅使用行倍加变换，这样存在单位下三角初等矩阵$E_1,\cdots,E_p$，使得<br>$$<br>    E_p,\cdots,E_1A=U \\<br>    A=(E_p,\cdots,E_1)^{-1}U=LU  \\<br>    L=(E_p,\cdots,E_1)^{-1  }<br>$$</p>
-<h2 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h2><h3 id="上三角矩阵"><a href="#上三角矩阵" class="headerlink" title="上三角矩阵"></a>上三角矩阵</h3><p>$m\times n$矩阵的主对角线以下元素全为0，该矩阵是可逆的。</p>
-<h3 id="下三角矩阵"><a href="#下三角矩阵" class="headerlink" title="下三角矩阵"></a>下三角矩阵</h3><p>$m\times n$矩阵的主对角线以上元素全为0，该矩阵是可逆的。</p>
-<h3 id="分块对角矩阵"><a href="#分块对角矩阵" class="headerlink" title="分块对角矩阵"></a>分块对角矩阵</h3><p>分块对角矩阵是一个分块矩阵，除了主对角线上各分块之外，其余全是零分块，当且仅当主对角线上各分块都是可逆时，该矩阵是可逆的。</p>
-<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>1.$A,B,C$是维数相同的矩阵，$r,s$为实数</p>
-<blockquote>
-<ul>
-<li>$A+B=B+A$</li>
-<li>$(A+B)+C=A+(B+C)$</li>
-<li>$A+0=A$</li>
-<li>$r(A+B)=rA+rB$</li>
-<li>$(r+s)A=rA+sA$</li>
-<li>$r(sA)=(rs)A$</li>
-</ul>
-</blockquote>
-<p>2.设$A$为$m\times n$矩阵，$B C$的维数使下列各式有定义</p>
-<blockquote>
-<ul>
-<li>$A(BC)=(AB)C$</li>
-<li>$A(B+C)=AB+AC$</li>
-<li>$(B+C)A=BA+CA$</li>
-<li>$r(AB)=(rA)B=A(rB)$</li>
-<li>$I_mA=A=AI_n$</li>
-</ul>
-</blockquote>
-<p>3.设$A$表示为矩阵，其维数使下列各式有定义</p>
-<blockquote>
-<ul>
-<li>$(A^T)^T=A$</li>
-<li>$(A+B)^T=A^T+B^T$</li>
-<li>$(rA)^T=rA^T$</li>
-<li>$(AB)^T=B^TA^T$</li>
-</ul>
-</blockquote>
-<p>4.设$A=\begin{bmatrix} a &amp; b\\ c &amp; d\\ \end{bmatrix}$,若$ad-bc\neq 0$，则$A$可逆，且<br>$$<br>    A^{-1}={1\over{ad-bc}} \begin{bmatrix} d &amp; -b\\ -c &amp; a\\ \end{bmatrix}<br>$$</p>
-<p>5.若$A$是可逆$n\times n$矩阵，则对每一个$R^n$中的$\mathbf b$，方程$A\mathbf x=\mathbf b$有唯一解$\mathbf x=A^{-1}\mathbf b$<br>6.若$A,B$为可逆矩阵，则</p>
-<blockquote>
-<ul>
-<li>$(A^{-1})^{-1}=A$</li>
-<li>$(AB)^{-1}=B^{-1}A^{-1}$</li>
-<li>$(A^T)^{-1}=(A^{-1})^T$</li>
-</ul>
-</blockquote>
-<p>7.$n\times n$矩阵$A$是可逆的，当且仅当$A$行等价于$I_n$，这时，把$A$变为$I_n$的一系列初等行变化同时把$I_n$变成$A^[-1]$</p>
-<p>8.可逆矩阵定理<br>设$A$为$n\times n$矩阵，则下列命题是等价的，即对某一特定的$A$，它们同时为真或同时为假</p>
-<blockquote>
-<ul>
-<li>$A$是可逆矩阵</li>
-<li>$A$等价于$n\times n$单位矩阵</li>
-<li>$A$有$n$个主元位置</li>
-<li>方程$A\mathbf x=0$仅有平凡解</li>
-<li>$A$的各列线性无关</li>
-<li>线性变换$\mathbf x\mapsto A\mathbf x$是一对一的</li>
-<li>对$R^n$中任意$\mathbf b$，方程$A\mathbf x=\mathbf b$至少有一个解</li>
-<li>$A$的各列生成$R^n$</li>
-<li>线性变换$\mathbf x\mapsto A\mathbf x$把$R^n$映射到$R^n$上</li>
-<li>存在$n\times n$矩阵$C,D$，使$CA=I, AD=I$</li>
-<li>$A^T$是可逆矩阵</li>
-</ul>
-</blockquote>
-<p>9.设$T:R^n \to R^n$为线性变换，$A$为$T$的标准矩阵，则$T$可逆当且仅当$A$是可逆矩阵，这时由$S(\mathbf x)=A^{-1}\mathbf x$定义的线性变换$S$是满足以下函数的唯一函数<br>$$<br>    对所有R^n中的\mathbf x, S(T(\mathbf x))=\mathbf x \\<br>    对所有R^n中的\mathbf x, T(S(\mathbf x))=\mathbf x \\<br>$$<br>10.若$A$是$m\times n$矩阵，$B$是$n\times p$矩阵，$col_k(A)$代表$A$的第$k$列，$row_k(B)$代表$B$的第$k$行，则<br>$$<br>    AB = [col_1(A) col_2(A) \cdots col_n(A)]<br>    \begin{bmatrix}<br>    row_1(B)\\<br>    row_2(B)\\<br>    \vdots\\<br>    row_n(B)\\<br>    \end{bmatrix}\\<br>    =col_1(A)row_1(B)+\cdots+col_n(A)col_n(B)<br>$$<br>11.列昂惕夫投入产出模型：设$C$为某一经济的消耗矩阵，$d$为最终需求，若$C$和$d$的元素非负，$C$的每一列的和小于1，则$(I-C)^{-1}$存在，而产出向量<br>$$<br>    \mathbf x= (I-C)^{-1}\mathbf d<br>$$<br>有非负元素，且是下列方程的唯一解<br>$$<br>    \mathbf x = C\mathbf x + \mathbf d<br>$$</p>
-<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><h3 id="分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的"><a href="#分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的" class="headerlink" title="分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的"></a>分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的</h3><p>$$<br>    AA^{-1}=<br>    \begin{bmatrix}<br>    A_{11} &amp; 0\\<br>    0 &amp; A_{22} \\<br>    \end{bmatrix}<br>    \begin{bmatrix}<br>    B_{11} &amp; B_{12} \\<br>    B_{21} &amp; B_{22} \\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    I_q &amp; 0 \\<br>    0 &amp; I_p \\<br>    \end{bmatrix} \\<br>    A_{11}B_{11}=I_q, A_{11}B_{12}=0 \\<br>    A_{22}B_{21}=0, A_{22}B_{22}=I_p \\<br>    B_{11} = A_{11}^{-1}, B_{12}=0 \\<br>    B_{22} = A_{22}^{-1}, B_{21}=0 \\<br>    A^{-1}=<br>     \begin{bmatrix}<br>    B_{11} &amp; B_{12} \\<br>    B_{21} &amp; B_{22} \\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    A_{11}^{-1} &amp; 0 \\<br>    0 &amp; A_{22}^{-1} \\<br>    \end{bmatrix}<br>$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/03/开源项目推荐/" itemprop="url">
-                  开源项目推荐
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-03T23:46:12+08:00" content="2016-09-03">
-              2016-09-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/资源/" itemprop="url" rel="index">
-                    <span itemprop="name">资源</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/03/开源项目推荐/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/开源项目推荐/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/03/开源项目推荐/" class="leancloud_visitors" data-flag-title="开源项目推荐">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="C-开源项目"><a href="#C-开源项目" class="headerlink" title="C 开源项目"></a>C 开源项目</h2><h3 id="Webbench"><a href="#Webbench" class="headerlink" title="Webbench"></a><a href="http://home.tiscali.cz/~cz210552/webbench.html" target="_blank" rel="external">Webbench</a></h3><p>Webbench 是一个在 linux 下使用的非常简单的网站压测工具。它使用 fork() 模拟多个客户端同时访问我们设定的 URL，测试网站在压力下工作的性能，最多可以模拟 3 万个并发连接去测试网站的负载能力。Webbench 使用 C 语言编写, 代码实在太简洁，源码加起来不到 600 行。</p>
-<h3 id="Tinyhttpd"><a href="#Tinyhttpd" class="headerlink" title="Tinyhttpd"></a><a href="http://sourceforge.net/projects/tinyhttpd/" target="_blank" rel="external">Tinyhttpd</a></h3><p>tinyhttpd 是一个超轻量型 Http Server，使用 C 语言开发，全部代码只有 502 行 (包括注释)，附带一个简单的 Client，可以通过阅读这段代码理解一个 Http Server 的本质。<br>下载链接：Tiny HTTPd | SourceForge.net</p>
-<h3 id="cJSON"><a href="#cJSON" class="headerlink" title="cJSON"></a><a href="https://sourceforge.net/projects/cjson/" target="_blank" rel="external">cJSON</a></h3><p>cJSON 是 C 语言中的一个 JSON 编解码器，非常轻量级，C 文件只有 500 多行，速度也非常理想。<br>cJSON 也存在几个弱点，虽然功能不是非常强大，但 cJSON 的小身板和速度是最值得赞赏的。其代码被非常好地维护着，结构也简单易懂，可以作为一个非常好的 C 语言项目进行学习。 </p>
-<h3 id="CMockery"><a href="#CMockery" class="headerlink" title="CMockery"></a><a href="http://code.google.com/p/cmockery/downloads/list" target="_blank" rel="external">CMockery</a></h3><p>cmockery 是 google 发布的用于 C单元测试的一个轻量级的框架。它很小巧，对其他开源包没有依赖，对被测试代码侵入性小。cmockery 的源代码行数不到 3K，你阅读一下 will_return 和 mock 的源代码就一目了然了。<br>主要特点：    </p>
-<ul>
-<li>免费且开源，google 提供技术支持；</li>
-<li>轻量级的框架，使测试更加快速简单；</li>
-<li>避免使用复杂的编译器特性，对老版本的编译器来讲，兼容性好;</li>
-<li>并不强制要求待测代码必须依赖 C99 标准，这一特性对许多嵌入式系统的开发很有用</li>
-</ul>
-<h3 id="Libev"><a href="#Libev" class="headerlink" title="Libev"></a><a href="http://software.schmorp.de/pkg/libev.html" target="_blank" rel="external">Libev</a></h3><p>libev 是一个开源的事件驱动库，基于 epoll，kqueue 等 OS 提供的基础设施。其以高效出名，它可以将 IO 事件，定时器，和信号统一起来，统一放在事件处理这一套框架下处理。基于 Reactor 模式，效率较高，并且代码精简（4.15 版本 8000 多行），是学习事件驱动编程的很好的资源。</p>
-<h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a><a href="http://memcached.org/" target="_blank" rel="external">Memcached</a></h3><p>Memcached 是一个高性能的分布式内存对象缓存系统，用于动态 Web 应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提供动态数据库驱动网站的速度。Memcached 基于一个存储键/值对的 hashmap。Memcached-1.4.7 的代码量还是可以接受的，只有 10K 行左右。</p>
-<h3 id="Lua"><a href="#Lua" class="headerlink" title="Lua"></a><a href="http://www.lua.org/" target="_blank" rel="external">Lua</a></h3><p>Lua 的源代码，百分之一百的 ANSI C，一点都不掺杂。在任何支持 ANSI C 编译器的平台上都可以轻松编译通过。Lua 的代码数量足够小，5.1.4 仅仅 1.5W 行，去掉空白行和注释估计能到 1W 行。</p>
-<h3 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a><a href="http://www.sqlite.org/" target="_blank" rel="external">SQLite</a></h3><p>SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的 SQL 数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。足够小，大致 3 万行 C 代码，250K。</p>
-<h3 id="UNIX-v6"><a href="#UNIX-v6" class="headerlink" title="UNIX v6"></a><a href="http://minnie.tuhs.org/cgi-bin/utree.pl?file=V6" target="_blank" rel="external">UNIX v6</a></h3><p>UNIX V6 的内核源代码包括设备驱动程序在内约有1万行，这个数量的源代码，初学者是能够充分理解的。有一种说法是一个人所能理解的代码量上限为 1 万行，UNIX V6的内核源代码从数量上看正好在这个范围之内。<br>另一方面，最近的操作系统，例如 Linux 最新版的内核源代码据说超过了 1000 万行。就算不是初学者，想完全理解全部代码基本上也是不可能的。</p>
-<h3 id="NETBSD"><a href="#NETBSD" class="headerlink" title="NETBSD"></a><a href="http://www.netbsd.org/" target="_blank" rel="external">NETBSD</a></h3><p>NetBSD 是一个免费的，具有高度移植性的UNIX-like操作系统，是现行可移植平台最多的操作系统，可以在许多平台上执行，从 64bit alpha 服务器到手持设备和嵌入式设备。NetBSD 计划的口号是：”Of course it runs NetBSD”。它设计简洁，代码规范，拥有众多先进特性，使得它在业界和学术界广受好评。由于简洁的设计和先进的特征，使得它在生产和研究方面，都有卓越的表现，而且它也有受使用者支持的完整的源代码。许多程序都可以很容易地通过 NetBSD Packages Collection 获得。</p>
-<h2 id="Java-开源项目"><a href="#Java-开源项目" class="headerlink" title="Java 开源项目"></a>Java 开源项目</h2><h3 id="爬虫项目"><a href="#爬虫项目" class="headerlink" title="爬虫项目"></a>爬虫项目</h3><h4 id="nutch"><a href="#nutch" class="headerlink" title="nutch"></a><a href="https://github.com/apache/nutch" target="_blank" rel="external">nutch</a></h4><p>apache 下的开源爬虫程序，功能丰富，文档完整。有数据抓取解析以及存储的模块。</p>
-<h3 id="Heritrix"><a href="#Heritrix" class="headerlink" title="Heritrix"></a><a href="https://github.com/internetarchive/heritrix3" target="_blank" rel="external">Heritrix</a></h3><p>很早就有了，经历过很多次更新，使用的人比较多，功能齐全，文档完整，网上的资料也多。有自己的 web 管理控制台，包含了一个 HTTP 服务器。操作者可以通过选择 Crawler 命令来操作控制台。</p>
-<h3 id="crawler4j"><a href="#crawler4j" class="headerlink" title="crawler4j"></a><a href="https://github.com/yasserg/crawler4j" target="_blank" rel="external">crawler4j</a></h3><p>因为只拥有爬虫的核心功能，所以上手极为简单，几分钟就可以写一个多线程爬虫程序。</p>
-<h3 id="webmagic"><a href="#webmagic" class="headerlink" title="webmagic"></a><a href="https://github.com/code4craft/webmagic" target="_blank" rel="external">webmagic</a></h3><p>国人黄亿华先生的良心大作</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="aosabook"><a href="#aosabook" class="headerlink" title="aosabook"></a><a href="https://github.com/aosabook/500lines" target="_blank" rel="external">aosabook</a></h3><p>这是一本牛书 aosabook 的续集 500 Lines or Less 的源码。里面每一章的代码不超过 500 行，实现了 web 服务器、爬虫、OCR等等“大型系统”，每一章由不同领域的大牛完成。看看作者列表，可以说是软件领域的名人堂。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -4613,7 +4418,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-count">49</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

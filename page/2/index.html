@@ -2602,159 +2602,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/05/Math-算法-整数－矩阵/" itemprop="url">
-                  算法-整数－矩阵
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-05T10:36:08+08:00" content="2016-10-05">
-              2016-10-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/05/Math-算法-整数－矩阵/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/05/Math-算法-整数－矩阵/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/05/Math-算法-整数－矩阵/" class="leancloud_visitors" data-flag-title="算法-整数－矩阵">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="素数和最大公约数"><a href="#素数和最大公约数" class="headerlink" title="素数和最大公约数"></a>素数和最大公约数</h3><ul>
-<li>每个大于1的正整数都可以唯一写为素数的乘积。对大整数进行素因子分解所需的时限在密码学中起着重要的作用。</li>
-<li>如果$n$是个合数，那么$n$必有小于或等于$\sqrt n$的一个素因子。</li>
-<li>梅森素数，是形如$2^p-1$这样的整数。目前已知最大的素数都是这种形式，可用卢卡斯－莱莫尔(Lucas-Lehmer)检验的方法判断$2^p-1$是否为素数。</li>
-<li>素数定理：当$x$无限增长时，不超过$x$的素数个数与$x/Inx$之比趋于1。</li>
-<li>令$a$和$b$是不全为$0$的两个整数。能使$d\mid a$和$d\mid b$的最大整数$d$称为$a$和$b$的最大公约数。$a$和$b$的_最大公约数_用$gcd(a, b)$表示。</li>
-<li>如果整数$a$和$b$的最大公约数是$1$，就说它们是互素的。</li>
-<li>整数$a_1,a_2,\cdots,a_n$是两两互素的，如果只要$1\le i\lt j\le n$，就有$gcd(a_i, b_j)=1$</li>
-<li>正整数$a$和$b$的_最小公倍数_是能被$a$和$b$整除的最小正整数。$a$和$b$的最小公倍数用$lcm(a, b)$表示。</li>
-<li>令$a$和$b$为正整数，则$ab = gcd(a, b)\cdot lcm(a, b)$</li>
-</ul>
-<h4 id="求最大公约数算法"><a href="#求最大公约数算法" class="headerlink" title="求最大公约数算法"></a>求最大公约数算法</h4><ul>
-<li>假定两个不全为$0$的整数$a$和$b$的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出<br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br>例如，求$120$和$500$的最大公约数：<br>$$<br>  120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\\<br>  gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\\<br>  = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</li>
-<li>另一个求最大公约数的算法就是欧几里得算法。</li>
-<li>令$a=bq+r$，其中$a,b,c,q$均为整数，则$gcd(a, b)＝gcd(b,r)$。</li>
-</ul>
-<h4 id="求最小公倍数算法"><a href="#求最小公倍数算法" class="headerlink" title="求最小公倍数算法"></a>求最小公倍数算法</h4><p>同最大公约数算法类似，最小公倍数的由以下公式给出：<br>$$<br>lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}<br>$$</p>
-<h3 id="整数和进制"><a href="#整数和进制" class="headerlink" title="整数和进制"></a>整数和进制</h3><p>令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：<br>$$<br>    n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0<br>$$<br>其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。</p>
-<h3 id="数论应用"><a href="#数论应用" class="headerlink" title="数论应用"></a>数论应用</h3><p>*$a$和$b$为正整数，则存在整数$s$和$t$，使得为$gcd(a,b)=sa+tb$。</p>
-<ul>
-<li>如果$a,b,c$为正整数，使得$gcd(a, b)=1$且$a\mid bc$，那么$a\mid c$。</li>
-<li>如果$p$是素数，且$p\mid a_1a_2\cdots a_n$，其中$a_j$为整数，则对某个$i$，$p\mid a_i$</li>
-<li>令$m$为正整数，$a,b,c$为整数，如果$ac\equiv bc\pmod m$且$gcd(c, m)=1$，那么$a\equiv b\pmod m$</li>
-<li></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="url">
                   Sublime Text之OmniMarkupPreviewer
                 </a>
@@ -4279,6 +4126,141 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/11/Math-直线与方程/" itemprop="url">
+                  直线与方程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-11T19:56:42+08:00" content="2016-09-11">
+              2016-09-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/11/Math-直线与方程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/Math-直线与方程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/11/Math-直线与方程/" class="leancloud_visitors" data-flag-title="直线与方程">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="直线的斜率"><a href="#直线的斜率" class="headerlink" title="直线的斜率"></a>直线的斜率</h3><p>设点$P(x_1, y_1)$和$P(x_2, y_2)$是非垂直直线$L$上的两个点。$L$的斜率为<br>$$<br>    m = {\Delta y\over \Delta x} = {y_2 - y_1\over x_2 - x_1}<br>$$<br>垂直于$x$轴的直线没有斜率。<br>互相垂直的直线斜率互为<em>负倒数</em>。</p>
+<h3 id="点斜式方程"><a href="#点斜式方程" class="headerlink" title="点斜式方程"></a>点斜式方程</h3><p>设直线过点$(x_1, y_1)$，且斜率为$m$，则方程表示为<br>$$<br>    y = m(x - x_1) + y_1<br>$$</p>
+<h3 id="斜截距方程"><a href="#斜截距方程" class="headerlink" title="斜截距方程"></a>斜截距方程</h3><p>设直线与$y$轴交与点$(0, b)$，则方程还可以写成下列形式<br>$$<br>    y = mx + b<br>$$</p>
+<h3 id="两点式方程"><a href="#两点式方程" class="headerlink" title="两点式方程"></a>两点式方程</h3><p>设直线过两点$P_1(x_1, y_1)$，$P_2(x_2, y_2)$，将$m = {y_2 - y_1\over x_2 - x_1}$代入点斜式方程得<br>$$<br>    {y-y_1\over y_2-y_1} = {x-x_1\over x_2-x_1}<br>$$</p>
+<h3 id="截距式方程"><a href="#截距式方程" class="headerlink" title="截距式方程"></a>截距式方程</h3><p>设直线与$x$轴，$y$轴分别交与$(a, 0)$，$(0, b)$，代入两点式方程得<br>$$<br>    {x\over a}+{y\over b}=1<br>$$</p>
+<h3 id="两点间的距离公式"><a href="#两点间的距离公式" class="headerlink" title="两点间的距离公式"></a>两点间的距离公式</h3><p>设两点$P_1(x_1, y_1)$ ，$P_2(x_2, y_2)$，则两点间的距离为<br>$$<br>    |P_1P_2| = \sqrt {(x_2-x_1)^2+(y_2-y_1)^2}<br>$$</p>
+<h3 id="点到直线的距离"><a href="#点到直线的距离" class="headerlink" title="点到直线的距离"></a>点到直线的距离</h3><p>点$P(x_1, y_1)$到直线$Ax+Bx+C=0$的距离为<br>$$<br>    d={|Ax_1+By_1+C|\over \sqrt {A^2+B^2}}<br>$$</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -4324,7 +4306,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">50</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

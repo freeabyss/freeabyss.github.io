@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-12-25T13:42:36.000Z</updated>
+  <updated>2016-12-25T13:47:48.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Math-DM-17-计数基础</title>
+    <title>离散数学学习笔记 计数基础 17</title>
     <link href="http://blog.freeabyss.com/2016/12/25/Math-DM-17-%E8%AE%A1%E6%95%B0%E5%9F%BA%E7%A1%80/"/>
     <id>http://blog.freeabyss.com/2016/12/25/Math-DM-17-计数基础/</id>
     <published>2016-12-25T12:07:33.000Z</published>
-    <updated>2016-12-25T13:42:36.000Z</updated>
+    <updated>2016-12-25T13:47:48.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    </p>
 <h2 id="基本的计数原则"><a href="#基本的计数原则" class="headerlink" title="基本的计数原则"></a>基本的计数原则</h2><h3 id="乘积法则"><a href="#乘积法则" class="headerlink" title="乘积法则"></a>乘积法则</h3><p>当一个过程由独立的任务组成时使用乘法法则。<br>假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   </p>

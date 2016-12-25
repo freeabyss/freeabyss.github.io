@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Math,note,Alg,Discrete Mathematics," />
+  <meta name="keywords" content="Math,note,Discrete Mathematics,count," />
 
 
 
@@ -92,22 +92,22 @@
 
 
 
-<meta name="description" content="函数的增长大O记号大$O$记号广泛用于估计当输入增长时一个算法所用的运算数。有了这个记号，可以确定当输入规模增大时，用一个特定的算法来解题是否实际可行。令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$,使得只要$x&amp;gt;k$，就有 $$\mid f(x)\mid\le C\mid g(x)\mid$$ 我们说$f(x)$是$O(g(x))。     
-
-$O(g(">
+<meta name="description" content="序言组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    
+基本的计数原则乘积法则当一个过程由独立的任务组成时使用乘法法则。假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   
+推广的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="离散数学学习笔记 函数的增长 11">
-<meta property="og:url" content="http://blog.freeabyss.com/2016/12/18/Math-DM-11-算法增长/index.html">
+<meta property="og:title" content="Math-DM-17-计数基础">
+<meta property="og:url" content="http://blog.freeabyss.com/2016/12/25/Math-DM-17-计数基础/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="函数的增长大O记号大$O$记号广泛用于估计当输入增长时一个算法所用的运算数。有了这个记号，可以确定当输入规模增大时，用一个特定的算法来解题是否实际可行。令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$,使得只要$x&amp;gt;k$，就有 $$\mid f(x)\mid\le C\mid g(x)\mid$$ 我们说$f(x)$是$O(g(x))。     
-
-$O(g(">
-<meta property="og:updated_time" content="2016-12-21T12:30:25.000Z">
+<meta property="og:description" content="序言组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    
+基本的计数原则乘积法则当一个过程由独立的任务组成时使用乘法法则。假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   
+推广的">
+<meta property="og:updated_time" content="2016-12-25T13:42:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="离散数学学习笔记 函数的增长 11">
-<meta name="twitter:description" content="函数的增长大O记号大$O$记号广泛用于估计当输入增长时一个算法所用的运算数。有了这个记号，可以确定当输入规模增大时，用一个特定的算法来解题是否实际可行。令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$,使得只要$x&amp;gt;k$，就有 $$\mid f(x)\mid\le C\mid g(x)\mid$$ 我们说$f(x)$是$O(g(x))。     
-
-$O(g(">
+<meta name="twitter:title" content="Math-DM-17-计数基础">
+<meta name="twitter:description" content="序言组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    
+基本的计数原则乘积法则当一个过程由独立的任务组成时使用乘法法则。假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   
+推广的">
 
 
 
@@ -128,9 +128,9 @@ $O(g(">
 
 
 
-  <link rel="canonical" href="http://blog.freeabyss.com/2016/12/18/Math-DM-11-算法增长/"/>
+  <link rel="canonical" href="http://blog.freeabyss.com/2016/12/25/Math-DM-17-计数基础/"/>
 
-  <title> 离散数学学习笔记 函数的增长 11 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Math-DM-17-计数基础 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +280,7 @@ $O(g(">
             
             
               
-                离散数学学习笔记 函数的增长 11
+                Math-DM-17-计数基础
               
             
           </h1>
@@ -292,8 +292,8 @@ $O(g(">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-18T19:25:01+08:00" content="2016-12-18">
-              2016-12-18
+            <time itemprop="dateCreated" datetime="2016-12-25T20:07:33+08:00" content="2016-12-25">
+              2016-12-25
             </time>
           </span>
 
@@ -322,8 +322,8 @@ $O(g(">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/18/Math-DM-11-算法增长/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/Math-DM-11-算法增长/" itemprop="commentsCount"></span>
+                <a href="/2016/12/25/Math-DM-17-计数基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/Math-DM-17-计数基础/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -333,7 +333,7 @@ $O(g(">
 
           
           
-             <span id="/2016/12/18/Math-DM-11-算法增长/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 函数的增长 11">
+             <span id="/2016/12/25/Math-DM-17-计数基础/" class="leancloud_visitors" data-flag-title="Math-DM-17-计数基础">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -355,43 +355,18 @@ $O(g(">
       
 
       
-        <h2 id="函数的增长"><a href="#函数的增长" class="headerlink" title="函数的增长"></a>函数的增长</h2><h3 id="大O记号"><a href="#大O记号" class="headerlink" title="大O记号"></a>大O记号</h3><p>大$O$记号广泛用于估计当输入增长时一个算法所用的运算数。有了这个记号，可以确定当输入规模增大时，用一个特定的算法来解题是否实际可行。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$,使得只要$x&gt;k$，就有 $$\mid f(x)\mid\le C\mid g(x)\mid$$ 我们说$f(x)$是$O(g(x))。     </p>
-<blockquote>
-<p>$O(g(x))$其实可以看作是一个集合，是所有函数值大于$f(x)$的函数集合 </p>
-</blockquote>
-<p>如果$$\mid f(x)\mid\le C\mid g(x)\mid\quad 若x&gt;k$$并且如果对所有$x&gt;k$，有$\mid h(x)\mid &gt;\mid g(x)\mid$，那么$$\mid f(x)\mid\le C\mid h(x)\mid\quad 若x&gt;k$$</p>
-<h4 id="一些重要的大O结果"><a href="#一些重要的大O结果" class="headerlink" title="一些重要的大O结果"></a>一些重要的大O结果</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">$f(x)$</th>
-<th style="text-align:left">$O(g(x))$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$</td>
-<td style="text-align:left">$O(x^n)$</td>
-</tr>
-<tr>
-<td style="text-align:left">前$n$个正整数和</td>
-<td style="text-align:left">$O(n^2)$</td>
-</tr>
-<tr>
-<td style="text-align:left">$n!$</td>
-<td style="text-align:left">$O(n^n)$</td>
-</tr>
-<tr>
-<td style="text-align:left">$logn!$</td>
-<td style="text-align:left">$O(nlogn)$</td>
-</tr>
-<tr>
-<td style="text-align:left">$logn$</td>
-<td style="text-align:left">$O(n)$</td>
-</tr>
-</tbody>
-</table>
-<h4 id="函数组合的增长"><a href="#函数组合的增长" class="headerlink" title="函数组合的增长"></a>函数组合的增长</h4><p>假定$f_1(x)$是$O(g_1(x))$，$f_2(x)$是$O(g_2(x))$,那么$(f_1+f_2)(x)$是 $$O(\;max(\;\mid g_1(x)\mid,\;\mid g_2(x)\mid )\;)$$<br>假定$f_1(x)$是$O(g_1(x))$，$f_2(x)$是$O(g_2(x))$,那么$(f_1f_2)(x)$是$$O(g_1(x)g_2(x))$$。</p>
-<h3 id="大-Omega-符号和大-Theta-符号"><a href="#大-Omega-符号和大-Theta-符号" class="headerlink" title="大$\Omega$符号和大$\Theta$符号"></a>大$\Omega$符号和大$\Theta$符号</h3><p>大O符合广泛用于描述函数增长，而大$\Omega$符合用于描述函数的下限，大$\Theta$符号用于描述函数的上下限。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常数$C$和$k$，使得在$x&gt;k$时$$\mid f(x)\mid\ge C\mid g(x)\mid$$我们说$f(x)$是$\Omega(g(x))$。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果$f(x)$是$O(g(x))$及$f(x)$\Omega(g(x))$，就说$f(x)$是$\Theta(g(x))$。若$f(x)$是$\Theta(g(x))$，就说f(x)$是大$\Theta g(x)$，也说$f(x)$是$g(x)$阶的。<br>如果存在正实数$C_1,C_2,k$，使得对$x&gt;k$ $$C_1\mid g(x)\mid\le\mid f(x)\mid\le C_2\mid g(x)\mid$$<br>则$f(x)$是$\Theta(g(x))$。<br>令$f(X)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$，其中$a_0,a_1,a_2,\dots,a_n$为实数，且$a_n\neq 0$，则$f(x)$是$x^n$阶的。    </p>
+        <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    </p>
+<h2 id="基本的计数原则"><a href="#基本的计数原则" class="headerlink" title="基本的计数原则"></a>基本的计数原则</h2><h3 id="乘积法则"><a href="#乘积法则" class="headerlink" title="乘积法则"></a>乘积法则</h3><p>当一个过程由独立的任务组成时使用乘法法则。<br>假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   </p>
+<h4 id="推广的乘积法则"><a href="#推广的乘积法则" class="headerlink" title="推广的乘积法则"></a>推广的乘积法则</h4><p>假定一个过程由执行任务$T_1,T_2,\dots ,T_m$来完成。如果在完成任务之后用$n_i$种方式来完成$T_i$，那么完成这个过程有$n_1\cdot n_2\cdot\dots\cdot n_m$种方式。  </p>
+<h4 id="乘积法则集合语言表达"><a href="#乘积法则集合语言表达" class="headerlink" title="乘积法则集合语言表达"></a>乘积法则集合语言表达</h4><p>如果$\mathbf {A_1, A_2,\dots,A_m}$是有穷集，那么存在这些集合的笛卡尔积中的元素数是每个集合的元素数之积。为把这种表述与乘积法则联系起来，注意到在笛卡尔积$\mathbf {A_1\times A_2\times\dots\times A_m}$中选一个元素的任务是通过在$\mathbf {A_1}$中选一个元素，$\mathbf {A_2}$中选一个元素$\dots $ 。由乘积法则得到$$\mid\mathbf {A_1\times A_2\times\dots\times A_m \mid= \mid A_1\mid\cdot\mid A_2\mid\cdot\dots\cdot\mid A_m\mid}$$</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>例如:用一个字母和一个不超过$100$的正整数给礼堂的座位编号。那么不同编号的座位最多有多少?<br>解: 给一个座位编号的过程由两个任务组成，即从$26$个字母中先选择一个字母分配给这个座位，然后再从$100$个正整数中选择一个整数分配给它。乘积法则表明一个座位可以有$26\cdot 100=2600$种不同的编号方式。     </p>
+<h5 id="计数函数"><a href="#计数函数" class="headerlink" title="计数函数"></a>计数函数</h5><p>从一个$n$元集到一个$m$元集存在多少个函数?<br>解: 一个函数对于定义域中$m$个元素中的每个元素都要选择陪域中$n$个元素中的一个元素来对应。因此，由乘积法则存在$n\cdot n\cdot\dots\cdot n=n^m$个从$m$元集到$n元集再的函数。</p>
+<h5 id="计数一对一函数"><a href="#计数一对一函数" class="headerlink" title="计数一对一函数"></a>计数一对一函数</h5><p>从一个$m$元集到一个$n$元集存在多少个一对一函数?<br>解: 首先注意到当$m&gt;n$时没有从$m$元集到$n$元集的一对一函数。现在令$m\le n$。假设定义域中的元素是$a_1,a_2,\dots ,a_m$。有$n$种方式选择函数在$a_1$的值。因为函数是一对一的，可以有$n-1$种方式选择函数在$a_2$的值。由乘积法则，从一个$m$元集到一个$n$元集存在着$n(n-1)(n-2)\dots(n-m+1)$个一对一函数。   </p>
+<h5 id="计数有穷集的子集"><a href="#计数有穷集的子集" class="headerlink" title="计数有穷集的子集"></a>计数有穷集的子集</h5><p>用乘积法则证明一个有穷集$\mathbf S$的不同子集数是$2^{\mid s\mid}$。<br>设$\mathbf S$是有穷集。按任意的顺序将$\mathbf S$的元素列成一个表，考虑到$\mathbf S$的子集和长为$\mid \mathbf S\mid$的二进制串之间存在一对一的对应，即如果表的第$i$个元素在这个子集里，则该子集对应的二进制串的第$i$位为$1$，否则为$0$。又乘积法则，存在着$2^{\mid S\mid}$个长为$\mid S\mid$的二进制串。因此$\mid P(S)\mid=2^{\mid S\mid}$。    </p>
+<h3 id="求和法则"><a href="#求和法则" class="headerlink" title="求和法则"></a>求和法则</h3><p>如果完成第一项任务有$n_1$种方式，完成第二项任务有$n_2$种方式，并且这些任务不能同时完成，那么完成第一或第二项任务有$n_1+n_2$种方式。    </p>
+<h4 id="求和法则的集合表达"><a href="#求和法则的集合表达" class="headerlink" title="求和法则的集合表达"></a>求和法则的集合表达</h4><p>如果$\mathbf {A_1, A_2,\dots,A_m}$是不交的集合，那么在其并集中的元素数是每个集合的元素数之和。为把这种表述与求和法则联系起来，令$\mathbf T_i$是从$\mathbf A_i(i=1,2,\dots,m)$中选取一个元素的任务。有$\mid A_i\mid$种方式做$\mathbf T_i$。由于任何两个任务不可能同时做，根据求和法则，从其中某个集合选择一个元素的方式数，即在并集中的元素数是$$\mid \mathbf {A_1\cup A_2\cup\dots\cup A_m\mid=\mid A_1\mid+\mid A_2\mid+\dots+\mid A_m\mid}$$</p>
+<h3 id="容斥原理"><a href="#容斥原理" class="headerlink" title="容斥原理"></a>容斥原理</h3><p>当同时做两个任务时，我们不能使用求和法则来计数完成其中一个任务的方式。为了正确的计数完成其中一个任务的方式，我们先把完成每个任务的方式数加起来，然后再减去同时完成两个任务的方式数。这个技术叫做容斥原理。     </p>
+<h4 id="集合表述"><a href="#集合表述" class="headerlink" title="集合表述"></a>集合表述</h4><p>令$\mathbf {A_1}$和$\mathbf {A_2}$是集合，$T_1$是从$A_1$选择一个元素的任务，$T_2$是从$A_2$选择一个元素的任务。完成$T_1$有$\mid A_1\mid$种方式，完成$T_2$有$\mid A_2\mid$种方式。完成$T_1$或$T_2$的方式数是完成$T_1$的方式数与完成$T_2$的方式数之和减去同时完成$T_1、T_2$两个任务的方式数。因为存在$\mid\mathbf {A_1\cup A_2\mid}$种方式完成$T_1$或$T_2$，$\mid A_1\cap A_2\mid$种方式完成$T_1$和$T_2$，我们有$$\mid\mathbf {A_1\cup A_2\mid=\mid A_1\mid+\mid A_2\mid-\mid A_1\cap A_2\mid }$$</p>
 
       
     </div>
@@ -418,9 +393,9 @@ $O(g(">
           
             <a href="/tags/note/" rel="tag">#note</a>
           
-            <a href="/tags/Alg/" rel="tag">#Alg</a>
-          
             <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+            <a href="/tags/count/" rel="tag">#count</a>
           
         </div>
       
@@ -429,17 +404,13 @@ $O(g(">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/17/Web-XML-Schema-指示器/" rel="next" title="Web-XML-Schema-指示器">
-                <i class="fa fa-chevron-left"></i> Web-XML-Schema-指示器
+              <a href="/2016/12/24/Math-DM-16-数论应用/" rel="next" title="离散数学学习笔记 数论应用 16">
+                <i class="fa fa-chevron-left"></i> 离散数学学习笔记 数论应用 16
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/21/Math-DM-12-算法的时间复杂度/" rel="prev" title="离散数学学习笔记 算法的时间复杂度 12">
-                离散数学学习笔记 算法的时间复杂度 12 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -465,8 +436,8 @@ $O(g(">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/18/Math-DM-11-算法增长/"
-           data-title="离散数学学习笔记 函数的增长 11" data-url="http://blog.freeabyss.com/2016/12/18/Math-DM-11-算法增长/">
+      <div class="ds-thread" data-thread-key="2016/12/25/Math-DM-17-计数基础/"
+           data-title="Math-DM-17-计数基础" data-url="http://blog.freeabyss.com/2016/12/25/Math-DM-17-计数基础/">
       </div>
     
   </div>
@@ -584,7 +555,7 @@ $O(g(">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的增长"><span class="nav-number">1.</span> <span class="nav-text">函数的增长</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大O记号"><span class="nav-number">1.1.</span> <span class="nav-text">大O记号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一些重要的大O结果"><span class="nav-number">1.1.1.</span> <span class="nav-text">一些重要的大O结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数组合的增长"><span class="nav-number">1.1.2.</span> <span class="nav-text">函数组合的增长</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大-Omega-符号和大-Theta-符号"><span class="nav-number">1.2.</span> <span class="nav-text">大$\Omega$符号和大$\Theta$符号</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.</span> <span class="nav-text">序言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本的计数原则"><span class="nav-number">2.</span> <span class="nav-text">基本的计数原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#乘积法则"><span class="nav-number">2.1.</span> <span class="nav-text">乘积法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#推广的乘积法则"><span class="nav-number">2.1.1.</span> <span class="nav-text">推广的乘积法则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#乘积法则集合语言表达"><span class="nav-number">2.1.2.</span> <span class="nav-text">乘积法则集合语言表达</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">2.1.3.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#计数函数"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">计数函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计数一对一函数"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">计数一对一函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计数有穷集的子集"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">计数有穷集的子集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求和法则"><span class="nav-number">2.2.</span> <span class="nav-text">求和法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#求和法则的集合表达"><span class="nav-number">2.2.1.</span> <span class="nav-text">求和法则的集合表达</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容斥原理"><span class="nav-number">2.3.</span> <span class="nav-text">容斥原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#集合表述"><span class="nav-number">2.3.1.</span> <span class="nav-text">集合表述</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

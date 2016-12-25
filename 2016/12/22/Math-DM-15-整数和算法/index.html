@@ -95,14 +95,14 @@
 <meta name="description" content="整数表示令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：$$n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0$$其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。
 进制转换现在介绍一个构造整数$n$的$b$进制展开的算法。首先，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Math-DM-15-整数和算法">
+<meta property="og:title" content="离散数学学习笔记 整数和算法 15">
 <meta property="og:url" content="http://blog.freeabyss.com/2016/12/22/Math-DM-15-整数和算法/index.html">
 <meta property="og:site_name" content="Abyss's blog">
 <meta property="og:description" content="整数表示令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：$$n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0$$其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。
 进制转换现在介绍一个构造整数$n$的$b$进制展开的算法。首先，">
-<meta property="og:updated_time" content="2016-12-22T14:51:55.000Z">
+<meta property="og:updated_time" content="2016-12-24T08:42:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Math-DM-15-整数和算法">
+<meta name="twitter:title" content="离散数学学习笔记 整数和算法 15">
 <meta name="twitter:description" content="整数表示令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：$$n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0$$其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。
 进制转换现在介绍一个构造整数$n$的$b$进制展开的算法。首先，">
 
@@ -127,7 +127,7 @@
 
   <link rel="canonical" href="http://blog.freeabyss.com/2016/12/22/Math-DM-15-整数和算法/"/>
 
-  <title> Math-DM-15-整数和算法 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 离散数学学习笔记 整数和算法 15 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                Math-DM-15-整数和算法
+                离散数学学习笔记 整数和算法 15
               
             
           </h1>
@@ -330,7 +330,7 @@
 
           
           
-             <span id="/2016/12/22/Math-DM-15-整数和算法/" class="leancloud_visitors" data-flag-title="Math-DM-15-整数和算法">
+             <span id="/2016/12/22/Math-DM-15-整数和算法/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 整数和算法 15">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -354,6 +354,13 @@
       
         <h2 id="整数表示"><a href="#整数表示" class="headerlink" title="整数表示"></a>整数表示</h2><p>令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：<br>$$n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0$$<br>其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。</p>
 <h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><p>现在介绍一个构造整数$n$的$b$进制展开的算法。首先，用$b$除$n$得到商和余数，即 $$n=bq_0+a_0, 0\le a_0&lt;b$$余数$a_0$就是$n$的$b$进制展开的最右边一位数字。下一步用$b$除$q_0$，得$$q_0=bq_1+a_1， 0\le a_1&lt;b$$可以看出$a_1$是$n$进制展开中从右边数的第二个数字。重复该过程，直到商为$0$时为止。下面给出伪代码。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {base\;b\;expansion} (n:integer)\\<br>q:=n \\<br>k:=0 \\<br>\mathbf {while}(q\neq 0) \\<br>\mathbf {begin} \\<br>\qquad a_k:=q\;\mathbf{mod}\;b \\<br>\qquad q:=\lfloor q/b\rfloor \\<br>\qquad k:=k+1 \\<br>\mathbf {end}<br>\{n的b进制展开是(a_{k-1}\dots a_1a_0)\}<br>\end{array}<br>$$</p>
+<h3 id="二进制算法"><a href="#二进制算法" class="headerlink" title="二进制算法"></a>二进制算法</h3><h4 id="整数相加"><a href="#整数相加" class="headerlink" title="整数相加"></a>整数相加</h4><p>$$\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>\{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2\}<br>\end{array}$$</p>
+<h4 id="整数相乘"><a href="#整数相乘" class="headerlink" title="整数相乘"></a>整数相乘</h4><p>$$\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {multiply} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\; shifted\; j\; places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>\{c_0,c_1,\dots,c_{n-1}是部分乘积\} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>\{p是ab的值\}<br>\end{array}$$</p>
+<blockquote>
+<p>$a\;shifted\; j\; places$左移$j$位    </p>
+</blockquote>
+<h3 id="同余幂"><a href="#同余幂" class="headerlink" title="同余幂"></a>同余幂</h3><p>在密码学中重要的是能有效得求$b^n\;\mathbf{mod}\;m$，其中$b,n,m$都是大整数。先计算$b^n$，再求$b^n$除以$m$的余数，这是不行的，因为$b^n$是非常大的数。可行的是一种利用指数$n$的二进制展开的算法。<br>该算法的基本思想是利用以下公式:<br>$$b^n=b^{a_{k-1}\cdot 2^{k-1}+\dots +a_1\cdot 2+a_0}=b^{a_{k-1}\cdot 2^{k-1}}\dots b^{a_1\cdot 2}\cdot b^a_0$$<br>为了计算$b^n$的值，我们要找到<br>$b,b^2,{(b^2)}^2=b^4,{(b^4)}^2=b^8,\dots ,b^{2^k}$的值，把其中$a_j=1$的那些项$b^{2^j}$乘起来，就得到了$b^n$的值。<br>这个算法依次求$b\;\mathbf{mod}\; m, b^2\;\mathbf{mod}\; m, b^4\;\mathbf{mod}\; m,\dots ,b^{2^{k-1}}\;\mathbf{mod}\; m$，把其中$a_j =1$的项$b^{2^j}\;\mathbf{mod}\; m$乘起来，在每次乘法后求乘积除以$m$的余数。伪代码示例:  </p>
+<p>$$\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {modular\; exponentiation} (n,m,b:integer)\\<br>\{n的二进制展开是(a_{n-1}a_{n-2}\dots a_1a_0)_2\} \\<br>x:=1 \\<br>power := b\;\mathbf{mod}\; m\\<br>\mathbf {for}\; i:=0 \;\mathbf {to}\; k-1 \\<br>\mathbf {begin} \\<br>\qquad\mathbf{if}\; a_i=1\;\mathbf{then}\; x:=(x\cdot power)\;\mathbf{mod}\; m\\power := (power\cdot power)\;\mathbf{mod}\; m \\<br>\mathbf {end} \\<br>\{x等于b^n\;\mathbf{mod}\; m\} \\<br>\end{array}$$<br>该算法的效率为$O((log\,m)^2\,log\, n)$次位运算就能求得$b^n\;\mathbf{mod}\; m$。   </p>
 
       
     </div>
@@ -399,8 +406,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/22/Function-05-二进制运算/" rel="prev" title="Function-05-二进制运算">
-                Function-05-二进制运算 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/22/Function-05-二进制运算/" rel="prev" title="二进制运算">
+                二进制运算 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -428,7 +435,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/12/22/Math-DM-15-整数和算法/"
-           data-title="Math-DM-15-整数和算法" data-url="http://blog.freeabyss.com/2016/12/22/Math-DM-15-整数和算法/">
+           data-title="离散数学学习笔记 整数和算法 15" data-url="http://blog.freeabyss.com/2016/12/22/Math-DM-15-整数和算法/">
       </div>
     
   </div>
@@ -473,7 +480,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">49</span>
+              <span class="site-state-item-count">51</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -490,7 +497,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -546,7 +553,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数表示"><span class="nav-number">1.</span> <span class="nav-text">整数表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进制转换"><span class="nav-number">1.1.</span> <span class="nav-text">进制转换</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数表示"><span class="nav-number">1.</span> <span class="nav-text">整数表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进制转换"><span class="nav-number">1.1.</span> <span class="nav-text">进制转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制算法"><span class="nav-number">1.2.</span> <span class="nav-text">二进制算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#整数相加"><span class="nav-number">1.2.1.</span> <span class="nav-text">整数相加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整数相乘"><span class="nav-number">1.2.2.</span> <span class="nav-text">整数相乘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同余幂"><span class="nav-number">1.3.</span> <span class="nav-text">同余幂</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

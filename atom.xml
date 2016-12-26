@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-12-25T13:47:48.000Z</updated>
+  <updated>2016-12-25T14:03:01.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Math-DM-18-鸽巢原理</title>
+    <link href="http://blog.freeabyss.com/2016/12/25/Math-DM-18-%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86/"/>
+    <id>http://blog.freeabyss.com/2016/12/25/Math-DM-18-鸽巢原理/</id>
+    <published>2016-12-25T13:49:15.000Z</published>
+    <updated>2016-12-25T14:03:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="鸽巢原理"><a href="#鸽巢原理" class="headerlink" title="鸽巢原理"></a>鸽巢原理</h2><p>如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    </p>
+<blockquote>
+<p>证:假定$k$个盒子中没有一个盒子包含的物体多于$1$个，那么物体总数至多是$k$，这与至少有$k+1$个物体矛盾。    </p>
+</blockquote>
+<h2 id="广义鸽巢原理"><a href="#广义鸽巢原理" class="headerlink" title="广义鸽巢原理"></a>广义鸽巢原理</h2><p>如果$N$个物体放入$k$个盒子，那么至少有一个盒子包含了至少$\lceil N/k\rceil$个物体。   </p>
+<blockquote>
+<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。   </p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;鸽巢原理&quot;&gt;&lt;a href=&quot;#鸽巢原理&quot; class=&quot;headerlink&quot; title=&quot;鸽巢原理&quot;&gt;&lt;/a&gt;鸽巢原理&lt;/h2&gt;&lt;p&gt;如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    &lt;/p&gt;
+&lt;blockq
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
+    
+  </entry>
   
   <entry>
     <title>离散数学学习笔记 计数基础 17</title>
@@ -983,52 +1020,6 @@
       <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="sequence" scheme="http://blog.freeabyss.com/tags/sequence/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>取整函数</title>
-    <link href="http://blog.freeabyss.com/2016/12/14/Function-02-%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0/"/>
-    <id>http://blog.freeabyss.com/2016/12/14/Function-02-取整函数/</id>
-    <published>2016-12-14T12:41:20.000Z</published>
-    <updated>2016-12-21T13:50:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="上取整函数"><a href="#上取整函数" class="headerlink" title="上取整函数"></a>上取整函数</h2><p>上取整函数是指大于或等于实数$x$的最小整数，用$⎡x⎤$表示。</p>
-<h2 id="下取整函数"><a href="#下取整函数" class="headerlink" title="下取整函数"></a>下取整函数</h2><p>下取整函数是指小于或等于实数$x$的最大整数，用$⎣x⎦$表示。      </p>
-<blockquote>
-<p>下取整函数也被称为最大整数函数，这时往往用$［x］$表示</p>
-</blockquote>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ul>
-<li>$⎣x⎦=n $当且仅当$n\le x\lt n+1$</li>
-<li>$⎣x⎦=n $当且仅当$x-1\lt n\le x$</li>
-<li>$⎡x⎤=n $当且仅当$n-1\lt x\le n$</li>
-<li>$⎡x⎤=n $当且仅当$x\le n\lt x+1$</li>
-<li>$x-1\lt ⎣x⎦\le x\le ⎡x⎤\lt x+1$</li>
-<li>$⎣-x⎦=-⎡x⎤$</li>
-<li>$⎡x⎤=-⎣-x⎦$</li>
-<li>$⎣x+n⎦=⎣x⎦+n$</li>
-<li>$⎡x+n⎤=⎡x⎤+n$</li>
-</ul>
-<blockquote>
-<p>在考虑下取整函数相关的语句时，一个有用的方法是令$x=n+\epsilon$，其中$n=⎣x⎦$是一个整数，$\epsilon$是$x$的分数部分，满足不等式$0\le\epsilon\lt 1$。 类似的考虑上取整函数时，通常写作$x=n-\epsilon$，其中$n=⎡x⎤$且$0\le\epsilon\lt 1$。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;上取整函数&quot;&gt;&lt;a href=&quot;#上取整函数&quot; class=&quot;headerlink&quot; title=&quot;上取整函数&quot;&gt;&lt;/a&gt;上取整函数&lt;/h2&gt;&lt;p&gt;上取整函数是指大于或等于实数$x$的最小整数，用$⎡x⎤$表示。&lt;/p&gt;
-&lt;h2 id=&quot;下取整函数&quot;&gt;&lt;a hre
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="function" scheme="http://blog.freeabyss.com/tags/function/"/>
-    
-      <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
     
   </entry>
   

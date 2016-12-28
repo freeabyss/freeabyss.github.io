@@ -276,6 +276,636 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/16/Math-DM-10-算法/" itemprop="url">
+                  离散数学学习笔记 算法 10
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-16T17:49:21+08:00" content="2016-12-16">
+              2016-12-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/16/Math-DM-10-算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/16/Math-DM-10-算法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/16/Math-DM-10-算法/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 算法 10">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>算法是进行一项计算或解决一个问题的一组有限多条准确的指令。</p>
+<h3 id="算法的性质"><a href="#算法的性质" class="headerlink" title="算法的性质"></a>算法的性质</h3><ul>
+<li>输入 算法从一个指定的集合得到输入值</li>
+<li>输出 对每个输入值集合，算法都要从一个指定的集合中给出输出值。输出值就是问题的解</li>
+<li>确定性 算法的步骤必须是准确定义的</li>
+<li>正确性 对每一组输入值，算法都应产生正确的输出值</li>
+<li>有限性 对任何输入算法都应在有限步之后产出所求值</li>
+<li>有效性 算法的每一步都应能够准确地在有限时间内完成</li>
+<li>通用性 算法过程应该用于期望形式的所有问题，而不只是用于特定的值</li>
+</ul>
+<h2 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h2><h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {linear\; search} (x:integer, a_1,a_2,\dots,a_n:integer)\\<br>i:=1 \\<br>\mathbf {while}(i\le and\; x\neq a_i) \\<br>\qquad i:=i+1 \\<br>\mathbf {if} \, i\le n\;\mathbf {then} \; location :=i \\<br>\mathbf {else} \;\; location := 0 \\<br>\{location是等于x的项的下标，或是0(若找不到x)\}<br>\end{array}<br>$$</p>
+<h3 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {binary \; search}(x:integer,a_1,a_2,\dots,a_n:integer 递增) \\<br>i:=1 \{i是搜索区间的左端点\} \\<br>j:=1 \{j是搜索区间的右端点\} \\<br>\mathbf {while}\; i<j \\="" \mathbf="" {begin}="" \qquad="" m:="\lfloor" (i+j)="" 2\rfloor="" {if}\;="" x="">a_m\; \mathbf {then}\; i:=m+1 \\<br>\qquad \mathbf {else}\; j:=m \\<br>\mathbf {end}\\<br>\mathbf {if}\; x=a_i \;\mathbf {then}\; location:=i\\<br>\mathbf {else}\; location:=0 \\<br>\{location 是等于x的项的下标，或是0(若找不到x)\}<br>\end{array}<br>$$  </j></p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {bubble \; sort}(a_1,a_2,\dots,a_n:double,n\ge 2) \\<br>\mathbf {for}\; i:=1\mathbf {to}\; n-1 \\<br>\qquad\mathbf {for}\; j:=1\mathbf {to}\; n-i\\<br>\qquad\qquad\mathbf {if}\; a_j&gt;a_{j+1}\;\mathbf {then}\; swap(a_j,a_{j+1}) \\<br>\{a_1,\dots,a_n 按升序排列\}<br>\end{array}<br>$$ </p>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure}\; insertion\; sort(a_1,a_2,\dots,a_n:double,n\ge 2)\\<br>\mathbf {for}\; j:=2\;\mathbf {to}\; n\\<br>\mathbf {begin} \\<br>\qquad i:=1\\<br>\qquad\mathbf {while}\; a_j&gt;a_i\\<br>\qquad\qquad i:=i+1\\<br>\qquad m:=a_j\\<br>\mathbf {for}\; k:=0\;\mathbf {to}\; j-i-1\\<br>\qquad\qquad a_{j-k} :=a_{j-k-1}\\<br>\qquad a_i:=m\\<br>\mathbf {end}\\<br>\{a_1,a_2,\dots,a_n已排序\}<br>\end{array}<br>$$</p>
+<h3 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h3><p>有很多算法用于解决优化问题，这种问题的目标是求给定问题把某个参数值最小化或最大化的解。例如，求两个城市总长度最短路径，网络结点之间使用最少量光纤的一组光纤连接。<br>一种最简单的方法求优化问题的解，这种方法在每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列。这种在每一步都选择最好选项的算法称为贪心算法。</p>
+<h3 id="停机问题"><a href="#停机问题" class="headerlink" title="停机问题"></a>停机问题</h3><p>该问题无解。<br>该程序的输入部分是某个计算机程序，以该程序是否能正常结束作为输出结果。<br>证：假设停机问题有解，比如某个程序${H(P,I)}$，它包括两个输入项，即程序$P$和程序$I$，假设$P$在输入$I$时可停机，将输出字符串”停机”,反之输出”死循环”。现在可以用反证法证明这样的$H$不存在。<br>当编写一个程序的时候，程序本身可以看做是一行字符；字符串可以被解释为比特序列，也就是说，程序本身就可以当作数据使用，因此一个程序可以作为另一个程序甚至自身的输入，$H$可以判断当$P$自身作为输入时，$P$是否会停机。<br>为了证明不存在程序$H$能够求解停机问题，我们构造一个简单过程${K(P)}$，它利用的是${H(P,P)}$的输出。如果${H(P,P)}$的输出是死循环，即$P$自身作为输入时会死循环，那么${K(P)}$停机。如果${H(P,P)}$的输出是”停机”，即$P$自身作为输入时会停机，那么${K(P)}$死循环。也就是说${K(P)}$和${H(P,P)}$的输出相反。<br>现在假设把$K$作为$K$的输入，需要注意，如果${H(K,K)}$的输出是”死循环”，那么根据上面的定义$K(K)$停机。否则，如果$H(K,K)$的输出是”停机”,根据上面的定义$K(K)$的输出是”死循环”。而这与$H$的定义是相违背的。这两种情况下，都会产生矛盾。 </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/15/Web-XML详解/" itemprop="url">
+                  XML简要
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-15T21:44:31+08:00" content="2016-12-15">
+              2016-12-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/XML/" itemprop="url" rel="index">
+                    <span itemprop="name">XML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/15/Web-XML详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Web-XML详解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/15/Web-XML详解/" class="leancloud_visitors" data-flag-title="XML简要">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>XML是可扩展标记语言，本文整理自<a href="http://www.w3school.com.cn/xml/index.asp" target="_blank" rel="external">W3School</a>。<br>关于XML的简介、用途以及与HTML的区别，请参考以下链接，本文只列出XML的要点：<br><a href="http://www.w3school.com.cn/xml/xml_intro.asp" target="_blank" rel="external">XML简介</a><br><a href="http://www.w3school.com.cn/xml/xml_usedfor.asp" target="_blank" rel="external">XML用途</a></p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
+<li>XML文档的第一行为XML声明，定义了XML的版本和使用的编码。</li>
+<li>第二行为描述文档的根元素，XML文档必须包含根元素，该元素是所有其他元素的父元素。</li>
+<li><p>所有元素均可拥有文本内容、属性(类似HTML)以及子元素</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">note</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">to</span>&gt;</span>George<span class="tag">&lt;/<span class="name">to</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">from</span>&gt;</span>John<span class="tag">&lt;/<span class="name">from</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">heading</span>&gt;</span>Reminder<span class="tag">&lt;/<span class="name">heading</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>Don't forget the meeting!<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">note</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>所有元素必须有关闭标签</p>
+</li>
+<li>XML对大小写敏感   </li>
+<li>XML必须正确的嵌套</li>
+<li>XML的属性值须加引号，单引号和双引号均可使用</li>
+<li>XML的注释为<code>&lt;!--  --&gt;</code>，同HTML一样</li>
+<li>XML中空格会保留，HTML会把多个连续的空格裁减为一个</li>
+<li>XML以<code>LF</code>存储换行。<code>CR</code>回车符，<code>LF</code>换行符</li>
+</ul>
+<h3 id="XML命名规则及最佳实践"><a href="#XML命名规则及最佳实践" class="headerlink" title="XML命名规则及最佳实践"></a>XML命名规则及最佳实践</h3><ul>
+<li>名称可以含字母、数字以及其他的字符 </li>
+<li>名称不能以数字或标点符号开始</li>
+<li>名称不能以字符<code>xml</code>、<code>XML</code>、<code>Xml</code>等开始</li>
+<li>名称不能包含空格</li>
+<li>避免使用<code>-</code>、<code>.</code>、<code>:</code>字符。最好使用字母、数字以及<code>_</code>下划线</li>
+</ul>
+<h3 id="XML属性"><a href="#XML属性" class="headerlink" title="XML属性"></a>XML属性</h3><ul>
+<li>尽量使用元素来描述数据，仅仅使用属性提供与数据无关的信息</li>
+<li>元数据应当存储为属性，而数据本身应当存储为元素</li>
+</ul>
+<h3 id="XML验证"><a href="#XML验证" class="headerlink" title="XML验证"></a>XML验证</h3><ul>
+<li>DTD文档用于定义XML文档的结构</li>
+<li>SchemaDTD的代替者</li>
+<li>如果XML文档存在错误，那么程序不应该继续处理这个文档</li>
+</ul>
+<h3 id="XML-样式"><a href="#XML-样式" class="headerlink" title="XML 样式"></a>XML 样式</h3><ul>
+<li><p>XML可以引用CSS样式格式化XML，但不推荐使用该方法，W3C推荐使用XSLT</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line">&lt;?xml-stylesheet type="text/css" href="cd_catalog.css"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">CATALOG</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">CD</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">TITLE</span>&gt;</span>Empire Burlesque<span class="tag">&lt;/<span class="name">TITLE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ARTIST</span>&gt;</span>Bob Dylan<span class="tag">&lt;/<span class="name">ARTIST</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COUNTRY</span>&gt;</span>USA<span class="tag">&lt;/<span class="name">COUNTRY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COMPANY</span>&gt;</span>Columbia<span class="tag">&lt;/<span class="name">COMPANY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">PRICE</span>&gt;</span>10.90<span class="tag">&lt;/<span class="name">PRICE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">YEAR</span>&gt;</span>1985<span class="tag">&lt;/<span class="name">YEAR</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">CD</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">CD</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">TITLE</span>&gt;</span>Hide your heart<span class="tag">&lt;/<span class="name">TITLE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ARTIST</span>&gt;</span>Bonnie Tyler<span class="tag">&lt;/<span class="name">ARTIST</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COUNTRY</span>&gt;</span>UK<span class="tag">&lt;/<span class="name">COUNTRY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COMPANY</span>&gt;</span>CBS Records<span class="tag">&lt;/<span class="name">COMPANY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">PRICE</span>&gt;</span>9.90<span class="tag">&lt;/<span class="name">PRICE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">YEAR</span>&gt;</span>1988<span class="tag">&lt;/<span class="name">YEAR</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">CD</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">CATALOG</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>XSLT是首选的XML样式表语言</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line">&lt;?xml-stylesheet type="text/xsl" href="simple.xsl"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">breakfast_menu</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">food</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Belgian Waffles<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">price</span>&gt;</span>$5.95<span class="tag">&lt;/<span class="name">price</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span></div><div class="line">       two of our famous Belgian Waffles</div><div class="line">    <span class="tag">&lt;/<span class="name">description</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">calories</span>&gt;</span>650<span class="tag">&lt;/<span class="name">calories</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">food</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">breakfast_menu</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="XML-命名空间"><a href="#XML-命名空间" class="headerlink" title="XML 命名空间"></a>XML 命名空间</h3><p>当两个相同的XML文档被一起使用时，如果两个文档包含不同内容和定义的相同元素，就会发送命名冲突。 为了避免该问题，引入了命名空间的概念。    </p>
+<h4 id="通过使用前缀来避免命名冲突"><a href="#通过使用前缀来避免命名冲突" class="headerlink" title="通过使用前缀来避免命名冲突"></a>通过使用前缀来避免命名冲突</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h:table</span> <span class="attr">xmlns:h</span>=<span class="string">"http://www.w3.org/TR/html4/"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h:tr</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h:td</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">h:td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h:td</span>&gt;</span>Bananas<span class="tag">&lt;/<span class="name">h:td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">h:tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">h:table</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">f:table</span> <span class="attr">xmlns:f</span>=<span class="string">"http://www.w3school.com.cn/furniture"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">f:name</span>&gt;</span>African Coffee Table<span class="tag">&lt;/<span class="name">f:name</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">f:width</span>&gt;</span>80<span class="tag">&lt;/<span class="name">f:width</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">f:length</span>&gt;</span>120<span class="tag">&lt;/<span class="name">f:length</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">f:table</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>其中<code>xmlns</code>属性为前缀赋予了一个与某个命名空间相关联的限定名称。(可以不使用<code>xmlns</code>，仅仅使用前缀来避免命名冲突)</p>
+<h4 id="命名空间属性"><a href="#命名空间属性" class="headerlink" title="命名空间属性"></a>命名空间属性</h4><p>命名空间属性被放置于元素的开始标签中，并使用以下语法：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns:namespace-prefix="namespaceURI"</div></pre></td></tr></table></figure></p>
+<h4 id="默认的命名空间"><a href="#默认的命名空间" class="headerlink" title="默认的命名空间"></a>默认的命名空间</h4><p>为元素定义默认的命名空间可以让我们省去在所有的子元素中使用前缀的工作。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/TR/html4/"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">td</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">td</span>&gt;</span>Bananas<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3school.com.cn/furniture"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">name</span>&gt;</span>African Coffee Table<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">width</span>&gt;</span>80<span class="tag">&lt;/<span class="name">width</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">length</span>&gt;</span>120<span class="tag">&lt;/<span class="name">length</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="CDATA"><a href="#CDATA" class="headerlink" title="CDATA"></a>CDATA</h3><p>CDATA部分的所有内容都会被解析器忽略。<br>CDATA部分不能包含字符串<code>]]&gt;</code>。也不允许嵌套的CDATA。<br>标记CDATA部分结尾的<code>]]&gt;</code>不能包含空格或折行。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">&lt;![CDATA[</div><div class="line">function matchwo(a,b)</div><div class="line">&#123;</div><div class="line">if (a &lt; b &amp;&amp; a &lt; 0) then</div><div class="line">  &#123;</div><div class="line">  return 1;</div><div class="line">  &#125;</div><div class="line">else</div><div class="line">  &#123;</div><div class="line">  return 0;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">]]&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/15/Function-01-康托尔对角化论证/" itemprop="url">
+                  康托尔对角化论证
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-15T20:47:43+08:00" content="2016-12-15">
+              2016-12-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/15/Function-01-康托尔对角化论证/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Function-01-康托尔对角化论证/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/15/Function-01-康托尔对角化论证/" class="leancloud_visitors" data-flag-title="康托尔对角化论证">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>对角论证法是乔治 · 康托尔于 1891 年提出的用于说明实数集合是不可数集的证明。<br>要证明实数集合是不可数的，就假定实数集合是可数的并得出矛盾。于是，所有落在$0$和$1$之间的实数所成的子集合也是可数的(因为可数集合的所有子集合都是可数的)。在此假设下，在$0$和$1$之间的实数按照某种顺序列出，比如说$r_1,r_2,r_3,\dots$设这些实数的十进制表示为<br>$$<br>    r_1 =0.d_{11}d_{12}d_{13}d_{14}\dots \\<br>    r_2 =0.d_{21}d_{22}d_{23}d_{24}\dots \\<br>    r_3 =0.d_{31}d_{32}d_{33}d_{34}\dots \\<br>    r_4 =0.d_{41}d_{42}d_{43}d_{44}\dots \\<br>    .\\<br>    .\\<br>    .\\<br>$$<br>其中$d_{ij}\in \{0,1,2,3,4,5,6,7,8,9\}$。(例如，如果$r_1=0.23794101\dots$，就有$d_{11}=2,d_{12}=3,d_{14}=7\dots$)于是，构造新的实数具有十进制展开式$r=0.d_1d_2d_3d_4\dots$，其中用下列规则确定十进制数字：<br>$$<br>f(n) =<br>\begin{cases}<br>4, &amp; \text{if $d_i\neq$ 4} \[2ex]<br>5, &amp; \text{if $d_i$= 4}<br>\end{cases}<br>$$<br>例如，假定$r_1=0.23794102\dots, r_2=0.44590138\dots,r_3=0.09118764\dots$等等，于是$r=0.d_1d_2d_3d_4\dots =0.4544\dots$,其中因为$d_{11}\neq 4,d_1=4,d_{22}=4,d_2=5 \dots$)<br>每个实数都有唯一的十进制展开式(展开式结尾全部由数字$9$组成的可能性除外)。于是，实数$r$不等于$r_1,r_2,\dots $中的任何一个，因为对每个$i$来说，$r$的十进制展开式与$r_i$的十进制展开式在小数点右边第$i$位是不同的。<br>由于存在着不在列表中而在$0$和$1$之间的实数$r$，所以可以列出在$0$和$1$之间所有实数的假设必定为假。因此，不能列出在$0$和$1$之间的所有实数，在$0$和$1$之间的实数集合是不可数的。任何包含不可数子集合的集合都是不可数的。因此实数集合是不可数的。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/15/Math-DM-09-序列求和/" itemprop="url">
+                  离散数学学习笔记 序列求和 09
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-15T19:47:31+08:00" content="2016-12-15">
+              2016-12-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/15/Math-DM-09-序列求和/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Math-DM-09-序列求和/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/15/Math-DM-09-序列求和/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 序列求和 09">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h2><p>序列是用来表示有序表的离散结构。<br>序列是从整数集合的子集(通常是$\{0,1,2,\dots \}$或$\{1,2,3,\dots \}$)到集合$S$的函数。用记号$a_n$表示整数$n$的像，称$a_n$为序列的一个项。<br>例如： 考虑序列$\{a_n\}$，其中$$a_n=1/n$$。 从$a_1$开始的这个序列项的表，即$$a_1,a_2,a_3,a_4,\dots $$开头是$$1,{1\over 2},{1\over 3},{1\over 4},\dots $$  </p>
+<h3 id="几何序列"><a href="#几何序列" class="headerlink" title="几何序列"></a>几何序列</h3><p>几何序列是如下形式的序列，$$a, ar, ar^2, \cdots ,ar^n, \cdots$$ 其中初项$a$和公比$r$都是实数。      </p>
+<blockquote>
+<p>几何序列是指数函数$f(x)=ar^x$的离散对应物</p>
+</blockquote>
+<h3 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h3><p>等差数列是如下形式的序列，$$a, a+d, a+2d, \cdots , a+nd, \cdots$$ 其中初项$a$和公差$r$都是实数。     </p>
+<blockquote>
+<p>等差序列是线形函数$f(x)=dx+1$的离散对应物。  </p>
+</blockquote>
+<h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><p>在计算机科学中经常使用形如$a_1,a_2,\dots ,a_n$的序列，这些有穷序列也称为串，这些串也记作$a_1a_2\dots a_n$。串$S$的长度是这个串中的项数。空串是没有任何项的串，记作$\lambda$。空串长度为$0$。    </p>
+<blockquote>
+<p>例如，串$abcd$的长度为4.</p>
+</blockquote>
+<h3 id="特殊的整数序列"><a href="#特殊的整数序列" class="headerlink" title="特殊的整数序列"></a>特殊的整数序列</h3><p>在找出构造序列项的公式或一般规则时，需要注意的几个问题：  </p>
+<ul>
+<li>是否有相同值连续出现 </li>
+<li>是否给前项加上常量或与序列中位置有关的量就得出后项  </li>
+<li>是否给前项乘以特定量就得出后项  </li>
+<li>是否在各项之间存在循环</li>
+</ul>
+<h2 id="求和公式"><a href="#求和公式" class="headerlink" title="求和公式"></a>求和公式</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">和</th>
+<th style="text-align:left">闭形式</th>
+<th style="text-align:left">和</th>
+<th style="text-align:left">闭形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$$\sum_{k=0}^n ar^k(r\neq 0)$$</td>
+<td style="text-align:left">$${ar^{n+1}-a\over r-1},r\neq 1$$</td>
+<td style="text-align:left">$$\sum_{k=1}^n k^3$$</td>
+<td style="text-align:left">$$n^2(n+1)^2\over 4$$</td>
+</tr>
+<tr>
+<td style="text-align:left">$$\sum_{k=1}^n k$$</td>
+<td style="text-align:left">$$n(n+1)\over 2$$</td>
+<td style="text-align:left">$$\sum_{k=0}^\infty x^k, \mid x\mid\lt 1$$</td>
+<td style="text-align:left">$$1\over 1-x$$</td>
+</tr>
+<tr>
+<td style="text-align:left">$$\sum_{k=1}^n k^2$$</td>
+<td style="text-align:left">$$n(n+1)(2n+1)\over 6$$</td>
+<td style="text-align:left">$$\sum_{k=1}^\infty kx^{k-1}, \mid x\mid\lt 1$$</td>
+<td style="text-align:left">$$1\over (1-x)^2$$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h2><ul>
+<li>集合$A$与集合$B$有相同的基数，当且仅当存在从$A$到$B$的一一对应</li>
+<li>有限集或与自然数集基数相同的无限集称为可数的，反之称为不可数的。</li>
+<li>如果无穷集合$S$是可数的，我们用符号$\aleph_0$来表示集合$S$的基数。记作$\mid S\mid=\aleph_0$，且说$S$有基数希伯来零。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/14/Function-02-取整函数/" itemprop="url">
                   取整函数
                 </a>
@@ -3133,1146 +3763,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/13/Sublime-Text之Evernote/" itemprop="url">
-                  Sublime Text之Evernote
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-13T21:27:26+08:00" content="2016-09-13">
-              2016-09-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/sublime/" itemprop="url" rel="index">
-                    <span itemprop="name">sublime</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/13/Sublime-Text之Evernote/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/Sublime-Text之Evernote/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/13/Sublime-Text之Evernote/" class="leancloud_visitors" data-flag-title="Sublime Text之Evernote">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Evernote"><a href="#Evernote" class="headerlink" title="Evernote"></a>Evernote</h1><p>下载了<code>Evernote</code>之后可以用Markdown编写印象笔记了。 <a href="https://github.com/bordaigorl/sublime-evernote" target="_blank" rel="external">sublime evernote主页</a></p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">功能</th>
-<th style="text-align:left">说明</th>
-<th style="text-align:left">commond</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Delete Node</td>
-<td style="text-align:left">删除笔记</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Search Note</td>
-<td style="text-align:left">搜索笔记</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Show Attachments</td>
-<td style="text-align:left">显示当前笔记的附件</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Attach current file to a note</td>
-<td style="text-align:left">将当前文件作为附件发送给指定笔记</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Insert Attachment Here</td>
-<td style="text-align:left">在光标处插入附件</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Delete Attachment</td>
-<td style="text-align:left">删除附件</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">View Note in Web App</td>
-<td style="text-align:left">打开该笔记的网页版</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">View Note in Evernote client</td>
-<td style="text-align:left">在客户端中打开该笔记</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Update Evernote Note</td>
-<td style="text-align:left">更新笔记</td>
-<td style="text-align:left">save_evernote_note</td>
-</tr>
-<tr>
-<td style="text-align:left">Send to Evernote as new note</td>
-<td style="text-align:left">创建新笔记send_to_evernote</td>
-</tr>
-<tr>
-<td style="text-align:left">Create New Notebook</td>
-<td style="text-align:left">创建新的笔记本</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Open Evernote Note</td>
-<td style="text-align:left">打开笔记</td>
-<td style="text-align:left">open_evernote_note</td>
-</tr>
-<tr>
-<td style="text-align:left">Clip to Evernote as new note</td>
-<td style="text-align:left">将当前选中的内容作为新的笔记创建</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">List linked notes</td>
-<td style="text-align:left">显示当前笔记引用的其它笔记链接</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Insert link to a note</td>
-<td style="text-align:left">插入其它笔记的链接</td>
-</tr>
-</tbody>
-</table>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>访问<a href="https://app.yinxiang.com/api/DeveloperToken.action" target="_blank" rel="external">Developer Tokens</a>获取Token，打开Evernote.sublime-settings</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;noteStoreUrl&quot;: &quot;https://app.yinxiang.com/shard/s1/notestore&quot;,</div><div class="line">    &quot;token&quot;: &quot;&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="添加快捷键示例"><a href="#添加快捷键示例" class="headerlink" title="添加快捷键示例"></a>添加快捷键示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123; &quot;keys&quot;: [&quot;super+e&quot;], &quot;command&quot;: &quot;show_overlay&quot;, &quot;args&quot;: &#123;&quot;overlay&quot;: &quot;command_palette&quot;, &quot;text&quot;: &quot;Evernote: &quot;&#125; &#125;,</div><div class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+s&quot;], &quot;command&quot;: &quot;send_to_evernote&quot; &#125;,</div><div class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+o&quot;], &quot;command&quot;: &quot;open_evernote_note&quot; &#125;,</div><div class="line">&#123; &quot;keys&quot;: [&quot;ctrl+e&quot;, &quot;ctrl+u&quot;], &quot;command&quot;: &quot;save_evernote_note&quot; &#125;,</div></pre></td></tr></table></figure>
-<h3 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h3><ul>
-<li>md_syntax：定义md语法</li>
-<li>inline_css：定义部分CSS样式</li>
-<li>code_highlighting_style：代码高亮样式，autumn, default, github, monokai, perldoc, vim, borland, emacs, igor, murphy, rrt, vs, bw, friendly, native, tango, xcode, colorful, fruity, manni, pastie, trac</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/13/Python资料收集/" itemprop="url">
-                  Python资料收集
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-13T21:18:05+08:00" content="2016-09-13">
-              2016-09-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/13/Python资料收集/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/Python资料收集/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/13/Python资料收集/" class="leancloud_visitors" data-flag-title="Python资料收集">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="常用网站"><a href="#常用网站" class="headerlink" title="常用网站"></a>常用网站</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">网站</th>
-<th style="text-align:left">备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="https://www.python.org/" target="_blank" rel="external">Python 官方网站</a></td>
-<td style="text-align:left">Python 官方网站</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">pip主页</a></td>
-<td style="text-align:left">pip主页</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="http://pip.readthedocs.io/en/stable/" target="_blank" rel="external">pip文档</a></td>
-<td style="text-align:left">pip文档</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="external">Pycharm</a></td>
-<td style="text-align:left">最流行的Python IDE</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://www.continuum.io/downloads" target="_blank" rel="external">ANACONDA</a></td>
-<td style="text-align:left">最适合做科学计算的IDE</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://groups.google.com/forum/#!forum/python-virtualenv" target="_blank" rel="external">python-virtualenv</a></td>
-<td style="text-align:left">Google python社区</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="http://awesome-python.com/" target="_blank" rel="external">awesome python</a></td>
-<td style="text-align:left">Python 资料大全</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://github.com/rougier/numpy-100" target="_blank" rel="external">numpy exercises</a></td>
-<td style="text-align:left">numpy 练习</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="http://python.usyiyi.cn/" target="_blank" rel="external">Python中文官方文档</a></td>
-<td style="text-align:left">中文官方文档</td>
-</tr>
-</tbody>
-</table>
-<h2 id="常用包"><a href="#常用包" class="headerlink" title="常用包"></a>常用包</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">网站</th>
-<th style="text-align:left">备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="https://scrapy.org/" target="_blank" rel="external">scrapy</a></td>
-<td style="text-align:left">最出名的网络爬虫</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://github.com/gawel/pyquery" target="_blank" rel="external">PyQuery</a></td>
-<td style="text-align:left">仿照jQuery的实现，语法与jQuery相同</td>
-</tr>
-</tbody>
-</table>
-<h2 id="书籍推荐"><a href="#书籍推荐" class="headerlink" title="书籍推荐"></a>书籍推荐</h2><ul>
-<li>《Python 学习手册》:对 Python 介绍最全面的书了，包含了绝大多数 Python 语言的关键内容。推荐初学者看</li>
-<li>《Python 语言及其应用》：适合初学者入门</li>
-<li>《Python 高级编程》：进阶书籍</li>
-<li>《Python 高手之路》：本书的作者是开源项目 OpenStack 的 PTL（项目技术负责人）之一的 Julien Danjou。这本书虽然只有 2 百多页，但是本书对项目的结构设计，对模块和库的管理，如何编写文档，如何分发，以及如何通过虚拟环境对项目进行测试都有自己的见解。此外，本书还涉及了很多高级主题，如性能优化、插件化结构的设计与架构、Python 3 的支持策略等。</li>
-<li>《Python 编程实战：运用设计模式、并发和程序库创建高质量程序》</li>
-<li>《Effective Python: 编写高质量 Python 代码的 59 个有效方法》</li>
-<li>《Python Web 开发实战》</li>
-<li>《Python 网络数据采集》</li>
-</ul>
-<h2 id="技术文章"><a href="#技术文章" class="headerlink" title="技术文章"></a>技术文章</h2><ul>
-<li><a href="https://xueqiu.com/7381621247/64925383?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">量化编程、Python 入门及量化策略、量化知识总结贴</a></li>
-<li><a href="http://python.jobbole.com/86296/" target="_blank" rel="external">网络爬虫：使用 Scrapy 框架编写一个抓取书籍信息的爬虫服务</a></li>
-<li><a href="http://python.jobbole.com/86332/" target="_blank" rel="external">Python 不能不知的模块</a></li>
-<li><a href="https://yuez.me/python-zhong-de-guan-jian-zi-with-xiang-jie/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">Python 中的关键字 with 详解</a></li>
-<li><a href="http://qingyunha.github.io/taotao/" target="_blank" rel="external">A Python Interpreter Written in Python</a></li>
-<li><a href="Python 包、模块、类以及代码文件和目录的一种管理方案">Python 包、模块、类以及代码文件和目录的一种管理方案</a></li>
-<li><a href="http://blogread.cn/it/article/6159?f=wb" target="_blank" rel="external">Python 高效编程技巧</a></li>
-<li><a href="http://www.imooc.com/article/3831" target="_blank" rel="external">2015 年十大流行 Python 库</a></li>
-<li><a href="http://www.imooc.com/article/2994" target="_blank" rel="external">我理解的 Python 最佳实践</a></li>
-<li><a href="https://linux.cn/article-7765-1.html?utm_source=weibo&amp;utm_medium=weibo" target="_blank" rel="external">从零构建一个简单的 Python 框架</a></li>
-<li><a href="http://www.tuicool.com/articles/r2yyei" target="_blank" rel="external">NumPy 的详细教程</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/12/设计模式概述/" itemprop="url">
-                  设计模式概述
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-12T23:21:32+08:00" content="2016-09-12">
-              2016-09-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/12/设计模式概述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/12/设计模式概述/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/12/设计模式概述/" class="leancloud_visitors" data-flag-title="设计模式概述">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">名称</th>
-<th style="text-align:left">定义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">策略模式</td>
-<td style="text-align:left">封装了算法，为不同的算法提供统一的接口</td>
-</tr>
-<tr>
-<td style="text-align:left">单一职责</td>
-<td style="text-align:left">就一个类而言，应当仅有一个引起它变化的原因</td>
-</tr>
-<tr>
-<td style="text-align:left">开放封闭原则</td>
-<td style="text-align:left">类、模块、函数可以扩展，但是不可以修改</td>
-</tr>
-<tr>
-<td style="text-align:left">依赖倒转原则</td>
-<td style="text-align:left">抽象不应该依赖细节，细节应该依赖于抽象</td>
-</tr>
-<tr>
-<td style="text-align:left">里氏替换原则</td>
-<td style="text-align:left">子类型必须能够替换掉它们的父类型</td>
-</tr>
-<tr>
-<td style="text-align:left">装饰模式</td>
-<td style="text-align:left">动态的给对象添加额外的职责</td>
-</tr>
-<tr>
-<td style="text-align:left">代理模式</td>
-<td style="text-align:left">为其他对象提供一种代理以控制对这个对象的访问</td>
-</tr>
-<tr>
-<td style="text-align:left">工厂模式</td>
-<td style="text-align:left">定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类</td>
-</tr>
-<tr>
-<td style="text-align:left">模版方法</td>
-<td style="text-align:left">定义封装算法的骨架，而将特定的细节交由子类实现</td>
-</tr>
-<tr>
-<td style="text-align:left">建造者模式</td>
-<td style="text-align:left">将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的应用</td>
-</tr>
-</tbody>
-</table>
-<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变换不会影响到使用算法的客户</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>策略模式定义了一系列算法，这些算法完成相同的工作，只是实现不同，策略模式可以以相同的方式调用所有算法，减少了算法和使用算法类之间的耦合。</li>
-<li>易于进行单元测试</li>
-</ul>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>测旅模式可以封装任何类型的规则，只要在分析过程中需要在不同时间应用的业务规则，就可以使用策略模式处理这种变化的可能性。</p>
-<h2 id="单一职责"><a href="#单一职责" class="headerlink" title="单一职责"></a>单一职责</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>就一个类而言，应当仅有一个引起它变化的原因</p>
-<h3 id="为何需要单一职责"><a href="#为何需要单一职责" class="headerlink" title="为何需要单一职责"></a>为何需要单一职责</h3><p>当一个类承担的职责太多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或抑制这个类完成其他职责的能力，这种耦合会导致脆弱的设计，当变化发生时，设计会遭到意想不到的破坏</p>
-<h3 id="何时需要职责分离"><a href="#何时需要职责分离" class="headerlink" title="何时需要职责分离"></a>何时需要职责分离</h3><p>如果你能够想到多于一个的动机去改变一个类，那么这个类就具有多于一个的职责</p>
-<h2 id="开放封闭原则"><a href="#开放封闭原则" class="headerlink" title="开放封闭原则"></a>开放封闭原则</h2><ul>
-<li>无论模块是多么的”封闭”，都会存在一些无法对之封闭的变化，既然不可能完全封闭，设计人员必须对他设计的模块应该对那种变化封闭做出选择，他必须先猜测出最有可能发生的变化种类，然后构造抽象来隔离那么变化。</li>
-<li>等到变化发生时立即采取行动</li>
-<li>面对需求，对程序的改动是通过增加薪代码进行的，而不是更改现有的代码</li>
-<li>开发人员应改仅对程序中频繁变化的那些部分做出抽象</li>
-</ul>
-<h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h2><ul>
-<li>高层模块不应该依赖低层模块，两个都应该依赖抽象</li>
-<li>抽象不应该依赖细节。细节应该依赖抽象</li>
-<li>依赖倒转可以说是面向对象设计的标志，如果编写时考虑的都是如何针对抽象编程而不是针对细节编程，即程序中所有的依赖关系都是终止于抽象类或者接口，那就是面向对象的设计。</li>
-</ul>
-<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><ul>
-<li>只有当子类可以替换掉父类，软件单位的功能不受影响时，父类才能真正被复用，而子类也能够在父类基础上增加新的行为。</li>
-<li>由于子类的可替换性才使得使用父类类型的模块在无需修改的情况下可以扩展。</li>
-</ul>
-<h2 id="装饰模式-Decorator"><a href="#装饰模式-Decorator" class="headerlink" title="装饰模式(Decorator)"></a>装饰模式(Decorator)</h2><p>动态地给对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。</p>
-<ul>
-<li>装饰模式是为已有功能动态的添加更多功能的一种方式</li>
-<li>当系统需要新的功能时，把每个要装饰的功能放在单独的类中，并让这个类包装它所要装饰的对象。</li>
-<li>装饰模式有效的将核心职责和装饰功能区分开，而且可以去除相关类中重复的装饰逻辑。</li>
-</ul>
-<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>为其他对象提供一种代理以控制对这个对象的访问。</p>
-<ul>
-<li>远程代理，为一个对象在不同的地址空间提供局部代表。这样可以隐藏一个对象存在于不同地址空间的事实。</li>
-<li>虚拟代理，是根据需要创建开销很大的对象，通过它存放实例化需要很长时间的真实对象。</li>
-<li>安全代理，用来控制真实对象访问时的权限。</li>
-<li>智能指引，是指当调用真实对象时，代理处理另外一些事。</li>
-</ul>
-<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><ul>
-<li>简单工厂模式的最大优点在于工厂类中包含必要的逻辑判断，根据客户端的选择条件动态实例化相关类，对客户端来说，去除了于具体产品的依赖。</li>
-<li>工厂方法模式实现时，客户端需要决定实例化哪一个工厂来实现运算类，选择判断的问题还是存在，也就是说工厂方法把简单工厂的内部逻辑判断移到来客户端代码来进行。</li>
-</ul>
-<h2 id="模版方法"><a href="#模版方法" class="headerlink" title="模版方法"></a>模版方法</h2><p>定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模版方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
-<ul>
-<li>模版方法模式是通过把不变行为搬移到超类，去除子类中重复的代码来体现它的优势</li>
-<li>当不变的和可变的行为在方法的子类实现中混合在一起的时候，不变的行为就会在子类中重复出现。我们通过模版方法模式把这些行为搬移到单一的地方，这样就帮助子类摆脱重复的不变行为的纠缠。</li>
-</ul>
-<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。</p>
-<ul>
-<li>迪米特法则的前提是，每个类都应当尽量降低成员的访问权限</li>
-<li>迪米特法则的根本思想是强调类与类之间的松耦合。</li>
-<li>类之间的耦合越弱，越有利于复用。</li>
-</ul>
-<h2 id="外观-Facade-模式"><a href="#外观-Facade-模式" class="headerlink" title="外观(Facade )模式"></a>外观(Facade )模式</h2><p>为子系统中的一组接口提供一个一致的界面，此模式定义来一个高层接口，这个接口使得这一子系统更加容易使用</p>
-<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
-<li>在设计初期应该有意识的将不同的两个层分离，例如典型的MVN结构</li>
-<li>在开发阶段，随着系统不断重构演化而变得越来越复杂，增加外观可以提供一个简单的接口，减少它们之间的依赖</li>
-<li>维护一个遗留的大型系统时，可能这个系统已经非常难以维护和扩展，为新系统开发一个外观Facade类，来提供设计粗糙或高度复杂的遗留代码的比较清晰简单的接口，让新系统与Facade对象交互。</li>
-</ul>
-<h2 id="建造者模式-Builder"><a href="#建造者模式-Builder" class="headerlink" title="建造者模式(Builder)"></a>建造者模式(Builder)</h2><h3 id="用途-1"><a href="#用途-1" class="headerlink" title="用途"></a>用途</h3><p>主要用于创建一些复杂的对象，这些对象内部构建间的建造顺序通常是稳定的，但对象内部的构建通常面临着复杂的变化。<br>建造者模式是在当创建复杂对象的算法应该独立与该对象的组成部分以及它们的装配方式时适用的模式</p>
-<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>使得建造代码与表示代码分离，由于建造者隐藏了该产品是如何组装的，所以若需要改变一个产品的内部表示，只需要再定义一个具体的建造者就可以了。</p>
-<h2 id="观察者模式-Observer"><a href="#观察者模式-Observer" class="headerlink" title="观察者模式(Observer)"></a>观察者模式(Observer)</h2><p>又称发布订阅模式(Publish/Subscribe)<br>观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一主题对象，这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己。</p>
-<h3 id="优势-1"><a href="#优势-1" class="headerlink" title="优势"></a>优势</h3><ul>
-<li>观察者模式所做的工作其实就是在解除耦合。让偶和的双方都依赖于抽象，而不是具体的实现。</li>
-<li>一个抽象模型有两个方面，其中一个方面依赖于另一个方面，这时用观察者模式可以将这两者封装在独立的对象中使它们各自独立的改变和复用。</li>
-</ul>
-<h3 id="用途-2"><a href="#用途-2" class="headerlink" title="用途"></a>用途</h3><ul>
-<li>将一个系统分割成一系列相互协作的类有一个很不好的副作用，那就是需要维护相关对象间的一致性。我们不希望为了维持一致性而使得各类紧密耦合。</li>
-<li>当一个对象的改变需要同时改变其他对象时，而且它不知道有多少个对象有待改变。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/11/MathJax-tutorial/" itemprop="url">
-                  MathJax tutorial
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-11T20:04:07+08:00" content="2016-09-11">
-              2016-09-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MathJax/" itemprop="url" rel="index">
-                    <span itemprop="name">MathJax</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/11/MathJax-tutorial/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/MathJax-tutorial/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/11/MathJax-tutorial/" class="leancloud_visitors" data-flag-title="MathJax tutorial">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">$\alpha$</th>
-<th style="text-align:center">$\beta$</th>
-<th style="text-align:center">$\gamma$</th>
-<th style="text-align:center">$\delta$</th>
-<th style="text-align:center">$\epsilon$</th>
-<th style="text-align:center">$\zeta$</th>
-<th style="text-align:center">$\eta$</th>
-<th style="text-align:center">$\theta$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\alpha</td>
-<td style="text-align:center">\beta</td>
-<td style="text-align:center">\gamma</td>
-<td style="text-align:center">\delta</td>
-<td style="text-align:center">\epsilon</td>
-<td style="text-align:center">\zeta</td>
-<td style="text-align:center">\eta</td>
-<td style="text-align:center">\theta</td>
-</tr>
-<tr>
-<td style="text-align:center">$\iota$</td>
-<td style="text-align:center">$\kappa$</td>
-<td style="text-align:center">$\lambda$</td>
-<td style="text-align:center">$\mu$</td>
-<td style="text-align:center">$\nu$</td>
-<td style="text-align:center">$\xi$</td>
-<td style="text-align:center">$\omicron$</td>
-<td style="text-align:center">$\pi$</td>
-</tr>
-<tr>
-<td style="text-align:center">\iota</td>
-<td style="text-align:center">\kappa</td>
-<td style="text-align:center">\lambda</td>
-<td style="text-align:center">\mu</td>
-<td style="text-align:center">\nu</td>
-<td style="text-align:center">\xi</td>
-<td style="text-align:center">\omicron</td>
-<td style="text-align:center">\pi</td>
-</tr>
-<tr>
-<td style="text-align:center">$\rho$</td>
-<td style="text-align:center">$\sigma$</td>
-<td style="text-align:center">$\tau$</td>
-<td style="text-align:center">$\upsilon$</td>
-<td style="text-align:center">$\phi$</td>
-<td style="text-align:center">$\chi$</td>
-<td style="text-align:center">$\psi$</td>
-<td style="text-align:center">$\omega$</td>
-</tr>
-<tr>
-<td style="text-align:center">\rho</td>
-<td style="text-align:center">\sigma</td>
-<td style="text-align:center">\tau</td>
-<td style="text-align:center">\upsilon</td>
-<td style="text-align:center">\phi</td>
-<td style="text-align:center">\chi</td>
-<td style="text-align:center">\psi</td>
-<td style="text-align:center">\omega</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\Gamma$</th>
-<th style="text-align:center">$\Delta$</th>
-<th style="text-align:center">$\Theta$</th>
-<th style="text-align:center">$\Lambda$</th>
-<th style="text-align:center">$\Xi$</th>
-<th style="text-align:center">$\Pi$</th>
-<th style="text-align:center">$\Phi$</th>
-<th style="text-align:center">$\Psi$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\Gamma</td>
-<td style="text-align:center">\Delta</td>
-<td style="text-align:center">\Theta</td>
-<td style="text-align:center">\Lambda</td>
-<td style="text-align:center">\Xi</td>
-<td style="text-align:center">\Pi</td>
-<td style="text-align:center">\Phi</td>
-<td style="text-align:center">\Psi</td>
-</tr>
-<tr>
-<td style="text-align:center">$\Sigma$</td>
-<td style="text-align:center">$\Upsilon$</td>
-<td style="text-align:center">$\Omega$</td>
-</tr>
-<tr>
-<td style="text-align:center">\Sigma</td>
-<td style="text-align:center">\Upsilon</td>
-<td style="text-align:center">\Omega</td>
-</tr>
-</tbody>
-</table>
-<h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">$\lt$</th>
-<th style="text-align:center">$\gt$</th>
-<th style="text-align:center">$\le$</th>
-<th style="text-align:center">$\ge$</th>
-<th style="text-align:center">$\neq$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\lt</td>
-<td style="text-align:center">\gt</td>
-<td style="text-align:center">\le</td>
-<td style="text-align:center">\ge</td>
-<td style="text-align:center">\neq</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\times$</th>
-<th style="text-align:center">$\div$</th>
-<th style="text-align:center">$\pm$</th>
-<th style="text-align:center">$\mp$</th>
-<th style="text-align:center">$\cdot$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\times</td>
-<td style="text-align:center">\div</td>
-<td style="text-align:center">\pm</td>
-<td style="text-align:center">\mp</td>
-<td style="text-align:center">\cdot</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\cup$</th>
-<th style="text-align:center">$\cap$</th>
-<th style="text-align:center">$\setminus$</th>
-<th style="text-align:center">$\subset$</th>
-<th style="text-align:center">$\subseteq$</th>
-<th style="text-align:center">$\subsetneq$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\cup</td>
-<td style="text-align:center">\cap</td>
-<td style="text-align:center">\setminus</td>
-<td style="text-align:center">\subset</td>
-<td style="text-align:center">\subseteq</td>
-<td style="text-align:center">\subsetneq</td>
-</tr>
-<tr>
-<td style="text-align:center">$\supset$</td>
-<td style="text-align:center">$\in$</td>
-<td style="text-align:center">$\notin$</td>
-<td style="text-align:center">$\emptyset$</td>
-<td style="text-align:center">$\varnothing$</td>
-<td style="text-align:center">$\mid$</td>
-</tr>
-<tr>
-<td style="text-align:center">\supset</td>
-<td style="text-align:center">\in</td>
-<td style="text-align:center">\notin</td>
-<td style="text-align:center">\emptyset</td>
-<td style="text-align:center">\varnothing</td>
-<td style="text-align:center">\mid</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\to$</th>
-<th style="text-align:center">$\rightarrow$</th>
-<th style="text-align:center">$\leftarrow$</th>
-<th style="text-align:center">$\Rightarrow$</th>
-<th style="text-align:center">$\Leftarrow$</th>
-<th style="text-align:center">$\mapsto$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\to</td>
-<td style="text-align:center">\rightarrow</td>
-<td style="text-align:center">\leftarrow</td>
-<td style="text-align:center">\Rightarrow</td>
-<td style="text-align:center">\Leftarrow</td>
-<td style="text-align:center">\mapsto</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\land$</th>
-<th style="text-align:center">$\lor$</th>
-<th style="text-align:center">$\lnot$</th>
-<th style="text-align:center">$\forall$</th>
-<th style="text-align:center">$\exists$</th>
-<th style="text-align:center">$\top$</th>
-<th style="text-align:center">$\bot$</th>
-<th style="text-align:center">$\vdash$</th>
-<th style="text-align:center">$\vDash$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\land</td>
-<td style="text-align:center">\lor</td>
-<td style="text-align:center">\lnot</td>
-<td style="text-align:center">\forall</td>
-<td style="text-align:center">\exists</td>
-<td style="text-align:center">\top</td>
-<td style="text-align:center">\bot</td>
-<td style="text-align:center">\vdash</td>
-<td style="text-align:center">\vDash</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\star$</th>
-<th style="text-align:center">$\ast$</th>
-<th style="text-align:center">$\oplus$</th>
-<th style="text-align:center">$\circ$</th>
-<th style="text-align:center">$\bullet$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\star</td>
-<td style="text-align:center">\ast</td>
-<td style="text-align:center">\oplus</td>
-<td style="text-align:center">\circ</td>
-<td style="text-align:center">\bullet</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\approx$</th>
-<th style="text-align:center">$\sim$</th>
-<th style="text-align:center">$\simeq$</th>
-<th style="text-align:center">$\cong$</th>
-<th style="text-align:center">$\equiv$</th>
-<th style="text-align:center">$\prec$</th>
-<th style="text-align:center">$\lhd$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\approx</td>
-<td style="text-align:center">\sim</td>
-<td style="text-align:center">\simeq</td>
-<td style="text-align:center">\cong</td>
-<td style="text-align:center">\equiv</td>
-<td style="text-align:center">\prec</td>
-<td style="text-align:center">\lhd</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\infty$</th>
-<th style="text-align:center">$\aleph_0$</th>
-<th style="text-align:center">$\nabla$</th>
-<th style="text-align:center">$\partial$</th>
-<th style="text-align:center">$\Im$</th>
-<th style="text-align:center">$\Re$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\infty</td>
-<td style="text-align:center">\aleph_0</td>
-<td style="text-align:center">\nabla</td>
-<td style="text-align:center">\partial</td>
-<td style="text-align:center">\Im</td>
-<td style="text-align:center">\Re</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\ldots$</th>
-<th style="text-align:center">$\ell$</th>
-<th style="text-align:center">$\epsilon$</th>
-<th style="text-align:center">$\varepsilon$</th>
-<th style="text-align:center">$\varphi$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\ldots</td>
-<td style="text-align:center">\ell</td>
-<td style="text-align:center">\epsilon</td>
-<td style="text-align:center">\varepsilon</td>
-<td style="text-align:center">\varphi</td>
-</tr>
-</tbody>
-</table>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><ul>
-<li>blackboard bold: \mathbb or\Bbb $\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>boldface: \mathbf $\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>typewriter: \mathtt $\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>roman font: \mathrm $\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>sans-serif font: \mathsf $\mathsf {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>calligraphic: \mathcal $\mathcal {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>script:\mathscr $\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-<li>Fraktur:\mathfrak $\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
-</ul>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p><code>A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i</code><br>$$A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i$$<br><code>A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i</code><br>$$A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i$$<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">\begin&#123;align&#125;</div><div class="line">\overline &#123;A\cap B&#125; &amp;= \&#123;x\mid x\notin A\cap B\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot(x\in(A\cap B))\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot(x\in A\land x\in B)\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot (x\in A)\lor \lnot(x\in B)\&#125;\\</div><div class="line">&amp;   =\&#123;x\mid x\notin A\lor x\notin B\&#125;\\</div><div class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\lor x\in \overline&#123;B&#125;\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\cup\overline&#123;B&#125;\&#125; \\</div><div class="line">&amp;   =\overline&#123;A&#125;\cup\overline&#123;B&#125;</div><div class="line">\end&#123;align&#125;</div></pre></td></tr></table></figure></p>
-<p>$$ \begin{align}<br>\overline {A\cap B} &amp;= \{x\mid x\notin A\cap B\} \\<br>&amp;   =\{x\mid \lnot(x\in(A\cap B))\} \\<br>&amp;   =\{x\mid \lnot(x\in A\land x\in B)\} \\<br>&amp;   =\{x\mid \lnot (x\in A)\lor \lnot(x\in B)\}\\<br>&amp;   =\{x\mid x\notin A\lor x\notin B\}\\<br>&amp;   =\{x\mid x\in \overline{A}\lor x\in \overline{B}\} \\<br>&amp;   =\{x\mid x\in \overline{A}\cup\overline{B}\} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$<br>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
-<p><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">更多</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -4318,7 +3808,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">55</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

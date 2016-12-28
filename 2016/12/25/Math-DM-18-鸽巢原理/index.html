@@ -100,7 +100,7 @@
 
 证:假定没有盒子包含比$\lce">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Math-DM-18-鸽巢原理">
+<meta property="og:title" content="离散数学学习笔记 鸽巢原理 18">
 <meta property="og:url" content="http://blog.freeabyss.com/2016/12/25/Math-DM-18-鸽巢原理/index.html">
 <meta property="og:site_name" content="Abyss's blog">
 <meta property="og:description" content="鸽巢原理如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    
@@ -110,9 +110,9 @@
 广义鸽巢原理如果$N$个物体放入$k$个盒子，那么至少有一个盒子包含了至少$\lceil N/k\rceil$个物体。   
 
 证:假定没有盒子包含比$\lce">
-<meta property="og:updated_time" content="2016-12-25T14:03:01.000Z">
+<meta property="og:updated_time" content="2016-12-26T12:28:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Math-DM-18-鸽巢原理">
+<meta name="twitter:title" content="离散数学学习笔记 鸽巢原理 18">
 <meta name="twitter:description" content="鸽巢原理如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    
 
 证:假定$k$个盒子中没有一个盒子包含的物体多于$1$个，那么物体总数至多是$k$，这与至少有$k+1$个物体矛盾。    
@@ -142,7 +142,7 @@
 
   <link rel="canonical" href="http://blog.freeabyss.com/2016/12/25/Math-DM-18-鸽巢原理/"/>
 
-  <title> Math-DM-18-鸽巢原理 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 离散数学学习笔记 鸽巢原理 18 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -292,7 +292,7 @@
             
             
               
-                Math-DM-18-鸽巢原理
+                离散数学学习笔记 鸽巢原理 18
               
             
           </h1>
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2016/12/25/Math-DM-18-鸽巢原理/" class="leancloud_visitors" data-flag-title="Math-DM-18-鸽巢原理">
+             <span id="/2016/12/25/Math-DM-18-鸽巢原理/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 鸽巢原理 18">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -373,8 +373,11 @@
 </blockquote>
 <h2 id="广义鸽巢原理"><a href="#广义鸽巢原理" class="headerlink" title="广义鸽巢原理"></a>广义鸽巢原理</h2><p>如果$N$个物体放入$k$个盒子，那么至少有一个盒子包含了至少$\lceil N/k\rceil$个物体。   </p>
 <blockquote>
-<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。   </p>
+<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。  </p>
 </blockquote>
+<p>一类普遍的问题是，把一些物体分到$k$个盒子中要使某个盒子至少含有$r$个物体，求这些物体的最少个数。当有$N$个物体时，广义鸽巢原理告诉我们，只要$\lceil N/k\rceil\ge r$一定有$r$个物体在同一个盒子里。满足$N/k&gt;r-1$的最小正整数，即$N=k(r-1)+1$。</p>
+<h3 id="鸽巢原理的巧妙应用"><a href="#鸽巢原理的巧妙应用" class="headerlink" title="鸽巢原理的巧妙应用"></a>鸽巢原理的巧妙应用</h3><p>在30天的一个月里，某棒球队一天至少打一场比赛，但至多打45场。证明一定有连续若干天内这个队恰好打了14场。<br>令$a_j$是在这个月的第$j$天或第$j$天之前所打的场数，则$a_1,a_2,\dots,a_30$是不同正整数的一个递增序列，其中$1\le a_j\le 45$。从而$a_1+14,a_2+14,\dots,a_30+14$也是不同正整数的一个递增序列，其中$15\le a_j+15\le 59$。<br>$60$个正整数$a_1,a_2,\dots,a_30,a_1+14,a_2+14,\dots,a_30+14$全部小于等于$59$.因此，由鸽巢原理有两个正整数相等。因此整数$a_j j=1,2,\dots,30$都不相同，并且$a_j+14,j=1,2,dots,30$也不相同，一定存在下标$i,j$满足$a_i=a_j+14$。这意味着从第$j+1$天到第$i$天恰好打了14场比赛。     </p>
+<p>每个由$n^2+1$个不同实数构成的序列都包含一个长为$n+1$的严格递增子序列或严格递减子序列。     </p>
 
       
     </div>
@@ -420,6 +423,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/12/26/Math-DM-19-排列和组合/" rel="prev" title="离散数学学习笔记 排列和组合 19">
+                离散数学学习笔记 排列和组合 19 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -445,7 +452,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/12/25/Math-DM-18-鸽巢原理/"
-           data-title="Math-DM-18-鸽巢原理" data-url="http://blog.freeabyss.com/2016/12/25/Math-DM-18-鸽巢原理/">
+           data-title="离散数学学习笔记 鸽巢原理 18" data-url="http://blog.freeabyss.com/2016/12/25/Math-DM-18-鸽巢原理/">
       </div>
     
   </div>
@@ -490,7 +497,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">55</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -563,7 +570,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#鸽巢原理"><span class="nav-number">1.</span> <span class="nav-text">鸽巢原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广义鸽巢原理"><span class="nav-number">2.</span> <span class="nav-text">广义鸽巢原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#鸽巢原理"><span class="nav-number">1.</span> <span class="nav-text">鸽巢原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广义鸽巢原理"><span class="nav-number">2.</span> <span class="nav-text">广义鸽巢原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#鸽巢原理的巧妙应用"><span class="nav-number">2.1.</span> <span class="nav-text">鸽巢原理的巧妙应用</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-12-25T14:03:01.000Z</updated>
+  <updated>2016-12-28T14:11:46.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,11 +16,169 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Math-DM-18-鸽巢原理</title>
+    <title>Math-DM-22-把物体放入盒子</title>
+    <link href="http://blog.freeabyss.com/2016/12/28/Math-DM-22-%E6%8A%8A%E7%89%A9%E4%BD%93%E6%94%BE%E5%85%A5%E7%9B%92%E5%AD%90/"/>
+    <id>http://blog.freeabyss.com/2016/12/28/Math-DM-22-把物体放入盒子/</id>
+    <published>2016-12-28T14:11:05.000Z</published>
+    <updated>2016-12-28T14:11:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 重复的排列组合 21</title>
+    <link href="http://blog.freeabyss.com/2016/12/27/Math-DM-21-%E9%87%8D%E5%A4%8D%E7%9A%84%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
+    <id>http://blog.freeabyss.com/2016/12/27/Math-DM-21-重复的排列组合/</id>
+    <published>2016-12-27T13:49:58.000Z</published>
+    <updated>2016-12-28T14:11:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="有重复的排列和组合"><a href="#有重复的排列和组合" class="headerlink" title="有重复的排列和组合"></a>有重复的排列和组合</h2><p>具有$n$个物体的集合允许重复的$r$的排列数是$n^r$。<br>$n$个元素的集合中允许重复的$r$的组合含有$Cn+r-1,r)=C(n+r-1,n-1)$个。     </p>
+<h3 id="允许和不允许重复的组合与排列"><a href="#允许和不允许重复的组合与排列" class="headerlink" title="允许和不允许重复的组合与排列"></a>允许和不允许重复的组合与排列</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">类别</th>
+<th style="text-align:left">允许重复</th>
+<th style="text-align:left">公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$r$排列</td>
+<td style="text-align:left">不</td>
+<td style="text-align:left">$n!\over (n-r)!$</td>
+</tr>
+<tr>
+<td style="text-align:left">$r$组合</td>
+<td style="text-align:left">不</td>
+<td style="text-align:left">$n!\over r!(n-r)!$</td>
+</tr>
+<tr>
+<td style="text-align:left">$r$排列</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">$n^r$</td>
+</tr>
+<tr>
+<td style="text-align:left">$r$组合</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">$(n+r-1)!\over r!(n-1)!$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="具有不可区分物体的集合的排列"><a href="#具有不可区分物体的集合的排列" class="headerlink" title="具有不可区分物体的集合的排列"></a>具有不可区分物体的集合的排列</h2><p>设类型1的相同物体有$n_1$个，类型2的相同物体有$n_2$个，$\dots$，类型$k$的相同物体有$n_k$个，那么$n$个物体的不同排列数是$$n!\over n_1!n_2!\dots n_k!$$</p>
+<p>证: 为确定排列数，首先注意到可以用$C(n,n_1)$种方式在$n$个位置中放类型1的$n_1$个物体，剩下$n-n_1$个空位。然后用$C(n-n_1,n_2)$种方式放类型2的物体，剩下$n-n_1-n_2$个空位。继续放类型3的物体，$\dots$，类型$k-1$的物体，直到最后可用$C(n-n_1-n_2-\dots -n_{k-1},n_k)$种方式放类型$k$的物体。因此由乘积法则，不同排列的总数是<br>$$\begin{array}{l}<br>C(n,n_1)C(n-n_1,n_2)\dots(n-n_1-\dots -n_{k-1},n_k) \\<br>={n!\over n_1!(n-n_1)!}{(n-n_1)!\over n_2!(n-n_1-n_2)!}\dots{(n-n_1-\dots -n_{k-1})!\over n_k!0!} \\<br>={n!\over n_1!n_2!\dots n_k!}<br>\end{array}$$</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>重新排序单词SUCCESS中的字母能构成多少个不同的串?<br>因为SUCCESS中的某些字母是重复的，答案并不是$7$个字母的排列数。这个单词包含$3$个S、$2$个、$1$个U和$1$个E。为确定重新排列单词中的字母能构成多少个不同的串，首先，注意到$3$个S可以用$C(7,3)$种不同的方式放在$7$个位置中，剩下$4$个空位i。然后可以用$C(4,2)$种方式放$2$个C，留下2个空位。又可以用$C(2,1)$种方式放U，留下$1$个空位。因此放E只有$C(1,1)$种方式。从而，由乘积法则，产生不同的串数是<br>$$\begin{array}{l}C(7,3)C(4,2)C(2,1)C(1,1)&amp;={7!\over 3!4!}\cdot{4!\over 2!2!}\cdot{2!\over 1!1!}\cdot{1!\over 1!0!}\\<br>&amp;={7!\over 3!2!1!1!}\\<br>&amp;=420\end{array}$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;有重复的排列和组合&quot;&gt;&lt;a href=&quot;#有重复的排列和组合&quot; class=&quot;headerlink&quot; title=&quot;有重复的排列和组合&quot;&gt;&lt;/a&gt;有重复的排列和组合&lt;/h2&gt;&lt;p&gt;具有$n$个物体的集合允许重复的$r$的排列数是$n^r$。&lt;br&gt;$n$个元素的集
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 二项式系数 20</title>
+    <link href="http://blog.freeabyss.com/2016/12/26/Math-DM-20-%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0/"/>
+    <id>http://blog.freeabyss.com/2016/12/26/Math-DM-20-二项式系数/</id>
+    <published>2016-12-26T14:08:38.000Z</published>
+    <updated>2016-12-27T13:46:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>设$x$和$y$是变量，$n$是非负整数，那么$$(x+y)^n=\sum_{j=0}^n\left(\begin{array}{c}n \\r\end{array}\right)x^{n-1}y^i$$</p>
+<p>设$n$为非负整数，那么$$\sum_{k=0}^n\left(\begin{array}{c}n \\k\end{array}\right)=2^n$$<br>证明:<br>$$<br>2^n=(1+1)^n =\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)1^k1^{n-k}= \sum_{k=0}^n\left(\begin{array}{c}n \\k\end{array}\right)<br>$$</p>
+<p>设$n$是正整数，那么 $$\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)(-1)^k=0$$</p>
+<p>设$n$是非负整数，那么 $$\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)2^k=3^n$$</p>
+<h2 id="恒等式"><a href="#恒等式" class="headerlink" title="恒等式"></a>恒等式</h2><h3 id="帕斯卡恒等式"><a href="#帕斯卡恒等式" class="headerlink" title="帕斯卡恒等式"></a>帕斯卡恒等式</h3><p>设$n$和$k$是满足$n\ge k$的正整数，那么有 $$\left(\begin{array}{c}n+1\\k\end{array}\right)=\left(\begin{array}{c}n\\k-1\end{array}\right)=\left(\begin{array}{c}n\\k\end{array}\right)$$<br>证:假定$T$是包含$n+1$个元素的集合。令$a$是$T$的一个元素且$S=T-\{a\}$。注意到$T$包含$k$个元素的子集有$\left(\begin{array}{c}n+1\\k\end{array}\right)$个。然而$T$的含$k$个元素的子集或者包含$a$和$S$中的$k-1$个元素，或者不包含$a$但包含$S$中的$k$个元素。由于$S$的$k-1$元子集有$\left(\begin{array}{c}n\\k-1\end{array}\right)$个，故$T$含$a$在内的$k$元子集有$\left(\begin{array}{c}n\\k-1\end{array}\right)$个。由由于$S$的$k$元子集有$\left(\begin{array}{c}n\\k\end{array}\right)$个。故$T$的不含$a$的$k$元子集有$\left(\begin{array}{c}n\\k\end{array}\right)$个。从而得到$$\left(\begin{array}{c}n+1\\k\end{array}\right)=\left(\begin{array}{c}n\\k-1\end{array}\right)=\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
+<h3 id="范德蒙德恒等式"><a href="#范德蒙德恒等式" class="headerlink" title="范德蒙德恒等式"></a>范德蒙德恒等式</h3><p>设$n、m、r$是非负整数，其中$r$不超过$m$或$n$，那么<br>$$\left(\begin{array}{c}n+m\\r\end{array}\right)=\sum_{k=0}^r\left(\begin{array}{c}m\\r-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
+<h4 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h4><p>如果$n$是非负整数，那么$$\left(\begin{array}{c}2n\\n\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)^2$$<br>证: 在范德蒙德恒等式中令$m=r=n$得到$$\left(\begin{array}{c}2n\\n\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\n-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)^2$$</p>
+<p>设$n$和$r$是非负整数，$r\le n$那么$$\left(\begin{array}{c}n+1\\r+1\end{array}\right)=\sum_{j=r}^n\left(\begin{array}{c}j\\r\end{array}\right)$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;二项式定理&quot;&gt;&lt;a href=&quot;#二项式定理&quot; class=&quot;headerlink&quot; title=&quot;二项式定理&quot;&gt;&lt;/a&gt;二项式定理&lt;/h2&gt;&lt;p&gt;设$x$和$y$是变量，$n$是非负整数，那么$$(x+y)^n=\sum_{j=0}^n\left(\begin{
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 排列和组合 19</title>
+    <link href="http://blog.freeabyss.com/2016/12/26/Math-DM-19-%E6%8E%92%E5%88%97%E5%92%8C%E7%BB%84%E5%90%88/"/>
+    <id>http://blog.freeabyss.com/2016/12/26/Math-DM-19-排列和组合/</id>
+    <published>2016-12-26T13:01:43.000Z</published>
+    <updated>2016-12-26T14:00:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h2><p>集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。<br>一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。<br>具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$</p>
+<blockquote>
+<p>只要是$n$非负，就有$P(n,0)=1$。      </p>
+</blockquote>
+<p>如果$n$和$r$都是整数，且$0\le r\le n$，则$$P(n,r)={n!\over (n-r)!}$$</p>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>集合元素的$r$组合是从这个集合无序选取的$r$个元素。简单地说，一个$r$组合是这个集合的一个$r$个元素的子集。<br>具有$n$个不同元素集合的$r$组合记为$C(n,r)$。也记作$\left(\begin{array}{c}n \\r\end{array}\right)$并且称为二项式系数。<br>设$n$是正整数，$r$是满足$0\le r\le n$的整数，$n$元素的集合的$r$组合数等于$$C(n,r)={n!\over r!(n-r)!}$$<br>证 可以如下得到这个集合的$r$排列。先构成集合的$C(n,r)$个$r$组合，然后以$P(n,r)$种方式排序每个$r$组合中的元素，这可以用$P(r,r)$种方式来做。因此$$P(n,r)=C(n,r)*P(r,r)$$这就推出$$C(n,r)={P(n,r)\over P(r,r)}={n!/(n-r)!\over r!/(r-r)!}={n!\over r!(n-r)!}$$</p>
+<p>设$n,r$是满足$n\le r$的非负整数，那么$C(n,r)=C(n,n-r)$。      </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;排列&quot;&gt;&lt;a href=&quot;#排列&quot; class=&quot;headerlink&quot; title=&quot;排列&quot;&gt;&lt;/a&gt;排列&lt;/h2&gt;&lt;p&gt;集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 鸽巢原理 18</title>
     <link href="http://blog.freeabyss.com/2016/12/25/Math-DM-18-%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86/"/>
     <id>http://blog.freeabyss.com/2016/12/25/Math-DM-18-鸽巢原理/</id>
     <published>2016-12-25T13:49:15.000Z</published>
-    <updated>2016-12-25T14:03:01.000Z</updated>
+    <updated>2016-12-26T12:28:15.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="鸽巢原理"><a href="#鸽巢原理" class="headerlink" title="鸽巢原理"></a>鸽巢原理</h2><p>如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    </p>
 <blockquote>
@@ -28,8 +186,11 @@
 </blockquote>
 <h2 id="广义鸽巢原理"><a href="#广义鸽巢原理" class="headerlink" title="广义鸽巢原理"></a>广义鸽巢原理</h2><p>如果$N$个物体放入$k$个盒子，那么至少有一个盒子包含了至少$\lceil N/k\rceil$个物体。   </p>
 <blockquote>
-<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。   </p>
+<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。  </p>
 </blockquote>
+<p>一类普遍的问题是，把一些物体分到$k$个盒子中要使某个盒子至少含有$r$个物体，求这些物体的最少个数。当有$N$个物体时，广义鸽巢原理告诉我们，只要$\lceil N/k\rceil\ge r$一定有$r$个物体在同一个盒子里。满足$N/k&gt;r-1$的最小正整数，即$N=k(r-1)+1$。</p>
+<h3 id="鸽巢原理的巧妙应用"><a href="#鸽巢原理的巧妙应用" class="headerlink" title="鸽巢原理的巧妙应用"></a>鸽巢原理的巧妙应用</h3><p>在30天的一个月里，某棒球队一天至少打一场比赛，但至多打45场。证明一定有连续若干天内这个队恰好打了14场。<br>令$a_j$是在这个月的第$j$天或第$j$天之前所打的场数，则$a_1,a_2,\dots,a_30$是不同正整数的一个递增序列，其中$1\le a_j\le 45$。从而$a_1+14,a_2+14,\dots,a_30+14$也是不同正整数的一个递增序列，其中$15\le a_j+15\le 59$。<br>$60$个正整数$a_1,a_2,\dots,a_30,a_1+14,a_2+14,\dots,a_30+14$全部小于等于$59$.因此，由鸽巢原理有两个正整数相等。因此整数$a_j j=1,2,\dots,30$都不相同，并且$a_j+14,j=1,2,dots,30$也不相同，一定存在下标$i,j$满足$a_i=a_j+14$。这意味着从第$j+1$天到第$i$天恰好打了14场比赛。     </p>
+<p>每个由$n^2+1$个不同实数构成的序列都包含一个长为$n+1$的严格递增子序列或严格递减子序列。     </p>
 ]]></content>
     
     <summary type="html">
@@ -795,231 +956,6 @@
       <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
     
       <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 算法 10</title>
-    <link href="http://blog.freeabyss.com/2016/12/16/Math-DM-10-%E7%AE%97%E6%B3%95/"/>
-    <id>http://blog.freeabyss.com/2016/12/16/Math-DM-10-算法/</id>
-    <published>2016-12-16T09:49:21.000Z</published>
-    <updated>2016-12-21T12:30:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>算法是进行一项计算或解决一个问题的一组有限多条准确的指令。</p>
-<h3 id="算法的性质"><a href="#算法的性质" class="headerlink" title="算法的性质"></a>算法的性质</h3><ul>
-<li>输入 算法从一个指定的集合得到输入值</li>
-<li>输出 对每个输入值集合，算法都要从一个指定的集合中给出输出值。输出值就是问题的解</li>
-<li>确定性 算法的步骤必须是准确定义的</li>
-<li>正确性 对每一组输入值，算法都应产生正确的输出值</li>
-<li>有限性 对任何输入算法都应在有限步之后产出所求值</li>
-<li>有效性 算法的每一步都应能够准确地在有限时间内完成</li>
-<li>通用性 算法过程应该用于期望形式的所有问题，而不只是用于特定的值</li>
-</ul>
-<h2 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h2><h3 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {linear\; search} (x:integer, a_1,a_2,\dots,a_n:integer)\\<br>i:=1 \\<br>\mathbf {while}(i\le and\; x\neq a_i) \\<br>\qquad i:=i+1 \\<br>\mathbf {if} \, i\le n\;\mathbf {then} \; location :=i \\<br>\mathbf {else} \;\; location := 0 \\<br>\{location是等于x的项的下标，或是0(若找不到x)\}<br>\end{array}<br>$$</p>
-<h3 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {binary \; search}(x:integer,a_1,a_2,\dots,a_n:integer 递增) \\<br>i:=1 \{i是搜索区间的左端点\} \\<br>j:=1 \{j是搜索区间的右端点\} \\<br>\mathbf {while}\; i<j \\="" \mathbf="" {begin}="" \qquad="" m:="\lfloor" (i+j)="" 2\rfloor="" {if}\;="" x="">a_m\; \mathbf {then}\; i:=m+1 \\<br>\qquad \mathbf {else}\; j:=m \\<br>\mathbf {end}\\<br>\mathbf {if}\; x=a_i \;\mathbf {then}\; location:=i\\<br>\mathbf {else}\; location:=0 \\<br>\{location 是等于x的项的下标，或是0(若找不到x)\}<br>\end{array}<br>$$  </j></p>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {bubble \; sort}(a_1,a_2,\dots,a_n:double,n\ge 2) \\<br>\mathbf {for}\; i:=1\mathbf {to}\; n-1 \\<br>\qquad\mathbf {for}\; j:=1\mathbf {to}\; n-i\\<br>\qquad\qquad\mathbf {if}\; a_j&gt;a_{j+1}\;\mathbf {then}\; swap(a_j,a_{j+1}) \\<br>\{a_1,\dots,a_n 按升序排列\}<br>\end{array}<br>$$ </p>
-<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>$$<br>\begin{array}{l}<br>\mathbf {procedure}\; insertion\; sort(a_1,a_2,\dots,a_n:double,n\ge 2)\\<br>\mathbf {for}\; j:=2\;\mathbf {to}\; n\\<br>\mathbf {begin} \\<br>\qquad i:=1\\<br>\qquad\mathbf {while}\; a_j&gt;a_i\\<br>\qquad\qquad i:=i+1\\<br>\qquad m:=a_j\\<br>\mathbf {for}\; k:=0\;\mathbf {to}\; j-i-1\\<br>\qquad\qquad a_{j-k} :=a_{j-k-1}\\<br>\qquad a_i:=m\\<br>\mathbf {end}\\<br>\{a_1,a_2,\dots,a_n已排序\}<br>\end{array}<br>$$</p>
-<h3 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h3><p>有很多算法用于解决优化问题，这种问题的目标是求给定问题把某个参数值最小化或最大化的解。例如，求两个城市总长度最短路径，网络结点之间使用最少量光纤的一组光纤连接。<br>一种最简单的方法求优化问题的解，这种方法在每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列。这种在每一步都选择最好选项的算法称为贪心算法。</p>
-<h3 id="停机问题"><a href="#停机问题" class="headerlink" title="停机问题"></a>停机问题</h3><p>该问题无解。<br>该程序的输入部分是某个计算机程序，以该程序是否能正常结束作为输出结果。<br>证：假设停机问题有解，比如某个程序${H(P,I)}$，它包括两个输入项，即程序$P$和程序$I$，假设$P$在输入$I$时可停机，将输出字符串”停机”,反之输出”死循环”。现在可以用反证法证明这样的$H$不存在。<br>当编写一个程序的时候，程序本身可以看做是一行字符；字符串可以被解释为比特序列，也就是说，程序本身就可以当作数据使用，因此一个程序可以作为另一个程序甚至自身的输入，$H$可以判断当$P$自身作为输入时，$P$是否会停机。<br>为了证明不存在程序$H$能够求解停机问题，我们构造一个简单过程${K(P)}$，它利用的是${H(P,P)}$的输出。如果${H(P,P)}$的输出是死循环，即$P$自身作为输入时会死循环，那么${K(P)}$停机。如果${H(P,P)}$的输出是”停机”，即$P$自身作为输入时会停机，那么${K(P)}$死循环。也就是说${K(P)}$和${H(P,P)}$的输出相反。<br>现在假设把$K$作为$K$的输入，需要注意，如果${H(K,K)}$的输出是”死循环”，那么根据上面的定义$K(K)$停机。否则，如果$H(K,K)$的输出是”停机”,根据上面的定义$K(K)$的输出是”死循环”。而这与$H$的定义是相违背的。这两种情况下，都会产生矛盾。 </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;算法&quot;&gt;&lt;a href=&quot;#算法&quot; class=&quot;headerlink&quot; title=&quot;算法&quot;&gt;&lt;/a&gt;算法&lt;/h2&gt;&lt;p&gt;算法是进行一项计算或解决一个问题的一组有限多条准确的指令。&lt;/p&gt;
-&lt;h3 id=&quot;算法的性质&quot;&gt;&lt;a href=&quot;#算法的性质&quot; clas
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XML简要</title>
-    <link href="http://blog.freeabyss.com/2016/12/15/Web-XML%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://blog.freeabyss.com/2016/12/15/Web-XML详解/</id>
-    <published>2016-12-15T13:44:31.000Z</published>
-    <updated>2016-12-17T06:34:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>XML是可扩展标记语言，本文整理自<a href="http://www.w3school.com.cn/xml/index.asp" target="_blank" rel="external">W3School</a>。<br>关于XML的简介、用途以及与HTML的区别，请参考以下链接，本文只列出XML的要点：<br><a href="http://www.w3school.com.cn/xml/xml_intro.asp" target="_blank" rel="external">XML简介</a><br><a href="http://www.w3school.com.cn/xml/xml_usedfor.asp" target="_blank" rel="external">XML用途</a></p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
-<li>XML文档的第一行为XML声明，定义了XML的版本和使用的编码。</li>
-<li>第二行为描述文档的根元素，XML文档必须包含根元素，该元素是所有其他元素的父元素。</li>
-<li><p>所有元素均可拥有文本内容、属性(类似HTML)以及子元素</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">note</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">to</span>&gt;</span>George<span class="tag">&lt;/<span class="name">to</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">from</span>&gt;</span>John<span class="tag">&lt;/<span class="name">from</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">heading</span>&gt;</span>Reminder<span class="tag">&lt;/<span class="name">heading</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>Don't forget the meeting!<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">note</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>所有元素必须有关闭标签</p>
-</li>
-<li>XML对大小写敏感   </li>
-<li>XML必须正确的嵌套</li>
-<li>XML的属性值须加引号，单引号和双引号均可使用</li>
-<li>XML的注释为<code>&lt;!--  --&gt;</code>，同HTML一样</li>
-<li>XML中空格会保留，HTML会把多个连续的空格裁减为一个</li>
-<li>XML以<code>LF</code>存储换行。<code>CR</code>回车符，<code>LF</code>换行符</li>
-</ul>
-<h3 id="XML命名规则及最佳实践"><a href="#XML命名规则及最佳实践" class="headerlink" title="XML命名规则及最佳实践"></a>XML命名规则及最佳实践</h3><ul>
-<li>名称可以含字母、数字以及其他的字符 </li>
-<li>名称不能以数字或标点符号开始</li>
-<li>名称不能以字符<code>xml</code>、<code>XML</code>、<code>Xml</code>等开始</li>
-<li>名称不能包含空格</li>
-<li>避免使用<code>-</code>、<code>.</code>、<code>:</code>字符。最好使用字母、数字以及<code>_</code>下划线</li>
-</ul>
-<h3 id="XML属性"><a href="#XML属性" class="headerlink" title="XML属性"></a>XML属性</h3><ul>
-<li>尽量使用元素来描述数据，仅仅使用属性提供与数据无关的信息</li>
-<li>元数据应当存储为属性，而数据本身应当存储为元素</li>
-</ul>
-<h3 id="XML验证"><a href="#XML验证" class="headerlink" title="XML验证"></a>XML验证</h3><ul>
-<li>DTD文档用于定义XML文档的结构</li>
-<li>SchemaDTD的代替者</li>
-<li>如果XML文档存在错误，那么程序不应该继续处理这个文档</li>
-</ul>
-<h3 id="XML-样式"><a href="#XML-样式" class="headerlink" title="XML 样式"></a>XML 样式</h3><ul>
-<li><p>XML可以引用CSS样式格式化XML，但不推荐使用该方法，W3C推荐使用XSLT</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line">&lt;?xml-stylesheet type="text/css" href="cd_catalog.css"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">CATALOG</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">CD</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">TITLE</span>&gt;</span>Empire Burlesque<span class="tag">&lt;/<span class="name">TITLE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ARTIST</span>&gt;</span>Bob Dylan<span class="tag">&lt;/<span class="name">ARTIST</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COUNTRY</span>&gt;</span>USA<span class="tag">&lt;/<span class="name">COUNTRY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COMPANY</span>&gt;</span>Columbia<span class="tag">&lt;/<span class="name">COMPANY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">PRICE</span>&gt;</span>10.90<span class="tag">&lt;/<span class="name">PRICE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">YEAR</span>&gt;</span>1985<span class="tag">&lt;/<span class="name">YEAR</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">CD</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">CD</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">TITLE</span>&gt;</span>Hide your heart<span class="tag">&lt;/<span class="name">TITLE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ARTIST</span>&gt;</span>Bonnie Tyler<span class="tag">&lt;/<span class="name">ARTIST</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COUNTRY</span>&gt;</span>UK<span class="tag">&lt;/<span class="name">COUNTRY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">COMPANY</span>&gt;</span>CBS Records<span class="tag">&lt;/<span class="name">COMPANY</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">PRICE</span>&gt;</span>9.90<span class="tag">&lt;/<span class="name">PRICE</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">YEAR</span>&gt;</span>1988<span class="tag">&lt;/<span class="name">YEAR</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">CD</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">CATALOG</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>XSLT是首选的XML样式表语言</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</div><div class="line">&lt;?xml-stylesheet type="text/xsl" href="simple.xsl"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">breakfast_menu</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">food</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Belgian Waffles<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">price</span>&gt;</span>$5.95<span class="tag">&lt;/<span class="name">price</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span></div><div class="line">       two of our famous Belgian Waffles</div><div class="line">    <span class="tag">&lt;/<span class="name">description</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">calories</span>&gt;</span>650<span class="tag">&lt;/<span class="name">calories</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">food</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">breakfast_menu</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="XML-命名空间"><a href="#XML-命名空间" class="headerlink" title="XML 命名空间"></a>XML 命名空间</h3><p>当两个相同的XML文档被一起使用时，如果两个文档包含不同内容和定义的相同元素，就会发送命名冲突。 为了避免该问题，引入了命名空间的概念。    </p>
-<h4 id="通过使用前缀来避免命名冲突"><a href="#通过使用前缀来避免命名冲突" class="headerlink" title="通过使用前缀来避免命名冲突"></a>通过使用前缀来避免命名冲突</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h:table</span> <span class="attr">xmlns:h</span>=<span class="string">"http://www.w3.org/TR/html4/"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h:tr</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h:td</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">h:td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h:td</span>&gt;</span>Bananas<span class="tag">&lt;/<span class="name">h:td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">h:tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">h:table</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">f:table</span> <span class="attr">xmlns:f</span>=<span class="string">"http://www.w3school.com.cn/furniture"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">f:name</span>&gt;</span>African Coffee Table<span class="tag">&lt;/<span class="name">f:name</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">f:width</span>&gt;</span>80<span class="tag">&lt;/<span class="name">f:width</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">f:length</span>&gt;</span>120<span class="tag">&lt;/<span class="name">f:length</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">f:table</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>其中<code>xmlns</code>属性为前缀赋予了一个与某个命名空间相关联的限定名称。(可以不使用<code>xmlns</code>，仅仅使用前缀来避免命名冲突)</p>
-<h4 id="命名空间属性"><a href="#命名空间属性" class="headerlink" title="命名空间属性"></a>命名空间属性</h4><p>命名空间属性被放置于元素的开始标签中，并使用以下语法：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns:namespace-prefix="namespaceURI"</div></pre></td></tr></table></figure></p>
-<h4 id="默认的命名空间"><a href="#默认的命名空间" class="headerlink" title="默认的命名空间"></a>默认的命名空间</h4><p>为元素定义默认的命名空间可以让我们省去在所有的子元素中使用前缀的工作。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/TR/html4/"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">td</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">td</span>&gt;</span>Bananas<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3school.com.cn/furniture"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">name</span>&gt;</span>African Coffee Table<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">width</span>&gt;</span>80<span class="tag">&lt;/<span class="name">width</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">length</span>&gt;</span>120<span class="tag">&lt;/<span class="name">length</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="CDATA"><a href="#CDATA" class="headerlink" title="CDATA"></a>CDATA</h3><p>CDATA部分的所有内容都会被解析器忽略。<br>CDATA部分不能包含字符串<code>]]&gt;</code>。也不允许嵌套的CDATA。<br>标记CDATA部分结尾的<code>]]&gt;</code>不能包含空格或折行。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">&lt;![CDATA[</div><div class="line">function matchwo(a,b)</div><div class="line">&#123;</div><div class="line">if (a &lt; b &amp;&amp; a &lt; 0) then</div><div class="line">  &#123;</div><div class="line">  return 1;</div><div class="line">  &#125;</div><div class="line">else</div><div class="line">  &#123;</div><div class="line">  return 0;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">]]&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;XML是可扩展标记语言，本文整理自&lt;a href=&quot;http://www.w3school.com.cn/xml/index.asp&quot; ta
-    
-    </summary>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>康托尔对角化论证</title>
-    <link href="http://blog.freeabyss.com/2016/12/15/Function-01-%E5%BA%B7%E6%89%98%E5%B0%94%E5%AF%B9%E8%A7%92%E5%8C%96%E8%AE%BA%E8%AF%81/"/>
-    <id>http://blog.freeabyss.com/2016/12/15/Function-01-康托尔对角化论证/</id>
-    <published>2016-12-15T12:47:43.000Z</published>
-    <updated>2016-12-16T09:49:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>对角论证法是乔治 · 康托尔于 1891 年提出的用于说明实数集合是不可数集的证明。<br>要证明实数集合是不可数的，就假定实数集合是可数的并得出矛盾。于是，所有落在$0$和$1$之间的实数所成的子集合也是可数的(因为可数集合的所有子集合都是可数的)。在此假设下，在$0$和$1$之间的实数按照某种顺序列出，比如说$r_1,r_2,r_3,\dots$设这些实数的十进制表示为<br>$$<br>    r_1 =0.d_{11}d_{12}d_{13}d_{14}\dots \\<br>    r_2 =0.d_{21}d_{22}d_{23}d_{24}\dots \\<br>    r_3 =0.d_{31}d_{32}d_{33}d_{34}\dots \\<br>    r_4 =0.d_{41}d_{42}d_{43}d_{44}\dots \\<br>    .\\<br>    .\\<br>    .\\<br>$$<br>其中$d_{ij}\in \{0,1,2,3,4,5,6,7,8,9\}$。(例如，如果$r_1=0.23794101\dots$，就有$d_{11}=2,d_{12}=3,d_{14}=7\dots$)于是，构造新的实数具有十进制展开式$r=0.d_1d_2d_3d_4\dots$，其中用下列规则确定十进制数字：<br>$$<br>f(n) =<br>\begin{cases}<br>4, &amp; \text{if $d_i\neq$ 4} \[2ex]<br>5, &amp; \text{if $d_i$= 4}<br>\end{cases}<br>$$<br>例如，假定$r_1=0.23794102\dots, r_2=0.44590138\dots,r_3=0.09118764\dots$等等，于是$r=0.d_1d_2d_3d_4\dots =0.4544\dots$,其中因为$d_{11}\neq 4,d_1=4,d_{22}=4,d_2=5 \dots$)<br>每个实数都有唯一的十进制展开式(展开式结尾全部由数字$9$组成的可能性除外)。于是，实数$r$不等于$r_1,r_2,\dots $中的任何一个，因为对每个$i$来说，$r$的十进制展开式与$r_i$的十进制展开式在小数点右边第$i$位是不同的。<br>由于存在着不在列表中而在$0$和$1$之间的实数$r$，所以可以列出在$0$和$1$之间所有实数的假设必定为假。因此，不能列出在$0$和$1$之间的所有实数，在$0$和$1$之间的实数集合是不可数的。任何包含不可数子集合的集合都是不可数的。因此实数集合是不可数的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对角论证法是乔治 · 康托尔于 1891 年提出的用于说明实数集合是不可数集的证明。&lt;br&gt;要证明实数集合是不可数的，就假定实数集合是可数的并得出矛盾。于是，所有落在$0$和$1$之间的实数所成的子集合也是可数的(因为可数集合的所有子集合都是可数的)。在此假设下，在$0$和
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="function" scheme="http://blog.freeabyss.com/tags/function/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 序列求和 09</title>
-    <link href="http://blog.freeabyss.com/2016/12/15/Math-DM-09-%E5%BA%8F%E5%88%97%E6%B1%82%E5%92%8C/"/>
-    <id>http://blog.freeabyss.com/2016/12/15/Math-DM-09-序列求和/</id>
-    <published>2016-12-15T11:47:31.000Z</published>
-    <updated>2016-12-21T12:30:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h2><p>序列是用来表示有序表的离散结构。<br>序列是从整数集合的子集(通常是$\{0,1,2,\dots \}$或$\{1,2,3,\dots \}$)到集合$S$的函数。用记号$a_n$表示整数$n$的像，称$a_n$为序列的一个项。<br>例如： 考虑序列$\{a_n\}$，其中$$a_n=1/n$$。 从$a_1$开始的这个序列项的表，即$$a_1,a_2,a_3,a_4,\dots $$开头是$$1,{1\over 2},{1\over 3},{1\over 4},\dots $$  </p>
-<h3 id="几何序列"><a href="#几何序列" class="headerlink" title="几何序列"></a>几何序列</h3><p>几何序列是如下形式的序列，$$a, ar, ar^2, \cdots ,ar^n, \cdots$$ 其中初项$a$和公比$r$都是实数。      </p>
-<blockquote>
-<p>几何序列是指数函数$f(x)=ar^x$的离散对应物</p>
-</blockquote>
-<h3 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h3><p>等差数列是如下形式的序列，$$a, a+d, a+2d, \cdots , a+nd, \cdots$$ 其中初项$a$和公差$r$都是实数。     </p>
-<blockquote>
-<p>等差序列是线形函数$f(x)=dx+1$的离散对应物。  </p>
-</blockquote>
-<h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><p>在计算机科学中经常使用形如$a_1,a_2,\dots ,a_n$的序列，这些有穷序列也称为串，这些串也记作$a_1a_2\dots a_n$。串$S$的长度是这个串中的项数。空串是没有任何项的串，记作$\lambda$。空串长度为$0$。    </p>
-<blockquote>
-<p>例如，串$abcd$的长度为4.</p>
-</blockquote>
-<h3 id="特殊的整数序列"><a href="#特殊的整数序列" class="headerlink" title="特殊的整数序列"></a>特殊的整数序列</h3><p>在找出构造序列项的公式或一般规则时，需要注意的几个问题：  </p>
-<ul>
-<li>是否有相同值连续出现 </li>
-<li>是否给前项加上常量或与序列中位置有关的量就得出后项  </li>
-<li>是否给前项乘以特定量就得出后项  </li>
-<li>是否在各项之间存在循环</li>
-</ul>
-<h2 id="求和公式"><a href="#求和公式" class="headerlink" title="求和公式"></a>求和公式</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">和</th>
-<th style="text-align:left">闭形式</th>
-<th style="text-align:left">和</th>
-<th style="text-align:left">闭形式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$$\sum_{k=0}^n ar^k(r\neq 0)$$</td>
-<td style="text-align:left">$${ar^{n+1}-a\over r-1},r\neq 1$$</td>
-<td style="text-align:left">$$\sum_{k=1}^n k^3$$</td>
-<td style="text-align:left">$$n^2(n+1)^2\over 4$$</td>
-</tr>
-<tr>
-<td style="text-align:left">$$\sum_{k=1}^n k$$</td>
-<td style="text-align:left">$$n(n+1)\over 2$$</td>
-<td style="text-align:left">$$\sum_{k=0}^\infty x^k, \mid x\mid\lt 1$$</td>
-<td style="text-align:left">$$1\over 1-x$$</td>
-</tr>
-<tr>
-<td style="text-align:left">$$\sum_{k=1}^n k^2$$</td>
-<td style="text-align:left">$$n(n+1)(2n+1)\over 6$$</td>
-<td style="text-align:left">$$\sum_{k=1}^\infty kx^{k-1}, \mid x\mid\lt 1$$</td>
-<td style="text-align:left">$$1\over (1-x)^2$$</td>
-</tr>
-</tbody>
-</table>
-<h2 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h2><ul>
-<li>集合$A$与集合$B$有相同的基数，当且仅当存在从$A$到$B$的一一对应</li>
-<li>有限集或与自然数集基数相同的无限集称为可数的，反之称为不可数的。</li>
-<li>如果无穷集合$S$是可数的，我们用符号$\aleph_0$来表示集合$S$的基数。记作$\mid S\mid=\aleph_0$，且说$S$有基数希伯来零。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;序列&quot;&gt;&lt;a href=&quot;#序列&quot; class=&quot;headerlink&quot; title=&quot;序列&quot;&gt;&lt;/a&gt;序列&lt;/h2&gt;&lt;p&gt;序列是用来表示有序表的离散结构。&lt;br&gt;序列是从整数集合的子集(通常是$\{0,1,2,\dots \}$或$\{1,2,3,\dots \
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="sequence" scheme="http://blog.freeabyss.com/tags/sequence/"/>
     
   </entry>
   

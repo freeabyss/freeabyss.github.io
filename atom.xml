@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2016-12-28T14:11:46.000Z</updated>
+  <updated>2017-01-07T07:51:36.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,13 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Math-DM-22-把物体放入盒子</title>
+    <title>离散数学学习笔记 数学归纳法 23</title>
+    <link href="http://blog.freeabyss.com/2017/01/07/Math-DM-23-%E6%95%B0%E5%AD%A6%E5%BD%92%E7%BA%B3%E6%B3%95/"/>
+    <id>http://blog.freeabyss.com/2017/01/07/Math-DM-23-数学归纳法/</id>
+    <published>2017-01-07T01:59:39.000Z</published>
+    <updated>2017-01-07T07:51:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数学归纳法"><a href="#数学归纳法" class="headerlink" title="数学归纳法"></a>数学归纳法</h2><p>数学归纳法用来证明形如$\forall nP(n)$的一类定理，其中论域是正整数集合。<br>数学归纳法主要用于证明一个公式是否正确，而不能用于推导公式。     </p>
+<h3 id="数学归纳法原理"><a href="#数学归纳法原理" class="headerlink" title="数学归纳法原理"></a>数学归纳法原理</h3><p>为证明对所有的正整数$n$，$P(n)$为真，其中$P(n)$是一个命题函数，需要完成两个步骤:<br>    基础步骤:证明命题$P(1)$为真。<br>    归纳步骤:证明对每个正整数$k$来说，蕴含式$P(k)\rightarrow P(k+1)$为真。<br>有时候需要证明对$n=b,b+1,b+2,\dots$ 来说$P(n)$为真，其中$b$是不等于$1$的整数。只要改变基础步骤，就可以用数学归纳法来完成这个证明。     </p>
+<h3 id="数学归纳法证明示例"><a href="#数学归纳法证明示例" class="headerlink" title="数学归纳法证明示例"></a>数学归纳法证明示例</h3><h4 id="几何级数求和"><a href="#几何级数求和" class="headerlink" title="几何级数求和"></a>几何级数求和</h4><p>设$n$是一个非负整数，证明一下等式成立。 $$\sum_{j=0}^n ar^j=a+ar+ar^2+\dots+ar^n={ar^{n+1}-a\over r-1}, r\neq 1$$<br>基础步骤: $P(0)$为真，因为$${ar^{0+1}-a\over r-1}={ar-a\over r-1}=a$$<br>归纳步骤: 假设$P(k)$为真。 $$a+ar+ar^2+\dots+ar^k={ar^{k+1}-a\over r-1}$$<br>接着要证明$P(k+1)$为真， 将上述等式两边加上$ar^{k+1}$，得到$$a+ar+ar^2+\dots+ar^k+ar^{k+1}={ar^{k+1}-a\over r-1}+ar^{k+1}$$<br>改写等式右边: $${ar^{k+1}-a\over r-1}+ar^{k+1}={ar^{k+1}-a\over r-1}+{ar^{k+2}-ar^{k+1}\over r-1}={ar^{k+2}-a\over r-1}$$<br>于是: $$a+ar+ar^2+\dots+ar^k+ar^{k+1}={ar^{k+2}-a\over r-1}$$<br>这就证明了，如果归纳假设$P(k)$为真，则$P(k+1)$也必为真。      </p>
+<h4 id="证明不等式"><a href="#证明不等式" class="headerlink" title="证明不等式"></a>证明不等式</h4><p>证明:对每个满足$n\ge 4$的正整数$n$来说，有$2^n&lt;n!$。<br>设$P(n)$是命题:$2^n&lt;n!$。<br>基础步骤: 为了证明对$n\ge 4$来说这个不等式成立，基础步骤应该是$P(4)$。$P(4)$为真，因为$2^4&lt;4!$。<br>归纳步骤: 对归纳步骤，假定$P(k)$为真，其中$k\ge 4$。接下来证明$2^{k+1}&lt;(k+1)!$为真，<br>$$\begin{array}{l}2^{k+1} &amp; =2\cdot 2^k\\ &amp;&lt; 2\cdot k!\\ &amp;&lt;(k+1)k!\\&amp;=(k+1)!\end{array}$$</p>
+<h4 id="调和数的不等式"><a href="#调和数的不等式" class="headerlink" title="调和数的不等式"></a>调和数的不等式</h4><p>调和数$H_j(j=1,2,3,\dots)$的定义为 $$H_j=1+{1\over 2}+{1\over 3}+\dots + {1\over j}$$<br>证明:$$H_{2^n}\ge 1+{n\over 2}$$<br>设$P(n)$是命题 $H_{2^n}\ge 1+n/2$<br>基础步骤: $P(0)$为真，因为$H_{2^0}=H_1=1\ge 1+0/2$<br>归纳步骤: 归纳假设命题是$P(k)$为真，即$H_{2^k}\ge 1+{k\over 2}$,其中$k$是非负整数。证明$P(k+1)$也为真，即命题$H_{2^{k+1}}\ge 1+{k+1\over 2}$为真。<br>$$\begin{array}{l} H_{2^{k+1}}&amp;=1+{1\over 2}+\dots+{1\over 2^k}+{1\over 2^k+1}+\dots+{1\over 2^{k+1}}\\&amp;=H_{2^k}+{1\over 2^k+1}+\dots+{1\over 2^{k+1}}\\&amp;\ge (1+{k\over 2})+{1\over 2^k+1}+\dots+{1\over 2^{k+1}}\\&amp;\ge (1+{k\over 2}+2^k\cdot {1\over 2^{k+1}}\\ &amp;\ge (1+{k\over 2})+{1\over 2}\\&amp;=1+{k+1\over 2} \end{array}$$</p>
+<h4 id="有限集合自己的个数"><a href="#有限集合自己的个数" class="headerlink" title="有限集合自己的个数"></a>有限集合自己的个数</h4><p>证明: 若$S$有$n$个元素的有限集合，其中$n$是一个非负整数，则$S$有$2^n$个子集。<br>设 $P(n)$是命题:有$n$个元素的集合有$2^n$个子集。<br>基础步骤:$P(0)$为真，因为有$0$个元素的集合，即空集，有$1$个子集，即它本身。<br>归纳步骤:假定对于所有非负整数$k$，$P(k)$为真，即假定所有$k$个元素的几个都有$2^k$个子集。必须证明在此假定下，命题$P(k+1)$为真。为此，假定$T$是一个具有$k+1$个元素的集合，于是$T$可以写成$T=S\cup \{a\}$,其中$a$是$T$中的一个元素，且$S=T-\{a\}$，因此$\mid S\mid =k$。对于$S$的每个子集$X$而言，存在$T$的两个子集，即$X$和$X\cup {a}$。这些集合构成卵$T$的所有子集，且这些子集都不相同。因为$S$有$2^k$个子集，所有$T$有$2\cdot 2^k=2^{k+1}$个子集。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数学归纳法&quot;&gt;&lt;a href=&quot;#数学归纳法&quot; class=&quot;headerlink&quot; title=&quot;数学归纳法&quot;&gt;&lt;/a&gt;数学归纳法&lt;/h2&gt;&lt;p&gt;数学归纳法用来证明形如$\forall nP(n)$的一类定理，其中论域是正整数集合。&lt;br&gt;数学归纳法主要用于证明
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 把物体放入盒子 22</title>
     <link href="http://blog.freeabyss.com/2016/12/28/Math-DM-22-%E6%8A%8A%E7%89%A9%E4%BD%93%E6%94%BE%E5%85%A5%E7%9B%92%E5%AD%90/"/>
     <id>http://blog.freeabyss.com/2016/12/28/Math-DM-22-把物体放入盒子/</id>
     <published>2016-12-28T14:11:05.000Z</published>
-    <updated>2016-12-28T14:11:46.000Z</updated>
+    <updated>2017-01-07T02:00:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="把物体放入盒子"><a href="#把物体放入盒子" class="headerlink" title="把物体放入盒子"></a>把物体放入盒子</h2><p>许多计数问题都可以通过枚举把不同的物体放入不同盒子的方式数来解决，这些被放入盒子的物体的次序是无关紧要的。<br>这些物体既可以是可辨别的，即每个都是不同的，也可以是不可辨别的，即认为每个都是相同的。可辨别的物体也称为有标号的，而不可辨别的物体则称为没有标号的。<br>类似的盒子也分为可辨别的、不可辨别的。    </p>
+<h3 id="可辨别的物体与可辨别的盒子"><a href="#可辨别的物体与可辨别的盒子" class="headerlink" title="可辨别的物体与可辨别的盒子"></a>可辨别的物体与可辨别的盒子</h3><p>把$n$个不同的物体分配到$k$个不同的盒子使得$n_i$个物体放入盒子$i(i=1,2,\dots,k)$的方式数等于<br>$$n!\over n_1!n_2!\dots n_k!$$</p>
+<h3 id="不可辨别的物体与可辨别的盒子"><a href="#不可辨别的物体与可辨别的盒子" class="headerlink" title="不可辨别的物体与可辨别的盒子"></a>不可辨别的物体与可辨别的盒子</h3><p>$n$个不可辨别的物体放入$k$个可辨别的盒子的方式数等价于在允许重复计数的情况下，对具有$k$个元素的集合计算$n$组合的问题。    </p>
+<h3 id="可辨别的物体与不可辨别的盒子"><a href="#可辨别的物体与不可辨别的盒子" class="headerlink" title="可辨别的物体与不可辨别的盒子"></a>可辨别的物体与不可辨别的盒子</h3><p>关于计算把$n$个可辨别的物体放入$j$个不可辨别的盒子的方式数问题，我们没有一个简单可用的封闭公式。但是，却有一个相当复杂的计算公式，设$S(n,j)$表示将$n$个可辨别的物体放入$j$个不可辨别的盒子的方式数，其中不允许有空的盒子。$S(n,j)$称为第二类斯特灵数。<br>$$\sum_{j=1}^kS(n,j)=\sum_{j=1}^k{1\over j!}\sum_{i=0}^{j-1}(-1)^i\left(\begin{array}{c}j\\i\end{array}\right)(j-i)^n$$</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;把物体放入盒子&quot;&gt;&lt;a href=&quot;#把物体放入盒子&quot; class=&quot;headerlink&quot; title=&quot;把物体放入盒子&quot;&gt;&lt;/a&gt;把物体放入盒子&lt;/h2&gt;&lt;p&gt;许多计数问题都可以通过枚举把不同的物体放入不同盒子的方式数来解决，这些被放入盒子的物体的次序是无关紧
     
     </summary>
     
@@ -895,56 +935,6 @@
     
       &lt;h2 id=&quot;简易元素&quot;&gt;&lt;a href=&quot;#简易元素&quot; class=&quot;headerlink&quot; title=&quot;简易元素&quot;&gt;&lt;/a&gt;简易元素&lt;/h2&gt;&lt;p&gt;简易元素是指只包含文本的元素，不包括其他元素或者属性。  &lt;/p&gt;
 &lt;h4 id=&quot;简易元素的语法&quot;&gt;&lt;a href=&quot;#简
-    
-    </summary>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XML Schema 简要</title>
-    <link href="http://blog.freeabyss.com/2016/12/16/Web-XML-Schema%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://blog.freeabyss.com/2016/12/16/Web-XML-Schema详解/</id>
-    <published>2016-12-16T14:41:28.000Z</published>
-    <updated>2016-12-17T06:36:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>XML Schema 语言即XML Schema Definition(XSD)，是基于XML格式，用于描述XML结构的文档，也是DTD的替代者。    </p>
-<h2 id="XML-Schema的作用"><a href="#XML-Schema的作用" class="headerlink" title="XML Schema的作用"></a>XML Schema的作用</h2><ul>
-<li>定义可出现在文档中的元素</li>
-<li>定义可出现在文档中的属性</li>
-<li>定义哪个元素是子元素 </li>
-<li>定义子元素的次序</li>
-<li>定义子元素的数目 </li>
-<li>定义元素是否为空，或者是否可包含文本</li>
-<li>定义元素和属性的数据类型</li>
-<li>定义元素和属性的默认值以及固定值 </li>
-</ul>
-<h2 id="XML-Schema-引用"><a href="#XML-Schema-引用" class="headerlink" title="XML Schema 引用"></a>XML Schema 引用</h2><h3 id="schema-元素"><a href="#schema-元素" class="headerlink" title="schema 元素"></a>schema 元素</h3><p><code>&lt;schema&gt;</code>元素是每一个XML Schema的根元素。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">xs:schema</span> <span class="attr">xmlns:xs</span>=<span class="string">"http://www.w3.org/2001/XMLSchema"</span></span></div><div class="line"><span class="attr">targetNamespace</span>=<span class="string">"http://www.w3school.com.cn"</span></div><div class="line"><span class="attr">xmlns</span>=<span class="string">"http://www.w3school.com.cn"</span></div><div class="line"><span class="attr">elementFormDefault</span>=<span class="string">"qualified"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">xs:schema</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns:xs="http://www.w3.org/2001/XMLSchema"</div></pre></td></tr></table></figure>
-<p>显示<code>schema</code>中用到的元素和 数据类型来自命名空间<code>http://www.w3.org/2001/XMLSchema</code>。同时它还规定了来自该命名空间的元素和数据类型应该使用前缀<code>xs</code></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">targetNamespace="http://www.w3school.com.cn"</div></pre></td></tr></table></figure>
-<p>显示被此<code>schema</code>定义的元素来自命名空间<code>http://www.w3school.com.cn</code>。    </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns="http://www.w3school.com.cn"</div></pre></td></tr></table></figure>
-<p>指出默认的命名空间是<code>http://www.w3school.com.cn</code></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">elementFormDefault="qualified"</div></pre></td></tr></table></figure>
-<p>指出任何XML实例文档所使用的且在此schema中声明过的元素必须被命名空间限定。    </p>
-<h3 id="引用XSD"><a href="#引用XSD" class="headerlink" title="引用XSD"></a>引用XSD</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">note</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3school.com.cn"</span></span></div><div class="line"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line"><span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.w3school.com.cn/note.xsd"</span>&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">to</span>&gt;</span>George<span class="tag">&lt;/<span class="name">to</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">from</span>&gt;</span>John<span class="tag">&lt;/<span class="name">from</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">heading</span>&gt;</span>Reminder<span class="tag">&lt;/<span class="name">heading</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>Don't forget the meeting!<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">note</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns="http://www.w3school.com.cn"</div></pre></td></tr></table></figure>
-<p>规定了默认命名空间的声明。此声明会告知schema验证器，在此XML文档中使用的所有元素都被声明于<code>http://www.w3school.com.cn</code>这个命名空间。 一旦您拥有了可用的 XML Schema 实例命名空间：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</div></pre></td></tr></table></figure></p>
-<p>您就可以使用 schemaLocation 属性了。此属性有两个值。第一个值是需要使用的命名空间。第二个值是供命名空间使用的 XML schema 的位置：</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;XML Schema 语言即XML Schema Definition(XSD)，是基于XML格式，用于描述XML结构的文档，也是DTD的替
     
     </summary>
     

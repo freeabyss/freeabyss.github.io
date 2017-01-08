@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="abyss, blog, note" />
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
 
 
 
@@ -92,15 +92,19 @@
 
 
 
-<meta name="description" content="读书笔记和个人总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Abyss's blog">
-<meta property="og:url" content="http://blog.freeabyss.com/tags/JavaScript/index.html">
+<meta name="description" content="强归纳法要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:基础步骤: 证明$P(1)$为真。归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
+强归纳法 or 数学归纳法一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学学习笔记 强归纳法 24">
+<meta property="og:url" content="http://blog.freeabyss.com/2017/01/07/Math-DM-24-强归纳法/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="读书笔记和个人总结">
+<meta property="og:description" content="强归纳法要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:基础步骤: 证明$P(1)$为真。归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
+强归纳法 or 数学归纳法一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳">
+<meta property="og:updated_time" content="2017-01-07T08:20:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Abyss's blog">
-<meta name="twitter:description" content="读书笔记和个人总结">
+<meta name="twitter:title" content="离散数学学习笔记 强归纳法 24">
+<meta name="twitter:description" content="强归纳法要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:基础步骤: 证明$P(1)$为真。归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
+强归纳法 or 数学归纳法一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳">
 
 
 
@@ -121,9 +125,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.freeabyss.com/tags/JavaScript/"/>
+  <link rel="canonical" href="http://blog.freeabyss.com/2017/01/07/Math-DM-24-强归纳法/"/>
 
-  <title> 标签: JavaScript | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 离散数学学习笔记 强归纳法 24 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +148,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left  ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,46 +256,167 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        JavaScript
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                离散数学学习笔记 强归纳法 24
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-07T15:54:56+08:00" content="2017-01-07">
+              2017-01-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/07/Math-DM-24-强归纳法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/07/Math-DM-24-强归纳法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/01/07/Math-DM-24-强归纳法/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 强归纳法 24">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="强归纳法"><a href="#强归纳法" class="headerlink" title="强归纳法"></a>强归纳法</h2><p>要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:<br>基础步骤: 证明$P(1)$为真。<br>归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$</p>
+<h3 id="强归纳法-or-数学归纳法"><a href="#强归纳法-or-数学归纳法" class="headerlink" title="强归纳法 or 数学归纳法"></a>强归纳法 or 数学归纳法</h3><p>一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳法的归纳步骤证明是明显成立的。      </p>
+<h3 id="强归纳法示例"><a href="#强归纳法示例" class="headerlink" title="强归纳法示例"></a>强归纳法示例</h3><h4 id="算术基本定理证明"><a href="#算术基本定理证明" class="headerlink" title="算术基本定理证明"></a>算术基本定理证明</h4><p>证明:若$n$是大于$1$的整数，则$n$可以写成素数之和。<br>设$P(n)$是命题:$n$可以写成素数之积。<br>基础步骤: $P(2)$为真，因为$2$可以写成一个素数之积，即它自身。<br>归纳步骤: 假定对所有满足$j\le k$的正整数$j$来说$P(j)$为真。要完成归纳步骤就必须证明在这个假定下$P(k+1)$为真。<br>有两种情况要考虑，即$k+1$是素数和$k+1$是合数。$k+1$是素数，则立即看出$P(k+1)$为真。否则，$k+1$是合数并且可以写成满足$2\le a\le b&lt;k+1$的两个整数$a$和$b$之积。根据归纳假设，$a$和$b$都可以写成素数之积。因此，若$k+1$是合数，则它可以写成素数之积。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/09/03/JavaScript之表达式和运算符/" itemprop="url">
-              
-                <span itemprop="name">JavaScript之表达式和运算符</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-03T15:33:59+08:00"
-              content="2016-09-03" >
-          09-03
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/07/Math-DM-23-数学归纳法/" rel="next" title="离散数学学习笔记 数学归纳法 23">
+                <i class="fa fa-chevron-left"></i> 离散数学学习笔记 数学归纳法 23
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/07/Math-DM-25-递归/" rel="prev" title="离散数学学习笔记 递归 25">
+                离散数学学习笔记 递归 25 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +424,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/07/Math-DM-24-强归纳法/"
+           data-title="离散数学学习笔记 强归纳法 24" data-url="http://blog.freeabyss.com/2017/01/07/Math-DM-24-强归纳法/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -318,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -396,6 +538,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#强归纳法"><span class="nav-number">1.</span> <span class="nav-text">强归纳法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#强归纳法-or-数学归纳法"><span class="nav-number">1.1.</span> <span class="nav-text">强归纳法 or 数学归纳法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强归纳法示例"><span class="nav-number">1.2.</span> <span class="nav-text">强归纳法示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术基本定理证明"><span class="nav-number">1.2.1.</span> <span class="nav-text">算术基本定理证明</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -499,6 +652,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

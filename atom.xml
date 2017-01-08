@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2017-01-07T07:51:36.000Z</updated>
+  <updated>2017-01-08T04:24:29.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript-NPM 概述</title>
+    <link href="http://blog.freeabyss.com/2017/01/08/JavaScript-NPM-%E6%A6%82%E8%BF%B0/"/>
+    <id>http://blog.freeabyss.com/2017/01/08/JavaScript-NPM-概述/</id>
+    <published>2017-01-08T04:24:29.000Z</published>
+    <updated>2017-01-08T04:24:29.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 递归 25</title>
+    <link href="http://blog.freeabyss.com/2017/01/07/Math-DM-25-%E9%80%92%E5%BD%92/"/>
+    <id>http://blog.freeabyss.com/2017/01/07/Math-DM-25-递归/</id>
+    <published>2017-01-07T08:20:54.000Z</published>
+    <updated>2017-01-07T09:50:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>为了定义以非负整数集合作为其定义域的函数，使用两个步骤:<br>基础步骤:规定这个函数在$0$处的值。<br>递归步骤:给出从较小的整数处的值来求出当前的值的规则。<br>这样的定义称为递归定义或归纳定义。     </p>
+<h3 id="斐波那契数"><a href="#斐波那契数" class="headerlink" title="斐波那契数"></a>斐波那契数</h3><p>斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。<br>其中$n=2,3,4,\dots $ </p>
+<h4 id="使用斐波那契数的性质证明示例"><a href="#使用斐波那契数的性质证明示例" class="headerlink" title="使用斐波那契数的性质证明示例"></a>使用斐波那契数的性质证明示例</h4><p>证明:每当$n\ge 3$时，有$f_n&gt;a_{n-1}$，其中$a=(1+\sqrt 5)/2$<br>基础步骤:证明$P(3)$和$P(4)$都为真。 $$a<2=f_3,\; a^2="(3+\sqrt" 5)="" 2<3="f_4$$" 归纳步骤:假定$p(j)$为真，即对所有满足$3\le="" j\le="" k$的整数$j$来说有$f_j="">a^{j-2}$。其中$k\ge 4$。必须证明$P(k+1)$为真，即$f_{k+1}&gt;a^{k-1}$。因为$a$是$x^2-x-1=0$的解，所有得出$a^2=a+1$。因此$$a^{k-1}=a^2\cdot a^{k-1}=(a+1)a^{k-3}=a\cdot a^{k-3}+1\cdot a^{k-3}=a^{k-2}+a^{k-3}$$<br>根据归纳假设，若$k\ge 4$则得出 $$f_{k-1}&gt;a^{k-3},\;\;f_k&gt;a^{k-2}$$<br>因此有 $$f_{k+1}=f_k+f_{k-1}&gt;a^{k-2}+a^{k-3}$$因此$P(k+1)$为真，证毕。    </2=f_3,\;></p>
+<p>###拉梅定理</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;递归&quot;&gt;&lt;a href=&quot;#递归&quot; class=&quot;headerlink&quot; title=&quot;递归&quot;&gt;&lt;/a&gt;递归&lt;/h2&gt;&lt;p&gt;为了定义以非负整数集合作为其定义域的函数，使用两个步骤:&lt;br&gt;基础步骤:规定这个函数在$0$处的值。&lt;br&gt;递归步骤:给出从较小的整数处的
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 强归纳法 24</title>
+    <link href="http://blog.freeabyss.com/2017/01/07/Math-DM-24-%E5%BC%BA%E5%BD%92%E7%BA%B3%E6%B3%95/"/>
+    <id>http://blog.freeabyss.com/2017/01/07/Math-DM-24-强归纳法/</id>
+    <published>2017-01-07T07:54:56.000Z</published>
+    <updated>2017-01-07T08:20:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="强归纳法"><a href="#强归纳法" class="headerlink" title="强归纳法"></a>强归纳法</h2><p>要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:<br>基础步骤: 证明$P(1)$为真。<br>归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$</p>
+<h3 id="强归纳法-or-数学归纳法"><a href="#强归纳法-or-数学归纳法" class="headerlink" title="强归纳法 or 数学归纳法"></a>强归纳法 or 数学归纳法</h3><p>一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳法的归纳步骤证明是明显成立的。      </p>
+<h3 id="强归纳法示例"><a href="#强归纳法示例" class="headerlink" title="强归纳法示例"></a>强归纳法示例</h3><h4 id="算术基本定理证明"><a href="#算术基本定理证明" class="headerlink" title="算术基本定理证明"></a>算术基本定理证明</h4><p>证明:若$n$是大于$1$的整数，则$n$可以写成素数之和。<br>设$P(n)$是命题:$n$可以写成素数之积。<br>基础步骤: $P(2)$为真，因为$2$可以写成一个素数之积，即它自身。<br>归纳步骤: 假定对所有满足$j\le k$的正整数$j$来说$P(j)$为真。要完成归纳步骤就必须证明在这个假定下$P(k+1)$为真。<br>有两种情况要考虑，即$k+1$是素数和$k+1$是合数。$k+1$是素数，则立即看出$P(k+1)$为真。否则，$k+1$是合数并且可以写成满足$2\le a\le b&lt;k+1$的两个整数$a$和$b$之积。根据归纳假设，$a$和$b$都可以写成素数之积。因此，若$k+1$是合数，则它可以写成素数之积。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;强归纳法&quot;&gt;&lt;a href=&quot;#强归纳法&quot; class=&quot;headerlink&quot; title=&quot;强归纳法&quot;&gt;&lt;/a&gt;强归纳法&lt;/h2&gt;&lt;p&gt;要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:&lt;br&gt;基础步骤: 
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+  </entry>
   
   <entry>
     <title>离散数学学习笔记 数学归纳法 23</title>
@@ -723,218 +796,6 @@
     
       &lt;h2 id=&quot;指示器&quot;&gt;&lt;a href=&quot;#指示器&quot; class=&quot;headerlink&quot; title=&quot;指示器&quot;&gt;&lt;/a&gt;指示器&lt;/h2&gt;&lt;p&gt;通过指示器可以控制在文档中使用元素的方式。    &lt;/p&gt;
 &lt;h3 id=&quot;Order-指示器&quot;&gt;&lt;a href=&quot;#Order-指
-    
-    </summary>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web-XML-Schema-限定</title>
-    <link href="http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-%E9%99%90%E5%AE%9A/"/>
-    <id>http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-限定/</id>
-    <published>2016-12-17T06:34:55.000Z</published>
-    <updated>2016-12-17T06:35:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="限定"><a href="#限定" class="headerlink" title="限定"></a>限定</h2><p>限定用于限制元素和属性可接受的值，对元素的限定被称为facet。<br>关于限定的详细列子，请参考该链接<a href="http://www.w3school.com.cn/schema/schema_facets.asp" target="_blank" rel="external">XSD 限定 / Facets</a>    </p>
-<h3 id="限定定义"><a href="#限定定义" class="headerlink" title="限定定义"></a>限定定义</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">"120"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>上面的列子定义了<code>age</code>元素的值，不能低于0或者高于120.下面的列子具有同样的效果，只是类型<code>ageType</code>可被其他元素使用。 </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"ageType"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span> <span class="attr">name</span>=<span class="string">"ageType"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">"120"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="枚举约束"><a href="#枚举约束" class="headerlink" title="枚举约束"></a>枚举约束</h3><p>将XML元素的内容限制为一组可接受的值。    </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span> <span class="attr">name</span>=<span class="string">"carType"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:string"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"Audi"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"Golf"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"BMW"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="数据类型限定"><a href="#数据类型限定" class="headerlink" title="数据类型限定"></a>数据类型限定</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">限定</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">取值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">enumeration</td>
-<td style="text-align:left">定义可接受值的一个列表</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">fractionDigits</td>
-<td style="text-align:left">定义所允许的最大的小数位数。必须大于等于 0。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">length</td>
-<td style="text-align:left">定义所允许的字符或者列表项目的精确数目。必须大于或等于 0。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">maxExclusive</td>
-<td style="text-align:left">定义数值的上限。所允许的值必须小于此值。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">maxInclusive</td>
-<td style="text-align:left">定义数值的上限。所允许的值必须小于或等于此值。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">maxLength</td>
-<td style="text-align:left">定义所允许的字符或者列表项目的最大数目。必须大于或等于 0。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">minExclusive</td>
-<td style="text-align:left">定义数值的下限。所允许的值必需大于此值。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">minInclusive</td>
-<td style="text-align:left">定义数值的下限。所允许的值必需大于或等于此值。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">minLength</td>
-<td style="text-align:left">定义所允许的字符或者列表项目的最小数目。必须大于或等于 0。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">pattern</td>
-<td style="text-align:left">定义可接受的字符的精确序列。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">totalDigits</td>
-<td style="text-align:left">定义所允许的阿拉伯数字的精确位数。必须大于 0。</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">whiteSpace</td>
-<td style="text-align:left">定义空白字符（换行、回车、空格以及制表符）的处理方式。</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>whiteSpace的取值：  </p>
-<ul>
-<li>collapse:移除所有空白字符（换行、回车、空格以及制表符会被替换为空格，开头和结尾的空格会被移除，而多个连续的空格会被缩减为一个单一的空格)</li>
-<li>replace:除所有空白字符（换行、回车、空格以及制表符)</li>
-<li>preserve:不会移除任何空白字符</li>
-</ul>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;限定&quot;&gt;&lt;a href=&quot;#限定&quot; class=&quot;headerlink&quot; title=&quot;限定&quot;&gt;&lt;/a&gt;限定&lt;/h2&gt;&lt;p&gt;限定用于限制元素和属性可接受的值，对元素的限定被称为facet。&lt;br&gt;关于限定的详细列子，请参考该链接&lt;a href=&quot;http://ww
-    
-    </summary>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web-XML-Schema-复合元素</title>
-    <link href="http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-%E5%A4%8D%E5%90%88%E5%85%83%E7%B4%A0/"/>
-    <id>http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-复合元素/</id>
-    <published>2016-12-17T06:33:09.000Z</published>
-    <updated>2016-12-17T06:34:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="复合元素"><a href="#复合元素" class="headerlink" title="复合元素"></a>复合元素</h2><p>复合元素包含其他元素及属性的XML元素。 复合元素包括：   </p>
-<ul>
-<li>空元素</li>
-<li>包含其他元素的元素</li>
-<li>仅包含文本的元素</li>
-<li>包含元素和文本的元素</li>
-<li>上述所有元素均可包含属性</li>
-</ul>
-<h3 id="仅包含元素的复合元素"><a href="#仅包含元素的复合元素" class="headerlink" title="仅包含元素的复合元素"></a>仅包含元素的复合元素</h3><p>复合元素声明有两种方式，第二种方式可用于其他元素。    </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>还可以在已有复合元素的基础上，添加一些元素。    </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"fullpersoninfo"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"fullpersoninfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:extension</span> <span class="attr">base</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"address"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"city"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:extension</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexContent</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><code>&lt;sequence&gt;</code>是指示器，这意味着子元素必须按照声明的次序出现。   </p>
-<h3 id="仅包含属性的复合元素"><a href="#仅包含属性的复合元素" class="headerlink" title="仅包含属性的复合元素"></a>仅包含属性的复合元素</h3><p>空的复合元素只能包含属性不能包含其他内容。<br>一个空的XML元素:   </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">product</span> <span class="attr">prodid</span>=<span class="string">"1345"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<p>声明如下：    </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"prodid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>或者更紧凑的写法</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"prodid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="包含文本和属性的复合元素"><a href="#包含文本和属性的复合元素" class="headerlink" title="包含文本和属性的复合元素"></a>包含文本和属性的复合元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">shoesize</span> <span class="attr">country</span>=<span class="string">"france"</span>&gt;</span>35<span class="tag">&lt;/<span class="name">shoesize</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"shoesize"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:simpleContent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:extension</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> /&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:extension</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:simpleContent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>请使用<code>extension</code> 或 <code>restriction</code> 元素来扩展或限制元素的基本简易类型</p>
-</blockquote>
-<h3 id="包含文本和元素的复合元素"><a href="#包含文本和元素的复合元素" class="headerlink" title="包含文本和元素的复合元素"></a>包含文本和元素的复合元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">letter</span>&gt;</span></div><div class="line">Dear Mr.<span class="tag">&lt;<span class="name">name</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">name</span>&gt;</span>.</div><div class="line">Your order <span class="tag">&lt;<span class="name">orderid</span>&gt;</span>1032<span class="tag">&lt;/<span class="name">orderid</span>&gt;</span></div><div class="line">will be shipped on <span class="tag">&lt;<span class="name">shipdate</span>&gt;</span>2001-07-13<span class="tag">&lt;/<span class="name">shipdate</span>&gt;</span>.</div><div class="line"><span class="tag">&lt;/<span class="name">letter</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"letter"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">mixed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"orderid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"shipdate"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>为了使字符数据可以出现在 “letter” 的子元素之间，mixed 属性必须被设置为 “true”。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;复合元素&quot;&gt;&lt;a href=&quot;#复合元素&quot; class=&quot;headerlink&quot; title=&quot;复合元素&quot;&gt;&lt;/a&gt;复合元素&lt;/h2&gt;&lt;p&gt;复合元素包含其他元素及属性的XML元素。 复合元素包括：   &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;空元素&lt;/li&gt;
-&lt;li&gt;包含其他
-    
-    </summary>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
-    
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
-    
-      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web-XML Schema 简易元素及属性</title>
-    <link href="http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-%E7%AE%80%E6%98%93%E5%85%83%E7%B4%A0%E5%8F%8A%E5%B1%9E%E6%80%A7/"/>
-    <id>http://blog.freeabyss.com/2016/12/17/Web-XML-Schema-简易元素及属性/</id>
-    <published>2016-12-17T06:31:52.000Z</published>
-    <updated>2016-12-17T06:34:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="简易元素"><a href="#简易元素" class="headerlink" title="简易元素"></a>简易元素</h2><p>简易元素是指只包含文本的元素，不包括其他元素或者属性。  </p>
-<h4 id="简易元素的语法"><a href="#简易元素的语法" class="headerlink" title="简易元素的语法"></a>简易元素的语法</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p><code>xxx</code>是指元素的名称，<code>yyy</code>是指元素数据类型<br>例如 ：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">lastname</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">lastname</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dateborn</span>&gt;</span>1980-03-27<span class="tag">&lt;/<span class="name">dateborn</span>&gt;</span></div><div class="line">``</div><div class="line">对应       </div><div class="line">```xml</div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"xs:integer"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"dateborn"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="常用的数据类型"><a href="#常用的数据类型" class="headerlink" title="常用的数据类型"></a>常用的数据类型</h4><ul>
-<li>xs:string</li>
-<li>xs:decimal</li>
-<li>xs:integer</li>
-<li>xs:boolean</li>
-<li>xs:date</li>
-<li>xs:time</li>
-</ul>
-<h4 id="固定值和默认值"><a href="#固定值和默认值" class="headerlink" title="固定值和默认值"></a>固定值和默认值</h4><p>固定值会自动分配给元素，并且您无法规定另外一个值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"red"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"red"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>简易元素无法拥有属性，但是属性总是作为简易类型被声明。     </p>
-<h4 id="声明属性"><a href="#声明属性" class="headerlink" title="声明属性"></a>声明属性</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p>属性的数据类型参见简易元素的数据类型。<br>属性同样可以拥有固定值和默认值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"EN"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"EN"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<p>属性默认是可选的，如规定属性必选，请使用<code>use</code>属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">use</span>=<span class="string">"required"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;简易元素&quot;&gt;&lt;a href=&quot;#简易元素&quot; class=&quot;headerlink&quot; title=&quot;简易元素&quot;&gt;&lt;/a&gt;简易元素&lt;/h2&gt;&lt;p&gt;简易元素是指只包含文本的元素，不包括其他元素或者属性。  &lt;/p&gt;
-&lt;h4 id=&quot;简易元素的语法&quot;&gt;&lt;a href=&quot;#简
     
     </summary>
     

@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="abyss, blog, note" />
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
 
 
 
@@ -92,15 +92,22 @@
 
 
 
-<meta name="description" content="读书笔记和个人总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Abyss's blog">
-<meta property="og:url" content="http://blog.freeabyss.com/tags/JavaScript/index.html">
+<meta name="description" content="递归为了定义以非负整数集合作为其定义域的函数，使用两个步骤:基础步骤:规定这个函数在$0$处的值。递归步骤:给出从较小的整数处的值来求出当前的值的规则。这样的定义称为递归定义或归纳定义。     
+斐波那契数斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。其中$n=2,3,4,\dots $ 
+使用斐波那契数的性质">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学学习笔记 递归 25">
+<meta property="og:url" content="http://blog.freeabyss.com/2017/01/07/Math-DM-25-递归/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="读书笔记和个人总结">
+<meta property="og:description" content="递归为了定义以非负整数集合作为其定义域的函数，使用两个步骤:基础步骤:规定这个函数在$0$处的值。递归步骤:给出从较小的整数处的值来求出当前的值的规则。这样的定义称为递归定义或归纳定义。     
+斐波那契数斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。其中$n=2,3,4,\dots $ 
+使用斐波那契数的性质">
+<meta property="og:updated_time" content="2017-01-07T09:50:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Abyss's blog">
-<meta name="twitter:description" content="读书笔记和个人总结">
+<meta name="twitter:title" content="离散数学学习笔记 递归 25">
+<meta name="twitter:description" content="递归为了定义以非负整数集合作为其定义域的函数，使用两个步骤:基础步骤:规定这个函数在$0$处的值。递归步骤:给出从较小的整数处的值来求出当前的值的规则。这样的定义称为递归定义或归纳定义。     
+斐波那契数斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。其中$n=2,3,4,\dots $ 
+使用斐波那契数的性质">
 
 
 
@@ -121,9 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.freeabyss.com/tags/JavaScript/"/>
+  <link rel="canonical" href="http://blog.freeabyss.com/2017/01/07/Math-DM-25-递归/"/>
 
-  <title> 标签: JavaScript | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 离散数学学习笔记 递归 25 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +151,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left  ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,46 +259,168 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        JavaScript
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                离散数学学习笔记 递归 25
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-07T16:20:54+08:00" content="2017-01-07">
+              2017-01-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/07/Math-DM-25-递归/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/07/Math-DM-25-递归/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/01/07/Math-DM-25-递归/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 递归 25">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>为了定义以非负整数集合作为其定义域的函数，使用两个步骤:<br>基础步骤:规定这个函数在$0$处的值。<br>递归步骤:给出从较小的整数处的值来求出当前的值的规则。<br>这样的定义称为递归定义或归纳定义。     </p>
+<h3 id="斐波那契数"><a href="#斐波那契数" class="headerlink" title="斐波那契数"></a>斐波那契数</h3><p>斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。<br>其中$n=2,3,4,\dots $ </p>
+<h4 id="使用斐波那契数的性质证明示例"><a href="#使用斐波那契数的性质证明示例" class="headerlink" title="使用斐波那契数的性质证明示例"></a>使用斐波那契数的性质证明示例</h4><p>证明:每当$n\ge 3$时，有$f_n&gt;a_{n-1}$，其中$a=(1+\sqrt 5)/2$<br>基础步骤:证明$P(3)$和$P(4)$都为真。 $$a<2=f_3,\; a^2="(3+\sqrt" 5)="" 2<3="f_4$$" 归纳步骤:假定$p(j)$为真，即对所有满足$3\le="" j\le="" k$的整数$j$来说有$f_j="">a^{j-2}$。其中$k\ge 4$。必须证明$P(k+1)$为真，即$f_{k+1}&gt;a^{k-1}$。因为$a$是$x^2-x-1=0$的解，所有得出$a^2=a+1$。因此$$a^{k-1}=a^2\cdot a^{k-1}=(a+1)a^{k-3}=a\cdot a^{k-3}+1\cdot a^{k-3}=a^{k-2}+a^{k-3}$$<br>根据归纳假设，若$k\ge 4$则得出 $$f_{k-1}&gt;a^{k-3},\;\;f_k&gt;a^{k-2}$$<br>因此有 $$f_{k+1}=f_k+f_{k-1}&gt;a^{k-2}+a^{k-3}$$因此$P(k+1)$为真，证毕。    </2=f_3,\;></p>
+<p>###拉梅定理</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/09/03/JavaScript之表达式和运算符/" itemprop="url">
-              
-                <span itemprop="name">JavaScript之表达式和运算符</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-03T15:33:59+08:00"
-              content="2016-09-03" >
-          09-03
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/07/Math-DM-24-强归纳法/" rel="next" title="离散数学学习笔记 强归纳法 24">
+                <i class="fa fa-chevron-left"></i> 离散数学学习笔记 强归纳法 24
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/08/JavaScript-NPM-概述/" rel="prev" title="JavaScript-NPM 概述">
+                JavaScript-NPM 概述 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +428,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/07/Math-DM-25-递归/"
+           data-title="离散数学学习笔记 递归 25" data-url="http://blog.freeabyss.com/2017/01/07/Math-DM-25-递归/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -318,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -396,6 +542,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">1.</span> <span class="nav-text">递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契数"><span class="nav-number">1.1.</span> <span class="nav-text">斐波那契数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用斐波那契数的性质证明示例"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用斐波那契数的性质证明示例</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -499,6 +656,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

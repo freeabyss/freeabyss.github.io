@@ -276,6 +276,520 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-限定/" itemprop="url">
+                  Web-XML-Schema-限定
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-17T14:34:55+08:00" content="2016-12-17">
+              2016-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/XML/" itemprop="url" rel="index">
+                    <span itemprop="name">XML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/17/Web-XML-Schema-限定/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/Web-XML-Schema-限定/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/17/Web-XML-Schema-限定/" class="leancloud_visitors" data-flag-title="Web-XML-Schema-限定">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="限定"><a href="#限定" class="headerlink" title="限定"></a>限定</h2><p>限定用于限制元素和属性可接受的值，对元素的限定被称为facet。<br>关于限定的详细列子，请参考该链接<a href="http://www.w3school.com.cn/schema/schema_facets.asp" target="_blank" rel="external">XSD 限定 / Facets</a>    </p>
+<h3 id="限定定义"><a href="#限定定义" class="headerlink" title="限定定义"></a>限定定义</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">"120"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面的列子定义了<code>age</code>元素的值，不能低于0或者高于120.下面的列子具有同样的效果，只是类型<code>ageType</code>可被其他元素使用。 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"ageType"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span> <span class="attr">name</span>=<span class="string">"ageType"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">"120"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="枚举约束"><a href="#枚举约束" class="headerlink" title="枚举约束"></a>枚举约束</h3><p>将XML元素的内容限制为一组可接受的值。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span> <span class="attr">name</span>=<span class="string">"carType"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:string"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"Audi"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"Golf"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"BMW"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="数据类型限定"><a href="#数据类型限定" class="headerlink" title="数据类型限定"></a>数据类型限定</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">限定</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">enumeration</td>
+<td style="text-align:left">定义可接受值的一个列表</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">fractionDigits</td>
+<td style="text-align:left">定义所允许的最大的小数位数。必须大于等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">定义所允许的字符或者列表项目的精确数目。必须大于或等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">maxExclusive</td>
+<td style="text-align:left">定义数值的上限。所允许的值必须小于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">maxInclusive</td>
+<td style="text-align:left">定义数值的上限。所允许的值必须小于或等于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">maxLength</td>
+<td style="text-align:left">定义所允许的字符或者列表项目的最大数目。必须大于或等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minExclusive</td>
+<td style="text-align:left">定义数值的下限。所允许的值必需大于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minInclusive</td>
+<td style="text-align:left">定义数值的下限。所允许的值必需大于或等于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minLength</td>
+<td style="text-align:left">定义所允许的字符或者列表项目的最小数目。必须大于或等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">pattern</td>
+<td style="text-align:left">定义可接受的字符的精确序列。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">totalDigits</td>
+<td style="text-align:left">定义所允许的阿拉伯数字的精确位数。必须大于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">whiteSpace</td>
+<td style="text-align:left">定义空白字符（换行、回车、空格以及制表符）的处理方式。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>whiteSpace的取值：  </p>
+<ul>
+<li>collapse:移除所有空白字符（换行、回车、空格以及制表符会被替换为空格，开头和结尾的空格会被移除，而多个连续的空格会被缩减为一个单一的空格)</li>
+<li>replace:除所有空白字符（换行、回车、空格以及制表符)</li>
+<li>preserve:不会移除任何空白字符</li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-复合元素/" itemprop="url">
+                  Web-XML-Schema-复合元素
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-17T14:33:09+08:00" content="2016-12-17">
+              2016-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/XML/" itemprop="url" rel="index">
+                    <span itemprop="name">XML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/17/Web-XML-Schema-复合元素/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/Web-XML-Schema-复合元素/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/17/Web-XML-Schema-复合元素/" class="leancloud_visitors" data-flag-title="Web-XML-Schema-复合元素">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="复合元素"><a href="#复合元素" class="headerlink" title="复合元素"></a>复合元素</h2><p>复合元素包含其他元素及属性的XML元素。 复合元素包括：   </p>
+<ul>
+<li>空元素</li>
+<li>包含其他元素的元素</li>
+<li>仅包含文本的元素</li>
+<li>包含元素和文本的元素</li>
+<li>上述所有元素均可包含属性</li>
+</ul>
+<h3 id="仅包含元素的复合元素"><a href="#仅包含元素的复合元素" class="headerlink" title="仅包含元素的复合元素"></a>仅包含元素的复合元素</h3><p>复合元素声明有两种方式，第二种方式可用于其他元素。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>还可以在已有复合元素的基础上，添加一些元素。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"fullpersoninfo"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"fullpersoninfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:extension</span> <span class="attr">base</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"address"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"city"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:extension</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexContent</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>&lt;sequence&gt;</code>是指示器，这意味着子元素必须按照声明的次序出现。   </p>
+<h3 id="仅包含属性的复合元素"><a href="#仅包含属性的复合元素" class="headerlink" title="仅包含属性的复合元素"></a>仅包含属性的复合元素</h3><p>空的复合元素只能包含属性不能包含其他内容。<br>一个空的XML元素:   </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">product</span> <span class="attr">prodid</span>=<span class="string">"1345"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p>声明如下：    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"prodid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>或者更紧凑的写法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"prodid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="包含文本和属性的复合元素"><a href="#包含文本和属性的复合元素" class="headerlink" title="包含文本和属性的复合元素"></a>包含文本和属性的复合元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">shoesize</span> <span class="attr">country</span>=<span class="string">"france"</span>&gt;</span>35<span class="tag">&lt;/<span class="name">shoesize</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"shoesize"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:simpleContent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:extension</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> /&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:extension</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:simpleContent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>请使用<code>extension</code> 或 <code>restriction</code> 元素来扩展或限制元素的基本简易类型</p>
+</blockquote>
+<h3 id="包含文本和元素的复合元素"><a href="#包含文本和元素的复合元素" class="headerlink" title="包含文本和元素的复合元素"></a>包含文本和元素的复合元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">letter</span>&gt;</span></div><div class="line">Dear Mr.<span class="tag">&lt;<span class="name">name</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">name</span>&gt;</span>.</div><div class="line">Your order <span class="tag">&lt;<span class="name">orderid</span>&gt;</span>1032<span class="tag">&lt;/<span class="name">orderid</span>&gt;</span></div><div class="line">will be shipped on <span class="tag">&lt;<span class="name">shipdate</span>&gt;</span>2001-07-13<span class="tag">&lt;/<span class="name">shipdate</span>&gt;</span>.</div><div class="line"><span class="tag">&lt;/<span class="name">letter</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"letter"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">mixed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"orderid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"shipdate"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>为了使字符数据可以出现在 “letter” 的子元素之间，mixed 属性必须被设置为 “true”。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-简易元素及属性/" itemprop="url">
+                  Web-XML Schema 简易元素及属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-17T14:31:52+08:00" content="2016-12-17">
+              2016-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/XML/" itemprop="url" rel="index">
+                    <span itemprop="name">XML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/17/Web-XML-Schema-简易元素及属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/Web-XML-Schema-简易元素及属性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/17/Web-XML-Schema-简易元素及属性/" class="leancloud_visitors" data-flag-title="Web-XML Schema 简易元素及属性">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="简易元素"><a href="#简易元素" class="headerlink" title="简易元素"></a>简易元素</h2><p>简易元素是指只包含文本的元素，不包括其他元素或者属性。  </p>
+<h4 id="简易元素的语法"><a href="#简易元素的语法" class="headerlink" title="简易元素的语法"></a>简易元素的语法</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p><code>xxx</code>是指元素的名称，<code>yyy</code>是指元素数据类型<br>例如 ：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">lastname</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">lastname</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dateborn</span>&gt;</span>1980-03-27<span class="tag">&lt;/<span class="name">dateborn</span>&gt;</span></div><div class="line">``</div><div class="line">对应       </div><div class="line">```xml</div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"xs:integer"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"dateborn"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="常用的数据类型"><a href="#常用的数据类型" class="headerlink" title="常用的数据类型"></a>常用的数据类型</h4><ul>
+<li>xs:string</li>
+<li>xs:decimal</li>
+<li>xs:integer</li>
+<li>xs:boolean</li>
+<li>xs:date</li>
+<li>xs:time</li>
+</ul>
+<h4 id="固定值和默认值"><a href="#固定值和默认值" class="headerlink" title="固定值和默认值"></a>固定值和默认值</h4><p>固定值会自动分配给元素，并且您无法规定另外一个值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"red"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"red"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>简易元素无法拥有属性，但是属性总是作为简易类型被声明。     </p>
+<h4 id="声明属性"><a href="#声明属性" class="headerlink" title="声明属性"></a>声明属性</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p>属性的数据类型参见简易元素的数据类型。<br>属性同样可以拥有固定值和默认值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"EN"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"EN"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p>属性默认是可选的，如规定属性必选，请使用<code>use</code>属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">use</span>=<span class="string">"required"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/16/Web-XML-Schema详解/" itemprop="url">
                   XML Schema 简要
                 </a>
@@ -3077,648 +3591,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/Math-DM-01-基本逻辑/" itemprop="url">
-                  离散数学学习笔记 基本逻辑 01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T16:33:43+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/26/Math-DM-01-基本逻辑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/Math-DM-01-基本逻辑/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/26/Math-DM-01-基本逻辑/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 基本逻辑 01">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p>逻辑的基本成分是命题，命题是一个或真或假的陈述语句，即一个陈述事实的句子，但不能既真又假。<br>涉及命题的逻辑领域称为命题演算或命题逻辑。</p>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><h3 id="非"><a href="#非" class="headerlink" title="非"></a>非</h3><p>令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。</p>
-<h3 id="与-合取"><a href="#与-合取" class="headerlink" title="与(合取)"></a>与(合取)</h3><p>令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。</p>
-<h3 id="或-析取"><a href="#或-析取" class="headerlink" title="或(析取)"></a>或(析取)</h3><p>令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。</p>
-<h3 id="异或"><a href="#异或" class="headerlink" title="异或"></a>异或</h3><p>令$p$和$q$为命题。$p$和$q$的异或是一个命题。当$p$和$q$($p\oplus q$)中只有一个为真时命题为真，否则为假。</p>
-<h3 id="与非"><a href="#与非" class="headerlink" title="与非"></a>与非</h3><p>命题$p NAND q$(也记作$p\vert q$)在$p$和$q$均为真时为假，否则为真。</p>
-<h3 id="或非"><a href="#或非" class="headerlink" title="或非"></a>或非</h3><p>命题$p NOR q $(也记作$p\downarrow q$)在$p$和$q$均为假时为真，否则为假。</p>
-<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>令$p$和$q$为命题，条件语句$p\rightarrow q$ 是命题“若$p$，则$q$”。    当$p$为真而$q$为假时，条件语句$p\rightarrow q$为假，否则为真。<br>在条件语句$p\rightarrow q$中，$p$称为假设、前提，$q$称为结论。<br>条件语句也称蕴含。</p>
-<h4 id="逆、倒置和反"><a href="#逆、倒置和反" class="headerlink" title="逆、倒置和反"></a>逆、倒置和反</h4><p>命题$q\rightarrow p$称为$p\rightarrow q$的逆蕴含。<br>命题$\lnot q\rightarrow \lnot p$称为$p\rightarrow q$的倒置蕴含。<br>命题$\lnot p\rightarrow \lnot q$称为$p\rightarrow q$的反蕴含。  </p>
-<h3 id="双条件语句"><a href="#双条件语句" class="headerlink" title="双条件语句"></a>双条件语句</h3><p>令$p$和$q$为命题。双条件语句$p↔︎q$是命题“$p$当且仅当$q$”。当$p$和$q$有相同真值时，双条件语句为真，否则为假。<br>双条件语句也称双蕴含。  </p>
-<h3 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">p <span style="margin-left:20px">q</span></th>
-<th style="text-align:center">$\lnot p$</th>
-<th style="text-align:center">$p\land q$</th>
-<th style="text-align:center">$p\lor q$</th>
-<th style="text-align:center">$p\oplus q$</th>
-<th style="text-align:center">$p\rightarrow q$</th>
-<th style="text-align:center">$p↔︎q$</th>
-<th style="text-align:center">$p \vert q$</th>
-<th style="text-align:center">$p\downarrow q$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">T <span style="margin-left:20px">T</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">T <span style="margin-left:20px">F</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F <span style="margin-left:20px">T</span></td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F <span style="margin-left:20px">F</span></td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-</tbody>
-</table>
-<h3 id="逻辑运算符的优先级"><a href="#逻辑运算符的优先级" class="headerlink" title="逻辑运算符的优先级"></a>逻辑运算符的优先级</h3><ul>
-<li>否定运算符在其他所有逻辑运算符之前执行。</li>
-<li>合取运算优先于析取运算。</li>
-<li>条件运算和双条件运算优先级低于合取和析取运算。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/Application/" itemprop="url">
-                  软件推荐
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T14:56:00+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/26/Application/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/Application/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/26/Application/" class="leancloud_visitors" data-flag-title="软件推荐">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <table>
-<thead>
-<tr>
-<th style="text-align:left">名称</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">平台</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><a href="https://www.toggl.com/" target="_blank" rel="external">Toogl</a></td>
-<td style="text-align:left">时间管理软件</td>
-<td style="text-align:left">all</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://pomotodo.com/app/" target="_blank" rel="external">Pomotodo</a></td>
-<td style="text-align:left">番茄工作法</td>
-<td style="text-align:left">all</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.alfredapp.com/powerpack/" target="_blank" rel="external">Alfred</a> <a href="http://alfredworkflow.com/" target="_blank" rel="external">Alfred 插件集合</a></td>
-<td style="text-align:left">Mac最好用的快速启动工具</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="http://manytricks.com/moom/" target="_blank" rel="external">Moom</a></td>
-<td style="text-align:left">分屏工具</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="http://zipzapmac.com/Go2Shell" target="_blank" rel="external">Go2Shell</a></td>
-<td style="text-align:left">在Finder打开terminal</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.omnigroup.com/" target="_blank" rel="external">OmniFocus</a></td>
-<td style="text-align:left">GTD管理软件</td>
-<td style="text-align:left">Mac iOS</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="http://wwww.snappy-app.com" target="_blank" rel="external">Snappy</a></td>
-<td style="text-align:left">截屏软件</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="http://nearlock.me/" target="_blank" rel="external">Near Lock</a></td>
-<td style="text-align:left">用iPhone解锁Mac</td>
-<td style="text-align:left">Mac iOS</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.dropbox.com/" target="_blank" rel="external">Dropbox</a></td>
-<td style="text-align:left">Dropbox 软件</td>
-<td style="text-align:left">Mac Window Linux iPhone Android</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.jetbrains.com/idea/" target="_blank" rel="external">Intellij IDEA</a></td>
-<td style="text-align:left">最好用，最智能的Java IDE</td>
-<td style="text-align:left">Mac Window</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a></td>
-<td style="text-align:left">流行的跨平台编辑器</td>
-<td style="text-align:left">Mac Window</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="http://www.typhoonsystems.com.au/projects/tybase/" target="_blank" rel="external">TyBase</a></td>
-<td style="text-align:left">数据库设计</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/basejump/id1060639224?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">Basejump</a></td>
-<td style="text-align:left">base64编码工具</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/fhash/id1055555711?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">fHash</a></td>
-<td style="text-align:left">哈希计算工具，支持MD5,SHA1,SHA256,CRC32</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/noodle/id1048842988?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">noodle</a></td>
-<td style="text-align:left">SSH 连接工具</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://minifyapp.com/" target="_blank" rel="external">Minity</a></td>
-<td style="text-align:left">代码压缩</td>
-<td style="text-align:left">Mac</td>
-</tr>
-<tr>
-<td style="text-align:left">AVPlayer</td>
-<td style="text-align:left">视频播放器，可通过FTP，web等多种方式播放视频</td>
-<td style="text-align:left">iOS</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://aria2.github.io/" target="_blank" rel="external">Aria2</a></td>
-<td style="text-align:left">实现百度云、迅雷离线满速下载</td>
-<td style="text-align:left">Window, Mac, iOS</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="url">
-                  Sublime Text之OmniMarkupPreviewer
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-13T21:37:44+08:00" content="2016-09-13">
-              2016-09-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/sublime/" itemprop="url" rel="index">
-                    <span itemprop="name">sublime</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" class="leancloud_visitors" data-flag-title="Sublime Text之OmniMarkupPreviewer">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h1><h2 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h2><ul>
-<li>实时预览，多设备同时刷新</li>
-<li>扩展语法</li>
-<li>MathJax 公式</li>
-<li>文档内标题导航</li>
-<li>支持HTML、PDF格式导出</li>
-</ul>
-<p>OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅<a href="https://pythonhosted.org/Markdown/extensions/index.html" target="_blank" rel="external">python-markdown</a></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">快捷键</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>option</code>+<code>command</code>+O</td>
-<td style="text-align:left">打开浏览器进行预览</td>
-</tr>
-</tbody>
-</table>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">配置</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">server_host</td>
-<td style="text-align:left">开启预览服务的IP地址，建议为本机固定IP，这样可实现局域网内的设备均可访问，不需要的话默认即可</td>
-</tr>
-<tr>
-<td style="text-align:left">server_port</td>
-<td style="text-align:left">访问端口号，默认即可</td>
-</tr>
-<tr>
-<td style="text-align:left">refresh_on_modified</td>
-<td style="text-align:left">是否开启实时刷新，默认即可</td>
-</tr>
-<tr>
-<td style="text-align:left">refresh_on_modified_delay</td>
-<td style="text-align:left">刷新延时，单位毫秒，默认即可</td>
-</tr>
-<tr>
-<td style="text-align:left">refresh_on_saved</td>
-<td style="text-align:left">保存时刷新预览，默认即可</td>
-</tr>
-<tr>
-<td style="text-align:left">browser_command</td>
-<td style="text-align:left">设置预览的浏览器</td>
-</tr>
-<tr>
-<td style="text-align:left">html_template_name</td>
-<td style="text-align:left">预览模版</td>
-</tr>
-<tr>
-<td style="text-align:left">ignored_renderers</td>
-<td style="text-align:left">忽略标记语言的渲染器</td>
-</tr>
-<tr>
-<td style="text-align:left">mathjax_enabled</td>
-<td style="text-align:left">开启LaTex</td>
-</tr>
-<tr>
-<td style="text-align:left">renderer_options-MarkdownRenderer</td>
-<td style="text-align:left">渲染扩展，扩展Markdown的语法</td>
-</tr>
-</tbody>
-</table>
-<h3 id="渲染说明"><a href="#渲染说明" class="headerlink" title="渲染说明"></a>渲染说明</h3><ul>
-<li>attr_list ：开启文档内跳转</li>
-<li>footnotes ：文档脚注  </li>
-<li>codehilite：代码语法高亮     </li>
-<li>toc ：在文章开头自动生成目录，并附带跳转链接  </li>
-<li>strikeout：删除线   ~~ 删除线 ~~</li>
-<li>superscript ：上标  H^2^</li>
-<li>subscript：下标   H~2~  </li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3764,7 +3636,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

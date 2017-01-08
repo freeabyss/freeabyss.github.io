@@ -276,6 +276,666 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/26/Math-DM-01-基本逻辑/" itemprop="url">
+                  离散数学学习笔记 基本逻辑 01
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-26T16:33:43+08:00" content="2016-11-26">
+              2016-11-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/26/Math-DM-01-基本逻辑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/Math-DM-01-基本逻辑/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/26/Math-DM-01-基本逻辑/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 基本逻辑 01">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p>逻辑的基本成分是命题，命题是一个或真或假的陈述语句，即一个陈述事实的句子，但不能既真又假。<br>涉及命题的逻辑领域称为命题演算或命题逻辑。</p>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><h3 id="非"><a href="#非" class="headerlink" title="非"></a>非</h3><p>令$p$为一命题，则$p$的否定表示为$\lnot p$，命题$\lnot p$读作”非$p$”。</p>
+<h3 id="与-合取"><a href="#与-合取" class="headerlink" title="与(合取)"></a>与(合取)</h3><p>令$p$和$q$为命题，$p、q$的合取用$p\land q$表示。即命题$p$并且$q$。</p>
+<h3 id="或-析取"><a href="#或-析取" class="headerlink" title="或(析取)"></a>或(析取)</h3><p>令$p$和$q$为命题，$p、q$的析取用$p\lor q$表示。即命题$p$或$q$。</p>
+<h3 id="异或"><a href="#异或" class="headerlink" title="异或"></a>异或</h3><p>令$p$和$q$为命题。$p$和$q$的异或是一个命题。当$p$和$q$($p\oplus q$)中只有一个为真时命题为真，否则为假。</p>
+<h3 id="与非"><a href="#与非" class="headerlink" title="与非"></a>与非</h3><p>命题$p NAND q$(也记作$p\vert q$)在$p$和$q$均为真时为假，否则为真。</p>
+<h3 id="或非"><a href="#或非" class="headerlink" title="或非"></a>或非</h3><p>命题$p NOR q $(也记作$p\downarrow q$)在$p$和$q$均为假时为真，否则为假。</p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>令$p$和$q$为命题，条件语句$p\rightarrow q$ 是命题“若$p$，则$q$”。    当$p$为真而$q$为假时，条件语句$p\rightarrow q$为假，否则为真。<br>在条件语句$p\rightarrow q$中，$p$称为假设、前提，$q$称为结论。<br>条件语句也称蕴含。</p>
+<h4 id="逆、倒置和反"><a href="#逆、倒置和反" class="headerlink" title="逆、倒置和反"></a>逆、倒置和反</h4><p>命题$q\rightarrow p$称为$p\rightarrow q$的逆蕴含。<br>命题$\lnot q\rightarrow \lnot p$称为$p\rightarrow q$的倒置蕴含。<br>命题$\lnot p\rightarrow \lnot q$称为$p\rightarrow q$的反蕴含。  </p>
+<h3 id="双条件语句"><a href="#双条件语句" class="headerlink" title="双条件语句"></a>双条件语句</h3><p>令$p$和$q$为命题。双条件语句$p↔︎q$是命题“$p$当且仅当$q$”。当$p$和$q$有相同真值时，双条件语句为真，否则为假。<br>双条件语句也称双蕴含。  </p>
+<h3 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">p <span style="margin-left:20px">q</span></th>
+<th style="text-align:center">$\lnot p$</th>
+<th style="text-align:center">$p\land q$</th>
+<th style="text-align:center">$p\lor q$</th>
+<th style="text-align:center">$p\oplus q$</th>
+<th style="text-align:center">$p\rightarrow q$</th>
+<th style="text-align:center">$p↔︎q$</th>
+<th style="text-align:center">$p \vert q$</th>
+<th style="text-align:center">$p\downarrow q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T <span style="margin-left:20px">T</span></td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">T <span style="margin-left:20px">F</span></td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F <span style="margin-left:20px">T</span></td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F <span style="margin-left:20px">F</span></td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+<h3 id="逻辑运算符的优先级"><a href="#逻辑运算符的优先级" class="headerlink" title="逻辑运算符的优先级"></a>逻辑运算符的优先级</h3><ul>
+<li>否定运算符在其他所有逻辑运算符之前执行。</li>
+<li>合取运算优先于析取运算。</li>
+<li>条件运算和双条件运算优先级低于合取和析取运算。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/26/Application/" itemprop="url">
+                  软件推荐
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-26T14:56:00+08:00" content="2016-11-26">
+              2016-11-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/26/Application/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/Application/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/26/Application/" class="leancloud_visitors" data-flag-title="软件推荐">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">平台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.toggl.com/" target="_blank" rel="external">Toogl</a></td>
+<td style="text-align:left">时间管理软件</td>
+<td style="text-align:left">all</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://pomotodo.com/app/" target="_blank" rel="external">Pomotodo</a></td>
+<td style="text-align:left">番茄工作法</td>
+<td style="text-align:left">all</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.alfredapp.com/powerpack/" target="_blank" rel="external">Alfred</a> <a href="http://alfredworkflow.com/" target="_blank" rel="external">Alfred 插件集合</a></td>
+<td style="text-align:left">Mac最好用的快速启动工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://manytricks.com/moom/" target="_blank" rel="external">Moom</a></td>
+<td style="text-align:left">分屏工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://zipzapmac.com/Go2Shell" target="_blank" rel="external">Go2Shell</a></td>
+<td style="text-align:left">在Finder打开terminal</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.omnigroup.com/" target="_blank" rel="external">OmniFocus</a></td>
+<td style="text-align:left">GTD管理软件</td>
+<td style="text-align:left">Mac iOS</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://wwww.snappy-app.com" target="_blank" rel="external">Snappy</a></td>
+<td style="text-align:left">截屏软件</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://nearlock.me/" target="_blank" rel="external">Near Lock</a></td>
+<td style="text-align:left">用iPhone解锁Mac</td>
+<td style="text-align:left">Mac iOS</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.dropbox.com/" target="_blank" rel="external">Dropbox</a></td>
+<td style="text-align:left">Dropbox 软件</td>
+<td style="text-align:left">Mac Window Linux iPhone Android</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.jetbrains.com/idea/" target="_blank" rel="external">Intellij IDEA</a></td>
+<td style="text-align:left">最好用，最智能的Java IDE</td>
+<td style="text-align:left">Mac Window</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a></td>
+<td style="text-align:left">流行的跨平台编辑器</td>
+<td style="text-align:left">Mac Window</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.typhoonsystems.com.au/projects/tybase/" target="_blank" rel="external">TyBase</a></td>
+<td style="text-align:left">数据库设计</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/basejump/id1060639224?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">Basejump</a></td>
+<td style="text-align:left">base64编码工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/fhash/id1055555711?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">fHash</a></td>
+<td style="text-align:left">哈希计算工具，支持MD5,SHA1,SHA256,CRC32</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://itunes.apple.com/cn/app/noodle/id1048842988?mt=12&amp;ign-mpt=uo%3D8" target="_blank" rel="external">noodle</a></td>
+<td style="text-align:left">SSH 连接工具</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://minifyapp.com/" target="_blank" rel="external">Minity</a></td>
+<td style="text-align:left">代码压缩</td>
+<td style="text-align:left">Mac</td>
+</tr>
+<tr>
+<td style="text-align:left">AVPlayer</td>
+<td style="text-align:left">视频播放器，可通过FTP，web等多种方式播放视频</td>
+<td style="text-align:left">iOS</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://aria2.github.io/" target="_blank" rel="external">Aria2</a></td>
+<td style="text-align:left">实现百度云、迅雷离线满速下载</td>
+<td style="text-align:left">Window, Mac, iOS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Chrome-插件"><a href="#Chrome-插件" class="headerlink" title="Chrome 插件"></a>Chrome 插件</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://chrome.google.com/webstore/detail/simple-blocker/akfbkbiialncppkngofjpglbbobjoeoe/related" target="_blank" rel="external">Simple Blocker</a></td>
+<td style="text-align:left">禁止浏览器访问指定的软件</td>
+</tr>
+<tr>
+<td style="text-align:left">Evernote Web Clipper</td>
+<td style="text-align:left">收藏网页内容至印象笔记</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="url">
+                  Sublime Text之OmniMarkupPreviewer
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-13T21:37:44+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/sublime/" itemprop="url" rel="index">
+                    <span itemprop="name">sublime</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" class="leancloud_visitors" data-flag-title="Sublime Text之OmniMarkupPreviewer">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h1><h2 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h2><ul>
+<li>实时预览，多设备同时刷新</li>
+<li>扩展语法</li>
+<li>MathJax 公式</li>
+<li>文档内标题导航</li>
+<li>支持HTML、PDF格式导出</li>
+</ul>
+<p>OmniMarkdownPreviewer采用python-markdown解析，相关的扩展配置，请参阅<a href="https://pythonhosted.org/Markdown/extensions/index.html" target="_blank" rel="external">python-markdown</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>option</code>+<code>command</code>+O</td>
+<td style="text-align:left">打开浏览器进行预览</td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">server_host</td>
+<td style="text-align:left">开启预览服务的IP地址，建议为本机固定IP，这样可实现局域网内的设备均可访问，不需要的话默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">server_port</td>
+<td style="text-align:left">访问端口号，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_modified</td>
+<td style="text-align:left">是否开启实时刷新，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_modified_delay</td>
+<td style="text-align:left">刷新延时，单位毫秒，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">refresh_on_saved</td>
+<td style="text-align:left">保存时刷新预览，默认即可</td>
+</tr>
+<tr>
+<td style="text-align:left">browser_command</td>
+<td style="text-align:left">设置预览的浏览器</td>
+</tr>
+<tr>
+<td style="text-align:left">html_template_name</td>
+<td style="text-align:left">预览模版</td>
+</tr>
+<tr>
+<td style="text-align:left">ignored_renderers</td>
+<td style="text-align:left">忽略标记语言的渲染器</td>
+</tr>
+<tr>
+<td style="text-align:left">mathjax_enabled</td>
+<td style="text-align:left">开启LaTex</td>
+</tr>
+<tr>
+<td style="text-align:left">renderer_options-MarkdownRenderer</td>
+<td style="text-align:left">渲染扩展，扩展Markdown的语法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="渲染说明"><a href="#渲染说明" class="headerlink" title="渲染说明"></a>渲染说明</h3><ul>
+<li>attr_list ：开启文档内跳转</li>
+<li>footnotes ：文档脚注  </li>
+<li>codehilite：代码语法高亮     </li>
+<li>toc ：在文章开头自动生成目录，并附带跳转链接  </li>
+<li>strikeout：删除线   ~~ 删除线 ~~</li>
+<li>superscript ：上标  H^2^</li>
+<li>subscript：下标   H~2~  </li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/13/My-Sublime-Text-Setting/" itemprop="url">
                   My Sublime Text Setting
                 </a>
@@ -4009,7 +4669,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

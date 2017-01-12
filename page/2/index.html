@@ -276,6 +276,157 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-指示器/" itemprop="url">
+                  Web-XML-Schema-指示器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-17T14:35:57+08:00" content="2016-12-17">
+              2016-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/XML/" itemprop="url" rel="index">
+                    <span itemprop="name">XML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/17/Web-XML-Schema-指示器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/Web-XML-Schema-指示器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/17/Web-XML-Schema-指示器/" class="leancloud_visitors" data-flag-title="Web-XML-Schema-指示器">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="指示器"><a href="#指示器" class="headerlink" title="指示器"></a>指示器</h2><p>通过指示器可以控制在文档中使用元素的方式。    </p>
+<h3 id="Order-指示器"><a href="#Order-指示器" class="headerlink" title="Order 指示器"></a>Order 指示器</h3><p>Order 用于定义元素的顺序</p>
+<h4 id="All"><a href="#All" class="headerlink" title="All"></a>All</h4><p><code>&lt;all&gt;</code>指示器规定子元素可以按照任意顺序出现，且每个子元素必须只能出现一次。 </p>
+<blockquote>
+<p>当使用 <code>&lt;all&gt;</code> 指示器时，你可以把 <code>&lt;minOccurs&gt;</code>设置为 0 或者 1，而只能把 <code>&lt;maxOccurs&gt;</code> 指示器设置为 1 </p>
+<h4 id="Choice"><a href="#Choice" class="headerlink" title="Choice"></a>Choice</h4><p><code>&lt;choice&gt;</code>指示器规定可出现某个子元素或者可出现另外一个子元素（非此即彼）。 </p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:choice</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"employee"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"member"</span> <span class="attr">type</span>=<span class="string">"member"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:choice</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>如需设置子元素出现任意次数，可将 <code>&lt;maxOccurs&gt;</code>设置为 <code>unbounded</code>（无限次）。</p>
+</blockquote>
+<h4 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence"></a>Sequence</h4><p><code>&lt;sequence&gt;</code> 规定子元素必须按照特定的顺序出现。</p>
+<h3 id="Occurrence-指示器"><a href="#Occurrence-指示器" class="headerlink" title="Occurrence 指示器"></a>Occurrence 指示器</h3><p>Occurrence 指示器用于定义某个元素出现的频率。    </p>
+<blockquote>
+<p>对于所有的 “Order” 和 “Group” 指示器（any、all、choice、sequence、group name 以及 group reference），其中的 maxOccurs 以及 minOccurs 的默认值均为 1。</p>
+</blockquote>
+<h4 id="maxOccurs"><a href="#maxOccurs" class="headerlink" title="maxOccurs"></a>maxOccurs</h4><p><code>&lt;maxOccurs&gt;</code> 指示器可规定某个元素可出现的最大次数。如需使某个元素的出现次数不受限制，请使用<code>maxOccurs=&quot;unbounded&quot;</code> 这个声明</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"full_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"child_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">maxOccurs</span>=<span class="string">"10"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="minOccurs"><a href="#minOccurs" class="headerlink" title="minOccurs"></a>minOccurs</h4><p><code>&lt;minOccurs&gt;</code> 指示器可规定某个元素能够出现的最小次数。</p>
+<h3 id="Group指示器"><a href="#Group指示器" class="headerlink" title="Group指示器"></a>Group指示器</h3><p>Group 指示器用于定义相关的数批元素。<br>您必须在 <code>group</code> 声明内部定义一个 <code>all</code>、<code>choice</code> 或者 <code>sequence</code> 元素。</p>
+<h4 id="元素组"><a href="#元素组" class="headerlink" title="元素组"></a>元素组</h4><p>把 group 定义完毕以后，就可以在另一个定义中引用它了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">name</span>=<span class="string">"persongroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:group</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">ref</span>=<span class="string">"persongroup"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="属性组"><a href="#属性组" class="headerlink" title="属性组"></a>属性组</h4><p>已定义完毕属性组之后，就可以在另一个定义中引用它了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">name</span>=<span class="string">"personattrgroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:attributeGroup</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">ref</span>=<span class="string">"personattrgroup"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-限定/" itemprop="url">
                   Web-XML-Schema-限定
                 </a>
@@ -3347,250 +3498,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/Math-DM-02-逻辑等价/" itemprop="url">
-                  离散数学学习笔记 逻辑等价 02
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T16:58:58+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/26/Math-DM-02-逻辑等价/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/Math-DM-02-逻辑等价/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/26/Math-DM-02-逻辑等价/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 逻辑等价 02">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。</p>
-<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。用如下定义这一概念：  </p>
-<ul>
-<li>如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。<blockquote>
-<p>符号$\equiv$不是逻辑链接符，因为$p\equiv q$不是复合命题。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="摩根定律及应用"><a href="#摩根定律及应用" class="headerlink" title="摩根定律及应用"></a>摩根定律及应用</h2><p>$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">名称</th>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">摩根定律</td>
-<td style="text-align:left">$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$</td>
-</tr>
-<tr>
-<td style="text-align:left">恒等律</td>
-<td style="text-align:left">$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">支配律</td>
-<td style="text-align:left">$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$</td>
-</tr>
-<tr>
-<td style="text-align:left">幂等律</td>
-<td style="text-align:left">$p\land p \equiv p$ <br> $p\lor p \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">双非律</td>
-<td style="text-align:left">$\lnot(\lnot p) \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">交换律</td>
-<td style="text-align:left">$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$</td>
-</tr>
-<tr>
-<td style="text-align:left">结合律</td>
-<td style="text-align:left">$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">分配律</td>
-<td style="text-align:left">$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">吸收律</td>
-<td style="text-align:left">$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">否定律</td>
-<td style="text-align:left">$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$</td>
-</tr>
-</tbody>
-</table>
-<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$p\rightarrow q\equiv \lnot p\lor q $</td>
-</tr>
-<tr>
-<td style="text-align:left">$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$</td>
-</tr>
-<tr>
-<td style="text-align:left">$p\lor q\equiv \lnot p\rightarrow q$</td>
-</tr>
-<tr>
-<td style="text-align:left">$p\land q\equiv \lnot(p\rightarrow \lnot q) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot(p\rightarrow q)\equiv p\land \lnot q $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$</td>
-</tr>
-</tbody>
-</table>
-<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$p↔︎q \equiv \lnot p↔︎ \lnot q $</td>
-</tr>
-<tr>
-<td style="text-align:left">$p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot (p↔︎q) \equiv p↔︎\lnot q $</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3636,7 +3543,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-count">60</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

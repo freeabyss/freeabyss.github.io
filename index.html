@@ -276,6 +276,141 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/11/Math-DM-26-递推关系/" itemprop="url">
+                  Math-DM-26-递推关系
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-11T21:00:45+08:00" content="2017-01-11">
+              2017-01-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/11/Math-DM-26-递推关系/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/11/Math-DM-26-递推关系/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/01/11/Math-DM-26-递推关系/" class="leancloud_visitors" data-flag-title="Math-DM-26-递推关系">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="递推关系"><a href="#递推关系" class="headerlink" title="递推关系"></a>递推关系</h2><p>对于递归定义，这个从某些前项求后项的规则就叫做递推关系。<br>关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     </p>
+<h3 id="用递推关系构造模型"><a href="#用递推关系构造模型" class="headerlink" title="用递推关系构造模型"></a>用递推关系构造模型</h3><h4 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h4><p>令$H_n$表示解$n$个盘子的汉诺塔问题所需要的移动次数。建立一个关于序列$\{H_n\}$的递推关系。<br>解:开始$n$个盘子在柱1。按照游戏规则我们可以用$H_{n-1}$次移动将上边的$n-1$个盘子移动柱3.在这些移动中保留最大的盘子不动。然后，我们用一次移动将最大的盘子移动第二根柱子上。我们可以再使用$H_{n-1}$次移动将柱3上的$n-1$个盘子移到柱2，把它们放到最大的盘子上面，这个最大的盘子一直放在柱2的底部。容易看出，使用更少的步数是不能求解这个难题。这就证明了$H_n=2H_{n-1}+1$。<br>使用迭代方法求这个递推关系:$$\begin{array}{l}H_n&amp;=2H_{n-1}+1\\ &amp;=2(2H_{n-2}+1)+1=2^2H_{n-2}+2+1\\ &amp;=2^2(2H_{n-3}+1)+2+1=2^3H_{n-3}+2^2+2+1\\ &amp;\dots\\ &amp;=2^{n-1}H_1+2^{n-2}+2^{n-3}+\dots+2+1\\ &amp;=2^{n-1}+2^{n-2}+\dots+2+1\\&amp;=2^n-1\end{array}$$</p>
+<h4 id="编码字的枚举"><a href="#编码字的枚举" class="headerlink" title="编码字的枚举"></a>编码字的枚举</h4><p>一个计算机系统把一个十进制数字串作为一个编码字，如果它包含偶数个$0$，就是有效的。<br>注意到$a_1=9$，因为存在$10$个$1$位十进制数字串，并且只有一个，即串$0$是无效的。通过考虑怎样由$n-1$位的数字串构成一个$n$位有效数字串，就可以推导出关于这个序列的递推关系。从少$1$位数字的串构成$n$位有效数字串有两种方式:      </p>
+<ol>
+<li>在一个$n-1$位有效数字串后面加上一个非$0$的数字就可以得到一个$n$位的有效数字串。加这个数字的方式有$9$种。因此用这个方法构成$n$位有效数字串的方式有$9a_{n-1}$种。      </li>
+<li>在一个无效的$n-1$位数字串后面加上一个$0$就可以得到$n$位有效的数字串。这样做的方式数等于无效的$n-1$位数字串的个数。因为存在$10^{n-1}$个$n-1$位数字串，其中有$a_{n-1}$个是有效的，通过在无效的$n-1$位数字串后面加上一个$0$就得到$10^{n-1}-a_{n-1}$个$n$位的有效数字串。<br>因为所有的$n$位有效数字串都用这两种方式之一产生，从而存在$$\begin{array}{l}a_n &amp;=9a_{n-1}+(10^{n-1}-a_{n-1})\\ &amp;=8a_{n-1}+10^{n-1}\end{array}$$</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/01/08/JavaScript-NPM-概述/" itemprop="url">
                   JavaScript-NPM 概述
                 </a>
@@ -466,8 +601,9 @@
           
             <h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>为了定义以非负整数集合作为其定义域的函数，使用两个步骤:<br>基础步骤:规定这个函数在$0$处的值。<br>递归步骤:给出从较小的整数处的值来求出当前的值的规则。<br>这样的定义称为递归定义或归纳定义。     </p>
 <h3 id="斐波那契数"><a href="#斐波那契数" class="headerlink" title="斐波那契数"></a>斐波那契数</h3><p>斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。<br>其中$n=2,3,4,\dots $ </p>
-<h4 id="使用斐波那契数的性质证明示例"><a href="#使用斐波那契数的性质证明示例" class="headerlink" title="使用斐波那契数的性质证明示例"></a>使用斐波那契数的性质证明示例</h4><p>证明:每当$n\ge 3$时，有$f_n&gt;a_{n-1}$，其中$a=(1+\sqrt 5)/2$<br>基础步骤:证明$P(3)$和$P(4)$都为真。 $$a<2=f_3,\; a^2="(3+\sqrt" 5)="" 2<3="f_4$$" 归纳步骤:假定$p(j)$为真，即对所有满足$3\le="" j\le="" k$的整数$j$来说有$f_j="">a^{j-2}$。其中$k\ge 4$。必须证明$P(k+1)$为真，即$f_{k+1}&gt;a^{k-1}$。因为$a$是$x^2-x-1=0$的解，所有得出$a^2=a+1$。因此$$a^{k-1}=a^2\cdot a^{k-1}=(a+1)a^{k-3}=a\cdot a^{k-3}+1\cdot a^{k-3}=a^{k-2}+a^{k-3}$$<br>根据归纳假设，若$k\ge 4$则得出 $$f_{k-1}&gt;a^{k-3},\;\;f_k&gt;a^{k-2}$$<br>因此有 $$f_{k+1}=f_k+f_{k-1}&gt;a^{k-2}+a^{k-3}$$因此$P(k+1)$为真，证毕。    </2=f_3,\;></p>
-<p>###拉梅定理</p>
+<h4 id="使用斐波那契数的性质证明示例"><a href="#使用斐波那契数的性质证明示例" class="headerlink" title="使用斐波那契数的性质证明示例"></a>使用斐波那契数的性质证明示例</h4><p>证明:每当$n\ge 3$时，有$f_n&gt;a_{n-1}$，其中$a=(1+\sqrt 5)/2$<br>基础步骤:证明$P(3)$和$P(4)$都为真。 $$a<2=f_3,\; a^2="(3+\sqrt" 5)="" 2<3="f_4$$" 归纳步骤:假定$p(j)$为真，即对所有满足$3\le="" j\le="" k$的整数$j$来说有$f_j="">a^{j-2}$。其中$k\ge 4$。必须证明$P(k+1)$为真，即$f_{k+1}&gt;a^{k-1}$。因为$a$是$x^2-x-1=0$的解，所有得出$a^2=a+1$。因此$$a^{k-1}=a^2\cdot a^{k-1}=(a+1)a^{k-3}=a\cdot a^{k-3}+1\cdot a^{k-3}=a^{k-2}+a^{k-3}$$<br>根据归纳假设，若$k\ge 4$则得出 $$f_{k-1}&gt;a^{k-3},\;\;f_k&gt;a^{k-2}$$<br>因此有 $$f_{k+1}=f_k+f_{k-1}&gt;a^{k-2}+a^{k-3}$$因此$P(k+1)$为真，证毕。 </2=f_3,\;></p>
+<p>###拉梅定理<br>设$a$和$b$是满足$a\ge b$的正整数，则欧几里得算法为了求出$gcd(a,b)$而使用的除法的次数小于或等于$b$的十进制位数的$5$倍。<br>证: 当用欧几里得算法求满足$a\ge b$的$gcd(a,b)$时，得出下面的等式序列(其中$a=r_0$而$b=r_1$)<br>$$\begin{array}{l}<br>r_0=r_1q_1+r_2 \qquad 0\le r_2<r_1 1="f_2" \\="" r_1="r_2q_2+r_3" \qquad="" 0\le="" r_3<r_2="" \dots="" r_{n-2}="r_{n-1}q_{n-1}+r_n" r_n<r_{n-1}="" r_{n-1}="r_nq_n" \end{array}$$="" 在这里为了求出$r_n="gcd(a,b)$而使用了$n$次除法。注意商$q_1,q_2,\dots,q_{n-1}$都至少是$1$。另外，$q_n\ge" 2$，因为$r_n<r_{n-1}$。这就蕴含着="" $$\begin{array}{l}r_n\ge="" \\r_{n-1}\ge="" 2r_n\ge="" 2f_2="f_2" \\r_{n-2}\ge="" r_{n-1}+r_n\ge="" f_3+f_2="f_4" \\\dots="" r_2\ge="" r_3+r_4\ge="" f_{n-1}+f_{n-2}="f_n\\b=r_1\ge" r_2+r_3\ge="" f_n+f_{n-1}="f_{n+1}\end{array}$$" 因此得出，若欧几里得算法为了求出满足$a\ge="" b$的$gcd(a,b)$而使用了$n$次除法，则$b\ge="" f_{n+1}$从列6中知道，对$n="">2$来说$f_{n+1}&gt;a^{n-1}$，其中$a=(1+\sqrt 5)/2$。因此得出$b&gt; a^{n-1}$.另外，因为$log_{10}a~0.208&gt;1/5$。所以可以看出$$log_{10}b&gt;(n-1)log_{10}a&gt;(n-1)/5$$因此，$n-1&lt;5\cdot log_{10}b$。现在假定$b$有$k$个十进制位。则$b&lt;10^k$而且$log_{10}b&lt;k$。由此得出$n-1&lt;5k$，而且因为$k$是整数，所以得出$n\le 5k$。证毕。</r_1></p>
+<h3 id="结构归纳法"><a href="#结构归纳法" class="headerlink" title="结构归纳法"></a>结构归纳法</h3><p>结构归纳法包含两个步骤:<br>基础步骤:证明对于递归定义的基础步骤所规定的属于该集合的所以元素来说，结果成立。<br>递归步骤:证明如果对于定义的递归步骤中用来构造新元素的每个元素来说命题为真，则对于这些新的元素来说结果成立。      </p>
 
           
         
@@ -597,7 +733,7 @@
         
           
             <h2 id="强归纳法"><a href="#强归纳法" class="headerlink" title="强归纳法"></a>强归纳法</h2><p>要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:<br>基础步骤: 证明$P(1)$为真。<br>归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$</p>
-<h3 id="强归纳法-or-数学归纳法"><a href="#强归纳法-or-数学归纳法" class="headerlink" title="强归纳法 or 数学归纳法"></a>强归纳法 or 数学归纳法</h3><p>一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳法的归纳步骤证明是明显成立的。      </p>
+<h3 id="强归纳法-or-数学归纳法"><a href="#强归纳法-or-数学归纳法" class="headerlink" title="强归纳法 or 数学归纳法"></a>强归纳法 or 数学归纳法</h3><p>一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳法的归纳步骤证明是明显成立的。</p>
 <h3 id="强归纳法示例"><a href="#强归纳法示例" class="headerlink" title="强归纳法示例"></a>强归纳法示例</h3><h4 id="算术基本定理证明"><a href="#算术基本定理证明" class="headerlink" title="算术基本定理证明"></a>算术基本定理证明</h4><p>证明:若$n$是大于$1$的整数，则$n$可以写成素数之和。<br>设$P(n)$是命题:$n$可以写成素数之积。<br>基础步骤: $P(2)$为真，因为$2$可以写成一个素数之积，即它自身。<br>归纳步骤: 假定对所有满足$j\le k$的正整数$j$来说$P(j)$为真。要完成归纳步骤就必须证明在这个假定下$P(k+1)$为真。<br>有两种情况要考虑，即$k+1$是素数和$k+1$是合数。$k+1$是素数，则立即看出$P(k+1)$为真。否则，$k+1$是合数并且可以写成满足$2\le a\le b&lt;k+1$的两个整数$a$和$b$之积。根据归纳假设，$a$和$b$都可以写成素数之积。因此，若$k+1$是合数，则它可以写成素数之积。</p>
 
           
@@ -2900,157 +3036,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-指示器/" itemprop="url">
-                  Web-XML-Schema-指示器
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-17T14:35:57+08:00" content="2016-12-17">
-              2016-12-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/XML/" itemprop="url" rel="index">
-                    <span itemprop="name">XML</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/17/Web-XML-Schema-指示器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/Web-XML-Schema-指示器/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/17/Web-XML-Schema-指示器/" class="leancloud_visitors" data-flag-title="Web-XML-Schema-指示器">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="指示器"><a href="#指示器" class="headerlink" title="指示器"></a>指示器</h2><p>通过指示器可以控制在文档中使用元素的方式。    </p>
-<h3 id="Order-指示器"><a href="#Order-指示器" class="headerlink" title="Order 指示器"></a>Order 指示器</h3><p>Order 用于定义元素的顺序</p>
-<h4 id="All"><a href="#All" class="headerlink" title="All"></a>All</h4><p><code>&lt;all&gt;</code>指示器规定子元素可以按照任意顺序出现，且每个子元素必须只能出现一次。 </p>
-<blockquote>
-<p>当使用 <code>&lt;all&gt;</code> 指示器时，你可以把 <code>&lt;minOccurs&gt;</code>设置为 0 或者 1，而只能把 <code>&lt;maxOccurs&gt;</code> 指示器设置为 1 </p>
-<h4 id="Choice"><a href="#Choice" class="headerlink" title="Choice"></a>Choice</h4><p><code>&lt;choice&gt;</code>指示器规定可出现某个子元素或者可出现另外一个子元素（非此即彼）。 </p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:choice</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"employee"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"member"</span> <span class="attr">type</span>=<span class="string">"member"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:choice</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>如需设置子元素出现任意次数，可将 <code>&lt;maxOccurs&gt;</code>设置为 <code>unbounded</code>（无限次）。</p>
-</blockquote>
-<h4 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence"></a>Sequence</h4><p><code>&lt;sequence&gt;</code> 规定子元素必须按照特定的顺序出现。</p>
-<h3 id="Occurrence-指示器"><a href="#Occurrence-指示器" class="headerlink" title="Occurrence 指示器"></a>Occurrence 指示器</h3><p>Occurrence 指示器用于定义某个元素出现的频率。    </p>
-<blockquote>
-<p>对于所有的 “Order” 和 “Group” 指示器（any、all、choice、sequence、group name 以及 group reference），其中的 maxOccurs 以及 minOccurs 的默认值均为 1。</p>
-</blockquote>
-<h4 id="maxOccurs"><a href="#maxOccurs" class="headerlink" title="maxOccurs"></a>maxOccurs</h4><p><code>&lt;maxOccurs&gt;</code> 指示器可规定某个元素可出现的最大次数。如需使某个元素的出现次数不受限制，请使用<code>maxOccurs=&quot;unbounded&quot;</code> 这个声明</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"full_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"child_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">maxOccurs</span>=<span class="string">"10"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="minOccurs"><a href="#minOccurs" class="headerlink" title="minOccurs"></a>minOccurs</h4><p><code>&lt;minOccurs&gt;</code> 指示器可规定某个元素能够出现的最小次数。</p>
-<h3 id="Group指示器"><a href="#Group指示器" class="headerlink" title="Group指示器"></a>Group指示器</h3><p>Group 指示器用于定义相关的数批元素。<br>您必须在 <code>group</code> 声明内部定义一个 <code>all</code>、<code>choice</code> 或者 <code>sequence</code> 元素。</p>
-<h4 id="元素组"><a href="#元素组" class="headerlink" title="元素组"></a>元素组</h4><p>把 group 定义完毕以后，就可以在另一个定义中引用它了。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">name</span>=<span class="string">"persongroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:group</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">ref</span>=<span class="string">"persongroup"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="属性组"><a href="#属性组" class="headerlink" title="属性组"></a>属性组</h4><p>已定义完毕属性组之后，就可以在另一个定义中引用它了。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">name</span>=<span class="string">"personattrgroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:attributeGroup</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">ref</span>=<span class="string">"personattrgroup"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3096,7 +3081,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-count">60</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

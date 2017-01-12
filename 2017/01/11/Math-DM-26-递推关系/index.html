@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="note,Java,QuartZ,Cron," />
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
 
 
 
@@ -92,118 +92,19 @@
 
 
 
-<meta name="description" content="Cron表达式
-格式：{seconds} {minutes} {hours} {day of month} {month} {day of week} [year]year是可选的
-
-
-
-
-字段名
-允许的值
-允许的字符
-
-
-
-
-秒
-0-59
-, - * /
-
-
-分
-0-59
-, - * /
-
-
-小时
-0-23
-, - * /
-
-
-日
-1-32
-, - * / ? L W C
-
-
-月
-1-12 or">
+<meta name="description" content="递推关系对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
+用递推关系构造模型汉诺塔令$H_n$表示解$n$个盘子的汉诺">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QuartZ Cron表达式详解">
-<meta property="og:url" content="http://blog.freeabyss.com/2016/05/29/Quart表达式详解/index.html">
+<meta property="og:title" content="Math-DM-26-递推关系">
+<meta property="og:url" content="http://blog.freeabyss.com/2017/01/11/Math-DM-26-递推关系/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="Cron表达式
-格式：{seconds} {minutes} {hours} {day of month} {month} {day of week} [year]year是可选的
-
-
-
-
-字段名
-允许的值
-允许的字符
-
-
-
-
-秒
-0-59
-, - * /
-
-
-分
-0-59
-, - * /
-
-
-小时
-0-23
-, - * /
-
-
-日
-1-32
-, - * / ? L W C
-
-
-月
-1-12 or">
-<meta property="og:updated_time" content="2016-09-03T16:33:03.000Z">
+<meta property="og:description" content="递推关系对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
+用递推关系构造模型汉诺塔令$H_n$表示解$n$个盘子的汉诺">
+<meta property="og:updated_time" content="2017-01-11T13:36:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QuartZ Cron表达式详解">
-<meta name="twitter:description" content="Cron表达式
-格式：{seconds} {minutes} {hours} {day of month} {month} {day of week} [year]year是可选的
-
-
-
-
-字段名
-允许的值
-允许的字符
-
-
-
-
-秒
-0-59
-, - * /
-
-
-分
-0-59
-, - * /
-
-
-小时
-0-23
-, - * /
-
-
-日
-1-32
-, - * / ? L W C
-
-
-月
-1-12 or">
+<meta name="twitter:title" content="Math-DM-26-递推关系">
+<meta name="twitter:description" content="递推关系对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
+用递推关系构造模型汉诺塔令$H_n$表示解$n$个盘子的汉诺">
 
 
 
@@ -224,9 +125,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.freeabyss.com/2016/05/29/Quart表达式详解/"/>
+  <link rel="canonical" href="http://blog.freeabyss.com/2017/01/11/Math-DM-26-递推关系/"/>
 
-  <title> QuartZ Cron表达式详解 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Math-DM-26-递推关系 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -376,7 +277,7 @@
             
             
               
-                QuartZ Cron表达式详解
+                Math-DM-26-递推关系
               
             
           </h1>
@@ -388,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-29T00:29:57+08:00" content="2016-05-29">
-              2016-05-29
+            <time itemprop="dateCreated" datetime="2017-01-11T21:00:45+08:00" content="2017-01-11">
+              2017-01-11
             </time>
           </span>
 
@@ -402,8 +303,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
                   </a>
                 </span>
 
@@ -418,8 +319,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/29/Quart表达式详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/29/Quart表达式详解/" itemprop="commentsCount"></span>
+                <a href="/2017/01/11/Math-DM-26-递推关系/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/11/Math-DM-26-递推关系/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -429,7 +330,7 @@
 
           
           
-             <span id="/2016/05/29/Quart表达式详解/" class="leancloud_visitors" data-flag-title="QuartZ Cron表达式详解">
+             <span id="/2017/01/11/Math-DM-26-递推关系/" class="leancloud_visitors" data-flag-title="Math-DM-26-递推关系">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -451,161 +352,13 @@
       
 
       
-        <h2 id="Cron表达式"><a href="#Cron表达式" class="headerlink" title="Cron表达式"></a>Cron表达式</h2><blockquote>
-<p>格式：{seconds} {minutes} {hours} {day of month} {month} {day of week} [year]<br>year是可选的</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">允许的值</th>
-<th style="text-align:left">允许的字符</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">秒</td>
-<td style="text-align:center">0-59</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">分</td>
-<td style="text-align:center">0-59</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">小时</td>
-<td style="text-align:center">0-23</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">日</td>
-<td style="text-align:center">1-32</td>
-<td style="text-align:left">, - * / ? L W C</td>
-</tr>
-<tr>
-<td style="text-align:center">月</td>
-<td style="text-align:center">1-12 or JAN-DEC</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-<tr>
-<td style="text-align:center">周</td>
-<td style="text-align:center">1-7 or SUN-SAT</td>
-<td style="text-align:left">, - * / ? L #</td>
-</tr>
-<tr>
-<td style="text-align:center">年</td>
-<td style="text-align:center">empty,1970-2099</td>
-<td style="text-align:left">, - * /</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>day of month : 可以用数字1-31中的任一一个值，但要注意一些特别的月份。<br>day of week : 可以用1-7数字表示，1代表周日，或者用字符: SUN,MON,TUE,WED,THU,FRI,SAT。<br>month: 可以用1-12，或者字符: JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC。 </p>
-</blockquote>
-<h2 id="字符解释"><a href="#字符解释" class="headerlink" title="字符解释"></a>字符解释</h2><blockquote>
-<p>* :匹配该域的任意值，如* 用在分所在的域，表示每分钟都会触发事件。<br>?  :该字符仅用在<code>day of month</code>与<code>day of week</code>两个域中，并且两个域的?互斥，当其中一个被指定值后，另外一个为避免冲突需要将值设为?。<br>- :匹配一个特定范围值，例如，10-12，表示10、11、12的时候触发事件。<br>,  :匹配多个值，例如，10,12,13，表示10、12、13的时候触发事件。<br>/  :左边表示开始触发时间，右边是每隔固定时间触发一次事件，如<code>senconds</code>的值为’5/15’ 表示 5 秒、20 秒、35 秒、50 秒的时候都触发一次事件。<br>L  :表示最后的意思。   </p>
-<ul>
-<li>在<code>day of month</code>表示每月最后一天；</li>
-<li>在<code>day of week</code>表示周日；</li>
-<li>如果前面加上数字，表示本月最后一天，例如’6L’表示每月最后一个周五；</li>
-<li>还可以指定从最后一天到开始时间，例如，’L-2’表示每月的第2天到最后一天。</li>
-</ul>
-<p>W  :表示工作日，例如，值为’15W’，表示在最近的工作日触发，如果15日是周六那么将在周五触发，如果是周日将在周一触发，如果是周一到周五则当天触发。<br>   <strong> <em>‘L’可以与’W’结合使用，’LW’表示当月最后一个工作日</em> </strong><br>#  :用来表示每个月的第几个星期几，例如，’6#3’表示某个月的第3个星期五。  </p>
-</blockquote>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">表达式</th>
-<th style="text-align:left">意思</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">0 0 12 <em> </em> ?</td>
-<td style="text-align:left">Fire at 12pm (noon) every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? <em> </em></td>
-<td style="text-align:left">Fire at 10:15am every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 <em> </em> ?</td>
-<td style="text-align:left">Fire at 10:15am every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 <em> </em> ? *</td>
-<td style="text-align:left">Fire at 10:15am every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 <em> </em> ? 2005</td>
-<td style="text-align:left">Fire at 10:15am every day during the year 2005</td>
-</tr>
-<tr>
-<td style="text-align:left">0 <em> 14 </em> * ?</td>
-<td style="text-align:left">Fire every minute starting at 2pm and ending at 2:59pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0/5 14 <em> </em> ?</td>
-<td style="text-align:left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0/5 14,18 <em> </em> ?</td>
-<td style="text-align:left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0-5 14 <em> </em> ?</td>
-<td style="text-align:left">Fire every minute starting at 2pm and ending at 2:05pm, every day</td>
-</tr>
-<tr>
-<td style="text-align:left">0 10,44 14 ? 3 WED</td>
-<td style="text-align:left">Fire at 2:10pm and at 2:44pm every Wednesday in the month of March.</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * MON-FRI</td>
-<td style="text-align:left">Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 15 * ?</td>
-<td style="text-align:left">Fire at 10:15am on the 15th day of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 L * ?</td>
-<td style="text-align:left">Fire at 10:15am on the last day of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 L-2 * ?</td>
-<td style="text-align:left">Fire at 10:15am on the 2nd-to-last last day of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6L</td>
-<td style="text-align:left">Fire at 10:15am on the last Friday of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6L</td>
-<td style="text-align:left">Fire at 10:15am on the last Friday of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6L 2002-2005</td>
-<td style="text-align:left">Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004 and 2005</td>
-</tr>
-<tr>
-<td style="text-align:left">0 15 10 ? * 6#3</td>
-<td style="text-align:left">Fire at 10:15am on the third Friday of every month</td>
-</tr>
-<tr>
-<td style="text-align:left">0 0 12 1/5 * ?</td>
-<td style="text-align:left">Fire at 12pm (noon) every 5 days every month, starting on the first day of the month.</td>
-</tr>
-<tr>
-<td style="text-align:left">0 11 11 11 11 ?</td>
-<td style="text-align:left">Fire every November 11th at 11:11am.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
-<p><a href="http://quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger" target="_blank" rel="external">官方说明</a></p>
-</blockquote>
+        <h2 id="递推关系"><a href="#递推关系" class="headerlink" title="递推关系"></a>递推关系</h2><p>对于递归定义，这个从某些前项求后项的规则就叫做递推关系。<br>关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     </p>
+<h3 id="用递推关系构造模型"><a href="#用递推关系构造模型" class="headerlink" title="用递推关系构造模型"></a>用递推关系构造模型</h3><h4 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h4><p>令$H_n$表示解$n$个盘子的汉诺塔问题所需要的移动次数。建立一个关于序列$\{H_n\}$的递推关系。<br>解:开始$n$个盘子在柱1。按照游戏规则我们可以用$H_{n-1}$次移动将上边的$n-1$个盘子移动柱3.在这些移动中保留最大的盘子不动。然后，我们用一次移动将最大的盘子移动第二根柱子上。我们可以再使用$H_{n-1}$次移动将柱3上的$n-1$个盘子移到柱2，把它们放到最大的盘子上面，这个最大的盘子一直放在柱2的底部。容易看出，使用更少的步数是不能求解这个难题。这就证明了$H_n=2H_{n-1}+1$。<br>使用迭代方法求这个递推关系:$$\begin{array}{l}H_n&amp;=2H_{n-1}+1\\ &amp;=2(2H_{n-2}+1)+1=2^2H_{n-2}+2+1\\ &amp;=2^2(2H_{n-3}+1)+2+1=2^3H_{n-3}+2^2+2+1\\ &amp;\dots\\ &amp;=2^{n-1}H_1+2^{n-2}+2^{n-3}+\dots+2+1\\ &amp;=2^{n-1}+2^{n-2}+\dots+2+1\\&amp;=2^n-1\end{array}$$</p>
+<h4 id="编码字的枚举"><a href="#编码字的枚举" class="headerlink" title="编码字的枚举"></a>编码字的枚举</h4><p>一个计算机系统把一个十进制数字串作为一个编码字，如果它包含偶数个$0$，就是有效的。<br>注意到$a_1=9$，因为存在$10$个$1$位十进制数字串，并且只有一个，即串$0$是无效的。通过考虑怎样由$n-1$位的数字串构成一个$n$位有效数字串，就可以推导出关于这个序列的递推关系。从少$1$位数字的串构成$n$位有效数字串有两种方式:      </p>
+<ol>
+<li>在一个$n-1$位有效数字串后面加上一个非$0$的数字就可以得到一个$n$位的有效数字串。加这个数字的方式有$9$种。因此用这个方法构成$n$位有效数字串的方式有$9a_{n-1}$种。      </li>
+<li>在一个无效的$n-1$位数字串后面加上一个$0$就可以得到$n$位有效的数字串。这样做的方式数等于无效的$n-1$位数字串的个数。因为存在$10^{n-1}$个$n-1$位数字串，其中有$a_{n-1}$个是有效的，通过在无效的$n-1$位数字串后面加上一个$0$就得到$10^{n-1}-a_{n-1}$个$n$位的有效数字串。<br>因为所有的$n$位有效数字串都用这两种方式之一产生，从而存在$$\begin{array}{l}a_n &amp;=9a_{n-1}+(10^{n-1}-a_{n-1})\\ &amp;=8a_{n-1}+10^{n-1}\end{array}$$</li>
+</ol>
 
       
     </div>
@@ -628,13 +381,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
             <a href="/tags/note/" rel="tag">#note</a>
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
-          
-            <a href="/tags/QuartZ/" rel="tag">#QuartZ</a>
-          
-            <a href="/tags/Cron/" rel="tag">#Cron</a>
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
           
         </div>
       
@@ -643,17 +394,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/28/在IDEA上远程调试Java-Web项目/" rel="next" title="在IDEA上远程调试Java Web项目">
-                <i class="fa fa-chevron-left"></i> 在IDEA上远程调试Java Web项目
+              <a href="/2017/01/08/JavaScript-NPM-概述/" rel="next" title="JavaScript-NPM 概述">
+                <i class="fa fa-chevron-left"></i> JavaScript-NPM 概述
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/18/对象的创建和销毁-《Effective-Java》笔记/" rel="prev" title="对象的创建和销毁-《Effective Java》笔记">
-                对象的创建和销毁-《Effective Java》笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -679,8 +426,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/29/Quart表达式详解/"
-           data-title="QuartZ Cron表达式详解" data-url="http://blog.freeabyss.com/2016/05/29/Quart表达式详解/">
+      <div class="ds-thread" data-thread-key="2017/01/11/Math-DM-26-递推关系/"
+           data-title="Math-DM-26-递推关系" data-url="http://blog.freeabyss.com/2017/01/11/Math-DM-26-递推关系/">
       </div>
     
   </div>
@@ -798,7 +545,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cron表达式"><span class="nav-number">1.</span> <span class="nav-text">Cron表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符解释"><span class="nav-number">2.</span> <span class="nav-text">字符解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#递推关系"><span class="nav-number">1.</span> <span class="nav-text">递推关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用递推关系构造模型"><span class="nav-number">1.1.</span> <span class="nav-text">用递推关系构造模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#汉诺塔"><span class="nav-number">1.1.1.</span> <span class="nav-text">汉诺塔</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码字的枚举"><span class="nav-number">1.1.2.</span> <span class="nav-text">编码字的枚举</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

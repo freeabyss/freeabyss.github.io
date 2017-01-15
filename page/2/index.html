@@ -276,6 +276,171 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/18/Math-DM-11-算法增长/" itemprop="url">
+                  离散数学学习笔记 函数的增长 11
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-18T19:25:01+08:00" content="2016-12-18">
+              2016-12-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/18/Math-DM-11-算法增长/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/Math-DM-11-算法增长/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/18/Math-DM-11-算法增长/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 函数的增长 11">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="函数的增长"><a href="#函数的增长" class="headerlink" title="函数的增长"></a>函数的增长</h2><h3 id="大O记号"><a href="#大O记号" class="headerlink" title="大O记号"></a>大O记号</h3><p>大$O$记号广泛用于估计当输入增长时一个算法所用的运算数。有了这个记号，可以确定当输入规模增大时，用一个特定的算法来解题是否实际可行。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$,使得只要$x&gt;k$，就有 $$\mid f(x)\mid\le C\mid g(x)\mid$$ 我们说$f(x)$是$O(g(x))。     </p>
+<blockquote>
+<p>$O(g(x))$其实可以看作是一个集合，是所有函数值大于$f(x)$的函数集合 </p>
+</blockquote>
+<p>如果$$\mid f(x)\mid\le C\mid g(x)\mid\quad 若x&gt;k$$并且如果对所有$x&gt;k$，有$\mid h(x)\mid &gt;\mid g(x)\mid$，那么$$\mid f(x)\mid\le C\mid h(x)\mid\quad 若x&gt;k$$</p>
+<h4 id="一些重要的大O结果"><a href="#一些重要的大O结果" class="headerlink" title="一些重要的大O结果"></a>一些重要的大O结果</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">$f(x)$</th>
+<th style="text-align:left">$O(g(x))$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$</td>
+<td style="text-align:left">$O(x^n)$</td>
+</tr>
+<tr>
+<td style="text-align:left">前$n$个正整数和</td>
+<td style="text-align:left">$O(n^2)$</td>
+</tr>
+<tr>
+<td style="text-align:left">$n!$</td>
+<td style="text-align:left">$O(n^n)$</td>
+</tr>
+<tr>
+<td style="text-align:left">$logn!$</td>
+<td style="text-align:left">$O(nlogn)$</td>
+</tr>
+<tr>
+<td style="text-align:left">$logn$</td>
+<td style="text-align:left">$O(n)$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="函数组合的增长"><a href="#函数组合的增长" class="headerlink" title="函数组合的增长"></a>函数组合的增长</h4><p>假定$f_1(x)$是$O(g_1(x))$，$f_2(x)$是$O(g_2(x))$,那么$(f_1+f_2)(x)$是 $$O(\;max(\;\mid g_1(x)\mid,\;\mid g_2(x)\mid )\;)$$<br>假定$f_1(x)$是$O(g_1(x))$，$f_2(x)$是$O(g_2(x))$,那么$(f_1f_2)(x)$是$$O(g_1(x)g_2(x))$$。</p>
+<h3 id="大-Omega-符号和大-Theta-符号"><a href="#大-Omega-符号和大-Theta-符号" class="headerlink" title="大$\Omega$符号和大$\Theta$符号"></a>大$\Omega$符号和大$\Theta$符号</h3><p>大O符合广泛用于描述函数增长，而大$\Omega$符合用于描述函数的下限，大$\Theta$符号用于描述函数的上下限。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常数$C$和$k$，使得在$x&gt;k$时$$\mid f(x)\mid\ge C\mid g(x)\mid$$我们说$f(x)$是$\Omega(g(x))$。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果$f(x)$是$O(g(x))$及$f(x)$\Omega(g(x))$，就说$f(x)$是$\Theta(g(x))$。若$f(x)$是$\Theta(g(x))$，就说f(x)$是大$\Theta g(x)$，也说$f(x)$是$g(x)$阶的。<br>如果存在正实数$C_1,C_2,k$，使得对$x&gt;k$ $$C_1\mid g(x)\mid\le\mid f(x)\mid\le C_2\mid g(x)\mid$$<br>则$f(x)$是$\Theta(g(x))$。<br>令$f(X)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$，其中$a_0,a_1,a_2,\dots,a_n$为实数，且$a_n\neq 0$，则$f(x)$是$x^n$阶的。    </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/17/Web-XML-Schema-指示器/" itemprop="url">
                   Web-XML-Schema-指示器
                 </a>
@@ -3357,152 +3522,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/30/Math-DM-03-谓词逻辑/" itemprop="url">
-                  离散数学学习笔记 谓词逻辑 03
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-30T21:45:35+08:00" content="2016-11-30">
-              2016-11-30
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/30/Math-DM-03-谓词逻辑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/30/Math-DM-03-谓词逻辑/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/30/Math-DM-03-谓词逻辑/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 谓词逻辑 03">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="谓词逻辑"><a href="#谓词逻辑" class="headerlink" title="谓词逻辑"></a>谓词逻辑</h2><p>若要明白什么是谓词逻辑，需要了解谓词和量词的概念。</p>
-<h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>谓词可以理解为变量。当命题函数中的谓词确定时，命题函数就称为命题，因而有真值。例如：$P(x)$表示语句“$x$大于$3$”，一旦给变量$x$赋一个值，语句$P(x)$就称为命题，因而有真值。<br>形为$P(x_1,x_2,…,x_n)$的语句是命题函数$P$在$m$元组$(x_1, x_2,…,x_n)$的值，$P$也称为$n$元谓词。   </p>
-<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><p>当谓词表示一定范围的事物时，由命题函数产生的命题称为<strong>量化</strong>。 这里讨论两种量化：全称量化和存在量化。 处理谓词和量词的逻辑领域称为谓词演算。     </p>
-<h4 id="全称量词"><a href="#全称量词" class="headerlink" title="全称量词"></a>全称量词</h4><p>对于论域内的每一个$x$，$P(x)$都为真值，记作$\forall xP(x)$，其中$\forall$称为全称量词。</p>
-<h4 id="存在量词"><a href="#存在量词" class="headerlink" title="存在量词"></a>存在量词</h4><p>对于论域内至少有一个$x$，使$P(x)$为真，记作$\exists xP(x)$，其中$\exists$称为存在量词。</p>
-<h4 id="唯一量词"><a href="#唯一量词" class="headerlink" title="唯一量词"></a>唯一量词</h4><p>存在惟一一个$x$使$P(x)$为真。记作$\exists!xP(x)$或$\exists_1xP(x)$。</p>
-<blockquote>
-<p>通常讲到量词的论域时，隐含假设它为非空集。</p>
-</blockquote>
-<h4 id="约束论域量词"><a href="#约束论域量词" class="headerlink" title="约束论域量词"></a>约束论域量词</h4><p>一个缩略符号通常用来约束量词的论域。 例如：<br>$\forall x\lt 0(x^2 \gt 0)$表示对于每个实数$x\lt 0$都有$x^2 \gt 0$。<br>另外，全称量化的约束和一个条件语句的全称量化等价。例如：$\forall x\lt 0(x^2 \gt 0)$等价于$\forall x(x\lt 0\rightarrow x^2 \gt 0)$<br>存在量词的约束和一个合取的存在量化等价。例如：$\exists z\gt 0(z^2 =2)$等价于$\exists z(z\gt 0\land z^2 =2)$</p>
-<h3 id="量词的优先级"><a href="#量词的优先级" class="headerlink" title="量词的优先级"></a>量词的优先级</h3><p>量词$\forall$和$\exists$比所有命题逻辑的逻辑运算有更高的优先级。</p>
-<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>命题逻辑中的逻辑等价概念可以扩展到谓词逻辑中。当且仅当无论什么谓词带入命题函数，或者无论哪个个体论域于这些命题函数中的变量上，它们都有相同的真值。</p>
-<h4 id="量词的摩根定律"><a href="#量词的摩根定律" class="headerlink" title="量词的摩根定律"></a>量词的摩根定律</h4><p>$$<br>\lnot \forall xP(x) \equiv \exists x\lnot P(x) \\<br>\lnot \exists xQ(x) \equiv \forall x\lnot Q(x)<br>$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -3543,7 +3567,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">60</span>
+              <span class="site-state-item-count">61</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

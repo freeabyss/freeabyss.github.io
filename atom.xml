@@ -57,9 +57,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
   </entry>
   
@@ -90,9 +90,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
   </entry>
   
@@ -135,9 +135,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
   </entry>
   
@@ -164,9 +164,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
   </entry>
   
@@ -196,9 +196,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
   </entry>
   
@@ -226,22 +226,22 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
     
   </entry>
   
   <entry>
-    <title>离散数学学习笔记 重复的排列组合 21</title>
+    <title>离散数学学习笔记 其他排列组合 21</title>
     <link href="http://blog.freeabyss.com/2016/12/27/Math-DM-21-%E9%87%8D%E5%A4%8D%E7%9A%84%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
     <id>http://blog.freeabyss.com/2016/12/27/Math-DM-21-重复的排列组合/</id>
     <published>2016-12-27T13:49:58.000Z</published>
-    <updated>2016-12-28T14:11:38.000Z</updated>
+    <updated>2017-01-15T12:58:43.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="有重复的排列和组合"><a href="#有重复的排列和组合" class="headerlink" title="有重复的排列和组合"></a>有重复的排列和组合</h2><p>具有$n$个物体的集合允许重复的$r$的排列数是$n^r$。<br>$n$个元素的集合中允许重复的$r$的组合含有$Cn+r-1,r)=C(n+r-1,n-1)$个。     </p>
+    <content type="html"><![CDATA[<h2 id="重复的排列和组合"><a href="#重复的排列和组合" class="headerlink" title="重复的排列和组合"></a>重复的排列和组合</h2><p>具有$n$个物体的集合允许重复的$r$的排列数是$n^r$。<br>$n$个元素的集合中允许重复的$r$的组合含有$Cn+r-1,r)=C(n+r-1,n-1)$个。     </p>
 <h3 id="允许和不允许重复的组合与排列"><a href="#允许和不允许重复的组合与排列" class="headerlink" title="允许和不允许重复的组合与排列"></a>允许和不允许重复的组合与排列</h3><table>
 <thead>
 <tr>
@@ -273,14 +273,16 @@
 </tr>
 </tbody>
 </table>
-<h2 id="具有不可区分物体的集合的排列"><a href="#具有不可区分物体的集合的排列" class="headerlink" title="具有不可区分物体的集合的排列"></a>具有不可区分物体的集合的排列</h2><p>设类型1的相同物体有$n_1$个，类型2的相同物体有$n_2$个，$\dots$，类型$k$的相同物体有$n_k$个，那么$n$个物体的不同排列数是$$n!\over n_1!n_2!\dots n_k!$$</p>
+<h2 id="多重排列"><a href="#多重排列" class="headerlink" title="多重排列"></a>多重排列</h2><p>设类型1的相同物体有$n_1$个，类型2的相同物体有$n_2$个，$\dots$，类型$k$的相同物体有$n_k$个，那么$n$个物体的不同排列数是$$n!\over n_1!n_2!\dots n_k!$$</p>
 <p>证: 为确定排列数，首先注意到可以用$C(n,n_1)$种方式在$n$个位置中放类型1的$n_1$个物体，剩下$n-n_1$个空位。然后用$C(n-n_1,n_2)$种方式放类型2的物体，剩下$n-n_1-n_2$个空位。继续放类型3的物体，$\dots$，类型$k-1$的物体，直到最后可用$C(n-n_1-n_2-\dots -n_{k-1},n_k)$种方式放类型$k$的物体。因此由乘积法则，不同排列的总数是<br>$$\begin{array}{l}<br>C(n,n_1)C(n-n_1,n_2)\dots(n-n_1-\dots -n_{k-1},n_k) \\<br>={n!\over n_1!(n-n_1)!}{(n-n_1)!\over n_2!(n-n_1-n_2)!}\dots{(n-n_1-\dots -n_{k-1})!\over n_k!0!} \\<br>={n!\over n_1!n_2!\dots n_k!}<br>\end{array}$$</p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>重新排序单词SUCCESS中的字母能构成多少个不同的串?<br>因为SUCCESS中的某些字母是重复的，答案并不是$7$个字母的排列数。这个单词包含$3$个S、$2$个、$1$个U和$1$个E。为确定重新排列单词中的字母能构成多少个不同的串，首先，注意到$3$个S可以用$C(7,3)$种不同的方式放在$7$个位置中，剩下$4$个空位i。然后可以用$C(4,2)$种方式放$2$个C，留下2个空位。又可以用$C(2,1)$种方式放U，留下$1$个空位。因此放E只有$C(1,1)$种方式。从而，由乘积法则，产生不同的串数是<br>$$\begin{array}{l}C(7,3)C(4,2)C(2,1)C(1,1)&amp;={7!\over 3!4!}\cdot{4!\over 2!2!}\cdot{2!\over 1!1!}\cdot{1!\over 1!0!}\\<br>&amp;={7!\over 3!2!1!1!}\\<br>&amp;=420\end{array}$$</p>
+<p>换个思路，我们可以将$SUCCESS$的看成是$S_1S_2S_3U_1C_1C_2E_1$，然后再除以每个字母的冗余度。$S_1S_2S_3$共有$3!$种排列方式，$U_1$共有$1!$种排列方式，$C_1C_2$共有$2!$种排列方式，$E_1$共有$1!$种排列方式，因此SUCCESS产生的排列数是${7!\over 3!2!1!1!}$</p>
+<h2 id="其他排列"><a href="#其他排列" class="headerlink" title="其他排列"></a>其他排列</h2><h3 id="字母不可相邻"><a href="#字母不可相邻" class="headerlink" title="字母不可相邻"></a>字母不可相邻</h3><p>从26个字母中选取4个不同的字母，且b、d不能相邻。<br>首先，找出b,d相邻有多少排列数。 其中bd已确定，需要从剩下24个字母中选取2个与bd进行排列，共有$C(24，2)\times 3!$种方式，又因为b、d有bd,db两种相邻方式，因此b、d相邻共有$C(24,2)\times 3!\times 2$种方式。<br>因此，不包含b、d相邻的排列数有$P(26,4)-C(24,2)\times 3!\times 2$</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;有重复的排列和组合&quot;&gt;&lt;a href=&quot;#有重复的排列和组合&quot; class=&quot;headerlink&quot; title=&quot;有重复的排列和组合&quot;&gt;&lt;/a&gt;有重复的排列和组合&lt;/h2&gt;&lt;p&gt;具有$n$个物体的集合允许重复的$r$的排列数是$n^r$。&lt;br&gt;$n$个元素的集
+      &lt;h2 id=&quot;重复的排列和组合&quot;&gt;&lt;a href=&quot;#重复的排列和组合&quot; class=&quot;headerlink&quot; title=&quot;重复的排列和组合&quot;&gt;&lt;/a&gt;重复的排列和组合&lt;/h2&gt;&lt;p&gt;具有$n$个物体的集合允许重复的$r$的排列数是$n^r$。&lt;br&gt;$n$个元素的集合中允许
     
     </summary>
     
@@ -289,9 +291,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
     
@@ -326,9 +328,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
     
@@ -339,13 +341,15 @@
     <link href="http://blog.freeabyss.com/2016/12/26/Math-DM-19-%E6%8E%92%E5%88%97%E5%92%8C%E7%BB%84%E5%90%88/"/>
     <id>http://blog.freeabyss.com/2016/12/26/Math-DM-19-排列和组合/</id>
     <published>2016-12-26T13:01:43.000Z</published>
-    <updated>2016-12-26T14:00:34.000Z</updated>
+    <updated>2017-01-15T12:27:43.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h2><p>集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。<br>一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。<br>具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$</p>
 <blockquote>
 <p>只要是$n$非负，就有$P(n,0)=1$。      </p>
 </blockquote>
 <p>如果$n$和$r$都是整数，且$0\le r\le n$，则$$P(n,r)={n!\over (n-r)!}$$</p>
+<h3 id="圆排列"><a href="#圆排列" class="headerlink" title="圆排列"></a>圆排列</h3><p>将圆排列展开就是线排列。$r$个元素进行排列，就有$r$种展开方式，因此，圆排列共有 $$P(n,r)/r={n!\over r(n-r)!}$$</p>
+<h3 id="项链排列"><a href="#项链排列" class="headerlink" title="项链排列"></a>项链排列</h3><p>项链排列在圆排列的基础上，正面向上和反面向上两种方式放置各个数是同一个排列，因此项链排列等于$$P(n,r)/2r={n!\over 2r(n-r)!} \qquad 3\ge r\le n$$</p>
 <h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>集合元素的$r$组合是从这个集合无序选取的$r$个元素。简单地说，一个$r$组合是这个集合的一个$r$个元素的子集。<br>具有$n$个不同元素集合的$r$组合记为$C(n,r)$。也记作$\left(\begin{array}{c}n \\r\end{array}\right)$并且称为二项式系数。<br>设$n$是正整数，$r$是满足$0\le r\le n$的整数，$n$元素的集合的$r$组合数等于$$C(n,r)={n!\over r!(n-r)!}$$<br>证 可以如下得到这个集合的$r$排列。先构成集合的$C(n,r)$个$r$组合，然后以$P(n,r)$种方式排序每个$r$组合中的元素，这可以用$P(r,r)$种方式来做。因此$$P(n,r)=C(n,r)*P(r,r)$$这就推出$$C(n,r)={P(n,r)\over P(r,r)}={n!/(n-r)!\over r!/(r-r)!}={n!\over r!(n-r)!}$$</p>
 <p>设$n,r$是满足$n\le r$的非负整数，那么$C(n,r)=C(n,n-r)$。      </p>
 ]]></content>
@@ -361,9 +365,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
     
@@ -401,9 +405,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
     
@@ -441,9 +445,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="count" scheme="http://blog.freeabyss.com/tags/count/"/>
     
@@ -479,9 +483,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="Number Theory" scheme="http://blog.freeabyss.com/tags/Number-Theory/"/>
     
@@ -544,9 +548,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="Number Theory" scheme="http://blog.freeabyss.com/tags/Number-Theory/"/>
     
@@ -621,9 +625,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="Number Theory" scheme="http://blog.freeabyss.com/tags/Number-Theory/"/>
     
@@ -698,9 +702,9 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="Number Theory" scheme="http://blog.freeabyss.com/tags/Number-Theory/"/>
     
@@ -770,11 +774,11 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
       <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
     
       <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
   </entry>
   

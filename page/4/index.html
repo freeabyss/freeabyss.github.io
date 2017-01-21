@@ -276,6 +276,498 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/03/JavaScript之表达式和运算符/" itemprop="url">
+                  JavaScript之表达式和运算符
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-03T15:33:59+08:00" content="2016-09-03">
+              2016-09-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/03/JavaScript之表达式和运算符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/JavaScript之表达式和运算符/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/03/JavaScript之表达式和运算符/" class="leancloud_visitors" data-flag-title="JavaScript之表达式和运算符">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-表达式"><a href="#1-表达式" class="headerlink" title="1 表达式"></a>1 表达式</h1><ul>
+<li>数组初始化表达式中，逗号之间的元素可以省略，空位会填充<code>undefined</code>。 </li>
+<li>在对象初始化表达式中，属性名称可以是字符串而不是标识符。  </li>
+</ul>
+<h1 id="2-运算符概述"><a href="#2-运算符概述" class="headerlink" title="2 运算符概述"></a>2 运算符概述</h1><p>&emsp;&emsp; 类型列表示期望的操作数类型，以及运算符结果类型。lval表示左值。  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">操作</th>
+<th style="text-align:left">A</th>
+<th style="text-align:left">N</th>
+<th style="text-align:left">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">++</td>
+<td style="text-align:left">前/后增量</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">lval -&gt; num</td>
+</tr>
+<tr>
+<td style="text-align:left">–</td>
+<td style="text-align:left">前/后减量</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">lval -&gt; num</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">求反</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">num-&gt;num</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">转换为数字</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">num-&gt;num</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">按位求反</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">!</td>
+<td style="text-align:left">逻辑非</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">bool-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">delete</td>
+<td style="text-align:left">删除属性</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">lval-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">typeof</td>
+<td style="text-align:left">检测操作数类型</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">any-&gt;str</td>
+</tr>
+<tr>
+<td style="text-align:left">void</td>
+<td style="text-align:left">返回undefined值</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">any-&gt;undef</td>
+</tr>
+<tr>
+<td style="text-align:left">* 、／、％</td>
+<td style="text-align:left">乘、除、求余</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">num,num-&gt;num</td>
+</tr>
+<tr>
+<td style="text-align:left">+、－</td>
+<td style="text-align:left">加、减</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">num,num-&gt;num</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">字符串连接</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">str,str-&gt;str</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt;</td>
+<td style="text-align:left">左移位</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">int,int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;</td>
+<td style="text-align:left">有符号右移</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">int,int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;&gt;</td>
+<td style="text-align:left">无符号右移</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">int,int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;、 &lt;=、&gt;、&gt;=</td>
+<td style="text-align:left">比较数字顺序</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">num,num-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;、 &lt;=、&gt;、&gt;=</td>
+<td style="text-align:left">比较在字母表中的顺序</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">str,str-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">instanceof</td>
+<td style="text-align:left">测试对象类</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">obj,func-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">in</td>
+<td style="text-align:left">测试属性是否存在</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">str,obj-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">==</td>
+<td style="text-align:left">判断相等</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">!=</td>
+<td style="text-align:left">判断不等</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">===</td>
+<td style="text-align:left">判断恒等</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-&gt;bool</td>
+</tr>
+<tr>
+<td style="text-align:left">!==</td>
+<td style="text-align:left">判断非恒等</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-bool</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">按位与</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">int,int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">按位异或</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">int,int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">&#124;</td>
+<td style="text-align:left">按位或</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">int,int-&gt;int</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;&amp;</td>
+<td style="text-align:left">逻辑与</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-&gt;any</td>
+</tr>
+<tr>
+<td style="text-align:left">&#124; &#124;</td>
+<td style="text-align:left">逻辑或</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-&gt;any</td>
+</tr>
+<tr>
+<td style="text-align:left">? :</td>
+<td style="text-align:left">条件运算符</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">bool,any,any-&gt;any</td>
+</tr>
+<tr>
+<td style="text-align:left">=</td>
+<td style="text-align:left">变量赋值或对象属性赋值</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">lval,any-&gt;any</td>
+</tr>
+<tr>
+<td style="text-align:left">*= 、/=、%=、+=、-=、&amp;= <br> ^=、&#124;=、&lt;&lt;=、&gt;&gt;=、&gt;&gt;&gt;=</td>
+<td style="text-align:left">运算且赋值</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">lval,any-&gt;any</td>
+</tr>
+<tr>
+<td style="text-align:left">,</td>
+<td style="text-align:left">忽略第一个操作数，返回第二个操作数</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">any,any-&gt;any</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>属性访问表达式和调用表达式的优先级要比所有运算符都高。  </li>
+</ul>
+<h2 id="2-1-左值"><a href="#2-1-左值" class="headerlink" title="2.1 左值"></a>2.1 左值</h2><ul>
+<li>ECMAScript规范允许内置函数返回一个左值，但是自定义函数不能返回左值，不过如果返回的是对象的话，可以访问其属性。   </li>
+</ul>
+<h2 id="2-2-运算法"><a href="#2-2-运算法" class="headerlink" title="2.2 + 运算法"></a>2.2 + 运算法</h2><ul>
+<li>+ 运算法即可以作为加法运算，也可以作为字符串连接，但是优先考虑字符串连接。  </li>
+<li>如果操作数中没有字符串，则都转化为数字。    </li>
+<li>加法操作符的行为表现为：<ul>
+<li>如果其中一个操作时是对象，则尊照对象到原始值的转换规则转为原始值。  </li>
+<li>转化为原始值后，如果其中一个操作数是字符串的话，则转化为字符串</li>
+<li>否则，两个操作数都转换为数字进行加法操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-位运算符"><a href="#2-3-位运算符" class="headerlink" title="2.3 位运算符"></a>2.3 位运算符</h2><ul>
+<li>位运算会将操作数转换为数字，并强制表示为32位整数，这会忽略原格式中的小数部分和任何超过32位的二进制。   </li>
+<li>移位运算符要求右操作数在0～31之间，在将其操作数转化为无符号32位整数后，将舍弃第5位之后的二进制数。   </li>
+<li>位运算会将NaN、Infinity和-Infinity转换为0。   </li>
+</ul>
+<h2 id="2-4-相等和不等运算"><a href="#2-4-相等和不等运算" class="headerlink" title="2.4 相等和不等运算"></a>2.4 相等和不等运算</h2><h3 id="2-4-1-严格相等运算符"><a href="#2-4-1-严格相等运算符" class="headerlink" title="2.4.1 严格相等运算符"></a>2.4.1 严格相等运算符</h3><ul>
+<li>“===”首先计算操作数的值，然后比较这两个值，比较过程中没有任何类型转换。   </li>
+<li>如果两个值类型不相同，则它们不想等。  </li>
+<li>如果两个值都是 <code>null</code>或者都是<code>undefined</code>，则它们相等，<code>null</code>和<code>undefined</code>不相等。   </li>
+<li>如果其中一个值是<code>NaN</code>或者两个值都是<code>NaN</code>，则它们不相等。  </li>
+<li>如果两个值为数字且数值相等，则它们相等，<code>0===-0 = true</code>。</li>
+<li>如果两个值为字符串，且所含的对应位上的16位数完全相等，则它们相等。 </li>
+<li>如果两个引用值指向同一对象、数组或函数，则它们是相等的。</li>
+</ul>
+<h3 id="2-4-2-相等运算符"><a href="#2-4-2-相等运算符" class="headerlink" title="2.4.2 相等运算符"></a>2.4.2 相等运算符</h3><ul>
+<li>如果两个操作数类型一样，则执行严格相等一样的比较规则。   </li>
+<li>如果两个操作数的类型不一样，则遵守如下规则：<ul>
+<li><code>null==undefined = true</code></li>
+<li>字符串和数字比较时，将字符串转换为数字，再做比较</li>
+<li>如果其中一个操作数为布尔类型，则将其转换为数字再做比较。</li>
+<li>如果是对象和数字或字符串对比，按照对象转原始值的转换规则转换为原始值。  </li>
+<li>其它不同类型之间的比较均不相等。  </li>
+</ul>
+</li>
+</ul>
+<h2 id="2-5-关系运算符"><a href="#2-5-关系运算符" class="headerlink" title="2.5 关系运算符"></a>2.5 关系运算符</h2><ul>
+<li>只有数字和字符串才能真正的执行比较操作。    </li>
+<li>如果操作数中不都包含字符串时，则都转化为数字进行数值比较。  </li>
+<li>0等于-0，<code>Infinity</code>比任何数都大(除了本身)，<code>-Infinity</code>比任何数都小(除了本身)。</li>
+<li>其中一个操作数为<code>NaN</code>，比较操作符总是返回<code>false</code>。</li>
+</ul>
+<h2 id="2-6-逻辑表达式"><a href="#2-6-逻辑表达式" class="headerlink" title="2.6 逻辑表达式"></a>2.6 逻辑表达式</h2><ul>
+<li>在逻辑与运算中，JavaScript先计算左操作数，如果为假植，则直接返回假植，如果为真值则返回右操作数的计算结果。  </li>
+<li>在逻辑或中，当左操作数为真值时，返回该值。 </li>
+</ul>
+<h2 id="2-7-带操作的赋值运算"><a href="#2-7-带操作的赋值运算" class="headerlink" title="2.7 带操作的赋值运算"></a>2.7 带操作的赋值运算</h2><ul>
+<li><code>a op= b</code>等价于 <code>a=a op b</code>。 <code>op</code>代表一个运算符。第一个表达式中<code>a</code>只计算了一次，第二个表达式中<code>a</code>计算了两次。  </li>
+<li>当<code>a</code>是带有副作用的表达式时，两者不等价。   </li>
+</ul>
+<h2 id="2-8-eval"><a href="#2-8-eval" class="headerlink" title="2.8 eval()"></a>2.8 eval()</h2><ul>
+<li>eval()是一个函数，但被当作运算符对待。   </li>
+<li>eval()只有一个参数，如果传入的参数不是字符串，只是简单的返回这个参数。   </li>
+<li>eval()将传入的字符串进行编译，编译失败抛出语法错误，编译成功则执行这段代码，并返回最后一个表达式或者语句的值，如果该语句没有值，则返回<code>undefined</code>。   </li>
+<li>eval()的字符串执行时的上下文环境和调用函数的上下文环境是一样的。  </li>
+<li>eval()的字符串必须在语法上讲的通。</li>
+<li>ECMAScript 3规范规定不允许对eval()赋予别名，实际上大多数实现很少这么做。  </li>
+<li>当通过别名调用时，eval()会将其字符串当成顶层的全局代码执行，执行的代码可能会修改或创建新的全局变量和全局函数，但不会使用主调函数的局部变量。  </li>
+<li>ECMAScript 5规定，当直接使用eval()时，在调用它的上下文作用域内执行，当使用别名调用时则使用全局对象作为上下文作用域，并且无法访问定义局部变量和函数。   </li>
+</ul>
+<h3 id="2-8-1-严格模式下的eval"><a href="#2-8-1-严格模式下的eval" class="headerlink" title="2.8.1 严格模式下的eval"></a>2.8.1 严格模式下的eval</h3><ul>
+<li>当在严格模式下，或者eval()执行的代码段以<code>&quot;use strict&quot;</code>开头时，无法定义新的局部变量和函数，只能查询或更改局部变量。   </li>
+</ul>
+<h2 id="2-9-typeof-运算符"><a href="#2-9-typeof-运算符" class="headerlink" title="2.9 typeof 运算符"></a>2.9 typeof 运算符</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">x</th>
+<th style="text-align:left">typeof x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">undefined</td>
+<td style="text-align:left">“undefined”</td>
+</tr>
+<tr>
+<td style="text-align:left">null</td>
+<td style="text-align:left">“object”</td>
+</tr>
+<tr>
+<td style="text-align:left">true或false</td>
+<td style="text-align:left">“boolean”</td>
+</tr>
+<tr>
+<td style="text-align:left">任意数字或NaN、Infinity</td>
+<td style="text-align:left">“number”</td>
+</tr>
+<tr>
+<td style="text-align:left">任意字符串</td>
+<td style="text-align:left">“string”</td>
+</tr>
+<tr>
+<td style="text-align:left">任意函数</td>
+<td style="text-align:left">“function”</td>
+</tr>
+<tr>
+<td style="text-align:left">任意内置对象 非函数</td>
+<td style="text-align:left">“object”</td>
+</tr>
+<tr>
+<td style="text-align:left">任意宿主对象</td>
+<td style="text-align:left">由编译器各自实现的字符串 ，但不是 “undefined”、”boolean”、”number”、”string”</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ECMAScript 3规范规定所有内置可执行对象，typeof一律返回”function”。</li>
+<li>ECMASCript 5规范规定所有可执行对象，包括内置对象和数组对象一律返回”function”。</li>
+</ul>
+<h2 id="2-10-delete-运算符"><a href="#2-10-delete-运算符" class="headerlink" title="2.10 delete 运算符"></a>2.10 delete 运算符</h2><ul>
+<li>delete删除属性成功将返回<code>true</code></li>
+<li>delete无法删除内置核心、客户端属性、通过<code>var</code>声明的变量、<code>function</code>定义的函数、函数参数。</li>
+<li>在严格模式下，delete的操作数是非法时，将抛出语法错误异常，如果操作数是不可配置的属性，将抛出类型错误异常。   </li>
+</ul>
+<h2 id="2-11-void-运算符"><a href="#2-11-void-运算符" class="headerlink" title="2.11 void 运算符"></a>2.11 void 运算符</h2><ul>
+<li>void运算符出现在操作数之间，操作数会照常计算，但忽略计算结果并返回<code>undefined</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/18/对象的创建和销毁-《Effective-Java》笔记/" itemprop="url">
                   对象的创建和销毁-《Effective Java》笔记
                 </a>
@@ -1085,7 +1577,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">64</span>
+              <span class="site-state-item-count">65</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1102,7 +1594,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">43</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

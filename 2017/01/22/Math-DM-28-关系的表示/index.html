@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="abyss, blog, note" />
+  <meta name="keywords" content="Math,note,Discrete Mathematics,Relations," />
 
 
 
@@ -92,15 +92,19 @@
 
 
 
-<meta name="description" content="读书笔记和个人总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Abyss's blog">
-<meta property="og:url" content="http://blog.freeabyss.com/tags/JavaScript/index.html">
+<meta name="description" content="关系的表示本文讨论用$0-1$矩阵和有向图的方式表示关系。    
+用矩阵表示关系假设$\mathbf R$是从$\mathbf A=\{a_1,a_2,\dots,a_m\}$到$\mathbf B=\{b_1,b_2,\dots,b_n\}$的关系。关系$\mathbf R$可以用矩阵$\mathbf M_R=[m_{ij}]$来表示，其中$$m_{ij}=\begin{cases}1\qqu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Math-DM-28-关系的表示">
+<meta property="og:url" content="http://blog.freeabyss.com/2017/01/22/Math-DM-28-关系的表示/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="读书笔记和个人总结">
+<meta property="og:description" content="关系的表示本文讨论用$0-1$矩阵和有向图的方式表示关系。    
+用矩阵表示关系假设$\mathbf R$是从$\mathbf A=\{a_1,a_2,\dots,a_m\}$到$\mathbf B=\{b_1,b_2,\dots,b_n\}$的关系。关系$\mathbf R$可以用矩阵$\mathbf M_R=[m_{ij}]$来表示，其中$$m_{ij}=\begin{cases}1\qqu">
+<meta property="og:updated_time" content="2017-01-22T14:19:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Abyss's blog">
-<meta name="twitter:description" content="读书笔记和个人总结">
+<meta name="twitter:title" content="Math-DM-28-关系的表示">
+<meta name="twitter:description" content="关系的表示本文讨论用$0-1$矩阵和有向图的方式表示关系。    
+用矩阵表示关系假设$\mathbf R$是从$\mathbf A=\{a_1,a_2,\dots,a_m\}$到$\mathbf B=\{b_1,b_2,\dots,b_n\}$的关系。关系$\mathbf R$可以用矩阵$\mathbf M_R=[m_{ij}]$来表示，其中$$m_{ij}=\begin{cases}1\qqu">
 
 
 
@@ -121,9 +125,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.freeabyss.com/tags/JavaScript/"/>
+  <link rel="canonical" href="http://blog.freeabyss.com/2017/01/22/Math-DM-28-关系的表示/"/>
 
-  <title> 标签: JavaScript | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Math-DM-28-关系的表示 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +148,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left  ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,130 +256,168 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        JavaScript
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/17/JavaScript-JavaScript-最佳实践/" itemprop="url">
-              
-                <span itemprop="name">JavaScript 最佳实践</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-17T14:25:53+08:00"
-              content="2017-01-17" >
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/17/JavaScript-JavaScript-编程风格/" itemprop="url">
-              
-                <span itemprop="name">JavaScript编程风格</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-17T10:40:58+08:00"
-              content="2017-01-17" >
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/08/JavaScript-NPM-概述/" itemprop="url">
-              
-                <span itemprop="name">npm 概述</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-08T12:24:29+08:00"
-              content="2017-01-08" >
-          01-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/03/JavaScript之表达式和运算符/" itemprop="url">
-              
-                <span itemprop="name">JavaScript之表达式和运算符</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-03T15:33:59+08:00"
-              content="2016-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Math-DM-28-关系的表示
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-22T19:25:37+08:00" content="2017-01-22">
+              2017-01-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/22/Math-DM-28-关系的表示/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/22/Math-DM-28-关系的表示/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/01/22/Math-DM-28-关系的表示/" class="leancloud_visitors" data-flag-title="Math-DM-28-关系的表示">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="关系的表示"><a href="#关系的表示" class="headerlink" title="关系的表示"></a>关系的表示</h2><p>本文讨论用$0-1$矩阵和有向图的方式表示关系。    </p>
+<h3 id="用矩阵表示关系"><a href="#用矩阵表示关系" class="headerlink" title="用矩阵表示关系"></a>用矩阵表示关系</h3><p>假设$\mathbf R$是从$\mathbf A=\{a_1,a_2,\dots,a_m\}$到$\mathbf B=\{b_1,b_2,\dots,b_n\}$的关系。关系$\mathbf R$可以用矩阵$\mathbf M_R=[m_{ij}]$来表示，其中<br>$$m_{ij}=\begin{cases}1\qquad 如果(a_i,a_j)\in\mathbf R\\0\qquad 如果(a_i,b_j)\notin\mathbf R\end{cases}$$该表示方式，依赖于$\mathbf A$和$\mathbf B$的使用的排序。<br>集合上的关系的矩阵是一个方阵，可以用矩阵来确定关系是否具有某种性质。     </p>
+<h4 id="自反关系的矩阵"><a href="#自反关系的矩阵" class="headerlink" title="自反关系的矩阵"></a>自反关系的矩阵</h4><p>$\mathbf R$是自反的，当且仅当$i=1,2,\dots,n,m_i=1$。换句话说，如果$\mathbf M_R$的主对角线的所有元素都等于1，那么$\mathbf R$是自反的。    </p>
+<h4 id="对称关系的矩阵"><a href="#对称关系的矩阵" class="headerlink" title="对称关系的矩阵"></a>对称关系的矩阵</h4><p>$\mathbf R$是对称的，当且仅当对所有的整数对$i，j$(其中$i=1,2,\dots,n, j=1,2,\dots,m$)都有$m_{ij}=m_{ji}$。也就是说$\mathbf R$是对称的当且仅当$\mathbf M_R=(\mathbf M_R)^t$</p>
+<h4 id="反对称关系的矩阵"><a href="#反对称关系的矩阵" class="headerlink" title="反对称关系的矩阵"></a>反对称关系的矩阵</h4><p>$\mathbf R$是反对称的，当$i\neq j$时，$m_{ij}=0$或$m_{ji}=0$</p>
+<h4 id="关系运算和矩阵"><a href="#关系运算和矩阵" class="headerlink" title="关系运算和矩阵"></a>关系运算和矩阵</h4><p>$$\mathbf M_{R_1\cup R_2}=\mathbf M_{R_1}\lor \mathbf M_{R_2}\\<br>\mathbf M_{R_1\cap R_2}=\mathbf M_{R_1}\land \mathbf M_{R_2}\\<br>\mathbf M_{R_1\cdot R_2}=\mathbf M_{R_1}\odot  \mathbf M_{R_2}\\$$</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+            <a href="/tags/Relations/" rel="tag">#Relations</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/21/Math-DM-27-关系及其性质/" rel="next" title="离散数学学习笔记 关系及其性质 27">
+                <i class="fa fa-chevron-left"></i> 离散数学学习笔记 关系及其性质 27
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -383,6 +425,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/22/Math-DM-28-关系的表示/"
+           data-title="Math-DM-28-关系的表示" data-url="http://blog.freeabyss.com/2017/01/22/Math-DM-28-关系的表示/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -402,8 +452,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -480,6 +539,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系的表示"><span class="nav-number">1.</span> <span class="nav-text">关系的表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用矩阵表示关系"><span class="nav-number">1.1.</span> <span class="nav-text">用矩阵表示关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自反关系的矩阵"><span class="nav-number">1.1.1.</span> <span class="nav-text">自反关系的矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对称关系的矩阵"><span class="nav-number">1.1.2.</span> <span class="nav-text">对称关系的矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反对称关系的矩阵"><span class="nav-number">1.1.3.</span> <span class="nav-text">反对称关系的矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关系运算和矩阵"><span class="nav-number">1.1.4.</span> <span class="nav-text">关系运算和矩阵</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -583,6 +653,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -276,6 +276,143 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/22/Math-DM-15-整数和算法/" itemprop="url">
+                  离散数学学习笔记 整数和算法 15
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T22:14:51+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/Math-DM-15-整数和算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/Math-DM-15-整数和算法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/22/Math-DM-15-整数和算法/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 整数和算法 15">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="整数表示"><a href="#整数表示" class="headerlink" title="整数表示"></a>整数表示</h2><p>令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：<br>$$n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0$$<br>其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。</p>
+<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><p>现在介绍一个构造整数$n$的$b$进制展开的算法。首先，用$b$除$n$得到商和余数，即 $$n=bq_0+a_0, 0\le a_0&lt;b$$余数$a_0$就是$n$的$b$进制展开的最右边一位数字。下一步用$b$除$q_0$，得$$q_0=bq_1+a_1， 0\le a_1&lt;b$$可以看出$a_1$是$n$进制展开中从右边数的第二个数字。重复该过程，直到商为$0$时为止。下面给出伪代码。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {base\;b\;expansion} (n:integer)\\<br>q:=n \\<br>k:=0 \\<br>\mathbf {while}(q\neq 0) \\<br>\mathbf {begin} \\<br>\qquad a_k:=q\;\mathbf{mod}\;b \\<br>\qquad q:=\lfloor q/b\rfloor \\<br>\qquad k:=k+1 \\<br>\mathbf {end}<br>\{n的b进制展开是(a_{k-1}\dots a_1a_0)\}<br>\end{array}<br>$$</p>
+<h3 id="二进制算法"><a href="#二进制算法" class="headerlink" title="二进制算法"></a>二进制算法</h3><h4 id="整数相加"><a href="#整数相加" class="headerlink" title="整数相加"></a>整数相加</h4><p>$$\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>\{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2\}<br>\end{array}$$</p>
+<h4 id="整数相乘"><a href="#整数相乘" class="headerlink" title="整数相乘"></a>整数相乘</h4><p>$$\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {multiply} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\; shifted\; j\; places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>\{c_0,c_1,\dots,c_{n-1}是部分乘积\} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>\{p是ab的值\}<br>\end{array}$$</p>
+<blockquote>
+<p>$a\;shifted\; j\; places$左移$j$位    </p>
+</blockquote>
+<h3 id="同余幂"><a href="#同余幂" class="headerlink" title="同余幂"></a>同余幂</h3><p>在密码学中重要的是能有效得求$b^n\;\mathbf{mod}\;m$，其中$b,n,m$都是大整数。先计算$b^n$，再求$b^n$除以$m$的余数，这是不行的，因为$b^n$是非常大的数。可行的是一种利用指数$n$的二进制展开的算法。<br>该算法的基本思想是利用以下公式:<br>$$b^n=b^{a_{k-1}\cdot 2^{k-1}+\dots +a_1\cdot 2+a_0}=b^{a_{k-1}\cdot 2^{k-1}}\dots b^{a_1\cdot 2}\cdot b^a_0$$<br>为了计算$b^n$的值，我们要找到<br>$b,b^2,{(b^2)}^2=b^4,{(b^4)}^2=b^8,\dots ,b^{2^k}$的值，把其中$a_j=1$的那些项$b^{2^j}$乘起来，就得到了$b^n$的值。<br>这个算法依次求$b\;\mathbf{mod}\; m, b^2\;\mathbf{mod}\; m, b^4\;\mathbf{mod}\; m,\dots ,b^{2^{k-1}}\;\mathbf{mod}\; m$，把其中$a_j =1$的项$b^{2^j}\;\mathbf{mod}\; m$乘起来，在每次乘法后求乘积除以$m$的余数。伪代码示例:  </p>
+<p>$$\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {modular\; exponentiation} (n,m,b:integer)\\<br>\{n的二进制展开是(a_{n-1}a_{n-2}\dots a_1a_0)_2\} \\<br>x:=1 \\<br>power := b\;\mathbf{mod}\; m\\<br>\mathbf {for}\; i:=0 \;\mathbf {to}\; k-1 \\<br>\mathbf {begin} \\<br>\qquad\mathbf{if}\; a_i=1\;\mathbf{then}\; x:=(x\cdot power)\;\mathbf{mod}\; m\\power := (power\cdot power)\;\mathbf{mod}\; m \\<br>\mathbf {end} \\<br>\{x等于b^n\;\mathbf{mod}\; m\} \\<br>\end{array}$$<br>该算法的效率为$O((log\,m)^2\,log\, n)$次位运算就能求得$b^n\;\mathbf{mod}\; m$。   </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/22/Function-04-最大公约数和最小公倍数算法/" itemprop="url">
                   最大公约数和最小公倍数算法
                 </a>
@@ -3132,157 +3269,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/13/Math-DM-08-函数/" itemprop="url">
-                  离散数学学习笔记 函数 08
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-13T20:07:23+08:00" content="2016-12-13">
-              2016-12-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/13/Math-DM-08-函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/13/Math-DM-08-函数/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/13/Math-DM-08-函数/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 函数 08">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数有很多概念，这里只介绍与离散数学相关的基本概念。 </p>
-<h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p>令$A$和$B$为非空集合，从$A$到$B$的函数$f$是对元素的一种指派，对$A$的每个元素恰好指派$B$的一个元素。如果$f$指派给$A$中元素$a$的唯一的$B$中元素是$b$，就写成$f(a)=b$。如果$f$是从$A$到$B$的函数，就写成$f:A\rightarrow B$。</p>
-<blockquote>
-<p>函数有时候也称为映射或变换</p>
-</blockquote>
-<h3 id="定义域和伴域"><a href="#定义域和伴域" class="headerlink" title="定义域和伴域"></a>定义域和伴域</h3><p>如果$f$是从$A$到$B$的函数，就说$A$是$f$的定义域，而$B$是$f$的伴域。如果$f(a)=b$就说$b$是$a$的像，而$a$是$b$的原像。$A$中元素的所有像元素的集合称为$f$的值域。若$f$是从$A$到$B$的函数，有时也说成$f$把$A$映射到$B$。</p>
-<h3 id="相加和相乘"><a href="#相加和相乘" class="headerlink" title="相加和相乘"></a>相加和相乘</h3><p>令$f_1$和$f_2$是从$A$到$B$的函数，那么$f_1+f_2$和$f_1f_2$也是从$A$到$\mathbf R$的函数，其定义为： $$(f_1+f_2)(x)=f_1(x)f_2(x)\(f_1f_2)(x)=f_1(x)f_2(x)$$。  </p>
-<h3 id="定义域子集的像"><a href="#定义域子集的像" class="headerlink" title="定义域子集的像"></a>定义域子集的像</h3><p>令$f$为$A$到$B$的函数，$S$为$A$的一个子集，$S$的像是由$S$中元素的像组成的$B$的子集。我们用$f(S)$表示$S$的像，于是 $$f(S)=\{t\mid \exists s\in S(t=f(s))\}$$,也可以简写为，$$\{f(s)\mid s\in S\}$$</p>
-<h3 id="一对一函数"><a href="#一对一函数" class="headerlink" title="一对一函数"></a>一对一函数</h3><p>函数$f$称为一对一的或单射的，当且仅当对于$f$的定义域中的所有$a$和$b$，$f(a)=f(b)$蕴含$a=b$。一对一的函数称为单射。</p>
-<blockquote>
-<p>用量词来表达$f$是一对一的，$\forall a\forall b(f(a)=f(b)\rightarrow a=b)$</p>
-</blockquote>
-<h3 id="递增递减函数"><a href="#递增递减函数" class="headerlink" title="递增递减函数"></a>递增递减函数</h3><p>定义域和伴域都是实数集子集的函数$f$称为递增的，如果对$f$的定义域中的$x$和$y$，只要$x&lt;y$就有$f(x)\le f(y)$(若对于$x&lt;y$，恒有$f(x)&lt;f(y)，则称函数$f$为严格递增)。类似的有递减和严格递减。</p>
-<blockquote>
-<p>用量词表达：$\forall x\forall y(x&lt;y\rightarrow f(x)\le f(y))</p>
-</blockquote>
-<h3 id="满射"><a href="#满射" class="headerlink" title="满射"></a>满射</h3><p>从$A$到$B$的函数称为映上或满射的，当且仅当对每个$b\in B$，有元素$a\in A$使得$f(a)=b$，如果函数$f$是映上的，就说它是满射函数。</p>
-<blockquote>
-<p>$\forall x\exists x(f(x)=y)$</p>
-<h3 id="双射"><a href="#双射" class="headerlink" title="双射"></a>双射</h3><p>若函数既是一对一的，也是映上的，就说它是一一对应或双射的。</p>
-<h3 id="反函数"><a href="#反函数" class="headerlink" title="反函数"></a>反函数</h3><p>令$f$为从$A$到$B$的一一对应函数，$f$的反函数为$f(a)=b$时,$f^{-1}(b)=a$。</p>
-<h3 id="复合函数"><a href="#复合函数" class="headerlink" title="复合函数"></a>复合函数</h3><p>令$g$为从集合$A$到集合$B$的函数，$f$是从集合$B$到集合$C$的函数，函数$f$和$g$的组合用$f·g$表示 $$(f·g)(a)=f(g(a))$$<br>如果$g$的值域不是$f$的定义域的子集，就无法定义$f·g$。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3328,7 +3314,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">66</span>
+              <span class="site-state-item-count">67</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

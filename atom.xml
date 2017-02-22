@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2017-02-03T03:25:51.000Z</updated>
+  <updated>2017-02-10T06:41:43.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac-Mac下制作MacOS启动盘</title>
+    <link href="http://blog.freeabyss.com/2017/02/10/Mac-Mac%E4%B8%8B%E5%88%B6%E4%BD%9CMacOS%E5%90%AF%E5%8A%A8%E7%9B%98/"/>
+    <id>http://blog.freeabyss.com/2017/02/10/Mac-Mac下制作MacOS启动盘/</id>
+    <published>2017-02-10T06:37:04.000Z</published>
+    <updated>2017-02-10T06:41:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>从App Store中下载macOS Sierra，不需要安装</li>
+<li></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;从App Store中下载macOS Sierra，不需要安装&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://blog.freeabyss.com/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="http://blog.freeabyss.com/tags/Mac/"/>
+    
+      <category term="os" scheme="http://blog.freeabyss.com/tags/os/"/>
+    
+      <category term="tools" scheme="http://blog.freeabyss.com/tags/tools/"/>
+    
+  </entry>
   
   <entry>
     <title>Math-DM-29-关系的闭包</title>
@@ -347,7 +381,7 @@
     <link href="http://blog.freeabyss.com/2017/01/16/Window-Windows-10-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85-NET-3-5/"/>
     <id>http://blog.freeabyss.com/2017/01/16/Window-Windows-10-快速安装-NET-3-5/</id>
     <published>2017-01-16T03:49:25.000Z</published>
-    <updated>2017-01-16T03:52:55.000Z</updated>
+    <updated>2017-02-10T06:36:21.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>加载windows 10镜像文件到光驱</li>
@@ -369,9 +403,11 @@
       <category term="windows" scheme="http://blog.freeabyss.com/categories/windows/"/>
     
     
-      <category term="windows" scheme="http://blog.freeabyss.com/tags/windows/"/>
-    
       <category term="os" scheme="http://blog.freeabyss.com/tags/os/"/>
+    
+      <category term="tools" scheme="http://blog.freeabyss.com/tags/tools/"/>
+    
+      <category term="windows" scheme="http://blog.freeabyss.com/tags/windows/"/>
     
       <category term=".net" scheme="http://blog.freeabyss.com/tags/net/"/>
     
@@ -854,34 +890,6 @@
       <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
     
       <category term="Number Theory" scheme="http://blog.freeabyss.com/tags/Number-Theory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二进制运算</title>
-    <link href="http://blog.freeabyss.com/2016/12/22/Function-05-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/"/>
-    <id>http://blog.freeabyss.com/2016/12/22/Function-05-二进制运算/</id>
-    <published>2016-12-22T14:52:26.000Z</published>
-    <updated>2016-12-24T09:58:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="整数相加"><a href="#整数相加" class="headerlink" title="整数相加"></a>整数相加</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>\{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2\}<br>\end{array}<br>$$</p>
-<h2 id="整数相乘"><a href="#整数相乘" class="headerlink" title="整数相乘"></a>整数相乘</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {multiply} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\;shifted\; j places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>\{c_0,c_1,\dots,c_{n-1}是部分乘积\} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>\{p是ab的值\}<br>\end{array}<br>$$</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;整数相加&quot;&gt;&lt;a href=&quot;#整数相加&quot; class=&quot;headerlink&quot; title=&quot;整数相加&quot;&gt;&lt;/a&gt;整数相加&lt;/h2&gt;&lt;p&gt;$$&lt;br&gt;\begin{array}{l}&lt;br&gt;\mathbf {procedure} \; \mathcal {add
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="function" scheme="http://blog.freeabyss.com/tags/function/"/>
-    
-      <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
     
   </entry>
   

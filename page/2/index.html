@@ -276,6 +276,136 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/22/Function-05-二进制运算/" itemprop="url">
+                  二进制运算
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T22:52:26+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/22/Function-05-二进制运算/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/Function-05-二进制运算/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/22/Function-05-二进制运算/" class="leancloud_visitors" data-flag-title="二进制运算">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="整数相加"><a href="#整数相加" class="headerlink" title="整数相加"></a>整数相加</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>\{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2\}<br>\end{array}<br>$$</p>
+<h2 id="整数相乘"><a href="#整数相乘" class="headerlink" title="整数相乘"></a>整数相乘</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {multiply} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\;shifted\; j places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>\{c_0,c_1,\dots,c_{n-1}是部分乘积\} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>\{p是ab的值\}<br>\end{array}<br>$$</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/22/Math-DM-15-整数和算法/" itemprop="url">
                   离散数学学习笔记 整数和算法 15
                 </a>
@@ -3137,138 +3267,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" itemprop="url">
-                  Java8下使用wsdl2java命令报错解决方案
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-13T20:23:40+08:00" content="2016-12-13">
-              2016-12-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" class="leancloud_visitors" data-flag-title="Java8下使用wsdl2java命令报错解决方案">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>JDK:1.8<br>apache-cxf: 2.7.x</p>
-<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>使用<code>wsdl2java</code>命令生产代码时抛出如下异常：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xmlschema/bindinfo/binding.xsd; lineNumber: 52; columnNumber: 88; schema_reference: Failed to read schema document &apos;xjc.xsd&apos;, because&apos;file&apos; access is not allowed due to restriction set by the accessExternalSchema property.</div></pre></td></tr></table></figure></p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将以下内容保存为<code>jaxp.properties</code>文件，然后放到<code>%JAVA_HOME%\jre\lib</code>目录下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javax.xml.accessExternalSchema = all</div></pre></td></tr></table></figure></p>
-<p>引用 <a href="http://stackoverflow.com/questions/23011547/webservice-client-generation-error-with-jdk8" target="_blank" rel="external">http://stackoverflow.com/questions/23011547/webservice-client-generation-error-with-jdk8</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3314,7 +3312,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">67</span>
+              <span class="site-state-item-count">68</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -3322,7 +3320,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -3331,7 +3329,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-count">44</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

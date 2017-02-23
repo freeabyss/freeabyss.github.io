@@ -276,6 +276,201 @@
             
               
                 
+                <a class="post-title-link" href="/2017/02/23/Math-DM-31-图的表示/" itemprop="url">
+                  离散数学学习笔记 图的表示 31
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-23T21:06:27+08:00" content="2017-02-23">
+              2017-02-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/23/Math-DM-31-图的表示/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/23/Math-DM-31-图的表示/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/23/Math-DM-31-图的表示/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 图的表示 31">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h2><p>图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     </p>
+<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>邻接表可以用来表示不带多重边的图，它规定了每个顶点相邻的顶点       </p>
+<h4 id="简单表的邻接表"><a href="#简单表的邻接表" class="headerlink" title="简单表的邻接表"></a>简单表的邻接表</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">顶点</th>
+<th style="text-align:left">相邻的顶点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">b,c,e</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td style="text-align:left">a</td>
+</tr>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">a,d,e</td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left">c,e</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">a,c,d</td>
+</tr>
+</tbody>
+</table>
+<h4 id="有向图的邻接表"><a href="#有向图的邻接表" class="headerlink" title="有向图的邻接表"></a>有向图的邻接表</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">起点</th>
+<th style="text-align:left">终点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">b,c,d,e</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td style="text-align:left">b,d</td>
+</tr>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">a,c,e</td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">b,c,d</td>
+</tr>
+</tbody>
+</table>
+<h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><h4 id="基于顶点的相邻关系"><a href="#基于顶点的相邻关系" class="headerlink" title="基于顶点的相邻关系"></a>基于顶点的相邻关系</h4><p>假设$G=(\mathbf V,\mathbf E)$是简单图，其中$\mid\mathbf V\mid=m$。假设把$G$的顶点任意地排列成$v_1,v_2,\dots,v_n$。对这个顶点表来说，$G$的邻接矩阵$\mathbf A$是一个$n\times n$的$0-1$矩阵，它满足这样的性质：当$v_i$和$v_j$相邻时第$(i,j)$项是1，当$v_i$和$v_j$不相邻时第$(i,j)$项是0。      </p>
+<p>图的邻接矩阵依赖于所选择顶点的顺序。因此带$n$个顶点的图有$n!$个不同的邻接矩阵，因为$n$个顶点有$n!$个不同的顺序。     </p>
+<p>邻接矩阵也可以用来表示带环和多重边的无向图。把顶点$a_i$上的环表示成邻接矩阵第$(i,i)$位置上1，当出现多重边时，第$(i,j)$项等于$\{a_i,a_j\}$关联的边数。包括多重图和伪图在内的所有无向图都具有对称的邻接矩阵。      </p>
+<p>有向图的邻接矩阵不必是对称的，因为当从$a_i$到$a_j$有边时，从$a_j$到$a_i$可以没边。    </p>
+<h4 id="关联矩阵"><a href="#关联矩阵" class="headerlink" title="关联矩阵"></a>关联矩阵</h4><p>设$G=(\mathbf V,\mathbf E)$是无向图。设$v_1,v_2,\dots, v_n$，是顶点而$e_1,e_2,\dots,e_n$是边。则相对于$\mathbf V$和$\mathbf E$的这个顺序的关联矩阵是$n\times m$矩阵$\mathbf M=[m_{ij}]$，其中$$m_{ij} =\begin{cases}1\qquad 当边e_j关联v_i时\\0\qquad 否则\end{cases}$$<br>关联矩阵示例：<br><img src="../images/graph_06.png" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/10/Mac-Mac下制作MacOS启动盘/" itemprop="url">
                   Mac-Mac下制作MacOS启动盘
                 </a>
@@ -409,7 +604,7 @@
               
                 
                 <a class="post-title-link" href="/2017/01/27/Math-DM-29-关系的闭包/" itemprop="url">
-                  Math-DM-29-关系的闭包
+                  离散数学学习笔记 关系的闭包 29
                 </a>
               
             
@@ -463,7 +658,7 @@
 
           
           
-             <span id="/2017/01/27/Math-DM-29-关系的闭包/" class="leancloud_visitors" data-flag-title="Math-DM-29-关系的闭包">
+             <span id="/2017/01/27/Math-DM-29-关系的闭包/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 关系的闭包 29">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -548,7 +743,7 @@
               
                 
                 <a class="post-title-link" href="/2017/01/22/Math-DM-28-关系的表示/" itemprop="url">
-                  Math-DM-28-关系的表示
+                  离散数学学习笔记 关系的表示 28
                 </a>
               
             
@@ -602,7 +797,7 @@
 
           
           
-             <span id="/2017/01/22/Math-DM-28-关系的表示/" class="leancloud_visitors" data-flag-title="Math-DM-28-关系的表示">
+             <span id="/2017/01/22/Math-DM-28-关系的表示/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 关系的表示 28">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -3016,144 +3211,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/24/Math-DM-16-数论应用/" itemprop="url">
-                  离散数学学习笔记 数论应用 16
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-24T16:43:40+08:00" content="2016-12-24">
-              2016-12-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/24/Math-DM-16-数论应用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/24/Math-DM-16-数论应用/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/24/Math-DM-16-数论应用/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 数论应用 16">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="一些有用的结果"><a href="#一些有用的结果" class="headerlink" title="一些有用的结果"></a>一些有用的结果</h2><p>若$a$和$b$为正整数，则存在整数$s$和$t$，使$gcd(a, b)=sa+tb$。<br>通过以上定理，可以推导出以下结果:<br>如果$a,b,c$为正整数，使得$gcd(a,b)=1$且$a\mid bc$，那么$a\mid c$。     </p>
-<blockquote>
-<p>证明:由于$gcd(a,b)=1$，根据上面的定理可知有整数$s ,t $使得，$$sa+tb=1$$用$c$乘以等式两边，得$$sac+tbc=c$$ 由于$a\mid tbc$，且$a\mid sac$，因此$a\mid sac+tbc$，从而$a\mid c$。     </p>
-</blockquote>
-<p>如果$p$是素数，且$p\mid a_1a_2\dots a_n$，其中$a_i$为整数，则对于某个$i$，$p\mid a_i$。<br>令$m$为正整数，$a,b,c$为整数。如果$ac\equiv bc\pmod m$，且$gcd(c,m)=1$，那么$a\equiv b\pmod m$</p>
-<h3 id="证明正整数的素因子分解的唯一性"><a href="#证明正整数的素因子分解的唯一性" class="headerlink" title="证明正整数的素因子分解的唯一性"></a>证明正整数的素因子分解的唯一性</h3><p>假定正整数$n$能用两种方式写成素数的乘积，比如$n=p_1p_2\dots p_s$和$n=q_1q_2\dots q_t$，其中$p_i,q_j$都是素数，而且$p_1\le p_2\le \dots\le p_s$和$q_1\le q_2\le \dots\le q_t$，现在从两个分解式中去掉共有的素数，得$$p_{i_1}p_{i_2}\dots p_{i_u}=q_{j_1}q_{j_2}\dots q_{j_v}$$其中任何素数都不同时出现在等式两边，而$u,v$为正整数。由上面的定理可知，存在某个$k$使得$p_{i_1}$整除$q_{j_k}$。由于任何素数都不能整除另一个素数，搜以不可能有这样的$q_{j_k}$。这说明$n$至多有一种非递减序分解为素数的方式。     </p>
-<h3 id="线性同余"><a href="#线性同余" class="headerlink" title="线性同余"></a>线性同余</h3><p>形如$ax\equiv b\pmod m$的同余式称为线性同余。其中$m$为正整数，$a$和$b$为整数，$x$为变量。<br>如果$a\overline a\equiv 1\pmod m$的整数$\overline a$存在的话，这样的$\overline a$称为$a$的模$m$逆。<br>如果$a$和$m$为互素的整数，$m&gt;1$，则存在$a$的模$m$的逆。而且这个逆模$m$是唯一的。(即有小于$m$的唯一正整数$\overline a$，它是$a$模$m$的逆，且$a$的任何别的模$m$逆均和$\overline a$模$m$同余)      </p>
-<blockquote>
-<p>证明: 由于$gcd(a,m)=1$，有整数$s,t$使得，$$sa+tm=1$$于是$$sa+tm\equiv 1\pmod m$$由于$tm\equiv 0\pmod m$，所以$$sa\equiv 1\pmod m$$结论是$s$为$a$的模$m$逆。     </p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3199,7 +3256,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">69</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -3216,7 +3273,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-count">45</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

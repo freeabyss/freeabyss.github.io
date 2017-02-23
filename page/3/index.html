@@ -276,6 +276,135 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/13/Maven-Maven常用配置和命令/" itemprop="url">
+                  Maven-Maven常用配置和命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-13T20:29:38+08:00" content="2016-12-13">
+              2016-12-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Maven/" itemprop="url" rel="index">
+                    <span itemprop="name">Maven</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/13/Maven-Maven常用配置和命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/13/Maven-Maven常用配置和命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/13/Maven-Maven常用配置和命令/" class="leancloud_visitors" data-flag-title="Maven-Maven常用配置和命令">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Maven-引用本地jar包"><a href="#Maven-引用本地jar包" class="headerlink" title="Maven 引用本地jar包"></a>Maven 引用本地jar包</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.richard<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>my-jar<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;project.basedir&#125;/lib/my-jar.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="安装Jar到本地仓库"><a href="#安装Jar到本地仓库" class="headerlink" title="安装Jar到本地仓库"></a>安装Jar到本地仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn install:install-file -Dfile=esbhelper-2.0.jar -DgroupId=com.xmal -DartifactId=esbhelper -Dversion=2.0 -Dpackaging=jar</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/13/Java-Java8下使用wsdl2java命令报错解决方案/" itemprop="url">
                   Java8下使用wsdl2java命令报错解决方案
                 </a>
@@ -4268,157 +4397,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="url">
-                  行列式－《线性代数及应用》
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-08T20:44:04+08:00" content="2016-09-08">
-              2016-09-08
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/08/Math-行列式－《线性代数及应用》/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/08/Math-行列式－《线性代数及应用》/" class="leancloud_visitors" data-flag-title="行列式－《线性代数及应用》">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
-</blockquote>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>当$n\ge 2$时，$n\times n$矩阵$A=[a_{ij}]$的行列式是形如$\pm a_{1j}detA_{1j}$的$n$个项的和，其中加号和减号交替出现，这里元素$a_{11},a_{12},\cdots,a_{1n}$来自$A$的第一行，即<br>$$<br>    detA=a_{11}\cdot detA_{11}-a_{12}\cdot detA_{12}+\cdots+(-1)^{1+n}a_{1n}\cdot detA_{1n} \\<br>    = \sum_{j=1}^n (-1)^{1+j}a_{1j}detA_{1j}<br>$$<br>其中，$A_{ij}$表示通过划去$A$中第$i$行和第$j$列而得到的子矩阵。</p>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><h3 id="行列式函数"><a href="#行列式函数" class="headerlink" title="行列式函数"></a>行列式函数</h3><p>若$A$为$n\times n$矩阵，我们可以将$detA$看作$A$中$n$个列向量的函数。如果将$A$其中一列作为可变列，则$detA$可作为可变列向量的线性函数。<br>$$<br>    A=[\mathbf a_1 \cdots \mathbf a_{j-1} \mathbf x  \mathbf a_{j+1} \cdots \mathbf a_n]<br>$$<br>定义由$R^n$到$R$的变化T为<br>$$<br>    T(\mathbf x) = det[[\mathbf a_1 \cdots \mathbf a_{j-1} \mathbf x \mathbf a_{j+1} \cdots \mathbf a_n]]<br>$$<br>则有有以下性质<br>$$<br>    T(c\mathbf x) = cT(\mathbf x), 对任意常数c和R^n中的任意\mathbf x成立 \\<br>    T(\mathbf u+\mathbf v)=T(\mathbf u)+T(\mathbf v), 对R^n中所有\mathbf u,\mathbf v成立<br>$$</p>
-<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><ol>
-<li>$n\times n$矩阵$A$的行列式可按任意行或列的余因子展开式来计算。<br>按第$i$行展开<br>$$<br> C_{ij} = (-1)^{i+j}detA_{ij} \\<br> detA = a_{i1}C_{i1}+a_{i2}C_{i2}+\cdots+a_{in}C_{in}<br>$$<br>按第$j$列展开<br>$$<br> C_{ij} = (-1)^{i+j}detA_{ij} \\<br> detA = a_{1j}C_{1j}+a_{2j}C_{2j}+\cdots+a_{nj}C_{nj}<br>$$</li>
-<li>若$A$为三角阵，则$detA$等于$A$的主对角线上元素的乘积</li>
-<li>行变换，令$A$是一个方阵<ul>
-<li>若$A$的某一行的倍数加到另一行得矩阵$B$，则$detB=detA$</li>
-<li>若$A$的两行互换得矩阵$B$，则$detB=-detA$</li>
-<li>若$A$的某行乘以$k$倍得到矩阵$B$，则$detB=k\cdot detA$</li>
-</ul>
-</li>
-<li>方阵$A$是可逆的当且仅当$detA\neq 0$</li>
-<li>若$A$为一个$n\times n$矩阵，则$detA^T = detA$</li>
-<li>若$A$和$B$均为$n\times n$矩阵，则$detAB = (detA)(detB)$</li>
-<li>克拉默法则，设$A$是一个可逆的$n\times n$矩阵，对$R^n$中任意向量$\mathbf b$，方程$A\mathbf x=\mathbf b$的唯一解可由下式给出，其中$detA_i(\mathbf b)$表示$A$中第$i$列由向量$\mathbf b$替换得到的矩阵<br>$$<br> x_i = {detA_i(\mathbf b)\over {detA}}, i=1,2,\cdots,n<br>$$</li>
-<li>逆矩阵公式， 设$A$是一个可逆的$n\times n$矩阵，则$A^{-1}={1\over detA}adjA$</li>
-<li>若$A$是一个$2\times 2$矩阵，则由$A$的列确定的平行四边形的面积为$|detA|$，若$A$是一个$3\times 3$矩阵，则由$A$列确定的平行六面体的体积为$|detA|$</li>
-<li>设$T:R^2\to R^2$是由一个$2\times 2$矩阵$A$确定的线性变换，若$S$是$R^2$中一个平行四边形，则<br>$$<br>\{T(S)的面积\}=|detA|\cdot\{S的面积\}<br>$$<br>若$T$是一个由$3\times 3$矩阵$A$确定的线性变换，而$S$是$R^3$中的一个平行六面体，则<br>$$<br>\{T(S)的体积\}=|detA|\cdot \{S的体积\}<br>$$</li>
-</ol>
-<h2 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h2><h3 id="adjA-可逆"><a href="#adjA-可逆" class="headerlink" title="$adjA$可逆"></a>$adjA$可逆</h3><p>若$A$可逆，则$adjA$也可逆，且$(adjA)^{-1}={1\over detA}A$<br>$$<br>    A^{-1} = {1\over detA}adjA \\<br>    adjA = (detA)A^{-1} \\<br>    adjA(adjA)^{-1} = I \\<br>    adjA \cdot {1\over detA}A = I \\<br>    (detA)A^{-1} \cdot {1\over detA}A = I \\<br>    A^{-1}A = I<br>$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -4464,7 +4442,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">68</span>
+              <span class="site-state-item-count">69</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -4481,7 +4459,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-count">45</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

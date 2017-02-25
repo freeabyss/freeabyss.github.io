@@ -276,6 +276,556 @@
             
               
                 
+                <a class="post-title-link" href="/2017/02/25/Maven-Maven的自动部署配置/" itemprop="url">
+                  Maven的自动部署配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-25T20:51:51+08:00" content="2017-02-25">
+              2017-02-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Maven/" itemprop="url" rel="index">
+                    <span itemprop="name">Maven</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/25/Maven-Maven的自动部署配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/25/Maven-Maven的自动部署配置/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/25/Maven-Maven的自动部署配置/" class="leancloud_visitors" data-flag-title="Maven的自动部署配置">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>利用Maven的<code>tomcat7-maven-plugin</code>插件，可以仅仅使用一行命令就可以将项目部署到本地或者远程的Tomcat上。<br>插件的名称虽然带有<code>tomcat7</code>，但经过我实际测验Tomcat8中也可以使用。<br>完成自动部署需要两步，首先是Tomcat的配置，其次是pom文件的配置。 </p>
+<h2 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h2><p> 在Tomcat目录下的<code>conf/tomcat-users.xml</code>文件中添加以下代码   </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-gui"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-script"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">"admin"</span> <span class="attr">password</span>=<span class="string">"password"</span> <span class="attr">roles</span>=<span class="string">"manager-script"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">"root"</span> <span class="attr">password</span>=<span class="string">"password"</span> <span class="attr">roles</span>=<span class="string">"manager-gui"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p><code>username</code>和<code>password</code>可以随意更改。    </p>
+<p>在<code>conf/context.xml</code>添加以下代码     </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Manager</span> <span class="attr">pathname</span>=<span class="string">"/manager"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">docBase</span>=<span class="string">"$&#123;catalina.home&#125;/webapps/manager"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p>在<code>conf/Catalina/localhost/</code>目录下创建<code>manager.xml</code>文件，并填充以下内容:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">antiResourceLocking</span>=<span class="string">"false"</span> <span class="attr">docBase</span>=<span class="string">"$&#123;catalina.home&#125;/webapps/manager"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.valves.RemoteAddrValve"</span> <span class="attr">allow</span>=<span class="string">"^.*$"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ol>
+<li>验证配置是否正确，启动Tomcat，打开浏览器，输入地址是<code>http://localhost:8080/manager/html</code>（假设Tomcat地址是<code>locahost:8080</code>）。然后输入<code>root</code>的登录名和密码，成功登入就说明配置成功。 <h2 id="配置pom-xml"><a href="#配置pom-xml" class="headerlink" title="配置pom.xml"></a>配置pom.xml</h2>在<code>pom.xml</code>文件中添加以下代码，如果是多模块项目，则在web模块所在的<code>pom.xml</code>添加。    </li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat7-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://serverip:port/manager/text<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">username</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">username</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">password</span>&gt;</span>password<span class="tag">&lt;/<span class="name">password</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">update</span>&gt;</span>true<span class="tag">&lt;/<span class="name">update</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">path</span>&gt;</span>/webapp<span class="tag">&lt;/<span class="name">path</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="启动部署"><a href="#启动部署" class="headerlink" title="启动部署"></a>启动部署</h2><p>第一次部署输入以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn tomcat7:deploy</div></pre></td></tr></table></figure>
+<p>以后每次部署，可以输入以下命令 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn tomcat7:redeploy</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/25/Math-DM-34-欧拉回路和哈密顿通路/" itemprop="url">
+                  离散数学学习笔记 欧拉回路和哈密顿通路 34
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-25T16:31:37+08:00" content="2017-02-25">
+              2017-02-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/25/Math-DM-34-欧拉回路和哈密顿通路/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/25/Math-DM-34-欧拉回路和哈密顿通路/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/25/Math-DM-34-欧拉回路和哈密顿通路/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 欧拉回路和哈密顿通路 34">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="欧拉回路"><a href="#欧拉回路" class="headerlink" title="欧拉回路"></a>欧拉回路</h2><p>图$G$的欧拉回路是包含着$G$的每一条边的封闭路线。图$G$里的欧拉通路是包含着$G$的每一条边的路线。<br>欧拉回路和欧拉通路都是恰好包含图的每一条边且不重复，唯一的区别就是，欧拉回路回到原点，而欧拉通路不必回到原点。    </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/25/Math-DM-33-图的连通性/" itemprop="url">
+                  离散数学学习笔记 图的连通性 33
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-25T14:46:18+08:00" content="2017-02-25">
+              2017-02-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/25/Math-DM-33-图的连通性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/25/Math-DM-33-图的连通性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/25/Math-DM-33-图的连通性/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 图的连通性 33">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="连通性"><a href="#连通性" class="headerlink" title="连通性"></a>连通性</h2><h3 id="定义和相关术语"><a href="#定义和相关术语" class="headerlink" title="定义和相关术语"></a>定义和相关术语</h3><h4 id="无向图定义"><a href="#无向图定义" class="headerlink" title="无向图定义"></a>无向图定义</h4><p>设$n$是非负整数且$G$是无向图。在$G$中从$u$到$v$的长度为$n$<strong>路径</strong>是$G$的$n$条边$e_1,\dots,e_n$的序列，使得$f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中$x_0=u$而$x_n=v$。当这个图是简单图时，就用顶点序列$x_0,x_1,\dots,x_n$表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即$u=v$且长度大于0，则它是一条<strong>封闭路径</strong>。<br>若通路径不包含重复的相同边，则它是<strong>路线</strong> 。<br>当没有必要区分多重边时，就用顶点序列$x_0,x_1,\dots,x_n$表示路径。<br>通路表示没有重复顶点的路径。       </p>
+<blockquote>
+<p>路径(walk)、通路(path)，、封闭路径(closed walk)、回路(circuit)、路线(trail)<br>上面定义的概念，有很多不同的术语， 因此需要注意以下几点： </p>
+<ul>
+<li>是否起始和终止于相同的顶点</li>
+<li>是否有重复的相同边      </li>
+<li>是否有重复的顶点   </li>
+</ul>
+</blockquote>
+<h4 id="有向图定义"><a href="#有向图定义" class="headerlink" title="有向图定义"></a>有向图定义</h4><p>在有向图$G$中从$a$到$b$的一条路径是$G$中一条或多条边的序列$(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中$x_0=a,x_n=b$。</p>
+<h3 id="无向图的连通性"><a href="#无向图的连通性" class="headerlink" title="无向图的连通性"></a>无向图的连通性</h3><p>若无向图每一对不同的顶点之间都有路径，则该图称为<strong>连通</strong>的。     </p>
+<p>不连通的图是2个或2个以上连通子图之并，每一对子图都没有公共的顶点。这些不相交的连通子图称为图的连通分支。     </p>
+<p>删除一个顶点和它所关联的边，就产生带有比原图更多的连通分支的子图。把这样的顶点称为割点。    </p>
+<p>把一旦删除就产生带有比原图更多的连通分支的子图的边称为割边或桥。    </p>
+<h4 id="连通无向图的每一对不同顶点之间都存在路线"><a href="#连通无向图的每一对不同顶点之间都存在路线" class="headerlink" title="连通无向图的每一对不同顶点之间都存在路线"></a>连通无向图的每一对不同顶点之间都存在路线</h4><p>证： 设$u$和$v$是连通无向图$G=(\mathbf V,\mathbf E)$的两个不同的顶点。因为$G$是连通的，所以$u$和$v$之间至少有1条路径。设$x_0,x_1,\dots,x_n$是长度最短的路径的顶点序列，其中$x_0=u$而$x_n=v$。这条长度最短的路径是路线。假设它不是路线，则对满足$0\le i\lt j$的某个$i$和$j$来说，有$x_i=x_j$。这意味着通过删除顶点序列$x_i,\dots,x_{j-1}$所对应的边，就获得了 带有顶点序列$x_0,x_1,\dots,x_{i-1},x_j,\dots,x_n$的从$u$到$v$的更短的路线。     </p>
+<h3 id="有向图的连通性"><a href="#有向图的连通性" class="headerlink" title="有向图的连通性"></a>有向图的连通性</h3><p>在有向图里有两种连通性的概念。若任意两顶点之间都有路径，则该有向图是<strong>弱连通性</strong>的。若任意两顶点$a$和$b$，其中从$a$到$b$和从$b$到$a$都有路径，则该图是<strong>强连通性</strong>。    </p>
+<p>$G$的子图是强连通图，则称为$G$的强连通分支或强分枝。    </p>
+<h3 id="顶点之间的路径数"><a href="#顶点之间的路径数" class="headerlink" title="顶点之间的路径数"></a>顶点之间的路径数</h3><p>设$G$是带有相对于顶点顺序$v_1,v_2,\dots,v_n$的邻接矩阵$\mathbf A$的图（允许带有无向、有向、多重边、环）。从$v_i$到$v_j$的长度为$r$的不同路径数目等于$\mathb A^r$的第$(i,j)项，其中$r$是正整数。    </p>
+<h2 id="路径和同构"><a href="#路径和同构" class="headerlink" title="路径和同构"></a>路径和同构</h2><p>有多种方式可以利用路径和封闭路径来帮助判定两个图是否同构。例如，具有特定长度的路线的存在性，就是一种可以用来证明两个图是不同构的有用的不变量。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/25/Math-DM-32-图的同构/" itemprop="url">
+                  离散数学学习笔记 图的同构 32
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-25T12:02:03+08:00" content="2017-02-25">
+              2017-02-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/25/Math-DM-32-图的同构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/25/Math-DM-32-图的同构/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/25/Math-DM-32-图的同构/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 图的同构 32">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="同构"><a href="#同构" class="headerlink" title="同构"></a>同构</h2><p>设$G_1=(\mathbf V_1,\mathbf E_1)$和$G_2=(\mathbf V_2,\mathbf E_2)$是简单图，若从$\mathbf V_1$到$\mathbf V_2$存在一对一的映射$f$，且$f$具有如下性质：对$\mathbf V_1$里的所有的$a$和$b$来说，$a$和$b$在$G_1$里相邻当且仅当$f(a)$和$f(b)$在$G_2$里相邻，就说$G_1$和$G_2$是同构的。这样的函数$f$称为同构。简单来讲，当两个简单图同构时，两个图的顶点之间具有保持相邻关系的一一对应。      </p>
+<p>判断两个简单图是否同构常常是一件困难的事情。在两个带有$n$个顶点的简单图顶点集之间有$n!$钟可能的一一对应。若$n$太大，则通过检验每一种对应来看它是否保持相邻关系是不可能的。      </p>
+<h3 id="判断同构的方法"><a href="#判断同构的方法" class="headerlink" title="判断同构的方法"></a>判断同构的方法</h3><p>同构的简单图必然具有相同的顶点数、边数和顶点的度，这些被称为同构下的不变量。这些量有任何不同，则两个图就不是同构的，不过即使，这些量都是相同的，也不一定意味着两个图同构。目前没有已知的用来判定简单是否同构的不变量集。    </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/23/Math-DM-31-图的表示/" itemprop="url">
                   离散数学学习笔记 图的表示 31
                 </a>
@@ -2658,559 +3208,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/26/Math-DM-20-二项式系数/" itemprop="url">
-                  离散数学学习笔记 二项式系数 20
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-26T22:08:38+08:00" content="2016-12-26">
-              2016-12-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/26/Math-DM-20-二项式系数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/Math-DM-20-二项式系数/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/26/Math-DM-20-二项式系数/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 二项式系数 20">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>设$x$和$y$是变量，$n$是非负整数，那么$$(x+y)^n=\sum_{j=0}^n\left(\begin{array}{c}n \\r\end{array}\right)x^{n-1}y^i$$</p>
-<p>设$n$为非负整数，那么$$\sum_{k=0}^n\left(\begin{array}{c}n \\k\end{array}\right)=2^n$$<br>证明:<br>$$<br>2^n=(1+1)^n =\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)1^k1^{n-k}= \sum_{k=0}^n\left(\begin{array}{c}n \\k\end{array}\right)<br>$$</p>
-<p>设$n$是正整数，那么 $$\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)(-1)^k=0$$</p>
-<p>设$n$是非负整数，那么 $$\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)2^k=3^n$$</p>
-<h2 id="恒等式"><a href="#恒等式" class="headerlink" title="恒等式"></a>恒等式</h2><h3 id="帕斯卡恒等式"><a href="#帕斯卡恒等式" class="headerlink" title="帕斯卡恒等式"></a>帕斯卡恒等式</h3><p>设$n$和$k$是满足$n\ge k$的正整数，那么有 $$\left(\begin{array}{c}n+1\\k\end{array}\right)=\left(\begin{array}{c}n\\k-1\end{array}\right)=\left(\begin{array}{c}n\\k\end{array}\right)$$<br>证:假定$T$是包含$n+1$个元素的集合。令$a$是$T$的一个元素且$S=T-\{a\}$。注意到$T$包含$k$个元素的子集有$\left(\begin{array}{c}n+1\\k\end{array}\right)$个。然而$T$的含$k$个元素的子集或者包含$a$和$S$中的$k-1$个元素，或者不包含$a$但包含$S$中的$k$个元素。由于$S$的$k-1$元子集有$\left(\begin{array}{c}n\\k-1\end{array}\right)$个，故$T$含$a$在内的$k$元子集有$\left(\begin{array}{c}n\\k-1\end{array}\right)$个。由由于$S$的$k$元子集有$\left(\begin{array}{c}n\\k\end{array}\right)$个。故$T$的不含$a$的$k$元子集有$\left(\begin{array}{c}n\\k\end{array}\right)$个。从而得到$$\left(\begin{array}{c}n+1\\k\end{array}\right)=\left(\begin{array}{c}n\\k-1\end{array}\right)=\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
-<h3 id="范德蒙德恒等式"><a href="#范德蒙德恒等式" class="headerlink" title="范德蒙德恒等式"></a>范德蒙德恒等式</h3><p>设$n、m、r$是非负整数，其中$r$不超过$m$或$n$，那么<br>$$\left(\begin{array}{c}n+m\\r\end{array}\right)=\sum_{k=0}^r\left(\begin{array}{c}m\\r-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
-<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>可以将公式等价于从$n$个红球，$m$个蓝球中选取$r$个球的问题。<br>首先，选取$0$个红球，$m$个蓝球，共有$\left(\begin{array}{c}n\\0\end{array}\right)\left(\begin{array}{c}m\\r\end{array}\right)$种方式。<br>选取$1$个红球，$m-1$个蓝球，共有$\left(\begin{array}{c}n\\1\end{array}\right)\left(\begin{array}{c}m\\r-1\end{array}\right)$种方式。<br>$\begin{array}{l}\dots \end{array}$<br>选取$r$个红球，$0$个蓝球共有$\left(\begin{array}{c}n\\r\end{array}\right)\left(\begin{array}{c}m\\0\end{array}\right)$种方式。<br>将以上$r$种方式相加得出 $$\left(\begin{array}{c}n+m\\r\end{array}\right)=\sum_{k=0}^r\left(\begin{array}{c}m\\r-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
-<h4 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h4><p>如果$n$是非负整数，那么$$\left(\begin{array}{c}2n\\n\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)^2$$<br>证: 在范德蒙德恒等式中令$m=r=n$得到$$\left(\begin{array}{c}2n\\n\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\n-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)^2$$</p>
-<p>设$n$和$r$是非负整数，$r\le n$那么$$\left(\begin{array}{c}n+1\\r+1\end{array}\right)=\sum_{j=r}^n\left(\begin{array}{c}j\\r\end{array}\right)$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/26/Math-DM-19-排列和组合/" itemprop="url">
-                  离散数学学习笔记 排列和组合 19
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-26T21:01:43+08:00" content="2016-12-26">
-              2016-12-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/26/Math-DM-19-排列和组合/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/Math-DM-19-排列和组合/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/26/Math-DM-19-排列和组合/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 排列和组合 19">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h2><p>集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。<br>一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。<br>具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$</p>
-<blockquote>
-<p>只要是$n$非负，就有$P(n,0)=1$。      </p>
-</blockquote>
-<p>如果$n$和$r$都是整数，且$0\le r\le n$，则$$P(n,r)={n!\over (n-r)!}$$</p>
-<h3 id="圆排列"><a href="#圆排列" class="headerlink" title="圆排列"></a>圆排列</h3><p>将圆排列展开就是线排列。$r$个元素进行排列，就有$r$种展开方式，因此，圆排列共有 $$P(n,r)/r={n!\over r(n-r)!}$$</p>
-<h3 id="项链排列"><a href="#项链排列" class="headerlink" title="项链排列"></a>项链排列</h3><p>项链排列在圆排列的基础上，正面向上和反面向上两种方式放置各个数是同一个排列，因此项链排列等于$$P(n,r)/2r={n!\over 2r(n-r)!} \qquad 3\ge r\le n$$</p>
-<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>集合元素的$r$组合是从这个集合无序选取的$r$个元素。简单地说，一个$r$组合是这个集合的一个$r$个元素的子集。<br>具有$n$个不同元素集合的$r$组合记为$C(n,r)$。也记作$\left(\begin{array}{c}n \\r\end{array}\right)$并且称为二项式系数。<br>设$n$是正整数，$r$是满足$0\le r\le n$的整数，$n$元素的集合的$r$组合数等于$$C(n,r)={n!\over r!(n-r)!}$$<br>证 可以如下得到这个集合的$r$排列。先构成集合的$C(n,r)$个$r$组合，然后以$P(n,r)$种方式排序每个$r$组合中的元素，这可以用$P(r,r)$种方式来做。因此$$P(n,r)=C(n,r)*P(r,r)$$这就推出$$C(n,r)={P(n,r)\over P(r,r)}={n!/(n-r)!\over r!/(r-r)!}={n!\over r!(n-r)!}$$</p>
-<p>设$n,r$是满足$n\le r$的非负整数，那么$C(n,r)=C(n,n-r)$。      </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/25/Math-DM-18-鸽巢原理/" itemprop="url">
-                  离散数学学习笔记 鸽巢原理 18
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-25T21:49:15+08:00" content="2016-12-25">
-              2016-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/25/Math-DM-18-鸽巢原理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/Math-DM-18-鸽巢原理/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/25/Math-DM-18-鸽巢原理/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 鸽巢原理 18">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="鸽巢原理"><a href="#鸽巢原理" class="headerlink" title="鸽巢原理"></a>鸽巢原理</h2><p>如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    </p>
-<blockquote>
-<p>证:假定$k$个盒子中没有一个盒子包含的物体多于$1$个，那么物体总数至多是$k$，这与至少有$k+1$个物体矛盾。    </p>
-</blockquote>
-<h2 id="广义鸽巢原理"><a href="#广义鸽巢原理" class="headerlink" title="广义鸽巢原理"></a>广义鸽巢原理</h2><p>如果$N$个物体放入$k$个盒子，那么至少有一个盒子包含了至少$\lceil N/k\rceil$个物体。   </p>
-<blockquote>
-<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。  </p>
-</blockquote>
-<p>一类普遍的问题是，把一些物体分到$k$个盒子中要使某个盒子至少含有$r$个物体，求这些物体的最少个数。当有$N$个物体时，广义鸽巢原理告诉我们，只要$\lceil N/k\rceil\ge r$一定有$r$个物体在同一个盒子里。满足$N/k&gt;r-1$的最小正整数，即$N=k(r-1)+1$。</p>
-<h3 id="鸽巢原理的巧妙应用"><a href="#鸽巢原理的巧妙应用" class="headerlink" title="鸽巢原理的巧妙应用"></a>鸽巢原理的巧妙应用</h3><p>在30天的一个月里，某棒球队一天至少打一场比赛，但至多打45场。证明一定有连续若干天内这个队恰好打了14场。<br>令$a_j$是在这个月的第$j$天或第$j$天之前所打的场数，则$a_1,a_2,\dots,a_30$是不同正整数的一个递增序列，其中$1\le a_j\le 45$。从而$a_1+14,a_2+14,\dots,a_30+14$也是不同正整数的一个递增序列，其中$15\le a_j+15\le 59$。<br>$60$个正整数$a_1,a_2,\dots,a_30,a_1+14,a_2+14,\dots,a_30+14$全部小于等于$59$.因此，由鸽巢原理有两个正整数相等。因此整数$a_j j=1,2,\dots,30$都不相同，并且$a_j+14,j=1,2,dots,30$也不相同，一定存在下标$i,j$满足$a_i=a_j+14$。这意味着从第$j+1$天到第$i$天恰好打了14场比赛。     </p>
-<p>每个由$n^2+1$个不同实数构成的序列都包含一个长为$n+1$的严格递增子序列或严格递减子序列。     </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/25/Math-DM-17-计数基础/" itemprop="url">
-                  离散数学学习笔记 计数基础 17
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-25T20:07:33+08:00" content="2016-12-25">
-              2016-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/25/Math-DM-17-计数基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/Math-DM-17-计数基础/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/25/Math-DM-17-计数基础/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 计数基础 17">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    </p>
-<h2 id="基本的计数原则"><a href="#基本的计数原则" class="headerlink" title="基本的计数原则"></a>基本的计数原则</h2><h3 id="乘积法则"><a href="#乘积法则" class="headerlink" title="乘积法则"></a>乘积法则</h3><p>当一个过程由独立的任务组成时使用乘法法则。<br>假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   </p>
-<h4 id="推广的乘积法则"><a href="#推广的乘积法则" class="headerlink" title="推广的乘积法则"></a>推广的乘积法则</h4><p>假定一个过程由执行任务$T_1,T_2,\dots ,T_m$来完成。如果在完成任务之后用$n_i$种方式来完成$T_i$，那么完成这个过程有$n_1\cdot n_2\cdot\dots\cdot n_m$种方式。  </p>
-<h4 id="乘积法则集合语言表达"><a href="#乘积法则集合语言表达" class="headerlink" title="乘积法则集合语言表达"></a>乘积法则集合语言表达</h4><p>如果$\mathbf {A_1, A_2,\dots,A_m}$是有穷集，那么存在这些集合的笛卡尔积中的元素数是每个集合的元素数之积。为把这种表述与乘积法则联系起来，注意到在笛卡尔积$\mathbf {A_1\times A_2\times\dots\times A_m}$中选一个元素的任务是通过在$\mathbf {A_1}$中选一个元素，$\mathbf {A_2}$中选一个元素$\dots $ 。由乘积法则得到$$\mid\mathbf {A_1\times A_2\times\dots\times A_m \mid= \mid A_1\mid\cdot\mid A_2\mid\cdot\dots\cdot\mid A_m\mid}$$</p>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>例如:用一个字母和一个不超过$100$的正整数给礼堂的座位编号。那么不同编号的座位最多有多少?<br>解: 给一个座位编号的过程由两个任务组成，即从$26$个字母中先选择一个字母分配给这个座位，然后再从$100$个正整数中选择一个整数分配给它。乘积法则表明一个座位可以有$26\cdot 100=2600$种不同的编号方式。     </p>
-<h5 id="计数函数"><a href="#计数函数" class="headerlink" title="计数函数"></a>计数函数</h5><p>从一个$n$元集到一个$m$元集存在多少个函数?<br>解: 一个函数对于定义域中$m$个元素中的每个元素都要选择陪域中$n$个元素中的一个元素来对应。因此，由乘积法则存在$n\cdot n\cdot\dots\cdot n=n^m$个从$m$元集到$n元集再的函数。</p>
-<h5 id="计数一对一函数"><a href="#计数一对一函数" class="headerlink" title="计数一对一函数"></a>计数一对一函数</h5><p>从一个$m$元集到一个$n$元集存在多少个一对一函数?<br>解: 首先注意到当$m&gt;n$时没有从$m$元集到$n$元集的一对一函数。现在令$m\le n$。假设定义域中的元素是$a_1,a_2,\dots ,a_m$。有$n$种方式选择函数在$a_1$的值。因为函数是一对一的，可以有$n-1$种方式选择函数在$a_2$的值。由乘积法则，从一个$m$元集到一个$n$元集存在着$n(n-1)(n-2)\dots(n-m+1)$个一对一函数。   </p>
-<h5 id="计数有穷集的子集"><a href="#计数有穷集的子集" class="headerlink" title="计数有穷集的子集"></a>计数有穷集的子集</h5><p>用乘积法则证明一个有穷集$\mathbf S$的不同子集数是$2^{\mid s\mid}$。<br>设$\mathbf S$是有穷集。按任意的顺序将$\mathbf S$的元素列成一个表，考虑到$\mathbf S$的子集和长为$\mid \mathbf S\mid$的二进制串之间存在一对一的对应，即如果表的第$i$个元素在这个子集里，则该子集对应的二进制串的第$i$位为$1$，否则为$0$。又乘积法则，存在着$2^{\mid S\mid}$个长为$\mid S\mid$的二进制串。因此$\mid P(S)\mid=2^{\mid S\mid}$。    </p>
-<h3 id="求和法则"><a href="#求和法则" class="headerlink" title="求和法则"></a>求和法则</h3><p>如果完成第一项任务有$n_1$种方式，完成第二项任务有$n_2$种方式，并且这些任务不能同时完成，那么完成第一或第二项任务有$n_1+n_2$种方式。    </p>
-<h4 id="求和法则的集合表达"><a href="#求和法则的集合表达" class="headerlink" title="求和法则的集合表达"></a>求和法则的集合表达</h4><p>如果$\mathbf {A_1, A_2,\dots,A_m}$是不交的集合，那么在其并集中的元素数是每个集合的元素数之和。为把这种表述与求和法则联系起来，令$\mathbf T_i$是从$\mathbf A_i(i=1,2,\dots,m)$中选取一个元素的任务。有$\mid A_i\mid$种方式做$\mathbf T_i$。由于任何两个任务不可能同时做，根据求和法则，从其中某个集合选择一个元素的方式数，即在并集中的元素数是$$\mid \mathbf {A_1\cup A_2\cup\dots\cup A_m\mid=\mid A_1\mid+\mid A_2\mid+\dots+\mid A_m\mid}$$</p>
-<h3 id="容斥原理"><a href="#容斥原理" class="headerlink" title="容斥原理"></a>容斥原理</h3><p>当同时做两个任务时，我们不能使用求和法则来计数完成其中一个任务的方式。为了正确的计数完成其中一个任务的方式，我们先把完成每个任务的方式数加起来，然后再减去同时完成两个任务的方式数。这个技术叫做容斥原理。     </p>
-<h4 id="集合表述"><a href="#集合表述" class="headerlink" title="集合表述"></a>集合表述</h4><p>令$\mathbf {A_1}$和$\mathbf {A_2}$是集合，$T_1$是从$A_1$选择一个元素的任务，$T_2$是从$A_2$选择一个元素的任务。完成$T_1$有$\mid A_1\mid$种方式，完成$T_2$有$\mid A_2\mid$种方式。完成$T_1$或$T_2$的方式数是完成$T_1$的方式数与完成$T_2$的方式数之和减去同时完成$T_1、T_2$两个任务的方式数。因为存在$\mid\mathbf {A_1\cup A_2\mid}$种方式完成$T_1$或$T_2$，$\mid A_1\cap A_2\mid$种方式完成$T_1$和$T_2$，我们有$$\mid\mathbf {A_1\cup A_2\mid=\mid A_1\mid+\mid A_2\mid-\mid A_1\cap A_2\mid }$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3256,7 +3253,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">69</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

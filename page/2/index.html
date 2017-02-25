@@ -276,6 +276,559 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/26/Math-DM-20-二项式系数/" itemprop="url">
+                  离散数学学习笔记 二项式系数 20
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-26T22:08:38+08:00" content="2016-12-26">
+              2016-12-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/26/Math-DM-20-二项式系数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/Math-DM-20-二项式系数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/26/Math-DM-20-二项式系数/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 二项式系数 20">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>设$x$和$y$是变量，$n$是非负整数，那么$$(x+y)^n=\sum_{j=0}^n\left(\begin{array}{c}n \\r\end{array}\right)x^{n-1}y^i$$</p>
+<p>设$n$为非负整数，那么$$\sum_{k=0}^n\left(\begin{array}{c}n \\k\end{array}\right)=2^n$$<br>证明:<br>$$<br>2^n=(1+1)^n =\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)1^k1^{n-k}= \sum_{k=0}^n\left(\begin{array}{c}n \\k\end{array}\right)<br>$$</p>
+<p>设$n$是正整数，那么 $$\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)(-1)^k=0$$</p>
+<p>设$n$是非负整数，那么 $$\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)2^k=3^n$$</p>
+<h2 id="恒等式"><a href="#恒等式" class="headerlink" title="恒等式"></a>恒等式</h2><h3 id="帕斯卡恒等式"><a href="#帕斯卡恒等式" class="headerlink" title="帕斯卡恒等式"></a>帕斯卡恒等式</h3><p>设$n$和$k$是满足$n\ge k$的正整数，那么有 $$\left(\begin{array}{c}n+1\\k\end{array}\right)=\left(\begin{array}{c}n\\k-1\end{array}\right)=\left(\begin{array}{c}n\\k\end{array}\right)$$<br>证:假定$T$是包含$n+1$个元素的集合。令$a$是$T$的一个元素且$S=T-\{a\}$。注意到$T$包含$k$个元素的子集有$\left(\begin{array}{c}n+1\\k\end{array}\right)$个。然而$T$的含$k$个元素的子集或者包含$a$和$S$中的$k-1$个元素，或者不包含$a$但包含$S$中的$k$个元素。由于$S$的$k-1$元子集有$\left(\begin{array}{c}n\\k-1\end{array}\right)$个，故$T$含$a$在内的$k$元子集有$\left(\begin{array}{c}n\\k-1\end{array}\right)$个。由由于$S$的$k$元子集有$\left(\begin{array}{c}n\\k\end{array}\right)$个。故$T$的不含$a$的$k$元子集有$\left(\begin{array}{c}n\\k\end{array}\right)$个。从而得到$$\left(\begin{array}{c}n+1\\k\end{array}\right)=\left(\begin{array}{c}n\\k-1\end{array}\right)=\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
+<h3 id="范德蒙德恒等式"><a href="#范德蒙德恒等式" class="headerlink" title="范德蒙德恒等式"></a>范德蒙德恒等式</h3><p>设$n、m、r$是非负整数，其中$r$不超过$m$或$n$，那么<br>$$\left(\begin{array}{c}n+m\\r\end{array}\right)=\sum_{k=0}^r\left(\begin{array}{c}m\\r-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>可以将公式等价于从$n$个红球，$m$个蓝球中选取$r$个球的问题。<br>首先，选取$0$个红球，$m$个蓝球，共有$\left(\begin{array}{c}n\\0\end{array}\right)\left(\begin{array}{c}m\\r\end{array}\right)$种方式。<br>选取$1$个红球，$m-1$个蓝球，共有$\left(\begin{array}{c}n\\1\end{array}\right)\left(\begin{array}{c}m\\r-1\end{array}\right)$种方式。<br>$\begin{array}{l}\dots \end{array}$<br>选取$r$个红球，$0$个蓝球共有$\left(\begin{array}{c}n\\r\end{array}\right)\left(\begin{array}{c}m\\0\end{array}\right)$种方式。<br>将以上$r$种方式相加得出 $$\left(\begin{array}{c}n+m\\r\end{array}\right)=\sum_{k=0}^r\left(\begin{array}{c}m\\r-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)$$</p>
+<h4 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h4><p>如果$n$是非负整数，那么$$\left(\begin{array}{c}2n\\n\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)^2$$<br>证: 在范德蒙德恒等式中令$m=r=n$得到$$\left(\begin{array}{c}2n\\n\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\n-k\end{array}\right)\left(\begin{array}{c}n\\k\end{array}\right)=\sum_{k=0}^n\left(\begin{array}{c}n\\k\end{array}\right)^2$$</p>
+<p>设$n$和$r$是非负整数，$r\le n$那么$$\left(\begin{array}{c}n+1\\r+1\end{array}\right)=\sum_{j=r}^n\left(\begin{array}{c}j\\r\end{array}\right)$$</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/26/Math-DM-19-排列和组合/" itemprop="url">
+                  离散数学学习笔记 排列和组合 19
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-26T21:01:43+08:00" content="2016-12-26">
+              2016-12-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/26/Math-DM-19-排列和组合/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/Math-DM-19-排列和组合/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/26/Math-DM-19-排列和组合/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 排列和组合 19">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h2><p>集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。<br>一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。<br>具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$</p>
+<blockquote>
+<p>只要是$n$非负，就有$P(n,0)=1$。      </p>
+</blockquote>
+<p>如果$n$和$r$都是整数，且$0\le r\le n$，则$$P(n,r)={n!\over (n-r)!}$$</p>
+<h3 id="圆排列"><a href="#圆排列" class="headerlink" title="圆排列"></a>圆排列</h3><p>将圆排列展开就是线排列。$r$个元素进行排列，就有$r$种展开方式，因此，圆排列共有 $$P(n,r)/r={n!\over r(n-r)!}$$</p>
+<h3 id="项链排列"><a href="#项链排列" class="headerlink" title="项链排列"></a>项链排列</h3><p>项链排列在圆排列的基础上，正面向上和反面向上两种方式放置各个数是同一个排列，因此项链排列等于$$P(n,r)/2r={n!\over 2r(n-r)!} \qquad 3\ge r\le n$$</p>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>集合元素的$r$组合是从这个集合无序选取的$r$个元素。简单地说，一个$r$组合是这个集合的一个$r$个元素的子集。<br>具有$n$个不同元素集合的$r$组合记为$C(n,r)$。也记作$\left(\begin{array}{c}n \\r\end{array}\right)$并且称为二项式系数。<br>设$n$是正整数，$r$是满足$0\le r\le n$的整数，$n$元素的集合的$r$组合数等于$$C(n,r)={n!\over r!(n-r)!}$$<br>证 可以如下得到这个集合的$r$排列。先构成集合的$C(n,r)$个$r$组合，然后以$P(n,r)$种方式排序每个$r$组合中的元素，这可以用$P(r,r)$种方式来做。因此$$P(n,r)=C(n,r)*P(r,r)$$这就推出$$C(n,r)={P(n,r)\over P(r,r)}={n!/(n-r)!\over r!/(r-r)!}={n!\over r!(n-r)!}$$</p>
+<p>设$n,r$是满足$n\le r$的非负整数，那么$C(n,r)=C(n,n-r)$。      </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/25/Math-DM-18-鸽巢原理/" itemprop="url">
+                  离散数学学习笔记 鸽巢原理 18
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-25T21:49:15+08:00" content="2016-12-25">
+              2016-12-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/25/Math-DM-18-鸽巢原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/Math-DM-18-鸽巢原理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/25/Math-DM-18-鸽巢原理/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 鸽巢原理 18">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="鸽巢原理"><a href="#鸽巢原理" class="headerlink" title="鸽巢原理"></a>鸽巢原理</h2><p>如果$k+1$个或更多的物体放入$k$个盒子，那么至少有一个盒子包含了$2$个或更多的物体。    </p>
+<blockquote>
+<p>证:假定$k$个盒子中没有一个盒子包含的物体多于$1$个，那么物体总数至多是$k$，这与至少有$k+1$个物体矛盾。    </p>
+</blockquote>
+<h2 id="广义鸽巢原理"><a href="#广义鸽巢原理" class="headerlink" title="广义鸽巢原理"></a>广义鸽巢原理</h2><p>如果$N$个物体放入$k$个盒子，那么至少有一个盒子包含了至少$\lceil N/k\rceil$个物体。   </p>
+<blockquote>
+<p>证:假定没有盒子包含比$\lceil N/k \rceil-1$多的物体，那么物体总数至多是 $$k(\lceil{N\over k}\rceil -1)&lt;k(({N\over k}+1)-1)=N$$ 这里用到不等式$\rceil N/k\rceil &lt;(N/k)+1$。这与存在有总数$N$个物体矛盾。  </p>
+</blockquote>
+<p>一类普遍的问题是，把一些物体分到$k$个盒子中要使某个盒子至少含有$r$个物体，求这些物体的最少个数。当有$N$个物体时，广义鸽巢原理告诉我们，只要$\lceil N/k\rceil\ge r$一定有$r$个物体在同一个盒子里。满足$N/k&gt;r-1$的最小正整数，即$N=k(r-1)+1$。</p>
+<h3 id="鸽巢原理的巧妙应用"><a href="#鸽巢原理的巧妙应用" class="headerlink" title="鸽巢原理的巧妙应用"></a>鸽巢原理的巧妙应用</h3><p>在30天的一个月里，某棒球队一天至少打一场比赛，但至多打45场。证明一定有连续若干天内这个队恰好打了14场。<br>令$a_j$是在这个月的第$j$天或第$j$天之前所打的场数，则$a_1,a_2,\dots,a_30$是不同正整数的一个递增序列，其中$1\le a_j\le 45$。从而$a_1+14,a_2+14,\dots,a_30+14$也是不同正整数的一个递增序列，其中$15\le a_j+15\le 59$。<br>$60$个正整数$a_1,a_2,\dots,a_30,a_1+14,a_2+14,\dots,a_30+14$全部小于等于$59$.因此，由鸽巢原理有两个正整数相等。因此整数$a_j j=1,2,\dots,30$都不相同，并且$a_j+14,j=1,2,dots,30$也不相同，一定存在下标$i,j$满足$a_i=a_j+14$。这意味着从第$j+1$天到第$i$天恰好打了14场比赛。     </p>
+<p>每个由$n^2+1$个不同实数构成的序列都包含一个长为$n+1$的严格递增子序列或严格递减子序列。     </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/25/Math-DM-17-计数基础/" itemprop="url">
+                  离散数学学习笔记 计数基础 17
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-25T20:07:33+08:00" content="2016-12-25">
+              2016-12-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/25/Math-DM-17-计数基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/Math-DM-17-计数基础/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/25/Math-DM-17-计数基础/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 计数基础 17">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>组合数学是研究个体安排的学科，枚举具有确定性质的个体的个数，是组合数学的一个重要的部分。组合数学的另一个问题涉及生成某个特定类型的所有排列。    </p>
+<h2 id="基本的计数原则"><a href="#基本的计数原则" class="headerlink" title="基本的计数原则"></a>基本的计数原则</h2><h3 id="乘积法则"><a href="#乘积法则" class="headerlink" title="乘积法则"></a>乘积法则</h3><p>当一个过程由独立的任务组成时使用乘法法则。<br>假定一个过程可以被分解成两个任务。如果完成第一个任务有$n_1$中方式，在第一个任务完成之后有$n_2$种方式完成第二个任务，那么完成这个过程有$n_1n_2$种方式。   </p>
+<h4 id="推广的乘积法则"><a href="#推广的乘积法则" class="headerlink" title="推广的乘积法则"></a>推广的乘积法则</h4><p>假定一个过程由执行任务$T_1,T_2,\dots ,T_m$来完成。如果在完成任务之后用$n_i$种方式来完成$T_i$，那么完成这个过程有$n_1\cdot n_2\cdot\dots\cdot n_m$种方式。  </p>
+<h4 id="乘积法则集合语言表达"><a href="#乘积法则集合语言表达" class="headerlink" title="乘积法则集合语言表达"></a>乘积法则集合语言表达</h4><p>如果$\mathbf {A_1, A_2,\dots,A_m}$是有穷集，那么存在这些集合的笛卡尔积中的元素数是每个集合的元素数之积。为把这种表述与乘积法则联系起来，注意到在笛卡尔积$\mathbf {A_1\times A_2\times\dots\times A_m}$中选一个元素的任务是通过在$\mathbf {A_1}$中选一个元素，$\mathbf {A_2}$中选一个元素$\dots $ 。由乘积法则得到$$\mid\mathbf {A_1\times A_2\times\dots\times A_m \mid= \mid A_1\mid\cdot\mid A_2\mid\cdot\dots\cdot\mid A_m\mid}$$</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>例如:用一个字母和一个不超过$100$的正整数给礼堂的座位编号。那么不同编号的座位最多有多少?<br>解: 给一个座位编号的过程由两个任务组成，即从$26$个字母中先选择一个字母分配给这个座位，然后再从$100$个正整数中选择一个整数分配给它。乘积法则表明一个座位可以有$26\cdot 100=2600$种不同的编号方式。     </p>
+<h5 id="计数函数"><a href="#计数函数" class="headerlink" title="计数函数"></a>计数函数</h5><p>从一个$n$元集到一个$m$元集存在多少个函数?<br>解: 一个函数对于定义域中$m$个元素中的每个元素都要选择陪域中$n$个元素中的一个元素来对应。因此，由乘积法则存在$n\cdot n\cdot\dots\cdot n=n^m$个从$m$元集到$n元集再的函数。</p>
+<h5 id="计数一对一函数"><a href="#计数一对一函数" class="headerlink" title="计数一对一函数"></a>计数一对一函数</h5><p>从一个$m$元集到一个$n$元集存在多少个一对一函数?<br>解: 首先注意到当$m&gt;n$时没有从$m$元集到$n$元集的一对一函数。现在令$m\le n$。假设定义域中的元素是$a_1,a_2,\dots ,a_m$。有$n$种方式选择函数在$a_1$的值。因为函数是一对一的，可以有$n-1$种方式选择函数在$a_2$的值。由乘积法则，从一个$m$元集到一个$n$元集存在着$n(n-1)(n-2)\dots(n-m+1)$个一对一函数。   </p>
+<h5 id="计数有穷集的子集"><a href="#计数有穷集的子集" class="headerlink" title="计数有穷集的子集"></a>计数有穷集的子集</h5><p>用乘积法则证明一个有穷集$\mathbf S$的不同子集数是$2^{\mid s\mid}$。<br>设$\mathbf S$是有穷集。按任意的顺序将$\mathbf S$的元素列成一个表，考虑到$\mathbf S$的子集和长为$\mid \mathbf S\mid$的二进制串之间存在一对一的对应，即如果表的第$i$个元素在这个子集里，则该子集对应的二进制串的第$i$位为$1$，否则为$0$。又乘积法则，存在着$2^{\mid S\mid}$个长为$\mid S\mid$的二进制串。因此$\mid P(S)\mid=2^{\mid S\mid}$。    </p>
+<h3 id="求和法则"><a href="#求和法则" class="headerlink" title="求和法则"></a>求和法则</h3><p>如果完成第一项任务有$n_1$种方式，完成第二项任务有$n_2$种方式，并且这些任务不能同时完成，那么完成第一或第二项任务有$n_1+n_2$种方式。    </p>
+<h4 id="求和法则的集合表达"><a href="#求和法则的集合表达" class="headerlink" title="求和法则的集合表达"></a>求和法则的集合表达</h4><p>如果$\mathbf {A_1, A_2,\dots,A_m}$是不交的集合，那么在其并集中的元素数是每个集合的元素数之和。为把这种表述与求和法则联系起来，令$\mathbf T_i$是从$\mathbf A_i(i=1,2,\dots,m)$中选取一个元素的任务。有$\mid A_i\mid$种方式做$\mathbf T_i$。由于任何两个任务不可能同时做，根据求和法则，从其中某个集合选择一个元素的方式数，即在并集中的元素数是$$\mid \mathbf {A_1\cup A_2\cup\dots\cup A_m\mid=\mid A_1\mid+\mid A_2\mid+\dots+\mid A_m\mid}$$</p>
+<h3 id="容斥原理"><a href="#容斥原理" class="headerlink" title="容斥原理"></a>容斥原理</h3><p>当同时做两个任务时，我们不能使用求和法则来计数完成其中一个任务的方式。为了正确的计数完成其中一个任务的方式，我们先把完成每个任务的方式数加起来，然后再减去同时完成两个任务的方式数。这个技术叫做容斥原理。     </p>
+<h4 id="集合表述"><a href="#集合表述" class="headerlink" title="集合表述"></a>集合表述</h4><p>令$\mathbf {A_1}$和$\mathbf {A_2}$是集合，$T_1$是从$A_1$选择一个元素的任务，$T_2$是从$A_2$选择一个元素的任务。完成$T_1$有$\mid A_1\mid$种方式，完成$T_2$有$\mid A_2\mid$种方式。完成$T_1$或$T_2$的方式数是完成$T_1$的方式数与完成$T_2$的方式数之和减去同时完成$T_1、T_2$两个任务的方式数。因为存在$\mid\mathbf {A_1\cup A_2\mid}$种方式完成$T_1$或$T_2$，$\mid A_1\cap A_2\mid$种方式完成$T_1$和$T_2$，我们有$$\mid\mathbf {A_1\cup A_2\mid=\mid A_1\mid+\mid A_2\mid-\mid A_1\cap A_2\mid }$$</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/24/Math-DM-16-数论应用/" itemprop="url">
                   离散数学学习笔记 数论应用 16
                 </a>
@@ -2684,598 +3237,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/15/Function-01-康托尔对角化论证/" itemprop="url">
-                  康托尔对角化论证
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-15T20:47:43+08:00" content="2016-12-15">
-              2016-12-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/15/Function-01-康托尔对角化论证/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Function-01-康托尔对角化论证/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/15/Function-01-康托尔对角化论证/" class="leancloud_visitors" data-flag-title="康托尔对角化论证">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>对角论证法是乔治 · 康托尔于 1891 年提出的用于说明实数集合是不可数集的证明。<br>要证明实数集合是不可数的，就假定实数集合是可数的并得出矛盾。于是，所有落在$0$和$1$之间的实数所成的子集合也是可数的(因为可数集合的所有子集合都是可数的)。在此假设下，在$0$和$1$之间的实数按照某种顺序列出，比如说$r_1,r_2,r_3,\dots$设这些实数的十进制表示为<br>$$<br>    r_1 =0.d_{11}d_{12}d_{13}d_{14}\dots \\<br>    r_2 =0.d_{21}d_{22}d_{23}d_{24}\dots \\<br>    r_3 =0.d_{31}d_{32}d_{33}d_{34}\dots \\<br>    r_4 =0.d_{41}d_{42}d_{43}d_{44}\dots \\<br>    .\\<br>    .\\<br>    .\\<br>$$<br>其中$d_{ij}\in \{0,1,2,3,4,5,6,7,8,9\}$。(例如，如果$r_1=0.23794101\dots$，就有$d_{11}=2,d_{12}=3,d_{14}=7\dots$)于是，构造新的实数具有十进制展开式$r=0.d_1d_2d_3d_4\dots$，其中用下列规则确定十进制数字：<br>$$<br>f(n) =<br>\begin{cases}<br>4, &amp; \text{if $d_i\neq$ 4} \[2ex]<br>5, &amp; \text{if $d_i$= 4}<br>\end{cases}<br>$$<br>例如，假定$r_1=0.23794102\dots, r_2=0.44590138\dots,r_3=0.09118764\dots$等等，于是$r=0.d_1d_2d_3d_4\dots =0.4544\dots$,其中因为$d_{11}\neq 4,d_1=4,d_{22}=4,d_2=5 \dots$)<br>每个实数都有唯一的十进制展开式(展开式结尾全部由数字$9$组成的可能性除外)。于是，实数$r$不等于$r_1,r_2,\dots $中的任何一个，因为对每个$i$来说，$r$的十进制展开式与$r_i$的十进制展开式在小数点右边第$i$位是不同的。<br>由于存在着不在列表中而在$0$和$1$之间的实数$r$，所以可以列出在$0$和$1$之间所有实数的假设必定为假。因此，不能列出在$0$和$1$之间的所有实数，在$0$和$1$之间的实数集合是不可数的。任何包含不可数子集合的集合都是不可数的。因此实数集合是不可数的。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/15/Math-DM-09-序列求和/" itemprop="url">
-                  离散数学学习笔记 序列求和 09
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-15T19:47:31+08:00" content="2016-12-15">
-              2016-12-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/15/Math-DM-09-序列求和/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Math-DM-09-序列求和/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/15/Math-DM-09-序列求和/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 序列求和 09">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h2><p>序列是用来表示有序表的离散结构。<br>序列是从整数集合的子集(通常是$\{0,1,2,\dots \}$或$\{1,2,3,\dots \}$)到集合$S$的函数。用记号$a_n$表示整数$n$的像，称$a_n$为序列的一个项。<br>例如： 考虑序列$\{a_n\}$，其中$$a_n=1/n$$。 从$a_1$开始的这个序列项的表，即$$a_1,a_2,a_3,a_4,\dots $$开头是$$1,{1\over 2},{1\over 3},{1\over 4},\dots $$  </p>
-<h3 id="几何序列"><a href="#几何序列" class="headerlink" title="几何序列"></a>几何序列</h3><p>几何序列是如下形式的序列，$$a, ar, ar^2, \cdots ,ar^n, \cdots$$ 其中初项$a$和公比$r$都是实数。      </p>
-<blockquote>
-<p>几何序列是指数函数$f(x)=ar^x$的离散对应物</p>
-</blockquote>
-<h3 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h3><p>等差数列是如下形式的序列，$$a, a+d, a+2d, \cdots , a+nd, \cdots$$ 其中初项$a$和公差$r$都是实数。     </p>
-<blockquote>
-<p>等差序列是线形函数$f(x)=dx+1$的离散对应物。  </p>
-</blockquote>
-<h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><p>在计算机科学中经常使用形如$a_1,a_2,\dots ,a_n$的序列，这些有穷序列也称为串，这些串也记作$a_1a_2\dots a_n$。串$S$的长度是这个串中的项数。空串是没有任何项的串，记作$\lambda$。空串长度为$0$。    </p>
-<blockquote>
-<p>例如，串$abcd$的长度为4.</p>
-</blockquote>
-<h3 id="特殊的整数序列"><a href="#特殊的整数序列" class="headerlink" title="特殊的整数序列"></a>特殊的整数序列</h3><p>在找出构造序列项的公式或一般规则时，需要注意的几个问题：  </p>
-<ul>
-<li>是否有相同值连续出现 </li>
-<li>是否给前项加上常量或与序列中位置有关的量就得出后项  </li>
-<li>是否给前项乘以特定量就得出后项  </li>
-<li>是否在各项之间存在循环</li>
-</ul>
-<h2 id="求和公式"><a href="#求和公式" class="headerlink" title="求和公式"></a>求和公式</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">和</th>
-<th style="text-align:left">闭形式</th>
-<th style="text-align:left">和</th>
-<th style="text-align:left">闭形式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$$\sum_{k=0}^n ar^k(r\neq 0)$$</td>
-<td style="text-align:left">$${ar^{n+1}-a\over r-1},r\neq 1$$</td>
-<td style="text-align:left">$$\sum_{k=1}^n k^3$$</td>
-<td style="text-align:left">$$n^2(n+1)^2\over 4$$</td>
-</tr>
-<tr>
-<td style="text-align:left">$$\sum_{k=1}^n k$$</td>
-<td style="text-align:left">$$n(n+1)\over 2$$</td>
-<td style="text-align:left">$$\sum_{k=0}^\infty x^k, \mid x\mid\lt 1$$</td>
-<td style="text-align:left">$$1\over 1-x$$</td>
-</tr>
-<tr>
-<td style="text-align:left">$$\sum_{k=1}^n k^2$$</td>
-<td style="text-align:left">$$n(n+1)(2n+1)\over 6$$</td>
-<td style="text-align:left">$$\sum_{k=1}^\infty kx^{k-1}, \mid x\mid\lt 1$$</td>
-<td style="text-align:left">$$1\over (1-x)^2$$</td>
-</tr>
-</tbody>
-</table>
-<h2 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h2><ul>
-<li>集合$A$与集合$B$有相同的基数，当且仅当存在从$A$到$B$的一一对应</li>
-<li>有限集或与自然数集基数相同的无限集称为可数的，反之称为不可数的。</li>
-<li>如果无穷集合$S$是可数的，我们用符号$\aleph_0$来表示集合$S$的基数。记作$\mid S\mid=\aleph_0$，且说$S$有基数希伯来零。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/14/Function-02-取整函数/" itemprop="url">
-                  取整函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-14T20:41:20+08:00" content="2016-12-14">
-              2016-12-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/14/Function-02-取整函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/14/Function-02-取整函数/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/14/Function-02-取整函数/" class="leancloud_visitors" data-flag-title="取整函数">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="上取整函数"><a href="#上取整函数" class="headerlink" title="上取整函数"></a>上取整函数</h2><p>上取整函数是指大于或等于实数$x$的最小整数，用$⎡x⎤$表示。</p>
-<h2 id="下取整函数"><a href="#下取整函数" class="headerlink" title="下取整函数"></a>下取整函数</h2><p>下取整函数是指小于或等于实数$x$的最大整数，用$⎣x⎦$表示。      </p>
-<blockquote>
-<p>下取整函数也被称为最大整数函数，这时往往用$［x］$表示</p>
-</blockquote>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ul>
-<li>$⎣x⎦=n $当且仅当$n\le x\lt n+1$</li>
-<li>$⎣x⎦=n $当且仅当$x-1\lt n\le x$</li>
-<li>$⎡x⎤=n $当且仅当$n-1\lt x\le n$</li>
-<li>$⎡x⎤=n $当且仅当$x\le n\lt x+1$</li>
-<li>$x-1\lt ⎣x⎦\le x\le ⎡x⎤\lt x+1$</li>
-<li>$⎣-x⎦=-⎡x⎤$</li>
-<li>$⎡x⎤=-⎣-x⎦$</li>
-<li>$⎣x+n⎦=⎣x⎦+n$</li>
-<li>$⎡x+n⎤=⎡x⎤+n$</li>
-</ul>
-<blockquote>
-<p>在考虑下取整函数相关的语句时，一个有用的方法是令$x=n+\epsilon$，其中$n=⎣x⎦$是一个整数，$\epsilon$是$x$的分数部分，满足不等式$0\le\epsilon\lt 1$。 类似的考虑上取整函数时，通常写作$x=n-\epsilon$，其中$n=⎡x⎤$且$0\le\epsilon\lt 1$。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/13/Java-Log4j-properties配置解释/" itemprop="url">
-                  Log4j.properties配置解释
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-13T20:32:41+08:00" content="2016-12-13">
-              2016-12-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/13/Java-Log4j-properties配置解释/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/13/Java-Log4j-properties配置解释/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/13/Java-Log4j-properties配置解释/" class="leancloud_visitors" data-flag-title="Log4j.properties配置解释">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">### 设置###</span></div><div class="line">log4j.rootLogger = debug,stdout,D,E</div><div class="line"></div><div class="line"><span class="comment">### 输出信息到控制抬 ###</span></div><div class="line">log4j.appender.stdout = org.apache.log4j.ConsoleAppender</div><div class="line">log4j.appender.stdout.Target = System.out</div><div class="line">log4j.appender.stdout.layout = org.apache.log4j.PatternLayout</div><div class="line">log4j.appender.stdout.layout.ConversionPattern = [%<span class="number">-5</span>p] %d&#123;yyyy-MM-dd HH:mm:ss,SSS&#125; method:%l%n%m%n</div><div class="line"></div><div class="line"><span class="comment">### 输出DEBUG 级别以上的日志到=E://logs/error.log ###</span></div><div class="line">log4j.appender.D = org.apache.log4j.DailyRollingFileAppender</div><div class="line">log4j.appender.D.File = E://logs/log.log</div><div class="line">log4j.appender.D.Append = true</div><div class="line">log4j.appender.D.Threshold = DEBUG </div><div class="line">log4j.appender.D.layout = org.apache.log4j.PatternLayout</div><div class="line">log4j.appender.D.layout.ConversionPattern = %-d&#123;yyyy-MM-dd HH:mm:ss&#125;  [ %t:%r ] - [ %p ]  %m%n</div><div class="line"></div><div class="line"><span class="comment">### 输出ERROR 级别以上的日志到=E://logs/error.log ###</span></div><div class="line">log4j.appender.E = org.apache.log4j.DailyRollingFileAppender</div><div class="line">log4j.appender.E.File =E://logs/error.log </div><div class="line">log4j.appender.E.Append = true</div><div class="line">log4j.appender.E.Threshold = ERROR </div><div class="line">log4j.appender.E.layout = org.apache.log4j.PatternLayout</div><div class="line">log4j.appender.E.layout.ConversionPattern = %-d&#123;yyyy-MM-dd HH:mm:ss&#125;  [ %t:%r ] - [ %p ]  %m%n</div></pre></td></tr></table></figure>
-<h3 id="Appender-解释"><a href="#Appender-解释" class="headerlink" title="Appender 解释"></a>Appender 解释</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">org.apache.log4j.ConsoleAppender（控制台），</div><div class="line">org.apache.log4j.FileAppender（文件），</div><div class="line">org.apache.log4j.DailyRollingFileAppender（每天产生一个日志文件），</div><div class="line">org.apache.log4j.RollingFileAppender（文件大小到达指定尺寸的时候产生一个新的文件），</div><div class="line">org.apache.log4j.WriterAppender（将日志信息以流格式发送到任意指定的地方）</div></pre></td></tr></table></figure>
-<h3 id="Layout解释"><a href="#Layout解释" class="headerlink" title="Layout解释"></a>Layout解释</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">org.apache.log4j.HTMLLayout（以 HTML 表格形式布局），</div><div class="line">org.apache.log4j.PatternLayout（可以灵活地指定布局模式），</div><div class="line">org.apache.log4j.SimpleLayout（包含日志信息的级别和信息字符串），</div><div class="line">org.apache.log4j.TTCCLayout（包含日志产生的时间、线程、类别等等信息）</div></pre></td></tr></table></figure>
-<h3 id="打印参数解释"><a href="#打印参数解释" class="headerlink" title="打印参数解释"></a>打印参数解释</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">%m   输出代码中指定的消息</div><div class="line">%p   输出优先级，即 DEBUG，INFO，WARN，ERROR，FATAL </div><div class="line">%r   输出自应用启动到输出该 log 信息耗费的毫秒数 </div><div class="line">%c   输出所属的类目，通常就是所在类的全名 </div><div class="line">%t   输出产生该日志事件的线程名 </div><div class="line">%n   输出一个回车换行符，Windows 平台为 “\r\n”，Unix 平台为 “\n” </div><div class="line">%d   输出日志时间点的日期或时间，默认格式为 ISO8601，也可以在其后指定格式，比如：%d&#123;yyy MMM dd HH:mm:ss , SSS&#125;，输出类似：<span class="number">2002</span> 年 <span class="number">10</span> 月 <span class="number">18</span> 日  <span class="number">22</span> ： <span class="number">10</span> ： <span class="number">28</span> ， <span class="number">921</span>  </div><div class="line">%l   输出日志事件的发生位置，包括类目名、发生的线程，以及在代码中的行数。举例：Testlog4.main(TestLog4.java: <span class="number">10</span> )</div></pre></td></tr></table></figure>
-<h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><p>log4j可以以<code>${catalina.home}</code>的形式，使用操作系统的环境变量，或者VM的环境变量</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3321,7 +3282,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">69</span>
+              <span class="site-state-item-count">73</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

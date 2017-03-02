@@ -96,15 +96,15 @@
 与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   
 最短通路算法最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Math-DM-35-最短通路问题">
+<meta property="og:title" content="离散数学学习笔记 最短通路问题 35">
 <meta property="og:url" content="http://blog.freeabyss.com/2017/02/27/Math-DM-35-最短通路问题/index.html">
 <meta property="og:site_name" content="Abyss's blog">
 <meta property="og:description" content="最短通路带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   
 与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   
 最短通路算法最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最">
-<meta property="og:updated_time" content="2017-02-28T13:45:55.000Z">
+<meta property="og:updated_time" content="2017-03-01T13:22:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Math-DM-35-最短通路问题">
+<meta name="twitter:title" content="离散数学学习笔记 最短通路问题 35">
 <meta name="twitter:description" content="最短通路带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   
 与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   
 最短通路算法最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最">
@@ -130,7 +130,7 @@
 
   <link rel="canonical" href="http://blog.freeabyss.com/2017/02/27/Math-DM-35-最短通路问题/"/>
 
-  <title> Math-DM-35-最短通路问题 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 离散数学学习笔记 最短通路问题 35 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +280,7 @@
             
             
               
-                Math-DM-35-最短通路问题
+                离散数学学习笔记 最短通路问题 35
               
             
           </h1>
@@ -333,7 +333,7 @@
 
           
           
-             <span id="/2017/02/27/Math-DM-35-最短通路问题/" class="leancloud_visitors" data-flag-title="Math-DM-35-最短通路问题">
+             <span id="/2017/02/27/Math-DM-35-最短通路问题/" class="leancloud_visitors" data-flag-title="离散数学学习笔记 最短通路问题 35">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -365,7 +365,9 @@
 <li>不在$S$里的顶点的标记是(这个顶点自身除外)只包含$S$里顶点的、从$a$到这个顶点的最短通路的长度</li>
 </ol>
 <p>当$k=0$时，在没有执行任何迭代之前，$S=\{a\}$，所以从$a$到除$a$外的顶点的最短通路的长度是$\infty$。设$v$是在第$k+1$次迭代里添加到$S$里的顶点，使得$v$是在第$k$次迭代结束时带最小标记的不在$S$的顶点。<br>根据归纳假设，可以看出在第$k+1$次迭代之前，$S$里的顶点都用从$a$出发的最短通路的长度来标记。另外，必须用从$a$到$v$的最短通路的长度来标记$v$。假如情况不是这样，那么在第$k$次迭代结束时，就可能存在包含不在$S$里的顶点的、长度小于$L_k(v)$的通路（因为$L_k(v)$是在第$k$次迭代之后，只包含$S$里顶点的、从$a$到$v$的最短通路的长度）。设$u$是在这样的通路里不属于$S$的第一个顶点。则存在一条只包含$S$里顶点的、从$a$到$u$的长度小于$L_k(v)$的通路。这与对$v$的选择相矛盾。因此，在第$k+1$次迭代结束时(1)成立。<br>设$u$时在第$k+1$次迭代之后不属于$S$的一个顶点。只包含$S$里顶点的从$a$到$u$的最短通路要么包含$v$、要么不包含$v$。若它不包含$v$，则根据归纳假设，它的长度是$L_k(u)$。若它确实包含$v$，则它必然是这样组成的：一条只包含$S$里除$v$之外的顶点的、从$a$到$v$的、具有最短可能长度的通路，后面接着从$v$到$u$的边。在这种情形里它的长度是$L_k(v)+w(v,u)$。这样就证明了(2)为真，因为$L_{k+1}(u)=min\{L_k(u),L_k(v)+w(v,u)\}$。</p>
-<h2 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h2>
+<h4 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h4><p>迪克斯特拉算法使用$O(n^2)$次运算来求出连通简单无向带权图里两个顶点之间最短通路的长度。    </p>
+<h2 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h2><p>旅行商问题是求最短回路，即求完全图里总权数最小的哈密顿回路。<br>旅行商问题同哈密顿回路一样，没有有效的算法，目前解决问题的实际方法是使用近似算法。</p>
+
       
     </div>
 
@@ -410,6 +412,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/03/01/Math-DM-36-可平面图/" rel="prev" title="离散数学学习笔记 可平面图 36">
+                离散数学学习笔记 可平面图 36 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -435,7 +441,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/27/Math-DM-35-最短通路问题/"
-           data-title="Math-DM-35-最短通路问题" data-url="http://blog.freeabyss.com/2017/02/27/Math-DM-35-最短通路问题/">
+           data-title="离散数学学习笔记 最短通路问题 35" data-url="http://blog.freeabyss.com/2017/02/27/Math-DM-35-最短通路问题/">
       </div>
     
   </div>
@@ -480,7 +486,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">77</span>
+              <span class="site-state-item-count">79</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -553,7 +559,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最短通路"><span class="nav-number">1.</span> <span class="nav-text">最短通路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最短通路算法"><span class="nav-number">1.1.</span> <span class="nav-text">最短通路算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#迪克斯特拉算法细节"><span class="nav-number">1.1.1.</span> <span class="nav-text">迪克斯特拉算法细节</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证迪克斯拉特算法的正确性"><span class="nav-number">1.1.2.</span> <span class="nav-text">验证迪克斯拉特算法的正确性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旅行商问题"><span class="nav-number">2.</span> <span class="nav-text">旅行商问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最短通路"><span class="nav-number">1.</span> <span class="nav-text">最短通路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最短通路算法"><span class="nav-number">1.1.</span> <span class="nav-text">最短通路算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#迪克斯特拉算法细节"><span class="nav-number">1.1.1.</span> <span class="nav-text">迪克斯特拉算法细节</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证迪克斯拉特算法的正确性"><span class="nav-number">1.1.2.</span> <span class="nav-text">验证迪克斯拉特算法的正确性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法复杂度"><span class="nav-number">1.1.3.</span> <span class="nav-text">算法复杂度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旅行商问题"><span class="nav-number">2.</span> <span class="nav-text">旅行商问题</span></a></li></ol></div>
             
           </div>
         </section>

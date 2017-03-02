@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2017-02-28T13:45:55.000Z</updated>
+  <updated>2017-03-01T13:55:56.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,11 +16,70 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Math-DM-35-最短通路问题</title>
+    <title>离散数学学习笔记 图着色 37</title>
+    <link href="http://blog.freeabyss.com/2017/03/01/Math-DM-37-%E5%9B%BE%E7%9D%80%E8%89%B2/"/>
+    <id>http://blog.freeabyss.com/2017/03/01/Math-DM-37-图着色/</id>
+    <published>2017-03-01T13:55:38.000Z</published>
+    <updated>2017-03-01T13:55:56.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 可平面图 36</title>
+    <link href="http://blog.freeabyss.com/2017/03/01/Math-DM-36-%E5%8F%AF%E5%B9%B3%E9%9D%A2%E5%9B%BE/"/>
+    <id>http://blog.freeabyss.com/2017/03/01/Math-DM-36-可平面图/</id>
+    <published>2017-03-01T13:22:27.000Z</published>
+    <updated>2017-03-01T13:55:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="可平面图"><a href="#可平面图" class="headerlink" title="可平面图"></a>可平面图</h2><p>若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是可平面的。这种画法称为这个图的平面表示。即使通常带交叉地画出了一个图，这个图也仍然可能是可平面的，这是因为有可能以不同的方式来不带交叉地画出这个图。     </p>
+<h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><p>设$G$是带$e$条边和$v$个顶点的连通可平面简单图。设$r$是$G$的可平面表示里的面数，则$r=e-v+2$。      </p>
+<p>若$G$是带$e$条边和$z$个顶点的连通可平面简单图，其中$v\ge 3$，则$e\le 3v-6$。    </p>
+<p>若$G$是连通简单可平面简单图，则$G$有度数不超过5的顶点。    </p>
+<p>若连通可平面简单图有$e$条边和$v$个顶点，$v\ge 3$并且没有长度为3的回路，则$e\le 2v-4$。  </p>
+<h3 id="库拉图斯基定理"><a href="#库拉图斯基定理" class="headerlink" title="库拉图斯基定理"></a>库拉图斯基定理</h3><p>若一个图是可平面的，则通过删除一条边$\{u,v\}$并且添加一个新顶点$w$和两条边$\{u,w\}$与$\{w,v\}$，所获得的任何图也是可平面的。这样的操作称为<strong>初等细分</strong>。若可以从相同的图通过一系列初等细分来获得图$G_1=(\mathbf V_1,\mathbf E_1)$和图$G_2=(\mathbf V_2,\mathbf E_2)$，则它们称为是<strong>同胚</strong>的。      </p>
+<p><strong>库拉图斯基定理</strong>&nsp;&nsp;一个图是非可平面的当且仅当它包含一个同胚于$K_{3,3}$或$K_5$的子图。     </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;可平面图&quot;&gt;&lt;a href=&quot;#可平面图&quot; class=&quot;headerlink&quot; title=&quot;可平面图&quot;&gt;&lt;/a&gt;可平面图&lt;/h2&gt;&lt;p&gt;若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是可平面
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>离散数学学习笔记 最短通路问题 35</title>
     <link href="http://blog.freeabyss.com/2017/02/27/Math-DM-35-%E6%9C%80%E7%9F%AD%E9%80%9A%E8%B7%AF%E9%97%AE%E9%A2%98/"/>
     <id>http://blog.freeabyss.com/2017/02/27/Math-DM-35-最短通路问题/</id>
     <published>2017-02-27T13:32:16.000Z</published>
-    <updated>2017-02-28T13:45:55.000Z</updated>
+    <updated>2017-03-01T13:22:42.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="最短通路"><a href="#最短通路" class="headerlink" title="最短通路"></a>最短通路</h2><p>带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   </p>
 <p>与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   </p>
@@ -32,7 +91,9 @@
 <li>不在$S$里的顶点的标记是(这个顶点自身除外)只包含$S$里顶点的、从$a$到这个顶点的最短通路的长度</li>
 </ol>
 <p>当$k=0$时，在没有执行任何迭代之前，$S=\{a\}$，所以从$a$到除$a$外的顶点的最短通路的长度是$\infty$。设$v$是在第$k+1$次迭代里添加到$S$里的顶点，使得$v$是在第$k$次迭代结束时带最小标记的不在$S$的顶点。<br>根据归纳假设，可以看出在第$k+1$次迭代之前，$S$里的顶点都用从$a$出发的最短通路的长度来标记。另外，必须用从$a$到$v$的最短通路的长度来标记$v$。假如情况不是这样，那么在第$k$次迭代结束时，就可能存在包含不在$S$里的顶点的、长度小于$L_k(v)$的通路（因为$L_k(v)$是在第$k$次迭代之后，只包含$S$里顶点的、从$a$到$v$的最短通路的长度）。设$u$是在这样的通路里不属于$S$的第一个顶点。则存在一条只包含$S$里顶点的、从$a$到$u$的长度小于$L_k(v)$的通路。这与对$v$的选择相矛盾。因此，在第$k+1$次迭代结束时(1)成立。<br>设$u$时在第$k+1$次迭代之后不属于$S$的一个顶点。只包含$S$里顶点的从$a$到$u$的最短通路要么包含$v$、要么不包含$v$。若它不包含$v$，则根据归纳假设，它的长度是$L_k(u)$。若它确实包含$v$，则它必然是这样组成的：一条只包含$S$里除$v$之外的顶点的、从$a$到$v$的、具有最短可能长度的通路，后面接着从$v$到$u$的边。在这种情形里它的长度是$L_k(v)+w(v,u)$。这样就证明了(2)为真，因为$L_{k+1}(u)=min\{L_k(u),L_k(v)+w(v,u)\}$。</p>
-<h2 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h2>]]></content>
+<h4 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h4><p>迪克斯特拉算法使用$O(n^2)$次运算来求出连通简单无向带权图里两个顶点之间最短通路的长度。    </p>
+<h2 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h2><p>旅行商问题是求最短回路，即求完全图里总权数最小的哈密顿回路。<br>旅行商问题同哈密顿回路一样，没有有效的算法，目前解决问题的实际方法是使用近似算法。</p>
+]]></content>
     
     <summary type="html">
     
@@ -881,57 +942,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;递推关系&quot;&gt;&lt;a href=&quot;#递推关系&quot; class=&quot;headerlink&quot; title=&quot;递推关系&quot;&gt;&lt;/a&gt;递推关系&lt;/h2&gt;&lt;p&gt;对于递归定义，这个从某些前项求后项的规则就叫做递推关系。&lt;br&gt;关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm 概述</title>
-    <link href="http://blog.freeabyss.com/2017/01/08/JavaScript-NPM-%E6%A6%82%E8%BF%B0/"/>
-    <id>http://blog.freeabyss.com/2017/01/08/JavaScript-NPM-概述/</id>
-    <published>2017-01-08T04:24:29.000Z</published>
-    <updated>2017-01-17T06:29:40.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
-    
-      <category term="npm" scheme="http://blog.freeabyss.com/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 递归 25</title>
-    <link href="http://blog.freeabyss.com/2017/01/07/Math-DM-25-%E9%80%92%E5%BD%92/"/>
-    <id>http://blog.freeabyss.com/2017/01/07/Math-DM-25-递归/</id>
-    <published>2017-01-07T08:20:54.000Z</published>
-    <updated>2017-01-09T14:06:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>为了定义以非负整数集合作为其定义域的函数，使用两个步骤:<br>基础步骤:规定这个函数在$0$处的值。<br>递归步骤:给出从较小的整数处的值来求出当前的值的规则。<br>这样的定义称为递归定义或归纳定义。     </p>
-<h3 id="斐波那契数"><a href="#斐波那契数" class="headerlink" title="斐波那契数"></a>斐波那契数</h3><p>斐波那契数$f_0,f_1,f_2,\dots $是用方程组$f_0=0,f_1=1$和$f_n=f_{n-1}+f_n$来定义的。<br>其中$n=2,3,4,\dots $ </p>
-<h4 id="使用斐波那契数的性质证明示例"><a href="#使用斐波那契数的性质证明示例" class="headerlink" title="使用斐波那契数的性质证明示例"></a>使用斐波那契数的性质证明示例</h4><p>证明:每当$n\ge 3$时，有$f_n&gt;a_{n-1}$，其中$a=(1+\sqrt 5)/2$<br>基础步骤:证明$P(3)$和$P(4)$都为真。 $$a<2=f_3,\; a^2="(3+\sqrt" 5)="" 2<3="f_4$$" 归纳步骤:假定$p(j)$为真，即对所有满足$3\le="" j\le="" k$的整数$j$来说有$f_j="">a^{j-2}$。其中$k\ge 4$。必须证明$P(k+1)$为真，即$f_{k+1}&gt;a^{k-1}$。因为$a$是$x^2-x-1=0$的解，所有得出$a^2=a+1$。因此$$a^{k-1}=a^2\cdot a^{k-1}=(a+1)a^{k-3}=a\cdot a^{k-3}+1\cdot a^{k-3}=a^{k-2}+a^{k-3}$$<br>根据归纳假设，若$k\ge 4$则得出 $$f_{k-1}&gt;a^{k-3},\;\;f_k&gt;a^{k-2}$$<br>因此有 $$f_{k+1}=f_k+f_{k-1}&gt;a^{k-2}+a^{k-3}$$因此$P(k+1)$为真，证毕。 </2=f_3,\;></p>
-<p>###拉梅定理<br>设$a$和$b$是满足$a\ge b$的正整数，则欧几里得算法为了求出$gcd(a,b)$而使用的除法的次数小于或等于$b$的十进制位数的$5$倍。<br>证: 当用欧几里得算法求满足$a\ge b$的$gcd(a,b)$时，得出下面的等式序列(其中$a=r_0$而$b=r_1$)<br>$$\begin{array}{l}<br>r_0=r_1q_1+r_2 \qquad 0\le r_2<r_1 1="f_2" \\="" r_1="r_2q_2+r_3" \qquad="" 0\le="" r_3<r_2="" \dots="" r_{n-2}="r_{n-1}q_{n-1}+r_n" r_n<r_{n-1}="" r_{n-1}="r_nq_n" \end{array}$$="" 在这里为了求出$r_n="gcd(a,b)$而使用了$n$次除法。注意商$q_1,q_2,\dots,q_{n-1}$都至少是$1$。另外，$q_n\ge" 2$，因为$r_n<r_{n-1}$。这就蕴含着="" $$\begin{array}{l}r_n\ge="" \\r_{n-1}\ge="" 2r_n\ge="" 2f_2="f_2" \\r_{n-2}\ge="" r_{n-1}+r_n\ge="" f_3+f_2="f_4" \\\dots="" r_2\ge="" r_3+r_4\ge="" f_{n-1}+f_{n-2}="f_n\\b=r_1\ge" r_2+r_3\ge="" f_n+f_{n-1}="f_{n+1}\end{array}$$" 因此得出，若欧几里得算法为了求出满足$a\ge="" b$的$gcd(a,b)$而使用了$n$次除法，则$b\ge="" f_{n+1}$从列6中知道，对$n="">2$来说$f_{n+1}&gt;a^{n-1}$，其中$a=(1+\sqrt 5)/2$。因此得出$b&gt; a^{n-1}$.另外，因为$log_{10}a~0.208&gt;1/5$。所以可以看出$$log_{10}b&gt;(n-1)log_{10}a&gt;(n-1)/5$$因此，$n-1&lt;5\cdot log_{10}b$。现在假定$b$有$k$个十进制位。则$b&lt;10^k$而且$log_{10}b&lt;k$。由此得出$n-1&lt;5k$，而且因为$k$是整数，所以得出$n\le 5k$。证毕。</r_1></p>
-<h3 id="结构归纳法"><a href="#结构归纳法" class="headerlink" title="结构归纳法"></a>结构归纳法</h3><p>结构归纳法包含两个步骤:<br>基础步骤:证明对于递归定义的基础步骤所规定的属于该集合的所以元素来说，结果成立。<br>递归步骤:证明如果对于定义的递归步骤中用来构造新元素的每个元素来说命题为真，则对于这些新的元素来说结果成立。      </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;递归&quot;&gt;&lt;a href=&quot;#递归&quot; class=&quot;headerlink&quot; title=&quot;递归&quot;&gt;&lt;/a&gt;递归&lt;/h2&gt;&lt;p&gt;为了定义以非负整数集合作为其定义域的函数，使用两个步骤:&lt;br&gt;基础步骤:规定这个函数在$0$处的值。&lt;br&gt;递归步骤:给出从较小的整数处的
     
     </summary>
     

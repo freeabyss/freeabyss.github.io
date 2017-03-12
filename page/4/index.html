@@ -4043,6 +4043,357 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/29/Java-Java-IO-概述/" itemprop="url">
+                  Java I/O类概述
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-29T12:08:34+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/29/Java-Java-IO-概述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/29/Java-Java-IO-概述/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/29/Java-Java-IO-概述/" class="leancloud_visitors" data-flag-title="Java I/O类概述">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p>&ensp;&ensp; I/O是input和output的简写，Java API中，可以读入字节或字符序列的对象称为输入流，可以写入字节或字符序列的对象称为输出流。其来源地和目的地可以是文件，也可以是socket、http、数组甚至是两个线程之间。   </p>
+<p>&ensp;&ensp; I/O包下有几十个类文件，大概分为以下几种：   </p>
+<ul>
+<li>由<code>InputStream</code>、<code>OutputStream</code>、<code>Reader</code>、<code>Writer</code>为代表的I/O类 </li>
+<li>与文件系统相关的泪，例如<code>File</code>、<code>FileFilter</code>、<code>RandomAccessFile</code>等</li>
+<li>序列化相关的类 </li>
+<li>其他，例如工具类、异常类</li>
+</ul>
+<p>本文只讲述第一种，其他种类查看<a href="">Java 文件</a>，<a href="">Java 序列化</a>       </p>
+<h2 id="流家族"><a href="#流家族" class="headerlink" title="流家族"></a>流家族</h2><p>从<code>InputStream</code>和<code>OutputStream</code>中继承的类是用来处理字节流。从<code>Reader</code>和<code>Writer</code>继承的类是用来处理Unicode字符，这些类的读写操作都是基于Unicode码元的。通过<code>InputStreamReader</code>和<code>OutputStreamWriter</code>可以将字节流转为字符流。     </p>
+<p>流家族体系<br><img src="../images/Java_IO_01.png" alt="Java_IO_01.png"><br>上图中，红色的类表示已被弃用。    </p>
+<h3 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h3><h4 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h4><p><code>InputStream</code>有几个常用的方法 ：  </p>
+<ul>
+<li>mark : <code>mark</code>方法用于标记当前读取的位置，与<code>reset</code>方法配合使用。   </li>
+<li>reset : 返回<code>mark</code>标记的位置，重新从该位置读取字节</li>
+<li>markSupported : 是否支持mark/reset </li>
+<li>available : 剩余未读取的字节数</li>
+<li>skip : 跳过并丢弃指定的字节数</li>
+<li>read : 读取字节</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类</th>
+<th style="text-align:left">markSupported</th>
+<th style="text-align:left">skip</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ByteArrayInputStream</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">输入源，将<code>byte[]</code>作为输入源的类</td>
+</tr>
+<tr>
+<td style="text-align:left">FileInputStream</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">输入源，将文件作为输入源的类</td>
+</tr>
+<tr>
+<td style="text-align:left">PipedInputStream</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">输入源，用于进程间通信，与<code>PipedOutputStream</code>配合使用</td>
+</tr>
+<tr>
+<td style="text-align:left">SequenceInputStream</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">将多个输入源合并成一个输入源，<code>available</code>方法只返回当前输入源的<code>available</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="FilterInputStream"><a href="#FilterInputStream" class="headerlink" title="FilterInputStream"></a>FilterInputStream</h4><p>继承自<code>FilterInputStream</code>子类是装饰器类，它们不能自己产生字节序列，需要配合输入源才能使用，它们的主要作用是增加输入流的功能。在别的编程语言里，诸如缓冲机制和预览等细节都是自动处理的，相对而言，Java就比较麻烦，必须配合装饰器类才能实现。但是这种方式带来极大的灵活性。   </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类</th>
+<th style="text-align:left">markSupported</th>
+<th style="text-align:left">skip</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">BufferedInputStream</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">给输入流增加缓冲机制</td>
+</tr>
+<tr>
+<td style="text-align:left">PushbackInputStream</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">给输入流增加推回功能，即将读取的字节推回到缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left">DataInputStream</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">允许应用程序以与机器无关方式从底层输入流中读取基本Java 数据类型，一般与<code>DataOutputStream</code>配合使用，另外<code>DataInputStream</code>读取时采用的Java版的UTF-8编码，与标准UTF-8不同。所以<code>DataInputStream</code>读取的字节流必须时通过<code>DataOutputStream</code>写入的，不然会出问题</td>
+</tr>
+</tbody>
+</table>
+<h4 id="OutputStream"><a href="#OutputStream" class="headerlink" title="OutputStream"></a>OutputStream</h4><p><code>OutputStream</code>有几种常用的方法： </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ByteArrayOutputStream</td>
+<td style="text-align:left">将输出流转化为<code>byte[]</code></td>
+</tr>
+<tr>
+<td style="text-align:left">FileOutputStream</td>
+<td style="text-align:left">文件输出流</td>
+</tr>
+<tr>
+<td style="text-align:left">PipedOutputStream</td>
+<td style="text-align:left">管道输出流，与<code>PipedOutputStream</code>配合使用</td>
+</tr>
+</tbody>
+</table>
+<h4 id="FilterOutputStream"><a href="#FilterOutputStream" class="headerlink" title="FilterOutputStream"></a>FilterOutputStream</h4><p>类似于<code>FilterInputStream</code>，<code>FilterOutputStream</code>也是装饰器类的基类。    </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">BufferedOutputStream</td>
+<td style="text-align:left">给输出流增加缓冲机制</td>
+</tr>
+<tr>
+<td style="text-align:left">PrintStream</td>
+<td style="text-align:left">打印输出流<br>可直接输出至文件(里面封装了<code>FileOutputStream</code>)<br>自动刷新功能，遇到<code>\n</code>或者写入一个<code>byte</code>数组之后自动调用<code>flush</code>方法<br>可方便打印各种数据值表示形式<br>与其他输出流不同，它产生的<code>IOException</code>异常会被自身函数捕获，可以通过<code>checkError</code>检查是否发生过异常<br>通过<code>format</code>方法，支持格式化输出<br>打印的字符使用平台默认字符编码转换为字节，也可以指定编码类型<br><code>null</code>值会被转为<code>null</code>字符，布尔类型会被转为<code>true</code>和<code>false</code>字符</td>
+</tr>
+<tr>
+<td style="text-align:left">DataOutputStream</td>
+<td style="text-align:left">允许应用程序以与机器无关方式写入基本Java数据类型，配合<code>DataInputStream</code>使用。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ObjectOutput-和ObjectInput"><a href="#ObjectOutput-和ObjectInput" class="headerlink" title="ObjectOutput 和ObjectInput"></a>ObjectOutput 和ObjectInput</h4><p><code>ObjectInputStream</code>和<code>ObjectOutputStream</code>用于对象的序列化，可以将任何Java类型包括对象，序列化成字节序列。    </p>
+<h3 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h3><h4 id="Reader"><a href="#Reader" class="headerlink" title="Reader"></a>Reader</h4><p><code>Reader</code>用于读取字符流的抽象类，使用字符流读取文件，比字节流更高效。可通过<code>InputStreamReader</code>将字节流转换为字符流。   </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类</th>
+<th style="text-align:left">markSupported</th>
+<th style="text-align:left">skip</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CharArrayReader</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">输入源，将<code>char[]</code>作为输入源的类</td>
+</tr>
+<tr>
+<td style="text-align:left">StringReader</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">输入源，将<code>String</code>作为输入源的类</td>
+</tr>
+<tr>
+<td style="text-align:left">PipedReader</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">类似<code>PipedInputStream</code></td>
+</tr>
+<tr>
+<td style="text-align:left">FileReader</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">类似<code>FileInputStream</code>，实际上就是在<code>FileInputStream</code>外面套了<code>InputStreamReader</code>类</td>
+</tr>
+<tr>
+<td style="text-align:left">InputStreamReader</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">将字节流转为字符流，可以指定字符编码</td>
+</tr>
+<tr>
+<td style="text-align:left">BufferedReader</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">类似于<code>BufferedInputStream</code>，带有缓冲机制的字符流，需要提供输入源</td>
+</tr>
+<tr>
+<td style="text-align:left">PushbackReader</td>
+<td style="text-align:left">不支持</td>
+<td style="text-align:left">支持</td>
+<td style="text-align:left">类似<code>PushbackInputStream</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Writer"><a href="#Writer" class="headerlink" title="Writer"></a>Writer</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">类</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CharArrayWriter</td>
+<td style="text-align:left">将输出流转为<code>char[]</code>。<code>null</code>值被转为<code>null</code>字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">StringWriter</td>
+<td style="text-align:left">将输出流转为<code>String</code>。<code>null</code>值被转为<code>null</code>字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">PipedWriter</td>
+<td style="text-align:left">类似<code>PipedOutputStream</code></td>
+</tr>
+<tr>
+<td style="text-align:left">PrintWriter</td>
+<td style="text-align:left">类似<code>PrintStream</code></td>
+</tr>
+<tr>
+<td style="text-align:left">OutStreamWriter</td>
+<td style="text-align:left">将字节流转为字符流，可以指定字符编码</td>
+</tr>
+<tr>
+<td style="text-align:left">BufferedWriter</td>
+<td style="text-align:left">类似于<code>BufferedOutputStream</code>，带有缓冲机制的字符流，需要提供输入源</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/29/Quart表达式详解/" itemprop="url">
                   QuartZ Cron表达式详解
                 </a>
@@ -4688,7 +5039,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">79</span>
+              <span class="site-state-item-count">80</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -4705,7 +5056,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -4775,9 +5126,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Abyss</span>
 </div>
-
+<!--
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  天马行空工作室
 </div>
 
 <div class="theme-info">
@@ -4785,7 +5136,7 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
-</div>
+</div> -->
 
         
 

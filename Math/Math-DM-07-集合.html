@@ -1,0 +1,1001 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Math,note,Discrete Mathematics,set," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="集合集合是一组无序的对象。
+
+该定义有逻辑悖论。以公理的基本假设为起点建立集合理论可以避免逻辑上的不一致。
+
+集合概述
+集合$A$等于集合$B$当且仅当$∀x(x\in A↔︎x\in B)$
+集合$A$是集合$B$的子集当且仅当$∀x(x\in A→x\in B)$
+集合$A$是集合$B$的真子集当且仅当$∀x(x\in A→x\in B)∧∃x(x∈B∧x∉A)$
+幂集合：幂集合是集合$S$所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学学习笔记 集合 07">
+<meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-07-集合.html">
+<meta property="og:site_name" content="Abyss's blog">
+<meta property="og:description" content="集合集合是一组无序的对象。
+
+该定义有逻辑悖论。以公理的基本假设为起点建立集合理论可以避免逻辑上的不一致。
+
+集合概述
+集合$A$等于集合$B$当且仅当$∀x(x\in A↔︎x\in B)$
+集合$A$是集合$B$的子集当且仅当$∀x(x\in A→x\in B)$
+集合$A$是集合$B$的真子集当且仅当$∀x(x\in A→x\in B)∧∃x(x∈B∧x∉A)$
+幂集合：幂集合是集合$S$所">
+<meta property="og:updated_time" content="2016-12-16T09:52:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="离散数学学习笔记 集合 07">
+<meta name="twitter:description" content="集合集合是一组无序的对象。
+
+该定义有逻辑悖论。以公理的基本假设为起点建立集合理论可以避免逻辑上的不一致。
+
+集合概述
+集合$A$等于集合$B$当且仅当$∀x(x\in A↔︎x\in B)$
+集合$A$是集合$B$的子集当且仅当$∀x(x\in A→x\in B)$
+集合$A$是集合$B$的真子集当且仅当$∀x(x\in A→x\in B)∧∃x(x∈B∧x∉A)$
+幂集合：幂集合是集合$S$所">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.com/Math/Math-DM-07-集合.html"/>
+
+  <title> 离散数学学习笔记 集合 07 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Abyss's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                离散数学学习笔记 集合 07
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T12:37:07+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-07-集合.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-07-集合.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-07-集合.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 集合 07">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合是一组无序的对象。</p>
+<blockquote>
+<p>该定义有逻辑悖论。以公理的基本假设为起点建立集合理论可以避免逻辑上的不一致。</p>
+</blockquote>
+<h3 id="集合概述"><a href="#集合概述" class="headerlink" title="集合概述"></a>集合概述</h3><ul>
+<li>集合$A$等于集合$B$当且仅当$∀x(x\in A↔︎x\in B)$</li>
+<li>集合$A$是集合$B$的子集当且仅当$∀x(x\in A→x\in B)$</li>
+<li>集合$A$是集合$B$的真子集当且仅当$∀x(x\in A→x\in B)∧∃x(x∈B∧x∉A)$</li>
+<li>幂集合：幂集合是集合$S$所有子集的集合，包含空集合集合$S$本身，用$P(S)$表示<ul>
+<li>如果集合有$n$个元素，那么幂集合的个数为$2^n$个</li>
+</ul>
+</li>
+</ul>
+<h4 id="笛卡儿积"><a href="#笛卡儿积" class="headerlink" title="笛卡儿积"></a>笛卡儿积</h4><h5 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h5><p>有序$n$元组，是由$n$个元素构成的有序组，用括号表示：$(a_1,a_2,a_3,…,a_n)$。<br>只有在两个有序$n$元组每一个对应的元素都相等时，它们才相等。二元组特称为有序偶。<br>令$\mathbf A$和$\mathbf B$为集合，$\mathbf A$和$\mathbf B$的笛卡儿积用$\mathbf A\times\mathbf B$表示，是所有有序偶$(a,b)$的集合：<br>$$ \mathbf A\times\mathbf B=\{(a,b)\mid a\in \mathbf A\land b\in \mathbf B\}$$</p>
+<p>集合$A_1,A_2,\dots,A_n$的笛卡儿积用$A_1\times A_2\times \dots \times A_n$表示，这是有序$n$元组$(a_1,a_2,\dots,a_n)$的集合，其中对于$i=1,2,\dots,n, a_i∈A$<br>$$<br>    A_1\times A_2\times \dots \times A_n = \{(a_1,a_2,\dots ,a_n)\mid a_i∈A,i=1,2,\dots,n\}<br>$$</p>
+<h4 id="带量词的集合符合"><a href="#带量词的集合符合" class="headerlink" title="带量词的集合符合"></a>带量词的集合符合</h4><ul>
+<li>$∀x∈S(P(x))$表示$P(x)$的全称量化，论域是集合$S$，等同于$∀x(x∈S→P(x))$。</li>
+<li>$∃x∈S(P(x))$表示$P(x)$的存在量化，论域是集合$S$, 等同于$∃x(x∈S∧P(x))$。</li>
+</ul>
+<h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><p>$\forall x\in \mathbf R(x^2\ge 0)$的含义是：任意实数的平方是非负的。<br>$\exists x\in \mathbf Z(x^2=1)$的含义是：有某个整数的平方是1。</p>
+<h4 id="量词的真值集合"><a href="#量词的真值集合" class="headerlink" title="量词的真值集合"></a>量词的真值集合</h4><p>我们把集合理论和谓词逻辑的概念结合起来，给定谓词$P$和论域$D$，定义$P$的真值集合:<br>$D$中元素$x$使$P(x)$为真的元素组成的集合。$P(x)$的真值集合记为$\{x\in D\mid P(x)\}$。 </p>
+<blockquote>
+<p>在域$\mathbf U$上，$\forall xP(x)$为真当且仅当$P$的真值集合是集合$U$。同样，域$U$上$\exists xP(x)$为真，当且仅当$P$的真值集合非空。</p>
+</blockquote>
+<h4 id="常用集合表示"><a href="#常用集合表示" class="headerlink" title="常用集合表示"></a>常用集合表示</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\mathbf Q$</td>
+<td style="text-align:left">有理数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf Q^+$</td>
+<td style="text-align:left">正有理数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf N$</td>
+<td style="text-align:left">自然数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf Z$</td>
+<td style="text-align:left">整数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf Z^+$</td>
+<td style="text-align:left">正整数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf R$</td>
+<td style="text-align:left">实数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\varnothing$</td>
+<td style="text-align:left">空集</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意，$\varnothing$不等于$\{\varnothing\}$</p>
+</blockquote>
+<h3 id="集合运算"><a href="#集合运算" class="headerlink" title="集合运算"></a>集合运算</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">运算</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">并集</td>
+<td style="text-align:left">$A\cup B=\{x\mid x\in A\lor x\in B\}$</td>
+</tr>
+<tr>
+<td style="text-align:left">交集</td>
+<td style="text-align:left">$A\cap B=\{x\mid x\in A\land x\in B\}$</td>
+</tr>
+<tr>
+<td style="text-align:left">差集</td>
+<td style="text-align:left">$A-B=\{x\in A\land x\notin B\}$</td>
+</tr>
+<tr>
+<td style="text-align:left">补集</td>
+<td style="text-align:left">$\overline A=\{x\mid x\in U\land x\notin A\}$</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>$U$为全集</p>
+</blockquote>
+<h4 id="集合恒等式"><a href="#集合恒等式" class="headerlink" title="集合恒等式"></a>集合恒等式</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">等式</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$A∪\varnothing=A$ <br>$A\cap U=A$</td>
+<td style="text-align:left">恒等律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup U=U$<br>$A\cap \varnothing=\varnothing$</td>
+<td style="text-align:left">支配律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup A=A$<br>$A\cap A=A$</td>
+<td style="text-align:left">幂等律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline {(\bar A)}=A$</td>
+<td style="text-align:left">补集律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup B=B\cup A$<br>$A\cap B=B\cap A$</td>
+<td style="text-align:left">交换律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup (B\cup C)=(A\cup B)\cup C$<br>$A\cap(B\cap C)=(A\cap B)\cap C$</td>
+<td style="text-align:left">结合律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$<br>$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$</td>
+<td style="text-align:left">分配律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline{A\cup B}=\bar A\cap \bar B$<br>$\overline{A\cap B}=\bar A\cup \bar B$</td>
+<td style="text-align:left">德摩根定律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup(A\cap B)=A$<br>$A\cap(A\cup B)=A$</td>
+<td style="text-align:left">吸收律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup \bar A=U$<br>$A\cap \bar A=\varnothing$</td>
+<td style="text-align:left">补集</td>
+</tr>
+</tbody>
+</table>
+<h5 id="证明集合相等的方法"><a href="#证明集合相等的方法" class="headerlink" title="证明集合相等的方法"></a>证明集合相等的方法</h5><p>证明集合相等的一种方法是：证明两者中任何一个都是另一个的子集。<br>另外一种方法是：证明一个元素如果属于第一个集合，必定属于第二个集合。 </p>
+<h5 id="证明实例"><a href="#证明实例" class="headerlink" title="证明实例"></a>证明实例</h5><p>$$ \begin{align}<br>\overline {A\cap B} &amp;= \{x\mid x\notin A\cap B\} \\<br>&amp;   =\{x\mid \lnot(x\in(A\cap B))\} \\<br>&amp;   =\{x\mid \lnot(x\in A\land x\in B)\} \\<br>&amp;   =\{x\mid \lnot (x\in A)\lor \lnot(x\in B)\}\\<br>&amp;   =\{x\mid x\notin A\lor x\notin B\}\\<br>&amp;   =\{x\mid x\in \overline{A}\lor x\in \overline{B}\} \\<br>&amp;   =\{x\mid x\in \overline{A}\cup\overline{B}\} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
+<h4 id="扩展的交集和并集"><a href="#扩展的交集和并集" class="headerlink" title="扩展的交集和并集"></a>扩展的交集和并集</h4><ul>
+<li>一组集合的并集是包含哪些至少是这组集合中一个集合成员的元素的集合<br>$$<br>  A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i<br>$$</li>
+<li>一组集合的交集是包含哪些属于这组集合中所有成员集合的元素的集合<br>$$<br>  A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i<br>$$</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+            <a href="/tags/set/" rel="tag">#set</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/Math-DM-06-证明导论.html" rel="next" title="离散数学学习笔记 证明导论 06">
+                <i class="fa fa-chevron-left"></i> 离散数学学习笔记 证明导论 06
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/shell/Linux-清空或删除文件.html" rel="prev" title="Linux 清空或删除文件">
+                Linux 清空或删除文件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="Math/Math-DM-07-集合.html"
+           data-title="离散数学学习笔记 集合 07" data-url="http://blog.freeabyss.com/Math/Math-DM-07-集合.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Abyss" />
+          <p class="site-author-name" itemprop="name">Abyss</p>
+          <p class="site-description motion-element" itemprop="description">读书笔记和个人总结</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#集合概述"><span class="nav-number">1.1.</span> <span class="nav-text">集合概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#笛卡儿积"><span class="nav-number">1.1.1.</span> <span class="nav-text">笛卡儿积</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#元组"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">元组</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#带量词的集合符合"><span class="nav-number">1.1.2.</span> <span class="nav-text">带量词的集合符合</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#实例"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#量词的真值集合"><span class="nav-number">1.1.3.</span> <span class="nav-text">量词的真值集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用集合表示"><span class="nav-number">1.1.4.</span> <span class="nav-text">常用集合表示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合运算"><span class="nav-number">1.2.</span> <span class="nav-text">集合运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#集合恒等式"><span class="nav-number">1.2.1.</span> <span class="nav-text">集合恒等式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#证明集合相等的方法"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">证明集合相等的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#证明实例"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">证明实例</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展的交集和并集"><span class="nav-number">1.2.2.</span> <span class="nav-text">扩展的交集和并集</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+</div>
+<!--
+<div class="powered-by">
+  天马行空工作室
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div> -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+</body>
+</html>

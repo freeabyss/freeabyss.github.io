@@ -1,0 +1,834 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="数学归纳法数学归纳法用来证明形如$\forall nP(n)$的一类定理，其中论域是正整数集合。数学归纳法主要用于证明一个公式是否正确，而不能用于推导公式。     
+数学归纳法原理为证明对所有的正整数$n$，$P(n)$为真，其中$P(n)$是一个命题函数，需要完成两个步骤:    基础步骤:证明命题$P(1)$为真。    归纳步骤:证明对每个正整数$k$来说，蕴含式$P(k)\rightar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学学习笔记 数学归纳法 23">
+<meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-23-数学归纳法.html">
+<meta property="og:site_name" content="Abyss's blog">
+<meta property="og:description" content="数学归纳法数学归纳法用来证明形如$\forall nP(n)$的一类定理，其中论域是正整数集合。数学归纳法主要用于证明一个公式是否正确，而不能用于推导公式。     
+数学归纳法原理为证明对所有的正整数$n$，$P(n)$为真，其中$P(n)$是一个命题函数，需要完成两个步骤:    基础步骤:证明命题$P(1)$为真。    归纳步骤:证明对每个正整数$k$来说，蕴含式$P(k)\rightar">
+<meta property="og:updated_time" content="2017-01-07T07:51:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="离散数学学习笔记 数学归纳法 23">
+<meta name="twitter:description" content="数学归纳法数学归纳法用来证明形如$\forall nP(n)$的一类定理，其中论域是正整数集合。数学归纳法主要用于证明一个公式是否正确，而不能用于推导公式。     
+数学归纳法原理为证明对所有的正整数$n$，$P(n)$为真，其中$P(n)$是一个命题函数，需要完成两个步骤:    基础步骤:证明命题$P(1)$为真。    归纳步骤:证明对每个正整数$k$来说，蕴含式$P(k)\rightar">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.com/Math/Math-DM-23-数学归纳法.html"/>
+
+  <title> 离散数学学习笔记 数学归纳法 23 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Abyss's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                离散数学学习笔记 数学归纳法 23
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-07T09:59:39+08:00" content="2017-01-07">
+              2017-01-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-23-数学归纳法.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-23-数学归纳法.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-23-数学归纳法.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 数学归纳法 23">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数学归纳法"><a href="#数学归纳法" class="headerlink" title="数学归纳法"></a>数学归纳法</h2><p>数学归纳法用来证明形如$\forall nP(n)$的一类定理，其中论域是正整数集合。<br>数学归纳法主要用于证明一个公式是否正确，而不能用于推导公式。     </p>
+<h3 id="数学归纳法原理"><a href="#数学归纳法原理" class="headerlink" title="数学归纳法原理"></a>数学归纳法原理</h3><p>为证明对所有的正整数$n$，$P(n)$为真，其中$P(n)$是一个命题函数，需要完成两个步骤:<br>    基础步骤:证明命题$P(1)$为真。<br>    归纳步骤:证明对每个正整数$k$来说，蕴含式$P(k)\rightarrow P(k+1)$为真。<br>有时候需要证明对$n=b,b+1,b+2,\dots$ 来说$P(n)$为真，其中$b$是不等于$1$的整数。只要改变基础步骤，就可以用数学归纳法来完成这个证明。     </p>
+<h3 id="数学归纳法证明示例"><a href="#数学归纳法证明示例" class="headerlink" title="数学归纳法证明示例"></a>数学归纳法证明示例</h3><h4 id="几何级数求和"><a href="#几何级数求和" class="headerlink" title="几何级数求和"></a>几何级数求和</h4><p>设$n$是一个非负整数，证明一下等式成立。 $$\sum_{j=0}^n ar^j=a+ar+ar^2+\dots+ar^n={ar^{n+1}-a\over r-1}, r\neq 1$$<br>基础步骤: $P(0)$为真，因为$${ar^{0+1}-a\over r-1}={ar-a\over r-1}=a$$<br>归纳步骤: 假设$P(k)$为真。 $$a+ar+ar^2+\dots+ar^k={ar^{k+1}-a\over r-1}$$<br>接着要证明$P(k+1)$为真， 将上述等式两边加上$ar^{k+1}$，得到$$a+ar+ar^2+\dots+ar^k+ar^{k+1}={ar^{k+1}-a\over r-1}+ar^{k+1}$$<br>改写等式右边: $${ar^{k+1}-a\over r-1}+ar^{k+1}={ar^{k+1}-a\over r-1}+{ar^{k+2}-ar^{k+1}\over r-1}={ar^{k+2}-a\over r-1}$$<br>于是: $$a+ar+ar^2+\dots+ar^k+ar^{k+1}={ar^{k+2}-a\over r-1}$$<br>这就证明了，如果归纳假设$P(k)$为真，则$P(k+1)$也必为真。      </p>
+<h4 id="证明不等式"><a href="#证明不等式" class="headerlink" title="证明不等式"></a>证明不等式</h4><p>证明:对每个满足$n\ge 4$的正整数$n$来说，有$2^n&lt;n!$。<br>设$P(n)$是命题:$2^n&lt;n!$。<br>基础步骤: 为了证明对$n\ge 4$来说这个不等式成立，基础步骤应该是$P(4)$。$P(4)$为真，因为$2^4&lt;4!$。<br>归纳步骤: 对归纳步骤，假定$P(k)$为真，其中$k\ge 4$。接下来证明$2^{k+1}&lt;(k+1)!$为真，<br>$$\begin{array}{l}2^{k+1} &amp; =2\cdot 2^k\\ &amp;&lt; 2\cdot k!\\ &amp;&lt;(k+1)k!\\&amp;=(k+1)!\end{array}$$</p>
+<h4 id="调和数的不等式"><a href="#调和数的不等式" class="headerlink" title="调和数的不等式"></a>调和数的不等式</h4><p>调和数$H_j(j=1,2,3,\dots)$的定义为 $$H_j=1+{1\over 2}+{1\over 3}+\dots + {1\over j}$$<br>证明:$$H_{2^n}\ge 1+{n\over 2}$$<br>设$P(n)$是命题 $H_{2^n}\ge 1+n/2$<br>基础步骤: $P(0)$为真，因为$H_{2^0}=H_1=1\ge 1+0/2$<br>归纳步骤: 归纳假设命题是$P(k)$为真，即$H_{2^k}\ge 1+{k\over 2}$,其中$k$是非负整数。证明$P(k+1)$也为真，即命题$H_{2^{k+1}}\ge 1+{k+1\over 2}$为真。<br>$$\begin{array}{l} H_{2^{k+1}}&amp;=1+{1\over 2}+\dots+{1\over 2^k}+{1\over 2^k+1}+\dots+{1\over 2^{k+1}}\\&amp;=H_{2^k}+{1\over 2^k+1}+\dots+{1\over 2^{k+1}}\\&amp;\ge (1+{k\over 2})+{1\over 2^k+1}+\dots+{1\over 2^{k+1}}\\&amp;\ge (1+{k\over 2}+2^k\cdot {1\over 2^{k+1}}\\ &amp;\ge (1+{k\over 2})+{1\over 2}\\&amp;=1+{k+1\over 2} \end{array}$$</p>
+<h4 id="有限集合自己的个数"><a href="#有限集合自己的个数" class="headerlink" title="有限集合自己的个数"></a>有限集合自己的个数</h4><p>证明: 若$S$有$n$个元素的有限集合，其中$n$是一个非负整数，则$S$有$2^n$个子集。<br>设 $P(n)$是命题:有$n$个元素的集合有$2^n$个子集。<br>基础步骤:$P(0)$为真，因为有$0$个元素的集合，即空集，有$1$个子集，即它本身。<br>归纳步骤:假定对于所有非负整数$k$，$P(k)$为真，即假定所有$k$个元素的几个都有$2^k$个子集。必须证明在此假定下，命题$P(k+1)$为真。为此，假定$T$是一个具有$k+1$个元素的集合，于是$T$可以写成$T=S\cup \{a\}$,其中$a$是$T$中的一个元素，且$S=T-\{a\}$，因此$\mid S\mid =k$。对于$S$的每个子集$X$而言，存在$T$的两个子集，即$X$和$X\cup {a}$。这些集合构成卵$T$的所有子集，且这些子集都不相同。因为$S$有$2^k$个子集，所有$T$有$2\cdot 2^k=2^{k+1}$个子集。  </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/Math-DM-22-把物体放入盒子.html" rel="next" title="离散数学学习笔记 把物体放入盒子 22">
+                <i class="fa fa-chevron-left"></i> 离散数学学习笔记 把物体放入盒子 22
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/Math-DM-24-强归纳法.html" rel="prev" title="离散数学学习笔记 强归纳法 24">
+                离散数学学习笔记 强归纳法 24 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="Math/Math-DM-23-数学归纳法.html"
+           data-title="离散数学学习笔记 数学归纳法 23" data-url="http://blog.freeabyss.com/Math/Math-DM-23-数学归纳法.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Abyss" />
+          <p class="site-author-name" itemprop="name">Abyss</p>
+          <p class="site-description motion-element" itemprop="description">读书笔记和个人总结</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数学归纳法"><span class="nav-number">1.</span> <span class="nav-text">数学归纳法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数学归纳法原理"><span class="nav-number">1.1.</span> <span class="nav-text">数学归纳法原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数学归纳法证明示例"><span class="nav-number">1.2.</span> <span class="nav-text">数学归纳法证明示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#几何级数求和"><span class="nav-number">1.2.1.</span> <span class="nav-text">几何级数求和</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明不等式"><span class="nav-number">1.2.2.</span> <span class="nav-text">证明不等式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调和数的不等式"><span class="nav-number">1.2.3.</span> <span class="nav-text">调和数的不等式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有限集合自己的个数"><span class="nav-number">1.2.4.</span> <span class="nav-text">有限集合自己的个数</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+</div>
+<!--
+<div class="powered-by">
+  天马行空工作室
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div> -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+</body>
+</html>

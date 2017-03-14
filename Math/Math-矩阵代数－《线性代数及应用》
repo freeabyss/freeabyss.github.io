@@ -1,0 +1,954 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Math,note,Linear Algebra," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="加粗小写字母代表向量，例如$\mathbf u, \mathbf v$不加粗小写字母代表标量也就是实数，例如$a,c$大写字母代表矩阵，例如 $A,B$
+
+矩阵运算与标量相乘$A,B,C$是维数相同的矩阵，$r,s$为实数   
+
+$A+B=B+A$
+$(A+B)+C=A+(B+C)$
+$A+0=A$
+$r(A+B)=rA+rB$
+$(r+s)A=rA+sA$
+$r(sA)=(rs)A$
+
+矩阵">
+<meta property="og:type" content="article">
+<meta property="og:title" content="矩阵代数－《线性代数及应用》">
+<meta property="og:url" content="http://blog.freeabyss.com/Math/Math-矩阵代数－《线性代数及应用》">
+<meta property="og:site_name" content="Abyss's blog">
+<meta property="og:description" content="加粗小写字母代表向量，例如$\mathbf u, \mathbf v$不加粗小写字母代表标量也就是实数，例如$a,c$大写字母代表矩阵，例如 $A,B$
+
+矩阵运算与标量相乘$A,B,C$是维数相同的矩阵，$r,s$为实数   
+
+$A+B=B+A$
+$(A+B)+C=A+(B+C)$
+$A+0=A$
+$r(A+B)=rA+rB$
+$(r+s)A=rA+sA$
+$r(sA)=(rs)A$
+
+矩阵">
+<meta property="og:updated_time" content="2016-09-05T12:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="矩阵代数－《线性代数及应用》">
+<meta name="twitter:description" content="加粗小写字母代表向量，例如$\mathbf u, \mathbf v$不加粗小写字母代表标量也就是实数，例如$a,c$大写字母代表矩阵，例如 $A,B$
+
+矩阵运算与标量相乘$A,B,C$是维数相同的矩阵，$r,s$为实数   
+
+$A+B=B+A$
+$(A+B)+C=A+(B+C)$
+$A+0=A$
+$r(A+B)=rA+rB$
+$(r+s)A=rA+sA$
+$r(sA)=(rs)A$
+
+矩阵">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.com/Math/Math-矩阵代数－《线性代数及应用》"/>
+
+  <title> 矩阵代数－《线性代数及应用》 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Abyss's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                矩阵代数－《线性代数及应用》
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-04T16:27:24+08:00" content="2016-09-04">
+              2016-09-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-矩阵代数－《线性代数及应用》#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-矩阵代数－《线性代数及应用》" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-矩阵代数－《线性代数及应用》" class="leancloud_visitors" data-flag-title="矩阵代数－《线性代数及应用》">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>加粗小写字母代表向量，例如$\mathbf u, \mathbf v$<br>不加粗小写字母代表标量也就是实数，例如$a,c$<br>大写字母代表矩阵，例如 $A,B$</p>
+</blockquote>
+<h2 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h2><h3 id="与标量相乘"><a href="#与标量相乘" class="headerlink" title="与标量相乘"></a>与标量相乘</h3><p>$A,B,C$是维数相同的矩阵，$r,s$为实数   </p>
+<ul>
+<li>$A+B=B+A$</li>
+<li>$(A+B)+C=A+(B+C)$</li>
+<li>$A+0=A$</li>
+<li>$r(A+B)=rA+rB$</li>
+<li>$(r+s)A=rA+sA$</li>
+<li>$r(sA)=(rs)A$</li>
+</ul>
+<h3 id="矩阵相乘"><a href="#矩阵相乘" class="headerlink" title="矩阵相乘"></a>矩阵相乘</h3><ul>
+<li>$A(BC)=(AB)C$</li>
+<li>$A(B+C)=AB+AC$</li>
+<li>$(B+C)A=BA+CA$</li>
+<li>$r(AB)=(rA)B=A(rB)$</li>
+<li>$I_mA=A=AI_n$</li>
+</ul>
+<h3 id="矩阵的乘幂"><a href="#矩阵的乘幂" class="headerlink" title="矩阵的乘幂"></a>矩阵的乘幂</h3><p>$A^k$表示$k$个$A$的乘积，$A^k\mathbf x$表示$\mathbf x$被A连续左乘$k$次。$A^0$解释为单位矩阵。</p>
+<h2 id="矩阵的性质"><a href="#矩阵的性质" class="headerlink" title="矩阵的性质"></a>矩阵的性质</h2><h3 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h3><p>若$A$为$m\times n$矩阵，则$A^T$为$n\times m$矩阵，它的列由$A$对应的行组成。</p>
+<ul>
+<li>$(A^T)^T=A$</li>
+<li>$(A+B)^T=A^T+B^T$</li>
+<li>$(rA)^T=rA^T$</li>
+<li>$(AB)^T=B^TA^T$</li>
+</ul>
+<h3 id="矩阵的逆"><a href="#矩阵的逆" class="headerlink" title="矩阵的逆"></a>矩阵的逆</h3><p>对于一个$n\times n$矩阵A,若存在一个$n\times n$矩阵C使<br>$$<br>    AC=I 且CA=I<br>$$<br>$I$为$n\times n$的单位矩阵，$C$是$A$的逆阵，记为$A^{-1}$，于是<br>$$<br>    AA^{-1}=I 且 A^{-1}A=I<br>$$<br>不可逆矩阵称为奇异矩阵，可逆矩阵称为非奇异矩阵</p>
+<h4 id="求-A-1-的算法"><a href="#求-A-1-的算法" class="headerlink" title="求$A^{-1}$的算法"></a>求$A^{-1}$的算法</h4><p>把增广矩阵$[A I]$进行行化简，若$A$行等价于$I$，则$[A I]$行等价于$[I A^{-1}]$，否则$A$没有逆。</p>
+<h4 id="可逆矩阵的性质"><a href="#可逆矩阵的性质" class="headerlink" title="可逆矩阵的性质"></a>可逆矩阵的性质</h4><p>参见下面的定理8</p>
+<h3 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h3><p>矩阵的维数太多时，可以将矩阵进行分割，每一块是一个子矩阵。</p>
+<h4 id="分块矩阵的乘法"><a href="#分块矩阵的乘法" class="headerlink" title="分块矩阵的乘法"></a>分块矩阵的乘法</h4><p>$$<br>    A=<br>    \left[<br>    \begin{array}{ccc|cc}<br>    2 &amp; -3 &amp; 1 &amp; 0 &amp; 4\\<br>    \hline<br>    1 &amp; 5 &amp; -2 &amp; 3 &amp; -1\\<br>    0 &amp; -4 &amp; -2 &amp; 7 &amp; -1\\<br>    \end{array}<br>    \right]<br>    =<br>    \begin{bmatrix}<br>    A_{11} &amp; A_{12}\\<br>    A_{21} &amp; A_{22}\\<br>    \end{bmatrix} \\<br>    B=<br>    \begin{bmatrix}<br>    6 &amp; 4\\<br>    -2 &amp; 1\\<br>    -3 &amp; 7\\<br>    \hline<br>    -1 &amp; 3\\<br>    5 &amp; 2\\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    B_1 \\<br>    B_2 \\<br>    \end{bmatrix} \\<br>    AB=<br>    \begin{bmatrix}<br>    A_{11} &amp; A_{12}\\<br>    A_{21} &amp; A_{22}\\<br>    \end{bmatrix}<br>    \begin{bmatrix}<br>    B_1 \\<br>    B_2 \\<br>    \end{bmatrix}<br>    =<br>     \begin{bmatrix}<br>    A_{11}B_1 + A_{12}B_2 \\<br>    A_{21}B_1 + A_{22}B_2 \\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    -5 &amp; 4 \\<br>    -6 &amp; 2 \\<br>    \hline<br>    2 &amp; 1<br>    \end{bmatrix}<br>$$</p>
+<h2 id="矩阵因式分解"><a href="#矩阵因式分解" class="headerlink" title="矩阵因式分解"></a>矩阵因式分解</h2><p>矩阵的乘法是将多个矩阵结合成一个矩阵，而矩阵的因式分解是将一个矩阵分成多个矩阵</p>
+<h3 id="LU分解"><a href="#LU分解" class="headerlink" title="LU分解"></a>LU分解</h3><p>LU分解一般用于解一系列具有相同系数矩阵的线性方程，例如<br>$$<br>    A\mathbf x=b_1, A\mathbf x=b_2,\cdots ,A\mathbf x=b_n<br>$$</p>
+<h4 id="LU分解算法"><a href="#LU分解算法" class="headerlink" title="LU分解算法"></a>LU分解算法</h4><p>设$A$可以化为阶梯形$U$，化简过程仅使用行倍加变换，这样存在单位下三角初等矩阵$E_1,\cdots,E_p$，使得<br>$$<br>    E_p,\cdots,E_1A=U \\<br>    A=(E_p,\cdots,E_1)^{-1}U=LU  \\<br>    L=(E_p,\cdots,E_1)^{-1  }<br>$$</p>
+<h2 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h2><h3 id="上三角矩阵"><a href="#上三角矩阵" class="headerlink" title="上三角矩阵"></a>上三角矩阵</h3><p>$m\times n$矩阵的主对角线以下元素全为0，该矩阵是可逆的。</p>
+<h3 id="下三角矩阵"><a href="#下三角矩阵" class="headerlink" title="下三角矩阵"></a>下三角矩阵</h3><p>$m\times n$矩阵的主对角线以上元素全为0，该矩阵是可逆的。</p>
+<h3 id="分块对角矩阵"><a href="#分块对角矩阵" class="headerlink" title="分块对角矩阵"></a>分块对角矩阵</h3><p>分块对角矩阵是一个分块矩阵，除了主对角线上各分块之外，其余全是零分块，当且仅当主对角线上各分块都是可逆时，该矩阵是可逆的。</p>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>1.$A,B,C$是维数相同的矩阵，$r,s$为实数</p>
+<blockquote>
+<ul>
+<li>$A+B=B+A$</li>
+<li>$(A+B)+C=A+(B+C)$</li>
+<li>$A+0=A$</li>
+<li>$r(A+B)=rA+rB$</li>
+<li>$(r+s)A=rA+sA$</li>
+<li>$r(sA)=(rs)A$</li>
+</ul>
+</blockquote>
+<p>2.设$A$为$m\times n$矩阵，$B C$的维数使下列各式有定义</p>
+<blockquote>
+<ul>
+<li>$A(BC)=(AB)C$</li>
+<li>$A(B+C)=AB+AC$</li>
+<li>$(B+C)A=BA+CA$</li>
+<li>$r(AB)=(rA)B=A(rB)$</li>
+<li>$I_mA=A=AI_n$</li>
+</ul>
+</blockquote>
+<p>3.设$A$表示为矩阵，其维数使下列各式有定义</p>
+<blockquote>
+<ul>
+<li>$(A^T)^T=A$</li>
+<li>$(A+B)^T=A^T+B^T$</li>
+<li>$(rA)^T=rA^T$</li>
+<li>$(AB)^T=B^TA^T$</li>
+</ul>
+</blockquote>
+<p>4.设$A=\begin{bmatrix} a &amp; b\\ c &amp; d\\ \end{bmatrix}$,若$ad-bc\neq 0$，则$A$可逆，且<br>$$<br>    A^{-1}={1\over{ad-bc}} \begin{bmatrix} d &amp; -b\\ -c &amp; a\\ \end{bmatrix}<br>$$</p>
+<p>5.若$A$是可逆$n\times n$矩阵，则对每一个$R^n$中的$\mathbf b$，方程$A\mathbf x=\mathbf b$有唯一解$\mathbf x=A^{-1}\mathbf b$<br>6.若$A,B$为可逆矩阵，则</p>
+<blockquote>
+<ul>
+<li>$(A^{-1})^{-1}=A$</li>
+<li>$(AB)^{-1}=B^{-1}A^{-1}$</li>
+<li>$(A^T)^{-1}=(A^{-1})^T$</li>
+</ul>
+</blockquote>
+<p>7.$n\times n$矩阵$A$是可逆的，当且仅当$A$行等价于$I_n$，这时，把$A$变为$I_n$的一系列初等行变化同时把$I_n$变成$A^[-1]$</p>
+<p>8.可逆矩阵定理<br>设$A$为$n\times n$矩阵，则下列命题是等价的，即对某一特定的$A$，它们同时为真或同时为假</p>
+<blockquote>
+<ul>
+<li>$A$是可逆矩阵</li>
+<li>$A$等价于$n\times n$单位矩阵</li>
+<li>$A$有$n$个主元位置</li>
+<li>方程$A\mathbf x=0$仅有平凡解</li>
+<li>$A$的各列线性无关</li>
+<li>线性变换$\mathbf x\mapsto A\mathbf x$是一对一的</li>
+<li>对$R^n$中任意$\mathbf b$，方程$A\mathbf x=\mathbf b$至少有一个解</li>
+<li>$A$的各列生成$R^n$</li>
+<li>线性变换$\mathbf x\mapsto A\mathbf x$把$R^n$映射到$R^n$上</li>
+<li>存在$n\times n$矩阵$C,D$，使$CA=I, AD=I$</li>
+<li>$A^T$是可逆矩阵</li>
+</ul>
+</blockquote>
+<p>9.设$T:R^n \to R^n$为线性变换，$A$为$T$的标准矩阵，则$T$可逆当且仅当$A$是可逆矩阵，这时由$S(\mathbf x)=A^{-1}\mathbf x$定义的线性变换$S$是满足以下函数的唯一函数<br>$$<br>    对所有R^n中的\mathbf x, S(T(\mathbf x))=\mathbf x \\<br>    对所有R^n中的\mathbf x, T(S(\mathbf x))=\mathbf x \\<br>$$<br>10.若$A$是$m\times n$矩阵，$B$是$n\times p$矩阵，$col_k(A)$代表$A$的第$k$列，$row_k(B)$代表$B$的第$k$行，则<br>$$<br>    AB = [col_1(A) col_2(A) \cdots col_n(A)]<br>    \begin{bmatrix}<br>    row_1(B)\\<br>    row_2(B)\\<br>    \vdots\\<br>    row_n(B)\\<br>    \end{bmatrix}\\<br>    =col_1(A)row_1(B)+\cdots+col_n(A)col_n(B)<br>$$<br>11.列昂惕夫投入产出模型：设$C$为某一经济的消耗矩阵，$d$为最终需求，若$C$和$d$的元素非负，$C$的每一列的和小于1，则$(I-C)^{-1}$存在，而产出向量<br>$$<br>    \mathbf x= (I-C)^{-1}\mathbf d<br>$$<br>有非负元素，且是下列方程的唯一解<br>$$<br>    \mathbf x = C\mathbf x + \mathbf d<br>$$</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><h3 id="分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的"><a href="#分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的" class="headerlink" title="分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的"></a>分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的</h3><p>$$<br>    AA^{-1}=<br>    \begin{bmatrix}<br>    A_{11} &amp; 0\\<br>    0 &amp; A_{22} \\<br>    \end{bmatrix}<br>    \begin{bmatrix}<br>    B_{11} &amp; B_{12} \\<br>    B_{21} &amp; B_{22} \\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    I_q &amp; 0 \\<br>    0 &amp; I_p \\<br>    \end{bmatrix} \\<br>    A_{11}B_{11}=I_q, A_{11}B_{12}=0 \\<br>    A_{22}B_{21}=0, A_{22}B_{22}=I_p \\<br>    B_{11} = A_{11}^{-1}, B_{12}=0 \\<br>    B_{22} = A_{22}^{-1}, B_{21}=0 \\<br>    A^{-1}=<br>     \begin{bmatrix}<br>    B_{11} &amp; B_{12} \\<br>    B_{21} &amp; B_{22} \\<br>    \end{bmatrix}<br>    =<br>    \begin{bmatrix}<br>    A_{11}^{-1} &amp; 0 \\<br>    0 &amp; A_{22}^{-1} \\<br>    \end{bmatrix}<br>$$</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Linear-Algebra/" rel="tag">#Linear Algebra</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/资源/开源项目推荐" rel="next" title="开源项目推荐">
+                <i class="fa fa-chevron-left"></i> 开源项目推荐
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/Math-行列式－《线性代数及应用》" rel="prev" title="行列式－《线性代数及应用》">
+                行列式－《线性代数及应用》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="Math/Math-矩阵代数－《线性代数及应用》"
+           data-title="矩阵代数－《线性代数及应用》" data-url="http://blog.freeabyss.com/Math/Math-矩阵代数－《线性代数及应用》">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Abyss" />
+          <p class="site-author-name" itemprop="name">Abyss</p>
+          <p class="site-description motion-element" itemprop="description">读书笔记和个人总结</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵运算"><span class="nav-number">1.</span> <span class="nav-text">矩阵运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与标量相乘"><span class="nav-number">1.1.</span> <span class="nav-text">与标量相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵相乘"><span class="nav-number">1.2.</span> <span class="nav-text">矩阵相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵的乘幂"><span class="nav-number">1.3.</span> <span class="nav-text">矩阵的乘幂</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的性质"><span class="nav-number">2.</span> <span class="nav-text">矩阵的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵的转置"><span class="nav-number">2.1.</span> <span class="nav-text">矩阵的转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵的逆"><span class="nav-number">2.2.</span> <span class="nav-text">矩阵的逆</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#求-A-1-的算法"><span class="nav-number">2.2.1.</span> <span class="nav-text">求$A^{-1}$的算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可逆矩阵的性质"><span class="nav-number">2.2.2.</span> <span class="nav-text">可逆矩阵的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分块矩阵"><span class="nav-number">2.3.</span> <span class="nav-text">分块矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分块矩阵的乘法"><span class="nav-number">2.3.1.</span> <span class="nav-text">分块矩阵的乘法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵因式分解"><span class="nav-number">3.</span> <span class="nav-text">矩阵因式分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LU分解"><span class="nav-number">3.1.</span> <span class="nav-text">LU分解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#LU分解算法"><span class="nav-number">3.1.1.</span> <span class="nav-text">LU分解算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊矩阵"><span class="nav-number">4.</span> <span class="nav-text">特殊矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上三角矩阵"><span class="nav-number">4.1.</span> <span class="nav-text">上三角矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下三角矩阵"><span class="nav-number">4.2.</span> <span class="nav-text">下三角矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分块对角矩阵"><span class="nav-number">4.3.</span> <span class="nav-text">分块对角矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理"><span class="nav-number">5.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#证明"><span class="nav-number">6.</span> <span class="nav-text">证明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的"><span class="nav-number">6.1.</span> <span class="nav-text">分块对角矩阵可逆时，当且仅当主对角线各分块都是可逆的</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+</div>
+<!--
+<div class="powered-by">
+  天马行空工作室
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div> -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+</body>
+</html>

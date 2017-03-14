@@ -1,0 +1,1042 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="设计模式," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="预览
+
+
+名称
+定义
+
+
+
+
+策略模式
+封装了算法，为不同的算法提供统一的接口
+
+
+单一职责
+就一个类而言，应当仅有一个引起它变化的原因
+
+
+开放封闭原则
+类、模块、函数可以扩展，但是不可以修改
+
+
+依赖倒转原则
+抽象不应该依赖细节，细节应该依赖于抽象
+
+
+里氏替换原则
+子类型必须能够替换掉它们的父类型
+
+
+装饰模式
+动态的给对象添加额外的职责
+
+
+代理模式
+为其他对象提供一种代理以控制对这个对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式概述">
+<meta property="og:url" content="http://blog.freeabyss.com/设计模式/设计模式概述">
+<meta property="og:site_name" content="Abyss's blog">
+<meta property="og:description" content="预览
+
+
+名称
+定义
+
+
+
+
+策略模式
+封装了算法，为不同的算法提供统一的接口
+
+
+单一职责
+就一个类而言，应当仅有一个引起它变化的原因
+
+
+开放封闭原则
+类、模块、函数可以扩展，但是不可以修改
+
+
+依赖倒转原则
+抽象不应该依赖细节，细节应该依赖于抽象
+
+
+里氏替换原则
+子类型必须能够替换掉它们的父类型
+
+
+装饰模式
+动态的给对象添加额外的职责
+
+
+代理模式
+为其他对象提供一种代理以控制对这个对象">
+<meta property="og:updated_time" content="2016-09-12T16:17:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计模式概述">
+<meta name="twitter:description" content="预览
+
+
+名称
+定义
+
+
+
+
+策略模式
+封装了算法，为不同的算法提供统一的接口
+
+
+单一职责
+就一个类而言，应当仅有一个引起它变化的原因
+
+
+开放封闭原则
+类、模块、函数可以扩展，但是不可以修改
+
+
+依赖倒转原则
+抽象不应该依赖细节，细节应该依赖于抽象
+
+
+里氏替换原则
+子类型必须能够替换掉它们的父类型
+
+
+装饰模式
+动态的给对象添加额外的职责
+
+
+代理模式
+为其他对象提供一种代理以控制对这个对象">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.com/设计模式/设计模式概述"/>
+
+  <title> 设计模式概述 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Abyss's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随笔</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                设计模式概述
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-12T23:21:32+08:00" content="2016-09-12">
+              2016-09-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/设计模式/设计模式概述#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="设计模式/设计模式概述" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/设计模式/设计模式概述" class="leancloud_visitors" data-flag-title="设计模式概述">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">策略模式</td>
+<td style="text-align:left">封装了算法，为不同的算法提供统一的接口</td>
+</tr>
+<tr>
+<td style="text-align:left">单一职责</td>
+<td style="text-align:left">就一个类而言，应当仅有一个引起它变化的原因</td>
+</tr>
+<tr>
+<td style="text-align:left">开放封闭原则</td>
+<td style="text-align:left">类、模块、函数可以扩展，但是不可以修改</td>
+</tr>
+<tr>
+<td style="text-align:left">依赖倒转原则</td>
+<td style="text-align:left">抽象不应该依赖细节，细节应该依赖于抽象</td>
+</tr>
+<tr>
+<td style="text-align:left">里氏替换原则</td>
+<td style="text-align:left">子类型必须能够替换掉它们的父类型</td>
+</tr>
+<tr>
+<td style="text-align:left">装饰模式</td>
+<td style="text-align:left">动态的给对象添加额外的职责</td>
+</tr>
+<tr>
+<td style="text-align:left">代理模式</td>
+<td style="text-align:left">为其他对象提供一种代理以控制对这个对象的访问</td>
+</tr>
+<tr>
+<td style="text-align:left">工厂模式</td>
+<td style="text-align:left">定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类</td>
+</tr>
+<tr>
+<td style="text-align:left">模版方法</td>
+<td style="text-align:left">定义封装算法的骨架，而将特定的细节交由子类实现</td>
+</tr>
+<tr>
+<td style="text-align:left">建造者模式</td>
+<td style="text-align:left">将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的应用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变换不会影响到使用算法的客户</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>策略模式定义了一系列算法，这些算法完成相同的工作，只是实现不同，策略模式可以以相同的方式调用所有算法，减少了算法和使用算法类之间的耦合。</li>
+<li>易于进行单元测试</li>
+</ul>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>测旅模式可以封装任何类型的规则，只要在分析过程中需要在不同时间应用的业务规则，就可以使用策略模式处理这种变化的可能性。</p>
+<h2 id="单一职责"><a href="#单一职责" class="headerlink" title="单一职责"></a>单一职责</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>就一个类而言，应当仅有一个引起它变化的原因</p>
+<h3 id="为何需要单一职责"><a href="#为何需要单一职责" class="headerlink" title="为何需要单一职责"></a>为何需要单一职责</h3><p>当一个类承担的职责太多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或抑制这个类完成其他职责的能力，这种耦合会导致脆弱的设计，当变化发生时，设计会遭到意想不到的破坏</p>
+<h3 id="何时需要职责分离"><a href="#何时需要职责分离" class="headerlink" title="何时需要职责分离"></a>何时需要职责分离</h3><p>如果你能够想到多于一个的动机去改变一个类，那么这个类就具有多于一个的职责</p>
+<h2 id="开放封闭原则"><a href="#开放封闭原则" class="headerlink" title="开放封闭原则"></a>开放封闭原则</h2><ul>
+<li>无论模块是多么的”封闭”，都会存在一些无法对之封闭的变化，既然不可能完全封闭，设计人员必须对他设计的模块应该对那种变化封闭做出选择，他必须先猜测出最有可能发生的变化种类，然后构造抽象来隔离那么变化。</li>
+<li>等到变化发生时立即采取行动</li>
+<li>面对需求，对程序的改动是通过增加薪代码进行的，而不是更改现有的代码</li>
+<li>开发人员应改仅对程序中频繁变化的那些部分做出抽象</li>
+</ul>
+<h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h2><ul>
+<li>高层模块不应该依赖低层模块，两个都应该依赖抽象</li>
+<li>抽象不应该依赖细节。细节应该依赖抽象</li>
+<li>依赖倒转可以说是面向对象设计的标志，如果编写时考虑的都是如何针对抽象编程而不是针对细节编程，即程序中所有的依赖关系都是终止于抽象类或者接口，那就是面向对象的设计。</li>
+</ul>
+<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><ul>
+<li>只有当子类可以替换掉父类，软件单位的功能不受影响时，父类才能真正被复用，而子类也能够在父类基础上增加新的行为。</li>
+<li>由于子类的可替换性才使得使用父类类型的模块在无需修改的情况下可以扩展。</li>
+</ul>
+<h2 id="装饰模式-Decorator"><a href="#装饰模式-Decorator" class="headerlink" title="装饰模式(Decorator)"></a>装饰模式(Decorator)</h2><p>动态地给对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活。</p>
+<ul>
+<li>装饰模式是为已有功能动态的添加更多功能的一种方式</li>
+<li>当系统需要新的功能时，把每个要装饰的功能放在单独的类中，并让这个类包装它所要装饰的对象。</li>
+<li>装饰模式有效的将核心职责和装饰功能区分开，而且可以去除相关类中重复的装饰逻辑。</li>
+</ul>
+<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>为其他对象提供一种代理以控制对这个对象的访问。</p>
+<ul>
+<li>远程代理，为一个对象在不同的地址空间提供局部代表。这样可以隐藏一个对象存在于不同地址空间的事实。</li>
+<li>虚拟代理，是根据需要创建开销很大的对象，通过它存放实例化需要很长时间的真实对象。</li>
+<li>安全代理，用来控制真实对象访问时的权限。</li>
+<li>智能指引，是指当调用真实对象时，代理处理另外一些事。</li>
+</ul>
+<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><ul>
+<li>简单工厂模式的最大优点在于工厂类中包含必要的逻辑判断，根据客户端的选择条件动态实例化相关类，对客户端来说，去除了于具体产品的依赖。</li>
+<li>工厂方法模式实现时，客户端需要决定实例化哪一个工厂来实现运算类，选择判断的问题还是存在，也就是说工厂方法把简单工厂的内部逻辑判断移到来客户端代码来进行。</li>
+</ul>
+<h2 id="模版方法"><a href="#模版方法" class="headerlink" title="模版方法"></a>模版方法</h2><p>定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模版方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
+<ul>
+<li>模版方法模式是通过把不变行为搬移到超类，去除子类中重复的代码来体现它的优势</li>
+<li>当不变的和可变的行为在方法的子类实现中混合在一起的时候，不变的行为就会在子类中重复出现。我们通过模版方法模式把这些行为搬移到单一的地方，这样就帮助子类摆脱重复的不变行为的纠缠。</li>
+</ul>
+<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。</p>
+<ul>
+<li>迪米特法则的前提是，每个类都应当尽量降低成员的访问权限</li>
+<li>迪米特法则的根本思想是强调类与类之间的松耦合。</li>
+<li>类之间的耦合越弱，越有利于复用。</li>
+</ul>
+<h2 id="外观-Facade-模式"><a href="#外观-Facade-模式" class="headerlink" title="外观(Facade )模式"></a>外观(Facade )模式</h2><p>为子系统中的一组接口提供一个一致的界面，此模式定义来一个高层接口，这个接口使得这一子系统更加容易使用</p>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>在设计初期应该有意识的将不同的两个层分离，例如典型的MVN结构</li>
+<li>在开发阶段，随着系统不断重构演化而变得越来越复杂，增加外观可以提供一个简单的接口，减少它们之间的依赖</li>
+<li>维护一个遗留的大型系统时，可能这个系统已经非常难以维护和扩展，为新系统开发一个外观Facade类，来提供设计粗糙或高度复杂的遗留代码的比较清晰简单的接口，让新系统与Facade对象交互。</li>
+</ul>
+<h2 id="建造者模式-Builder"><a href="#建造者模式-Builder" class="headerlink" title="建造者模式(Builder)"></a>建造者模式(Builder)</h2><h3 id="用途-1"><a href="#用途-1" class="headerlink" title="用途"></a>用途</h3><p>主要用于创建一些复杂的对象，这些对象内部构建间的建造顺序通常是稳定的，但对象内部的构建通常面临着复杂的变化。<br>建造者模式是在当创建复杂对象的算法应该独立与该对象的组成部分以及它们的装配方式时适用的模式</p>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>使得建造代码与表示代码分离，由于建造者隐藏了该产品是如何组装的，所以若需要改变一个产品的内部表示，只需要再定义一个具体的建造者就可以了。</p>
+<h2 id="观察者模式-Observer"><a href="#观察者模式-Observer" class="headerlink" title="观察者模式(Observer)"></a>观察者模式(Observer)</h2><p>又称发布订阅模式(Publish/Subscribe)<br>观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一主题对象，这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己。</p>
+<h3 id="优势-1"><a href="#优势-1" class="headerlink" title="优势"></a>优势</h3><ul>
+<li>观察者模式所做的工作其实就是在解除耦合。让偶和的双方都依赖于抽象，而不是具体的实现。</li>
+<li>一个抽象模型有两个方面，其中一个方面依赖于另一个方面，这时用观察者模式可以将这两者封装在独立的对象中使它们各自独立的改变和复用。</li>
+</ul>
+<h3 id="用途-2"><a href="#用途-2" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>将一个系统分割成一系列相互协作的类有一个很不好的副作用，那就是需要维护相关对象间的一致性。我们不希望为了维持一致性而使得各类紧密耦合。</li>
+<li>当一个对象的改变需要同时改变其他对象时，而且它不知道有多少个对象有待改变。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag">#设计模式</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/MathJax/MathJax-tutorial" rel="next" title="MathJax tutorial">
+                <i class="fa fa-chevron-left"></i> MathJax tutorial
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Python/Python资料收集" rel="prev" title="Python资料收集">
+                Python资料收集 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="设计模式/设计模式概述"
+           data-title="设计模式概述" data-url="http://blog.freeabyss.com/设计模式/设计模式概述">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Abyss" />
+          <p class="site-author-name" itemprop="name">Abyss</p>
+          <p class="site-description motion-element" itemprop="description">读书笔记和个人总结</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#预览"><span class="nav-number">1.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#策略模式"><span class="nav-number">2.</span> <span class="nav-text">策略模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">2.2.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">2.3.</span> <span class="nav-text">使用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单一职责"><span class="nav-number">3.</span> <span class="nav-text">单一职责</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为何需要单一职责"><span class="nav-number">3.2.</span> <span class="nav-text">为何需要单一职责</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#何时需要职责分离"><span class="nav-number">3.3.</span> <span class="nav-text">何时需要职责分离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开放封闭原则"><span class="nav-number">4.</span> <span class="nav-text">开放封闭原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖倒转原则"><span class="nav-number">5.</span> <span class="nav-text">依赖倒转原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#里氏替换原则"><span class="nav-number">6.</span> <span class="nav-text">里氏替换原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰模式-Decorator"><span class="nav-number">7.</span> <span class="nav-text">装饰模式(Decorator)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理模式"><span class="nav-number">8.</span> <span class="nav-text">代理模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂方法模式"><span class="nav-number">9.</span> <span class="nav-text">工厂方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模版方法"><span class="nav-number">10.</span> <span class="nav-text">模版方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迪米特法则"><span class="nav-number">11.</span> <span class="nav-text">迪米特法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外观-Facade-模式"><span class="nav-number">12.</span> <span class="nav-text">外观(Facade )模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用途"><span class="nav-number">12.1.</span> <span class="nav-text">用途</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建造者模式-Builder"><span class="nav-number">13.</span> <span class="nav-text">建造者模式(Builder)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用途-1"><span class="nav-number">13.1.</span> <span class="nav-text">用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优势"><span class="nav-number">13.2.</span> <span class="nav-text">优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#观察者模式-Observer"><span class="nav-number">14.</span> <span class="nav-text">观察者模式(Observer)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优势-1"><span class="nav-number">14.1.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用途-2"><span class="nav-number">14.2.</span> <span class="nav-text">用途</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+</div>
+<!--
+<div class="powered-by">
+  天马行空工作室
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div> -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+</body>
+</html>

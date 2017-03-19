@@ -364,6 +364,8 @@
 <li>多个对象共享一个引用时，序列化和反序列化会有什么结果？</li>
 <li>如何解决兼容问题？</li>
 <li>序列化应用时需要注意的问题</li>
+<li>父类的序列化问题</li>
+<li>安全问题</li>
 </ul>
 </blockquote>
 <h2 id="什么是序列化"><a href="#什么是序列化" class="headerlink" title="什么是序列化"></a>什么是序列化</h2><p><strong>序列化</strong>是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 <strong>反序列化</strong>是将字节序列转化为对象的过程。<br>序列化是对对象的持久化，将对象序列化后可以存入文件中，也可以通过网络传递到远程服务器中。         </p>
@@ -416,6 +418,9 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> Object <span class="title">readResolve</span><span class="params">()</span> <span class="keyword">throws</span> ObjectStreamException </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value == <span class="number">1</span>) <span class="keyword">return</span> HORIZONTAL;</div><div class="line">    <span class="keyword">if</span> (value == <span class="number">2</span>) <span class="keyword">return</span> VERTICAL;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>请记住向遗留代码中所有类型安全的枚举以及向所有支持单例设计模式的类中添加<code>readResolve</code>方法。 </p>
 <h3 id="使用序列化clone对象"><a href="#使用序列化clone对象" class="headerlink" title="使用序列化clone对象"></a>使用序列化clone对象</h3><p>序列化机制有一种很有趣的用法，即提供了一种<code>clone</code>对象的简便途径，只需要将对象序列化到输出流中，并且将其读回。这种方式虽然方便，但性能比显式地构建新对象的方式慢的多。  </p>
+<h2 id="父类的序列化问题"><a href="#父类的序列化问题" class="headerlink" title="父类的序列化问题"></a>父类的序列化问题</h2><p>一个子类实现了<code>Serializable</code>接口，而它的父类没有实现<code>Serializable</code>接口，那么序列化时父类所属的数据域并不会被序列化。<strong>要想父类也序列化，就需要让父类也实现<code>Serializable</code>接口</strong>。     </p>
+<p>有一点非常重要，如果父类没有实现<code>Serializable</code>接口的话，就<strong>需要有默认的无参的构造函数</strong>。这是因为在父类没有实现<code>Serializable</code>接口时，虚拟机不会序列化父对象，而一个Java对象的构造必须先有父对象，才有子对象，反序列化也不列外。  </p>
+<h2 id="安全问题"><a href="#安全问题" class="headerlink" title="安全问题"></a>安全问题</h2><p>序列化后的字节序列并没有加密，若被黑客窃取了这部分数据，很容易的解析出数据域里的内容。 一个解决方案就是重写<code>writeObject</code>方法，对敏感内容加密后写入对象流，然后在<code>readObject</code>中解密。   </p>
 
           
         

@@ -1,0 +1,922 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Math,note,Discrete Mathematics,graph," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="图定义一个图$G$由顶点（或结点）的非空集$\mathbf V$和边集$\mathbf E$构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    
+
+环：把一个顶点连接自身的边     
+多重边：$m$条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为$m$的边     
+
+有向图一个有向图$(\mathbf V,\mathbf E)$由一个非空顶点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学学习笔记 图的基本概念 30">
+<meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-30-图的基本概念.html">
+<meta property="og:site_name" content="Abyss's blog">
+<meta property="og:description" content="图定义一个图$G$由顶点（或结点）的非空集$\mathbf V$和边集$\mathbf E$构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    
+
+环：把一个顶点连接自身的边     
+多重边：$m$条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为$m$的边     
+
+有向图一个有向图$(\mathbf V,\mathbf E)$由一个非空顶点">
+<meta property="og:image" content="http://blog.freeabyss.com/../images/graph_01.png">
+<meta property="og:image" content="http://blog.freeabyss.com/../images/graph_02.png">
+<meta property="og:image" content="http://blog.freeabyss.com/../images/graph_03.png">
+<meta property="og:image" content="http://blog.freeabyss.com/../images/graph_04.png">
+<meta property="og:image" content="http://blog.freeabyss.com/../images/graph_05.png">
+<meta property="og:updated_time" content="2017-03-16T12:25:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="离散数学学习笔记 图的基本概念 30">
+<meta name="twitter:description" content="图定义一个图$G$由顶点（或结点）的非空集$\mathbf V$和边集$\mathbf E$构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    
+
+环：把一个顶点连接自身的边     
+多重边：$m$条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为$m$的边     
+
+有向图一个有向图$(\mathbf V,\mathbf E)$由一个非空顶点">
+<meta name="twitter:image" content="http://blog.freeabyss.com/../images/graph_01.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.com/Math/Math-DM-30-图的基本概念.html"/>
+
+  <title> 离散数学学习笔记 图的基本概念 30 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Abyss's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Java程序员</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                离散数学学习笔记 图的基本概念 30
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-22T21:09:01+08:00" content="2017-02-22">
+              2017-02-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-30-图的基本概念.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-30-图的基本概念.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-30-图的基本概念.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 图的基本概念 30">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="图定义"><a href="#图定义" class="headerlink" title="图定义"></a>图定义</h2><p>一个图$G$由顶点（或结点）的非空集$\mathbf V$和边集$\mathbf E$构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    </p>
+<ul>
+<li>环：把一个顶点连接自身的边     </li>
+<li>多重边：$m$条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为$m$的边     </li>
+</ul>
+<h3 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h3><p>一个有向图$(\mathbf V,\mathbf E)$由一个非空顶点集$\mathbf V$和一个有向边集$\mathbf E$组成。每条有向边与一个顶点有序对相关联。认为与有序对$u,v)$相关的有向边开始于$u$，结束于$v$。    </p>
+<h3 id="度"><a href="#度" class="headerlink" title="度"></a>度</h3><h4 id="无向图中顶点的度"><a href="#无向图中顶点的度" class="headerlink" title="无向图中顶点的度"></a>无向图中顶点的度</h4><p>在无向图里顶点的度是与该顶点关联的边的数目，例外的情形是，顶点上的环算为度数加2。顶点$v$的度表示成$deg(v)$。</p>
+<h4 id="无向图中顶点的度的性质"><a href="#无向图中顶点的度的性质" class="headerlink" title="无向图中顶点的度的性质"></a>无向图中顶点的度的性质</h4><h5 id="握手定理"><a href="#握手定理" class="headerlink" title="握手定理"></a>握手定理</h5><p>设$G=(\mathbf V,\mathbf E)$是有$e$条边的无向图，则$$2e=\sum_{v\in V}deg(v)$$</p>
+<h5 id="无向图有偶数个奇数度顶点"><a href="#无向图有偶数个奇数度顶点" class="headerlink" title="无向图有偶数个奇数度顶点"></a>无向图有偶数个奇数度顶点</h5><h4 id="有向图中顶点的度"><a href="#有向图中顶点的度" class="headerlink" title="有向图中顶点的度"></a>有向图中顶点的度</h4><p>当$(u,v)$是有向边时，说$u$邻接到$v$，顶点$u$称为$(u,v)$的起点，$v$称为$(u,v)$的终点。环的起点和终点相同。<br>在有向图中，顶点$v$的入度是以$v$作为终点的边数，表示成$deg^-(v)$，顶点$v$的出度是以$v$作为起点的边数，表示成$deg^+(v)$.<br>设$G=(\mathbf V,\mathbf E)$是带有向边的图。于是$$\sum_{v\in V}deg^-(v)=\sum_{v\in V}deg^+(v)=\mid E\mid$$</p>
+<h3 id="子图"><a href="#子图" class="headerlink" title="子图"></a>子图</h3><p>图$G=(\mathbf V,\mathbf E)$的子图是图$H=(\mathbf W,\mathbf F)$，其中$\mathbf W\subseteq\mathbf F$而且$\mathbf F\subseteq\mathbf E$。</p>
+<h3 id="并图"><a href="#并图" class="headerlink" title="并图"></a>并图</h3><p>两个简单图$G_1=(\mathbf V_1,\mathbf E_1)$和$G_2=(\mathbf V_2,\mathbf E_2)$的并图是带有顶点集$\mathbf V_1\cup\mathbf V_2$和边集$\mathbf E_1\cup\mathbf E_2$的简单图。$G_1$和$G_2$的并图表示成$G_1\cup G_2$。</p>
+<h2 id="图的类型"><a href="#图的类型" class="headerlink" title="图的类型"></a>图的类型</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">边</th>
+<th style="text-align:left">多重边</th>
+<th style="text-align:left">环</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">简单图</td>
+<td style="text-align:left">无向</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">否</td>
+</tr>
+<tr>
+<td style="text-align:left">多重图</td>
+<td style="text-align:left">无向</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">否</td>
+</tr>
+<tr>
+<td style="text-align:left">伪图</td>
+<td style="text-align:left">无向</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">是</td>
+</tr>
+<tr>
+<td style="text-align:left">有向图</td>
+<td style="text-align:left">有向</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">是</td>
+</tr>
+<tr>
+<td style="text-align:left">有向多重图</td>
+<td style="text-align:left">有向</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">是</td>
+</tr>
+<tr>
+<td style="text-align:left">混合图</td>
+<td style="text-align:left">有向+无向</td>
+<td style="text-align:left">是</td>
+<td style="text-align:left">是</td>
+</tr>
+</tbody>
+</table>
+<p>因为图论在各个行业中广泛应用，不同行业之间术语有些差异。尽管图的术语可能差异很大，但有三个需要注意的地方：    </p>
+<ul>
+<li>图的边是无向还是有向，又或者两者皆有</li>
+<li>是否存在多重边或多重有向边</li>
+<li>是否存在环 </li>
+</ul>
+<h3 id="一些特殊的简单图"><a href="#一些特殊的简单图" class="headerlink" title="一些特殊的简单图"></a>一些特殊的简单图</h3><h4 id="完全图"><a href="#完全图" class="headerlink" title="完全图"></a>完全图</h4><p>$n$个顶点的完全图是在每对顶点之间都恰好有一条边的简单图。用$K_n$表示。<br><img src="../images/graph_01.png" alt=""></p>
+<h4 id="圈图"><a href="#圈图" class="headerlink" title="圈图"></a>圈图</h4><p>圈图是由$n$个顶点$v_1,v_2,\dots,v_n$以及边$\{v_1,v_2\},\{v_2,v_3\},\dots, \{v_{n-1}, v_n\},\{v_n,v_1\}$组成的。用$C_n$表示。<br><img src="../images/graph_02.png" alt=""></p>
+<h4 id="轮图"><a href="#轮图" class="headerlink" title="轮图"></a>轮图</h4><p>当给圈图添加另一个顶点，并且把这个新顶点与圈图里$n$个顶点逐个连接时，就得出轮图。用$W_n$表示。<br><img src="../images/graph_03.png" alt="">    </p>
+<h4 id="n立方体图"><a href="#n立方体图" class="headerlink" title="n立方体图"></a>n立方体图</h4><p>$n$立方体图是用顶点表示$2^n$个长度为$n$的位串的图。两个顶点相邻当且仅当它们所表示的位串恰恰相差一位。 可以从$n$立方图$Q_n$来构造$(n+1)$立方体图$Q_{n+1}$，方法是建立$Q_n$的两个副本，在$Q_n$的一个副本的顶点标记前加0，在$Q_n$的另一个副本的顶点标记前加1，并且加入连接那些标志只在第一位不同的两个顶点的边。<br><img src="../images/graph_04.png" alt=""></p>
+<h4 id="偶图"><a href="#偶图" class="headerlink" title="偶图"></a>偶图</h4><p>若把简单图$G$的顶点集分成两个不相交的非空集合$\mathbf V_1$和$\mathbf V_2$，使得图的每一条边都连接着$\mathbf V_1$里的一个顶点与$\mathbf V_2$里的一个顶点。因此$G$里没有边是连接着$\mathbf V_1$里的两个顶点或$\mathbf V_2$里的两个顶点。则$G$称为偶图或者二分图。     </p>
+<h5 id="判断简单图是偶图的准则"><a href="#判断简单图是偶图的准则" class="headerlink" title="判断简单图是偶图的准则"></a>判断简单图是偶图的准则</h5><p>对图中的每个顶点赋以两种不同的颜色，而不让相邻接的顶点被赋以相同的颜色。     </p>
+<h5 id="完全偶图"><a href="#完全偶图" class="headerlink" title="完全偶图"></a>完全偶图</h5><p>完全偶图$K_{m,n}是顶点集分成分别含有$m$和$n$个顶点的两个子集的图。两个顶点之间有边当且仅当一个顶点属于第一个子集而另外一个顶点属于第二个子集。<br><img src="../images/graph_05.png" alt=""></p>
+<h3 id="度序列"><a href="#度序列" class="headerlink" title="度序列"></a>度序列</h3><p>一个图的度序列是由该图的各节点的度按递减顺序排列的序列。其中，如果一个序列是简单图的度序列，那么该序列是<strong>成图</strong>的</p>
+<h3 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h3><p>若简单图每个顶点的度都相同，则这个图称为正则的。若正则图的每个顶点的度都为$n$，则这个图称为$n$正则。   </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag">#Math</a>
+          
+            <a href="/tags/note/" rel="tag">#note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag">#Discrete Mathematics</a>
+          
+            <a href="/tags/graph/" rel="tag">#graph</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Mac/Mac-Mac下制作MacOS启动盘.html" rel="next" title="Mac-Mac下制作MacOS启动盘">
+                <i class="fa fa-chevron-left"></i> Mac-Mac下制作MacOS启动盘
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/Math-DM-31-图的表示.html" rel="prev" title="离散数学学习笔记 图的表示 31">
+                离散数学学习笔记 图的表示 31 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="Math/Math-DM-30-图的基本概念.html"
+           data-title="离散数学学习笔记 图的基本概念 30" data-url="http://blog.freeabyss.com/Math/Math-DM-30-图的基本概念.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Abyss" />
+          <p class="site-author-name" itemprop="name">Abyss</p>
+          <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#图定义"><span class="nav-number">1.</span> <span class="nav-text">图定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有向图"><span class="nav-number">1.1.</span> <span class="nav-text">有向图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#度"><span class="nav-number">1.2.</span> <span class="nav-text">度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无向图中顶点的度"><span class="nav-number">1.2.1.</span> <span class="nav-text">无向图中顶点的度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无向图中顶点的度的性质"><span class="nav-number">1.2.2.</span> <span class="nav-text">无向图中顶点的度的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#握手定理"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">握手定理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无向图有偶数个奇数度顶点"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">无向图有偶数个奇数度顶点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有向图中顶点的度"><span class="nav-number">1.2.3.</span> <span class="nav-text">有向图中顶点的度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子图"><span class="nav-number">1.3.</span> <span class="nav-text">子图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并图"><span class="nav-number">1.4.</span> <span class="nav-text">并图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图的类型"><span class="nav-number">2.</span> <span class="nav-text">图的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些特殊的简单图"><span class="nav-number">2.1.</span> <span class="nav-text">一些特殊的简单图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#完全图"><span class="nav-number">2.1.1.</span> <span class="nav-text">完全图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#圈图"><span class="nav-number">2.1.2.</span> <span class="nav-text">圈图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轮图"><span class="nav-number">2.1.3.</span> <span class="nav-text">轮图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#n立方体图"><span class="nav-number">2.1.4.</span> <span class="nav-text">n立方体图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#偶图"><span class="nav-number">2.1.5.</span> <span class="nav-text">偶图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#判断简单图是偶图的准则"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">判断简单图是偶图的准则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#完全偶图"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">完全偶图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#度序列"><span class="nav-number">2.2.</span> <span class="nav-text">度序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则"><span class="nav-number">2.3.</span> <span class="nav-text">正则</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+</div>
+<!--
+<div class="powered-by">
+  天马行空工作室
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div> -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+</body>
+</html>

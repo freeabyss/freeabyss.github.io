@@ -92,15 +92,15 @@
 
 
 
-<meta name="description" content="读书笔记和个人总结">
+<meta name="description" content="分享我的读书笔记和经验总结">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Abyss's blog">
 <meta property="og:url" content="http://blog.freeabyss.com/page/3/index.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="读书笔记和个人总结">
+<meta property="og:description" content="分享我的读书笔记和经验总结">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Abyss's blog">
-<meta name="twitter:description" content="读书笔记和个人总结">
+<meta name="twitter:description" content="分享我的读书笔记和经验总结">
 
 
 
@@ -160,7 +160,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">随笔</p>
+  <p class="site-subtitle">Java程序员</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -254,6 +254,322 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Math/Math-DM-11-算法增长.html" itemprop="url">
+                  离散数学学习笔记 函数的增长 11
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-18T19:25:01+08:00" content="2016-12-18">
+              2016-12-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-11-算法增长.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-11-算法增长.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-11-算法增长.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 函数的增长 11">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="函数的增长"><a href="#函数的增长" class="headerlink" title="函数的增长"></a>函数的增长</h2><h3 id="大O记号"><a href="#大O记号" class="headerlink" title="大O记号"></a>大O记号</h3><p>大$O$记号广泛用于估计当输入增长时一个算法所用的运算数。有了这个记号，可以确定当输入规模增大时，用一个特定的算法来解题是否实际可行。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$,使得只要$x&gt;k$，就有 $$\mid f(x)\mid\le C\mid g(x)\mid$$ 我们说$f(x)$是$O(g(x))$。     </p>
+<blockquote>
+<p>$O(g(x))$其实可以看作是一个集合，是所有函数值大于$f(x)$的函数集合 </p>
+</blockquote>
+<p>如果$$\mid f(x)\mid\le C\mid g(x)\mid\quad 若x&gt;k$$并且如果对所有$x&gt;k$，有$\mid h(x)\mid &gt;\mid g(x)\mid$，那么$$\mid f(x)\mid\le C\mid h(x)\mid\quad 若x&gt;k$$</p>
+<h4 id="一些重要的大O结果"><a href="#一些重要的大O结果" class="headerlink" title="一些重要的大O结果"></a>一些重要的大O结果</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">$f(x)$</th>
+<th style="text-align:left">$O(g(x))$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$</td>
+<td style="text-align:left">$O(x^n)$</td>
+</tr>
+<tr>
+<td style="text-align:left">前$n$个正整数和</td>
+<td style="text-align:left">$O(n^2)$</td>
+</tr>
+<tr>
+<td style="text-align:left">$n!$</td>
+<td style="text-align:left">$O(n^n)$</td>
+</tr>
+<tr>
+<td style="text-align:left">$logn!$</td>
+<td style="text-align:left">$O(nlogn)$</td>
+</tr>
+<tr>
+<td style="text-align:left">$logn$</td>
+<td style="text-align:left">$O(n)$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="函数组合的增长"><a href="#函数组合的增长" class="headerlink" title="函数组合的增长"></a>函数组合的增长</h4><p>假定$f_1(x)$是$O(g_1(x))$，$f_2(x)$是$O(g_2(x))$,那么$(f_1+f_2)(x)$是 $$O(\;max(\;\mid g_1(x)\mid,\;\mid g_2(x)\mid )\;)$$<br>假定$f_1(x)$是$O(g_1(x))$，$f_2(x)$是$O(g_2(x))$,那么$(f_1f_2)(x)$是$$O(g_1(x)g_2(x))$$。</p>
+<h3 id="大-Omega-符号和大-Theta-符号"><a href="#大-Omega-符号和大-Theta-符号" class="headerlink" title="大$\Omega$符号和大$\Theta$符号"></a>大$\Omega$符号和大$\Theta$符号</h3><p>大O符合广泛用于描述函数增长，而大$\Omega$符合用于描述函数的下限，大$\Theta$符号用于描述函数的上下限。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常数$C$和$k$，使得在$x&gt;k$时$$\mid f(x)\mid\ge C\mid g(x)\mid$$我们说$f(x)$是$\Omega(g(x))$。<br>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果$f(x)$是$O(g(x))$及$f(x)$\Omega(g(x))$，就说$f(x)$是$\Theta(g(x))$。若$f(x)$是$\Theta(g(x))$，就说f(x)$是大$\Theta g(x)$，也说$f(x)$是$g(x)$阶的。<br>如果存在正实数$C_1,C_2,k$，使得对$x&gt;k$ $$C_1\mid g(x)\mid\le\mid f(x)\mid\le C_2\mid g(x)\mid$$<br>则$f(x)$是$\Theta(g(x))$。<br>令$f(X)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$，其中$a_0,a_1,a_2,\dots,a_n$为实数，且$a_n\neq 0$，则$f(x)$是$x^n$阶的。    </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/XML/Web-XML-Schema-04-指示器.html" itemprop="url">
+                  XML Schema 指示器 04
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-17T14:35:57+08:00" content="2016-12-17">
+              2016-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/XML/" itemprop="url" rel="index">
+                    <span itemprop="name">XML</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/XML/Web-XML-Schema-04-指示器.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="XML/Web-XML-Schema-04-指示器.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/XML/Web-XML-Schema-04-指示器.html" class="leancloud_visitors" data-flag-title="XML Schema 指示器 04">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="指示器"><a href="#指示器" class="headerlink" title="指示器"></a>指示器</h2><p>通过指示器可以控制在文档中使用元素的方式。    </p>
+<h3 id="Order-指示器"><a href="#Order-指示器" class="headerlink" title="Order 指示器"></a>Order 指示器</h3><p>Order 用于定义元素的顺序</p>
+<h4 id="All"><a href="#All" class="headerlink" title="All"></a>All</h4><p><code>&lt;all&gt;</code>指示器规定子元素可以按照任意顺序出现，且每个子元素必须只能出现一次。 </p>
+<blockquote>
+<p>当使用 <code>&lt;all&gt;</code> 指示器时，你可以把 <code>&lt;minOccurs&gt;</code>设置为 0 或者 1，而只能把 <code>&lt;maxOccurs&gt;</code> 指示器设置为 1 </p>
+<h4 id="Choice"><a href="#Choice" class="headerlink" title="Choice"></a>Choice</h4><p><code>&lt;choice&gt;</code>指示器规定可出现某个子元素或者可出现另外一个子元素（非此即彼）。 </p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:choice</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"employee"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"member"</span> <span class="attr">type</span>=<span class="string">"member"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:choice</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>如需设置子元素出现任意次数，可将 <code>&lt;maxOccurs&gt;</code>设置为 <code>unbounded</code>（无限次）。</p>
+</blockquote>
+<h4 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence"></a>Sequence</h4><p><code>&lt;sequence&gt;</code> 规定子元素必须按照特定的顺序出现。</p>
+<h3 id="Occurrence-指示器"><a href="#Occurrence-指示器" class="headerlink" title="Occurrence 指示器"></a>Occurrence 指示器</h3><p>Occurrence 指示器用于定义某个元素出现的频率。    </p>
+<blockquote>
+<p>对于所有的 “Order” 和 “Group” 指示器（any、all、choice、sequence、group name 以及 group reference），其中的 maxOccurs 以及 minOccurs 的默认值均为 1。</p>
+</blockquote>
+<h4 id="maxOccurs"><a href="#maxOccurs" class="headerlink" title="maxOccurs"></a>maxOccurs</h4><p><code>&lt;maxOccurs&gt;</code> 指示器可规定某个元素可出现的最大次数。如需使某个元素的出现次数不受限制，请使用<code>maxOccurs=&quot;unbounded&quot;</code> 这个声明</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"full_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"child_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">maxOccurs</span>=<span class="string">"10"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="minOccurs"><a href="#minOccurs" class="headerlink" title="minOccurs"></a>minOccurs</h4><p><code>&lt;minOccurs&gt;</code> 指示器可规定某个元素能够出现的最小次数。</p>
+<h3 id="Group指示器"><a href="#Group指示器" class="headerlink" title="Group指示器"></a>Group指示器</h3><p>Group 指示器用于定义相关的数批元素。<br>您必须在 <code>group</code> 声明内部定义一个 <code>all</code>、<code>choice</code> 或者 <code>sequence</code> 元素。</p>
+<h4 id="元素组"><a href="#元素组" class="headerlink" title="元素组"></a>元素组</h4><p>把 group 定义完毕以后，就可以在另一个定义中引用它了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">name</span>=<span class="string">"persongroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:group</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">ref</span>=<span class="string">"persongroup"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="属性组"><a href="#属性组" class="headerlink" title="属性组"></a>属性组</h4><p>已定义完毕属性组之后，就可以在另一个定义中引用它了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">name</span>=<span class="string">"personattrgroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:attributeGroup</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">ref</span>=<span class="string">"personattrgroup"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -3206,397 +3522,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Math/Math-DM-03-谓词逻辑.html" itemprop="url">
-                  离散数学学习笔记 谓词逻辑 03
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-30T21:45:35+08:00" content="2016-11-30">
-              2016-11-30
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Math/Math-DM-03-谓词逻辑.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-03-谓词逻辑.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/Math/Math-DM-03-谓词逻辑.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 谓词逻辑 03">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="谓词逻辑"><a href="#谓词逻辑" class="headerlink" title="谓词逻辑"></a>谓词逻辑</h2><p>若要明白什么是谓词逻辑，需要了解谓词和量词的概念。</p>
-<h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><p>谓词可以理解为变量。当命题函数中的谓词确定时，命题函数就称为命题，因而有真值。例如：$P(x)$表示语句“$x$大于$3$”，一旦给变量$x$赋一个值，语句$P(x)$就称为命题，因而有真值。<br>形为$P(x_1,x_2,…,x_n)$的语句是命题函数$P$在$m$元组$(x_1, x_2,…,x_n)$的值，$P$也称为$n$元谓词。   </p>
-<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><p>当谓词表示一定范围的事物时，由命题函数产生的命题称为<strong>量化</strong>。 这里讨论两种量化：全称量化和存在量化。 处理谓词和量词的逻辑领域称为谓词演算。     </p>
-<h4 id="全称量词"><a href="#全称量词" class="headerlink" title="全称量词"></a>全称量词</h4><p>对于论域内的每一个$x$，$P(x)$都为真值，记作$\forall xP(x)$，其中$\forall$称为全称量词。</p>
-<h4 id="存在量词"><a href="#存在量词" class="headerlink" title="存在量词"></a>存在量词</h4><p>对于论域内至少有一个$x$，使$P(x)$为真，记作$\exists xP(x)$，其中$\exists$称为存在量词。</p>
-<h4 id="唯一量词"><a href="#唯一量词" class="headerlink" title="唯一量词"></a>唯一量词</h4><p>存在惟一一个$x$使$P(x)$为真。记作$\exists!xP(x)$或$\exists_1xP(x)$。</p>
-<blockquote>
-<p>通常讲到量词的论域时，隐含假设它为非空集。</p>
-</blockquote>
-<h4 id="约束论域量词"><a href="#约束论域量词" class="headerlink" title="约束论域量词"></a>约束论域量词</h4><p>一个缩略符号通常用来约束量词的论域。 例如：<br>$\forall x\lt 0(x^2 \gt 0)$表示对于每个实数$x\lt 0$都有$x^2 \gt 0$。<br>另外，全称量化的约束和一个条件语句的全称量化等价。例如：$\forall x\lt 0(x^2 \gt 0)$等价于$\forall x(x\lt 0\rightarrow x^2 \gt 0)$<br>存在量词的约束和一个合取的存在量化等价。例如：$\exists z\gt 0(z^2 =2)$等价于$\exists z(z\gt 0\land z^2 =2)$</p>
-<h3 id="量词的优先级"><a href="#量词的优先级" class="headerlink" title="量词的优先级"></a>量词的优先级</h3><p>量词$\forall$和$\exists$比所有命题逻辑的逻辑运算有更高的优先级。</p>
-<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>命题逻辑中的逻辑等价概念可以扩展到谓词逻辑中。当且仅当无论什么谓词带入命题函数，或者无论哪个个体论域于这些命题函数中的变量上，它们都有相同的真值。</p>
-<h4 id="量词的摩根定律"><a href="#量词的摩根定律" class="headerlink" title="量词的摩根定律"></a>量词的摩根定律</h4><p>$$<br>\lnot \forall xP(x) \equiv \exists x\lnot P(x) \\<br>\lnot \exists xQ(x) \equiv \forall x\lnot Q(x)<br>$$</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Math/Math-DM-02-逻辑等价.html" itemprop="url">
-                  离散数学学习笔记 逻辑等价 02
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T16:58:58+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Math/Math-DM-02-逻辑等价.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-02-逻辑等价.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/Math/Math-DM-02-逻辑等价.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 逻辑等价 02">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。</p>
-<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。用如下定义这一概念：  </p>
-<ul>
-<li>如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。<blockquote>
-<p>符号$\equiv$不是逻辑链接符，因为$p\equiv q$不是复合命题。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="摩根定律及应用"><a href="#摩根定律及应用" class="headerlink" title="摩根定律及应用"></a>摩根定律及应用</h2><p>$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">名称</th>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">摩根定律</td>
-<td style="text-align:left">$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$</td>
-</tr>
-<tr>
-<td style="text-align:left">恒等律</td>
-<td style="text-align:left">$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">支配律</td>
-<td style="text-align:left">$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$</td>
-</tr>
-<tr>
-<td style="text-align:left">幂等律</td>
-<td style="text-align:left">$p\land p \equiv p$ <br> $p\lor p \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">双非律</td>
-<td style="text-align:left">$\lnot(\lnot p) \equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">交换律</td>
-<td style="text-align:left">$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$</td>
-</tr>
-<tr>
-<td style="text-align:left">结合律</td>
-<td style="text-align:left">$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">分配律</td>
-<td style="text-align:left">$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$</td>
-</tr>
-<tr>
-<td style="text-align:left">吸收律</td>
-<td style="text-align:left">$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$</td>
-</tr>
-<tr>
-<td style="text-align:left">否定律</td>
-<td style="text-align:left">$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$</td>
-</tr>
-</tbody>
-</table>
-<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$p\rightarrow q\equiv \lnot p\lor q $</td>
-</tr>
-<tr>
-<td style="text-align:left">$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$</td>
-</tr>
-<tr>
-<td style="text-align:left">$p\lor q\equiv \lnot p\rightarrow q$</td>
-</tr>
-<tr>
-<td style="text-align:left">$p\land q\equiv \lnot(p\rightarrow \lnot q) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot(p\rightarrow q)\equiv p\land \lnot q $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$</td>
-</tr>
-</tbody>
-</table>
-<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">等价关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$p↔︎q \equiv \lnot p↔︎ \lnot q $</td>
-</tr>
-<tr>
-<td style="text-align:left">$p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q) $</td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot (p↔︎q) \equiv p↔︎\lnot q $</td>
-</tr>
-</tbody>
-</table>
-<h2 id="对偶"><a href="#对偶" class="headerlink" title="对偶"></a>对偶</h2><p>对偶等价<br>对联结词完备集 非 与 或</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -3632,12 +3562,12 @@
                src="/images/avatar.jpeg"
                alt="Abyss" />
           <p class="site-author-name" itemprop="name">Abyss</p>
-          <p class="site-description motion-element" itemprop="description">读书笔记和个人总结</p>
+          <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">80</span>
+              <span class="site-state-item-count">82</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

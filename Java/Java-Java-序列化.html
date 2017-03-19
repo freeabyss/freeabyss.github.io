@@ -120,7 +120,7 @@
 
 
 什么是序列化序列化是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化是将字节序列转化为对象的过程。序列化是对对象">
-<meta property="og:updated_time" content="2017-03-19T14:14:09.000Z">
+<meta property="og:updated_time" content="2017-03-19T14:26:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 浅析序列化">
 <meta name="twitter:description" content="前言本篇文章从以下几个方面，讲述Java序列化相关的内容： 
@@ -403,7 +403,7 @@
 <li>描述序列化方法的标志集。</li>
 <li>对数据域的描述。  </li>
 </ul>
-<p>静态变量和被<code>transient</code>修饰的变量将不会被序列化。  </p>
+<p>静态变量和被<code>transient</code>修饰的变量将不会被序列化。除非超类也实现了<code>Serializable</code>接口，否则超类的数据域不会被序列化。   </p>
 <h2 id="修改默认的序列化机制"><a href="#修改默认的序列化机制" class="headerlink" title="修改默认的序列化机制"></a>修改默认的序列化机制</h2><p>Java提供了三种方式，用以修改默认的序列化机制。<br>考虑以下这种情况，某些数据域，例如只对本地方法有意义的存储文件句柄，这种信息在重新加载或传送到其他机器上时都是没有用处的，甚至会引起程序崩溃。因此为了防止这种情况，使用<code>transient</code>修饰符，被该修饰符修饰后的数据域将被序列化机制跳过。       </p>
 <p>另外一种情况是，类中的某些数据域没有实现<code>Serializable</code>接口，却又要将其序列化，这时就需要先将其标记为<code>transient</code>避免抛出<code>NotSerializableException</code>，然后通过重写<code>readObject</code>和<code>writeObject</code>方法，自定义序列化。这种两个方法是私有的，并且只能被序列化机制调用。   </p>
 <p>下面是一个典型示例，在<code>java.awt.geom</code>包中有大量的类都是不可序列化的，例如<code>Point2D.Double</code>，现在要序列化一个包含该类型字段的类，</p>

@@ -92,19 +92,19 @@
 
 
 
-<meta name="description" content="线性同余法选择四个数:模数$m$、乘数$a$、增量$c$、和种子$x_0$，使得$2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列$\{x_n\}$，使得对所有$n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   
-示例例如，选取$m=9,a=7,c=">
+<meta name="description" content="线性同余法  选择四个数: 模数 $m$、乘数 $a$、增量 $c$、和种子 $x_0$，使得 $2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列 $\{x_n\}$，使得对所有 $n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   
+示例  例如，选">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性同余法生成伪随机数">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Function-03-线性同余法生成伪随机数.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="线性同余法选择四个数:模数$m$、乘数$a$、增量$c$、和种子$x_0$，使得$2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列$\{x_n\}$，使得对所有$n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   
-示例例如，选取$m=9,a=7,c=">
+<meta property="og:description" content="线性同余法  选择四个数: 模数 $m$、乘数 $a$、增量 $c$、和种子 $x_0$，使得 $2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列 $\{x_n\}$，使得对所有 $n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   
+示例  例如，选">
 <meta property="og:updated_time" content="2016-12-24T09:20:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性同余法生成伪随机数">
-<meta name="twitter:description" content="线性同余法选择四个数:模数$m$、乘数$a$、增量$c$、和种子$x_0$，使得$2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列$\{x_n\}$，使得对所有$n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   
-示例例如，选取$m=9,a=7,c=">
+<meta name="twitter:description" content="线性同余法  选择四个数: 模数 $m$、乘数 $a$、增量 $c$、和种子 $x_0$，使得 $2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列 $\{x_n\}$，使得对所有 $n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   
+示例  例如，选">
 
 
 
@@ -352,8 +352,8 @@
       
 
       
-        <h2 id="线性同余法"><a href="#线性同余法" class="headerlink" title="线性同余法"></a>线性同余法</h2><p>选择四个数:模数$m$、乘数$a$、增量$c$、和种子$x_0$，使得$2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列$\{x_n\}$，使得对所有$n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   </p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>例如，选取$m=9,a=7,c=4,x_0=3$，产生的伪随机数序列如下:<br>$$<br>    x_1 = 7x_0+4\;\mathbf {mod}\; 9 = 25\;\mathbf {mod}\; 9=7\\<br>    x_2 = 7x_1+4\;\mathbf {mod}\; 9 = 53\;\mathbf {mod}\; 9=8\\<br>    …<br>$$<br>常使用的线性同余发生器的增量$c=0$。这样的发生器称为<strong>纯乘式发生器</strong>。例如以$2^{31}-1$为模，以$7^5$为乘数的纯乘式发生器就广为采用。会产生$2^{31}-2$个数，然后开始重复。      </p>
+        <h2 id="线性同余法"><a href="# 线性同余法" class="headerlink" title="线性同余法"></a>线性同余法 </h2><p> 选择四个数: 模数 $m$、乘数 $a$、增量 $c$、和种子 $x_0$，使得 $2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列 $\{x_n\}$，使得对所有 $n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   </p>
+<h3 id="示例"><a href="# 示例" class="headerlink" title="示例"></a>示例 </h3><p> 例如，选取 $m=9,a=7,c=4,x_0=3$，产生的伪随机数序列如下:<br>$$<br>    x_1 = 7x_0+4\;\mathbf {mod}\; 9 = 25\;\mathbf {mod}\; 9=7\\<br>    x_2 = 7x_1+4\;\mathbf {mod}\; 9 = 53\;\mathbf {mod}\; 9=8\\<br>    …<br>$$<br>常使用的线性同余发生器的增量 $c=0$。这样的发生器称为 <strong> 纯乘式发生器</strong>。例如以 $2^{31}-1$ 为模，以 $7^5$ 为乘数的纯乘式发生器就广为采用。会产生 $2^{31}-2$ 个数，然后开始重复。      </p>
 
       
     </div>
@@ -471,7 +471,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -488,7 +488,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -544,7 +544,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性同余法"><span class="nav-number">1.</span> <span class="nav-text">线性同余法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">1.1.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性同余法"><span class="nav-number">1.</span> <span class="nav-text">线性同余法 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">1.1.</span> <span class="nav-text">示例 </span></a></li></ol></li></ol></div>
             
           </div>
         </section>

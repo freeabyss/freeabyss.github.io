@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2017-03-19T14:42:37.000Z</updated>
+  <updated>2017-03-21T13:05:20.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,13 +16,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Math-DM-38- 树的基本概念</title>
+    <link href="http://blog.freeabyss.com/Math/Math-DM-38-%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html"/>
+    <id>http://blog.freeabyss.com/Math/Math-DM-38-树的基本概念.html</id>
+    <published>2017-03-21T12:13:04.000Z</published>
+    <updated>2017-03-21T13:05:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="# 概述" class="headerlink" title="概述"></a>概述 </h2><p><strong> 树</strong>是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。     </p>
+<p>另一个定义是：一个无向图是树当且仅当它在每对顶点之间存在唯一简单通路。       </p>
+<h3 id="一些常用的术语"><a href="# 一些常用的术语" class="headerlink" title="一些常用的术语"></a>一些常用的术语 </h3><p><strong> 根树 </strong> 是指定一个顶点作为根并且每条边的方向都离开根的树。    </p>
+<p>若 $u$ 是 $T$ 里非根的顶点，则 $u$ 的 <strong> 父母 </strong> 是使得从 $u$ 到 $v$ 存在有向边的唯一的顶点 $u$ 。当 $u$ 是 $v$ 的父母时，$v$ 称为 $u$ 的 <strong> 子女 </strong>。具有相同父母的顶点称为<strong> 兄弟 </strong>。非根顶点的<strong> 祖先 </strong> 是从根到该顶点的通路上的顶点，不包括该顶点自身，但包括根。顶点 $v$ 的后代是以 $v$ 作为祖先的顶点。树的顶点若没有子女称为 <strong> 树叶 </strong>。有子女的顶点称为<strong> 内点</strong>。        </p>
+<p>根树的 <strong> 层数 </strong> 是从根到任意顶点的最大通路的长度。   </p>
+<p>若跟树的每个内点都有不超过 $m$ 个子女，则称它为 $m$ 元树。若该树的每个内点都恰好有 $m$ 个子女，则称它为 <strong> 正则 </strong> $m$ <strong> 元树 </strong> 。把 $m=2$ 的正则 $m$ 元树称为<strong> 二叉树</strong>。</p>
+<blockquote>
+<p>注意，在计算机科学中，二叉树的定义是每个内点不超过 2 个子女的树，也即 2 元树。</p>
+</blockquote>
+<h2 id="树的性质"><a href="# 树的性质" class="headerlink" title="树的性质"></a>树的性质</h2><ol>
+<li>带有 $n$ 个顶点的树含有 $n-1$ 条边。     </li>
+</ol>
+<ol>
+<li>带有 $i$ 个内点的正则 $m$ 元树含有 $n=mi+1$ 个顶点。    </li>
+</ol>
+<ol>
+<li>一个正则 $m$ 元树若带有 </li>
+</ol>
+<ul>
+<li>$n$ 个顶点，则带有 $i=(n-1)/m$ 个内点和 $l=[(m-1)n+1]/m$ 个树叶； </li>
+<li>$i$  个内点，则带有 $n=mi+1$ 个顶点和 $l=(m-1)i+1$ 个树叶； </li>
+<li>$l$  个树叶，则带有 $n=(ml-1)/(m-1)$ 个顶点和 $i=(l-1)/(m-1)$ 个内点。    </li>
+</ul>
+<ol>
+<li>若一颗高度为 $h$ 的 $m$ 元树的所有顶点都在 $h$ 层或 $h-1$ 层，则这棵树是平衡的。  </li>
+<li>在高度为 $h$ 的 $m$ 元树里至多有 $m^h$ 个树叶。    </li>
+<li>若一个高度为 $h$ 的 $m$ 元树带有 $l$ 个树叶，则 $h\ge\lceil log_ml\rceil$。 若这个 $m$ 元树势正则和平衡的，则 $h=\lceil log_ml\rceil$ 。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;# 概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt; 树&lt;/strong&gt;是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。 
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+    
+      <category term="tree" scheme="http://blog.freeabyss.com/tags/tree/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java 浅析序列化</title>
     <link href="http://blog.freeabyss.com/Java/Java-Java-%E5%BA%8F%E5%88%97%E5%8C%96.html"/>
     <id>http://blog.freeabyss.com/Java/Java-Java-序列化.html</id>
     <published>2017-03-18T06:44:26.000Z</published>
     <updated>2017-03-19T14:42:37.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇文章从以下几个方面，讲述Java序列化相关的内容： </p>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h2><p> 本篇文章从以下几个方面，讲述 Java 序列化相关的内容： </p>
 <blockquote>
 <ul>
 <li>什么是序列化？</li>
@@ -35,68 +91,67 @@
 <li>安全问题</li>
 </ul>
 </blockquote>
-<h2 id="什么是序列化"><a href="#什么是序列化" class="headerlink" title="什么是序列化"></a>什么是序列化</h2><p><strong>序列化</strong>是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 <strong>反序列化</strong>是将字节序列转化为对象的过程。<br>序列化是对对象的持久化，将对象序列化后可以存入文件中，也可以通过网络传递到远程服务器中。         </p>
-<h2 id="实现序列化"><a href="#实现序列化" class="headerlink" title="实现序列化"></a>实现序列化</h2><p>在实现序列化的过程中，需要用到三个类<code>ObjectInputStream</code>、<code>ObjectOutputStream</code>和<code>Serializable</code>。首先，让需要序列化的对象所属类实现<code>Serializable</code>接口，该接口不需要实现任何方法，是典型的标记接口。 然后使用<code>ObjectInputStream</code>、<code>ObjectOutputStream</code>进行读写。   </p>
+<h2 id="什么是序列化"><a href="# 什么是序列化" class="headerlink" title="什么是序列化"></a>什么是序列化 </h2><p><strong> 序列化 </strong> 是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 <strong>反序列化 </strong> 是将字节序列转化为对象的过程。<br>序列化是对对象的持久化，将对象序列化后可以存入文件中，也可以通过网络传递到远程服务器中。         </p>
+<h2 id="实现序列化"><a href="# 实现序列化" class="headerlink" title="实现序列化"></a>实现序列化 </h2><p> 在实现序列化的过程中，需要用到三个类 <code>ObjectInputStream</code>、<code>ObjectOutputStream</code> 和<code>Serializable</code>。首先，让需要序列化的对象所属类实现 <code>Serializable</code> 接口，该接口不需要实现任何方法，是典型的标记接口。 然后使用 <code>ObjectInputStream</code>、<code>ObjectOutputStream</code> 进行读写。   </p>
 <script src="//gist.github.com/3d8ae4af25273ee8fec1c10c5c0002a2.js"></script>
 <p>当存储一个对象时，这个对象所属的类也必须存储，这个类的描述包含 </p>
 <ul>
 <li>类名。</li>
-<li>序列化的版本唯一的ID，它是通过对类、超类、接口、域类型和方法签名按照规范方式排序，然后应用SHA算法获得，并且只取前8位。它相当于一个类的指纹，假如类中存在<code>serialVersionUID</code>字段，则用它作为类的指纹。     </li>
+<li>序列化的版本唯一的 ID，它是通过对类、超类、接口、域类型和方法签名按照规范方式排序，然后应用 SHA 算法获得，并且只取前 8 位。它相当于一个类的指纹，假如类中存在 <code>serialVersionUID</code> 字段，则用它作为类的指纹。     </li>
 <li>描述序列化方法的标志集。</li>
 <li>对数据域的描述。  </li>
 </ul>
-<p>静态变量和被<code>transient</code>修饰的变量将不会被序列化。除非超类也实现了<code>Serializable</code>接口，否则超类的数据域不会被序列化。   </p>
-<h2 id="修改默认的序列化机制"><a href="#修改默认的序列化机制" class="headerlink" title="修改默认的序列化机制"></a>修改默认的序列化机制</h2><p>Java提供了三种方式，用以修改默认的序列化机制。<br>考虑以下这种情况，某些数据域，例如只对本地方法有意义的存储文件句柄，这种信息在重新加载或传送到其他机器上时都是没有用处的，甚至会引起程序崩溃。因此为了防止这种情况，使用<code>transient</code>修饰符，被该修饰符修饰后的数据域将被序列化机制跳过。       </p>
-<p>另外一种情况是，类中的某些数据域没有实现<code>Serializable</code>接口，却又要将其序列化，这时就需要先将其标记为<code>transient</code>避免抛出<code>NotSerializableException</code>，然后通过重写<code>readObject</code>和<code>writeObject</code>方法，自定义序列化。这种两个方法是私有的，并且只能被序列化机制调用。   </p>
-<p>下面是一个典型示例，在<code>java.awt.geom</code>包中有大量的类都是不可序列化的，例如<code>Point2D.Double</code>，现在要序列化一个包含该类型字段的类，</p>
+<p>静态变量和被 <code>transient</code> 修饰的变量将不会被序列化。除非超类也实现了 <code>Serializable</code> 接口，否则超类的数据域不会被序列化。   </p>
+<h2 id="修改默认的序列化机制"><a href="# 修改默认的序列化机制" class="headerlink" title="修改默认的序列化机制"></a>修改默认的序列化机制 </h2><p>Java 提供了三种方式，用以修改默认的序列化机制。<br> 考虑以下这种情况，某些数据域，例如只对本地方法有意义的存储文件句柄，这种信息在重新加载或传送到其他机器上时都是没有用处的，甚至会引起程序崩溃。因此为了防止这种情况，使用 <code>transient</code> 修饰符，被该修饰符修饰后的数据域将被序列化机制跳过。       </p>
+<p>另外一种情况是，类中的某些数据域没有实现 <code>Serializable</code> 接口，却又要将其序列化，这时就需要先将其标记为 <code>transient</code> 避免抛出 <code>NotSerializableException</code>，然后通过重写<code>readObject</code> 和<code>writeObject</code>方法，自定义序列化。这种两个方法是私有的，并且只能被序列化机制调用。   </p>
+<p>下面是一个典型示例，在 <code>java.awt.geom</code> 包中有大量的类都是不可序列化的，例如<code>Point2D.Double</code>，现在要序列化一个包含该类型字段的类，</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LabeledPoint</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String label;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">transient</span> Point2D.Double point;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">readObject</span><span class="params">(ObjectInputStream in)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException</span>&#123;</div><div class="line">        in.defaultReadObject();</div><div class="line">       	<span class="keyword">double</span> x = in.readDouble();</div><div class="line">       	<span class="keyword">double</span> y = in.readDouble();</div><div class="line">       	point = <span class="keyword">new</span> Point2D.Double(x, y);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">writeObject</span><span class="params">(ObjectOutputStream out)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        out.defaultWriteObject();</div><div class="line">        out.writeDouble(point.getX());</div><div class="line">        out.writeDouble(point.getY());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>defaultWriteObject</code>和<code>defaultReadObject</code>是特殊的方法，只能在序列化类的<code>writeObject</code>和<code>readObject</code>方法中被调用。<code>defaultWriteObject</code>表示使用默认的序列化机制，<code>defaultReadObject</code>反之。这两个方法也可以不调用，这样就跟下面讲的<code>Externalizable</code>接口差不多。      </p>
-<p>除了重写<code>readObject</code>和<code>writeObject</code>方法修改默认的序列化机制外，还可使用<code>Externalizable</code>接口，自定义序列化机制。     </p>
+<p><code>defaultWriteObject</code>和 <code>defaultReadObject</code> 是特殊的方法，只能在序列化类的 <code>writeObject</code> 和<code>readObject</code>方法中被调用。<code>defaultWriteObject</code>表示使用默认的序列化机制，<code>defaultReadObject</code>反之。这两个方法也可以不调用，这样就跟下面讲的 <code>Externalizable</code> 接口差不多。      </p>
+<p>除了重写 <code>readObject</code> 和<code>writeObject</code>方法修改默认的序列化机制外，还可使用 <code>Externalizable</code> 接口，自定义序列化机制。     </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Director</span> <span class="keyword">implements</span> <span class="title">Externalizable</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> String title;</div><div class="line">    <span class="keyword">private</span> String bonus;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeExternal</span><span class="params">(ObjectOutput out)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        out.writeUTF(title);</div><div class="line">        out.writeUTF(bonus);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readExternal</span><span class="params">(ObjectInput in)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</div><div class="line">        title = in.readUTF();</div><div class="line">        bonus = in.readUTF();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Externalizable和Serializable的不同"><a href="#Externalizable和Serializable的不同" class="headerlink" title="Externalizable和Serializable的不同"></a><code>Externalizable</code>和<code>Serializable</code>的不同</h3><p><code>Externalizable</code>和<code>Serializable</code>最大的不同就是，<code>Externalizable</code>会调用类的无参构造函数来创建对象，<code>Serializable</code>则不然。  另外就是<code>readObject</code>和<code>writeObject</code>只能被序列化机制调用，而<code>readExternal</code>和<code>writeExternal</code>方法是公共的。   </p>
-<h2 id="序列化中遇到的问题"><a href="#序列化中遇到的问题" class="headerlink" title="序列化中遇到的问题"></a>序列化中遇到的问题</h2><p>在序列化中，有一个重要的情况需要考虑：当一个对象被多个对象共享，作为它们各种状态的一部分时，会发生什么情况？ </p>
+<h3 id="Externalizable 和 Serializable 的不同"><a href="#Externalizable 和 Serializable 的不同" class="headerlink" title="Externalizable 和 Serializable 的不同"></a><code>Externalizable</code>和 <code>Serializable</code> 的不同 </h3><p><code>Externalizable</code> 和<code>Serializable</code>最大的不同就是，<code>Externalizable</code>会调用类的无参构造函数来创建对象，<code>Serializable</code>则不然。  另外就是 <code>readObject</code> 和<code>writeObject</code>只能被序列化机制调用，而 <code>readExternal</code> 和<code>writeExternal</code>方法是公共的。   </p>
+<h2 id="序列化中遇到的问题"><a href="# 序列化中遇到的问题" class="headerlink" title="序列化中遇到的问题"></a>序列化中遇到的问题 </h2><p> 在序列化中，有一个重要的情况需要考虑：当一个对象被多个对象共享，作为它们各种状态的一部分时，会发生什么情况？ </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Employee secretary;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Employee tony = <span class="keyword">new</span> Employee();</div><div class="line">        tony.setName(<span class="string">"Tony"</span>);</div><div class="line">        tony.setSalary(<span class="number">10000</span>);</div><div class="line">        tony.setHireDay(<span class="keyword">new</span> Date());</div><div class="line"></div><div class="line">        Manager harry = <span class="keyword">new</span> Manager();</div><div class="line">        harry.setSalary(<span class="number">1000</span>);</div><div class="line">        harry.setName(<span class="string">"Harry"</span>);</div><div class="line">        harry.setSecretary(tony);</div><div class="line"></div><div class="line">        Manager carl = <span class="keyword">new</span> Manager();</div><div class="line">        carl.setName(<span class="string">"Carl"</span>);</div><div class="line">        carl.setSalary(<span class="number">10000</span>);</div><div class="line">        carl.setSecretary(tony);</div><div class="line"></div><div class="line">        ByteArrayOutputStream byteArr = <span class="keyword">new</span> ByteArrayOutputStream();</div><div class="line">        <span class="keyword">try</span> (ObjectOutputStream out = <span class="keyword">new</span> ObjectOutputStream(byteArr)) &#123;</div><div class="line">            out.writeObject(harry);</div><div class="line">            out.writeObject(carl);</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> (ByteArrayInputStream input = <span class="keyword">new</span> ByteArrayInputStream(byteArr.toByteArray());</div><div class="line">             ObjectInputStream objInput = <span class="keyword">new</span> ObjectInputStream(input)) &#123;</div><div class="line">            Manager harry1 = (Manager) objInput.readObject();</div><div class="line">            Manager carl1 = (Manager) objInput.readObject();</div><div class="line">            <span class="comment">// out true</span></div><div class="line">            System.out.println(harry1.getSecretary() == carl1.getSecretary());</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>经过序列化后，两个对象依然共享同一对象。造成这种现象的原因是：每个对象都是用一个序列号（serial number，即前面提到的「指纹」）保存的，这也是这种机制之所以被称为对象序列化的原因。 下面是其算法：    </p>
 <ul>
 <li>对你遇到的每一个对象引用都关联一个序列号。    </li>
 <li>对于每个对象，当第一次遇到时，保存其对象数据到流中。    </li>
-<li>如果某个对象之前已经被保存过，那么只写出「与之前保存过的序列号为$x$的对象相同」。 在读回对象时，整个过程是反过来的。   </li>
-<li>当遇到「与之前保存过的序列号为$x$的对象相同」标记时，获取与这个顺序号相关联的对象引用。   </li>
+<li>如果某个对象之前已经被保存过，那么只写出「与之前保存过的序列号为 $x$ 的对象相同」。 在读回对象时，整个过程是反过来的。   </li>
+<li>当遇到「与之前保存过的序列号为 $x$ 的对象相同」标记时，获取与这个顺序号相关联的对象引用。   </li>
 </ul>
 <blockquote>
 <p>因为保存原生的内存地址毫无意义，因此序列化用序列号代替了内存地址。   </p>
 </blockquote>
-<h2 id="如何解决兼容问题"><a href="#如何解决兼容问题" class="headerlink" title="如何解决兼容问题"></a>如何解决兼容问题</h2><p>如果使用序列化保存对象，就需要考虑版本问题，修改后的类能否读入旧文件？或者反之旧版本能否读入新版本产生的文件。      </p>
-<p>这时候就体现到<code>serialVersionUID</code>字段的重要性来了。假设将SHA指纹作为序列化版本的唯一ID的话，无论类的定义产生了什么样的变化，它的SHA指纹也会跟着变化，而我们都知道对象流将拒绝读入具有不同指纹的对象。为了保持兼容性，我们必须使用<code>serialVersionUID</code>常量作为序列化版本的唯一ID。      </p>
+<h2 id="如何解决兼容问题"><a href="# 如何解决兼容问题" class="headerlink" title="如何解决兼容问题"></a>如何解决兼容问题 </h2><p> 如果使用序列化保存对象，就需要考虑版本问题，修改后的类能否读入旧文件？或者反之旧版本能否读入新版本产生的文件。      </p>
+<p>这时候就体现到 <code>serialVersionUID</code> 字段的重要性来了。假设将 SHA 指纹作为序列化版本的唯一 ID 的话，无论类的定义产生了什么样的变化，它的 SHA 指纹也会跟着变化，而我们都知道对象流将拒绝读入具有不同指纹的对象。为了保持兼容性，我们必须使用 <code>serialVersionUID</code> 常量作为序列化版本的唯一 ID。      </p>
 <p>如果这个类只有方法发生了变化，那么在读入新对象数据时是不会有任何问题的。但是，如果数据域产生了变化，那么就有可能会有问题，不过对象流将尽力将流对象转化成这个类的当前版本。   </p>
-<p>对象流会将这个类当前版本的数据域与流中版本的数据域进行比较，当然，对象流只会考虑非静态和非<code>transient</code>的数据域。    </p>
+<p>对象流会将这个类当前版本的数据域与流中版本的数据域进行比较，当然，对象流只会考虑非静态和非 <code>transient</code> 的数据域。    </p>
 <ul>
 <li>如果名字匹配而类型不匹配，那么对象流不会尝试将一种类型转换成另一种类型，因为这两个对象不兼容。   </li>
 <li>如果流中对象具有在当前版本中所没有的数据域，那么对象流会忽略这些额外的数据。    </li>
 <li>如果当前版本具有在流中对象所没有的数据域，那么这些新添加的域将被设置成它们的默认值。   </li>
 </ul>
-<p>这种丢弃数据域或者将数据域设置为<code>null</code>有可能会产生bug，建议设计者重写<code>readObject</code>方法来修订版本不兼容问题。   </p>
-<h2 id="序列化应用时需要注意的问题"><a href="#序列化应用时需要注意的问题" class="headerlink" title="序列化应用时需要注意的问题"></a>序列化应用时需要注意的问题</h2><h3 id="序列化单例和类型安全的枚举"><a href="#序列化单例和类型安全的枚举" class="headerlink" title="序列化单例和类型安全的枚举"></a>序列化单例和类型安全的枚举</h3><p>如果你使用Java语言的<code>enum</code>结构，那么不用担心序列化，它能够正常工作。但考虑以下风格的代码：    </p>
+<p>这种丢弃数据域或者将数据域设置为 <code>null</code> 有可能会产生 bug，建议设计者重写 <code>readObject</code> 方法来修订版本不兼容问题。   </p>
+<h2 id="序列化应用时需要注意的问题"><a href="# 序列化应用时需要注意的问题" class="headerlink" title="序列化应用时需要注意的问题"></a>序列化应用时需要注意的问题 </h2><h3 id="序列化单例和类型安全的枚举"><a href="# 序列化单例和类型安全的枚举" class="headerlink" title="序列化单例和类型安全的枚举"></a> 序列化单例和类型安全的枚举 </h3><p> 如果你使用 Java 语言的 <code>enum</code> 结构，那么不用担心序列化，它能够正常工作。但考虑以下风格的代码：    </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Orientation</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Orientation HORIZONTAL = <span class="keyword">new</span> Orientation(<span class="number">1</span>);</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Orientation VERTICAL = <span class="keyword">new</span> Orientation(<span class="number">2</span>);</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> value;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Orientation</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.value = value;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这种风格的代码在<code>enum</code>之前很常见，这个类的构造器是私有的，你不可能创建除<code>HORIZONTAL</code>和<code>VERTICAL</code>之外的对象，因此你可以使用<code>==</code>操作符来测试对象的等同性。      </p>
+<p>这种风格的代码在 <code>enum</code> 之前很常见，这个类的构造器是私有的，你不可能创建除 <code>HORIZONTAL</code> 和<code>VERTICAL</code>之外的对象，因此你可以使用 <code>==</code> 操作符来测试对象的等同性。      </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (orientation == Orientation.HORIZONTAL) ...</div></pre></td></tr></table></figure>
-<p>当我们序列化这样的类时，既是构造器是私有的，序列化机制也可以创建新的对象（序列化机制不通过构造器创建对象），因此上述代码就会产生bug。    </p>
-<p>为了解决这个问题，我们需要定义另外一种称为<code>readResolve</code>的特殊序列化方法。该方法会在对象被序列化之后被调用。它必须返回一个对象，而该对象之后会成为<code>readObject</code>的返回值。因此我们可以这么做：    </p>
+<p>当我们序列化这样的类时，既是构造器是私有的，序列化机制也可以创建新的对象（序列化机制不通过构造器创建对象），因此上述代码就会产生 bug。    </p>
+<p>为了解决这个问题，我们需要定义另外一种称为 <code>readResolve</code> 的特殊序列化方法。该方法会在对象被序列化之后被调用。它必须返回一个对象，而该对象之后会成为 <code>readObject</code> 的返回值。因此我们可以这么做：    </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> Object <span class="title">readResolve</span><span class="params">()</span> <span class="keyword">throws</span> ObjectStreamException </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value == <span class="number">1</span>) <span class="keyword">return</span> HORIZONTAL;</div><div class="line">    <span class="keyword">if</span> (value == <span class="number">2</span>) <span class="keyword">return</span> VERTICAL;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>请记住向遗留代码中所有类型安全的枚举以及向所有支持单例设计模式的类中添加<code>readResolve</code>方法。 </p>
-<h3 id="使用序列化clone对象"><a href="#使用序列化clone对象" class="headerlink" title="使用序列化clone对象"></a>使用序列化clone对象</h3><p>序列化机制有一种很有趣的用法，即提供了一种<code>clone</code>对象的简便途径，只需要将对象序列化到输出流中，并且将其读回。这种方式虽然方便，但性能比显式地构建新对象的方式慢的多。  </p>
-<h2 id="父类的序列化问题"><a href="#父类的序列化问题" class="headerlink" title="父类的序列化问题"></a>父类的序列化问题</h2><p>一个子类实现了<code>Serializable</code>接口，而它的父类没有实现<code>Serializable</code>接口，那么序列化时父类所属的数据域并不会被序列化。<strong>要想父类也序列化，就需要让父类也实现<code>Serializable</code>接口</strong>。     </p>
-<p>有一点非常重要，如果父类没有实现<code>Serializable</code>接口的话，就<strong>需要有默认的无参的构造函数</strong>。这是因为在父类没有实现<code>Serializable</code>接口时，虚拟机不会序列化父对象，而一个Java对象的构造必须先有父对象，才有子对象，反序列化也不列外。  </p>
-<h2 id="安全问题"><a href="#安全问题" class="headerlink" title="安全问题"></a>安全问题</h2><p>序列化后的字节序列并没有加密，若被黑客窃取了这部分数据，很容易的解析出数据域里的内容。 一个解决方案就是重写<code>writeObject</code>方法，对敏感内容加密后写入对象流，然后在<code>readObject</code>中解密。   </p>
+<p>请记住向遗留代码中所有类型安全的枚举以及向所有支持单例设计模式的类中添加 <code>readResolve</code> 方法。 </p>
+<h3 id="使用序列化 clone 对象"><a href="# 使用序列化 clone 对象" class="headerlink" title="使用序列化 clone 对象"></a>使用序列化 clone 对象 </h3><p> 序列化机制有一种很有趣的用法，即提供了一种 <code>clone</code> 对象的简便途径，只需要将对象序列化到输出流中，并且将其读回。这种方式虽然方便，但性能比显式地构建新对象的方式慢的多。  </p>
+<h2 id="父类的序列化问题"><a href="# 父类的序列化问题" class="headerlink" title="父类的序列化问题"></a>父类的序列化问题 </h2><p> 一个子类实现了 <code>Serializable</code> 接口，而它的父类没有实现 <code>Serializable</code> 接口，那么序列化时父类所属的数据域并不会被序列化。<strong>要想父类也序列化，就需要让父类也实现 <code>Serializable</code> 接口</strong>。     </p>
+<p>有一点非常重要，如果父类没有实现 <code>Serializable</code> 接口的话，就 <strong> 需要有默认的无参的构造函数 </strong>。这是因为在父类没有实现<code>Serializable</code> 接口时，虚拟机不会序列化父对象，而一个 Java 对象的构造必须先有父对象，才有子对象，反序列化也不列外。  </p>
+<h2 id="安全问题"><a href="# 安全问题" class="headerlink" title="安全问题"></a>安全问题 </h2><p> 序列化后的字节序列并没有加密，若被黑客窃取了这部分数据，很容易的解析出数据域里的内容。 一个解决方案就是重写 <code>writeObject</code> 方法，对敏感内容加密后写入对象流，然后在 <code>readObject</code> 中解密。   </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本篇文章从以下几个方面，讲述Java序列化相关的内容： &lt;/p&gt;
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;# 前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言 &lt;/h2&gt;&lt;p&gt; 本篇文章从以下几个方面，讲述 Java 序列化相关的内容： &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;什么是序列化？&lt;/li&gt;
-&lt;l
+&lt;li&gt;什么是序列化？&lt;/l
     
     </summary>
     
@@ -116,29 +171,29 @@
     <published>2017-03-01T13:55:38.000Z</published>
     <updated>2017-03-06T13:57:53.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="图着色"><a href="#图着色" class="headerlink" title="图着色"></a>图着色</h2><p>在图论中，有许多与地图区域着色相关的理论成果。当为一个地图着色时，具有公共边界的两个区域在传统上指定为不同的颜色。<br>平面里的每幅地图都可以表示成一个图，为了建立这种对应关系，地图的每个区域都表示成一个顶点，若两个顶点所表示的区域具有公共边界。则用边连接两个顶点。只相交于一个点的两个区域不算事相邻的。这样所得到的图称为这个地图的对偶图。这样区域着色的问题就等价于给对偶图的顶点着色，使没有两个相邻的顶点具有相同的颜色的问题。    </p>
+    <content type="html"><![CDATA[<h2 id="图着色"><a href="# 图着色" class="headerlink" title="图着色"></a>图着色 </h2><p> 在图论中，有许多与地图区域着色相关的理论成果。当为一个地图着色时，具有公共边界的两个区域在传统上指定为不同的颜色。<br>平面里的每幅地图都可以表示成一个图，为了建立这种对应关系，地图的每个区域都表示成一个顶点，若两个顶点所表示的区域具有公共边界。则用边连接两个顶点。只相交于一个点的两个区域不算事相邻的。这样所得到的图称为这个地图的对偶图。这样区域着色的问题就等价于给对偶图的顶点着色，使没有两个相邻的顶点具有相同的颜色的问题。    </p>
 <p>简单图的着色是对该图的每个顶点都指定一种颜色，使得没有两个相邻的顶点颜色相同。    </p>
 <p>图的色数是着色这个图所需要的最少颜色数。    </p>
-<h3 id="一些结论"><a href="#一些结论" class="headerlink" title="一些结论"></a>一些结论</h3><ul>
-<li><strong>四色定理</strong> 平面图的色数不超过4。    </li>
+<h3 id="一些结论"><a href="# 一些结论" class="headerlink" title="一些结论"></a>一些结论</h3><ul>
+<li><strong>四色定理</strong> 平面图的色数不超过 4。    </li>
 </ul>
 <blockquote>
-<p>证明一个图的色数为<code>n</code>需要做两件事情。首先必须证明：用$n$种颜色可以着色这个图并且构造出这样的着色。其次证明：用少于$n$种颜色不能着色这个图。    </p>
+<p>证明一个图的色数为 <code>n</code> 需要做两件事情。首先必须证明：用 $n$ 种颜色可以着色这个图并且构造出这样的着色。其次证明：用少于 $n$ 种颜色不能着色这个图。    </p>
 </blockquote>
 <ul>
-<li>$K_n$的色数是$n$。 该结论与四色定理并不矛盾，因为$n\ge 5$时，$K_n$不是可平面图。    </li>
-<li>完全偶图$K_{m,n}$只需要两种颜色。      </li>
-<li>圈图$C_n$的色数分两种情况，当$n$为偶数时需要两种颜色，当$n$为奇数时需要三种颜色。    </li>
+<li>$K_n$ 的色数是 $n$。 该结论与四色定理并不矛盾，因为 $n\ge 5$ 时，$K_n$ 不是可平面图。    </li>
+<li>完全偶图 $K_{m,n}$ 只需要两种颜色。      </li>
+<li>圈图 $C_n$ 的色数分两种情况，当 $n$ 为偶数时需要两种颜色，当 $n$ 为奇数时需要三种颜色。    </li>
 </ul>
-<h3 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h3><p>已知最好的求图的色数的算法具有指数的最坏情形时间复杂性。即使求色数的近似值也是很难的。</p>
-<h3 id="图着色的应用"><a href="#图着色的应用" class="headerlink" title="图着色的应用"></a>图着色的应用</h3><p>图着色在与调度和分配相关的问题中具有多种应用。   </p>
-<h4 id="安排期末考试"><a href="#安排期末考试" class="headerlink" title="安排期末考试"></a>安排期末考试</h4><p>安排一场期末考试，使得没有学生要同时考两门。<br>用图模型来解决： 用顶点表示科目，若有学生要考两门，则在表示考试科目的两个顶点之间有边。用不同的颜色表示期末考试的时间段。那么考试所需的时间段就是色数。    </p>
-<h4 id="变址寄存器"><a href="#变址寄存器" class="headerlink" title="变址寄存器"></a>变址寄存器</h4><p>在有效的编译器中，当把频繁地使用的变量暂时保存在中央处理单元的变址寄存器里，而不是保存在常规内存时，可以加速循环的执行。对于给定的循环来说，需要多少个变址寄存器？<br>可以用图着色模型来讨论这个问题。为了建立这个模型，设图的每个顶点表示循环里的一个变量。若在循环执行期间两个顶点所表示的变量必须同时保存在变址寄存器里，则在这两个顶点之间有边。所以，这个图的色数就给出所需要的变址寄存器数，因为当表示变量的顶点在图中相邻时，就必须给这些变量分配不同的寄存器。    </p>
+<h3 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h3><p> 已知最好的求图的色数的算法具有指数的最坏情形时间复杂性。即使求色数的近似值也是很难的。</p>
+<h3 id="图着色的应用"><a href="# 图着色的应用" class="headerlink" title="图着色的应用"></a>图着色的应用 </h3><p> 图着色在与调度和分配相关的问题中具有多种应用。   </p>
+<h4 id="安排期末考试"><a href="# 安排期末考试" class="headerlink" title="安排期末考试"></a>安排期末考试 </h4><p> 安排一场期末考试，使得没有学生要同时考两门。<br>用图模型来解决： 用顶点表示科目，若有学生要考两门，则在表示考试科目的两个顶点之间有边。用不同的颜色表示期末考试的时间段。那么考试所需的时间段就是色数。    </p>
+<h4 id="变址寄存器"><a href="# 变址寄存器" class="headerlink" title="变址寄存器"></a>变址寄存器 </h4><p> 在有效的编译器中，当把频繁地使用的变量暂时保存在中央处理单元的变址寄存器里，而不是保存在常规内存时，可以加速循环的执行。对于给定的循环来说，需要多少个变址寄存器？<br>可以用图着色模型来讨论这个问题。为了建立这个模型，设图的每个顶点表示循环里的一个变量。若在循环执行期间两个顶点所表示的变量必须同时保存在变址寄存器里，则在这两个顶点之间有边。所以，这个图的色数就给出所需要的变址寄存器数，因为当表示变量的顶点在图中相邻时，就必须给这些变量分配不同的寄存器。    </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;图着色&quot;&gt;&lt;a href=&quot;#图着色&quot; class=&quot;headerlink&quot; title=&quot;图着色&quot;&gt;&lt;/a&gt;图着色&lt;/h2&gt;&lt;p&gt;在图论中，有许多与地图区域着色相关的理论成果。当为一个地图着色时，具有公共边界的两个区域在传统上指定为不同的颜色。&lt;br&gt;平面里的每
+      &lt;h2 id=&quot;图着色&quot;&gt;&lt;a href=&quot;# 图着色&quot; class=&quot;headerlink&quot; title=&quot;图着色&quot;&gt;&lt;/a&gt;图着色 &lt;/h2&gt;&lt;p&gt; 在图论中，有许多与地图区域着色相关的理论成果。当为一个地图着色时，具有公共边界的两个区域在传统上指定为不同的颜色。&lt;br&gt;平面
     
     </summary>
     
@@ -162,18 +217,18 @@
     <published>2017-03-01T13:22:27.000Z</published>
     <updated>2017-03-04T07:55:15.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="可平面图"><a href="#可平面图" class="headerlink" title="可平面图"></a>可平面图</h2><p>若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是可平面的。这种画法称为这个图的平面表示。即使通常带交叉地画出了一个图，这个图也仍然可能是可平面的，这是因为有可能以不同的方式来不带交叉地画出这个图。     </p>
-<h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><p>设$G$是带$e$条边和$v$个顶点的连通可平面简单图。设$r$是$G$的可平面表示里的面数，则$r=e-v+2$。      </p>
-<p>若$G$是带$e$条边和$z$个顶点的连通可平面简单图，其中$v\ge 3$，则$e\le 3v-6$。    </p>
-<p>若$G$是连通简单可平面简单图，则$G$有度数不超过5的顶点。    </p>
-<p>若连通可平面简单图有$e$条边和$v$个顶点，$v\ge 3$并且没有长度为3的回路，则$e\le 2v-4$。  </p>
-<h3 id="库拉图斯基定理"><a href="#库拉图斯基定理" class="headerlink" title="库拉图斯基定理"></a>库拉图斯基定理</h3><p>若一个图是可平面的，则通过删除一条边$\{u,v\}$并且添加一个新顶点$w$和两条边$\{u,w\}$与$\{w,v\}$，所获得的任何图也是可平面的。这样的操作称为<strong>初等细分</strong>。若可以从相同的图通过一系列初等细分来获得图$G_1=(\mathbf V_1,\mathbf E_1)$和图$G_2=(\mathbf V_2,\mathbf E_2)$，则它们称为是<strong>同胚</strong>的。      </p>
-<p><strong>库拉图斯基定理</strong>&ensp;&ensp;一个图是非可平面的当且仅当它包含一个同胚于$K_{3,3}$或$K_5$的子图。     </p>
+    <content type="html"><![CDATA[<h2 id="可平面图"><a href="# 可平面图" class="headerlink" title="可平面图"></a>可平面图 </h2><p> 若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是可平面的。这种画法称为这个图的平面表示。即使通常带交叉地画出了一个图，这个图也仍然可能是可平面的，这是因为有可能以不同的方式来不带交叉地画出这个图。     </p>
+<h3 id="欧拉公式"><a href="# 欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式 </h3><p> 设 $G$ 是带 $e$ 条边和 $v$ 个顶点的连通可平面简单图。设 $r$ 是 $G$ 的可平面表示里的面数，则 $r=e-v+2$。      </p>
+<p>若 $G$ 是带 $e$ 条边和 $z$ 个顶点的连通可平面简单图，其中 $v\ge 3$，则 $e\le 3v-6$。    </p>
+<p>若 $G$ 是连通简单可平面简单图，则 $G$ 有度数不超过 5 的顶点。    </p>
+<p>若连通可平面简单图有 $e$ 条边和 $v$ 个顶点，$v\ge 3$ 并且没有长度为 3 的回路，则 $e\le 2v-4$。  </p>
+<h3 id="库拉图斯基定理"><a href="# 库拉图斯基定理" class="headerlink" title="库拉图斯基定理"></a>库拉图斯基定理 </h3><p> 若一个图是可平面的，则通过删除一条边 $\{u,v\}$ 并且添加一个新顶点 $w$ 和两条边 $\{u,w\}$ 与 $\{w,v\}$，所获得的任何图也是可平面的。这样的操作称为 <strong> 初等细分 </strong>。若可以从相同的图通过一系列初等细分来获得图 $G_1=(\mathbf V_1,\mathbf E_1)$ 和图 $G_2=(\mathbf V_2,\mathbf E_2)$，则它们称为是<strong> 同胚 </strong> 的。      </p>
+<p><strong>库拉图斯基定理</strong>&ensp;&ensp; 一个图是非可平面的当且仅当它包含一个同胚于 $K_{3,3}$ 或 $K_5$ 的子图。     </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;可平面图&quot;&gt;&lt;a href=&quot;#可平面图&quot; class=&quot;headerlink&quot; title=&quot;可平面图&quot;&gt;&lt;/a&gt;可平面图&lt;/h2&gt;&lt;p&gt;若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是可平面
+      &lt;h2 id=&quot;可平面图&quot;&gt;&lt;a href=&quot;# 可平面图&quot; class=&quot;headerlink&quot; title=&quot;可平面图&quot;&gt;&lt;/a&gt;可平面图 &lt;/h2&gt;&lt;p&gt; 若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是
     
     </summary>
     
@@ -197,24 +252,24 @@
     <published>2017-02-27T13:32:16.000Z</published>
     <updated>2017-03-05T01:22:08.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="最短通路"><a href="#最短通路" class="headerlink" title="最短通路"></a>最短通路</h2><p>带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   </p>
+    <content type="html"><![CDATA[<h2 id="最短通路"><a href="# 最短通路" class="headerlink" title="最短通路"></a>最短通路 </h2><p> 带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   </p>
 <p>与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   </p>
-<h3 id="最短通路算法"><a href="#最短通路算法" class="headerlink" title="最短通路算法"></a>最短通路算法</h3><p>最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最短通路问题。    </p>
-<h4 id="迪克斯特拉算法细节"><a href="#迪克斯特拉算法细节" class="headerlink" title="迪克斯特拉算法细节"></a>迪克斯特拉算法细节</h4><p>它首先用$0$标记$a$ ，用$\infty$标记其余的顶点。用记号$L_0(a)=0$和$L_0(v)=\infty$表示在没有发生任何迭代之前的这些标记，下标0表示第0次迭代。这些表示是从 $a$ 到这些顶点的最短通路的长度，其中这些通路只包含顶点$a$ 。因为不存在从$a$ 到其他顶点的这种通路，所以$\infty$是$a$与这样的顶点之间的最短通路的长度。<br>迪克斯特拉算法是通过形成特殊顶点的集合来进行的。设$S_k$ 表示在标记过程$k$次迭代之后的特殊顶点集。首先让$S_0=\varnothing$ 。集合$S_k$是通过把不属于$S_{k-1}$的带最小标记的顶点$u$添加到$S_{k-1}$里形成的。一旦把$u$添加到$S_k$里，就更新所有不属于$S_k$的顶点的标记，使得顶点$v$在第$k$个阶段的标记$L_k(v)$是只包含$S_k$里顶点的、从$a$到$v$的最短通路的长度。<br>设$v$是不属于$S_k$的一个顶点。为了更新$v$的标记，注意$L_k(v)$是只包含$S_k$里顶点的从$a$到$v$的最短通路的长度。当利用下面的观察结果时，就可以有效地完成这个更新：只包含$S_k$里顶点的从$a$到$v$的最短通路，要么是只包含$S_{k-1}$里顶点的从$a$到$v$的最短通路，要么是在第$k-1$阶段加上边$(u,v)$的从$a$到$u$的最短通路。换句话说$L_k(a,v)=min\{L_{k-1}(a,v),L_{k-1}(a,u)+w(u,v)\}$<br>这个过程这样迭代：相继添加顶点到特殊顶点集里，直到添加$z$为止。当把$z$添加到特殊顶点集里时，它的标记就是从$a$到$z$的最短通路的长度。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {Dijkstra} (G:所有权都为正数的带权连通简单图)\\<br>\{G带有顶点a=v_0,v_1,\dots,v_n=z和权w(v_i,v_j),其中若\{v_i,v_j\}不是G里的边，则w(v_i,v_j)=\infty\} \\<br>\mathbf {for}\; i:=1\;\mathbf {to}\;n \\<br>\qquad L(v_i):=\infty \\<br>L(a) :=0 \\<br>S:=\varnothing \\<br>\{现在初始化标记，使得a的标记为0而所有其余标记为\infty，S是空集合\} \\<br>\mathbf {while}\; z\notin S\\<br>\mathbf {begin}<br>\qquad a:=不属于S的L(u)最小的一个顶点\\<br>\qquad S:=S\cup\{u\} \\<br>\qquad\mathbf {for}\; 所有不属于S的顶点v\\<br>\qquad\qquad\mathbf {if}\; L(u)+w(u,v)&lt;L(v)\quad\mathbf {then}\; L(v):=L(u)+w(u,v)\\<br>\qquad \{这样就给S里添加带最小标记的顶点，并且更新不在S里的顶点的标记\} \\<br>\mathbf {end}\{L(z)=从a到z的最短通路的长度\}<br>\end{array}<br>$$</p>
-<h4 id="验证迪克斯拉特算法的正确性"><a href="#验证迪克斯拉特算法的正确性" class="headerlink" title="验证迪克斯拉特算法的正确性"></a>验证迪克斯拉特算法的正确性</h4><p>下面用归纳论证来证明迪克斯特拉算法的正确性。用下列断言作为归纳假设：在第$k$次迭代里   </p>
+<h3 id="最短通路算法"><a href="# 最短通路算法" class="headerlink" title="最短通路算法"></a>最短通路算法 </h3><p> 最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最短通路问题。    </p>
+<h4 id="迪克斯特拉算法细节"><a href="# 迪克斯特拉算法细节" class="headerlink" title="迪克斯特拉算法细节"></a>迪克斯特拉算法细节 </h4><p> 它首先用 $0$ 标记 $a$ ，用 $\infty$ 标记其余的顶点。用记号 $L_0(a)=0$ 和 $L_0(v)=\infty$ 表示在没有发生任何迭代之前的这些标记，下标 0 表示第 0 次迭代。这些表示是从 $a$ 到这些顶点的最短通路的长度，其中这些通路只包含顶点 $a$ 。因为不存在从 $a$ 到其他顶点的这种通路，所以 $\infty$ 是 $a$ 与这样的顶点之间的最短通路的长度。<br>迪克斯特拉算法是通过形成特殊顶点的集合来进行的。设 $S_k$ 表示在标记过程 $k$ 次迭代之后的特殊顶点集。首先让 $S_0=\varnothing$ 。集合 $S_k$ 是通过把不属于 $S_{k-1}$ 的带最小标记的顶点 $u$ 添加到 $S_{k-1}$ 里形成的。一旦把 $u$ 添加到 $S_k$ 里，就更新所有不属于 $S_k$ 的顶点的标记，使得顶点 $v$ 在第 $k$ 个阶段的标记 $L_k(v)$ 是只包含 $S_k$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度。<br>设 $v$ 是不属于 $S_k$ 的一个顶点。为了更新 $v$ 的标记，注意 $L_k(v)$ 是只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路的长度。当利用下面的观察结果时，就可以有效地完成这个更新：只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是只包含 $S_{k-1}$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是在第 $k-1$ 阶段加上边 $(u,v)$ 的从 $a$ 到 $u$ 的最短通路。换句话说 $L_k(a,v)=min\{L_{k-1}(a,v),L_{k-1}(a,u)+w(u,v)\}$<br>这个过程这样迭代：相继添加顶点到特殊顶点集里，直到添加 $z$ 为止。当把 $z$ 添加到特殊顶点集里时，它的标记就是从 $a$ 到 $z$ 的最短通路的长度。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {Dijkstra} (G: 所有权都为正数的带权连通简单图)\\<br>\{G 带有顶点 a=v_0,v_1,\dots,v_n=z 和权 w(v_i,v_j), 其中若 \{v_i,v_j\}不是 G 里的边，则 w(v_i,v_j)=\infty\} \\<br>\mathbf {for}\; i:=1\;\mathbf {to}\;n \\<br>\qquad L(v_i):=\infty \\<br>L(a) :=0 \\<br>S:=\varnothing \\<br>\{现在初始化标记，使得 a 的标记为 0 而所有其余标记为 \infty，S 是空集合 \} \\<br>\mathbf {while}\; z\notin S\\<br>\mathbf {begin}<br>\qquad a:= 不属于 S 的 L(u)最小的一个顶点 \\<br>\qquad S:=S\cup\{u\} \\<br>\qquad\mathbf {for}\; 所有不属于 S 的顶点 v\\<br>\qquad\qquad\mathbf {if}\; L(u)+w(u,v)&lt;L(v)\quad\mathbf {then}\; L(v):=L(u)+w(u,v)\\<br>\qquad \{这样就给 S 里添加带最小标记的顶点，并且更新不在 S 里的顶点的标记 \} \\<br>\mathbf {end}\{L(z)= 从 a 到 z 的最短通路的长度 \}<br>\end{array}<br>$$</p>
+<h4 id="验证迪克斯拉特算法的正确性"><a href="# 验证迪克斯拉特算法的正确性" class="headerlink" title="验证迪克斯拉特算法的正确性"></a>验证迪克斯拉特算法的正确性 </h4><p> 下面用归纳论证来证明迪克斯特拉算法的正确性。用下列断言作为归纳假设：在第 $k$ 次迭代里   </p>
 <ol>
-<li>$S$里的顶点$v(v=0)$的标记是从$a$到这个顶点的最短通路的长度。    </li>
-<li>不在$S$里的顶点的标记是(这个顶点自身除外)只包含$S$里顶点的、从$a$到这个顶点的最短通路的长度</li>
+<li>$S$ 里的顶点 $v(v=0)$ 的标记是从 $a$ 到这个顶点的最短通路的长度。    </li>
+<li>不在 $S$ 里的顶点的标记是 (这个顶点自身除外) 只包含 $S$ 里顶点的、从 $a$ 到这个顶点的最短通路的长度</li>
 </ol>
-<p>当$k=0$时，在没有执行任何迭代之前，$S=\{a\}$，所以从$a$到除$a$外的顶点的最短通路的长度是$\infty$。设$v$是在第$k+1$次迭代里添加到$S$里的顶点，使得$v$是在第$k$次迭代结束时带最小标记的不在$S$的顶点。<br>根据归纳假设，可以看出在第$k+1$次迭代之前，$S$里的顶点都用从$a$出发的最短通路的长度来标记。另外，必须用从$a$到$v$的最短通路的长度来标记$v$。假如情况不是这样，那么在第$k$次迭代结束时，就可能存在包含不在$S$里的顶点的、长度小于$L_k(v)$的通路（因为$L_k(v)$是在第$k$次迭代之后，只包含$S$里顶点的、从$a$到$v$的最短通路的长度）。设$u$是在这样的通路里不属于$S$的第一个顶点。则存在一条只包含$S$里顶点的、从$a$到$u$的长度小于$L_k(v)$的通路。这与对$v$的选择相矛盾。因此，在第$k+1$次迭代结束时(1)成立。<br>设$u$时在第$k+1$次迭代之后不属于$S$的一个顶点。只包含$S$里顶点的从$a$到$u$的最短通路要么包含$v$、要么不包含$v$。若它不包含$v$，则根据归纳假设，它的长度是$L_k(u)$。若它确实包含$v$，则它必然是这样组成的：一条只包含$S$里除$v$之外的顶点的、从$a$到$v$的、具有最短可能长度的通路，后面接着从$v$到$u$的边。在这种情形里它的长度是$L_k(v)+w(v,u)$。这样就证明了(2)为真，因为$L_{k+1}(u)=min\{L_k(u),L_k(v)+w(v,u)\}$。</p>
-<h4 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h4><p>迪克斯特拉算法使用$O(n^2)$次运算来求出连通简单无向带权图里两个顶点之间最短通路的长度。    </p>
-<h2 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h2><p>旅行商问题是求最短回路，即求完全图里总权数最小的哈密顿回路。<br>旅行商问题同哈密顿回路一样，没有有效的算法，目前解决问题的实际方法是使用近似算法。</p>
+<p>当 $k=0$ 时，在没有执行任何迭代之前，$S=\{a\}$，所以从 $a$ 到除 $a$ 外的顶点的最短通路的长度是 $\infty$。设 $v$ 是在第 $k+1$ 次迭代里添加到 $S$ 里的顶点，使得 $v$ 是在第 $k$ 次迭代结束时带最小标记的不在 $S$ 的顶点。<br>根据归纳假设，可以看出在第 $k+1$ 次迭代之前，$S$ 里的顶点都用从 $a$ 出发的最短通路的长度来标记。另外，必须用从 $a$ 到 $v$ 的最短通路的长度来标记 $v$。假如情况不是这样，那么在第 $k$ 次迭代结束时，就可能存在包含不在 $S$ 里的顶点的、长度小于 $L_k(v)$ 的通路（因为 $L_k(v)$ 是在第 $k$ 次迭代之后，只包含 $S$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度）。设 $u$ 是在这样的通路里不属于 $S$ 的第一个顶点。则存在一条只包含 $S$ 里顶点的、从 $a$ 到 $u$ 的长度小于 $L_k(v)$ 的通路。这与对 $v$ 的选择相矛盾。因此，在第 $k+1$ 次迭代结束时 (1) 成立。<br>设 $u$ 时在第 $k+1$ 次迭代之后不属于 $S$ 的一个顶点。只包含 $S$ 里顶点的从 $a$ 到 $u$ 的最短通路要么包含 $v$、要么不包含 $v$。若它不包含 $v$，则根据归纳假设，它的长度是 $L_k(u)$。若它确实包含 $v$，则它必然是这样组成的：一条只包含 $S$ 里除 $v$ 之外的顶点的、从 $a$ 到 $v$ 的、具有最短可能长度的通路，后面接着从 $v$ 到 $u$ 的边。在这种情形里它的长度是 $L_k(v)+w(v,u)$。这样就证明了 (2) 为真，因为 $L_{k+1}(u)=min\{L_k(u),L_k(v)+w(v,u)\}$。</p>
+<h4 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h4><p> 迪克斯特拉算法使用 $O(n^2)$ 次运算来求出连通简单无向带权图里两个顶点之间最短通路的长度。    </p>
+<h2 id="旅行商问题"><a href="# 旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题 </h2><p> 旅行商问题是求最短回路，即求完全图里总权数最小的哈密顿回路。<br>旅行商问题同哈密顿回路一样，没有有效的算法，目前解决问题的实际方法是使用近似算法。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;最短通路&quot;&gt;&lt;a href=&quot;#最短通路&quot; class=&quot;headerlink&quot; title=&quot;最短通路&quot;&gt;&lt;/a&gt;最短通路&lt;/h2&gt;&lt;p&gt;带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   &lt;/p&gt;
-&lt;p&gt;
+      &lt;h2 id=&quot;最短通路&quot;&gt;&lt;a href=&quot;# 最短通路&quot; class=&quot;headerlink&quot; title=&quot;最短通路&quot;&gt;&lt;/a&gt;最短通路 &lt;/h2&gt;&lt;p&gt; 带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   &lt;/p&gt;
+
     
     </summary>
     
@@ -238,10 +293,10 @@
     <published>2017-02-26T09:03:15.000Z</published>
     <updated>2017-02-26T09:04:44.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="错误代码"><a href="#错误代码" class="headerlink" title="错误代码"></a>错误代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The server time zone value &apos;CST&apos; is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.</div></pre></td></tr></table></figure>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>连接时，指定时区    </p>
+    <content type="html"><![CDATA[<h2 id="错误代码"><a href="# 错误代码" class="headerlink" title="错误代码"></a>错误代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The server time zone value &apos;CST&apos; is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.</div></pre></td></tr></table></figure>
+<h2 id="解决方案"><a href="# 解决方案" class="headerlink" title="解决方案"></a>解决方案 </h2><p> 连接时，指定时区    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jdbc:mysql://localhost:3306/blog?serverTimezone=UTC</div></pre></td></tr></table></figure>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<h2 id="环境"><a href="# 环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>jdk.18</li>
 <li>mysql-connector-java 6.0.2</li>
 <li>jetty</li>
@@ -252,7 +307,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;错误代码&quot;&gt;&lt;a href=&quot;#错误代码&quot; class=&quot;headerlink&quot; title=&quot;错误代码&quot;&gt;&lt;/a&gt;错误代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+      &lt;h2 id=&quot;错误代码&quot;&gt;&lt;a href=&quot;# 错误代码&quot; class=&quot;headerlink&quot; title=&quot;错误代码&quot;&gt;&lt;/a&gt;错误代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p
     
     </summary>
     
@@ -272,28 +327,28 @@
     <published>2017-02-26T07:28:46.000Z</published>
     <updated>2017-03-14T14:34:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="匹配HTML标签"><a href="#匹配HTML标签" class="headerlink" title="匹配HTML标签"></a>匹配HTML标签</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:<span class="string">".*?"</span>|<span class="string">'.*?'</span>|[\\^<span class="string">'"&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="抽取注释"><a href="#抽取注释" class="headerlink" title="抽取注释"></a>抽取注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--(.*?)--&gt;</div></pre></td></tr></table></figure>
-<h3 id="查找-CSS-属性"><a href="#查找-CSS-属性" class="headerlink" title="查找 CSS 属性"></a>查找 CSS 属性</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^\\s*[a-zA-Z\\-]+\\s*[:]&#123;1&#125;\\s[a-zA-Z0-9\\s.#]+[;]&#123;1&#125;</div></pre></td></tr></table></figure>
-<h3 id="提取网页中所有图片信息"><a href="#提取网页中所有图片信息" class="headerlink" title="提取网页中所有图片信息"></a>提取网页中所有图片信息</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\<span class="string">"\\']&#123;0,1&#125;([^\\"</span>\\<span class="string">'\\ &gt;]*)</span></div></pre></td></tr></table></figure>
-<h3 id="提取-html-中的超链接"><a href="#提取-html-中的超链接" class="headerlink" title="提取 html 中的超链接"></a>提取 html 中的超链接</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="xml"><span class="tag">&lt;<span class="name">a\\s*(?!.*\\brel=)[^</span>&gt;</span>]*)(href="https?:\\/\\/)((?!(?:(?:www\\.)?'.implode('|(?:www\\.)?', $follow_list).'))[^"]+)"((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="抽取网页中的颜色代码"><a href="#抽取网页中的颜色代码" class="headerlink" title="抽取网页中的颜色代码"></a>抽取网页中的颜色代码</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^#([A-Fa-f0-9]&#123;6&#125;|[A-Fa-f0-9]&#123;3&#125;)$</div></pre></td></tr></table></figure>
-<h3 id="验证-windows-下文件路径和扩展名"><a href="#验证-windows-下文件路径和扩展名" class="headerlink" title="验证 windows 下文件路径和扩展名"></a>验证 windows 下文件路径和扩展名</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?<span class="string">"&lt;&gt;|]+\\.txt(l)?$</span></div></pre></td></tr></table></figure>
-<h3 id="提取-URL-链接"><a href="#提取-URL-链接" class="headerlink" title="提取 URL 链接"></a>提取 URL 链接</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^(f|ht)&#123;<span class="number">1</span>&#125;(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?</div></pre></td></tr></table></figure>
-<h3 id="校验IP地址"><a href="#校验IP地址" class="headerlink" title="校验IP地址"></a>校验IP地址</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ip-v4</span></div><div class="line">\\b(?:(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\\.)&#123;<span class="number">3</span>&#125;(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\\b</div><div class="line"><span class="comment">// ip-v6</span></div><div class="line">(([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">7</span>,<span class="number">7</span>&#125;[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">7</span>&#125;:|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">6</span>&#125;:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">5</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">3</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">3</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">5</span>&#125;|[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:((:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">6</span>&#125;)|:((:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">7</span>&#125;|:)|fe80:(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">0</span>,<span class="number">4</span>&#125;)&#123;<span class="number">0</span>,<span class="number">4</span>&#125;%[<span class="number">0</span><span class="number">-9</span>a-zA-Z]&#123;<span class="number">1</span>,&#125;|::(ffff(:<span class="number">0</span>&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">0</span>,<span class="number">1</span>&#125;:)&#123;<span class="number">0</span>,<span class="number">1</span>&#125;((<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])\\.)&#123;<span class="number">3</span>,<span class="number">3</span>&#125;(<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:((<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])\\.)&#123;<span class="number">3</span>,<span class="number">3</span>&#125;(<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>]))</div></pre></td></tr></table></figure>
-<h3 id="判断-IE-的版本"><a href="#判断-IE-的版本" class="headerlink" title="判断 IE 的版本"></a>判断 IE 的版本</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^.*MSIE [<span class="number">5</span><span class="number">-8</span>](?:\\.[<span class="number">0</span><span class="number">-9</span>]+)?(?!.*Trident\\/[<span class="number">5</span><span class="number">-9</span>]\\<span class="number">.0</span>).*$</div></pre></td></tr></table></figure>
-<h3 id="校验手机号"><a href="#校验手机号" class="headerlink" title="校验手机号"></a>校验手机号</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^(<span class="number">13</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">14</span>[<span class="number">5</span>|<span class="number">7</span>]|<span class="number">15</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>]|<span class="number">18</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>])\\d&#123;<span class="number">8</span>&#125;$</div></pre></td></tr></table></figure>
-<h3 id="校验金额"><a href="#校验金额" class="headerlink" title="校验金额"></a>校验金额</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^[<span class="number">0</span><span class="number">-9</span>]+(.[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;)?$</div></pre></td></tr></table></figure>
-<h3 id="校验身份证号码"><a href="#校验身份证号码" class="headerlink" title="校验身份证号码"></a>校验身份证号码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 15位</span></div><div class="line">^[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">7</span>&#125;((<span class="number">0</span>\\d)|(<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>]))(([<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>]\\d)|<span class="number">3</span>[<span class="number">0</span><span class="number">-1</span>])\\d&#123;<span class="number">3</span>&#125;$</div><div class="line"><span class="comment">// 18位</span></div><div class="line">^[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">5</span>&#125;[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">3</span>&#125;((<span class="number">0</span>\\d)|(<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>]))(([<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>]\\d)|<span class="number">3</span>[<span class="number">0</span><span class="number">-1</span>])\\d&#123;<span class="number">3</span>&#125;([<span class="number">0</span><span class="number">-9</span>]|X)$</div></pre></td></tr></table></figure>
-<h3 id="校验日期"><a href="#校验日期" class="headerlink" title="校验日期"></a>校验日期</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^(?:(?!<span class="number">0000</span>)[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">4</span>&#125;-(?:(?:<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>])-(?:<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-8</span>])|(?:<span class="number">0</span>[<span class="number">13</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>])-(?:<span class="number">29</span>|<span class="number">30</span>)|(?:<span class="number">0</span>[<span class="number">13578</span>]|<span class="number">1</span>[<span class="number">02</span>])<span class="number">-31</span>)|(?:[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;(?:<span class="number">0</span>[<span class="number">48</span>]|[<span class="number">2468</span>][<span class="number">048</span>]|[<span class="number">13579</span>][<span class="number">26</span>])|(?:<span class="number">0</span>[<span class="number">48</span>]|[<span class="number">2468</span>][<span class="number">048</span>]|[<span class="number">13579</span>][<span class="number">26</span>])<span class="number">00</span>)<span class="number">-02</span><span class="number">-29</span>)$</div></pre></td></tr></table></figure>
-<h3 id="校验-mail地址"><a href="#校验-mail地址" class="headerlink" title="校验 mail地址"></a>校验 mail地址</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[\\w!#$%&amp;'*+/=?^_`&#123;|&#125;~-]+(?:\\.[\\w!#$%&amp;'*+/=?^_`&#123;|&#125;~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?</div></pre></td></tr></table></figure>
-<h3 id="由数字、26-个英文字母或下划线组成的字符串"><a href="#由数字、26-个英文字母或下划线组成的字符串" class="headerlink" title="由数字、26 个英文字母或下划线组成的字符串"></a>由数字、26 个英文字母或下划线组成的字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^\\w+$</div></pre></td></tr></table></figure>
-<h3 id="校验中文"><a href="#校验中文" class="headerlink" title="校验中文"></a>校验中文</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^[\\u4e00-\\u9fa5]&#123;<span class="number">0</span>,&#125;$</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h3 id="匹配 HTML 标签"><a href="# 匹配 HTML 标签" class="headerlink" title="匹配 HTML 标签"></a> 匹配 HTML 标签 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:<span class="string">".*?"</span>|<span class="string">'.*?'</span>|[\\^<span class="string">'"&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="抽取注释"><a href="# 抽取注释" class="headerlink" title="抽取注释"></a> 抽取注释 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--(.*?)--&gt;</div></pre></td></tr></table></figure>
+<h3 id="查找 -CSS- 属性"><a href="# 查找 -CSS- 属性" class="headerlink" title="查找 CSS 属性"></a> 查找 CSS 属性 </h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^\\s*[a-zA-Z\\-]+\\s*[:]&#123;1&#125;\\s[a-zA-Z0-9\\s.#]+[;]&#123;1&#125;</div></pre></td></tr></table></figure>
+<h3 id="提取网页中所有图片信息"><a href="# 提取网页中所有图片信息" class="headerlink" title="提取网页中所有图片信息"></a> 提取网页中所有图片信息 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\<span class="string">"\\']&#123;0,1&#125;([^\\"</span>\\<span class="string">'\\ &gt;]*)</span></div></pre></td></tr></table></figure>
+<h3 id="提取 -html- 中的超链接"><a href="# 提取 -html- 中的超链接" class="headerlink" title="提取 html 中的超链接"></a> 提取 html 中的超链接 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="xml"><span class="tag">&lt;<span class="name">a\\s*(?!.*\\brel=)[^</span>&gt;</span>]*)(href="https?:\\/\\/)((?!(?:(?:www\\.)?'.implode('|(?:www\\.)?', $follow_list).'))[^"]+)"((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="抽取网页中的颜色代码"><a href="# 抽取网页中的颜色代码" class="headerlink" title="抽取网页中的颜色代码"></a> 抽取网页中的颜色代码 </h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^#([A-Fa-f0-9]&#123;6&#125;|[A-Fa-f0-9]&#123;3&#125;)$</div></pre></td></tr></table></figure>
+<h3 id="验证 -windows- 下文件路径和扩展名"><a href="# 验证 -windows- 下文件路径和扩展名" class="headerlink" title="验证 windows 下文件路径和扩展名"></a> 验证 windows 下文件路径和扩展名 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?<span class="string">"&lt;&gt;|]+\\.txt(l)?$</span></div></pre></td></tr></table></figure>
+<h3 id="提取 -URL- 链接"><a href="# 提取 -URL- 链接" class="headerlink" title="提取 URL 链接"></a> 提取 URL 链接 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^(f|ht)&#123;<span class="number">1</span>&#125;(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?</div></pre></td></tr></table></figure>
+<h3 id="校验 IP 地址"><a href="# 校验 IP 地址" class="headerlink" title="校验 IP 地址"></a> 校验 IP 地址 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ip-v4</span></div><div class="line">\\b(?:(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\\.)&#123;<span class="number">3</span>&#125;(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\\b</div><div class="line"><span class="comment">// ip-v6</span></div><div class="line">(([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">7</span>,<span class="number">7</span>&#125;[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">7</span>&#125;:|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">6</span>&#125;:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">5</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">3</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">3</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">5</span>&#125;|[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:((:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">6</span>&#125;)|:((:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">7</span>&#125;|:)|fe80:(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">0</span>,<span class="number">4</span>&#125;)&#123;<span class="number">0</span>,<span class="number">4</span>&#125;%[<span class="number">0</span><span class="number">-9</span>a-zA-Z]&#123;<span class="number">1</span>,&#125;|::(ffff(:<span class="number">0</span>&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">0</span>,<span class="number">1</span>&#125;:)&#123;<span class="number">0</span>,<span class="number">1</span>&#125;((<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])\\.)&#123;<span class="number">3</span>,<span class="number">3</span>&#125;(<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:((<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])\\.)&#123;<span class="number">3</span>,<span class="number">3</span>&#125;(<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>]))</div></pre></td></tr></table></figure>
+<h3 id="判断 -IE- 的版本"><a href="# 判断 -IE- 的版本" class="headerlink" title="判断 IE 的版本"></a> 判断 IE 的版本 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^.*MSIE [<span class="number">5</span><span class="number">-8</span>](?:\\.[<span class="number">0</span><span class="number">-9</span>]+)?(?!.*Trident\\/[<span class="number">5</span><span class="number">-9</span>]\\<span class="number">.0</span>).*$</div></pre></td></tr></table></figure>
+<h3 id="校验手机号"><a href="# 校验手机号" class="headerlink" title="校验手机号"></a> 校验手机号 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^(<span class="number">13</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">14</span>[<span class="number">5</span>|<span class="number">7</span>]|<span class="number">15</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>]|<span class="number">18</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>])\\d&#123;<span class="number">8</span>&#125;$</div></pre></td></tr></table></figure>
+<h3 id="校验金额"><a href="# 校验金额" class="headerlink" title="校验金额"></a> 校验金额 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^[<span class="number">0</span><span class="number">-9</span>]+(.[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;)?$</div></pre></td></tr></table></figure>
+<h3 id="校验身份证号码"><a href="# 校验身份证号码" class="headerlink" title="校验身份证号码"></a> 校验身份证号码 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 15 位 </span></div><div class="line">^[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">7</span>&#125;((<span class="number">0</span>\\d)|(<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>]))(([<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>]\\d)|<span class="number">3</span>[<span class="number">0</span><span class="number">-1</span>])\\d&#123;<span class="number">3</span>&#125;$</div><div class="line"><span class="comment">// 18 位 </span></div><div class="line">^[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">5</span>&#125;[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">3</span>&#125;((<span class="number">0</span>\\d)|(<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>]))(([<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>]\\d)|<span class="number">3</span>[<span class="number">0</span><span class="number">-1</span>])\\d&#123;<span class="number">3</span>&#125;([<span class="number">0</span><span class="number">-9</span>]|X)$</div></pre></td></tr></table></figure>
+<h3 id="校验日期"><a href="# 校验日期" class="headerlink" title="校验日期"></a> 校验日期 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^(?:(?!<span class="number">0000</span>)[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">4</span>&#125;-(?:(?:<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>])-(?:<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-8</span>])|(?:<span class="number">0</span>[<span class="number">13</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>])-(?:<span class="number">29</span>|<span class="number">30</span>)|(?:<span class="number">0</span>[<span class="number">13578</span>]|<span class="number">1</span>[<span class="number">02</span>])<span class="number">-31</span>)|(?:[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;(?:<span class="number">0</span>[<span class="number">48</span>]|[<span class="number">2468</span>][<span class="number">048</span>]|[<span class="number">13579</span>][<span class="number">26</span>])|(?:<span class="number">0</span>[<span class="number">48</span>]|[<span class="number">2468</span>][<span class="number">048</span>]|[<span class="number">13579</span>][<span class="number">26</span>])<span class="number">00</span>)<span class="number">-02</span><span class="number">-29</span>)$</div></pre></td></tr></table></figure>
+<h3 id="校验 -mail 地址"><a href="# 校验 -mail 地址" class="headerlink" title="校验 mail 地址"></a> 校验 mail 地址 </h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[\\w!#$%&amp;'*+/=?^_`&#123;|&#125;~-]+(?:\\.[\\w!#$%&amp;'*+/=?^_`&#123;|&#125;~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?</div></pre></td></tr></table></figure>
+<h3 id="由数字、26- 个英文字母或下划线组成的字符串"><a href="# 由数字、26- 个英文字母或下划线组成的字符串" class="headerlink" title="由数字、26 个英文字母或下划线组成的字符串"></a> 由数字、26 个英文字母或下划线组成的字符串 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^\\w+$</div></pre></td></tr></table></figure>
+<h3 id="校验中文"><a href="# 校验中文" class="headerlink" title="校验中文"></a> 校验中文 </h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^[\\u4e00-\\u9fa5]&#123;<span class="number">0</span>,&#125;$</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;匹配HTML标签&quot;&gt;&lt;a href=&quot;#匹配HTML标签&quot; class=&quot;headerlink&quot; title=&quot;匹配HTML标签&quot;&gt;&lt;/a&gt;匹配HTML标签&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;
+      &lt;h3 id=&quot;匹配 HTML 标签&quot;&gt;&lt;a href=&quot;# 匹配 HTML 标签&quot; class=&quot;headerlink&quot; title=&quot;匹配 HTML 标签&quot;&gt;&lt;/a&gt; 匹配 HTML 标签 &lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;
     
     </summary>
     
@@ -305,24 +360,24 @@
   </entry>
   
   <entry>
-    <title>Window下将脚本注册成服务</title>
+    <title>Window 下将脚本注册成服务</title>
     <link href="http://blog.freeabyss.com/Window/Window-Window%E4%B8%8B%E5%B0%86%E8%84%9A%E6%9C%AC%E6%88%96%E7%A8%8B%E5%BA%8F%E6%B3%A8%E5%86%8C%E6%88%90%E6%9C%8D%E5%8A%A1.html"/>
     <id>http://blog.freeabyss.com/Window/Window-Window下将脚本或程序注册成服务.html</id>
     <published>2017-02-26T07:08:52.000Z</published>
     <updated>2017-02-26T08:59:54.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
-<li>下载微软系统小工具 instsrv.exe 和 srvany.exe 至 C:\Windows\System32。<a href="https://www.microsoft.com/en-us/download/details.aspx?id=17657" target="_blank" rel="external">下载地址</a>    </li>
-<li>运行 Dos 命令代码：instsrv ServiceName C:\Windows\System32\srvany.exe<br> (ServiceName 即你自己定义的服务名称，可以是要作为系统服务启动的应用程序的名称。) </li>
-<li>打开注册表，定位到下面的路径。<br> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceName<br> (同样的 ServiceName 是你刚才安装服务时自定义的服务名称。)<br> 如果该服务名下没有 Parameters 项目，则对服务名称项目右击新建项，名称为 Parameters，然后定位到 Parameters 项，新建以下几个字符串值。<br> 名称 Application 值为你要作为服务运行的 BAT 文件地址。<br> 名称 AppDirectory 值为你要作为服务运行的 BAT 文件所在文件夹路径。<br> 名称 AppParameters 值为你要作为服务运行的 BAT 文件启动所需要的参数。     </li>
+<li> 下载微软系统小工具 instsrv.exe 和 srvany.exe 至 C:\Windows\System32。<a href="https://www.microsoft.com/en-us/download/details.aspx?id=17657" target="_blank" rel="external"> 下载地址 </a>    </li>
+<li> 运行 Dos 命令代码：instsrv ServiceName C:\Windows\System32\srvany.exe<br> (ServiceName 即你自己定义的服务名称，可以是要作为系统服务启动的应用程序的名称。) </li>
+<li> 打开注册表，定位到下面的路径。<br> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceName<br> (同样的 ServiceName 是你刚才安装服务时自定义的服务名称。)<br> 如果该服务名下没有 Parameters 项目，则对服务名称项目右击新建项，名称为 Parameters，然后定位到 Parameters 项，新建以下几个字符串值。<br> 名称 Application 值为你要作为服务运行的 BAT 文件地址。<br> 名称 AppDirectory 值为你要作为服务运行的 BAT 文件所在文件夹路径。<br> 名称 AppParameters 值为你要作为服务运行的 BAT 文件启动所需要的参数。     </li>
 </ol>
-<p>注：instsrv ServiceName remove 命令可删除服务。</p>
+<p> 注：instsrv ServiceName remove 命令可删除服务。</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;ol&gt;
-&lt;li&gt;下载微软系统小工具 instsrv.exe 和 srvany.exe 至 C:\Windows\System32。&lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=17657&quot; t
+&lt;li&gt; 下载微软系统小工具 instsrv.exe 和 srvany.exe 至 C:\Windows\System32。&lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=17657&quot; 
     
     </summary>
     
@@ -336,24 +391,24 @@
   </entry>
   
   <entry>
-    <title>Maven的自动部署配置</title>
+    <title>Maven 的自动部署配置</title>
     <link href="http://blog.freeabyss.com/Maven/Maven-Maven%E7%9A%84%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE.html"/>
     <id>http://blog.freeabyss.com/Maven/Maven-Maven的自动部署配置.html</id>
     <published>2017-02-25T12:51:51.000Z</published>
     <updated>2017-02-25T12:53:29.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>利用Maven的<code>tomcat7-maven-plugin</code>插件，可以仅仅使用一行命令就可以将项目部署到本地或者远程的Tomcat上。<br>插件的名称虽然带有<code>tomcat7</code>，但经过我实际测验Tomcat8中也可以使用。<br>完成自动部署需要两步，首先是Tomcat的配置，其次是pom文件的配置。 </p>
-<h2 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h2><p> 在Tomcat目录下的<code>conf/tomcat-users.xml</code>文件中添加以下代码   </p>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="# 简介" class="headerlink" title="简介"></a>简介 </h2><p> 利用 Maven 的 <code>tomcat7-maven-plugin</code> 插件，可以仅仅使用一行命令就可以将项目部署到本地或者远程的 Tomcat 上。<br>插件的名称虽然带有 <code>tomcat7</code>，但经过我实际测验 Tomcat8 中也可以使用。<br> 完成自动部署需要两步，首先是 Tomcat 的配置，其次是 pom 文件的配置。 </p>
+<h2 id="配置 Tomcat"><a href="# 配置 Tomcat" class="headerlink" title="配置 Tomcat"></a>配置 Tomcat</h2><p> 在 Tomcat 目录下的 <code>conf/tomcat-users.xml</code> 文件中添加以下代码   </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-gui"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-script"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">"admin"</span> <span class="attr">password</span>=<span class="string">"password"</span> <span class="attr">roles</span>=<span class="string">"manager-script"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">"root"</span> <span class="attr">password</span>=<span class="string">"password"</span> <span class="attr">roles</span>=<span class="string">"manager-gui"</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p><code>username</code>和<code>password</code>可以随意更改。    </p>
-<p>在<code>conf/context.xml</code>添加以下代码     </p>
+<p><code>username</code>和 <code>password</code> 可以随意更改。    </p>
+<p>在 <code>conf/context.xml</code> 添加以下代码     </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Manager</span> <span class="attr">pathname</span>=<span class="string">"/manager"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">docBase</span>=<span class="string">"$&#123;catalina.home&#125;/webapps/manager"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<p>在<code>conf/Catalina/localhost/</code>目录下创建<code>manager.xml</code>文件，并填充以下内容:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">antiResourceLocking</span>=<span class="string">"false"</span> <span class="attr">docBase</span>=<span class="string">"$&#123;catalina.home&#125;/webapps/manager"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.valves.RemoteAddrValve"</span> <span class="attr">allow</span>=<span class="string">"^.*$"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>在 <code>conf/Catalina/localhost/</code> 目录下创建 <code>manager.xml</code> 文件，并填充以下内容:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">antiResourceLocking</span>=<span class="string">"false"</span> <span class="attr">docBase</span>=<span class="string">"$&#123;catalina.home&#125;/webapps/manager"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.valves.RemoteAddrValve"</span> <span class="attr">allow</span>=<span class="string">"^.*$"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <ol>
-<li>验证配置是否正确，启动Tomcat，打开浏览器，输入地址是<code>http://localhost:8080/manager/html</code>（假设Tomcat地址是<code>locahost:8080</code>）。然后输入<code>root</code>的登录名和密码，成功登入就说明配置成功。 <h2 id="配置pom-xml"><a href="#配置pom-xml" class="headerlink" title="配置pom.xml"></a>配置pom.xml</h2>在<code>pom.xml</code>文件中添加以下代码，如果是多模块项目，则在web模块所在的<code>pom.xml</code>添加。    </li>
+<li>验证配置是否正确，启动 Tomcat，打开浏览器，输入地址是 <code>http://localhost:8080/manager/html</code>（假设 Tomcat 地址是<code>locahost:8080</code>）。然后输入<code>root</code> 的登录名和密码，成功登入就说明配置成功。 <h2 id="配置 pom-xml"><a href="# 配置 pom-xml" class="headerlink" title="配置 pom.xml"></a>配置 pom.xml</h2>在 <code>pom.xml</code> 文件中添加以下代码，如果是多模块项目，则在 web 模块所在的 <code>pom.xml</code> 添加。    </li>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat7-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://serverip:port/manager/text<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">username</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">username</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">password</span>&gt;</span>password<span class="tag">&lt;/<span class="name">password</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">update</span>&gt;</span>true<span class="tag">&lt;/<span class="name">update</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">path</span>&gt;</span>/webapp<span class="tag">&lt;/<span class="name">path</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="启动部署"><a href="#启动部署" class="headerlink" title="启动部署"></a>启动部署</h2><p>第一次部署输入以下命令。</p>
+<h2 id="启动部署"><a href="# 启动部署" class="headerlink" title="启动部署"></a>启动部署 </h2><p> 第一次部署输入以下命令。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn tomcat7:deploy</div></pre></td></tr></table></figure>
 <p>以后每次部署，可以输入以下命令 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn tomcat7:redeploy</div></pre></td></tr></table></figure>
@@ -361,7 +416,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;利用Maven的&lt;code&gt;tomcat7-maven-plugin&lt;/code&gt;插件，可以仅仅使用一行命令就可以将项目部署到本地或者远程的
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;# 简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介 &lt;/h2&gt;&lt;p&gt; 利用 Maven 的 &lt;code&gt;tomcat7-maven-plugin&lt;/code&gt; 插件，可以仅仅使用一行命令就可以将项目部署到
     
     </summary>
     
@@ -381,30 +436,30 @@
     <published>2017-02-25T08:31:37.000Z</published>
     <updated>2017-02-26T06:07:14.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="欧拉回路"><a href="#欧拉回路" class="headerlink" title="欧拉回路"></a>欧拉回路</h2><p>图$G$的欧拉回路是包含着$G$的每一条边的封闭路线。图$G$里的欧拉通路是包含着$G$的每一条边的路线。<br>欧拉回路和欧拉通路都是恰好包含图的每一条边且不重复，唯一的区别就是，欧拉回路回到原点，而欧拉通路不必回到原点。       </p>
+    <content type="html"><![CDATA[<h2 id="欧拉回路"><a href="# 欧拉回路" class="headerlink" title="欧拉回路"></a>欧拉回路 </h2><p> 图 $G$ 的欧拉回路是包含着 $G$ 的每一条边的封闭路线。图 $G$ 里的欧拉通路是包含着 $G$ 的每一条边的路线。<br>欧拉回路和欧拉通路都是恰好包含图的每一条边且不重复，唯一的区别就是，欧拉回路回到原点，而欧拉通路不必回到原点。       </p>
 <blockquote>
-<p>通路(path)等同于路径(walk)，回路(circuit)等同于封闭路径(close walk)。是同一概念的不同术语。</p>
+<p>通路 (path) 等同于路径 (walk)，回路(circuit) 等同于封闭路径(close walk)。是同一概念的不同术语。</p>
 </blockquote>
 <p>连通多重图具有欧拉回路当且仅当它的每个顶点都有偶数度。    </p>
 <blockquote>
-<p>假设一条欧拉回路从$a$开始，开始时它为$deg(a)$贡献一度，结束时为$deg(a)$贡献一度，而每次经过$a$以及其余的顶点时都贡献2度。    </p>
+<p>假设一条欧拉回路从 $a$ 开始，开始时它为 $deg(a)$ 贡献一度，结束时为 $deg(a)$ 贡献一度，而每次经过 $a$ 以及其余的顶点时都贡献 2 度。    </p>
 </blockquote>
-<p>连通多重图具有欧拉通路但无欧拉回路，当且仅当它恰好有2个奇数度顶点。     </p>
+<p>连通多重图具有欧拉通路但无欧拉回路，当且仅当它恰好有 2 个奇数度顶点。     </p>
 <blockquote>
-<p>假设多重图有从$a$到$b$的欧拉通路，但不是欧拉回路。通路的第一条边为$a$贡献1度，此后每次经过$a$都贡献2度。通路的最后一条边为$b$的度贡献1度，此前每次经过$b$都贡献2度，因此$a$和$b$必定是奇数度。    </p>
+<p>假设多重图有从 $a$ 到 $b$ 的欧拉通路，但不是欧拉回路。通路的第一条边为 $a$ 贡献 1 度，此后每次经过 $a$ 都贡献 2 度。通路的最后一条边为 $b$ 的度贡献 1 度，此前每次经过 $b$ 都贡献 2 度，因此 $a$ 和 $b$ 必定是奇数度。    </p>
 </blockquote>
-<h3 id="构造欧拉回路"><a href="#构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在G里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的G \\<br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是H里的顶点也是circuit的边的端点处开始的H里的一条回路\\<br>\quad H\; :=\; 删除subcircuit的边和所有孤立点之后的H \\<br>\quad circuit\; :=\; 在适当顶点上插入subcircuit之后的circuit\\<br>\mathbf {end}(circuit是欧拉回路)<br>\end{array}$$</p>
-<h2 id="哈密顿通路"><a href="#哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路</h2><p>在图$G=(\mathbf V,\mathbf E)$里，若$\mathbf V=\{x_0,x_1,\dots,x_{n-1},x_n\}$并且对$0\le i\lt j\le n$来说有$x_j\neq x_i$，则通路$x_0,x_1,\dots,x_{n-1},x_n$称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$称为哈密顿回路。    </p>
-<h3 id="求解哈密顿通路"><a href="#求解哈密顿通路" class="headerlink" title="求解哈密顿通路"></a>求解哈密顿通路</h3><p>目前没有已知的简单的充要条件来判定哈密顿回路的存在性。不过有很多定理对哈密顿的存在性提供了充分条件，另外，某些性质可以用来证明一个图没有哈密顿回路。    </p>
+<h3 id="构造欧拉回路"><a href="# 构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在 G 里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的 G \\<br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是 H 里的顶点也是 circuit 的边的端点处开始的 H 里的一条回路 \\<br>\quad H\; :=\; 删除 subcircuit 的边和所有孤立点之后的 H \\<br>\quad circuit\; :=\; 在适当顶点上插入 subcircuit 之后的 circuit\\<br>\mathbf {end}(circuit 是欧拉回路)<br>\end{array}$$</p>
+<h2 id="哈密顿通路"><a href="# 哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路 </h2><p> 在图 $G=(\mathbf V,\mathbf E)$ 里，若 $\mathbf V=\{x_0,x_1,\dots,x_{n-1},x_n\}$ 并且对 $0\le i\lt j\le n$ 来说有 $x_j\neq x_i$，则通路 $x_0,x_1,\dots,x_{n-1},x_n$ 称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$ 称为哈密顿回路。    </p>
+<h3 id="求解哈密顿通路"><a href="# 求解哈密顿通路" class="headerlink" title="求解哈密顿通路"></a>求解哈密顿通路 </h3><p> 目前没有已知的简单的充要条件来判定哈密顿回路的存在性。不过有很多定理对哈密顿的存在性提供了充分条件，另外，某些性质可以用来证明一个图没有哈密顿回路。    </p>
 <p>带有一个顶点的图是没用哈密顿回路的。<br>图的边越多存在哈密顿回路的可能性就越大，尤其是每个顶点都加入边时。     </p>
-<h3 id="狄拉克定理"><a href="#狄拉克定理" class="headerlink" title="狄拉克定理"></a>狄拉克定理</h3><p>如果$G$是带$n$个顶点的连通简单图，其中$n\gt 3$，并且$G$中每个顶点的度都至少为$n/2$，则$G$有哈密顿回路。    </p>
-<h3 id="奥尔定理"><a href="#奥尔定理" class="headerlink" title="奥尔定理"></a>奥尔定理</h3><p>如果$G$是带$n$个顶点的连通简单图，其中$n\gt 3$，并且对于$G$中每一对不相邻的顶点$u$和$v$来说，都有$deg(u)+deg(v)\gt n$，则$G$有哈密顿回路。   </p>
-<h3 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h3><p>已知最好的求一个图里的哈密顿回路或判定这样的回路不存在的算法具有指数的最坏情形复杂性（相对于顶点数来讲）。找到具有多项式最坏情形时间复杂性的解决算法是NP复杂的。     </p>
+<h3 id="狄拉克定理"><a href="# 狄拉克定理" class="headerlink" title="狄拉克定理"></a>狄拉克定理 </h3><p> 如果 $G$ 是带 $n$ 个顶点的连通简单图，其中 $n\gt 3$，并且 $G$ 中每个顶点的度都至少为 $n/2$，则 $G$ 有哈密顿回路。    </p>
+<h3 id="奥尔定理"><a href="# 奥尔定理" class="headerlink" title="奥尔定理"></a>奥尔定理 </h3><p> 如果 $G$ 是带 $n$ 个顶点的连通简单图，其中 $n\gt 3$，并且对于 $G$ 中每一对不相邻的顶点 $u$ 和 $v$ 来说，都有 $deg(u)+deg(v)\gt n$，则 $G$ 有哈密顿回路。   </p>
+<h3 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h3><p> 已知最好的求一个图里的哈密顿回路或判定这样的回路不存在的算法具有指数的最坏情形复杂性（相对于顶点数来讲）。找到具有多项式最坏情形时间复杂性的解决算法是 NP 复杂的。     </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;欧拉回路&quot;&gt;&lt;a href=&quot;#欧拉回路&quot; class=&quot;headerlink&quot; title=&quot;欧拉回路&quot;&gt;&lt;/a&gt;欧拉回路&lt;/h2&gt;&lt;p&gt;图$G$的欧拉回路是包含着$G$的每一条边的封闭路线。图$G$里的欧拉通路是包含着$G$的每一条边的路线。&lt;br&gt;欧拉回路和
+      &lt;h2 id=&quot;欧拉回路&quot;&gt;&lt;a href=&quot;# 欧拉回路&quot; class=&quot;headerlink&quot; title=&quot;欧拉回路&quot;&gt;&lt;/a&gt;欧拉回路 &lt;/h2&gt;&lt;p&gt; 图 $G$ 的欧拉回路是包含着 $G$ 的每一条边的封闭路线。图 $G$ 里的欧拉通路是包含着 $G$ 的每一条边的路
     
     </summary>
     
@@ -428,30 +483,30 @@
     <published>2017-02-25T06:46:18.000Z</published>
     <updated>2017-02-25T08:31:55.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="连通性"><a href="#连通性" class="headerlink" title="连通性"></a>连通性</h2><h3 id="定义和相关术语"><a href="#定义和相关术语" class="headerlink" title="定义和相关术语"></a>定义和相关术语</h3><h4 id="无向图定义"><a href="#无向图定义" class="headerlink" title="无向图定义"></a>无向图定义</h4><p>设$n$是非负整数且$G$是无向图。在$G$中从$u$到$v$的长度为$n$<strong>路径</strong>是$G$的$n$条边$e_1,\dots,e_n$的序列，使得$f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中$x_0=u$而$x_n=v$。当这个图是简单图时，就用顶点序列$x_0,x_1,\dots,x_n$表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即$u=v$且长度大于0，则它是一条<strong>封闭路径</strong>。<br>若通路径不包含重复的相同边，则它是<strong>路线</strong> 。<br>当没有必要区分多重边时，就用顶点序列$x_0,x_1,\dots,x_n$表示路径。<br>通路表示没有重复顶点的路径。       </p>
+    <content type="html"><![CDATA[<h2 id="连通性"><a href="# 连通性" class="headerlink" title="连通性"></a>连通性 </h2><h3 id="定义和相关术语"><a href="# 定义和相关术语" class="headerlink" title="定义和相关术语"></a> 定义和相关术语 </h3><h4 id="无向图定义"><a href="# 无向图定义" class="headerlink" title="无向图定义"></a> 无向图定义 </h4><p> 设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$<strong>路径 </strong> 是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中 $x_0=u$ 而 $x_n=v$。当这个图是简单图时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即 $u=v$ 且长度大于 0，则它是一条 <strong> 封闭路径 </strong>。<br> 若通路径不包含重复的相同边，则它是 <strong> 路线 </strong> 。<br> 当没有必要区分多重边时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示路径。<br>通路表示没有重复顶点的路径。       </p>
 <blockquote>
-<p>路径(walk)、通路(path)，、封闭路径(closed walk)、回路(circuit)、路线(trail)<br>上面定义的概念，有很多不同的术语， 因此需要注意以下几点： </p>
+<p>路径 (walk)、通路(path)，、封闭路径(closed walk)、回路(circuit)、路线(trail)<br> 上面定义的概念，有很多不同的术语， 因此需要注意以下几点： </p>
 <ul>
 <li>是否起始和终止于相同的顶点</li>
 <li>是否有重复的相同边      </li>
 <li>是否有重复的顶点   </li>
 </ul>
 </blockquote>
-<h4 id="有向图定义"><a href="#有向图定义" class="headerlink" title="有向图定义"></a>有向图定义</h4><p>在有向图$G$中从$a$到$b$的一条路径是$G$中一条或多条边的序列$(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中$x_0=a,x_n=b$。</p>
-<h3 id="无向图的连通性"><a href="#无向图的连通性" class="headerlink" title="无向图的连通性"></a>无向图的连通性</h3><p>若无向图每一对不同的顶点之间都有路径，则该图称为<strong>连通</strong>的。     </p>
-<p>不连通的图是2个或2个以上连通子图之并，每一对子图都没有公共的顶点。这些不相交的连通子图称为图的连通分支。     </p>
+<h4 id="有向图定义"><a href="# 有向图定义" class="headerlink" title="有向图定义"></a>有向图定义 </h4><p> 在有向图 $G$ 中从 $a$ 到 $b$ 的一条路径是 $G$ 中一条或多条边的序列 $(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中 $x_0=a,x_n=b$。</p>
+<h3 id="无向图的连通性"><a href="# 无向图的连通性" class="headerlink" title="无向图的连通性"></a>无向图的连通性 </h3><p> 若无向图每一对不同的顶点之间都有路径，则该图称为 <strong> 连通 </strong> 的。     </p>
+<p>不连通的图是 2 个或 2 个以上连通子图之并，每一对子图都没有公共的顶点。这些不相交的连通子图称为图的连通分支。     </p>
 <p>删除一个顶点和它所关联的边，就产生带有比原图更多的连通分支的子图。把这样的顶点称为割点。    </p>
 <p>把一旦删除就产生带有比原图更多的连通分支的子图的边称为割边或桥。    </p>
-<h4 id="连通无向图的每一对不同顶点之间都存在路线"><a href="#连通无向图的每一对不同顶点之间都存在路线" class="headerlink" title="连通无向图的每一对不同顶点之间都存在路线"></a>连通无向图的每一对不同顶点之间都存在路线</h4><p>证： 设$u$和$v$是连通无向图$G=(\mathbf V,\mathbf E)$的两个不同的顶点。因为$G$是连通的，所以$u$和$v$之间至少有1条路径。设$x_0,x_1,\dots,x_n$是长度最短的路径的顶点序列，其中$x_0=u$而$x_n=v$。这条长度最短的路径是路线。假设它不是路线，则对满足$0\le i\lt j$的某个$i$和$j$来说，有$x_i=x_j$。这意味着通过删除顶点序列$x_i,\dots,x_{j-1}$所对应的边，就获得了 带有顶点序列$x_0,x_1,\dots,x_{i-1},x_j,\dots,x_n$的从$u$到$v$的更短的路线。     </p>
-<h3 id="有向图的连通性"><a href="#有向图的连通性" class="headerlink" title="有向图的连通性"></a>有向图的连通性</h3><p>在有向图里有两种连通性的概念。若任意两顶点之间都有路径，则该有向图是<strong>弱连通性</strong>的。若任意两顶点$a$和$b$，其中从$a$到$b$和从$b$到$a$都有路径，则该图是<strong>强连通性</strong>。    </p>
-<p>$G$的子图是强连通图，则称为$G$的强连通分支或强分枝。    </p>
-<h3 id="顶点之间的路径数"><a href="#顶点之间的路径数" class="headerlink" title="顶点之间的路径数"></a>顶点之间的路径数</h3><p>设$G$是带有相对于顶点顺序$v_1,v_2,\dots,v_n$的邻接矩阵$\mathbf A$的图（允许带有无向、有向、多重边、环）。从$v_i$到$v_j$的长度为$r$的不同路径数目等于$\mathb A^r$的第$(i,j)项，其中$r$是正整数。    </p>
-<h2 id="路径和同构"><a href="#路径和同构" class="headerlink" title="路径和同构"></a>路径和同构</h2><p>有多种方式可以利用路径和封闭路径来帮助判定两个图是否同构。例如，具有特定长度的路线的存在性，就是一种可以用来证明两个图是不同构的有用的不变量。</p>
+<h4 id="连通无向图的每一对不同顶点之间都存在路线"><a href="# 连通无向图的每一对不同顶点之间都存在路线" class="headerlink" title="连通无向图的每一对不同顶点之间都存在路线"></a>连通无向图的每一对不同顶点之间都存在路线 </h4><p> 证： 设 $u$ 和 $v$ 是连通无向图 $G=(\mathbf V,\mathbf E)$ 的两个不同的顶点。因为 $G$ 是连通的，所以 $u$ 和 $v$ 之间至少有 1 条路径。设 $x_0,x_1,\dots,x_n$ 是长度最短的路径的顶点序列，其中 $x_0=u$ 而 $x_n=v$。这条长度最短的路径是路线。假设它不是路线，则对满足 $0\le i\lt j$ 的某个 $i$ 和 $j$ 来说，有 $x_i=x_j$。这意味着通过删除顶点序列 $x_i,\dots,x_{j-1}$ 所对应的边，就获得了 带有顶点序列 $x_0,x_1,\dots,x_{i-1},x_j,\dots,x_n$ 的从 $u$ 到 $v$ 的更短的路线。     </p>
+<h3 id="有向图的连通性"><a href="# 有向图的连通性" class="headerlink" title="有向图的连通性"></a>有向图的连通性 </h3><p> 在有向图里有两种连通性的概念。若任意两顶点之间都有路径，则该有向图是 <strong> 弱连通性 </strong> 的。若任意两顶点 $a$ 和 $b$，其中从 $a$ 到 $b$ 和从 $b$ 到 $a$ 都有路径，则该图是 <strong> 强连通性</strong>。    </p>
+<p>$G$ 的子图是强连通图，则称为 $G$ 的强连通分支或强分枝。    </p>
+<h3 id="顶点之间的路径数"><a href="# 顶点之间的路径数" class="headerlink" title="顶点之间的路径数"></a>顶点之间的路径数 </h3><p> 设 $G$ 是带有相对于顶点顺序 $v_1,v_2,\dots,v_n$ 的邻接矩阵 $\mathbf A$ 的图（允许带有无向、有向、多重边、环）。从 $v_i$ 到 $v_j$ 的长度为 $r$ 的不同路径数目等于 $\mathb A^r$ 的第 $(i,j)项，其中 $r$ 是正整数。    </p>
+<h2 id="路径和同构"><a href="# 路径和同构" class="headerlink" title="路径和同构"></a>路径和同构 </h2><p> 有多种方式可以利用路径和封闭路径来帮助判定两个图是否同构。例如，具有特定长度的路线的存在性，就是一种可以用来证明两个图是不同构的有用的不变量。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;连通性&quot;&gt;&lt;a href=&quot;#连通性&quot; class=&quot;headerlink&quot; title=&quot;连通性&quot;&gt;&lt;/a&gt;连通性&lt;/h2&gt;&lt;h3 id=&quot;定义和相关术语&quot;&gt;&lt;a href=&quot;#定义和相关术语&quot; class=&quot;headerlink&quot; title=&quot;定义和相关术语
+      &lt;h2 id=&quot;连通性&quot;&gt;&lt;a href=&quot;# 连通性&quot; class=&quot;headerlink&quot; title=&quot;连通性&quot;&gt;&lt;/a&gt;连通性 &lt;/h2&gt;&lt;h3 id=&quot;定义和相关术语&quot;&gt;&lt;a href=&quot;# 定义和相关术语&quot; class=&quot;headerlink&quot; title=&quot;定义和相
     
     </summary>
     
@@ -475,14 +530,14 @@
     <published>2017-02-25T04:02:03.000Z</published>
     <updated>2017-02-25T06:46:38.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="同构"><a href="#同构" class="headerlink" title="同构"></a>同构</h2><p>设$G_1=(\mathbf V_1,\mathbf E_1)$和$G_2=(\mathbf V_2,\mathbf E_2)$是简单图，若从$\mathbf V_1$到$\mathbf V_2$存在一对一的映射$f$，且$f$具有如下性质：对$\mathbf V_1$里的所有的$a$和$b$来说，$a$和$b$在$G_1$里相邻当且仅当$f(a)$和$f(b)$在$G_2$里相邻，就说$G_1$和$G_2$是同构的。这样的函数$f$称为同构。简单来讲，当两个简单图同构时，两个图的顶点之间具有保持相邻关系的一一对应。      </p>
-<p>判断两个简单图是否同构常常是一件困难的事情。在两个带有$n$个顶点的简单图顶点集之间有$n!$钟可能的一一对应。若$n$太大，则通过检验每一种对应来看它是否保持相邻关系是不可能的。      </p>
-<h3 id="判断同构的方法"><a href="#判断同构的方法" class="headerlink" title="判断同构的方法"></a>判断同构的方法</h3><p>同构的简单图必然具有相同的顶点数、边数和顶点的度，这些被称为同构下的不变量。这些量有任何不同，则两个图就不是同构的，不过即使，这些量都是相同的，也不一定意味着两个图同构。目前没有已知的用来判定简单是否同构的不变量集。    </p>
+    <content type="html"><![CDATA[<h2 id="同构"><a href="# 同构" class="headerlink" title="同构"></a>同构 </h2><p> 设 $G_1=(\mathbf V_1,\mathbf E_1)$ 和 $G_2=(\mathbf V_2,\mathbf E_2)$ 是简单图，若从 $\mathbf V_1$ 到 $\mathbf V_2$ 存在一对一的映射 $f$，且 $f$ 具有如下性质：对 $\mathbf V_1$ 里的所有的 $a$ 和 $b$ 来说，$a$ 和 $b$ 在 $G_1$ 里相邻当且仅当 $f(a)$ 和 $f(b)$ 在 $G_2$ 里相邻，就说 $G_1$ 和 $G_2$ 是同构的。这样的函数 $f$ 称为同构。简单来讲，当两个简单图同构时，两个图的顶点之间具有保持相邻关系的一一对应。      </p>
+<p>判断两个简单图是否同构常常是一件困难的事情。在两个带有 $n$ 个顶点的简单图顶点集之间有 $n!$ 钟可能的一一对应。若 $n$ 太大，则通过检验每一种对应来看它是否保持相邻关系是不可能的。      </p>
+<h3 id="判断同构的方法"><a href="# 判断同构的方法" class="headerlink" title="判断同构的方法"></a>判断同构的方法 </h3><p> 同构的简单图必然具有相同的顶点数、边数和顶点的度，这些被称为同构下的不变量。这些量有任何不同，则两个图就不是同构的，不过即使，这些量都是相同的，也不一定意味着两个图同构。目前没有已知的用来判定简单是否同构的不变量集。    </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;同构&quot;&gt;&lt;a href=&quot;#同构&quot; class=&quot;headerlink&quot; title=&quot;同构&quot;&gt;&lt;/a&gt;同构&lt;/h2&gt;&lt;p&gt;设$G_1=(\mathbf V_1,\mathbf E_1)$和$G_2=(\mathbf V_2,\mathbf E_2)$是简单图，若
+      &lt;h2 id=&quot;同构&quot;&gt;&lt;a href=&quot;# 同构&quot; class=&quot;headerlink&quot; title=&quot;同构&quot;&gt;&lt;/a&gt;同构 &lt;/h2&gt;&lt;p&gt; 设 $G_1=(\mathbf V_1,\mathbf E_1)$ 和 $G_2=(\mathbf V_2,\mathbf E_2)$
     
     </summary>
     
@@ -506,9 +561,9 @@
     <published>2017-02-23T13:06:27.000Z</published>
     <updated>2017-02-23T13:48:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="图的表示"><a href="#图的表示" class="headerlink" title="图的表示"></a>图的表示</h2><p>图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     </p>
-<h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>邻接表可以用来表示不带多重边的图，它规定了每个顶点相邻的顶点       </p>
-<h4 id="简单表的邻接表"><a href="#简单表的邻接表" class="headerlink" title="简单表的邻接表"></a>简单表的邻接表</h4><table>
+    <content type="html"><![CDATA[<h2 id="图的表示"><a href="# 图的表示" class="headerlink" title="图的表示"></a>图的表示 </h2><p> 图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     </p>
+<h3 id="邻接表"><a href="# 邻接表" class="headerlink" title="邻接表"></a>邻接表 </h3><p> 邻接表可以用来表示不带多重边的图，它规定了每个顶点相邻的顶点       </p>
+<h4 id="简单表的邻接表"><a href="# 简单表的邻接表" class="headerlink" title="简单表的邻接表"></a>简单表的邻接表</h4><table>
 <thead>
 <tr>
 <th style="text-align:left">顶点</th>
@@ -538,7 +593,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="有向图的邻接表"><a href="#有向图的邻接表" class="headerlink" title="有向图的邻接表"></a>有向图的邻接表</h4><table>
+<h4 id="有向图的邻接表"><a href="# 有向图的邻接表" class="headerlink" title="有向图的邻接表"></a>有向图的邻接表</h4><table>
 <thead>
 <tr>
 <th style="text-align:left">起点</th>
@@ -568,17 +623,17 @@
 </tr>
 </tbody>
 </table>
-<h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><h4 id="基于顶点的相邻关系"><a href="#基于顶点的相邻关系" class="headerlink" title="基于顶点的相邻关系"></a>基于顶点的相邻关系</h4><p>假设$G=(\mathbf V,\mathbf E)$是简单图，其中$\mid\mathbf V\mid=m$。假设把$G$的顶点任意地排列成$v_1,v_2,\dots,v_n$。对这个顶点表来说，$G$的邻接矩阵$\mathbf A$是一个$n\times n$的$0-1$矩阵，它满足这样的性质：当$v_i$和$v_j$相邻时第$(i,j)$项是1，当$v_i$和$v_j$不相邻时第$(i,j)$项是0。      </p>
-<p>图的邻接矩阵依赖于所选择顶点的顺序。因此带$n$个顶点的图有$n!$个不同的邻接矩阵，因为$n$个顶点有$n!$个不同的顺序。     </p>
-<p>邻接矩阵也可以用来表示带环和多重边的无向图。把顶点$a_i$上的环表示成邻接矩阵第$(i,i)$位置上1，当出现多重边时，第$(i,j)$项等于$\{a_i,a_j\}$关联的边数。包括多重图和伪图在内的所有无向图都具有对称的邻接矩阵。      </p>
-<p>有向图的邻接矩阵不必是对称的，因为当从$a_i$到$a_j$有边时，从$a_j$到$a_i$可以没边。    </p>
-<h4 id="关联矩阵"><a href="#关联矩阵" class="headerlink" title="关联矩阵"></a>关联矩阵</h4><p>设$G=(\mathbf V,\mathbf E)$是无向图。设$v_1,v_2,\dots, v_n$，是顶点而$e_1,e_2,\dots,e_n$是边。则相对于$\mathbf V$和$\mathbf E$的这个顺序的关联矩阵是$n\times m$矩阵$\mathbf M=[m_{ij}]$，其中$$m_{ij} =\begin{cases}1\qquad 当边e_j关联v_i时\\0\qquad 否则\end{cases}$$<br>关联矩阵示例：<br><img src="../images/graph_06.png" alt=""></p>
+<h3 id="邻接矩阵"><a href="# 邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵 </h3><h4 id="基于顶点的相邻关系"><a href="# 基于顶点的相邻关系" class="headerlink" title="基于顶点的相邻关系"></a> 基于顶点的相邻关系 </h4><p> 假设 $G=(\mathbf V,\mathbf E)$ 是简单图，其中 $\mid\mathbf V\mid=m$。假设把 $G$ 的顶点任意地排列成 $v_1,v_2,\dots,v_n$。对这个顶点表来说，$G$ 的邻接矩阵 $\mathbf A$ 是一个 $n\times n$ 的 $0-1$ 矩阵，它满足这样的性质：当 $v_i$ 和 $v_j$ 相邻时第 $(i,j)$ 项是 1，当 $v_i$ 和 $v_j$ 不相邻时第 $(i,j)$ 项是 0。      </p>
+<p>图的邻接矩阵依赖于所选择顶点的顺序。因此带 $n$ 个顶点的图有 $n!$ 个不同的邻接矩阵，因为 $n$ 个顶点有 $n!$ 个不同的顺序。     </p>
+<p>邻接矩阵也可以用来表示带环和多重边的无向图。把顶点 $a_i$ 上的环表示成邻接矩阵第 $(i,i)$ 位置上 1，当出现多重边时，第 $(i,j)$ 项等于 $\{a_i,a_j\}$ 关联的边数。包括多重图和伪图在内的所有无向图都具有对称的邻接矩阵。      </p>
+<p>有向图的邻接矩阵不必是对称的，因为当从 $a_i$ 到 $a_j$ 有边时，从 $a_j$ 到 $a_i$ 可以没边。    </p>
+<h4 id="关联矩阵"><a href="# 关联矩阵" class="headerlink" title="关联矩阵"></a>关联矩阵 </h4><p> 设 $G=(\mathbf V,\mathbf E)$ 是无向图。设 $v_1,v_2,\dots, v_n$，是顶点而 $e_1,e_2,\dots,e_n$ 是边。则相对于 $\mathbf V$ 和 $\mathbf E$ 的这个顺序的关联矩阵是 $n\times m$ 矩阵 $\mathbf M=[m_{ij}]$，其中 $$m_{ij} =\begin{cases}1\qquad 当边 e_j 关联 v_i 时 \\0\qquad 否则 \end{cases}$$<br>关联矩阵示例：<br><img src="../images/graph_06.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;图的表示&quot;&gt;&lt;a href=&quot;#图的表示&quot; class=&quot;headerlink&quot; title=&quot;图的表示&quot;&gt;&lt;/a&gt;图的表示&lt;/h2&gt;&lt;p&gt;图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     &lt;/p&gt;
-&lt;h3 id=&quot;邻接表&quot;&gt;&lt;a 
+      &lt;h2 id=&quot;图的表示&quot;&gt;&lt;a href=&quot;# 图的表示&quot; class=&quot;headerlink&quot; title=&quot;图的表示&quot;&gt;&lt;/a&gt;图的表示 &lt;/h2&gt;&lt;p&gt; 图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     &lt;/p&gt;
+&lt;h3 id=&quot;邻接表&quot;&gt;
     
     </summary>
     
@@ -602,18 +657,18 @@
     <published>2017-02-22T13:09:01.000Z</published>
     <updated>2017-03-16T12:25:24.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="图定义"><a href="#图定义" class="headerlink" title="图定义"></a>图定义</h2><p>一个图$G$由顶点（或结点）的非空集$\mathbf V$和边集$\mathbf E$构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    </p>
+    <content type="html"><![CDATA[<h2 id="图定义"><a href="# 图定义" class="headerlink" title="图定义"></a>图定义 </h2><p> 一个图 $G$ 由顶点（或结点）的非空集 $\mathbf V$ 和边集 $\mathbf E$ 构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    </p>
 <ul>
 <li>环：把一个顶点连接自身的边     </li>
-<li>多重边：$m$条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为$m$的边     </li>
+<li>多重边：$m$ 条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为 $m$ 的边     </li>
 </ul>
-<h3 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h3><p>一个有向图$(\mathbf V,\mathbf E)$由一个非空顶点集$\mathbf V$和一个有向边集$\mathbf E$组成。每条有向边与一个顶点有序对相关联。认为与有序对$u,v)$相关的有向边开始于$u$，结束于$v$。    </p>
-<h3 id="度"><a href="#度" class="headerlink" title="度"></a>度</h3><h4 id="无向图中顶点的度"><a href="#无向图中顶点的度" class="headerlink" title="无向图中顶点的度"></a>无向图中顶点的度</h4><p>在无向图里顶点的度是与该顶点关联的边的数目，例外的情形是，顶点上的环算为度数加2。顶点$v$的度表示成$deg(v)$。</p>
-<h4 id="无向图中顶点的度的性质"><a href="#无向图中顶点的度的性质" class="headerlink" title="无向图中顶点的度的性质"></a>无向图中顶点的度的性质</h4><h5 id="握手定理"><a href="#握手定理" class="headerlink" title="握手定理"></a>握手定理</h5><p>设$G=(\mathbf V,\mathbf E)$是有$e$条边的无向图，则$$2e=\sum_{v\in V}deg(v)$$</p>
-<h5 id="无向图有偶数个奇数度顶点"><a href="#无向图有偶数个奇数度顶点" class="headerlink" title="无向图有偶数个奇数度顶点"></a>无向图有偶数个奇数度顶点</h5><h4 id="有向图中顶点的度"><a href="#有向图中顶点的度" class="headerlink" title="有向图中顶点的度"></a>有向图中顶点的度</h4><p>当$(u,v)$是有向边时，说$u$邻接到$v$，顶点$u$称为$(u,v)$的起点，$v$称为$(u,v)$的终点。环的起点和终点相同。<br>在有向图中，顶点$v$的入度是以$v$作为终点的边数，表示成$deg^-(v)$，顶点$v$的出度是以$v$作为起点的边数，表示成$deg^+(v)$.<br>设$G=(\mathbf V,\mathbf E)$是带有向边的图。于是$$\sum_{v\in V}deg^-(v)=\sum_{v\in V}deg^+(v)=\mid E\mid$$</p>
-<h3 id="子图"><a href="#子图" class="headerlink" title="子图"></a>子图</h3><p>图$G=(\mathbf V,\mathbf E)$的子图是图$H=(\mathbf W,\mathbf F)$，其中$\mathbf W\subseteq\mathbf F$而且$\mathbf F\subseteq\mathbf E$。</p>
-<h3 id="并图"><a href="#并图" class="headerlink" title="并图"></a>并图</h3><p>两个简单图$G_1=(\mathbf V_1,\mathbf E_1)$和$G_2=(\mathbf V_2,\mathbf E_2)$的并图是带有顶点集$\mathbf V_1\cup\mathbf V_2$和边集$\mathbf E_1\cup\mathbf E_2$的简单图。$G_1$和$G_2$的并图表示成$G_1\cup G_2$。</p>
-<h2 id="图的类型"><a href="#图的类型" class="headerlink" title="图的类型"></a>图的类型</h2><table>
+<h3 id="有向图"><a href="# 有向图" class="headerlink" title="有向图"></a>有向图 </h3><p> 一个有向图 $(\mathbf V,\mathbf E)$ 由一个非空顶点集 $\mathbf V$ 和一个有向边集 $\mathbf E$ 组成。每条有向边与一个顶点有序对相关联。认为与有序对 $u,v)$ 相关的有向边开始于 $u$，结束于 $v$。    </p>
+<h3 id="度"><a href="# 度" class="headerlink" title="度"></a>度 </h3><h4 id="无向图中顶点的度"><a href="# 无向图中顶点的度" class="headerlink" title="无向图中顶点的度"></a> 无向图中顶点的度 </h4><p> 在无向图里顶点的度是与该顶点关联的边的数目，例外的情形是，顶点上的环算为度数加 2。顶点 $v$ 的度表示成 $deg(v)$。</p>
+<h4 id="无向图中顶点的度的性质"><a href="# 无向图中顶点的度的性质" class="headerlink" title="无向图中顶点的度的性质"></a>无向图中顶点的度的性质 </h4><h5 id="握手定理"><a href="# 握手定理" class="headerlink" title="握手定理"></a> 握手定理 </h5><p> 设 $G=(\mathbf V,\mathbf E)$ 是有 $e$ 条边的无向图，则 $$2e=\sum_{v\in V}deg(v)$$</p>
+<h5 id="无向图有偶数个奇数度顶点"><a href="# 无向图有偶数个奇数度顶点" class="headerlink" title="无向图有偶数个奇数度顶点"></a>无向图有偶数个奇数度顶点 </h5><h4 id="有向图中顶点的度"><a href="# 有向图中顶点的度" class="headerlink" title="有向图中顶点的度"></a> 有向图中顶点的度 </h4><p> 当 $(u,v)$ 是有向边时，说 $u$ 邻接到 $v$，顶点 $u$ 称为 $(u,v)$ 的起点，$v$ 称为 $(u,v)$ 的终点。环的起点和终点相同。<br>在有向图中，顶点 $v$ 的入度是以 $v$ 作为终点的边数，表示成 $deg^-(v)$，顶点 $v$ 的出度是以 $v$ 作为起点的边数，表示成 $deg^+(v)$.<br>设 $G=(\mathbf V,\mathbf E)$ 是带有向边的图。于是 $$\sum_{v\in V}deg^-(v)=\sum_{v\in V}deg^+(v)=\mid E\mid$$</p>
+<h3 id="子图"><a href="# 子图" class="headerlink" title="子图"></a>子图 </h3><p> 图 $G=(\mathbf V,\mathbf E)$ 的子图是图 $H=(\mathbf W,\mathbf F)$，其中 $\mathbf W\subseteq\mathbf F$ 而且 $\mathbf F\subseteq\mathbf E$。</p>
+<h3 id="并图"><a href="# 并图" class="headerlink" title="并图"></a>并图 </h3><p> 两个简单图 $G_1=(\mathbf V_1,\mathbf E_1)$ 和 $G_2=(\mathbf V_2,\mathbf E_2)$ 的并图是带有顶点集 $\mathbf V_1\cup\mathbf V_2$ 和边集 $\mathbf E_1\cup\mathbf E_2$ 的简单图。$G_1$ 和 $G_2$ 的并图表示成 $G_1\cup G_2$。</p>
+<h2 id="图的类型"><a href="# 图的类型" class="headerlink" title="图的类型"></a>图的类型</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">类型</th>
@@ -655,7 +710,7 @@
 </tr>
 <tr>
 <td style="text-align:left">混合图</td>
-<td style="text-align:left">有向+无向</td>
+<td style="text-align:left">有向 + 无向</td>
 <td style="text-align:left">是</td>
 <td style="text-align:left">是</td>
 </tr>
@@ -667,20 +722,20 @@
 <li>是否存在多重边或多重有向边</li>
 <li>是否存在环 </li>
 </ul>
-<h3 id="一些特殊的简单图"><a href="#一些特殊的简单图" class="headerlink" title="一些特殊的简单图"></a>一些特殊的简单图</h3><h4 id="完全图"><a href="#完全图" class="headerlink" title="完全图"></a>完全图</h4><p>$n$个顶点的完全图是在每对顶点之间都恰好有一条边的简单图。用$K_n$表示。<br><img src="../images/graph_01.png" alt=""></p>
-<h4 id="圈图"><a href="#圈图" class="headerlink" title="圈图"></a>圈图</h4><p>圈图是由$n$个顶点$v_1,v_2,\dots,v_n$以及边$\{v_1,v_2\},\{v_2,v_3\},\dots, \{v_{n-1}, v_n\},\{v_n,v_1\}$组成的。用$C_n$表示。<br><img src="../images/graph_02.png" alt=""></p>
-<h4 id="轮图"><a href="#轮图" class="headerlink" title="轮图"></a>轮图</h4><p>当给圈图添加另一个顶点，并且把这个新顶点与圈图里$n$个顶点逐个连接时，就得出轮图。用$W_n$表示。<br><img src="../images/graph_03.png" alt="">    </p>
-<h4 id="n立方体图"><a href="#n立方体图" class="headerlink" title="n立方体图"></a>n立方体图</h4><p>$n$立方体图是用顶点表示$2^n$个长度为$n$的位串的图。两个顶点相邻当且仅当它们所表示的位串恰恰相差一位。 可以从$n$立方图$Q_n$来构造$(n+1)$立方体图$Q_{n+1}$，方法是建立$Q_n$的两个副本，在$Q_n$的一个副本的顶点标记前加0，在$Q_n$的另一个副本的顶点标记前加1，并且加入连接那些标志只在第一位不同的两个顶点的边。<br><img src="../images/graph_04.png" alt=""></p>
-<h4 id="偶图"><a href="#偶图" class="headerlink" title="偶图"></a>偶图</h4><p>若把简单图$G$的顶点集分成两个不相交的非空集合$\mathbf V_1$和$\mathbf V_2$，使得图的每一条边都连接着$\mathbf V_1$里的一个顶点与$\mathbf V_2$里的一个顶点。因此$G$里没有边是连接着$\mathbf V_1$里的两个顶点或$\mathbf V_2$里的两个顶点。则$G$称为偶图或者二分图。     </p>
-<h5 id="判断简单图是偶图的准则"><a href="#判断简单图是偶图的准则" class="headerlink" title="判断简单图是偶图的准则"></a>判断简单图是偶图的准则</h5><p>对图中的每个顶点赋以两种不同的颜色，而不让相邻接的顶点被赋以相同的颜色。     </p>
-<h5 id="完全偶图"><a href="#完全偶图" class="headerlink" title="完全偶图"></a>完全偶图</h5><p>完全偶图$K_{m,n}是顶点集分成分别含有$m$和$n$个顶点的两个子集的图。两个顶点之间有边当且仅当一个顶点属于第一个子集而另外一个顶点属于第二个子集。<br><img src="../images/graph_05.png" alt=""></p>
-<h3 id="度序列"><a href="#度序列" class="headerlink" title="度序列"></a>度序列</h3><p>一个图的度序列是由该图的各节点的度按递减顺序排列的序列。其中，如果一个序列是简单图的度序列，那么该序列是<strong>成图</strong>的</p>
-<h3 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h3><p>若简单图每个顶点的度都相同，则这个图称为正则的。若正则图的每个顶点的度都为$n$，则这个图称为$n$正则。   </p>
+<h3 id="一些特殊的简单图"><a href="# 一些特殊的简单图" class="headerlink" title="一些特殊的简单图"></a>一些特殊的简单图 </h3><h4 id="完全图"><a href="# 完全图" class="headerlink" title="完全图"></a> 完全图</h4><p>$n$ 个顶点的完全图是在每对顶点之间都恰好有一条边的简单图。用 $K_n$ 表示。<br><img src="../images/graph_01.png" alt=""></p>
+<h4 id="圈图"><a href="# 圈图" class="headerlink" title="圈图"></a>圈图 </h4><p> 圈图是由 $n$ 个顶点 $v_1,v_2,\dots,v_n$ 以及边 $\{v_1,v_2\},\{v_2,v_3\},\dots, \{v_{n-1}, v_n\},\{v_n,v_1\}$ 组成的。用 $C_n$ 表示。<br><img src="../images/graph_02.png" alt=""></p>
+<h4 id="轮图"><a href="# 轮图" class="headerlink" title="轮图"></a>轮图 </h4><p> 当给圈图添加另一个顶点，并且把这个新顶点与圈图里 $n$ 个顶点逐个连接时，就得出轮图。用 $W_n$ 表示。<br><img src="../images/graph_03.png" alt="">    </p>
+<h4 id="n 立方体图"><a href="#n 立方体图" class="headerlink" title="n 立方体图"></a>n 立方体图</h4><p>$n$ 立方体图是用顶点表示 $2^n$ 个长度为 $n$ 的位串的图。两个顶点相邻当且仅当它们所表示的位串恰恰相差一位。 可以从 $n$ 立方图 $Q_n$ 来构造 $(n+1)$ 立方体图 $Q_{n+1}$，方法是建立 $Q_n$ 的两个副本，在 $Q_n$ 的一个副本的顶点标记前加 0，在 $Q_n$ 的另一个副本的顶点标记前加 1，并且加入连接那些标志只在第一位不同的两个顶点的边。<br><img src="../images/graph_04.png" alt=""></p>
+<h4 id="偶图"><a href="# 偶图" class="headerlink" title="偶图"></a>偶图 </h4><p> 若把简单图 $G$ 的顶点集分成两个不相交的非空集合 $\mathbf V_1$ 和 $\mathbf V_2$，使得图的每一条边都连接着 $\mathbf V_1$ 里的一个顶点与 $\mathbf V_2$ 里的一个顶点。因此 $G$ 里没有边是连接着 $\mathbf V_1$ 里的两个顶点或 $\mathbf V_2$ 里的两个顶点。则 $G$ 称为偶图或者二分图。     </p>
+<h5 id="判断简单图是偶图的准则"><a href="# 判断简单图是偶图的准则" class="headerlink" title="判断简单图是偶图的准则"></a>判断简单图是偶图的准则 </h5><p> 对图中的每个顶点赋以两种不同的颜色，而不让相邻接的顶点被赋以相同的颜色。     </p>
+<h5 id="完全偶图"><a href="# 完全偶图" class="headerlink" title="完全偶图"></a>完全偶图 </h5><p> 完全偶图 $K_{m,n}是顶点集分成分别含有 $m$ 和 $n$ 个顶点的两个子集的图。两个顶点之间有边当且仅当一个顶点属于第一个子集而另外一个顶点属于第二个子集。<br><img src="../images/graph_05.png" alt=""></p>
+<h3 id="度序列"><a href="# 度序列" class="headerlink" title="度序列"></a>度序列 </h3><p> 一个图的度序列是由该图的各节点的度按递减顺序排列的序列。其中，如果一个序列是简单图的度序列，那么该序列是 <strong> 成图 </strong> 的</p>
+<h3 id="正则"><a href="# 正则" class="headerlink" title="正则"></a>正则 </h3><p> 若简单图每个顶点的度都相同，则这个图称为正则的。若正则图的每个顶点的度都为 $n$，则这个图称为 $n$ 正则。   </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;图定义&quot;&gt;&lt;a href=&quot;#图定义&quot; class=&quot;headerlink&quot; title=&quot;图定义&quot;&gt;&lt;/a&gt;图定义&lt;/h2&gt;&lt;p&gt;一个图$G$由顶点（或结点）的非空集$\mathbf V$和边集$\mathbf E$构成，每条边有一个或两个顶点与它相连，这样的顶
+      &lt;h2 id=&quot;图定义&quot;&gt;&lt;a href=&quot;# 图定义&quot; class=&quot;headerlink&quot; title=&quot;图定义&quot;&gt;&lt;/a&gt;图定义 &lt;/h2&gt;&lt;p&gt; 一个图 $G$ 由顶点（或结点）的非空集 $\mathbf V$ 和边集 $\mathbf E$ 构成，每条边有一个或两个顶点
     
     </summary>
     
@@ -698,14 +753,14 @@
   </entry>
   
   <entry>
-    <title>Mac-Mac下制作MacOS启动盘</title>
+    <title>Mac-Mac 下制作 MacOS 启动盘</title>
     <link href="http://blog.freeabyss.com/Mac/Mac-Mac%E4%B8%8B%E5%88%B6%E4%BD%9CMacOS%E5%90%AF%E5%8A%A8%E7%9B%98.html"/>
     <id>http://blog.freeabyss.com/Mac/Mac-Mac下制作MacOS启动盘.html</id>
     <published>2017-02-10T06:37:04.000Z</published>
     <updated>2017-02-10T06:41:43.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
-<li>从App Store中下载macOS Sierra，不需要安装</li>
+<li> 从 App Store 中下载 macOS Sierra，不需要安装 </li>
 <li></li>
 </ol>
 ]]></content>
@@ -713,7 +768,7 @@
     <summary type="html">
     
       &lt;ol&gt;
-&lt;li&gt;从App Store中下载macOS Sierra，不需要安装&lt;/li&gt;
+&lt;li&gt; 从 App Store 中下载 macOS Sierra，不需要安装 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -738,22 +793,22 @@
     <published>2017-01-27T08:32:03.000Z</published>
     <updated>2017-02-23T12:57:05.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="关系的闭包"><a href="#关系的闭包" class="headerlink" title="关系的闭包"></a>关系的闭包</h2><p>一般来说，设$\mathbf R$是集合$\mathbf A$上的关系。$\mathbf R$可能具有或者不具有某些性质$\mathbf P$，例如自反性、对称性或传递性。如果存在包含$\mathbf R$的具有性质$\mathbf P$的关系$\mathbf S$，并且$\mathbf S$是包含$\mathbf R$且具有性质$\mathbf P$的每一个关系的子集，那么$\mathbf S$叫做$\mathbf R$的关于$\mathbf P$的闭包。</p>
-<h3 id="构造闭包"><a href="#构造闭包" class="headerlink" title="构造闭包"></a>构造闭包</h3><h4 id="自反闭包"><a href="#自反闭包" class="headerlink" title="自反闭包"></a>自反闭包</h4><p>给定集合$\mathbf A$上的关系$\mathbf R$，对于$a\in\mathbf R$，可以通过把形如$(a,a)$的所有的对，除了已在$\mathbf R$中的之外，都加到$\mathbf R$中，就构成了$\mathbf R$的自反闭包。 </p>
-<h4 id="对称闭包"><a href="#对称闭包" class="headerlink" title="对称闭包"></a>对称闭包</h4><p>$\mathbf R\cup\mathbf R^{-1}$是$\mathbf R$的对称闭包，其中$\mathbf R^{-1}=\{(b,a)\mid (a,b)\in\mathbf R\}$。     </p>
-<h4 id="传递闭包"><a href="#传递闭包" class="headerlink" title="传递闭包"></a>传递闭包</h4><p>我们需要借助图来构造传递闭包，首先介绍几个关于图的术语。      </p>
+    <content type="html"><![CDATA[<h2 id="关系的闭包"><a href="# 关系的闭包" class="headerlink" title="关系的闭包"></a>关系的闭包 </h2><p> 一般来说，设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。$\mathbf R$ 可能具有或者不具有某些性质 $\mathbf P$，例如自反性、对称性或传递性。如果存在包含 $\mathbf R$ 的具有性质 $\mathbf P$ 的关系 $\mathbf S$，并且 $\mathbf S$ 是包含 $\mathbf R$ 且具有性质 $\mathbf P$ 的每一个关系的子集，那么 $\mathbf S$ 叫做 $\mathbf R$ 的关于 $\mathbf P$ 的闭包。</p>
+<h3 id="构造闭包"><a href="# 构造闭包" class="headerlink" title="构造闭包"></a>构造闭包 </h3><h4 id="自反闭包"><a href="# 自反闭包" class="headerlink" title="自反闭包"></a> 自反闭包 </h4><p> 给定集合 $\mathbf A$ 上的关系 $\mathbf R$，对于 $a\in\mathbf R$，可以通过把形如 $(a,a)$ 的所有的对，除了已在 $\mathbf R$ 中的之外，都加到 $\mathbf R$ 中，就构成了 $\mathbf R$ 的自反闭包。 </p>
+<h4 id="对称闭包"><a href="# 对称闭包" class="headerlink" title="对称闭包"></a>对称闭包</h4><p>$\mathbf R\cup\mathbf R^{-1}$ 是 $\mathbf R$ 的对称闭包，其中 $\mathbf R^{-1}=\{(b,a)\mid (a,b)\in\mathbf R\}$。     </p>
+<h4 id="传递闭包"><a href="# 传递闭包" class="headerlink" title="传递闭包"></a>传递闭包 </h4><p> 我们需要借助图来构造传递闭包，首先介绍几个关于图的术语。      </p>
 <ol>
-<li>在有向图$G$中从$a$到$b$的一条路径是$G$中一条或多条边的序列$(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中$x_0=a, x_n=b$。即一个边的序列，其中一条边的终点和路径中下一条边的始点相同。这条路记为$x_0,x_1,\dots,x_{n-1},x_n$，长度为$n$。    </li>
+<li>在有向图 $G$ 中从 $a$ 到 $b$ 的一条路径是 $G$ 中一条或多条边的序列 $(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中 $x_0=a, x_n=b$。即一个边的序列，其中一条边的终点和路径中下一条边的始点相同。这条路记为 $x_0,x_1,\dots,x_{n-1},x_n$，长度为 $n$。    </li>
 <li>在同一顶点开始和结束的路径叫做回路或圈。       </li>
 <li>有向图的一条路径可以多次通过一个顶点。此外，有向图的一条边也可以多次出现在一条路径中。     </li>
-<li>设$\mathbf R$是集合$\mathbf A$上的关系。从$a$到$b$存在一条长为$n$的路径，当且仅当$(a,b)\in\mathbf R$。      </li>
+<li>设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。从 $a$ 到 $b$ 存在一条长为 $n$ 的路径，当且仅当 $(a,b)\in\mathbf R$。      </li>
 </ol>
-<p>现在证明找一个关系的传递闭包与在相关的有向图中确定哪些顶点对被路径连接是等价的。由此要定义一个新的关系。<br>连通性关系:设$\mathbf R$是集合$\mathbf A$上的关系，连通性关系$\mathbf R^<em>$由对$(a,b)$构成，使得在$\mathbf R$中从顶点$a$到$b$之间存在一条至少长为1的路径。<br>因为$\mathbf R^n$由对$(a,b)$构成，使得存在一条从$a$到$b$的长为$n$的路径，从而$\mathbf R^</em>$是所有集合$\mathbf R^n$的并。即$$\mathbf R^<em>=\bigcup^\infty_{n=1}\mathbf R^n$$<br>关系$\mathbf R$的传递闭包等于连通性关系$\mathbf R^</em>$。     </p>
+<p>现在证明找一个关系的传递闭包与在相关的有向图中确定哪些顶点对被路径连接是等价的。由此要定义一个新的关系。<br>连通性关系: 设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系，连通性关系 $\mathbf R^<em>$ 由对 $(a,b)$ 构成，使得在 $\mathbf R$ 中从顶点 $a$ 到 $b$ 之间存在一条至少长为 1 的路径。<br>因为 $\mathbf R^n$ 由对 $(a,b)$ 构成，使得存在一条从 $a$ 到 $b$ 的长为 $n$ 的路径，从而 $\mathbf R^</em>$ 是所有集合 $\mathbf R^n$ 的并。即 $$\mathbf R^<em>=\bigcup^\infty_{n=1}\mathbf R^n$$<br>关系 $\mathbf R$ 的传递闭包等于连通性关系 $\mathbf R^</em>$。     </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;关系的闭包&quot;&gt;&lt;a href=&quot;#关系的闭包&quot; class=&quot;headerlink&quot; title=&quot;关系的闭包&quot;&gt;&lt;/a&gt;关系的闭包&lt;/h2&gt;&lt;p&gt;一般来说，设$\mathbf R$是集合$\mathbf A$上的关系。$\mathbf R$可能具有或者不具有某些
+      &lt;h2 id=&quot;关系的闭包&quot;&gt;&lt;a href=&quot;# 关系的闭包&quot; class=&quot;headerlink&quot; title=&quot;关系的闭包&quot;&gt;&lt;/a&gt;关系的闭包 &lt;/h2&gt;&lt;p&gt; 一般来说，设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。$\mathbf R$ 可能具
     
     </summary>
     
@@ -777,25 +832,25 @@
     <published>2017-01-22T11:25:37.000Z</published>
     <updated>2017-02-23T12:56:58.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="关系的表示"><a href="#关系的表示" class="headerlink" title="关系的表示"></a>关系的表示</h2><p>本文讨论用$0-1$矩阵和有向图的方式表示关系。    </p>
-<h3 id="用矩阵表示关系"><a href="#用矩阵表示关系" class="headerlink" title="用矩阵表示关系"></a>用矩阵表示关系</h3><p>假设$\mathbf R$是从$\mathbf A=\{a_1,a_2,\dots,a_m\}$到$\mathbf B=\{b_1,b_2,\dots,b_n\}$的关系。关系$\mathbf R$可以用矩阵$\mathbf M_R=[m_{ij}]$来表示，其中<br>$$m_{ij}=\begin{cases}1\qquad 如果(a_i,a_j)\in\mathbf R\\0\qquad 如果(a_i,b_j)\notin\mathbf R\end{cases}$$该表示方式，依赖于$\mathbf A$和$\mathbf B$的使用的排序。<br>集合上的关系的矩阵是一个方阵，可以用矩阵来确定关系是否具有某种性质。<br>例如$\mathbf R=\{(2,1),(3,1),(3,2)\}$,关于$\mathbf R$的矩阵是$$\mathbf M_R=\begin{bmatrix}0&amp;0\\1&amp;0\\1&amp;1\end{bmatrix}$$   </p>
-<h4 id="自反关系的矩阵"><a href="#自反关系的矩阵" class="headerlink" title="自反关系的矩阵"></a>自反关系的矩阵</h4><p>$\mathbf R$是自反的，当且仅当$i=1,2,\dots,n,m_i=1$。换句话说，如果$\mathbf M_R$的主对角线的所有元素都等于1，那么$\mathbf R$是自反的。    </p>
-<h4 id="对称关系的矩阵"><a href="#对称关系的矩阵" class="headerlink" title="对称关系的矩阵"></a>对称关系的矩阵</h4><p>$\mathbf R$是对称的，当且仅当对所有的整数对$i，j$(其中$i=1,2,\dots,n, j=1,2,\dots,m$)都有$m_{ij}=m_{ji}$。也就是说$\mathbf R$是对称的当且仅当$\mathbf M_R=(\mathbf M_R)^t$</p>
-<h4 id="反对称关系的矩阵"><a href="#反对称关系的矩阵" class="headerlink" title="反对称关系的矩阵"></a>反对称关系的矩阵</h4><p>$\mathbf R$是反对称的，当$i\neq j$时，$m_{ij}=0$或$m_{ji}=0$</p>
-<h4 id="关系运算和矩阵"><a href="#关系运算和矩阵" class="headerlink" title="关系运算和矩阵"></a>关系运算和矩阵</h4><p>$$\mathbf M_{R_1\cup R_2}=\mathbf M_{R_1}\lor \mathbf M_{R_2}\\<br>\mathbf M_{R_1\cap R_2}=\mathbf M_{R_1}\land \mathbf M_{R_2}\\<br>\mathbf M_{R_1\cdot R_2}=\mathbf M_{R_1}\odot  \mathbf M_{R_2}\\$$</p>
-<h3 id="用图表示关系"><a href="#用图表示关系" class="headerlink" title="用图表示关系"></a>用图表示关系</h3><p>一个有向图由顶点(或结点)集$V$和边(或弧)集$E$组成，其中边集是$V$中元素的有序对的集合。顶点$a$叫做边$(a,b)$的始点，而顶点$b$叫做这条边的终点。<br>形如$(a,a)$的边用一条从顶点$a$到自身的弧表示。这种边叫做环。<br>用图来表示关系，就是把集合的每个元素表示成一个点，每个有序对表示成一条弧，弧上的箭头标明了弧的方向。    </p>
-<h4 id="用图来确定关系的性质"><a href="#用图来确定关系的性质" class="headerlink" title="用图来确定关系的性质"></a>用图来确定关系的性质</h4><ul>
+    <content type="html"><![CDATA[<h2 id="关系的表示"><a href="# 关系的表示" class="headerlink" title="关系的表示"></a>关系的表示 </h2><p> 本文讨论用 $0-1$ 矩阵和有向图的方式表示关系。    </p>
+<h3 id="用矩阵表示关系"><a href="# 用矩阵表示关系" class="headerlink" title="用矩阵表示关系"></a>用矩阵表示关系 </h3><p> 假设 $\mathbf R$ 是从 $\mathbf A=\{a_1,a_2,\dots,a_m\}$ 到 $\mathbf B=\{b_1,b_2,\dots,b_n\}$ 的关系。关系 $\mathbf R$ 可以用矩阵 $\mathbf M_R=[m_{ij}]$ 来表示，其中 <br>$$m_{ij}=\begin{cases}1\qquad 如果(a_i,a_j)\in\mathbf R\\0\qquad 如果(a_i,b_j)\notin\mathbf R\end{cases}$$ 该表示方式，依赖于 $\mathbf A$ 和 $\mathbf B$ 的使用的排序。<br> 集合上的关系的矩阵是一个方阵，可以用矩阵来确定关系是否具有某种性质。<br>例如 $\mathbf R=\{(2,1),(3,1),(3,2)\}$, 关于 $\mathbf R$ 的矩阵是 $$\mathbf M_R=\begin{bmatrix}0&amp;0\\1&amp;0\\1&amp;1\end{bmatrix}$$   </p>
+<h4 id="自反关系的矩阵"><a href="# 自反关系的矩阵" class="headerlink" title="自反关系的矩阵"></a>自反关系的矩阵</h4><p>$\mathbf R$ 是自反的，当且仅当 $i=1,2,\dots,n,m_i=1$。换句话说，如果 $\mathbf M_R$ 的主对角线的所有元素都等于 1，那么 $\mathbf R$ 是自反的。    </p>
+<h4 id="对称关系的矩阵"><a href="# 对称关系的矩阵" class="headerlink" title="对称关系的矩阵"></a>对称关系的矩阵 </h4><p>$\mathbf R$ 是对称的，当且仅当对所有的整数对 $i，j$(其中 $i=1,2,\dots,n, j=1,2,\dots,m$) 都有 $m_{ij}=m_{ji}$。也就是说 $\mathbf R$ 是对称的当且仅当 $\mathbf M_R=(\mathbf M_R)^t$</p>
+<h4 id="反对称关系的矩阵"><a href="# 反对称关系的矩阵" class="headerlink" title="反对称关系的矩阵"></a>反对称关系的矩阵</h4><p>$\mathbf R$ 是反对称的，当 $i\neq j$ 时，$m_{ij}=0$ 或 $m_{ji}=0$</p>
+<h4 id="关系运算和矩阵"><a href="# 关系运算和矩阵" class="headerlink" title="关系运算和矩阵"></a>关系运算和矩阵</h4><p>$$\mathbf M_{R_1\cup R_2}=\mathbf M_{R_1}\lor \mathbf M_{R_2}\\<br>\mathbf M_{R_1\cap R_2}=\mathbf M_{R_1}\land \mathbf M_{R_2}\\<br>\mathbf M_{R_1\cdot R_2}=\mathbf M_{R_1}\odot  \mathbf M_{R_2}\\$$</p>
+<h3 id="用图表示关系"><a href="# 用图表示关系" class="headerlink" title="用图表示关系"></a>用图表示关系 </h3><p> 一个有向图由顶点 (或结点) 集 $V$ 和边 (或弧) 集 $E$ 组成，其中边集是 $V$ 中元素的有序对的集合。顶点 $a$ 叫做边 $(a,b)$ 的始点，而顶点 $b$ 叫做这条边的终点。<br>形如 $(a,a)$ 的边用一条从顶点 $a$ 到自身的弧表示。这种边叫做环。<br>用图来表示关系，就是把集合的每个元素表示成一个点，每个有序对表示成一条弧，弧上的箭头标明了弧的方向。    </p>
+<h4 id="用图来确定关系的性质"><a href="# 用图来确定关系的性质" class="headerlink" title="用图来确定关系的性质"></a>用图来确定关系的性质</h4><ul>
 <li>一个关系是自反的，当且仅当有向图的每个顶点都有环</li>
 <li>一个关系是对称的，当且仅当有向图不同顶点之间的每一条边都存在一条方向相反的边</li>
 <li>一个关系是反对称的，当且仅当在不同的两个顶点之间不存在两条方向相反的边</li>
-<li>一个关系是传递的，当且仅当一条从顶点$x$到顶点$y$的边和一条顶点$y$到顶点$z$的边，就有一条从顶点$x$到顶点$z$的边(完成一个三角形，其中每条边都是具有正确方向的有向边)</li>
+<li>一个关系是传递的，当且仅当一条从顶点 $x$ 到顶点 $y$ 的边和一条顶点 $y$ 到顶点 $z$ 的边，就有一条从顶点 $x$ 到顶点 $z$ 的边(完成一个三角形，其中每条边都是具有正确方向的有向边)</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;关系的表示&quot;&gt;&lt;a href=&quot;#关系的表示&quot; class=&quot;headerlink&quot; title=&quot;关系的表示&quot;&gt;&lt;/a&gt;关系的表示&lt;/h2&gt;&lt;p&gt;本文讨论用$0-1$矩阵和有向图的方式表示关系。    &lt;/p&gt;
-&lt;h3 id=&quot;用矩阵表示关系&quot;&gt;&lt;a href=
+      &lt;h2 id=&quot;关系的表示&quot;&gt;&lt;a href=&quot;# 关系的表示&quot; class=&quot;headerlink&quot; title=&quot;关系的表示&quot;&gt;&lt;/a&gt;关系的表示 &lt;/h2&gt;&lt;p&gt; 本文讨论用 $0-1$ 矩阵和有向图的方式表示关系。    &lt;/p&gt;
+&lt;h3 id=&quot;用矩阵表示关系&quot;&gt;&lt;a 
     
     </summary>
     
@@ -819,29 +874,29 @@
     <published>2017-01-21T08:59:50.000Z</published>
     <updated>2017-01-27T08:46:21.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="二元关系"><a href="#二元关系" class="headerlink" title="二元关系"></a>二元关系</h2><p>关系是一种结构，通常用元组来表示关系。<br>集合之间的关系，是集合间的笛卡儿积的一个子集。<br>设$\mathbf A$和$\mathbf B$是集合，一个从$\mathbf A$到$\mathbf B$的二元关系是$\mathbf A\times \mathbf B$的子集。<br>二元关系表示了两个集合的元素之间的关系。$n$元关系表示三个以上集合中元素之间的关系。    </p>
-<h3 id="函数作为关系"><a href="#函数作为关系" class="headerlink" title="函数作为关系"></a>函数作为关系</h3><p>函数表示了这样一种关系，对于$\mathbf A$中的每个元素恰好只有一个$\mathbf B$中的元素与之相关。  </p>
-<h3 id="集合的关系"><a href="#集合的关系" class="headerlink" title="集合的关系"></a>集合的关系</h3><p>集合的关系表示集合到它自身的关系。 例如，集合$\mathbf A$的关系是从$\mathbf A$到$\mathbf A$的关系。    </p>
-<h4 id="集合关系的数量"><a href="#集合关系的数量" class="headerlink" title="集合关系的数量"></a>集合关系的数量</h4><p>因为集合$\mathbf A$上的关系是$\mathbf A\times \mathbf A$的子集，$n$个元素集合的笛卡儿积有$n^2$个元素，因此集合$\mathbf A$存在$2^{n^2}$个关系。    </p>
-<h3 id="关系的性质"><a href="#关系的性质" class="headerlink" title="关系的性质"></a>关系的性质</h3><h4 id="自反"><a href="#自反" class="headerlink" title="自反"></a>自反</h4><p>如果对每个元素$a\in\mathbf A$有$(a,a)\in\mathbf R$，那么集合$\mathbf A$上的关系$\mathbf R$叫做自反的。    </p>
-<h4 id="反自反"><a href="#反自反" class="headerlink" title="反自反"></a>反自反</h4><p>如果对于每个$a\in\mathbf A$，有$(a,a)\notin\mathbf R$,那么集合$\mathbf A$上的关系$\mathbf R$是反自反的，即没有$\mathbf A$中的元素与自己有关系，关系$\mathbf R$就是反自反的。</p>
-<h4 id="对称"><a href="#对称" class="headerlink" title="对称"></a>对称</h4><p>对于$a,b\in\mathbf A$，如果只要$(a,b)\in\mathbf R$就有$(b,a)\in\mathbf R$，则集合$\mathbf A$上的关系$\mathbf R$叫做对称的。$a$和$b$可以是相等的。  </p>
-<h4 id="非对称的"><a href="#非对称的" class="headerlink" title="非对称的"></a>非对称的</h4><p>如果$(a,b)\in\mathbf R$推出$(b,a)\notin\mathbf R$，关系$\mathbf R$叫做非对称的。  </p>
-<h4 id="反对称"><a href="#反对称" class="headerlink" title="反对称"></a>反对称</h4><p>如果对$a,b\in\mathbf A$，仅当$a=b$时$(a,b)\in\mathbf R$和$(b,a)\in\mathbf R$，则集合$\mathbf A$上的关系$\mathbf R$叫做反对称的。<br>只要关系$\mathbf R$不存在这样的有序对:即由$a$和$b$构成，并且$a\neq b$，但是$(a,b)\in\mathbf R$和$(b,a)\in\mathbf R$。    </p>
-<h4 id="传递"><a href="#传递" class="headerlink" title="传递"></a>传递</h4><p>如果对于$a,b,c\in\mathbf A，(a,b)\in\mathbf R$并且$(b,c)\in\mathbf R$则$(a,c)\in\mathbf R$，那么集合$\mathbf A$上的关系$\mathbf R$叫做传递的</p>
-<h4 id="逆关系"><a href="#逆关系" class="headerlink" title="逆关系"></a>逆关系</h4><p>设$\mathbf R$是从集合$\mathbf A$到集合$\mathbf B$的关系。从$\mathbf B$到$\mathbf A$的逆关系是有序对的集合$\{(b,a)\mid (a,b)\in\mathbf R\}$，记作$\mathbf R^{-1}$。    </p>
-<h4 id="补关系"><a href="#补关系" class="headerlink" title="补关系"></a>补关系</h4><p>补关系$\overline {\mathbf R}$是有序对的集合$\{(a,b)\mid (a,b)\notin\mathbf R\}$</p>
-<h3 id="关系的组合"><a href="#关系的组合" class="headerlink" title="关系的组合"></a>关系的组合</h3><p>因为从$\mathbf A$到$\mathbf B$的关系是$\mathbf A\times\mathbf B$的子集，可以按照两个集合组合的任何方式来组合两个从$\mathbf A$到$\mathbf B$的关系。例如<br>$$\mathbf R_1\cup\mathbf  R_2 \\ \mathbf R_1\cap\mathbf R_2\\\mathbf R_1-\mathbf R_2\\\mathbf R_1\oplus\mathbf R_2$$<br>另一种组合方式类似于复函数。<br>设$\mathbf R$是从集合$\mathbf A$到集合$\mathbf B$的关系，$\mathbf S$是从集合$\mathbf B$到集合$\mathbf C$的关系。$\mathbf R$和$\mathbf S$的合成是由有序对$(a,c)$构成的关系，其中$a\in\mathbf A，c\in\mathbf C$，并且对于它们存在一个元素$b\in\mathbf B$使得$(a,b)\in\mathbf R$和$(b,c)\in\mathbf S$.我们用$\mathbf S\dots\mathbf R$表示$\mathbf R$和$\mathbf S$的合成。</p>
-<h4 id="自身的合成"><a href="#自身的合成" class="headerlink" title="自身的合成"></a>自身的合成</h4><p>设$\mathbf R$是集合$\mathbf A$上的关系。幂$\mathbf R^n, n=1,2,3,\dots,$递归的定义为$$\mathbf R^1=\mathbf R\quad 和\quad \mathbf R^{n+1}=\mathbf R^n\cdot \mathbf R $$</p>
-<h2 id="n元关系"><a href="#n元关系" class="headerlink" title="n元关系"></a>n元关系</h2><p>设$\mathbf A_1,\mathbf A_2,\dots ,\mathbf A_n$是集合。在这些集合上的$n$元关系是$\mathbf A_1\times\mathbf A_2\times\dots\times\mathbf A_n$的子集。这些集合$\mathbf A_1,\mathbf A_2,\dots,\mathbf A_n$叫做关系的域，$n$叫做它的阶。    </p>
-<h3 id="n元关系运算"><a href="#n元关系运算" class="headerlink" title="n元关系运算"></a>n元关系运算</h3><h4 id="选择运算"><a href="#选择运算" class="headerlink" title="选择运算"></a>选择运算</h4><p>设$\mathbf R$是$n$元关系，$\mathbf C$是$\mathbf R$中元素可能满足的一个条件。那么选择运算$s_c$将$n$元关系$\mathbf R$映射到$\mathbf R$中满足条件$\mathbf C$的所有$n$元组构成的$n$元关系。    </p>
-<h4 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h4><p>投影$\mathbf P_{i_1,i_2,\dots,i_m}$将$n$元组$(a_1,a_2,\dots,a_n)$映到$m$元组$(a_{i_1},a_{i_2},\dots,a_{i_m})$，其中$m\le n$。</p>
-<h4 id="连接运算"><a href="#连接运算" class="headerlink" title="连接运算"></a>连接运算</h4><p>设$\mathbf R$是$m$元关系且$\mathbf S$是$n$元关系，其中$p\le m$和$p\le n$。连接$\mathbf J_p(\mathbf R,\mathbf S)$是$m+n-p$元关系，它包含了所有的$(m+n-p)$元组$(a_1,a_2,\dots,a_{m-p},c_1,c_2,\dots,c_p,b_1,b_2,\dots,b_{n-p})$，其中$m$元组(a_1,a_2,\dots,a_{m-p},c_1,c_2,\dots,c_p)$属于$\mathbf R$且$n$元组$(c_1,c_2,\dots,c_p,b_1,b_2,\dots,b_{n-p})$属于$\mathbf S$。</p>
+    <content type="html"><![CDATA[<h2 id="二元关系"><a href="# 二元关系" class="headerlink" title="二元关系"></a>二元关系 </h2><p> 关系是一种结构，通常用元组来表示关系。<br>集合之间的关系，是集合间的笛卡儿积的一个子集。<br>设 $\mathbf A$ 和 $\mathbf B$ 是集合，一个从 $\mathbf A$ 到 $\mathbf B$ 的二元关系是 $\mathbf A\times \mathbf B$ 的子集。<br>二元关系表示了两个集合的元素之间的关系。$n$ 元关系表示三个以上集合中元素之间的关系。    </p>
+<h3 id="函数作为关系"><a href="# 函数作为关系" class="headerlink" title="函数作为关系"></a>函数作为关系 </h3><p> 函数表示了这样一种关系，对于 $\mathbf A$ 中的每个元素恰好只有一个 $\mathbf B$ 中的元素与之相关。  </p>
+<h3 id="集合的关系"><a href="# 集合的关系" class="headerlink" title="集合的关系"></a>集合的关系 </h3><p> 集合的关系表示集合到它自身的关系。 例如，集合 $\mathbf A$ 的关系是从 $\mathbf A$ 到 $\mathbf A$ 的关系。    </p>
+<h4 id="集合关系的数量"><a href="# 集合关系的数量" class="headerlink" title="集合关系的数量"></a>集合关系的数量 </h4><p> 因为集合 $\mathbf A$ 上的关系是 $\mathbf A\times \mathbf A$ 的子集，$n$ 个元素集合的笛卡儿积有 $n^2$ 个元素，因此集合 $\mathbf A$ 存在 $2^{n^2}$ 个关系。    </p>
+<h3 id="关系的性质"><a href="# 关系的性质" class="headerlink" title="关系的性质"></a>关系的性质 </h3><h4 id="自反"><a href="# 自反" class="headerlink" title="自反"></a> 自反 </h4><p> 如果对每个元素 $a\in\mathbf A$ 有 $(a,a)\in\mathbf R$，那么集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做自反的。    </p>
+<h4 id="反自反"><a href="# 反自反" class="headerlink" title="反自反"></a>反自反 </h4><p> 如果对于每个 $a\in\mathbf A$，有 $(a,a)\notin\mathbf R$, 那么集合 $\mathbf A$ 上的关系 $\mathbf R$ 是反自反的，即没有 $\mathbf A$ 中的元素与自己有关系，关系 $\mathbf R$ 就是反自反的。</p>
+<h4 id="对称"><a href="# 对称" class="headerlink" title="对称"></a>对称 </h4><p> 对于 $a,b\in\mathbf A$，如果只要 $(a,b)\in\mathbf R$ 就有 $(b,a)\in\mathbf R$，则集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做对称的。$a$ 和 $b$ 可以是相等的。  </p>
+<h4 id="非对称的"><a href="# 非对称的" class="headerlink" title="非对称的"></a>非对称的 </h4><p> 如果 $(a,b)\in\mathbf R$ 推出 $(b,a)\notin\mathbf R$，关系 $\mathbf R$ 叫做非对称的。  </p>
+<h4 id="反对称"><a href="# 反对称" class="headerlink" title="反对称"></a>反对称 </h4><p> 如果对 $a,b\in\mathbf A$，仅当 $a=b$ 时 $(a,b)\in\mathbf R$ 和 $(b,a)\in\mathbf R$，则集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做反对称的。<br>只要关系 $\mathbf R$ 不存在这样的有序对: 即由 $a$ 和 $b$ 构成，并且 $a\neq b$，但是 $(a,b)\in\mathbf R$ 和 $(b,a)\in\mathbf R$。    </p>
+<h4 id="传递"><a href="# 传递" class="headerlink" title="传递"></a>传递 </h4><p> 如果对于 $a,b,c\in\mathbf A，(a,b)\in\mathbf R$ 并且 $(b,c)\in\mathbf R$ 则 $(a,c)\in\mathbf R$，那么集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做传递的</p>
+<h4 id="逆关系"><a href="# 逆关系" class="headerlink" title="逆关系"></a>逆关系 </h4><p> 设 $\mathbf R$ 是从集合 $\mathbf A$ 到集合 $\mathbf B$ 的关系。从 $\mathbf B$ 到 $\mathbf A$ 的逆关系是有序对的集合 $\{(b,a)\mid (a,b)\in\mathbf R\}$，记作 $\mathbf R^{-1}$。    </p>
+<h4 id="补关系"><a href="# 补关系" class="headerlink" title="补关系"></a>补关系 </h4><p> 补关系 $\overline {\mathbf R}$ 是有序对的集合 $\{(a,b)\mid (a,b)\notin\mathbf R\}$</p>
+<h3 id="关系的组合"><a href="# 关系的组合" class="headerlink" title="关系的组合"></a>关系的组合 </h3><p> 因为从 $\mathbf A$ 到 $\mathbf B$ 的关系是 $\mathbf A\times\mathbf B$ 的子集，可以按照两个集合组合的任何方式来组合两个从 $\mathbf A$ 到 $\mathbf B$ 的关系。例如 <br>$$\mathbf R_1\cup\mathbf  R_2 \\ \mathbf R_1\cap\mathbf R_2\\\mathbf R_1-\mathbf R_2\\\mathbf R_1\oplus\mathbf R_2$$<br> 另一种组合方式类似于复函数。<br>设 $\mathbf R$ 是从集合 $\mathbf A$ 到集合 $\mathbf B$ 的关系，$\mathbf S$ 是从集合 $\mathbf B$ 到集合 $\mathbf C$ 的关系。$\mathbf R$ 和 $\mathbf S$ 的合成是由有序对 $(a,c)$ 构成的关系，其中 $a\in\mathbf A，c\in\mathbf C$，并且对于它们存在一个元素 $b\in\mathbf B$ 使得 $(a,b)\in\mathbf R$ 和 $(b,c)\in\mathbf S$. 我们用 $\mathbf S\dots\mathbf R$ 表示 $\mathbf R$ 和 $\mathbf S$ 的合成。</p>
+<h4 id="自身的合成"><a href="# 自身的合成" class="headerlink" title="自身的合成"></a>自身的合成 </h4><p> 设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。幂 $\mathbf R^n, n=1,2,3,\dots,$ 递归的定义为 $$\mathbf R^1=\mathbf R\quad 和 \quad \mathbf R^{n+1}=\mathbf R^n\cdot \mathbf R $$</p>
+<h2 id="n 元关系"><a href="#n 元关系" class="headerlink" title="n 元关系"></a>n 元关系 </h2><p> 设 $\mathbf A_1,\mathbf A_2,\dots ,\mathbf A_n$ 是集合。在这些集合上的 $n$ 元关系是 $\mathbf A_1\times\mathbf A_2\times\dots\times\mathbf A_n$ 的子集。这些集合 $\mathbf A_1,\mathbf A_2,\dots,\mathbf A_n$ 叫做关系的域，$n$ 叫做它的阶。    </p>
+<h3 id="n 元关系运算"><a href="#n 元关系运算" class="headerlink" title="n 元关系运算"></a>n 元关系运算 </h3><h4 id="选择运算"><a href="# 选择运算" class="headerlink" title="选择运算"></a> 选择运算 </h4><p> 设 $\mathbf R$ 是 $n$ 元关系，$\mathbf C$ 是 $\mathbf R$ 中元素可能满足的一个条件。那么选择运算 $s_c$ 将 $n$ 元关系 $\mathbf R$ 映射到 $\mathbf R$ 中满足条件 $\mathbf C$ 的所有 $n$ 元组构成的 $n$ 元关系。    </p>
+<h4 id="投影"><a href="# 投影" class="headerlink" title="投影"></a>投影 </h4><p> 投影 $\mathbf P_{i_1,i_2,\dots,i_m}$ 将 $n$ 元组 $(a_1,a_2,\dots,a_n)$ 映到 $m$ 元组 $(a_{i_1},a_{i_2},\dots,a_{i_m})$，其中 $m\le n$。</p>
+<h4 id="连接运算"><a href="# 连接运算" class="headerlink" title="连接运算"></a>连接运算 </h4><p> 设 $\mathbf R$ 是 $m$ 元关系且 $\mathbf S$ 是 $n$ 元关系，其中 $p\le m$ 和 $p\le n$。连接 $\mathbf J_p(\mathbf R,\mathbf S)$ 是 $m+n-p$ 元关系，它包含了所有的 $(m+n-p)$ 元组 $(a_1,a_2,\dots,a_{m-p},c_1,c_2,\dots,c_p,b_1,b_2,\dots,b_{n-p})$，其中 $m$ 元组(a_1,a_2,\dots,a_{m-p},c_1,c_2,\dots,c_p)$ 属于 $\mathbf R$ 且 $n$ 元组 $(c_1,c_2,\dots,c_p,b_1,b_2,\dots,b_{n-p})$ 属于 $\mathbf S$。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;二元关系&quot;&gt;&lt;a href=&quot;#二元关系&quot; class=&quot;headerlink&quot; title=&quot;二元关系&quot;&gt;&lt;/a&gt;二元关系&lt;/h2&gt;&lt;p&gt;关系是一种结构，通常用元组来表示关系。&lt;br&gt;集合之间的关系，是集合间的笛卡儿积的一个子集。&lt;br&gt;设$\mathbf A$
+      &lt;h2 id=&quot;二元关系&quot;&gt;&lt;a href=&quot;# 二元关系&quot; class=&quot;headerlink&quot; title=&quot;二元关系&quot;&gt;&lt;/a&gt;二元关系 &lt;/h2&gt;&lt;p&gt; 关系是一种结构，通常用元组来表示关系。&lt;br&gt;集合之间的关系，是集合间的笛卡儿积的一个子集。&lt;br&gt;设 $\mathb
     
     </summary>
     
@@ -865,42 +920,42 @@
     <published>2017-01-17T06:25:53.000Z</published>
     <updated>2017-01-18T07:48:17.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="UI-松耦合"><a href="#UI-松耦合" class="headerlink" title="UI 松耦合"></a>UI 松耦合</h2><h3 id="将JavaScript从CSS中抽离"><a href="#将JavaScript从CSS中抽离" class="headerlink" title="将JavaScript从CSS中抽离"></a>将JavaScript从CSS中抽离</h3><p>IE8及更早版本的IE有一个特性，允许将JavaScript直接插入CSS中。虽然IE9已经不在支持这种特性，但应当注意不要在CSS中嵌入JavaScript代码</p>
-<h3 id="将CSS从JavaScript中抽离"><a href="#将CSS从JavaScript中抽离" class="headerlink" title="将CSS从JavaScript中抽离"></a>将CSS从JavaScript中抽离</h3><p>所有的样式信息都应当保持在CSS中，当需要通过JavaScript来修改元素样式的时候，最佳方法是操作CSS的<code>className</code>。<br>有一种情形可以例外:当需要给页面中的元素作定位，使其相对于另外一个元素或整个页面重新定位。这种计算是无法在CSS中完成的。    </p>
-<h3 id="将JavaScript从HTML中抽离"><a href="#将JavaScript从HTML中抽离" class="headerlink" title="将JavaScript从HTML中抽离"></a>将JavaScript从HTML中抽离</h3><ul>
-<li>最好将所有的JavaScript代码都放入外置文件中，并在页面中通过<code>&lt;script&gt;</code>标签引用</li>
-<li>在HTML页面中，禁止使用<code>on</code>属性挂载事件处理程序。应当使用方法来添加事件</li>
+    <content type="html"><![CDATA[<h2 id="UI- 松耦合"><a href="#UI- 松耦合" class="headerlink" title="UI 松耦合"></a>UI 松耦合 </h2><h3 id="将 JavaScript 从 CSS 中抽离"><a href="# 将 JavaScript 从 CSS 中抽离" class="headerlink" title="将 JavaScript 从 CSS 中抽离"></a> 将 JavaScript 从 CSS 中抽离</h3><p>IE8 及更早版本的 IE 有一个特性，允许将 JavaScript 直接插入 CSS 中。虽然 IE9 已经不在支持这种特性，但应当注意不要在 CSS 中嵌入 JavaScript 代码</p>
+<h3 id="将 CSS 从 JavaScript 中抽离"><a href="# 将 CSS 从 JavaScript 中抽离" class="headerlink" title="将 CSS 从 JavaScript 中抽离"></a>将 CSS 从 JavaScript 中抽离 </h3><p> 所有的样式信息都应当保持在 CSS 中，当需要通过 JavaScript 来修改元素样式的时候，最佳方法是操作 CSS 的 <code>className</code>。<br> 有一种情形可以例外: 当需要给页面中的元素作定位，使其相对于另外一个元素或整个页面重新定位。这种计算是无法在 CSS 中完成的。    </p>
+<h3 id="将 JavaScript 从 HTML 中抽离"><a href="# 将 JavaScript 从 HTML 中抽离" class="headerlink" title="将 JavaScript 从 HTML 中抽离"></a>将 JavaScript 从 HTML 中抽离</h3><ul>
+<li>最好将所有的 JavaScript 代码都放入外置文件中，并在页面中通过 <code>&lt;script&gt;</code> 标签引用</li>
+<li>在 HTML 页面中，禁止使用 <code>on</code> 属性挂载事件处理程序。应当使用方法来添加事件</li>
 </ul>
-<h3 id="将HTML从JavaScript中抽离"><a href="#将HTML从JavaScript中抽离" class="headerlink" title="将HTML从JavaScript中抽离"></a>将HTML从JavaScript中抽离</h3><p>尽量避免将HTML嵌入JavaScript代码中。</p>
-<h2 id="避免使用全局变量"><a href="#避免使用全局变量" class="headerlink" title="避免使用全局变量"></a>避免使用全局变量</h2><p>全局变量和全局函数带来很多问题，例如命名冲突、代码脆弱性、难以测试、意外的bug。    </p>
-<h3 id="零全局变量方式"><a href="#零全局变量方式" class="headerlink" title="零全局变量方式"></a>零全局变量方式</h3><p>如果你的代码运行时不需要于其他代码产生交互，可以使用零全局变量方式 </p>
+<h3 id="将 HTML 从 JavaScript 中抽离"><a href="# 将 HTML 从 JavaScript 中抽离" class="headerlink" title="将 HTML 从 JavaScript 中抽离"></a>将 HTML 从 JavaScript 中抽离 </h3><p> 尽量避免将 HTML 嵌入 JavaScript 代码中。</p>
+<h2 id="避免使用全局变量"><a href="# 避免使用全局变量" class="headerlink" title="避免使用全局变量"></a>避免使用全局变量 </h2><p> 全局变量和全局函数带来很多问题，例如命名冲突、代码脆弱性、难以测试、意外的 bug。    </p>
+<h3 id="零全局变量方式"><a href="# 零全局变量方式" class="headerlink" title="零全局变量方式"></a>零全局变量方式 </h3><p> 如果你的代码运行时不需要于其他代码产生交互，可以使用零全局变量方式 </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">win</span>) </span>&#123;</div><div class="line"><span class="meta">    "use strict"</span>;</div><div class="line">    <span class="comment">// body</span></div><div class="line">&#125;(<span class="built_in">window</span>));</div></pre></td></tr></table></figure>
-<p>如果项目中使用jQuery框架的话，一般用<code>jQuery</code>代替<code>window</code>。 </p>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><h3 id="隔离应用逻辑"><a href="#隔离应用逻辑" class="headerlink" title="隔离应用逻辑"></a>隔离应用逻辑</h3><p>将应用逻辑从事件处理程序中抽离出来有两点好处:一是可重用，二是方便测试。  </p>
+<p>如果项目中使用 jQuery 框架的话，一般用 <code>jQuery</code> 代替<code>window</code>。 </p>
+<h2 id="事件处理"><a href="# 事件处理" class="headerlink" title="事件处理"></a>事件处理 </h2><h3 id="隔离应用逻辑"><a href="# 隔离应用逻辑" class="headerlink" title="隔离应用逻辑"></a> 隔离应用逻辑 </h3><p> 将应用逻辑从事件处理程序中抽离出来有两点好处: 一是可重用，二是方便测试。  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">    popup.style.left = event.clientX + <span class="string">"px"</span>;</div><div class="line">    popup.style.top = event.clientY + <span class="string">"px"</span>;</div><div class="line">    popup.className = <span class="string">"reveal"</span>;</div><div class="line">&#125;</div><div class="line">addListener(element, <span class="string">"click"</span>, handleClick);</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> MyApplication = &#123;</div><div class="line">    handleClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.showPopup(event);</div><div class="line">    &#125;,</div><div class="line">    showPopup: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">        popup.style.left = event.clientX + <span class="string">"px"</span>;</div><div class="line">        popup.style.top = event.clientY + <span class="string">"px"</span>;</div><div class="line">        popup.className = <span class="string">"reveal"</span>;        </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">addListener(element, <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    MyApplication.handleClick(event);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="不要分发事件"><a href="#不要分发事件" class="headerlink" title="不要分发事件"></a>不要分发事件</h3><p>上述实例代码还存在一个问题，即<code>event</code>被毫无节制地分发，应用逻辑不应当依赖于<code>event</code>对像，原因如下:      </p>
+<h3 id="不要分发事件"><a href="# 不要分发事件" class="headerlink" title="不要分发事件"></a>不要分发事件 </h3><p> 上述实例代码还存在一个问题，即 <code>event</code> 被毫无节制地分发，应用逻辑不应当依赖于 <code>event</code> 对像，原因如下:      </p>
 <ul>
-<li>方法接口没有表明那些数据是必要的。好的API应该明确清楚表明回调传值的用处以及需要传那些值 </li>
-<li>最重要的一点是，如果想测试这个方法，必须重新创建一个<code>event</code>对象并将它作为参数传入。</li>
+<li>方法接口没有表明那些数据是必要的。好的 API 应该明确清楚表明回调传值的用处以及需要传那些值 </li>
+<li>最重要的一点是，如果想测试这个方法，必须重新创建一个 <code>event</code> 对象并将它作为参数传入。</li>
 </ul>
-<p>最佳方法是让事件处理程序使用<code>event</code>对象来处理事件，然后拿到所有需要的数据传给应用逻辑。<br>另外，如果需要对<code>event</code>执行任何必要的操作，包括阻止默认事件或阻止事件冒泡，都应该直接包含在事件处理程序中。  </p>
+<p>最佳方法是让事件处理程序使用 <code>event</code> 对象来处理事件，然后拿到所有需要的数据传给应用逻辑。<br>另外，如果需要对 <code>event</code> 执行任何必要的操作，包括阻止默认事件或阻止事件冒泡，都应该直接包含在事件处理程序中。  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MyApplication = &#123;</div><div class="line">    handleClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        event.preventDefault();</div><div class="line">        event.stopPropagation();</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.showPopup(event.clientX, event.clientY);</div><div class="line">    &#125;,</div><div class="line">    showPopup: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">        popup.style.left = x + <span class="string">"px"</span>;</div><div class="line">        popup.style.top = y +<span class="string">"px"</span>;</div><div class="line">        popup.className = <span class="string">"reveal"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="避免“空比较”"><a href="#避免“空比较”" class="headerlink" title="避免“空比较”"></a>避免“空比较”</h2><h3 id="检测原始值"><a href="#检测原始值" class="headerlink" title="检测原始值"></a>检测原始值</h3><p>如果你希望一个值是字符串、数字、布尔值或<code>undefined</code>，最佳选择是使用<code>typeof</code>运算符。<code>typeof</code>的独特之处在于，将其用于一个未声明的变量也不会报错。<br><code>null</code>一般不应用于检测语句，简单的和<code>null</code>比较通常不会包含足够的信息以判断值的类型是否合法。 但是如果所期望的值真的是<code>null</code>，则可以直接和<code>null</code>比较。这时应当使用<code>===</code>或<code>!==</code> 。</p>
+<h2 id="避免“空比较”"><a href="# 避免“空比较”" class="headerlink" title="避免“空比较”"></a>避免“空比较”</h2><h3 id="检测原始值"><a href="# 检测原始值" class="headerlink" title="检测原始值"></a>检测原始值 </h3><p> 如果你希望一个值是字符串、数字、布尔值或 <code>undefined</code>，最佳选择是使用<code>typeof</code> 运算符。<code>typeof</code>的独特之处在于，将其用于一个未声明的变量也不会报错。<br><code>null</code>一般不应用于检测语句，简单的和 <code>null</code> 比较通常不会包含足够的信息以判断值的类型是否合法。 但是如果所期望的值真的是 <code>null</code>，则可以直接和<code>null</code> 比较。这时应当使用 <code>===</code> 或<code>!==</code> 。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> name === <span class="string">"string"</span>) &#123;</div><div class="line">    anotherName = name.substirng(<span class="number">3</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> count === <span class="string">"number"</span>) &#123;</div><div class="line">    updateCount(count);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> found === <span class="string">"boolean"</span> &amp;&amp; found) &#123;</div><div class="line">    message(<span class="string">"Found!"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> MyApp === <span class="string">"undefined"</span>) &#123;</div><div class="line">    MyApp = &#123;&#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">// null</span></div><div class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"my-div"</span>);</div><div class="line"><span class="keyword">if</span> (element !== <span class="literal">null</span>) &#123;</div><div class="line">    element.className = <span class="string">"found"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="检测引用值"><a href="#检测引用值" class="headerlink" title="检测引用值"></a>检测引用值</h3><ul>
-<li>杜绝使用<code>typeof</code>检测<code>null</code>的类型，因为<code>typeof null</code>会返回<code>object</code></li>
-<li>检测自定义类型或者内置类型可以使用<code>value instanceof Object</code>来判断，不过因为<code>instanceof</code>不仅检测对象的构造器，还检测原型链，因此使用时需注意 </li>
+<h3 id="检测引用值"><a href="# 检测引用值" class="headerlink" title="检测引用值"></a>检测引用值</h3><ul>
+<li>杜绝使用 <code>typeof</code> 检测 <code>null</code> 的类型，因为 <code>typeof null</code> 会返回<code>object</code></li>
+<li>检测自定义类型或者内置类型可以使用 <code>value instanceof Object</code> 来判断，不过因为 <code>instanceof</code> 不仅检测对象的构造器，还检测原型链，因此使用时需注意 </li>
 </ul>
-<h3 id="检测函数"><a href="#检测函数" class="headerlink" title="检测函数"></a>检测函数</h3><p>检测函数最好的方法是使用<code>typeof</code>。  </p>
+<h3 id="检测函数"><a href="# 检测函数" class="headerlink" title="检测函数"></a>检测函数 </h3><p> 检测函数最好的方法是使用<code>typeof</code>。  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> myFunc === <span class="string">"function"</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h3 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h3><p>检测数组最优雅的解决方案是:   </p>
+<h3 id="检测数组"><a href="# 检测数组" class="headerlink" title="检测数组"></a>检测数组 </h3><p> 检测数组最优雅的解决方案是:   </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value) === <span class="string">"[object Array]"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这种方式在识别内置对象时往往十分有用。<br>ECMAScript5 已经将<code>Array.isArray</code>正式引入JavaScript。</p>
-<h3 id="检测属性"><a href="#检测属性" class="headerlink" title="检测属性"></a>检测属性</h3><ul>
-<li>判断属性是否存在的最好办法是使用<code>in</code>运算符。<code>in</code>运算符仅仅简单的判断属性是否存在，而不会读取属性的值 </li>
-<li><code>in</code>运算符同时会检测对象的原型，如果只想检测实例对象的某个属性是否存在，则使用<code>hasOwnProperty()</code>方法</li>
+<p>这种方式在识别内置对象时往往十分有用。<br>ECMAScript5 已经将 <code>Array.isArray</code> 正式引入 JavaScript。</p>
+<h3 id="检测属性"><a href="# 检测属性" class="headerlink" title="检测属性"></a>检测属性</h3><ul>
+<li>判断属性是否存在的最好办法是使用 <code>in</code> 运算符。<code>in</code>运算符仅仅简单的判断属性是否存在，而不会读取属性的值 </li>
+<li><code>in</code>运算符同时会检测对象的原型，如果只想检测实例对象的某个属性是否存在，则使用 <code>hasOwnProperty()</code> 方法</li>
 </ul>
-<h2 id="将配置数据从代码中分离出来"><a href="#将配置数据从代码中分离出来" class="headerlink" title="将配置数据从代码中分离出来"></a>将配置数据从代码中分离出来</h2><p>配置数据示例:     </p>
+<h2 id="将配置数据从代码中分离出来"><a href="# 将配置数据从代码中分离出来" class="headerlink" title="将配置数据从代码中分离出来"></a>将配置数据从代码中分离出来 </h2><p> 配置数据示例:     </p>
 <ul>
 <li>URL</li>
 <li>需要展现给用户的字符串</li>
@@ -908,26 +963,26 @@
 <li>设置(比如每页的配置项)</li>
 <li>任何可能发生变更的值</li>
 </ul>
-<p>最好将配置数据抽离出来，可以放在文件最前面，或者单独一个文件。好处是不用修改JavaScript源码已、方便修改和防止漏改。   </p>
-<h2 id="抛出自定义错误"><a href="#抛出自定义错误" class="headerlink" title="抛出自定义错误"></a>抛出自定义错误</h2><h3 id="抛出错误的方式"><a href="#抛出错误的方式" class="headerlink" title="抛出错误的方式"></a>抛出错误的方式</h3><p>抛出错误时，最好抛出<code>Error</code>类型对象</p>
+<p>最好将配置数据抽离出来，可以放在文件最前面，或者单独一个文件。好处是不用修改 JavaScript 源码已、方便修改和防止漏改。   </p>
+<h2 id="抛出自定义错误"><a href="# 抛出自定义错误" class="headerlink" title="抛出自定义错误"></a>抛出自定义错误 </h2><h3 id="抛出错误的方式"><a href="# 抛出错误的方式" class="headerlink" title="抛出错误的方式"></a> 抛出错误的方式 </h3><p> 抛出错误时，最好抛出 <code>Error</code> 类型对象</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Something bad happened'</span>);</div></pre></td></tr></table></figure>
-<h3 id="抛出错误的好处"><a href="#抛出错误的好处" class="headerlink" title="抛出错误的好处"></a>抛出错误的好处</h3><p>抛出错误有助于调试，例如:</p>
+<h3 id="抛出错误的好处"><a href="# 抛出错误的好处" class="headerlink" title="抛出错误的好处"></a>抛出错误的好处 </h3><p> 抛出错误有助于调试，例如:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDivs</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (element &amp;&amp; element.getElementsByTagName) &#123;</div><div class="line">        <span class="keyword">return</span> element.getElementsByTagName(<span class="string">"div"</span>);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"getDivs() : Argument must be a DOM element."</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="何时检查错误"><a href="#何时检查错误" class="headerlink" title="何时检查错误"></a>何时检查错误</h3><ul>
+<h3 id="何时检查错误"><a href="# 何时检查错误" class="headerlink" title="何时检查错误"></a>何时检查错误</h3><ul>
 <li>如果一个函数被已知的实体调用，错误检查很可能没有必要，一般情况下该函数为私有函数</li>
 <li>如果不能确定函数被调用的所有地方，则需要进行一些错误检查</li>
 <li>抛出错误最佳的地方是在工具函数中  </li>
 <li>一旦修复了一个很难调试的错误，尝试增加一两个自定义错误，当再次发生错误时，这将有助于更容易的解决问题</li>
-<li>如果正在编写代码，思考一下: “我希望[某些事情]不会发生，如果发生，我的代码会一团糟糕”。这时，如果“某些事情”发生，就抛出一个错误</li>
+<li>如果正在编写代码，思考一下: “我希望 [某些事情] 不会发生，如果发生，我的代码会一团糟糕”。这时，如果“某些事情”发生，就抛出一个错误</li>
 <li>如果正在编写的代码别人也会使用，思考一下他们使用的方式在特定的情况下抛出错误</li>
 <li>抛出错误的目的不是防止错误，而是在错误发生时能更加容易地调试</li>
 </ul>
-<h3 id="错误类型"><a href="#错误类型" class="headerlink" title="错误类型"></a>错误类型</h3><ul>
-<li>可以用<code>instanceof</code>判断错误类型，从而处理特定的错误</li>
+<h3 id="错误类型"><a href="# 错误类型" class="headerlink" title="错误类型"></a>错误类型</h3><ul>
+<li>可以用 <code>instanceof</code> 判断错误类型，从而处理特定的错误</li>
 <li>自定义错误类型可以区别于浏览器抛出的错误</li>
-<li>不要将<code>try-catch</code>中的<code>catch</code>块留空</li>
+<li>不要将 <code>try-catch</code> 中的 <code>catch</code> 块留空</li>
 </ul>
-<h2 id="直接量"><a href="#直接量" class="headerlink" title="直接量"></a>直接量</h2><h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>禁止八进制直接量</p>
+<h2 id="直接量"><a href="# 直接量" class="headerlink" title="直接量"></a>直接量 </h2><h3 id="数字"><a href="# 数字" class="headerlink" title="数字"></a> 数字 </h3><p> 禁止八进制直接量</p>
 <h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>以下场景应当使用<code>null</code></p>
 <ul>
 <li>用来初始化一个变量</li>
@@ -936,17 +991,17 @@
 </ul>
 <p>以下场景不应当使用<code>null</code>   </p>
 <ul>
-<li>不要使用<code>null</code>来检测是否传入了某个参数 </li>
-<li>不要用<code>null</code>来检测一个未初始化的变量<br>理解<code>null</code>最好的方式是将它当作对象的占位符。    <h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3>避免在代码中使用<code>undefined</code>。  尤其不要将一个变量赋值为<code>undefined</code>。</li>
+<li>不要使用 <code>null</code> 来检测是否传入了某个参数 </li>
+<li>不要用 <code>null</code> 来检测一个未初始化的变量 <br> 理解 <code>null</code> 最好的方式是将它当作对象的占位符。    <h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3>避免在代码中使用<code>undefined</code>。  尤其不要将一个变量赋值为<code>undefined</code>。</li>
 </ul>
-<h3 id="对象直接量"><a href="#对象直接量" class="headerlink" title="对象直接量"></a>对象直接量</h3><p>推荐使用对象直接量的方式创建一个对象。    </p>
-<h3 id="数组直接量"><a href="#数组直接量" class="headerlink" title="数组直接量"></a>数组直接量</h3><p>推荐使用数组直接量的方式创建数组</p>
-<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><p>任何情况下，都不应该省略<code>default</code>语句。    </p>
+<h3 id="对象直接量"><a href="# 对象直接量" class="headerlink" title="对象直接量"></a>对象直接量 </h3><p> 推荐使用对象直接量的方式创建一个对象。    </p>
+<h3 id="数组直接量"><a href="# 数组直接量" class="headerlink" title="数组直接量"></a>数组直接量 </h3><p> 推荐使用数组直接量的方式创建数组</p>
+<h2 id="语句"><a href="# 语句" class="headerlink" title="语句"></a>语句 </h2><h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><p> 任何情况下，都不应该省略 <code>default</code> 语句。    </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;UI-松耦合&quot;&gt;&lt;a href=&quot;#UI-松耦合&quot; class=&quot;headerlink&quot; title=&quot;UI 松耦合&quot;&gt;&lt;/a&gt;UI 松耦合&lt;/h2&gt;&lt;h3 id=&quot;将JavaScript从CSS中抽离&quot;&gt;&lt;a href=&quot;#将JavaScript从CSS中抽离&quot;
+      &lt;h2 id=&quot;UI- 松耦合&quot;&gt;&lt;a href=&quot;#UI- 松耦合&quot; class=&quot;headerlink&quot; title=&quot;UI 松耦合&quot;&gt;&lt;/a&gt;UI 松耦合 &lt;/h2&gt;&lt;h3 id=&quot;将 JavaScript 从 CSS 中抽离&quot;&gt;&lt;a href=&quot;# 将 JavaScrip
     
     </summary>
     
@@ -960,53 +1015,53 @@
   </entry>
   
   <entry>
-    <title>JavaScript编程风格</title>
+    <title>JavaScript 编程风格</title>
     <link href="http://blog.freeabyss.com/JavaScript/JavaScript-JavaScript-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC.html"/>
     <id>http://blog.freeabyss.com/JavaScript/JavaScript-JavaScript-编程风格.html</id>
     <published>2017-01-17T02:40:58.000Z</published>
     <updated>2017-01-17T07:12:34.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="编程风格"><a href="#编程风格" class="headerlink" title="编程风格"></a>编程风格</h2><h3 id="基本格式化"><a href="#基本格式化" class="headerlink" title="基本格式化"></a>基本格式化</h3><h4 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h4><p>使用4个空格进行缩进     </p>
-<h4 id="语句结尾"><a href="#语句结尾" class="headerlink" title="语句结尾"></a>语句结尾</h4><p>不要省略分号     </p>
-<h4 id="长度限制"><a href="#长度限制" class="headerlink" title="长度限制"></a>长度限制</h4><p>每行的长度不要超过100字符  </p>
-<h4 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h4><p>当需要换行时，最好在运算符后换行，下一行增加两个层级的缩进。</p>
+    <content type="html"><![CDATA[<h2 id="编程风格"><a href="# 编程风格" class="headerlink" title="编程风格"></a>编程风格 </h2><h3 id="基本格式化"><a href="# 基本格式化" class="headerlink" title="基本格式化"></a> 基本格式化 </h3><h4 id="缩进"><a href="# 缩进" class="headerlink" title="缩进"></a> 缩进 </h4><p> 使用 4 个空格进行缩进     </p>
+<h4 id="语句结尾"><a href="# 语句结尾" class="headerlink" title="语句结尾"></a>语句结尾 </h4><p> 不要省略分号     </p>
+<h4 id="长度限制"><a href="# 长度限制" class="headerlink" title="长度限制"></a>长度限制 </h4><p> 每行的长度不要超过 100 字符  </p>
+<h4 id="换行"><a href="# 换行" class="headerlink" title="换行"></a>换行 </h4><p> 当需要换行时，最好在运算符后换行，下一行增加两个层级的缩进。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">callAFunction(<span class="built_in">document</span>, element, <span class="built_in">window</span>, <span class="string">"some string value"</span>, <span class="literal">true</span>, <span class="number">123</span>,</div><div class="line">        navigator);</div></pre></td></tr></table></figure>
-<p>例外:当给变量赋值时，第二行的位置应当和赋值运算符的位置保持对齐，比如:      </p>
+<p>例外: 当给变量赋值时，第二行的位置应当和赋值运算符的位置保持对齐，比如:      </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> result = something + anotherThing + yeAnotherTing + somethingElse + </div><div class="line">             anotherSomethingElse;</div></pre></td></tr></table></figure>
-<h4 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h4><p>一般在以下场景中添加空行:      </p>
+<h4 id="空行"><a href="# 空行" class="headerlink" title="空行"></a>空行 </h4><p> 一般在以下场景中添加空行:      </p>
 <ul>
 <li>方法之间</li>
 <li>方法中的局部变量和第一条语句之间</li>
 <li>在多行或单行注释之前</li>
 <li>在方法内的逻辑片段之间插入空行，提高可读性</li>
 </ul>
-<h4 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h4><ul>
+<h4 id="命名"><a href="# 命名" class="headerlink" title="命名"></a>命名</h4><ul>
 <li>遵照小驼峰式大小写命名法，即由小写字母开始，后续每个单词首字母都大写   </li>
 <li>变量尽量以名词作为前缀，函数以动词作为前缀  </li>
-<li>尽量在变量名中体现出值的数据类型，例如<code>count</code>、<code>length</code>和<code>size</code>表明数据类型是数字，<code>name</code>、<code>title</code>和<code>message</code>表明数据类型是字符串</li>
-<li>单个字符命名的变量，例如<code>i</code>、<code>j</code>和<code>k</code>通常在循环中使用   <h5 id="动词常见的约定"><a href="#动词常见的约定" class="headerlink" title="动词常见的约定"></a>动词常见的约定</h5>|动词| 含义|<br>|:–|:—|<br>|can| 函数返回一个布尔值|<br>|has| 函数返回一个布尔值|<br>|is | 函数返回一个布尔值|<br>|get| 函数返回一个非布尔值|<br>|set| 函数用来保存一个值|</li>
+<li>尽量在变量名中体现出值的数据类型，例如 <code>count</code>、<code>length</code> 和<code>size</code>表明数据类型是数字，<code>name</code>、<code>title</code>和 <code>message</code> 表明数据类型是字符串</li>
+<li>单个字符命名的变量，例如 <code>i</code>、<code>j</code> 和<code>k</code>通常在循环中使用   <h5 id="动词常见的约定"><a href="# 动词常见的约定" class="headerlink" title="动词常见的约定"></a>动词常见的约定</h5>| 动词 | 含义 |<br>|:–|:—|<br>|can| 函数返回一个布尔值 |<br>|has| 函数返回一个布尔值 |<br>|is | 函数返回一个布尔值 |<br>|get| 函数返回一个非布尔值 |<br>|set| 函数用来保存一个值 |</li>
 </ul>
-<h5 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h5><p>使用大写字母和下划线 </p>
-<h5 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h5><p>构造函数即前面冠以<code>new</code>运算符的函数，遵循大驼峰命名法，即以大写字母开始，后续每个单词首字母都大写。     </p>
-<h4 id="直接量字符串使用双引号，主要是因为方便在Java和JavaScript之间来回切换。"><a href="#直接量字符串使用双引号，主要是因为方便在Java和JavaScript之间来回切换。" class="headerlink" title="直接量字符串使用双引号，主要是因为方便在Java和JavaScript之间来回切换。"></a>直接量字符串使用双引号，主要是因为方便在<code>Java</code>和<code>JavaScript</code>之间来回切换。</h4><p>禁止使用多行字符串，使用字符串连接符将字符串分成多份。     </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man \</span></div><div class="line">named Brady";</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man "</span> +</div><div class="line">                 <span class="string">"named Brady"</span>;</div></pre></td></tr></table></figure>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4><ul>
+<h5 id="常量"><a href="# 常量" class="headerlink" title="常量"></a>常量 </h5><p> 使用大写字母和下划线 </p>
+<h5 id="构造函数"><a href="# 构造函数" class="headerlink" title="构造函数"></a>构造函数 </h5><p> 构造函数即前面冠以 <code>new</code> 运算符的函数，遵循大驼峰命名法，即以大写字母开始，后续每个单词首字母都大写。     </p>
+<h4 id="直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。"><a href="# 直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。" class="headerlink" title="直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。"></a>直接量字符串使用双引号，主要是因为方便在 <code>Java</code> 和<code>JavaScript</code>之间来回切换。</h4><p>禁止使用多行字符串，使用字符串连接符将字符串分成多份。     </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man \</span></div><div class="line">named Brady";</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man"</span> +</div><div class="line">                 <span class="string">"named Brady"</span>;</div></pre></td></tr></table></figure>
+<h3 id="注释"><a href="# 注释" class="headerlink" title="注释"></a>注释 </h3><h4 id="单行注释"><a href="# 单行注释" class="headerlink" title="单行注释"></a> 单行注释</h4><ul>
 <li>独占一行的注释，用来解释下一行代码。这行注释之前总是有一个空行，且缩进层级和下一行代码保持一致</li>
 <li>代码行尾部的注释。代码结束到注释之间至少有一个缩进。并且不应当超过单行最大字符数限制，如果超过了应该将注释放在代码行上方</li>
 <li>单行注释不应该以连续多行注释的形式出现，除非你注释掉一大段代码</li>
 </ul>
-<h4 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h4><ul>
-<li>多行注释推荐使用<code>Java</code>的风格</li>
+<h4 id="多行注释"><a href="# 多行注释" class="headerlink" title="多行注释"></a>多行注释</h4><ul>
+<li>多行注释推荐使用 <code>Java</code> 的风格</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * 这是一段多行注释</div><div class="line"> * 这段注释包含两行文本</div><div class="line"> */</div></pre></td></tr></table></figure>
 <ul>
 <li>多行注释和代码之间没有空行，注释上方应当有一行空行，并且缩进层级和下放的代码保持一致</li>
 </ul>
-<h4 id="使用注释"><a href="#使用注释" class="headerlink" title="使用注释"></a>使用注释</h4><ul>
+<h4 id="使用注释"><a href="# 使用注释" class="headerlink" title="使用注释"></a>使用注释</h4><ul>
 <li>难于理解的代码通常都应当加注释</li>
 <li>可能被误认为错误的代码，应当添加注释，防止被好心的开发者“修复”</li>
 </ul>
-<h2 id="语句和表达式"><a href="#语句和表达式" class="headerlink" title="语句和表达式"></a>语句和表达式</h2><p>无论何种情况下，所有块语句都应当使用花括号，包括:</p>
+<h2 id="语句和表达式"><a href="# 语句和表达式" class="headerlink" title="语句和表达式"></a>语句和表达式 </h2><p> 无论何种情况下，所有块语句都应当使用花括号，包括:</p>
 <ul>
 <li>if…else</li>
 <li>for</li>
@@ -1014,38 +1069,38 @@
 <li>do…while</li>
 <li>try…catch…finally</li>
 </ul>
-<h3 id="花括号的对齐方式"><a href="#花括号的对齐方式" class="headerlink" title="花括号的对齐方式"></a>花括号的对齐方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123;</div><div class="line">    doSomething();</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    doSomethingElse();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h3><h4 id="缩进-1"><a href="#缩进-1" class="headerlink" title="缩进"></a>缩进</h4><ul>
-<li>每条<code>case</code>语句相对于<code>switch</code>关键字都缩进一个层级</li>
-<li>从第二条<code>case</code>语句开始，每条<code>case</code>语句前后各有一个空行</li>
-<li>连续的<code>case</code>语句之间省略空行</li>
+<h3 id="花括号的对齐方式"><a href="# 花括号的对齐方式" class="headerlink" title="花括号的对齐方式"></a>花括号的对齐方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123;</div><div class="line">    doSomething();</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    doSomethingElse();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="switch 语句"><a href="#switch 语句" class="headerlink" title="switch 语句"></a>switch 语句 </h3><h4 id="缩进 -1"><a href="# 缩进 -1" class="headerlink" title="缩进"></a> 缩进</h4><ul>
+<li>每条 <code>case</code> 语句相对于 <code>switch</code> 关键字都缩进一个层级</li>
+<li>从第二条 <code>case</code> 语句开始，每条 <code>case</code> 语句前后各有一个空行</li>
+<li>连续的 <code>case</code> 语句之间省略空行</li>
 <li><code>default</code>语句是必须的</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span> (condition) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="string">"first"</span>:</div><div class="line">         <span class="comment">// 代码</span></div><div class="line">         <span class="keyword">break</span>;</div><div class="line"></div><div class="line">    <span class="keyword">case</span> <span class="string">"second"</span>:</div><div class="line">    <span class="keyword">case</span> <span class="string">"third"</span>:</div><div class="line">         <span class="comment">// 代码</span></div><div class="line">         <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span>: </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="变量、函数和运算符"><a href="#变量、函数和运算符" class="headerlink" title="变量、函数和运算符"></a>变量、函数和运算符</h2><h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>推荐将局部变量的定义作为函数内第一条语句。 并且推荐使用单<code>var</code>语句风格，每个变量的初始化独占一行，没有初始值的变量放在<code>var</code>语句的尾部。 例如:</p>
+<h2 id="变量、函数和运算符"><a href="# 变量、函数和运算符" class="headerlink" title="变量、函数和运算符"></a>变量、函数和运算符 </h2><h3 id="变量声明"><a href="# 变量声明" class="headerlink" title="变量声明"></a> 变量声明 </h3><p> 推荐将局部变量的定义作为函数内第一条语句。 并且推荐使用单 <code>var</code> 语句风格，每个变量的初始化独占一行，没有初始值的变量放在 <code>var</code> 语句的尾部。 例如:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomethingWithItems</span>(<span class="params">items</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> value = <span class="number">10</span>,</div><div class="line">        result = value + <span class="number">10</span>,</div><div class="line">        i, len;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>, len=items.length; i&lt;len; i++) &#123;</div><div class="line">        doSomething(items[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><ul>
+<h3 id="函数声明"><a href="# 函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><ul>
 <li>推荐先声明函数，再使用</li>
 <li>对于函数内的局部函数，应该紧接着变量声明之后声明，之间用空行隔开</li>
-<li>函数声明禁止出现在<code>if</code>、<code>while</code>、<code>for</code>、<code>try...catch</code>、<code>switch</code>的语句块内</li>
+<li>函数声明禁止出现在 <code>if</code>、<code>while</code>、<code>for</code>、<code>try...catch</code>、<code>switch</code> 的语句块内</li>
 </ul>
-<h3 id="立即调用的函数"><a href="#立即调用的函数" class="headerlink" title="立即调用的函数"></a>立即调用的函数</h3><p>为了让立即执行的函数能够被一眼看出来，将函数用一对圆括号包裹起来。比如:    </p>
+<h3 id="立即调用的函数"><a href="# 立即调用的函数" class="headerlink" title="立即调用的函数"></a>立即调用的函数 </h3><p> 为了让立即执行的函数能够被一眼看出来，将函数用一对圆括号包裹起来。比如:    </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> value = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 函数体</span></div><div class="line">    </div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        message: <span class="string">"Hi"</span></div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
-<h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><p>最好不要在全局作用域使用<code>&quot;use strict&quot;</code>。 如果你将多个文件连接合并成一个文件时，当期中一个文件在全局作用域中启用了严格模式，则所有的代码都将以严格模式解析，这会很可能造成其他以非严格模式写的代码报错。     </p>
+<h3 id="严格模式"><a href="# 严格模式" class="headerlink" title="严格模式"></a>严格模式 </h3><p> 最好不要在全局作用域使用<code>&quot;use strict&quot;</code>。 如果你将多个文件连接合并成一个文件时，当期中一个文件在全局作用域中启用了严格模式，则所有的代码都将以严格模式解析，这会很可能造成其他以非严格模式写的代码报错。     </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// code </span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">    "use strict"</span>;</div><div class="line">    <span class="comment">// code</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>推荐所有函数中都加上<code>&quot;use strict&quot;</code>。 </p>
-<h3 id="相等"><a href="#相等" class="headerlink" title="相等"></a>相等</h3><p>因为强制类型转换的缘故，推荐使用<code>===</code>和<code>!==</code>，而不要使用<code>==</code>和<code>!=</code>。</p>
+<h3 id="相等"><a href="# 相等" class="headerlink" title="相等"></a>相等 </h3><p> 因为强制类型转换的缘故，推荐使用 <code>===</code> 和<code>!==</code>，而不要使用 <code>==</code> 和<code>!=</code>。</p>
 <h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><ul>
 <li>尽量避免使用<code>eval()</code>，如果无它法，尽量在严格模式下使用<code>eval()</code></li>
 <li>严禁使用<code>Function</code> </li>
-<li>可以使用<code>setTimeout()</code>和<code>setInterval()</code>，但不要用字符串形式，要用函数</li>
+<li>可以使用 <code>setTimeout()</code> 和<code>setInterval()</code>，但不要用字符串形式，要用函数</li>
 </ul>
-<h3 id="原始包装类型"><a href="#原始包装类型" class="headerlink" title="原始包装类型"></a>原始包装类型</h3><p>禁止使用原始包装类型</p>
+<h3 id="原始包装类型"><a href="# 原始包装类型" class="headerlink" title="原始包装类型"></a>原始包装类型 </h3><p> 禁止使用原始包装类型</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;编程风格&quot;&gt;&lt;a href=&quot;#编程风格&quot; class=&quot;headerlink&quot; title=&quot;编程风格&quot;&gt;&lt;/a&gt;编程风格&lt;/h2&gt;&lt;h3 id=&quot;基本格式化&quot;&gt;&lt;a href=&quot;#基本格式化&quot; class=&quot;headerlink&quot; title=&quot;基本格式化&quot;&gt;
+      &lt;h2 id=&quot;编程风格&quot;&gt;&lt;a href=&quot;# 编程风格&quot; class=&quot;headerlink&quot; title=&quot;编程风格&quot;&gt;&lt;/a&gt;编程风格 &lt;/h2&gt;&lt;h3 id=&quot;基本格式化&quot;&gt;&lt;a href=&quot;# 基本格式化&quot; class=&quot;headerlink&quot; title=&quot;基本格式
     
     </summary>
     
@@ -1055,43 +1110,6 @@
       <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
     
       <category term="style guideline" scheme="http://blog.freeabyss.com/tags/style-guideline/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Window 10 快速安装.NET 3.5</title>
-    <link href="http://blog.freeabyss.com/Window/Window-Windows-10-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85-NET-3-5.html"/>
-    <id>http://blog.freeabyss.com/Window/Window-Windows-10-快速安装-NET-3-5.html</id>
-    <published>2017-01-16T03:49:25.000Z</published>
-    <updated>2017-02-26T07:09:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol>
-<li>加载windows 10镜像文件到光驱</li>
-<li>按<code>Win</code>+<code>X</code>，选择’命令提示符(管理员)’ </li>
-<li>输入以下命令，其中<code>D:</code>代表光驱盘符 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dism.exe /online /enable-feature /featurename:netfx3 /Source:D:\sources\sxs</div></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;加载windows 10镜像文件到光驱&lt;/li&gt;
-&lt;li&gt;按&lt;code&gt;Win&lt;/code&gt;+&lt;code&gt;X&lt;/code&gt;，选择’命令提示符(管理员)’ &lt;/li&gt;
-&lt;li&gt;输入以下命令，其中&lt;code&gt;D:&lt;/code&gt;代表光驱盘符 &lt;figure class
-    
-    </summary>
-    
-      <category term="Window" scheme="http://blog.freeabyss.com/categories/Window/"/>
-    
-    
-      <category term="Window" scheme="http://blog.freeabyss.com/tags/Window/"/>
-    
-      <category term="os" scheme="http://blog.freeabyss.com/tags/os/"/>
-    
-      <category term="tools" scheme="http://blog.freeabyss.com/tags/tools/"/>
-    
-      <category term=".net" scheme="http://blog.freeabyss.com/tags/net/"/>
     
   </entry>
   

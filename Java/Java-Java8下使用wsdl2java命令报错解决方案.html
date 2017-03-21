@@ -93,18 +93,18 @@
 
 
 <meta name="description" content="环境JDK:1.8apache-cxf: 2.7.x
-描述使用wsdl2java命令生产代码时抛出如下异常：1java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xm">
+描述  使用 wsdl2java 命令生产代码时抛出如下异常：1java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reade">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java8下使用wsdl2java命令报错解决方案">
+<meta property="og:title" content="Java8 下使用 wsdl2java 命令报错解决方案">
 <meta property="og:url" content="http://blog.freeabyss.com/Java/Java-Java8下使用wsdl2java命令报错解决方案.html">
 <meta property="og:site_name" content="Abyss's blog">
 <meta property="og:description" content="环境JDK:1.8apache-cxf: 2.7.x
-描述使用wsdl2java命令生产代码时抛出如下异常：1java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xm">
+描述  使用 wsdl2java 命令生产代码时抛出如下异常：1java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reade">
 <meta property="og:updated_time" content="2016-12-13T12:28:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java8下使用wsdl2java命令报错解决方案">
+<meta name="twitter:title" content="Java8 下使用 wsdl2java 命令报错解决方案">
 <meta name="twitter:description" content="环境JDK:1.8apache-cxf: 2.7.x
-描述使用wsdl2java命令生产代码时抛出如下异常：1java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xm">
+描述  使用 wsdl2java 命令生产代码时抛出如下异常：1java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reade">
 
 
 
@@ -127,7 +127,7 @@
 
   <link rel="canonical" href="http://blog.freeabyss.com/Java/Java-Java8下使用wsdl2java命令报错解决方案.html"/>
 
-  <title> Java8下使用wsdl2java命令报错解决方案 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Java8 下使用 wsdl2java 命令报错解决方案 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                Java8下使用wsdl2java命令报错解决方案
+                Java8 下使用 wsdl2java 命令报错解决方案
               
             
           </h1>
@@ -330,7 +330,7 @@
 
           
           
-             <span id="/Java/Java-Java8下使用wsdl2java命令报错解决方案.html" class="leancloud_visitors" data-flag-title="Java8下使用wsdl2java命令报错解决方案">
+             <span id="/Java/Java-Java8下使用wsdl2java命令报错解决方案.html" class="leancloud_visitors" data-flag-title="Java8 下使用 wsdl2java 命令报错解决方案">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -352,9 +352,9 @@
       
 
       
-        <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>JDK:1.8<br>apache-cxf: 2.7.x</p>
-<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>使用<code>wsdl2java</code>命令生产代码时抛出如下异常：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xmlschema/bindinfo/binding.xsd; lineNumber: 52; columnNumber: 88; schema_reference: Failed to read schema document &apos;xjc.xsd&apos;, because&apos;file&apos; access is not allowed due to restriction set by the accessExternalSchema property.</div></pre></td></tr></table></figure></p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将以下内容保存为<code>jaxp.properties</code>文件，然后放到<code>%JAVA_HOME%\jre\lib</code>目录下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javax.xml.accessExternalSchema = all</div></pre></td></tr></table></figure></p>
+        <h2 id="环境"><a href="# 环境" class="headerlink" title="环境"></a>环境</h2><p>JDK:1.8<br>apache-cxf: 2.7.x</p>
+<h2 id="描述"><a href="# 描述" class="headerlink" title="描述"></a>描述 </h2><p> 使用 <code>wsdl2java</code> 命令生产代码时抛出如下异常：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.lang.AssertionError: org.xml.sax.SAXParseException; systemId: jar:file:/path/to/glassfish/modules/jaxb-osgi.jar!/com/sun/tools/xjc/reader/xmlschema/bindinfo/binding.xsd; lineNumber: 52; columnNumber: 88; schema_reference: Failed to read schema document &apos;xjc.xsd&apos;, because&apos;file&apos; access is not allowed due to restriction set by the accessExternalSchema property.</div></pre></td></tr></table></figure></p>
+<h2 id="解决方案"><a href="# 解决方案" class="headerlink" title="解决方案"></a>解决方案 </h2><p> 将以下内容保存为 <code>jaxp.properties</code> 文件，然后放到 <code>%JAVA_HOME%\jre\lib</code> 目录下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javax.xml.accessExternalSchema = all</div></pre></td></tr></table></figure></p>
 <p>引用 <a href="http://stackoverflow.com/questions/23011547/webservice-client-generation-error-with-jdk8" target="_blank" rel="external">http://stackoverflow.com/questions/23011547/webservice-client-generation-error-with-jdk8</a></p>
 
       
@@ -399,8 +399,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Maven/Maven-Maven常用配置和命令.html" rel="prev" title="Maven-Maven常用配置和命令">
-                Maven-Maven常用配置和命令 <i class="fa fa-chevron-right"></i>
+              <a href="/Maven/Maven-Maven常用配置和命令.html" rel="prev" title="Maven-Maven 常用配置和命令">
+                Maven-Maven 常用配置和命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -428,7 +428,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="Java/Java-Java8下使用wsdl2java命令报错解决方案.html"
-           data-title="Java8下使用wsdl2java命令报错解决方案" data-url="http://blog.freeabyss.com/Java/Java-Java8下使用wsdl2java命令报错解决方案.html">
+           data-title="Java8 下使用 wsdl2java 命令报错解决方案" data-url="http://blog.freeabyss.com/Java/Java-Java8下使用wsdl2java命令报错解决方案.html">
       </div>
     
   </div>
@@ -473,7 +473,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -490,7 +490,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -546,7 +546,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述"><span class="nav-number">2.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述"><span class="nav-number">2.</span> <span class="nav-text">描述 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案 </span></a></li></ol></div>
             
           </div>
         </section>

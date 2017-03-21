@@ -92,16 +92,16 @@
 
 
 
-<meta name="description" content="整数相加$$\begin{array}{l}\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\c:= 0  \\\mathbf {for}\; j:=0 \;\mathbf {to}">
+<meta name="description" content="整数相加$$\begin{array}{l}\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\\{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\c:= 0  \\\mathbf {for}\; j:=0 \;\mathbf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二进制运算">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Function-05-二进制运算.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="整数相加$$\begin{array}{l}\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\c:= 0  \\\mathbf {for}\; j:=0 \;\mathbf {to}">
+<meta property="og:description" content="整数相加$$\begin{array}{l}\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\\{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\c:= 0  \\\mathbf {for}\; j:=0 \;\mathbf">
 <meta property="og:updated_time" content="2016-12-24T09:58:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二进制运算">
-<meta name="twitter:description" content="整数相加$$\begin{array}{l}\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\c:= 0  \\\mathbf {for}\; j:=0 \;\mathbf {to}">
+<meta name="twitter:description" content="整数相加$$\begin{array}{l}\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\\{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\c:= 0  \\\mathbf {for}\; j:=0 \;\mathbf">
 
 
 
@@ -349,8 +349,8 @@
       
 
       
-        <h2 id="整数相加"><a href="#整数相加" class="headerlink" title="整数相加"></a>整数相加</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>\{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2\}<br>\end{array}<br>$$</p>
-<h2 id="整数相乘"><a href="#整数相乘" class="headerlink" title="整数相乘"></a>整数相乘</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {multiply} (a, b:integer)\\<br>\{a和b的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\;shifted\; j places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>\{c_0,c_1,\dots,c_{n-1}是部分乘积\} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>\{p是ab的值\}<br>\end{array}<br>$$</p>
+        <h2 id="整数相加"><a href="# 整数相加" class="headerlink" title="整数相加"></a>整数相加</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\\<br>\{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>\{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2\}<br>\end{array}<br>$$</p>
+<h2 id="整数相乘"><a href="# 整数相乘" class="headerlink" title="整数相乘"></a>整数相乘 </h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {multiply} (a, b:integer)\\<br>\{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2\} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\;shifted\; j places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>\{c_0,c_1,\dots,c_{n-1} 是部分乘积 \} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>\{p 是 ab 的值 \}<br>\end{array}<br>$$</p>
 
       
     </div>
@@ -468,7 +468,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -485,7 +485,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -541,7 +541,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数相加"><span class="nav-number">1.</span> <span class="nav-text">整数相加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数相乘"><span class="nav-number">2.</span> <span class="nav-text">整数相乘</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数相加"><span class="nav-number">1.</span> <span class="nav-text">整数相加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数相乘"><span class="nav-number">2.</span> <span class="nav-text">整数相乘 </span></a></li></ol></div>
             
           </div>
         </section>

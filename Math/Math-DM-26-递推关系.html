@@ -92,19 +92,19 @@
 
 
 
-<meta name="description" content="递推关系对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
-用递推关系构造模型汉诺塔令$H_n$表示解$n$个盘子的汉诺">
+<meta name="description" content="递推关系  对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列 $\{a_n\}$ 的递推关系是一个等式，它把 $a_n$ 用序列中在 $a_n$ 前面的一项或多项即 $a_0,a_1,\dots,a_{n-1}$ 来表示，这里 $n\ge n_0$，$n_0$ 是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
+用递推关系构造模型  汉诺塔  令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散数学学习笔记 递推关系 26">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-26-递推关系.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="递推关系对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
-用递推关系构造模型汉诺塔令$H_n$表示解$n$个盘子的汉诺">
+<meta property="og:description" content="递推关系  对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列 $\{a_n\}$ 的递推关系是一个等式，它把 $a_n$ 用序列中在 $a_n$ 前面的一项或多项即 $a_0,a_1,\dots,a_{n-1}$ 来表示，这里 $n\ge n_0$，$n_0$ 是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
+用递推关系构造模型  汉诺塔  令">
 <meta property="og:updated_time" content="2017-03-16T12:21:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学学习笔记 递推关系 26">
-<meta name="twitter:description" content="递推关系对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
-用递推关系构造模型汉诺塔令$H_n$表示解$n$个盘子的汉诺">
+<meta name="twitter:description" content="递推关系  对于递归定义，这个从某些前项求后项的规则就叫做递推关系。关于序列 $\{a_n\}$ 的递推关系是一个等式，它把 $a_n$ 用序列中在 $a_n$ 前面的一项或多项即 $a_0,a_1,\dots,a_{n-1}$ 来表示，这里 $n\ge n_0$，$n_0$ 是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     
+用递推关系构造模型  汉诺塔  令">
 
 
 
@@ -352,12 +352,12 @@
       
 
       
-        <h2 id="递推关系"><a href="#递推关系" class="headerlink" title="递推关系"></a>递推关系</h2><p>对于递归定义，这个从某些前项求后项的规则就叫做递推关系。<br>关于序列$\{a_n\}$的递推关系是一个等式，它把$a_n$用序列中在$a_n$前面的一项或多项即$a_0,a_1,\dots,a_{n-1}$来表示，这里$n\ge n_0$，$n_0$是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     </p>
-<h3 id="用递推关系构造模型"><a href="#用递推关系构造模型" class="headerlink" title="用递推关系构造模型"></a>用递推关系构造模型</h3><h4 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h4><p>令$H_n$表示解$n$个盘子的汉诺塔问题所需要的移动次数。建立一个关于序列$\{H_n\}$的递推关系。<br>解:开始$n$个盘子在柱1。按照游戏规则我们可以用$H_{n-1}$次移动将上边的$n-1$个盘子移动柱3.在这些移动中保留最大的盘子不动。然后，我们用一次移动将最大的盘子移动第二根柱子上。我们可以再使用$H_{n-1}$次移动将柱3上的$n-1$个盘子移到柱2，把它们放到最大的盘子上面，这个最大的盘子一直放在柱2的底部。容易看出，使用更少的步数是不能求解这个难题。这就证明了$H_n=2H_{n-1}+1$。<br>使用迭代方法求这个递推关系:$$\begin{array}{l}H_n&amp;=2H_{n-1}+1\\ &amp;=2(2H_{n-2}+1)+1=2^2H_{n-2}+2+1\\ &amp;=2^2(2H_{n-3}+1)+2+1=2^3H_{n-3}+2^2+2+1\\ &amp;\dots\\ &amp;=2^{n-1}H_1+2^{n-2}+2^{n-3}+\dots+2+1\\ &amp;=2^{n-1}+2^{n-2}+\dots+2+1\\&amp;=2^n-1\end{array}$$</p>
-<h4 id="编码字的枚举"><a href="#编码字的枚举" class="headerlink" title="编码字的枚举"></a>编码字的枚举</h4><p>一个计算机系统把一个十进制数字串作为一个编码字，如果它包含偶数个$0$，就是有效的。<br>注意到$a_1=9$，因为存在$10$个$1$位十进制数字串，并且只有一个，即串$0$是无效的。通过考虑怎样由$n-1$位的数字串构成一个$n$位有效数字串，就可以推导出关于这个序列的递推关系。从少$1$位数字的串构成$n$位有效数字串有两种方式:      </p>
+        <h2 id="递推关系"><a href="# 递推关系" class="headerlink" title="递推关系"></a>递推关系 </h2><p> 对于递归定义，这个从某些前项求后项的规则就叫做递推关系。<br>关于序列 $\{a_n\}$ 的递推关系是一个等式，它把 $a_n$ 用序列中在 $a_n$ 前面的一项或多项即 $a_0,a_1,\dots,a_{n-1}$ 来表示，这里 $n\ge n_0$，$n_0$ 是一个非负整数。如果一个序列的项满足递推关系，这个序列就叫做递推关系的解。     </p>
+<h3 id="用递推关系构造模型"><a href="# 用递推关系构造模型" class="headerlink" title="用递推关系构造模型"></a>用递推关系构造模型 </h3><h4 id="汉诺塔"><a href="# 汉诺塔" class="headerlink" title="汉诺塔"></a> 汉诺塔 </h4><p> 令 $H_n$ 表示解 $n$ 个盘子的汉诺塔问题所需要的移动次数。建立一个关于序列 $\{H_n\}$ 的递推关系。<br>解: 开始 $n$ 个盘子在柱 1。按照游戏规则我们可以用 $H_{n-1}$ 次移动将上边的 $n-1$ 个盘子移动柱 3. 在这些移动中保留最大的盘子不动。然后，我们用一次移动将最大的盘子移动第二根柱子上。我们可以再使用 $H_{n-1}$ 次移动将柱 3 上的 $n-1$ 个盘子移到柱 2，把它们放到最大的盘子上面，这个最大的盘子一直放在柱 2 的底部。容易看出，使用更少的步数是不能求解这个难题。这就证明了 $H_n=2H_{n-1}+1$。<br>使用迭代方法求这个递推关系:$$\begin{array}{l}H_n&amp;=2H_{n-1}+1\\ &amp;=2(2H_{n-2}+1)+1=2^2H_{n-2}+2+1\\ &amp;=2^2(2H_{n-3}+1)+2+1=2^3H_{n-3}+2^2+2+1\\ &amp;\dots\\ &amp;=2^{n-1}H_1+2^{n-2}+2^{n-3}+\dots+2+1\\ &amp;=2^{n-1}+2^{n-2}+\dots+2+1\\&amp;=2^n-1\end{array}$$</p>
+<h4 id="编码字的枚举"><a href="# 编码字的枚举" class="headerlink" title="编码字的枚举"></a>编码字的枚举 </h4><p> 一个计算机系统把一个十进制数字串作为一个编码字，如果它包含偶数个 $0$，就是有效的。<br>注意到 $a_1=9$，因为存在 $10$ 个 $1$ 位十进制数字串，并且只有一个，即串 $0$ 是无效的。通过考虑怎样由 $n-1$ 位的数字串构成一个 $n$ 位有效数字串，就可以推导出关于这个序列的递推关系。从少 $1$ 位数字的串构成 $n$ 位有效数字串有两种方式:      </p>
 <ol>
-<li>在一个$n-1$位有效数字串后面加上一个非$0$的数字就可以得到一个$n$位的有效数字串。加这个数字的方式有$9$种。因此用这个方法构成$n$位有效数字串的方式有$9a_{n-1}$种。      </li>
-<li>在一个无效的$n-1$位数字串后面加上一个$0$就可以得到$n$位有效的数字串。这样做的方式数等于无效的$n-1$位数字串的个数。因为存在$10^{n-1}$个$n-1$位数字串，其中有$a_{n-1}$个是有效的，通过在无效的$n-1$位数字串后面加上一个$0$就得到$10^{n-1}-a_{n-1}$个$n$位的有效数字串。<br>因为所有的$n$位有效数字串都用这两种方式之一产生，从而存在$$\begin{array}{l}a_n &amp;=9a_{n-1}+(10^{n-1}-a_{n-1})\\ &amp;=8a_{n-1}+10^{n-1}\end{array}$$</li>
+<li>在一个 $n-1$ 位有效数字串后面加上一个非 $0$ 的数字就可以得到一个 $n$ 位的有效数字串。加这个数字的方式有 $9$ 种。因此用这个方法构成 $n$ 位有效数字串的方式有 $9a_{n-1}$ 种。      </li>
+<li>在一个无效的 $n-1$ 位数字串后面加上一个 $0$ 就可以得到 $n$ 位有效的数字串。这样做的方式数等于无效的 $n-1$ 位数字串的个数。因为存在 $10^{n-1}$ 个 $n-1$ 位数字串，其中有 $a_{n-1}$ 个是有效的，通过在无效的 $n-1$ 位数字串后面加上一个 $0$ 就得到 $10^{n-1}-a_{n-1}$ 个 $n$ 位的有效数字串。<br>因为所有的 $n$ 位有效数字串都用这两种方式之一产生，从而存在 $$\begin{array}{l}a_n &amp;=9a_{n-1}+(10^{n-1}-a_{n-1})\\ &amp;=8a_{n-1}+10^{n-1}\end{array}$$</li>
 </ol>
 
       
@@ -476,7 +476,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -493,7 +493,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -549,7 +549,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#递推关系"><span class="nav-number">1.</span> <span class="nav-text">递推关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用递推关系构造模型"><span class="nav-number">1.1.</span> <span class="nav-text">用递推关系构造模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#汉诺塔"><span class="nav-number">1.1.1.</span> <span class="nav-text">汉诺塔</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码字的枚举"><span class="nav-number">1.1.2.</span> <span class="nav-text">编码字的枚举</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#递推关系"><span class="nav-number">1.</span> <span class="nav-text">递推关系 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用递推关系构造模型"><span class="nav-number">1.1.</span> <span class="nav-text">用递推关系构造模型 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#汉诺塔"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 汉诺塔 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码字的枚举"><span class="nav-number">1.1.2.</span> <span class="nav-text">编码字的枚举 </span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -92,7 +92,7 @@
 
 
 
-<meta name="description" content="前言本篇文章从以下几个方面，讲述Java序列化相关的内容： 
+<meta name="description" content="前言  本篇文章从以下几个方面，讲述 Java 序列化相关的内容： 
 
 
 什么是序列化？
@@ -105,12 +105,12 @@
 安全问题
 
 
-什么是序列化序列化是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化是将字节序列转化">
+什么是序列化  序列化  是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 浅析序列化">
 <meta property="og:url" content="http://blog.freeabyss.com/Java/Java-Java-序列化.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="前言本篇文章从以下几个方面，讲述Java序列化相关的内容： 
+<meta property="og:description" content="前言  本篇文章从以下几个方面，讲述 Java 序列化相关的内容： 
 
 
 什么是序列化？
@@ -123,11 +123,11 @@
 安全问题
 
 
-什么是序列化序列化是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化是将字节序列转化">
+什么是序列化  序列化  是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化">
 <meta property="og:updated_time" content="2017-03-19T14:42:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 浅析序列化">
-<meta name="twitter:description" content="前言本篇文章从以下几个方面，讲述Java序列化相关的内容： 
+<meta name="twitter:description" content="前言  本篇文章从以下几个方面，讲述 Java 序列化相关的内容： 
 
 
 什么是序列化？
@@ -140,7 +140,7 @@
 安全问题
 
 
-什么是序列化序列化是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化是将字节序列转化">
+什么是序列化  序列化  是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 反序列化">
 
 
 
@@ -388,7 +388,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇文章从以下几个方面，讲述Java序列化相关的内容： </p>
+        <h2 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h2><p> 本篇文章从以下几个方面，讲述 Java 序列化相关的内容： </p>
 <blockquote>
 <ul>
 <li>什么是序列化？</li>
@@ -401,59 +401,59 @@
 <li>安全问题</li>
 </ul>
 </blockquote>
-<h2 id="什么是序列化"><a href="#什么是序列化" class="headerlink" title="什么是序列化"></a>什么是序列化</h2><p><strong>序列化</strong>是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 <strong>反序列化</strong>是将字节序列转化为对象的过程。<br>序列化是对对象的持久化，将对象序列化后可以存入文件中，也可以通过网络传递到远程服务器中。         </p>
-<h2 id="实现序列化"><a href="#实现序列化" class="headerlink" title="实现序列化"></a>实现序列化</h2><p>在实现序列化的过程中，需要用到三个类<code>ObjectInputStream</code>、<code>ObjectOutputStream</code>和<code>Serializable</code>。首先，让需要序列化的对象所属类实现<code>Serializable</code>接口，该接口不需要实现任何方法，是典型的标记接口。 然后使用<code>ObjectInputStream</code>、<code>ObjectOutputStream</code>进行读写。   </p>
+<h2 id="什么是序列化"><a href="# 什么是序列化" class="headerlink" title="什么是序列化"></a>什么是序列化 </h2><p><strong> 序列化 </strong> 是指将对象表示为一个字节序列的过程，该字节序列包含对象所存储的数据、数据的类型以及对象的类型信息。 <strong>反序列化 </strong> 是将字节序列转化为对象的过程。<br>序列化是对对象的持久化，将对象序列化后可以存入文件中，也可以通过网络传递到远程服务器中。         </p>
+<h2 id="实现序列化"><a href="# 实现序列化" class="headerlink" title="实现序列化"></a>实现序列化 </h2><p> 在实现序列化的过程中，需要用到三个类 <code>ObjectInputStream</code>、<code>ObjectOutputStream</code> 和<code>Serializable</code>。首先，让需要序列化的对象所属类实现 <code>Serializable</code> 接口，该接口不需要实现任何方法，是典型的标记接口。 然后使用 <code>ObjectInputStream</code>、<code>ObjectOutputStream</code> 进行读写。   </p>
 <script src="//gist.github.com/3d8ae4af25273ee8fec1c10c5c0002a2.js"></script>
 <p>当存储一个对象时，这个对象所属的类也必须存储，这个类的描述包含 </p>
 <ul>
 <li>类名。</li>
-<li>序列化的版本唯一的ID，它是通过对类、超类、接口、域类型和方法签名按照规范方式排序，然后应用SHA算法获得，并且只取前8位。它相当于一个类的指纹，假如类中存在<code>serialVersionUID</code>字段，则用它作为类的指纹。     </li>
+<li>序列化的版本唯一的 ID，它是通过对类、超类、接口、域类型和方法签名按照规范方式排序，然后应用 SHA 算法获得，并且只取前 8 位。它相当于一个类的指纹，假如类中存在 <code>serialVersionUID</code> 字段，则用它作为类的指纹。     </li>
 <li>描述序列化方法的标志集。</li>
 <li>对数据域的描述。  </li>
 </ul>
-<p>静态变量和被<code>transient</code>修饰的变量将不会被序列化。除非超类也实现了<code>Serializable</code>接口，否则超类的数据域不会被序列化。   </p>
-<h2 id="修改默认的序列化机制"><a href="#修改默认的序列化机制" class="headerlink" title="修改默认的序列化机制"></a>修改默认的序列化机制</h2><p>Java提供了三种方式，用以修改默认的序列化机制。<br>考虑以下这种情况，某些数据域，例如只对本地方法有意义的存储文件句柄，这种信息在重新加载或传送到其他机器上时都是没有用处的，甚至会引起程序崩溃。因此为了防止这种情况，使用<code>transient</code>修饰符，被该修饰符修饰后的数据域将被序列化机制跳过。       </p>
-<p>另外一种情况是，类中的某些数据域没有实现<code>Serializable</code>接口，却又要将其序列化，这时就需要先将其标记为<code>transient</code>避免抛出<code>NotSerializableException</code>，然后通过重写<code>readObject</code>和<code>writeObject</code>方法，自定义序列化。这种两个方法是私有的，并且只能被序列化机制调用。   </p>
-<p>下面是一个典型示例，在<code>java.awt.geom</code>包中有大量的类都是不可序列化的，例如<code>Point2D.Double</code>，现在要序列化一个包含该类型字段的类，</p>
+<p>静态变量和被 <code>transient</code> 修饰的变量将不会被序列化。除非超类也实现了 <code>Serializable</code> 接口，否则超类的数据域不会被序列化。   </p>
+<h2 id="修改默认的序列化机制"><a href="# 修改默认的序列化机制" class="headerlink" title="修改默认的序列化机制"></a>修改默认的序列化机制 </h2><p>Java 提供了三种方式，用以修改默认的序列化机制。<br> 考虑以下这种情况，某些数据域，例如只对本地方法有意义的存储文件句柄，这种信息在重新加载或传送到其他机器上时都是没有用处的，甚至会引起程序崩溃。因此为了防止这种情况，使用 <code>transient</code> 修饰符，被该修饰符修饰后的数据域将被序列化机制跳过。       </p>
+<p>另外一种情况是，类中的某些数据域没有实现 <code>Serializable</code> 接口，却又要将其序列化，这时就需要先将其标记为 <code>transient</code> 避免抛出 <code>NotSerializableException</code>，然后通过重写<code>readObject</code> 和<code>writeObject</code>方法，自定义序列化。这种两个方法是私有的，并且只能被序列化机制调用。   </p>
+<p>下面是一个典型示例，在 <code>java.awt.geom</code> 包中有大量的类都是不可序列化的，例如<code>Point2D.Double</code>，现在要序列化一个包含该类型字段的类，</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LabeledPoint</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String label;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">transient</span> Point2D.Double point;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">readObject</span><span class="params">(ObjectInputStream in)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException</span>&#123;</div><div class="line">        in.defaultReadObject();</div><div class="line">       	<span class="keyword">double</span> x = in.readDouble();</div><div class="line">       	<span class="keyword">double</span> y = in.readDouble();</div><div class="line">       	point = <span class="keyword">new</span> Point2D.Double(x, y);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">writeObject</span><span class="params">(ObjectOutputStream out)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        out.defaultWriteObject();</div><div class="line">        out.writeDouble(point.getX());</div><div class="line">        out.writeDouble(point.getY());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>defaultWriteObject</code>和<code>defaultReadObject</code>是特殊的方法，只能在序列化类的<code>writeObject</code>和<code>readObject</code>方法中被调用。<code>defaultWriteObject</code>表示使用默认的序列化机制，<code>defaultReadObject</code>反之。这两个方法也可以不调用，这样就跟下面讲的<code>Externalizable</code>接口差不多。      </p>
-<p>除了重写<code>readObject</code>和<code>writeObject</code>方法修改默认的序列化机制外，还可使用<code>Externalizable</code>接口，自定义序列化机制。     </p>
+<p><code>defaultWriteObject</code>和 <code>defaultReadObject</code> 是特殊的方法，只能在序列化类的 <code>writeObject</code> 和<code>readObject</code>方法中被调用。<code>defaultWriteObject</code>表示使用默认的序列化机制，<code>defaultReadObject</code>反之。这两个方法也可以不调用，这样就跟下面讲的 <code>Externalizable</code> 接口差不多。      </p>
+<p>除了重写 <code>readObject</code> 和<code>writeObject</code>方法修改默认的序列化机制外，还可使用 <code>Externalizable</code> 接口，自定义序列化机制。     </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Director</span> <span class="keyword">implements</span> <span class="title">Externalizable</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> String title;</div><div class="line">    <span class="keyword">private</span> String bonus;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeExternal</span><span class="params">(ObjectOutput out)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        out.writeUTF(title);</div><div class="line">        out.writeUTF(bonus);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readExternal</span><span class="params">(ObjectInput in)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</div><div class="line">        title = in.readUTF();</div><div class="line">        bonus = in.readUTF();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Externalizable和Serializable的不同"><a href="#Externalizable和Serializable的不同" class="headerlink" title="Externalizable和Serializable的不同"></a><code>Externalizable</code>和<code>Serializable</code>的不同</h3><p><code>Externalizable</code>和<code>Serializable</code>最大的不同就是，<code>Externalizable</code>会调用类的无参构造函数来创建对象，<code>Serializable</code>则不然。  另外就是<code>readObject</code>和<code>writeObject</code>只能被序列化机制调用，而<code>readExternal</code>和<code>writeExternal</code>方法是公共的。   </p>
-<h2 id="序列化中遇到的问题"><a href="#序列化中遇到的问题" class="headerlink" title="序列化中遇到的问题"></a>序列化中遇到的问题</h2><p>在序列化中，有一个重要的情况需要考虑：当一个对象被多个对象共享，作为它们各种状态的一部分时，会发生什么情况？ </p>
+<h3 id="Externalizable 和 Serializable 的不同"><a href="#Externalizable 和 Serializable 的不同" class="headerlink" title="Externalizable 和 Serializable 的不同"></a><code>Externalizable</code>和 <code>Serializable</code> 的不同 </h3><p><code>Externalizable</code> 和<code>Serializable</code>最大的不同就是，<code>Externalizable</code>会调用类的无参构造函数来创建对象，<code>Serializable</code>则不然。  另外就是 <code>readObject</code> 和<code>writeObject</code>只能被序列化机制调用，而 <code>readExternal</code> 和<code>writeExternal</code>方法是公共的。   </p>
+<h2 id="序列化中遇到的问题"><a href="# 序列化中遇到的问题" class="headerlink" title="序列化中遇到的问题"></a>序列化中遇到的问题 </h2><p> 在序列化中，有一个重要的情况需要考虑：当一个对象被多个对象共享，作为它们各种状态的一部分时，会发生什么情况？ </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Employee secretary;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Employee tony = <span class="keyword">new</span> Employee();</div><div class="line">        tony.setName(<span class="string">"Tony"</span>);</div><div class="line">        tony.setSalary(<span class="number">10000</span>);</div><div class="line">        tony.setHireDay(<span class="keyword">new</span> Date());</div><div class="line"></div><div class="line">        Manager harry = <span class="keyword">new</span> Manager();</div><div class="line">        harry.setSalary(<span class="number">1000</span>);</div><div class="line">        harry.setName(<span class="string">"Harry"</span>);</div><div class="line">        harry.setSecretary(tony);</div><div class="line"></div><div class="line">        Manager carl = <span class="keyword">new</span> Manager();</div><div class="line">        carl.setName(<span class="string">"Carl"</span>);</div><div class="line">        carl.setSalary(<span class="number">10000</span>);</div><div class="line">        carl.setSecretary(tony);</div><div class="line"></div><div class="line">        ByteArrayOutputStream byteArr = <span class="keyword">new</span> ByteArrayOutputStream();</div><div class="line">        <span class="keyword">try</span> (ObjectOutputStream out = <span class="keyword">new</span> ObjectOutputStream(byteArr)) &#123;</div><div class="line">            out.writeObject(harry);</div><div class="line">            out.writeObject(carl);</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> (ByteArrayInputStream input = <span class="keyword">new</span> ByteArrayInputStream(byteArr.toByteArray());</div><div class="line">             ObjectInputStream objInput = <span class="keyword">new</span> ObjectInputStream(input)) &#123;</div><div class="line">            Manager harry1 = (Manager) objInput.readObject();</div><div class="line">            Manager carl1 = (Manager) objInput.readObject();</div><div class="line">            <span class="comment">// out true</span></div><div class="line">            System.out.println(harry1.getSecretary() == carl1.getSecretary());</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>经过序列化后，两个对象依然共享同一对象。造成这种现象的原因是：每个对象都是用一个序列号（serial number，即前面提到的「指纹」）保存的，这也是这种机制之所以被称为对象序列化的原因。 下面是其算法：    </p>
 <ul>
 <li>对你遇到的每一个对象引用都关联一个序列号。    </li>
 <li>对于每个对象，当第一次遇到时，保存其对象数据到流中。    </li>
-<li>如果某个对象之前已经被保存过，那么只写出「与之前保存过的序列号为$x$的对象相同」。 在读回对象时，整个过程是反过来的。   </li>
-<li>当遇到「与之前保存过的序列号为$x$的对象相同」标记时，获取与这个顺序号相关联的对象引用。   </li>
+<li>如果某个对象之前已经被保存过，那么只写出「与之前保存过的序列号为 $x$ 的对象相同」。 在读回对象时，整个过程是反过来的。   </li>
+<li>当遇到「与之前保存过的序列号为 $x$ 的对象相同」标记时，获取与这个顺序号相关联的对象引用。   </li>
 </ul>
 <blockquote>
 <p>因为保存原生的内存地址毫无意义，因此序列化用序列号代替了内存地址。   </p>
 </blockquote>
-<h2 id="如何解决兼容问题"><a href="#如何解决兼容问题" class="headerlink" title="如何解决兼容问题"></a>如何解决兼容问题</h2><p>如果使用序列化保存对象，就需要考虑版本问题，修改后的类能否读入旧文件？或者反之旧版本能否读入新版本产生的文件。      </p>
-<p>这时候就体现到<code>serialVersionUID</code>字段的重要性来了。假设将SHA指纹作为序列化版本的唯一ID的话，无论类的定义产生了什么样的变化，它的SHA指纹也会跟着变化，而我们都知道对象流将拒绝读入具有不同指纹的对象。为了保持兼容性，我们必须使用<code>serialVersionUID</code>常量作为序列化版本的唯一ID。      </p>
+<h2 id="如何解决兼容问题"><a href="# 如何解决兼容问题" class="headerlink" title="如何解决兼容问题"></a>如何解决兼容问题 </h2><p> 如果使用序列化保存对象，就需要考虑版本问题，修改后的类能否读入旧文件？或者反之旧版本能否读入新版本产生的文件。      </p>
+<p>这时候就体现到 <code>serialVersionUID</code> 字段的重要性来了。假设将 SHA 指纹作为序列化版本的唯一 ID 的话，无论类的定义产生了什么样的变化，它的 SHA 指纹也会跟着变化，而我们都知道对象流将拒绝读入具有不同指纹的对象。为了保持兼容性，我们必须使用 <code>serialVersionUID</code> 常量作为序列化版本的唯一 ID。      </p>
 <p>如果这个类只有方法发生了变化，那么在读入新对象数据时是不会有任何问题的。但是，如果数据域产生了变化，那么就有可能会有问题，不过对象流将尽力将流对象转化成这个类的当前版本。   </p>
-<p>对象流会将这个类当前版本的数据域与流中版本的数据域进行比较，当然，对象流只会考虑非静态和非<code>transient</code>的数据域。    </p>
+<p>对象流会将这个类当前版本的数据域与流中版本的数据域进行比较，当然，对象流只会考虑非静态和非 <code>transient</code> 的数据域。    </p>
 <ul>
 <li>如果名字匹配而类型不匹配，那么对象流不会尝试将一种类型转换成另一种类型，因为这两个对象不兼容。   </li>
 <li>如果流中对象具有在当前版本中所没有的数据域，那么对象流会忽略这些额外的数据。    </li>
 <li>如果当前版本具有在流中对象所没有的数据域，那么这些新添加的域将被设置成它们的默认值。   </li>
 </ul>
-<p>这种丢弃数据域或者将数据域设置为<code>null</code>有可能会产生bug，建议设计者重写<code>readObject</code>方法来修订版本不兼容问题。   </p>
-<h2 id="序列化应用时需要注意的问题"><a href="#序列化应用时需要注意的问题" class="headerlink" title="序列化应用时需要注意的问题"></a>序列化应用时需要注意的问题</h2><h3 id="序列化单例和类型安全的枚举"><a href="#序列化单例和类型安全的枚举" class="headerlink" title="序列化单例和类型安全的枚举"></a>序列化单例和类型安全的枚举</h3><p>如果你使用Java语言的<code>enum</code>结构，那么不用担心序列化，它能够正常工作。但考虑以下风格的代码：    </p>
+<p>这种丢弃数据域或者将数据域设置为 <code>null</code> 有可能会产生 bug，建议设计者重写 <code>readObject</code> 方法来修订版本不兼容问题。   </p>
+<h2 id="序列化应用时需要注意的问题"><a href="# 序列化应用时需要注意的问题" class="headerlink" title="序列化应用时需要注意的问题"></a>序列化应用时需要注意的问题 </h2><h3 id="序列化单例和类型安全的枚举"><a href="# 序列化单例和类型安全的枚举" class="headerlink" title="序列化单例和类型安全的枚举"></a> 序列化单例和类型安全的枚举 </h3><p> 如果你使用 Java 语言的 <code>enum</code> 结构，那么不用担心序列化，它能够正常工作。但考虑以下风格的代码：    </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Orientation</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Orientation HORIZONTAL = <span class="keyword">new</span> Orientation(<span class="number">1</span>);</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Orientation VERTICAL = <span class="keyword">new</span> Orientation(<span class="number">2</span>);</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> value;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Orientation</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.value = value;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这种风格的代码在<code>enum</code>之前很常见，这个类的构造器是私有的，你不可能创建除<code>HORIZONTAL</code>和<code>VERTICAL</code>之外的对象，因此你可以使用<code>==</code>操作符来测试对象的等同性。      </p>
+<p>这种风格的代码在 <code>enum</code> 之前很常见，这个类的构造器是私有的，你不可能创建除 <code>HORIZONTAL</code> 和<code>VERTICAL</code>之外的对象，因此你可以使用 <code>==</code> 操作符来测试对象的等同性。      </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (orientation == Orientation.HORIZONTAL) ...</div></pre></td></tr></table></figure>
-<p>当我们序列化这样的类时，既是构造器是私有的，序列化机制也可以创建新的对象（序列化机制不通过构造器创建对象），因此上述代码就会产生bug。    </p>
-<p>为了解决这个问题，我们需要定义另外一种称为<code>readResolve</code>的特殊序列化方法。该方法会在对象被序列化之后被调用。它必须返回一个对象，而该对象之后会成为<code>readObject</code>的返回值。因此我们可以这么做：    </p>
+<p>当我们序列化这样的类时，既是构造器是私有的，序列化机制也可以创建新的对象（序列化机制不通过构造器创建对象），因此上述代码就会产生 bug。    </p>
+<p>为了解决这个问题，我们需要定义另外一种称为 <code>readResolve</code> 的特殊序列化方法。该方法会在对象被序列化之后被调用。它必须返回一个对象，而该对象之后会成为 <code>readObject</code> 的返回值。因此我们可以这么做：    </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> Object <span class="title">readResolve</span><span class="params">()</span> <span class="keyword">throws</span> ObjectStreamException </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value == <span class="number">1</span>) <span class="keyword">return</span> HORIZONTAL;</div><div class="line">    <span class="keyword">if</span> (value == <span class="number">2</span>) <span class="keyword">return</span> VERTICAL;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>请记住向遗留代码中所有类型安全的枚举以及向所有支持单例设计模式的类中添加<code>readResolve</code>方法。 </p>
-<h3 id="使用序列化clone对象"><a href="#使用序列化clone对象" class="headerlink" title="使用序列化clone对象"></a>使用序列化clone对象</h3><p>序列化机制有一种很有趣的用法，即提供了一种<code>clone</code>对象的简便途径，只需要将对象序列化到输出流中，并且将其读回。这种方式虽然方便，但性能比显式地构建新对象的方式慢的多。  </p>
-<h2 id="父类的序列化问题"><a href="#父类的序列化问题" class="headerlink" title="父类的序列化问题"></a>父类的序列化问题</h2><p>一个子类实现了<code>Serializable</code>接口，而它的父类没有实现<code>Serializable</code>接口，那么序列化时父类所属的数据域并不会被序列化。<strong>要想父类也序列化，就需要让父类也实现<code>Serializable</code>接口</strong>。     </p>
-<p>有一点非常重要，如果父类没有实现<code>Serializable</code>接口的话，就<strong>需要有默认的无参的构造函数</strong>。这是因为在父类没有实现<code>Serializable</code>接口时，虚拟机不会序列化父对象，而一个Java对象的构造必须先有父对象，才有子对象，反序列化也不列外。  </p>
-<h2 id="安全问题"><a href="#安全问题" class="headerlink" title="安全问题"></a>安全问题</h2><p>序列化后的字节序列并没有加密，若被黑客窃取了这部分数据，很容易的解析出数据域里的内容。 一个解决方案就是重写<code>writeObject</code>方法，对敏感内容加密后写入对象流，然后在<code>readObject</code>中解密。   </p>
+<p>请记住向遗留代码中所有类型安全的枚举以及向所有支持单例设计模式的类中添加 <code>readResolve</code> 方法。 </p>
+<h3 id="使用序列化 clone 对象"><a href="# 使用序列化 clone 对象" class="headerlink" title="使用序列化 clone 对象"></a>使用序列化 clone 对象 </h3><p> 序列化机制有一种很有趣的用法，即提供了一种 <code>clone</code> 对象的简便途径，只需要将对象序列化到输出流中，并且将其读回。这种方式虽然方便，但性能比显式地构建新对象的方式慢的多。  </p>
+<h2 id="父类的序列化问题"><a href="# 父类的序列化问题" class="headerlink" title="父类的序列化问题"></a>父类的序列化问题 </h2><p> 一个子类实现了 <code>Serializable</code> 接口，而它的父类没有实现 <code>Serializable</code> 接口，那么序列化时父类所属的数据域并不会被序列化。<strong>要想父类也序列化，就需要让父类也实现 <code>Serializable</code> 接口</strong>。     </p>
+<p>有一点非常重要，如果父类没有实现 <code>Serializable</code> 接口的话，就 <strong> 需要有默认的无参的构造函数 </strong>。这是因为在父类没有实现<code>Serializable</code> 接口时，虚拟机不会序列化父对象，而一个 Java 对象的构造必须先有父对象，才有子对象，反序列化也不列外。  </p>
+<h2 id="安全问题"><a href="# 安全问题" class="headerlink" title="安全问题"></a>安全问题 </h2><p> 序列化后的字节序列并没有加密，若被黑客窃取了这部分数据，很容易的解析出数据域里的内容。 一个解决方案就是重写 <code>writeObject</code> 方法，对敏感内容加密后写入对象流，然后在 <code>readObject</code> 中解密。   </p>
 
       
     </div>
@@ -494,6 +494,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/Math-DM-38-树的基本概念.html" rel="prev" title="Math-DM-38- 树的基本概念">
+                Math-DM-38- 树的基本概念 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -565,7 +569,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -582,7 +586,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -638,7 +642,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是序列化"><span class="nav-number">2.</span> <span class="nav-text">什么是序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现序列化"><span class="nav-number">3.</span> <span class="nav-text">实现序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改默认的序列化机制"><span class="nav-number">4.</span> <span class="nav-text">修改默认的序列化机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Externalizable和Serializable的不同"><span class="nav-number">4.1.</span> <span class="nav-text">Externalizable和Serializable的不同</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化中遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">序列化中遇到的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决兼容问题"><span class="nav-number">6.</span> <span class="nav-text">如何解决兼容问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化应用时需要注意的问题"><span class="nav-number">7.</span> <span class="nav-text">序列化应用时需要注意的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#序列化单例和类型安全的枚举"><span class="nav-number">7.1.</span> <span class="nav-text">序列化单例和类型安全的枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用序列化clone对象"><span class="nav-number">7.2.</span> <span class="nav-text">使用序列化clone对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#父类的序列化问题"><span class="nav-number">8.</span> <span class="nav-text">父类的序列化问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全问题"><span class="nav-number">9.</span> <span class="nav-text">安全问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是序列化"><span class="nav-number">2.</span> <span class="nav-text">什么是序列化 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现序列化"><span class="nav-number">3.</span> <span class="nav-text">实现序列化 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改默认的序列化机制"><span class="nav-number">4.</span> <span class="nav-text">修改默认的序列化机制 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Externalizable 和 Serializable 的不同"><span class="nav-number">4.1.</span> <span class="nav-text">Externalizable和 Serializable 的不同 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化中遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">序列化中遇到的问题 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决兼容问题"><span class="nav-number">6.</span> <span class="nav-text">如何解决兼容问题 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化应用时需要注意的问题"><span class="nav-number">7.</span> <span class="nav-text">序列化应用时需要注意的问题 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#序列化单例和类型安全的枚举"><span class="nav-number">7.1.</span> <span class="nav-text"> 序列化单例和类型安全的枚举 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用序列化 clone 对象"><span class="nav-number">7.2.</span> <span class="nav-text">使用序列化 clone 对象 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#父类的序列化问题"><span class="nav-number">8.</span> <span class="nav-text">父类的序列化问题 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全问题"><span class="nav-number">9.</span> <span class="nav-text">安全问题 </span></a></li></ol></div>
             
           </div>
         </section>

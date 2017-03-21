@@ -92,19 +92,19 @@
 
 
 
-<meta name="description" content="强归纳法要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:基础步骤: 证明$P(1)$为真。归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
-强归纳法 or 数学归纳法一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳">
+<meta name="description" content="强归纳法  要证明对所有正整数 $n$ 而言，都有 $P(n)$ 为真，其中 $P(n)$ 为命题函数，我们要完成如下两个步骤:基础步骤: 证明 $P(1)$ 为真。归纳步骤: 要证明对所有正整数 $k$ 来说，蕴含式 $[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
+强归纳法 or 数学归纳法  一般情况下，我们应当尽量限制数学归纳">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散数学学习笔记 强归纳法 24">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-24-强归纳法.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="强归纳法要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:基础步骤: 证明$P(1)$为真。归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
-强归纳法 or 数学归纳法一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳">
+<meta property="og:description" content="强归纳法  要证明对所有正整数 $n$ 而言，都有 $P(n)$ 为真，其中 $P(n)$ 为命题函数，我们要完成如下两个步骤:基础步骤: 证明 $P(1)$ 为真。归纳步骤: 要证明对所有正整数 $k$ 来说，蕴含式 $[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
+强归纳法 or 数学归纳法  一般情况下，我们应当尽量限制数学归纳">
 <meta property="og:updated_time" content="2017-01-09T13:36:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学学习笔记 强归纳法 24">
-<meta name="twitter:description" content="强归纳法要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:基础步骤: 证明$P(1)$为真。归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
-强归纳法 or 数学归纳法一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳">
+<meta name="twitter:description" content="强归纳法  要证明对所有正整数 $n$ 而言，都有 $P(n)$ 为真，其中 $P(n)$ 为命题函数，我们要完成如下两个步骤:基础步骤: 证明 $P(1)$ 为真。归纳步骤: 要证明对所有正整数 $k$ 来说，蕴含式 $[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$
+强归纳法 or 数学归纳法  一般情况下，我们应当尽量限制数学归纳">
 
 
 
@@ -352,9 +352,9 @@
       
 
       
-        <h2 id="强归纳法"><a href="#强归纳法" class="headerlink" title="强归纳法"></a>强归纳法</h2><p>要证明对所有正整数$n$而言，都有$P(n)$为真，其中$P(n)$为命题函数，我们要完成如下两个步骤:<br>基础步骤: 证明$P(1)$为真。<br>归纳步骤: 要证明对所有正整数$k$来说，蕴含式$[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$</p>
-<h3 id="强归纳法-or-数学归纳法"><a href="#强归纳法-or-数学归纳法" class="headerlink" title="强归纳法 or 数学归纳法"></a>强归纳法 or 数学归纳法</h3><p>一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳法的归纳步骤证明是明显成立的。</p>
-<h3 id="强归纳法示例"><a href="#强归纳法示例" class="headerlink" title="强归纳法示例"></a>强归纳法示例</h3><h4 id="算术基本定理证明"><a href="#算术基本定理证明" class="headerlink" title="算术基本定理证明"></a>算术基本定理证明</h4><p>证明:若$n$是大于$1$的整数，则$n$可以写成素数之和。<br>设$P(n)$是命题:$n$可以写成素数之积。<br>基础步骤: $P(2)$为真，因为$2$可以写成一个素数之积，即它自身。<br>归纳步骤: 假定对所有满足$j\le k$的正整数$j$来说$P(j)$为真。要完成归纳步骤就必须证明在这个假定下$P(k+1)$为真。<br>有两种情况要考虑，即$k+1$是素数和$k+1$是合数。$k+1$是素数，则立即看出$P(k+1)$为真。否则，$k+1$是合数并且可以写成满足$2\le a\le b&lt;k+1$的两个整数$a$和$b$之积。根据归纳假设，$a$和$b$都可以写成素数之积。因此，若$k+1$是合数，则它可以写成素数之积。</p>
+        <h2 id="强归纳法"><a href="# 强归纳法" class="headerlink" title="强归纳法"></a>强归纳法 </h2><p> 要证明对所有正整数 $n$ 而言，都有 $P(n)$ 为真，其中 $P(n)$ 为命题函数，我们要完成如下两个步骤:<br>基础步骤: 证明 $P(1)$ 为真。<br>归纳步骤: 要证明对所有正整数 $k$ 来说，蕴含式 $[P(1)\land P(2)\land\dots\land P(k)]\rightarrow P(k+1)$</p>
+<h3 id="强归纳法 -or- 数学归纳法"><a href="# 强归纳法 -or- 数学归纳法" class="headerlink" title="强归纳法 or 数学归纳法"></a>强归纳法 or 数学归纳法 </h3><p> 一般情况下，我们应当尽量限制数学归纳法的使用。除非已经看出数学归纳法的归纳步骤证明是明显成立的。</p>
+<h3 id="强归纳法示例"><a href="# 强归纳法示例" class="headerlink" title="强归纳法示例"></a>强归纳法示例 </h3><h4 id="算术基本定理证明"><a href="# 算术基本定理证明" class="headerlink" title="算术基本定理证明"></a> 算术基本定理证明 </h4><p> 证明: 若 $n$ 是大于 $1$ 的整数，则 $n$ 可以写成素数之和。<br>设 $P(n)$ 是命题:$n$ 可以写成素数之积。<br>基础步骤: $P(2)$ 为真，因为 $2$ 可以写成一个素数之积，即它自身。<br>归纳步骤: 假定对所有满足 $j\le k$ 的正整数 $j$ 来说 $P(j)$ 为真。要完成归纳步骤就必须证明在这个假定下 $P(k+1)$ 为真。<br>有两种情况要考虑，即 $k+1$ 是素数和 $k+1$ 是合数。$k+1$ 是素数，则立即看出 $P(k+1)$ 为真。否则，$k+1$ 是合数并且可以写成满足 $2\le a\le b&lt;k+1$ 的两个整数 $a$ 和 $b$ 之积。根据归纳假设，$a$ 和 $b$ 都可以写成素数之积。因此，若 $k+1$ 是合数，则它可以写成素数之积。</p>
 
       
     </div>
@@ -472,7 +472,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -489,7 +489,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -545,7 +545,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#强归纳法"><span class="nav-number">1.</span> <span class="nav-text">强归纳法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#强归纳法-or-数学归纳法"><span class="nav-number">1.1.</span> <span class="nav-text">强归纳法 or 数学归纳法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强归纳法示例"><span class="nav-number">1.2.</span> <span class="nav-text">强归纳法示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术基本定理证明"><span class="nav-number">1.2.1.</span> <span class="nav-text">算术基本定理证明</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#强归纳法"><span class="nav-number">1.</span> <span class="nav-text">强归纳法 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#强归纳法 -or- 数学归纳法"><span class="nav-number">1.1.</span> <span class="nav-text">强归纳法 or 数学归纳法 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强归纳法示例"><span class="nav-number">1.2.</span> <span class="nav-text">强归纳法示例 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术基本定理证明"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 算术基本定理证明 </span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

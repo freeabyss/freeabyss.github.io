@@ -276,8 +276,291 @@
             
               
                 
+                <a class="post-title-link" href="/Java/Quart表达式详解.html" itemprop="url">
+                  QuartZ Cron 表达式详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-29T00:29:57+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Java/Quart表达式详解.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Java/Quart表达式详解.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Java/Quart表达式详解.html" class="leancloud_visitors" data-flag-title="QuartZ Cron 表达式详解">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Cron 表达式"><a href="#Cron 表达式" class="headerlink" title="Cron 表达式"></a>Cron 表达式</h2><blockquote>
+<p>格式：{seconds} {minutes} {hours} {day of month} {month} {day of week} [year]<br>year 是可选的</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">允许的值</th>
+<th style="text-align:left">允许的字符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">秒</td>
+<td style="text-align:center">0-59</td>
+<td style="text-align:left">, - * /</td>
+</tr>
+<tr>
+<td style="text-align:center">分</td>
+<td style="text-align:center">0-59</td>
+<td style="text-align:left">, - * /</td>
+</tr>
+<tr>
+<td style="text-align:center">小时</td>
+<td style="text-align:center">0-23</td>
+<td style="text-align:left">, - * /</td>
+</tr>
+<tr>
+<td style="text-align:center">日</td>
+<td style="text-align:center">1-32</td>
+<td style="text-align:left">, - * / ? L W C</td>
+</tr>
+<tr>
+<td style="text-align:center">月</td>
+<td style="text-align:center">1-12 or JAN-DEC</td>
+<td style="text-align:left">, - * /</td>
+</tr>
+<tr>
+<td style="text-align:center">周</td>
+<td style="text-align:center">1-7 or SUN-SAT</td>
+<td style="text-align:left">, - * / ? L #</td>
+</tr>
+<tr>
+<td style="text-align:center">年</td>
+<td style="text-align:center">empty,1970-2099</td>
+<td style="text-align:left">, - * /</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>day of month : 可以用数字 1-31 中的任一一个值，但要注意一些特别的月份。<br>day of week : 可以用 1-7 数字表示，1 代表周日，或者用字符: SUN,MON,TUE,WED,THU,FRI,SAT。<br>month: 可以用 1-12，或者字符: JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC。 </p>
+</blockquote>
+<h2 id="字符解释"><a href="# 字符解释" class="headerlink" title="字符解释"></a>字符解释</h2><blockquote>
+<p>* : 匹配该域的任意值，如 * 用在分所在的域，表示每分钟都会触发事件。<br>?  : 该字符仅用在 <code>day of month</code> 与<code>day of week</code>两个域中，并且两个域的? 互斥，当其中一个被指定值后，另外一个为避免冲突需要将值设为?。<br>- : 匹配一个特定范围值，例如，10-12，表示 10、11、12 的时候触发事件。<br>,  : 匹配多个值，例如，10,12,13，表示 10、12、13 的时候触发事件。<br>/  : 左边表示开始触发时间，右边是每隔固定时间触发一次事件，如 <code>senconds</code> 的值为’5/15’ 表示 5 秒、20 秒、35 秒、50 秒的时候都触发一次事件。<br>L  : 表示最后的意思。   </p>
+<ul>
+<li>在 <code>day of month</code> 表示每月最后一天；</li>
+<li>在 <code>day of week</code> 表示周日；</li>
+<li>如果前面加上数字，表示本月最后一天，例如’6L’表示每月最后一个周五；</li>
+<li>还可以指定从最后一天到开始时间，例如，’L-2’表示每月的第 2 天到最后一天。</li>
+</ul>
+<p>W  : 表示工作日，例如，值为’15W’，表示在最近的工作日触发，如果 15 日是周六那么将在周五触发，如果是周日将在周一触发，如果是周一到周五则当天触发。<br>   <strong> <em>‘L’可以与’W’结合使用，’LW’表示当月最后一个工作日</em> </strong><br>#  : 用来表示每个月的第几个星期几，例如，’6#3’表示某个月的第 3 个星期五。  </p>
+</blockquote>
+<h2 id="示例"><a href="# 示例" class="headerlink" title="示例"></a>示例</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">表达式</th>
+<th style="text-align:left">意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0 0 12 <em> </em> ?</td>
+<td style="text-align:left">Fire at 12pm (noon) every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 ? <em> </em></td>
+<td style="text-align:left">Fire at 10:15am every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 <em> </em> ?</td>
+<td style="text-align:left">Fire at 10:15am every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 <em> </em> ? *</td>
+<td style="text-align:left">Fire at 10:15am every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 <em> </em> ? 2005</td>
+<td style="text-align:left">Fire at 10:15am every day during the year 2005</td>
+</tr>
+<tr>
+<td style="text-align:left">0 <em> 14 </em> * ?</td>
+<td style="text-align:left">Fire every minute starting at 2pm and ending at 2:59pm, every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 0/5 14 <em> </em> ?</td>
+<td style="text-align:left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 0/5 14,18 <em> </em> ?</td>
+<td style="text-align:left">Fire every 5 minutes starting at 2pm and ending at 2:55pm, AND fire every 5 minutes starting at 6pm and ending at 6:55pm, every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 0-5 14 <em> </em> ?</td>
+<td style="text-align:left">Fire every minute starting at 2pm and ending at 2:05pm, every day</td>
+</tr>
+<tr>
+<td style="text-align:left">0 10,44 14 ? 3 WED</td>
+<td style="text-align:left">Fire at 2:10pm and at 2:44pm every Wednesday in the month of March.</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 ? * MON-FRI</td>
+<td style="text-align:left">Fire at 10:15am every Monday, Tuesday, Wednesday, Thursday and Friday</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 15 * ?</td>
+<td style="text-align:left">Fire at 10:15am on the 15th day of every month</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 L * ?</td>
+<td style="text-align:left">Fire at 10:15am on the last day of every month</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 L-2 * ?</td>
+<td style="text-align:left">Fire at 10:15am on the 2nd-to-last last day of every month</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 ? * 6L</td>
+<td style="text-align:left">Fire at 10:15am on the last Friday of every month</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 ? * 6L</td>
+<td style="text-align:left">Fire at 10:15am on the last Friday of every month</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 ? * 6L 2002-2005</td>
+<td style="text-align:left">Fire at 10:15am on every last friday of every month during the years 2002, 2003, 2004 and 2005</td>
+</tr>
+<tr>
+<td style="text-align:left">0 15 10 ? * 6#3</td>
+<td style="text-align:left">Fire at 10:15am on the third Friday of every month</td>
+</tr>
+<tr>
+<td style="text-align:left">0 0 12 1/5 * ?</td>
+<td style="text-align:left">Fire at 12pm (noon) every 5 days every month, starting on the first day of the month.</td>
+</tr>
+<tr>
+<td style="text-align:left">0 11 11 11 11 ?</td>
+<td style="text-align:left">Fire every November 11th at 11:11am.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考资料"><a href="# 参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<p><a href="http://quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger" target="_blank" rel="external">官方说明</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/IDEA/在IDEA上远程调试Java-Web项目.html" itemprop="url">
-                  在IDEA上远程调试Java Web项目
+                  在 IDEA 上远程调试 Java Web 项目
                 </a>
               
             
@@ -331,7 +614,7 @@
 
           
           
-             <span id="/IDEA/在IDEA上远程调试Java-Web项目.html" class="leancloud_visitors" data-flag-title="在IDEA上远程调试Java Web项目">
+             <span id="/IDEA/在IDEA上远程调试Java-Web项目.html" class="leancloud_visitors" data-flag-title="在 IDEA 上远程调试 Java Web 项目">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -355,14 +638,14 @@
       
         
           
-            <p>在catalina.bat文件的，最上方添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n</div></pre></td></tr></table></figure></p>
+            <p>在 catalina.bat 文件的，最上方添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n</div></pre></td></tr></table></figure></p>
 <ul>
 <li>-Xdebug：启用调试特性</li>
-<li>-Xrunjdwp：启用JDWP实现，包含以下选项：<ul>
-<li>transport=dt_socket：JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输</li>
-<li>address=9999：JVM在9999端口上监听请求</li>
-<li>server=y：y表示启动的JVM是被调试者，n表示启动的JVM是调试器</li>
-<li>suspend=y：y表示启动的JVM会暂停等待，直到调试器连接上（如果从tomcat一开始就进行调试，那么必须设置suspend=y<br>接下来再IDEA上新增一个Remote Tomcat<br><img src="../images/java_idea_1.png" alt=""><br>Host地址不用加Http<br>Port：为tomcat的端口<br><img src="../images/java_idea_2.png" alt=""><br>这里的port为调试端口，1中所设置的端口一直</li>
+<li>-Xrunjdwp：启用 JDWP 实现，包含以下选项：<ul>
+<li>transport=dt_socket：JPDA front-end 和 back-end 之间的传输方法。dt_socket 表示使用套接字传输</li>
+<li>address=9999：JVM 在 9999 端口上监听请求</li>
+<li>server=y：y 表示启动的 JVM 是被调试者，n 表示启动的 JVM 是调试器</li>
+<li>suspend=y：y 表示启动的 JVM 会暂停等待，直到调试器连接上（如果从 tomcat 一开始就进行调试，那么必须设置 suspend=y<br>接下来再 IDEA 上新增一个 Remote Tomcat<br><img src="../images/java_idea_1.png" alt=""><br>Host 地址不用加 Http<br>Port：为 tomcat 的端口 <br><img src="../images/java_idea_2.png"alt=""><br> 这里的 port 为调试端口，1 中所设置的端口一直</li>
 </ul>
 </li>
 </ul>
@@ -416,7 +699,7 @@
               
                 
                 <a class="post-title-link" href="/Python/Python语法预览.html" itemprop="url">
-                  Python快速预览
+                  Python 快速预览
                 </a>
               
             
@@ -470,7 +753,7 @@
 
           
           
-             <span id="/Python/Python语法预览.html" class="leancloud_visitors" data-flag-title="Python快速预览">
+             <span id="/Python/Python语法预览.html" class="leancloud_visitors" data-flag-title="Python 快速预览">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -494,77 +777,77 @@
       
         
           
-            <h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><p>python语言是动态语言</p>
-<h2 id="字符串和编码"><a href="#字符串和编码" class="headerlink" title="字符串和编码"></a>字符串和编码</h2><ul>
-<li>UTF-8是可变长编码，用来转化Unicode编码，UTF-8一个Unicode字符根据不同的数字大小编码成1-6个字节。</li>
-<li>在python中，Unicode表示的字符串用u’…’表示.</li>
-<li>将Unicode字符转化为UTF-8字符用<code>encode(&#39;utf-8&#39;)</code>:</li>
+            <h2 id="数据类型和变量"><a href="# 数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><p>python 语言是动态语言</p>
+<h2 id="字符串和编码"><a href="# 字符串和编码" class="headerlink" title="字符串和编码"></a>字符串和编码</h2><ul>
+<li>UTF-8 是可变长编码，用来转化 Unicode 编码，UTF-8 一个 Unicode 字符根据不同的数字大小编码成 1-6 个字节。</li>
+<li>在 python 中，Unicode 表示的字符串用 u’…’表示.</li>
+<li>将 Unicode 字符转化为 UTF-8 字符用<code>encode(&#39;utf-8&#39;)</code>:</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">u'ABC'</span>.encode(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
 <ul>
-<li>将UTF-8字符转化为Unicode字符用<code>decode(&#39;utf&#39;)</code>:</li>
+<li>将 UTF-8 字符转化为 Unicode 字符用<code>decode(&#39;utf&#39;)</code>:</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'abc'</span>.decode(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
 <ul>
-<li>让python解释器按照UTF-8编码读取文件,需要在文件开头写上如下:<br><code>#-*- coding:utf-8 -*-</code></li>
-<li>python的格式化方法与C 语言一致,用%实现,如:</li>
+<li>让 python 解释器按照 UTF-8 编码读取文件, 需要在文件开头写上如下:<br><code>#-*- coding:utf-8 -*-</code></li>
+<li>python 的格式化方法与 C 语言一致, 用 % 实现, 如:</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">'hello, %s'</span> %<span class="string">'world'</span></div><div class="line">hello, world</div><div class="line"><span class="string">'Hi, %s, you have $%d.'</span> %(<span class="string">'Michael'</span>, <span class="number">10000</span>)</div><div class="line">Hi, Michael, you have $<span class="number">1000.</span></div></pre></td></tr></table></figure>
 <ul>
-<li>有几个%占位符,后面就跟多少个变量,顺序要对应好,如果只有一个%,可省略括号.<ul>
-<li>常见的占位符有,%d整数, %f浮点数,%s字符串,%x十六进制数.</li>
-<li>格式化整数和浮点数还可以指定是否补0和整数与小数的位数.</li>
-<li>在格式化字符串中,需要转义%时,可用%%表示.</li>
+<li>有几个 % 占位符, 后面就跟多少个变量, 顺序要对应好, 如果只有一个 %, 可省略括号.<ul>
+<li>常见的占位符有,%d 整数, %f 浮点数,%s 字符串,%x 十六进制数.</li>
+<li>格式化整数和浮点数还可以指定是否补 0 和整数与小数的位数.</li>
+<li>在格式化字符串中, 需要转义 % 时, 可用 %% 表示.</li>
 </ul>
 </li>
-<li>在python 3.x中,’xxxx’和u’xxxx’ 统一成Unicode编码.</li>
+<li>在 python 3.x 中,’xxxx’和 u’xxxx’ 统一成 Unicode 编码.</li>
 </ul>
-<h2 id="使用list和tuple"><a href="#使用list和tuple" class="headerlink" title="使用list和tuple"></a>使用list和tuple</h2><h3 id="list的使用"><a href="#list的使用" class="headerlink" title="list的使用"></a>list的使用</h3><p>list里面的元素类型可以不同，也可以添加另外一个list   </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">classmates = [<span class="string">'Box'</span>, <span class="string">'Ads'</span>] <span class="comment">#创建list变量</span></div><div class="line">classmates[<span class="number">0</span>] <span class="comment">#访问list中的元素</span></div><div class="line">output:<span class="string">'Box'</span></div><div class="line"><span class="comment">#访问list最后一个元素</span></div><div class="line">classmates[<span class="number">-1</span>] </div><div class="line">output: <span class="string">'Ads'</span></div><div class="line"><span class="comment">#添加元素到末尾</span></div><div class="line">classmates.append(<span class="string">'and'</span>)</div><div class="line"><span class="comment">#插入元素到指定位置</span></div><div class="line">classmates.insert(<span class="number">1</span>, <span class="string">'sdd'</span>)</div><div class="line"><span class="comment">#删除末尾的元素</span></div><div class="line">classmates.pop()</div><div class="line"><span class="comment">#删除指定位置的元素</span></div><div class="line">classmates.pop(i)</div><div class="line"><span class="comment">#获得list的长度</span></div><div class="line">len(classmates)</div></pre></td></tr></table></figure>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>tuple类似与list，只是tuple一旦初始化就不可以修改。tuple没有append和insert方法，  获得元素的方法与list一样。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建一个tuple</span></div><div class="line">classmates= (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="comment">#需要注意的是，当创建只有一个元素的tuple时，需要这样作来消除歧义：</span></div><div class="line">classmates = (<span class="number">1</span>,)</div></pre></td></tr></table></figure>
-<p>tuple可以包含list元素，tuple所包含的list元素中的元素内容可以更改。</p>
-<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>dict类似与其他编程语言中的map</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建一个dict</span></div><div class="line">d=&#123;<span class="string">'misc'</span>:<span class="number">93</span>,<span class="string">'sds'</span>:<span class="number">82</span>&#125;</div><div class="line"><span class="comment">#还可以通过key来放入value：</span></div><div class="line">d[<span class="string">'misc'</span>] = <span class="number">23</span></div><div class="line"><span class="comment">#判断key是否存在</span></div><div class="line"><span class="string">'sidh'</span> <span class="keyword">in</span> d</div><div class="line"><span class="comment">#当key不存在时，用get方法返回的是None，或者自己指定的返回值</span></div><div class="line">d.get(<span class="string">'sd'</span>, <span class="number">-1</span>)</div></pre></td></tr></table></figure>
-<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set类似与dict，但是只有key，没有对应的value，在set没有重复的key，创建set需要提供一个list</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">s= set([<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line"><span class="comment">#在set重复的元素会自动被过滤，可以通过add(key)来添加元素，但是添加重复的元素没有效果。</span></div><div class="line"><span class="comment">#可以通过remove(key)来移除元素。</span></div><div class="line"><span class="comment"># set可以作数学意义上的交集、并集等操作</span></div><div class="line">s1 = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line">s2 = set([<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line">s1 &amp; s2</div><div class="line">s1 | s2</div><div class="line">```      </div><div class="line">set和dict不可放入可变对象，另外对于不可变对象，调用自身任何方法都不会改变自己,而是会创造一个新的对象并返回。  </div><div class="line"></div><div class="line"><span class="comment">## 条件判断和循环</span></div><div class="line"><span class="comment">### if表达式格式</span></div><div class="line"></div><div class="line">```python</div><div class="line"><span class="keyword">if</span> &lt;条件判断<span class="number">1</span>&gt;:</div><div class="line">    &lt;执行<span class="number">1</span>&gt;</div><div class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">2</span>&gt;:</div><div class="line">    &lt;执行<span class="number">2</span>&gt;</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    &lt;执行<span class="number">3</span>&gt;</div></pre></td></tr></table></figure>
-<h3 id="for循环格式"><a href="#for循环格式" class="headerlink" title="for循环格式"></a>for循环格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">4</span>):  <span class="comment">#range()可以生成整数序列</span></div></pre></td></tr></table></figure>
-<h3 id="while-循环格式"><a href="#while-循环格式" class="headerlink" title="while 循环格式"></a>while 循环格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> &lt;条件判断&gt; :</div></pre></td></tr></table></figure>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>python的函数相当与一个对象的引用。因此，可以将函数赋予一个变量，相当于给函数起了一个       别名。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#函数定义</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">function_name</span><span class="params">(parameter1, parameter2...)</span> :</span></div><div class="line">    &lt;函数体&gt;</div></pre></td></tr></table></figure>
-<p>没有写return的函数会返回None。定义一个空函数可以用pass语句</p>
+<h2 id="使用 list 和 tuple"><a href="# 使用 list 和 tuple" class="headerlink" title="使用 list 和 tuple"></a>使用 list 和 tuple</h2><h3 id="list 的使用"><a href="#list 的使用" class="headerlink" title="list 的使用"></a>list 的使用</h3><p>list 里面的元素类型可以不同，也可以添加另外一个 list   </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">classmates = [<span class="string">'Box'</span>, <span class="string">'Ads'</span>] <span class="comment"># 创建 list 变量</span></div><div class="line">classmates[<span class="number">0</span>] <span class="comment"># 访问 list 中的元素</span></div><div class="line">output:<span class="string">'Box'</span></div><div class="line"><span class="comment"># 访问 list 最后一个元素</span></div><div class="line">classmates[<span class="number">-1</span>] </div><div class="line">output: <span class="string">'Ads'</span></div><div class="line"><span class="comment"># 添加元素到末尾</span></div><div class="line">classmates.append(<span class="string">'and'</span>)</div><div class="line"><span class="comment"># 插入元素到指定位置</span></div><div class="line">classmates.insert(<span class="number">1</span>, <span class="string">'sdd'</span>)</div><div class="line"><span class="comment"># 删除末尾的元素</span></div><div class="line">classmates.pop()</div><div class="line"><span class="comment"># 删除指定位置的元素</span></div><div class="line">classmates.pop(i)</div><div class="line"><span class="comment"># 获得 list 的长度</span></div><div class="line">len(classmates)</div></pre></td></tr></table></figure>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>tuple 类似与 list，只是 tuple 一旦初始化就不可以修改。tuple 没有 append 和 insert 方法，  获得元素的方法与 list 一样。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建一个 tuple</span></div><div class="line">classmates= (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="comment"># 需要注意的是，当创建只有一个元素的 tuple 时，需要这样作来消除歧义：</span></div><div class="line">classmates = (<span class="number">1</span>,)</div></pre></td></tr></table></figure>
+<p>tuple 可以包含 list 元素，tuple 所包含的 list 元素中的元素内容可以更改。</p>
+<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>dict 类似与其他编程语言中的 map</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建一个 dict</span></div><div class="line">d=&#123;<span class="string">'misc'</span>:<span class="number">93</span>,<span class="string">'sds'</span>:<span class="number">82</span>&#125;</div><div class="line"><span class="comment"># 还可以通过 key 来放入 value：</span></div><div class="line">d[<span class="string">'misc'</span>] = <span class="number">23</span></div><div class="line"><span class="comment"># 判断 key 是否存在</span></div><div class="line"><span class="string">'sidh'</span> <span class="keyword">in</span> d</div><div class="line"><span class="comment"># 当 key 不存在时，用 get 方法返回的是 None，或者自己指定的返回值</span></div><div class="line">d.get(<span class="string">'sd'</span>, <span class="number">-1</span>)</div></pre></td></tr></table></figure>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set 类似与 dict，但是只有 key，没有对应的 value，在 set 没有重复的 key，创建 set 需要提供一个 list</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">s= set([<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line"><span class="comment"># 在 set 重复的元素会自动被过滤，可以通过 add(key)来添加元素，但是添加重复的元素没有效果。</span></div><div class="line"><span class="comment"># 可以通过 remove(key)来移除元素。</span></div><div class="line"><span class="comment"># set 可以作数学意义上的交集、并集等操作</span></div><div class="line">s1 = set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line">s2 = set([<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line">s1 &amp; s2</div><div class="line">s1 | s2</div><div class="line">```      </div><div class="line">set 和 dict 不可放入可变对象，另外对于不可变对象，调用自身任何方法都不会改变自己, 而是会创造一个新的对象并返回。  </div><div class="line"></div><div class="line"><span class="comment">## 条件判断和循环</span></div><div class="line"><span class="comment">### if 表达式格式</span></div><div class="line"></div><div class="line">```python</div><div class="line"><span class="keyword">if</span> &lt; 条件判断<span class="number">1</span>&gt;:</div><div class="line">    &lt; 执行<span class="number">1</span>&gt;</div><div class="line"><span class="keyword">elif</span> &lt; 条件判断<span class="number">2</span>&gt;:</div><div class="line">    &lt; 执行<span class="number">2</span>&gt;</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    &lt; 执行<span class="number">3</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="for 循环格式"><a href="#for 循环格式" class="headerlink" title="for 循环格式"></a>for 循环格式 </h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">4</span>):  <span class="comment">#range() 可以生成整数序列</span></div></pre></td></tr></table></figure>
+<h3 id="while- 循环格式"><a href="#while- 循环格式" class="headerlink" title="while 循环格式"></a>while 循环格式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> &lt; 条件判断 &gt; :</div></pre></td></tr></table></figure>
+<h2 id="函数"><a href="# 函数" class="headerlink" title="函数"></a>函数</h2><p>python 的函数相当与一个对象的引用。因此，可以将函数赋予一个变量，相当于给函数起了一个       别名。  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 函数定义</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">function_name</span><span class="params">(parameter1, parameter2...)</span> :</span></div><div class="line">    &lt; 函数体 &gt;</div></pre></td></tr></table></figure>
+<p>没有写 return 的函数会返回 None。定义一个空函数可以用 pass 语句</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">nothing</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
-<p>pass语句什么都不作，可以用来当占位符使用。   函数不会检查参数类型，我们可以自己加上类型检查，使用<code>isinstance</code>函数实现</p>
+<p>pass 语句什么都不作，可以用来当占位符使用。   函数不会检查参数类型，我们可以自己加上类型检查，使用 <code>isinstance</code> 函数实现</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_abs</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> isintance(x,(int,float)):</div><div class="line">        <span class="keyword">raise</span> TypeError(<span class="string">'bad operand type'</span>)</div><div class="line">    <span class="keyword">if</span> x &gt;=<span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> x</div><div class="line">    <span class="keyword">else</span> :</div><div class="line">        <span class="keyword">return</span> -x</div></pre></td></tr></table></figure>
-<p>python函数可以返回多个返回值：</p>
+<p>python 函数可以返回多个返回值：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x,y = move(x,y)</div></pre></td></tr></table></figure>
-<p>实际上，返回的只是一个tuple，只是写法上简化了。</p>
-<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">call_city</span><span class="params">(x,y, city=<span class="string">'beijing'</span>,age=<span class="number">12</span>)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
-<p>默认参数原则：默认值写在最后面,也可以不按顺序提供部分默认参数，当需要指名参数名：</p>
+<p>实际上，返回的只是一个 tuple，只是写法上简化了。</p>
+<h3 id="默认参数"><a href="# 默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">call_city</span><span class="params">(x,y, city=<span class="string">'beijing'</span>,age=<span class="number">12</span>)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
+<p>默认参数原则：默认值写在最后面, 也可以不按顺序提供部分默认参数，当需要指名参数名：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call_city(x,y, age=<span class="number">12</span>)</div></pre></td></tr></table></figure>
 <p>默认参数，最好指向不变对象。</p>
-<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>可变参数与定义list参数的区别就是在参数前面加个*，例如：</p>
+<h3 id="可变参数"><a href="# 可变参数" class="headerlink" title="可变参数"></a>可变参数 </h3><p> 可变参数与定义 list 参数的区别就是在参数前面加个 *，例如：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc_sum</span><span class="params">(*numbers)</span>:</span></div><div class="line">    sum =<span class="number">0</span></div><div class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> numbers:</div><div class="line">           sum += n</div><div class="line">    <span class="keyword">return</span> sum</div></pre></td></tr></table></figure>
-<p>对于函数体内部来说，<code>numbers</code>接受的是一个<code>tuple</code>。   如果有一个list或者tuple变量，要调用可变参数的话，可以在变量前加*，把list和tuple转化为可变参数</p>
-<h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><p>关键字参数会在函数内部自动组装成一个dict。示例</p>
+<p>对于函数体内部来说，<code>numbers</code>接受的是一个<code>tuple</code>。   如果有一个 list 或者 tuple 变量，要调用可变参数的话，可以在变量前加 *，把 list 和 tuple 转化为可变参数</p>
+<h3 id="关键字参数"><a href="# 关键字参数" class="headerlink" title="关键字参数"></a>关键字参数 </h3><p> 关键字参数会在函数内部自动组装成一个 dict。示例</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">def person(name, age, **kw)</div><div class="line">    print 'name:',name, 'age:',age,'other:', kw</div><div class="line">person('Michael', 30,city='beijing')</div></pre></td></tr></table></figure>
 <p>在调用函数时，可以只传入必选参数，也可以传入任意数量的关键字参数。</p>
-<h2 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h2><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>切片操作可以轻松的切成一段数列,例如<code>L</code>是一个<code>list</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 取前3个元素</span></div><div class="line">L[<span class="number">0</span>:<span class="number">3</span>]</div><div class="line"><span class="comment">#或</span></div><div class="line">L[:<span class="number">3</span>]</div><div class="line"><span class="comment">#取后10个元素</span></div><div class="line">L[<span class="number">-10</span>:]</div><div class="line"><span class="comment">#前十个数,每个2个取一个</span></div><div class="line">L[:<span class="number">10</span>:<span class="number">2</span>]</div><div class="line"><span class="comment">#所有数,每隔5个取一个</span></div><div class="line">L[::<span class="number">5</span>]</div><div class="line"><span class="comment">#字符串同样支持切片操作.</span></div></pre></td></tr></table></figure>
-<h3 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h3><p>dict可以同时迭代key和value:</p>
+<h2 id="高级特性"><a href="# 高级特性" class="headerlink" title="高级特性"></a>高级特性 </h2><h3 id="切片"><a href="# 切片" class="headerlink" title="切片"></a> 切片 </h3><p> 切片操作可以轻松的切成一段数列, 例如 <code>L</code> 是一个<code>list</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 取前 3 个元素</span></div><div class="line">L[<span class="number">0</span>:<span class="number">3</span>]</div><div class="line"><span class="comment"># 或</span></div><div class="line">L[:<span class="number">3</span>]</div><div class="line"><span class="comment"># 取后 10 个元素</span></div><div class="line">L[<span class="number">-10</span>:]</div><div class="line"><span class="comment"># 前十个数, 每个 2 个取一个</span></div><div class="line">L[:<span class="number">10</span>:<span class="number">2</span>]</div><div class="line"><span class="comment"># 所有数, 每隔 5 个取一个</span></div><div class="line">L[::<span class="number">5</span>]</div><div class="line"><span class="comment"># 字符串同样支持切片操作.</span></div></pre></td></tr></table></figure>
+<h3 id="迭代"><a href="# 迭代" class="headerlink" title="迭代"></a>迭代</h3><p>dict 可以同时迭代 key 和 value:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems()</div></pre></td></tr></table></figure>
-<p>判断一个对象是否可以迭代,可以用collections模块里的iterable类型:</p>
+<p>判断一个对象是否可以迭代, 可以用 collections 模块里的 iterable 类型:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">isinstance(<span class="string">'abd'</span>, Iterable)</div><div class="line">output: <span class="keyword">True</span></div></pre></td></tr></table></figure>
-<p>同时迭代索引和元素<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i, value <span class="keyword">in</span> enumerate(list):  </div><div class="line">```           </div><div class="line"><span class="comment">### 列表生成式</span></div><div class="line">列表生成式可以看成对<span class="keyword">for</span>循环语句的简化.例如</div><div class="line"></div><div class="line">```python</div><div class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</div><div class="line">output:   [<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>,<span class="number">36</span>,<span class="number">4964</span>,<span class="number">81</span>,<span class="number">100</span>]</div><div class="line"><span class="comment">#将生成的元素x*x放在前面,后面跟for循环.for循环后还可以加上if判断</span></div><div class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>) <span class="keyword">if</span> x%<span class="number">2</span>==<span class="number">0</span>]</div><div class="line">output:[<span class="number">4</span>,<span class="number">16</span>,<span class="number">36</span>,<span class="number">64</span>,<span class="number">100</span>]</div><div class="line"><span class="comment">#还可以使用两层循环          </span></div><div class="line">[m+n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'XYZ'</span>]</div><div class="line">output:[<span class="string">'AX'</span>,<span class="string">'AY'</span>,<span class="string">'AZ'</span>,<span class="string">'BX'</span>,<span class="string">'BY'</span>,<span class="string">'BZ'</span>,<span class="string">'CX'</span>,<span class="string">'CY'</span>,<span class="string">'CZ'</span>]</div></pre></td></tr></table></figure></p>
-<h3 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h3><p>生成器只存储算法,需要时才会将后续的元素计算出来,从而节省大量的空间.将上述列表生成式的[]改成()就创建了一个<code>generator</code>.</p>
+<p>同时迭代索引和元素 <br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i, value <span class="keyword">in</span> enumerate(list):  </div><div class="line">```           </div><div class="line"><span class="comment">### 列表生成式</span></div><div class="line"> 列表生成式可以看成对 <span class="keyword">for</span> 循环语句的简化. 例如</div><div class="line"></div><div class="line">```python</div><div class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</div><div class="line">output:   [<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span>,<span class="number">36</span>,<span class="number">4964</span>,<span class="number">81</span>,<span class="number">100</span>]</div><div class="line"><span class="comment"># 将生成的元素 x*x 放在前面, 后面跟 for 循环.for 循环后还可以加上 if 判断</span></div><div class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>) <span class="keyword">if</span> x%<span class="number">2</span>==<span class="number">0</span>]</div><div class="line">output:[<span class="number">4</span>,<span class="number">16</span>,<span class="number">36</span>,<span class="number">64</span>,<span class="number">100</span>]</div><div class="line"><span class="comment"># 还可以使用两层循环          </span></div><div class="line">[m+n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'XYZ'</span>]</div><div class="line">output:[<span class="string">'AX'</span>,<span class="string">'AY'</span>,<span class="string">'AZ'</span>,<span class="string">'BX'</span>,<span class="string">'BY'</span>,<span class="string">'BZ'</span>,<span class="string">'CX'</span>,<span class="string">'CY'</span>,<span class="string">'CZ'</span>]</div></pre></td></tr></table></figure></p>
+<h3 id="生成器"><a href="# 生成器" class="headerlink" title="生成器"></a>生成器 </h3><p> 生成器只存储算法, 需要时才会将后续的元素计算出来, 从而节省大量的空间. 将上述列表生成式的 [] 改成 () 就创建了一个<code>generator</code>.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">g = (x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>))</div></pre></td></tr></table></figure>
-<p>创建一个<code>generator</code>后,可以通过<code>next()</code>来打印里面的元素,或者使用<code>for</code>循环迭代.还可以使用<code>yield</code>关键字,将函数定义成<code>generator</code>,例如:    </p>
+<p>创建一个 <code>generator</code> 后, 可以通过 <code>next()</code> 来打印里面的元素, 或者使用 <code>for</code> 循环迭代. 还可以使用 <code>yield</code> 关键字, 将函数定义成<code>generator</code>, 例如:    </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">odd</span><span class="params">()</span>:</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">print</span> <span class="string">'step1'</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">yield</span> <span class="number">1</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">print</span> <span class="string">'step2'</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">yield</span> <span class="number">2</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">print</span> <span class="string">'step3'</span></div><div class="line"><span class="meta">... </span>   <span class="keyword">yield</span> <span class="number">3</span></div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o = odd()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o.next()</div><div class="line">step1</div><div class="line"><span class="number">1</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o.next()</div><div class="line">step2</div><div class="line"><span class="number">2</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>o.next()</div><div class="line">step3</div><div class="line"><span class="number">3</span></div></pre></td></tr></table></figure>
-<p>每当调用<code>next()</code>的时候,遇到<code>yield</code>语句返回,再次执行时,会从上次返回的<code>yield</code>语句处继续执行.</p>
-<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><p>所谓高阶函数可以理解为,可以接受另外一个函数作为参数的函数,还可将函数作为返回值.</p>
-<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">lambda</span> x: x*x</div></pre></td></tr></table></figure>
-<p>lambda表示匿名函数,冒号前面的x表示参数,匿名函数只能有一个表达式.返回值就是该表达式的结果.</p>
-<h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><p>函数也是个对象,赋给变量,函数还有个<strong>name</strong>属性,可以获得函数名称.</p>
+<p>每当调用 <code>next()</code> 的时候, 遇到 <code>yield</code> 语句返回, 再次执行时, 会从上次返回的 <code>yield</code> 语句处继续执行.</p>
+<h2 id="函数式编程"><a href="# 函数式编程" class="headerlink" title="函数式编程"></a>函数式编程 </h2><p> 所谓高阶函数可以理解为, 可以接受另外一个函数作为参数的函数, 还可将函数作为返回值.</p>
+<h3 id="匿名函数"><a href="# 匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">lambda</span> x: x*x</div></pre></td></tr></table></figure>
+<p>lambda 表示匿名函数, 冒号前面的 x 表示参数, 匿名函数只能有一个表达式. 返回值就是该表达式的结果.</p>
+<h3 id="装饰器"><a href="# 装饰器" class="headerlink" title="装饰器"></a>装饰器 </h3><p> 函数也是个对象, 赋给变量, 函数还有个 <strong>name</strong> 属性, 可以获得函数名称.</p>
 
           
         
@@ -638,7 +921,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -655,7 +938,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

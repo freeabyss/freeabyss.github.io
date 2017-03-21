@@ -92,22 +92,22 @@
 
 
 
-<meta name="description" content="排列集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$
+<meta name="description" content="排列  集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中 $r$ 个元素的有序安排称为一个 $r$ 排列。一个 $n$ 元集的 $r$ 排列数记为 $P(n,r)$。我们可以使用乘积法则求出 $P(n,r)$。具有 $n$ 个不同元素的集合的 $r$ 排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$
 
-只要是$n$非负，就有$P(n,0)=1$。">
+只要是 $n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散数学学习笔记 排列和组合 19">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-19-排列和组合.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="排列集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$
+<meta property="og:description" content="排列  集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中 $r$ 个元素的有序安排称为一个 $r$ 排列。一个 $n$ 元集的 $r$ 排列数记为 $P(n,r)$。我们可以使用乘积法则求出 $P(n,r)$。具有 $n$ 个不同元素的集合的 $r$ 排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$
 
-只要是$n$非负，就有$P(n,0)=1$。">
+只要是 $n">
 <meta property="og:updated_time" content="2017-01-15T12:27:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学学习笔记 排列和组合 19">
-<meta name="twitter:description" content="排列集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$
+<meta name="twitter:description" content="排列  集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中 $r$ 个元素的有序安排称为一个 $r$ 排列。一个 $n$ 元集的 $r$ 排列数记为 $P(n,r)$。我们可以使用乘积法则求出 $P(n,r)$。具有 $n$ 个不同元素的集合的 $r$ 排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$
 
-只要是$n$非负，就有$P(n,0)=1$。">
+只要是 $n">
 
 
 
@@ -355,15 +355,15 @@
       
 
       
-        <h2 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h2><p>集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中$r$个元素的有序安排称为一个$r$排列。<br>一个$n$元集的$r$排列数记为$P(n,r)$。我们可以使用乘积法则求出$P(n,r)$。<br>具有$n$个不同元素的集合的$r$排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$</p>
+        <h2 id="排列"><a href="# 排列" class="headerlink" title="排列"></a>排列 </h2><p> 集合中不同元素的排列，是对这些元素一种有序的安排。我们也对集合中某些元素的有序安排感兴趣。对一个集合中 $r$ 个元素的有序安排称为一个 $r$ 排列。<br>一个 $n$ 元集的 $r$ 排列数记为 $P(n,r)$。我们可以使用乘积法则求出 $P(n,r)$。<br>具有 $n$ 个不同元素的集合的 $r$ 排列数是 $$P(n,r)=n(n-1)(n-2)\dots(n-r+1)$$</p>
 <blockquote>
-<p>只要是$n$非负，就有$P(n,0)=1$。      </p>
+<p>只要是 $n$ 非负，就有 $P(n,0)=1$。      </p>
 </blockquote>
-<p>如果$n$和$r$都是整数，且$0\le r\le n$，则$$P(n,r)={n!\over (n-r)!}$$</p>
-<h3 id="圆排列"><a href="#圆排列" class="headerlink" title="圆排列"></a>圆排列</h3><p>将圆排列展开就是线排列。$r$个元素进行排列，就有$r$种展开方式，因此，圆排列共有 $$P(n,r)/r={n!\over r(n-r)!}$$</p>
-<h3 id="项链排列"><a href="#项链排列" class="headerlink" title="项链排列"></a>项链排列</h3><p>项链排列在圆排列的基础上，正面向上和反面向上两种方式放置各个数是同一个排列，因此项链排列等于$$P(n,r)/2r={n!\over 2r(n-r)!} \qquad 3\ge r\le n$$</p>
-<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>集合元素的$r$组合是从这个集合无序选取的$r$个元素。简单地说，一个$r$组合是这个集合的一个$r$个元素的子集。<br>具有$n$个不同元素集合的$r$组合记为$C(n,r)$。也记作$\left(\begin{array}{c}n \\r\end{array}\right)$并且称为二项式系数。<br>设$n$是正整数，$r$是满足$0\le r\le n$的整数，$n$元素的集合的$r$组合数等于$$C(n,r)={n!\over r!(n-r)!}$$<br>证 可以如下得到这个集合的$r$排列。先构成集合的$C(n,r)$个$r$组合，然后以$P(n,r)$种方式排序每个$r$组合中的元素，这可以用$P(r,r)$种方式来做。因此$$P(n,r)=C(n,r)*P(r,r)$$这就推出$$C(n,r)={P(n,r)\over P(r,r)}={n!/(n-r)!\over r!/(r-r)!}={n!\over r!(n-r)!}$$</p>
-<p>设$n,r$是满足$n\le r$的非负整数，那么$C(n,r)=C(n,n-r)$。      </p>
+<p>如果 $n$ 和 $r$ 都是整数，且 $0\le r\le n$，则 $$P(n,r)={n!\over (n-r)!}$$</p>
+<h3 id="圆排列"><a href="# 圆排列" class="headerlink" title="圆排列"></a>圆排列 </h3><p> 将圆排列展开就是线排列。$r$ 个元素进行排列，就有 $r$ 种展开方式，因此，圆排列共有 $$P(n,r)/r={n!\over r(n-r)!}$$</p>
+<h3 id="项链排列"><a href="# 项链排列" class="headerlink" title="项链排列"></a>项链排列 </h3><p> 项链排列在圆排列的基础上，正面向上和反面向上两种方式放置各个数是同一个排列，因此项链排列等于 $$P(n,r)/2r={n!\over 2r(n-r)!} \qquad 3\ge r\le n$$</p>
+<h2 id="组合"><a href="# 组合" class="headerlink" title="组合"></a>组合 </h2><p> 集合元素的 $r$ 组合是从这个集合无序选取的 $r$ 个元素。简单地说，一个 $r$ 组合是这个集合的一个 $r$ 个元素的子集。<br>具有 $n$ 个不同元素集合的 $r$ 组合记为 $C(n,r)$。也记作 $\left(\begin{array}{c}n \\r\end{array}\right)$ 并且称为二项式系数。<br>设 $n$ 是正整数，$r$ 是满足 $0\le r\le n$ 的整数，$n$ 元素的集合的 $r$ 组合数等于 $$C(n,r)={n!\over r!(n-r)!}$$<br>证 可以如下得到这个集合的 $r$ 排列。先构成集合的 $C(n,r)$ 个 $r$ 组合，然后以 $P(n,r)$ 种方式排序每个 $r$ 组合中的元素，这可以用 $P(r,r)$ 种方式来做。因此 $$P(n,r)=C(n,r)*P(r,r)$$ 这就推出 $$C(n,r)={P(n,r)\over P(r,r)}={n!/(n-r)!\over r!/(r-r)!}={n!\over r!(n-r)!}$$</p>
+<p>设 $n,r$ 是满足 $n\le r$ 的非负整数，那么 $C(n,r)=C(n,n-r)$。      </p>
 
       
     </div>
@@ -483,7 +483,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -500,7 +500,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -556,7 +556,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#排列"><span class="nav-number">1.</span> <span class="nav-text">排列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#圆排列"><span class="nav-number">1.1.</span> <span class="nav-text">圆排列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项链排列"><span class="nav-number">1.2.</span> <span class="nav-text">项链排列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合"><span class="nav-number">2.</span> <span class="nav-text">组合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#排列"><span class="nav-number">1.</span> <span class="nav-text">排列 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#圆排列"><span class="nav-number">1.1.</span> <span class="nav-text">圆排列 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项链排列"><span class="nav-number">1.2.</span> <span class="nav-text">项链排列 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合"><span class="nav-number">2.</span> <span class="nav-text">组合 </span></a></li></ol></div>
             
           </div>
         </section>

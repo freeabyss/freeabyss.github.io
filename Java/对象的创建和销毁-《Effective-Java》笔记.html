@@ -105,9 +105,9 @@
 易于阅读
 加强参数的约束条件，一旦有一个参数违反约束条件就创建不成功
 可以非常灵活的增加参数数量
-Builder模式适用于有多个参数构造时使用，一般是4个">
+Builder 模式适用于有多个参数构造时使用，一般是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象的创建和销毁-《Effective Java》笔记">
+<meta property="og:title" content="对象的创建和销毁 -《Effective Java》笔记">
 <meta property="og:url" content="http://blog.freeabyss.com/Java/对象的创建和销毁-《Effective-Java》笔记.html">
 <meta property="og:site_name" content="Abyss's blog">
 <meta property="og:description" content="使用静态方法代替构造器
@@ -123,10 +123,10 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
 易于阅读
 加强参数的约束条件，一旦有一个参数违反约束条件就创建不成功
 可以非常灵活的增加参数数量
-Builder模式适用于有多个参数构造时使用，一般是4个">
+Builder 模式适用于有多个参数构造时使用，一般是">
 <meta property="og:updated_time" content="2016-09-07T15:28:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对象的创建和销毁-《Effective Java》笔记">
+<meta name="twitter:title" content="对象的创建和销毁 -《Effective Java》笔记">
 <meta name="twitter:description" content="使用静态方法代替构造器
 
 静态方法有名称，便于理解
@@ -140,7 +140,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
 易于阅读
 加强参数的约束条件，一旦有一个参数违反约束条件就创建不成功
 可以非常灵活的增加参数数量
-Builder模式适用于有多个参数构造时使用，一般是4个">
+Builder 模式适用于有多个参数构造时使用，一般是">
 
 
 
@@ -163,7 +163,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
 
   <link rel="canonical" href="http://blog.freeabyss.com/Java/对象的创建和销毁-《Effective-Java》笔记.html"/>
 
-  <title> 对象的创建和销毁-《Effective Java》笔记 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 对象的创建和销毁 -《Effective Java》笔记 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -313,7 +313,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
             
             
               
-                对象的创建和销毁-《Effective Java》笔记
+                对象的创建和销毁 -《Effective Java》笔记
               
             
           </h1>
@@ -366,7 +366,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
 
           
           
-             <span id="/Java/对象的创建和销毁-《Effective-Java》笔记.html" class="leancloud_visitors" data-flag-title="对象的创建和销毁-《Effective Java》笔记">
+             <span id="/Java/对象的创建和销毁-《Effective-Java》笔记.html" class="leancloud_visitors" data-flag-title="对象的创建和销毁 -《Effective Java》笔记">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -388,7 +388,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
       
 
       
-        <h2 id="使用静态方法代替构造器"><a href="#使用静态方法代替构造器" class="headerlink" title="使用静态方法代替构造器"></a>使用静态方法代替构造器</h2><blockquote>
+        <h2 id="使用静态方法代替构造器"><a href="# 使用静态方法代替构造器" class="headerlink" title="使用静态方法代替构造器"></a>使用静态方法代替构造器</h2><blockquote>
 <ul>
 <li>静态方法有名称，便于理解</li>
 <li>静态方法可以返回已存在的对象，避免创建不必要的重复对象</li>
@@ -396,30 +396,30 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
 <li>在创建参数化类型实例的时候，使代码更加简洁</li>
 </ul>
 </blockquote>
-<h2 id="存在多个构造器参数时考虑使用构造器"><a href="#存在多个构造器参数时考虑使用构造器" class="headerlink" title="存在多个构造器参数时考虑使用构造器"></a>存在多个构造器参数时考虑使用构造器</h2><blockquote>
+<h2 id="存在多个构造器参数时考虑使用构造器"><a href="# 存在多个构造器参数时考虑使用构造器" class="headerlink" title="存在多个构造器参数时考虑使用构造器"></a>存在多个构造器参数时考虑使用构造器</h2><blockquote>
 <ul>
 <li>易于阅读</li>
 <li>加强参数的约束条件，一旦有一个参数违反约束条件就创建不成功</li>
 <li>可以非常灵活的增加参数数量</li>
-<li>Builder模式适用于有多个参数构造时使用，一般是4个或多个。</li>
-<li>通常最好一开始就使用Builder模式</li>
+<li>Builder 模式适用于有多个参数构造时使用，一般是 4 个或多个。</li>
+<li>通常最好一开始就使用 Builder 模式</li>
 </ul>
 </blockquote>
 <p>以下是使用构造器的示例</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NutritionFacts</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> calories;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> fat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> sodium;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> carbohydrate;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 带默认值的</div><div class="line">         */</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> calories = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> fat = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> sodium = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> carbohydrate = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(<span class="keyword">int</span> servingSize, <span class="keyword">int</span> servings)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.servings = servings;</div><div class="line">            <span class="keyword">this</span>.servingSize = servingSize;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">calories</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            calories=val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">fat</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            fat = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">carbohydrate</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            carbohydrate = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">sodium</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            sodium = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="keyword">public</span>  NutritionFacts <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> NutritionFacts(<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NutritionFacts</span><span class="params">(Builder builder)</span> </span>&#123;</div><div class="line">        servings = builder.servings;</div><div class="line">        servingSize = builder.servingSize;</div><div class="line">        calories = builder.calories;</div><div class="line">        fat = builder.fat;</div><div class="line">        carbohydrate = builder.carbohydrate;</div><div class="line">        sodium = builder.sodium;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        NutritionFacts nutritionFacts = <span class="keyword">new</span> NutritionFacts.Builder(<span class="number">20</span>, <span class="number">20</span>)</div><div class="line">                .calories(<span class="number">10</span>).carbohydrate(<span class="number">12</span>).build();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="使用枚举类型实现单例模式"><a href="#使用枚举类型实现单例模式" class="headerlink" title="使用枚举类型实现单例模式"></a>使用枚举类型实现单例模式</h2><blockquote>
-<p>单元素的枚举类型是实现单例模式的最佳方法 ，详情可参考<a href="http://blog.csdn.net/abyss521/article/details/52232409" target="_blank" rel="external">设计模式之单例模式</a></p>
+<h2 id="使用枚举类型实现单例模式"><a href="# 使用枚举类型实现单例模式" class="headerlink" title="使用枚举类型实现单例模式"></a>使用枚举类型实现单例模式</h2><blockquote>
+<p>单元素的枚举类型是实现单例模式的最佳方法 ，详情可参考 <a href="http://blog.csdn.net/abyss521/article/details/52232409" target="_blank" rel="external"> 设计模式之单例模式</a></p>
 </blockquote>
-<h2 id="对于不想被实例化的类添加私有构造器"><a href="#对于不想被实例化的类添加私有构造器" class="headerlink" title="对于不想被实例化的类添加私有构造器"></a>对于不想被实例化的类添加私有构造器</h2><blockquote>
-<p>例如<code>java.lang.Math</code>这种的工具类，不希望被实例化，最好添加私有构造器避免被实例化</p>
+<h2 id="对于不想被实例化的类添加私有构造器"><a href="# 对于不想被实例化的类添加私有构造器" class="headerlink" title="对于不想被实例化的类添加私有构造器"></a>对于不想被实例化的类添加私有构造器</h2><blockquote>
+<p>例如 <code>java.lang.Math</code> 这种的工具类，不希望被实例化，最好添加私有构造器避免被实例化</p>
 </blockquote>
-<h2 id="避免创建不必要的对象"><a href="#避免创建不必要的对象" class="headerlink" title="避免创建不必要的对象"></a>避免创建不必要的对象</h2><blockquote>
-<p>尤其是要避免在大规模应用场景中使用字符串连接符<code>+</code>连接字符串，以及对包装类<code>Integer</code>、<code>Long</code>等类型使用运算符。 </p>
+<h2 id="避免创建不必要的对象"><a href="# 避免创建不必要的对象" class="headerlink" title="避免创建不必要的对象"></a>避免创建不必要的对象</h2><blockquote>
+<p>尤其是要避免在大规模应用场景中使用字符串连接符 <code>+</code> 连接字符串，以及对包装类 <code>Integer</code>、<code>Long</code> 等类型使用运算符。 </p>
 </blockquote>
-<h2 id="避免使用finalize"><a href="#避免使用finalize" class="headerlink" title="避免使用finalize"></a>避免使用finalize</h2><blockquote>
+<h2 id="避免使用 finalize"><a href="# 避免使用 finalize" class="headerlink" title="避免使用 finalize"></a>避免使用 finalize</h2><blockquote>
 <ul>
 <li><code>finalize()</code>不能保证被及时地执行，甚至根本不保证它们会执行</li>
-<li>在<code>finalize()</code>中创建和销毁对象对性能损耗非常大</li>
+<li>在 <code>finalize()</code> 中创建和销毁对象对性能损耗非常大</li>
 <li>在<code>finalize()</code> 中抛出的异常会被忽略，使对象处于破坏状态</li>
 <li>假如需要释放资源，推荐使用<code>try-finally</code> </li>
 </ul>
@@ -459,16 +459,16 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java/Java-Java-IO-概述.html" rel="next" title="Java I/O类概述">
-                <i class="fa fa-chevron-left"></i> Java I/O类概述
+              <a href="/Java/Java-Java-IO-概述.html" rel="next" title="Java I/O 类概述">
+                <i class="fa fa-chevron-left"></i> Java I/O 类概述
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaScript/JavaScript之表达式和运算符.html" rel="prev" title="JavaScript之表达式和运算符">
-                JavaScript之表达式和运算符 <i class="fa fa-chevron-right"></i>
+              <a href="/JavaScript/JavaScript之表达式和运算符.html" rel="prev" title="JavaScript 之表达式和运算符">
+                JavaScript 之表达式和运算符 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,7 +496,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="Java/对象的创建和销毁-《Effective-Java》笔记.html"
-           data-title="对象的创建和销毁-《Effective Java》笔记" data-url="http://blog.freeabyss.com/Java/对象的创建和销毁-《Effective-Java》笔记.html">
+           data-title="对象的创建和销毁 -《Effective Java》笔记" data-url="http://blog.freeabyss.com/Java/对象的创建和销毁-《Effective-Java》笔记.html">
       </div>
     
   </div>
@@ -541,7 +541,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -558,7 +558,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -614,7 +614,7 @@ Builder模式适用于有多个参数构造时使用，一般是4个">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用静态方法代替构造器"><span class="nav-number">1.</span> <span class="nav-text">使用静态方法代替构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存在多个构造器参数时考虑使用构造器"><span class="nav-number">2.</span> <span class="nav-text">存在多个构造器参数时考虑使用构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用枚举类型实现单例模式"><span class="nav-number">3.</span> <span class="nav-text">使用枚举类型实现单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于不想被实例化的类添加私有构造器"><span class="nav-number">4.</span> <span class="nav-text">对于不想被实例化的类添加私有构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免创建不必要的对象"><span class="nav-number">5.</span> <span class="nav-text">避免创建不必要的对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免使用finalize"><span class="nav-number">6.</span> <span class="nav-text">避免使用finalize</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用静态方法代替构造器"><span class="nav-number">1.</span> <span class="nav-text">使用静态方法代替构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存在多个构造器参数时考虑使用构造器"><span class="nav-number">2.</span> <span class="nav-text">存在多个构造器参数时考虑使用构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用枚举类型实现单例模式"><span class="nav-number">3.</span> <span class="nav-text">使用枚举类型实现单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于不想被实例化的类添加私有构造器"><span class="nav-number">4.</span> <span class="nav-text">对于不想被实例化的类添加私有构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免创建不必要的对象"><span class="nav-number">5.</span> <span class="nav-text">避免创建不必要的对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免使用 finalize"><span class="nav-number">6.</span> <span class="nav-text">避免使用 finalize</span></a></li></ol></div>
             
           </div>
         </section>

@@ -92,16 +92,16 @@
 
 
 
-<meta name="description" content="因数分解最大公约数假定两个不全为$0$的整数$a$和$b$的素因子分解为：$$a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}$$每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出$$gcd(a, b)">
+<meta name="description" content="因数分解  最大公约数  假定两个不全为 $0$ 的整数 $a$ 和 $b$ 的素因子分解为：$$a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}$$每个整数都是非负整数，而且出现在 $a$ 和 $b$ 分解中的所有素数都包含在两个分解之中，必要时以 0 为指数出现。于是 $gcd(a, b)$ 由下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最大公约数和最小公倍数算法">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Function-04-最大公约数和最小公倍数算法.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="因数分解最大公约数假定两个不全为$0$的整数$a$和$b$的素因子分解为：$$a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}$$每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出$$gcd(a, b)">
+<meta property="og:description" content="因数分解  最大公约数  假定两个不全为 $0$ 的整数 $a$ 和 $b$ 的素因子分解为：$$a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}$$每个整数都是非负整数，而且出现在 $a$ 和 $b$ 分解中的所有素数都包含在两个分解之中，必要时以 0 为指数出现。于是 $gcd(a, b)$ 由下">
 <meta property="og:updated_time" content="2016-12-22T13:50:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大公约数和最小公倍数算法">
-<meta name="twitter:description" content="因数分解最大公约数假定两个不全为$0$的整数$a$和$b$的素因子分解为：$$a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}$$每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出$$gcd(a, b)">
+<meta name="twitter:description" content="因数分解  最大公约数  假定两个不全为 $0$ 的整数 $a$ 和 $b$ 的素因子分解为：$$a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}$$每个整数都是非负整数，而且出现在 $a$ 和 $b$ 分解中的所有素数都包含在两个分解之中，必要时以 0 为指数出现。于是 $gcd(a, b)$ 由下">
 
 
 
@@ -349,9 +349,9 @@
       
 
       
-        <h2 id="因数分解"><a href="#因数分解" class="headerlink" title="因数分解"></a>因数分解</h2><h3 id="最大公约数"><a href="#最大公约数" class="headerlink" title="最大公约数"></a>最大公约数</h3><p>假定两个不全为$0$的整数$a$和$b$的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出<br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br>例如，求$120$和$500$的最大公约数：<br>$$<br>    120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\\<br>    gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\\<br>    = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</p>
-<h3 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h3><p>因素分解也可以用来求最大公倍数，求$a$和$b$的最小公倍数的公式为:<br>$$lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}$$</p>
-<h2 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h2><p>欧几里德算法又称辗转相除法，用于计算两个整数 a,b 的最大公约数。其计算原理依赖于下面的定理：<br>定理：$gcd(a,b) = gcd(b,a\;\mathbf{mod}\; b)$<br>证明：$a$可以表示成$a = kb + r$，则 $r = a\;\mathbf{mod}\;b$<br>假设$\;d$是$a$,$b$的一个公约数，则有$d\mid a$, $d\mid b$，而$r= a - kb$，因此 $d\mid r$<br>因此$\;d$ 是$(b,a\;\mathbf{mod}\; b)$的公约数<br>假设$\;d$是$(b,a\;\mathbf{mod}\;b)$ 的公约数，则$d\mid b$ ,$d\mid r$ ，但是$a = kb +r$<br>因此$\;d$也是$(a,b)$的公约数</p>
+        <h2 id="因数分解"><a href="# 因数分解" class="headerlink" title="因数分解"></a>因数分解 </h2><h3 id="最大公约数"><a href="# 最大公约数" class="headerlink" title="最大公约数"></a> 最大公约数 </h3><p> 假定两个不全为 $0$ 的整数 $a$ 和 $b$ 的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在 $a$ 和 $b$ 分解中的所有素数都包含在两个分解之中，必要时以 0 为指数出现。于是 $gcd(a, b)$ 由下面的公式给出 <br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br> 例如，求 $120$ 和 $500$ 的最大公约数：<br>$$<br>    120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\\<br>    gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\\<br>    = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</p>
+<h3 id="最小公倍数"><a href="# 最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数 </h3><p> 因素分解也可以用来求最大公倍数，求 $a$ 和 $b$ 的最小公倍数的公式为:<br>$$lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}$$</p>
+<h2 id="欧几里得算法"><a href="# 欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法 </h2><p> 欧几里德算法又称辗转相除法，用于计算两个整数 a,b 的最大公约数。其计算原理依赖于下面的定理：<br>定理：$gcd(a,b) = gcd(b,a\;\mathbf{mod}\; b)$<br>证明：$a$ 可以表示成 $a = kb + r$，则 $r = a\;\mathbf{mod}\;b$<br>假设 $\;d$ 是 $a$,$b$ 的一个公约数，则有 $d\mid a$, $d\mid b$，而 $r= a - kb$，因此 $d\mid r$<br>因此 $\;d$ 是 $(b,a\;\mathbf{mod}\; b)$ 的公约数 <br> 假设 $\;d$ 是 $(b,a\;\mathbf{mod}\;b)$ 的公约数，则 $d\mid b$ ,$d\mid r$ ，但是 $a = kb +r$<br>因此 $\;d$ 也是 $(a,b)$ 的公约数</p>
 
       
     </div>
@@ -469,7 +469,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -486,7 +486,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -542,7 +542,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#因数分解"><span class="nav-number">1.</span> <span class="nav-text">因数分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大公约数"><span class="nav-number">1.1.</span> <span class="nav-text">最大公约数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小公倍数"><span class="nav-number">1.2.</span> <span class="nav-text">最小公倍数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得算法"><span class="nav-number">2.</span> <span class="nav-text">欧几里得算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#因数分解"><span class="nav-number">1.</span> <span class="nav-text">因数分解 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大公约数"><span class="nav-number">1.1.</span> <span class="nav-text"> 最大公约数 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小公倍数"><span class="nav-number">1.2.</span> <span class="nav-text">最小公倍数 </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得算法"><span class="nav-number">2.</span> <span class="nav-text">欧几里得算法 </span></a></li></ol></div>
             
           </div>
         </section>

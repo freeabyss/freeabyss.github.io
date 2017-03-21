@@ -92,27 +92,27 @@
 
 
 
-<meta name="description" content="在catalina.bat文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
+<meta name="description" content="在 catalina.bat 文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
 
 -Xdebug：启用调试特性
--Xrunjdwp：启用JDWP实现，包含">
+-Xrunjdwp：启用 JDWP 实">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在IDEA上远程调试Java Web项目">
+<meta property="og:title" content="在 IDEA 上远程调试 Java Web 项目">
 <meta property="og:url" content="http://blog.freeabyss.com/IDEA/在IDEA上远程调试Java-Web项目.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="在catalina.bat文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
+<meta property="og:description" content="在 catalina.bat 文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
 
 -Xdebug：启用调试特性
--Xrunjdwp：启用JDWP实现，包含">
+-Xrunjdwp：启用 JDWP 实">
 <meta property="og:image" content="http://blog.freeabyss.com/../images/java_idea_1.png">
 <meta property="og:image" content="http://blog.freeabyss.com/../images/java_idea_2.png">
 <meta property="og:updated_time" content="2016-09-03T16:19:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在IDEA上远程调试Java Web项目">
-<meta name="twitter:description" content="在catalina.bat文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
+<meta name="twitter:title" content="在 IDEA 上远程调试 Java Web 项目">
+<meta name="twitter:description" content="在 catalina.bat 文件的，最上方添加以下代码1set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n
 
 -Xdebug：启用调试特性
--Xrunjdwp：启用JDWP实现，包含">
+-Xrunjdwp：启用 JDWP 实">
 <meta name="twitter:image" content="http://blog.freeabyss.com/../images/java_idea_1.png">
 
 
@@ -136,7 +136,7 @@
 
   <link rel="canonical" href="http://blog.freeabyss.com/IDEA/在IDEA上远程调试Java-Web项目.html"/>
 
-  <title> 在IDEA上远程调试Java Web项目 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 在 IDEA 上远程调试 Java Web 项目 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +286,7 @@
             
             
               
-                在IDEA上远程调试Java Web项目
+                在 IDEA 上远程调试 Java Web 项目
               
             
           </h1>
@@ -339,7 +339,7 @@
 
           
           
-             <span id="/IDEA/在IDEA上远程调试Java-Web项目.html" class="leancloud_visitors" data-flag-title="在IDEA上远程调试Java Web项目">
+             <span id="/IDEA/在IDEA上远程调试Java-Web项目.html" class="leancloud_visitors" data-flag-title="在 IDEA 上远程调试 Java Web 项目">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -361,14 +361,14 @@
       
 
       
-        <p>在catalina.bat文件的，最上方添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n</div></pre></td></tr></table></figure></p>
+        <p>在 catalina.bat 文件的，最上方添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set JAVA_OPTS=%JAVA_OPTS%  -server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=9999,server=y,suspend=n</div></pre></td></tr></table></figure></p>
 <ul>
 <li>-Xdebug：启用调试特性</li>
-<li>-Xrunjdwp：启用JDWP实现，包含以下选项：<ul>
-<li>transport=dt_socket：JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输</li>
-<li>address=9999：JVM在9999端口上监听请求</li>
-<li>server=y：y表示启动的JVM是被调试者，n表示启动的JVM是调试器</li>
-<li>suspend=y：y表示启动的JVM会暂停等待，直到调试器连接上（如果从tomcat一开始就进行调试，那么必须设置suspend=y<br>接下来再IDEA上新增一个Remote Tomcat<br><img src="../images/java_idea_1.png" alt=""><br>Host地址不用加Http<br>Port：为tomcat的端口<br><img src="../images/java_idea_2.png" alt=""><br>这里的port为调试端口，1中所设置的端口一直</li>
+<li>-Xrunjdwp：启用 JDWP 实现，包含以下选项：<ul>
+<li>transport=dt_socket：JPDA front-end 和 back-end 之间的传输方法。dt_socket 表示使用套接字传输</li>
+<li>address=9999：JVM 在 9999 端口上监听请求</li>
+<li>server=y：y 表示启动的 JVM 是被调试者，n 表示启动的 JVM 是调试器</li>
+<li>suspend=y：y 表示启动的 JVM 会暂停等待，直到调试器连接上（如果从 tomcat 一开始就进行调试，那么必须设置 suspend=y<br>接下来再 IDEA 上新增一个 Remote Tomcat<br><img src="../images/java_idea_1.png" alt=""><br>Host 地址不用加 Http<br>Port：为 tomcat 的端口 <br><img src="../images/java_idea_2.png"alt=""><br> 这里的 port 为调试端口，1 中所设置的端口一直</li>
 </ul>
 </li>
 </ul>
@@ -407,16 +407,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Python/Python语法预览.html" rel="next" title="Python快速预览">
-                <i class="fa fa-chevron-left"></i> Python快速预览
+              <a href="/Python/Python语法预览.html" rel="next" title="Python 快速预览">
+                <i class="fa fa-chevron-left"></i> Python 快速预览
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java/Quart表达式详解.html" rel="prev" title="QuartZ Cron表达式详解">
-                QuartZ Cron表达式详解 <i class="fa fa-chevron-right"></i>
+              <a href="/Java/Quart表达式详解.html" rel="prev" title="QuartZ Cron 表达式详解">
+                QuartZ Cron 表达式详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -444,7 +444,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="IDEA/在IDEA上远程调试Java-Web项目.html"
-           data-title="在IDEA上远程调试Java Web项目" data-url="http://blog.freeabyss.com/IDEA/在IDEA上远程调试Java-Web项目.html">
+           data-title="在 IDEA 上远程调试 Java Web 项目" data-url="http://blog.freeabyss.com/IDEA/在IDEA上远程调试Java-Web项目.html">
       </div>
     
   </div>
@@ -489,7 +489,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -506,7 +506,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

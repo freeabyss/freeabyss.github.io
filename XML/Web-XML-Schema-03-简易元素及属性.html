@@ -92,22 +92,22 @@
 
 
 
-<meta name="description" content="简易元素简易元素是指只包含文本的元素，不包括其他元素或者属性。  
+<meta name="description" content="简易元素  简易元素是指只包含文本的元素，不包括其他元素或者属性。  
 简易元素的语法1&amp;lt;xs:element name=&quot;xxx&quot; type=&quot;yyy&quot;/&amp;gt;
-xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt;lastname&amp;gt;Smith&amp;lt;/lastname&amp;gt;&amp;lt;age&amp;gt;28&amp;lt;/age&amp;gt;&amp;lt;dateborn&amp;gt;19">
+xxx是指元素的名称，yyy是指元素数据类型  例如 ：123456789&amp;lt;lastname&amp;gt;Smith&amp;lt;/lastname&amp;gt;&amp;lt;age&amp;gt;28&amp;lt;/age&amp;gt;&amp;lt;dateborn&amp;g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XML Schema 简易元素及属性 03">
 <meta property="og:url" content="http://blog.freeabyss.com/XML/Web-XML-Schema-03-简易元素及属性.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="简易元素简易元素是指只包含文本的元素，不包括其他元素或者属性。  
+<meta property="og:description" content="简易元素  简易元素是指只包含文本的元素，不包括其他元素或者属性。  
 简易元素的语法1&amp;lt;xs:element name=&quot;xxx&quot; type=&quot;yyy&quot;/&amp;gt;
-xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt;lastname&amp;gt;Smith&amp;lt;/lastname&amp;gt;&amp;lt;age&amp;gt;28&amp;lt;/age&amp;gt;&amp;lt;dateborn&amp;gt;19">
+xxx是指元素的名称，yyy是指元素数据类型  例如 ：123456789&amp;lt;lastname&amp;gt;Smith&amp;lt;/lastname&amp;gt;&amp;lt;age&amp;gt;28&amp;lt;/age&amp;gt;&amp;lt;dateborn&amp;g">
 <meta property="og:updated_time" content="2017-02-22T13:11:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XML Schema 简易元素及属性 03">
-<meta name="twitter:description" content="简易元素简易元素是指只包含文本的元素，不包括其他元素或者属性。  
+<meta name="twitter:description" content="简易元素  简易元素是指只包含文本的元素，不包括其他元素或者属性。  
 简易元素的语法1&amp;lt;xs:element name=&quot;xxx&quot; type=&quot;yyy&quot;/&amp;gt;
-xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt;lastname&amp;gt;Smith&amp;lt;/lastname&amp;gt;&amp;lt;age&amp;gt;28&amp;lt;/age&amp;gt;&amp;lt;dateborn&amp;gt;19">
+xxx是指元素的名称，yyy是指元素数据类型  例如 ：123456789&amp;lt;lastname&amp;gt;Smith&amp;lt;/lastname&amp;gt;&amp;lt;age&amp;gt;28&amp;lt;/age&amp;gt;&amp;lt;dateborn&amp;g">
 
 
 
@@ -355,10 +355,10 @@ xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt
       
 
       
-        <h2 id="简易元素"><a href="#简易元素" class="headerlink" title="简易元素"></a>简易元素</h2><p>简易元素是指只包含文本的元素，不包括其他元素或者属性。  </p>
-<h4 id="简易元素的语法"><a href="#简易元素的语法" class="headerlink" title="简易元素的语法"></a>简易元素的语法</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p><code>xxx</code>是指元素的名称，<code>yyy</code>是指元素数据类型<br>例如 ：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">lastname</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">lastname</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dateborn</span>&gt;</span>1980-03-27<span class="tag">&lt;/<span class="name">dateborn</span>&gt;</span></div><div class="line">``</div><div class="line">对应       </div><div class="line">```xml</div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"xs:integer"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"dateborn"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="常用的数据类型"><a href="#常用的数据类型" class="headerlink" title="常用的数据类型"></a>常用的数据类型</h4><ul>
+        <h2 id="简易元素"><a href="# 简易元素" class="headerlink" title="简易元素"></a>简易元素 </h2><p> 简易元素是指只包含文本的元素，不包括其他元素或者属性。  </p>
+<h4 id="简易元素的语法"><a href="# 简易元素的语法" class="headerlink" title="简易元素的语法"></a>简易元素的语法</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p><code>xxx</code>是指元素的名称，<code>yyy</code>是指元素数据类型 <br> 例如 ：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">lastname</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">lastname</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dateborn</span>&gt;</span>1980-03-27<span class="tag">&lt;/<span class="name">dateborn</span>&gt;</span></div><div class="line">``</div><div class="line">对应       </div><div class="line">```xml</div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"xs:integer"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"dateborn"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="常用的数据类型"><a href="# 常用的数据类型" class="headerlink" title="常用的数据类型"></a>常用的数据类型</h4><ul>
 <li>xs:string</li>
 <li>xs:decimal</li>
 <li>xs:integer</li>
@@ -366,11 +366,11 @@ xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt
 <li>xs:date</li>
 <li>xs:time</li>
 </ul>
-<h4 id="固定值和默认值"><a href="#固定值和默认值" class="headerlink" title="固定值和默认值"></a>固定值和默认值</h4><p>固定值会自动分配给元素，并且您无法规定另外一个值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"red"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"red"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>简易元素无法拥有属性，但是属性总是作为简易类型被声明。     </p>
-<h4 id="声明属性"><a href="#声明属性" class="headerlink" title="声明属性"></a>声明属性</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="固定值和默认值"><a href="# 固定值和默认值" class="headerlink" title="固定值和默认值"></a>固定值和默认值 </h4><p> 固定值会自动分配给元素，并且您无法规定另外一个值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"red"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"red"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="属性"><a href="# 属性" class="headerlink" title="属性"></a>属性 </h2><p> 简易元素无法拥有属性，但是属性总是作为简易类型被声明。     </p>
+<h4 id="声明属性"><a href="# 声明属性" class="headerlink" title="声明属性"></a>声明属性</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
 <p>属性的数据类型参见简易元素的数据类型。<br>属性同样可以拥有固定值和默认值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"EN"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"EN"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<p>属性默认是可选的，如规定属性必选，请使用<code>use</code>属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">use</span>=<span class="string">"required"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p>属性默认是可选的，如规定属性必选，请使用 <code>use</code> 属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">use</span>=<span class="string">"required"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -488,7 +488,7 @@ xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">83</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -505,7 +505,7 @@ xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -561,7 +561,7 @@ xxx是指元素的名称，yyy是指元素数据类型例如 ：123456789&amp;lt
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简易元素"><span class="nav-number">1.</span> <span class="nav-text">简易元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简易元素的语法"><span class="nav-number">1.0.1.</span> <span class="nav-text">简易元素的语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的数据类型"><span class="nav-number">1.0.2.</span> <span class="nav-text">常用的数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#固定值和默认值"><span class="nav-number">1.0.3.</span> <span class="nav-text">固定值和默认值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明属性"><span class="nav-number">2.0.1.</span> <span class="nav-text">声明属性</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简易元素"><span class="nav-number">1.</span> <span class="nav-text">简易元素 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简易元素的语法"><span class="nav-number">1.0.1.</span> <span class="nav-text">简易元素的语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的数据类型"><span class="nav-number">1.0.2.</span> <span class="nav-text">常用的数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#固定值和默认值"><span class="nav-number">1.0.3.</span> <span class="nav-text">固定值和默认值 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明属性"><span class="nav-number">2.0.1.</span> <span class="nav-text">声明属性</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

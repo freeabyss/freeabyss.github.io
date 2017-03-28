@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2017-03-28T01:38:41.000Z</updated>
+  <updated>2017-03-28T01:46:32.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Math-DL-02- 命题演算</title>
+    <title>数理逻辑 命题演算 02</title>
     <link href="http://blog.freeabyss.com/Mathematical-Logic/Math-DL-02-%E5%91%BD%E9%A2%98%E6%BC%94%E7%AE%97.html"/>
     <id>http://blog.freeabyss.com/Mathematical-Logic/Math-DL-02-命题演算.html</id>
     <published>2017-03-25T13:22:37.000Z</published>
-    <updated>2017-03-28T01:38:41.000Z</updated>
+    <updated>2017-03-28T01:46:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>[TOC]</p>
 <h2 id="概览"><a href="# 概览" class="headerlink" title="概览"></a>概览</h2><p><img src="../images/propostion_01.png" alt="概览图"></p>

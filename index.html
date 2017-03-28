@@ -276,8 +276,887 @@
             
               
                 
+                <a class="post-title-link" href="/Mathematical-Logic/Math-DL-02-命题演算.html" itemprop="url">
+                  Math-DL-02- 命题演算
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-25T21:22:37+08:00" content="2017-03-25">
+              2017-03-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mathematical-Logic/" itemprop="url" rel="index">
+                    <span itemprop="name">Mathematical Logic</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Mathematical-Logic/Math-DL-02-命题演算.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Mathematical-Logic/Math-DL-02-命题演算.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Mathematical-Logic/Math-DL-02-命题演算.html" class="leancloud_visitors" data-flag-title="Math-DL-02- 命题演算">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]</p>
+<h2 id="概览"><a href="# 概览" class="headerlink" title="概览"></a>概览</h2><p><img src="../images/propostion_01.png" alt="概览图"></p>
+<h2 id="命题"><a href="# 命题" class="headerlink" title="命题"></a>命题 </h2><p> 命题是数理逻辑中最基本的概念，就好像自然数对于算数一样。</p>
+<p>对确定的对象作出判断的陈述句称作命题。 如果判断正确，称命题为 <strong> 真</strong>，否则为 <strong> 假</strong>。「真、假」是命题的属性，成为「真值」。</p>
+<p>命题要符合三个条件：</p>
+<ul>
+<li>必须是陈述句</li>
+<li>要做出判断</li>
+<li>要对确定的对象作出判断</li>
+</ul>
+<p>自相矛盾语句的不能作为命题，例如「这句话是错的」。</p>
+<h2 id="命题符号化"><a href="# 命题符号化" class="headerlink" title="命题符号化"></a>命题符号化 </h2><p><strong> 逻辑联结词 </strong> 是指，连接命题，对命题进行运算的词。<strong>原子命题 </strong> 是不含有逻辑联结词的命题。<strong>复合命题 </strong> 是包含了原子命题和逻辑联结词的命题。 </p>
+<p>原子命题一般用 $p$、$q$ 、$r$ 、$s$ 等小写字母表示。</p>
+<h3 id="逻辑联结词"><a href="# 逻辑联结词" class="headerlink" title="逻辑联结词"></a>逻辑联结词 </h3><p> 逻辑联结词是数理逻辑中的运算符号，就好像数学运算中的「加、减、乘、除」一样。</p>
+<p>常用的逻辑联结词有以下几种：</p>
+<ul>
+<li>非：表示命题的否定。记作 $\lnot p$</li>
+<li>合取：逻辑关系为两个命题同时成立，表示自然语言中「即…又…」、「不但…而且…」等并列的连接词。记作 $p\land q$ </li>
+<li>析取：逻辑关系为两个命题至少一个成立，表示自然语言中的「或」。记作 $p\lor q$ </li>
+<li>异或：有时自然语言中的「或」具有排斥性，例如「人固有一死，或重于泰山，或轻于鸿毛」这时就用异或表示，记作 $p\oplus q$ ，等价于 $(p\land\lnot q)\lor (\lnot p\land q)$</li>
+<li>蕴含：逻辑关系是 $p$ 是 $q$ 的充分条件，或者说 $q$ 是 $p$  的必要条件。记作 $p\rightarrow q$ </li>
+<li>双向蕴含：逻辑关系是 $p$ 和 $q$ 互为充分必要条件。记作 $p\leftrightarrow q$</li>
+<li>或非：也称 Peirce 记号。在 $p$ 和 $q$ 均为假时为真，相当于 $\lnot (p\lor q)$</li>
+<li>与非：在 $p$ 和 $q$ 均为真时为假，相当于 $\lnot (p\land q)$</li>
+</ul>
+<p>以下是几种逻辑联结词的真值表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p\qquad q$</th>
+<th style="text-align:center">$\lnot p$</th>
+<th style="text-align:center">$p\lor q$</th>
+<th style="text-align:center">$p\land q$</th>
+<th style="text-align:center">$p\oplus q$</th>
+<th style="text-align:center">$p\rightarrow q$</th>
+<th style="text-align:center">$p\leftrightarrow q$</th>
+<th style="text-align:center">$p\mid q$</th>
+<th style="text-align:center">$p\downarrow q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$T\qquad T$</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">$T\qquad F$</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">$F\qquad T$</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">$F\qquad F$</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+<h3 id="命题公式"><a href="# 命题公式" class="headerlink" title="命题公式"></a>命题公式 </h3><p> 命题公式的组成：</p>
+<ul>
+<li>命题常元：即具体的命题和 $\mathbf T\quad \mathbf F$</li>
+<li>命题变元：以「真、假」为取值范围的变量</li>
+<li>命题公式：由命题常元、命题变元和联结词组成的形式更为复杂的命题</li>
+</ul>
+<p>命题公式的定义：</p>
+<ol>
+<li>命题变元和命题常元是命题公式，特别的称为原子公式或原子</li>
+<li>如果 $A$ ，$B$  是命题公式，那么 $(\lnot A)$，$(A\land B)$，$(A\lor B)$，$(A\rightarrow B)$，$(A\leftrightarrow B)$ 也是命题公式</li>
+<li>只有有限步骤引用上述两条所组成的符号串是命题公式</li>
+</ol>
+<p>命题公式简称公式，采用大写 $A$，$B$ 等表示。</p>
+<p>命题公式形式上是一个规则的字符串，内容上对应一个真值函数。</p>
+<h4 id="逻辑联结词优先级"><a href="# 逻辑联结词优先级" class="headerlink" title="逻辑联结词优先级"></a>逻辑联结词优先级 </h4><p> 严格按照定义的命题公式太过繁琐，为了简化括号，约定了逻辑联结词的优先级。</p>
+<p>我们定义优先级为：$\lnot$， $[\land\; \lor]$，$\rightarrow$，$\leftrightarrow$ </p>
+<h3 id="真值函数"><a href="# 真值函数" class="headerlink" title="真值函数"></a>真值函数 </h3><p> 我们可以将命题变元 $p_1, p_2, p_3,\dots,p_n$ 的公式 $A$ 看作是关于 $p_1, p_2, \dots, p_n$ 的一个真值函数。 每个变元的取值范围是 ${0, 1}$。 真值函数的取值范围也是 ${0,1}$ 。</p>
+<h4 id="赋值"><a href="# 赋值" class="headerlink" title="赋值"></a>赋值 </h4><p> 对任意给定的 $p_1,p_2,\dots,p_n$ 的一种取值状况组合，称为 <strong> 赋值</strong>。对于每个赋值，公式都有一个确定的真值。赋值用希腊字母 $\alpha\;\beta$ 表示。</p>
+<p>当公式 $A$ 对赋值 $\alpha$ 为真时，称 $\alpha$  是 $A$ 的 <strong> 成真赋值</strong>，或者 $\alpha$ 弄真 $A$ 记作 $\alpha(A)=1$ </p>
+<p>反之，称 $\alpha$  是 $A$ 的 <strong> 成假赋值</strong>，或者 $\alpha$ 弄假 $A$ 记作 $\alpha(A)=0$ </p>
+<h3 id="命题形式化"><a href="# 命题形式化" class="headerlink" title="命题形式化"></a>命题形式化 </h3><p> 由自然语言表述的命题，经过抽象，可以形式化为命题公式。形式化首先确定原子命题，其次确定联结词，最后处理命题之间的联结关系及顺序。</p>
+<p>有的语句形式化结果不是唯一的，可能具有不同形式，但逻辑上是等价的。</p>
+<h2 id="逻辑等价式和逻辑蕴涵式"><a href="# 逻辑等价式和逻辑蕴涵式" class="headerlink" title="逻辑等价式和逻辑蕴涵式"></a>逻辑等价式和逻辑蕴涵式 </h2><p> 命题公式可以从真值的角度进行分类：</p>
+<ul>
+<li>重言式：也称永真式，是指命题变元的所有赋值都是命题公式的成真赋值</li>
+<li>矛盾式：也称永假式，是指命题变元的所有赋值都是命题公式的成假赋值</li>
+<li>可满足式：命题公式至少又一个成真赋值</li>
+</ul>
+<h3 id="逻辑等价式"><a href="# 逻辑等价式" class="headerlink" title="逻辑等价式"></a>逻辑等价式 </h3><p> 当命题公式 $A\leftrightarrow B$ 是重言式时，则称 $A$ 逻辑等价于 $B$ ，记作 $A ⧦ B$，逻辑等价式。</p>
+<blockquote>
+<p>有的地方也记作 $A\equiv B$ </p>
+</blockquote>
+<p>也可以理解为公式 $A$ 和公式 $B$ 是等值的。逻辑等价式体现了，两个公式在任何情况下的赋值都具有相同的真值。</p>
+<h4 id="一些重要的逻辑等价式"><a href="# 一些重要的逻辑等价式" class="headerlink" title="一些重要的逻辑等价式"></a>一些重要的逻辑等价式</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">等价关系</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\lnot (A\land B) ⧦ \lnot A \lor \lnot B$ <br>  $\lnot (A\lor B) ⧦ \lnot A \land \lnot B$</td>
+<td style="text-align:left">摩根定律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\land \mathbf T ⧦ A$ <br> $A\lor \mathbf F ⧦ A$</td>
+<td style="text-align:left">同一律（恒等律）</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\lor \mathbf T ⧦ \mathbf T$ <br> $A\land \mathbf F ⧦ \mathbf F$</td>
+<td style="text-align:left">支配律（零律）</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\land A ⧦ A$ <br> $A\lor A ⧦ A$</td>
+<td style="text-align:left">幂等律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot(\lnot A) ⧦ A$</td>
+<td style="text-align:left">双非律（双重否定律）</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\lor B ⧦ B\lor A$ <br> $A\land B⧦ B\land A$</td>
+<td style="text-align:left">交换律</td>
+</tr>
+<tr>
+<td style="text-align:left">$(A\lor B)\lor C⧦ A\lor (B\lor C)$ <br> $(A\land B)\land C⧦ A\land (B\land C)$</td>
+<td style="text-align:left">结合律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\lor(B\land C) ⧦ (A\lor B)\land (A\lor C)$ <br>$A\land (B\lor C) ⧦ (A\land B)\lor (A\land C)$</td>
+<td style="text-align:left">分配律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\lor (A\land B)⧦ A$ <br> $A\land (A\lor B)⧦ A$</td>
+<td style="text-align:left">吸收律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\lor \lnot A⧦ \mathbf T$<br> $A\land \lnot A⧦ \mathbf F$</td>
+<td style="text-align:left">否定律（排中律和矛盾律）</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\rightarrow B⧦ \lnot A\lor B $</td>
+<td style="text-align:left">蕴含等值式</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\rightarrow B⧦ \lnot B\rightarrow \lnot A$</td>
+<td style="text-align:left">假言易位</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\lor B⧦ \lnot A\rightarrow B$</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$A\land B⧦ \lnot(A\rightarrow \lnot B) $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot(A\rightarrow B)⧦ A\land \lnot B $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$(A\rightarrow B)\land (A\rightarrow C)⧦ A\rightarrow (B\land C) $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$(A\rightarrow C)\land (B\rightarrow C)⧦ (A\lor B)\rightarrow C $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$(A\rightarrow B)\lor (A\rightarrow C)⧦ A\rightarrow (B\lor C) $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$A\land B\rightarrow C⧦ A\rightarrow (B\rightarrow C)$</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$(A\rightarrow C)\lor (B\rightarrow C)⧦ (A\land B)\rightarrow C$</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$A \leftrightarrow B ⧦ (A\rightarrow B)\land (B\rightarrow A) $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$A \leftrightarrow B ⧦ \lnot A \leftrightarrow \lnot B $\</td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">$A \leftrightarrow B ⧦ (A \land B)\lor (\lnot A\land \lnot B) $</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">$\lnot (A \leftrightarrow B) ⧦ A \leftrightarrow\lnot B$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="排中律"><a href="# 排中律" class="headerlink" title="排中律"></a>排中律 </h4><p> 排中律是数理逻辑的基本规律之一，数学证明中常用的「反证法」就是利用了排中律。</p>
+<h3 id="逻辑蕴涵式"><a href="# 逻辑蕴涵式" class="headerlink" title="逻辑蕴涵式"></a>逻辑蕴涵式 </h3><p> 当命题公式 $A\rightarrow B$ 是重言式时，则称 $A$ 逻辑蕴涵 $B$，记作 $A\models B$，称作逻辑蕴涵式。</p>
+<p>也可以理解为公式 $A$ 的所有成真赋值也是公式 $B$ 的所有成真赋值。</p>
+<p>每个逻辑等价式可以看作两个逻辑蕴涵式，即 $A⧦ B$ 也有 $A\models B$ 和 $B\models A$ </p>
+<p>逻辑蕴含式体现了，在任何赋值状况下只要 $A$ 为真，$B$ 就为真。  </p>
+<h4 id="一些重要的逻辑蕴涵式"><a href="# 一些重要的逻辑蕴涵式" class="headerlink" title="一些重要的逻辑蕴涵式"></a>一些重要的逻辑蕴涵式</h4><table>
+<thead>
+<tr>
+<th>逻辑蕴涵式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$A\models A\lor B$</td>
+</tr>
+<tr>
+<td>$A\lor B\models A$</td>
+</tr>
+<tr>
+<td>$A\land (A\rightarrow B)\models B$</td>
+</tr>
+<tr>
+<td>$(A\rightarrow B)\land\lnot B\models\lnot A$</td>
+</tr>
+<tr>
+<td>$\lnot A\land(A\lor B)\models B$</td>
+</tr>
+<tr>
+<td>$(A\rightarrow B)\land(B\rightarrow C)\models A\rightarrow C$</td>
+</tr>
+<tr>
+<td>$(A\rightarrow B)\land (C\rightarrow D)\models (A\land C)\rightarrow (B\land D)$</td>
+</tr>
+<tr>
+<td>$(A\leftrightarrow B)\land (B\leftrightarrow C)\models A\leftrightarrow C$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="逻辑结果"><a href="# 逻辑结果" class="headerlink" title="逻辑结果"></a>逻辑结果 </h4><p> 逻辑蕴涵式经常被推广为 $\Gamma\models B$ 的形式，其中 $\Gamma$ 是一系列公式，表示 $B$ 是 $\Gamma $ 的逻辑结果。也即 $\Gamma$ 中所有公式的合取逻辑蕴涵 $B$ 。</p>
+<p>当 $\Gamma$ 中仅包含一个公式时，就是 $A\models B$ 。当 $\Gamma$ 为空时，记作 $\models B$ ，表示 $B$ 永真。</p>
+<h3 id="重要性质"><a href="# 重要性质" class="headerlink" title="重要性质"></a>重要性质 </h3><p> 逻辑等价式和逻辑蕴涵式的主要性质有自反、对称、传递等。</p>
+<ul>
+<li>$A⧦ B$ 当且仅当 $\models A\leftrightarrow B$ </li>
+<li>$A\models B$ 当且仅当 $\models A\rightarrow B$</li>
+<li>若 $A⧦ B$ ，则 $B⧦ A$</li>
+<li>若 $A⧦ B$ ，$B⧦ C$ ，则 $A⧦ C$</li>
+<li>若 $A\models B$ ，则 $\lnot B\models\lnot A$</li>
+<li>若 $A\models B$ ，$B\models C$ ，则 $A\models C$</li>
+<li>若 $A\models B$ ，$A⧦ A’$，$B⧦ B’$ ，则 $A’\models B’$</li>
+</ul>
+<h3 id="重言式代入原理"><a href="# 重言式代入原理" class="headerlink" title="重言式代入原理"></a>重言式代入原理 </h3><p> 将重言式 $A$ 中的某个命题变元 $p$ 的所有出现都代换为命题公式 $B$ ，得到的命题公式记作 $A(B/p)$，$A(B/p)$ 也是重言式。</p>
+<p>因为重言式 $A$ 的真值与 $p$ 的取值状况无关，恒为 $\mathbf T$，所以将 $p$ 全部代换后的公式 $A(B/p)$ 的真值也恒为 $\mathbf T$ 。</p>
+<h3 id="命题公式的替换原理"><a href="# 命题公式的替换原理" class="headerlink" title="命题公式的替换原理"></a>命题公式的替换原理 </h3><p> 将命题公式 $A$ 中的子公式 $C$ 的部分出现替换为和 $C$ 逻辑等价的公式 $D$ （$C⧦ D$ ），得到的命题公式记作 $B$ ，则 $A⧦ B$ 。</p>
+<p>因为 $C$ 和 $D$ 在任何赋值下等值，所以用 $D$ 替换 $C$ 不会改变 $A$ 的真值。</p>
+<h3 id="代入原理和替换原理的区别"><a href="# 代入原理和替换原理的区别" class="headerlink" title="代入原理和替换原理的区别"></a>代入原理和替换原理的区别</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>代入原理</th>
+<th>替换原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用对象</td>
+<td>任意永真式</td>
+<td>任意命题公式</td>
+</tr>
+<tr>
+<td>代换对象</td>
+<td>任意命题变元</td>
+<td>任意子公式</td>
+</tr>
+<tr>
+<td>代换物</td>
+<td>任意命题公式</td>
+<td>任意与代换对象等价的命题公式</td>
+</tr>
+<tr>
+<td>代换方式</td>
+<td>代换同一命题变元的所有出现</td>
+<td>代换子公式的某些出现</td>
+</tr>
+<tr>
+<td>代换结果</td>
+<td>仍为永真式</td>
+<td>与原公式等价</td>
+</tr>
+</tbody>
+</table>
+<h2 id="范式"><a href="# 范式" class="headerlink" title="范式"></a>范式 </h2><p> 每个命题公式都会存在很多与之逻辑等价的公式，<strong>范式 </strong> 就是在命题公式的多个逻辑等价的形式中，较为符合「标准」和「规范」的一种形式。</p>
+<p>范式所涉及的基本术语：</p>
+<ul>
+<li>文字：是指命题变元、命题常元以及它们的否定，前者称为正文字，后者称为负文字</li>
+<li>析取子句：文字或若干文字的析取，例如 $p$，$p\lor q$ </li>
+<li>合取子句：文字或若干文字的合取，例如 $p$ ，$p\land q$</li>
+<li>互补文字对：指一对正文字和负文字</li>
+<li>析取范式：公式 $A’$ 称作公式 $A$ 的析取范式，如果：$A’⧦ A$ ，且 $A’$ 为 <strong> 合取子句 </strong> 或者若干 <strong> 合取子句 </strong> 的<strong>析取</strong></li>
+<li>合取范式：公式 $A’$ 称作公式 $A$ 的合取范式，如果：$A’⧦ A$，且 $A’$ 为 <strong> 析取子句 </strong> 或者若干 <strong> 析取子句 </strong> 的<strong>合取</strong></li>
+</ul>
+<p>范式可以用来识别重言式和矛盾式：</p>
+<ul>
+<li>重言式识别：合取范式中每个析取子句都包含至少一个互补文字对</li>
+<li>矛盾式识别：析取范式中每个合取子句都包含至少一个互补文字对</li>
+</ul>
+<h3 id="求范式的一般步骤"><a href="# 求范式的一般步骤" class="headerlink" title="求范式的一般步骤"></a>求范式的一般步骤 </h3><p> 利用逻辑等价式、代入原理和替换原理，可以求出任一一个公式的析取范式和合取范式。</p>
+<p>具体步骤为：</p>
+<ul>
+<li>消去公式中的联结词 $\rightarrow $ 和 $\leftrightarrow$</li>
+<li>利用徳摩根律将否定联结词 $\lnot$ 向内深入，最后只作用于文字，再将 $\lnot\lnot p$ 化为 $p$</li>
+<li>利用分配律，最后得到需要的析取或者合取范式</li>
+</ul>
+<h3 id="主范式"><a href="# 主范式" class="headerlink" title="主范式"></a>主范式</h3><ul>
+<li>主析取范式：公式 $A’$ 称作公式 $A(p_1,p_2,\dots,p_n)$ 的主析取范式，如果 $A’$ 是 $A$ 的析取范式，$A’$ 中每一个合取子句里都要包含所有的命题变元，并且每一个命题变元恰好出现一次</li>
+<li>主合取范式：公式 $A’$ 称作公式 $A(p_1,p_2,\dots,p_n)$ 的主合取范式，如果 $A’$ 是 $A$ 的合取范式，$A’$ 中每一个析取子句里都要包含所有的命题变元，并且每一个命题变元恰好出现一次</li>
+</ul>
+<h4 id="主范式的唯一性证明"><a href="# 主范式的唯一性证明" class="headerlink" title="主范式的唯一性证明"></a>主范式的唯一性证明 </h4><p> 以主析取范式为例，证明主范式的唯一性。</p>
+<h5 id="约定"><a href="# 约定" class="headerlink" title="约定"></a>约定</h5><ul>
+<li>合取子句中的文字按照其包含的变元下标从小到大排列</li>
+<li>对于包含所有变元 $p_1,p_2,\dots,p_n$ 并且排列好文字顺序的合取子句，我们称之为极小项，记作 $m_i$</li>
+<li>其中 $i$ 是一个整数，$i$ 对应的 $n$ 位二进制表示描述了对应下标的变元在合取子句中的否定状态</li>
+<li>用 $1$ 表示该位是正文字，$0$ 表示该位是负文字。</li>
+<li>例如 $p_1\land p_2\land p_3$ 记作 $m_7(7=111)$ ，$p_1\land\lnot p_2\land\lnot p_3$ 记作 $m_4 (4=100)$</li>
+</ul>
+<p>主析取范式是极小项按照其下标从小到大排列的析取</p>
+<h5 id="极小项赋值引理"><a href="# 极小项赋值引理" class="headerlink" title="极小项赋值引理"></a>极小项赋值引理</h5><ul>
+<li>极小项只有唯一的成真赋值</li>
+<li>极小项的成真赋值中每个变元的取值等于极小项下标的二进制形式中变元下标所对应的二进制位的值</li>
+<li>例如 $p_1\land p_2\land p_3$ 的唯一成真赋值是 $p_1=1,p_2=1,p_3=1$ ；$p_1\land\lnot p_2\land\lnot p_3$ 的唯一成真赋值是 $p_1=1,p_2=0,p_3=0$ </li>
+</ul>
+<h5 id="极小项和主析取范式之间的关系"><a href="# 极小项和主析取范式之间的关系" class="headerlink" title="极小项和主析取范式之间的关系"></a>极小项和主析取范式之间的关系</h5><ul>
+<li>主析取范式包含的极小项的成真赋值也是主析取范式的成真赋值</li>
+<li>主析取范式的任一一个成真赋值是其包含的某个极小项的成真赋值</li>
+<li>主析取范式不包含的极小项的成真赋值是主析取范式的成假赋值</li>
+</ul>
+<h5 id="存在性证明"><a href="# 存在性证明" class="headerlink" title="存在性证明"></a>存在性证明 </h5><p> 假设 $A’$ 是公式 $A(p_1,p_2,\dots,p_n)$ 的析取范式，如果 $A’$ 中某个合取子句 $A_i$ 即不包含 $p_j$ 也不包含 $\lnot p_j$ ，那么我们将 $A_i$ 展成如下形式：$$\begin{array}{cl} A_i &amp; ⧦ A_i\land\mathbf T \\&amp; ⧦ A_i\land (p_j\lor\lnot p_j) \\&amp; ⧦ (A_i\land p_j)\lor (A_i\land\lnot p_j)\end{array}$$ </p>
+<p>将合取子句中重复出现的命题变元、矛盾式消去，将重复出现的合取子句消去。</p>
+<p>最后将所有的合取子句整理变元顺序，成为极小项，并得到主析取范式 $A’’$</p>
+<h5 id="唯一性证明"><a href="# 唯一性证明" class="headerlink" title="唯一性证明"></a>唯一性证明 </h5><p> 假设公式 $A(p_1,p_2,\dots,p_n)$ 存在两个不同的主析取范式 $B$ 和 $C$ 。由于 $A⧦B$ 且 $A⧦C$ 所以 $B⧦C$ 。</p>
+<p>因为 $B$ 和 $C$ 是两个不同的主析取范式，那么一定存在某个极小项 $m_i$ 只出现在 $B$ 或只出现在 $C$ 中，不妨假设 $m_i$ 只出现在 $B$ 中，不出现在 $C$ 中，这样 $m_i$ 的成真赋值是 $B$ 的成真赋值，却是 $C$ 的成假赋值，这与 $B⧦C$ 矛盾。      </p>
+<p>所以 $B$ 和 $C$ 必然相同，也就是说公式 $A(p_1,p_2,\dots,p_n)$ 的主析取范式是唯一的。</p>
+<h5 id="命题公式的等值分类"><a href="# 命题公式的等值分类" class="headerlink" title="命题公式的等值分类"></a>命题公式的等值分类 </h5><p> 具有相同主析取范式的公式都是等值的，属于同一个等值类，否则属于不同的等值类。</p>
+<p>虽然公式的数量无限多，但是等值类的数量是有限的。</p>
+<p>极小项的数量为 $N=2^n$ ，由极小项组合成的主析取范式的数量为 $2^N$，等值类的数量等于主析取范式的数量</p>
+<h5 id="主合取范式的证明"><a href="# 主合取范式的证明" class="headerlink" title="主合取范式的证明"></a>主合取范式的证明 </h5><p> 主合取范式具有和主析取范式对称的性质。</p>
+<p>主合取范式由极大项合取构成的。极大项具有唯一的成假赋值。</p>
+<h2 id="联结词集完备性"><a href="# 联结词集完备性" class="headerlink" title="联结词集完备性"></a>联结词集完备性 </h2><p> 每个等值类都对应唯一的真值函数，它们是一一对应的。真值函数与相应等值类的每个命题公式等值，尤其是主范式。</p>
+<h3 id="功能完备集"><a href="# 功能完备集" class="headerlink" title="功能完备集"></a>功能完备集 </h3><p> 如果任意一个真值函数都可以用仅包含某个联结词集中的联结词的命题公式表示，则称这个联结词集为功能完备集。${\lnot,\land,\lor,\rightarrow,\leftrightarrow}$、${\lnot,\land,\lor}$、${\lnot,\rightarrow}$、${\downarrow}$ 都是功能完备集。</p>
+<h3 id="冗余联结词"><a href="# 冗余联结词" class="headerlink" title="冗余联结词"></a>冗余联结词 </h3><p> 在一个联结词集中，如果某个联结词可以用集合中其他联结词来定义，则这个联结词称作冗余联结词</p>
+<p>如果一个功能完备集不包含冗余联结词，则称这个功能完备集是极小的。</p>
+<h3 id="功能完备集的证明"><a href="# 功能完备集的证明" class="headerlink" title="功能完备集的证明"></a>功能完备集的证明 </h3><p> 功能完备集的证明很简单：从一个已知的功能完备集中去掉冗余联结词，直到得到该功能完备集。</p>
+<p>非功能完备集的证明比较复杂，没有统一的证明方法。</p>
+<h2 id="命题演算形式系统"><a href="# 命题演算形式系统" class="headerlink" title="命题演算形式系统"></a>命题演算形式系统 </h2><h3 id="形式系统"><a href="# 形式系统" class="headerlink" title="形式系统"></a> 形式系统 </h3><p> 我们需要反应推理过程，需要严格化推理过程，需要像做计算一样进行推理，于是就有了形式系统。</p>
+<p>形式系统是一个符号系统，系统中的概念由符号表示，推理过程即符号变换的过程。</p>
+<p>形式系统应当包含以下要素：</p>
+<ul>
+<li>一群有限数量，可用于构建公式的符号集合</li>
+<li>一套文法，说明了如何以上述符号构建形式良好的公式</li>
+<li>一群公理模式的陈述，每个公理必须是公式</li>
+<li>一群推理规则</li>
+</ul>
+<p>公理和推理规则确保系统内由正确的前提总能得到正确的推理结果。</p>
+<h4 id="证明"><a href="# 证明" class="headerlink" title="证明"></a>证明 </h4><p> 公式序列 $A_1,A_2,\dots,A_m$ 称作 $A_m$ 的一个证明，如果 $A_i(1\le i\le m)$ 是公理，或者由 $A_{j1},A_{j2},\dots,A_{jk} (j1,\dots,jk &lt;i)$ 用推理规则推得。</p>
+<p>当这样的证明存在时，称 $A_m$ 为系统的定理，记作 $\vdash <em> A_m$ （</em> 是形式系统的名称），或者简记为 $\vdash A_m$</p>
+<h4 id="演绎"><a href="# 演绎" class="headerlink" title="演绎"></a>演绎 </h4><p> 设 $\Gamma$ 为一公式集合，公式序列 $A_1,A_2,\dots,A_m$ 称作 $A_m$ 的以 $\Gamma$ 为前提的演绎，如果 $A_i(1\le i\le m)$ 是 $\Gamma$ 中的公式（我们假设的前提），或是公理，或者由 $A_{j1},A_{j2},\dots,A_{jk} (j1,\dots,jk &lt;i)$ 用推理规则推得。</p>
+<p>当有这样的演绎时，$A_m$ 称作 $\Gamma$ 的演绎结果，记作 $\Gamma\vdash <em> A_m$ （</em> 是形式系统的名称），或者简记为 $\Gamma\vdash A_m$ 。称 $\Gamma$ 和 $\Gamma$ 的成员为 $A_m$ 的前提。</p>
+<p>证明是演绎在 $\Gamma$ 为空集时的特例。</p>
+<h3 id="命题演算形式系统 -PC-Propostion-Calculus"><a href="# 命题演算形式系统 -PC-Propostion-Calculus" class="headerlink" title="命题演算形式系统 PC(Propostion Calculus)"></a>命题演算形式系统 PC(Propostion Calculus)</h3><p>我们将命题以及重言式变换演绎构造为形式系统，成为命题演算形式系统，简称 PC。</p>
+<h4 id="PC- 的符号系统"><a href="#PC- 的符号系统" class="headerlink" title="PC 的符号系统"></a>PC 的符号系统</h4><ul>
+<li>命题变元：$p,q,r,s,p_1,q_1,\dots$</li>
+<li>命题常元：$\mathbf T\quad\mathbf F$</li>
+<li>联结词：$\lnot,\rightarrow$ (去掉了其他的联结词)</li>
+<li>括号</li>
+<li>命题公式：规定了单个字符的合法组成方式（也即文法）</li>
+</ul>
+<h4 id="PC- 的公理"><a href="#PC- 的公理" class="headerlink" title="PC 的公理"></a>PC 的公理</h4><p>$A$，$B$，$C$ 表示任意的公式</p>
+<ul>
+<li>$A\rightarrow (B\rightarrow A)$</li>
+<li>$(A\rightarrow (B\rightarrow C))\rightarrow ((A\rightarrow B)\rightarrow (A\rightarrow C))$</li>
+<li>$(\lnot A\rightarrow\lnot B)\rightarrow (B\rightarrow A)$</li>
+</ul>
+<h4 id="PC- 的推理规则"><a href="#PC- 的推理规则" class="headerlink" title="PC 的推理规则"></a>PC 的推理规则</h4><p>$A$，$B$ 表示任意公式，PC 只有一条推理规则</p>
+<ul>
+<li>$A,A\rightarrow B/B$ （分离规则）</li>
+</ul>
+<h4 id="PC- 的性质"><a href="#PC- 的性质" class="headerlink" title="PC 的性质"></a>PC 的性质 </h4><h5 id="合理性"><a href="# 合理性" class="headerlink" title="合理性"></a> 合理性</h5><ul>
+<li>如果公式 $A$ 是系统 PC 的定理，则 $A$ 是重言式。说白了就是如果 $A$ 是定理，则 $A$ 一定是成立的。任何一个定理都是由公式序列推理得来。也即，如果 $\vdash_{PC}A$ ，则 $\models A$</li>
+</ul>
+<ul>
+<li>如果 $A$ 是公式集合 $\Gamma$ 的演绎结果，那么 $A$ 是 $\Gamma$ 的逻辑结果。即，如果 $\Gamma\vdash_{PC}A$，则 $\Gamma\models A$ </li>
+</ul>
+<p>这说明了 PC 的定理和演绎结果都存在推导过程，都是合乎逻辑的。</p>
+<p>PC 中的三个公理都是重言式，并且 PC 的分离规则是「保真」的，就是如果 $A$ 为真，$A\rightarrow B$ 为真，总有 $B$ 为真。</p>
+<p>因此，由公理和规则导出的定理都是重言式；由 $\Gamma$、公理和规则导出的公式，在 $\Gamma$ 中的公式都为真时也为真。</p>
+<h5 id="一致性"><a href="# 一致性" class="headerlink" title="一致性"></a>一致性 </h5><p> 没有公式 $A$ 使得 $\vdash_{PC}A$ 和 $\vdash_{PC}\lnot A$ 同时成立，即不会出现自相矛盾。</p>
+<p>PC 的合理性表明只要你是定理就一定是逻辑真理，那么根据矛盾律不可能存在 $A$ 和 $\lnot A$ 都是逻辑真理的情况。</p>
+<h5 id="完备性"><a href="# 完备性" class="headerlink" title="完备性"></a>完备性 </h5><p> 如果公式 $A$ 是重言式，则 $A$ 一定是 PC 中的定理 （如果 $\models A$ ，则 $\vdash_{PC}A$ </p>
+<p>如果公式 $A$ 是公式集合 $\Gamma$ 的逻辑结果，则 $A$ 一定是 $\Gamma$ 的演绎结果（如果 $\Gamma\models A$ ，则 $\Gamma\models_{PC}A$ </p>
+<p>合乎逻辑的命题，在 PC 中一定能推导出来。</p>
+<h3 id="PC- 中的证明"><a href="#PC- 中的证明" class="headerlink" title="PC 中的证明"></a>PC 中的证明 </h3><h4 id="证明定理：-vdash-PC-A-rightarrow-A"><a href="# 证明定理：-vdash-PC-A-rightarrow-A" class="headerlink" title="证明定理：$\vdash_{PC}A\rightarrow A$"></a> 证明定理：$\vdash_{PC}A\rightarrow A$</h4><p>$$\begin{array}{l}1.\quad (A\rightarrow (\color{red}{(A\rightarrow A)}\rightarrow\color{blue}{A}))\rightarrow((A\rightarrow\color{red}{(A\rightarrow A)})\rightarrow(A\rightarrow\color{blue}{A}))\quad 公理 2 \\2.\quad A\rightarrow (\color{red}{(A\rightarrow A)}\rightarrow A)\quad 公理 1 \\3.\quad (A\rightarrow (A\rightarrow A))\rightarrow (A\rightarrow A)\quad 对 1、2 使用分离规则 \\4.\quad A\rightarrow (A\rightarrow A)\quad 公理 1\\5.\quad A\rightarrow A\quad 对 3、4 使用分离规则 \end{array}$$</p>
+<p>1、2、4 都是公理，不需要证明。上述 5 个公式序列即为证明。</p>
+<h4 id="演绎 -A-B-rightarrow-A-rightarrow-C-vdash-B-rightarrow-C"><a href="# 演绎 -A-B-rightarrow-A-rightarrow-C-vdash-B-rightarrow-C" class="headerlink" title="演绎 ${A,B\rightarrow(A\rightarrow C)}\vdash B\rightarrow C$"></a>演绎 ${A,B\rightarrow(A\rightarrow C)}\vdash B\rightarrow C$</h4><p>$$\begin{array}{l}1.\quad A\quad 前提 \\2.\quad B\rightarrow (A\rightarrow C)\quad 前提 \\3.\quad A\rightarrow (B\rightarrow A)\quad 公理 1\\4.\quad B\rightarrow A\quad 对 1、3 用分离规则 \\5.\quad (B\rightarrow (A\rightarrow C))\rightarrow ((B\rightarrow A)\rightarrow(B\rightarrow C))\quad 公理 2\\6.\quad (B\rightarrow A)\rightarrow (B\rightarrow C)\quad 对 2、5 用分离规则 \\7.\quad B\rightarrow C\quad 对 4、6 用分离规则 \end{array}$$</p>
+<h3 id="三个元定理"><a href="# 三个元定理" class="headerlink" title="三个元定理"></a>三个元定理 </h3><p> 三个元定理是为了让证明、演绎的过程更加简洁，快速。之所以叫元定理因为这是关于定理证明的定理。 </p>
+<h4 id="演绎定理"><a href="# 演绎定理" class="headerlink" title="演绎定理"></a>演绎定理 </h4><p> 对任意公式集合 $\Gamma$ 和公式 $A，B$，有 $\Gamma\vdash A\rightarrow B$ 当且仅当 $\Gamma\cup{A}\vdash B$</p>
+<p>当 $\Gamma=\varnothing$ 时，$\vdash A\rightarrow B$ 当且仅当 ${A}\vdash B$ ，或 $A\vdash B$ </p>
+<p>证明必要性：</p>
+<p>有 $A\rightarrow B$ ，加上 $A$ ，分离规则得到 $B$</p>
+<p>证明充分性：</p>
+<p>有 $B$ , 以及公理 $B\rightarrow (A\rightarrow B)$ ，分离规则得到 $A\rightarrow B$</p>
+<h4 id="归谬定理"><a href="# 归谬定理" class="headerlink" title="归谬定理"></a>归谬定理 </h4><p> 对任何公式集合 $\Gamma$ 和公式 $A、B$ ，若 $\Gamma\cup{\lnot A}\vdash B$ ，$\Gamma\cup{\lnot A}\vdash\lnot B$，那么 $\Gamma\vdash A$</p>
+<p>如果同一组前提能推导出相互矛盾的结果，说明这组前提之间相互不一致，也就是说总有一些前提是其余前提的对立面。</p>
+<h4 id="穷举定理"><a href="# 穷举定理" class="headerlink" title="穷举定理"></a>穷举定理 </h4><p> 对任何公式集合 $\Gamma$ 和公式 $A、B$，若 $\Gamma\cup{\lnot A}\vdash B$，$\Gamma\cup{A}\vdash B$ 那么 $\Gamma\vdash B$ 。</p>
+<p>如果一个前提能推出结论，这个前提的反面也能推出相同的结论，说明结论的成立与此前提是否成立无关。</p>
+<h4 id="元定理简化证明"><a href="# 元定理简化证明" class="headerlink" title="元定理简化证明"></a>元定理简化证明 </h4><p> 证明 $\vdash\lnot\lnot A\rightarrow A$</p>
+<p>$$\begin{array}{l}1.\quad \lnot\lnot A\rightarrow (\lnot A\rightarrow\lnot\lnot A)\quad 公理 1\\2.\quad \lnot\lnot A\vdash\lnot A\rightarrow\lnot\lnot A\quad 对 1 使用演绎定理 \\3.\quad{\lnot\lnot A,\lnot A}\vdash\lnot\lnot A\quad 对 2 再次使用演绎定理 \\4.\quad \lnot A\rightarrow (\lnot\lnot A\rightarrow\lnot A)\quad 公理 1\\5.\quad {\lnot A,\lnot\lnot A}\vdash \lnot A \quad 两次对 4 使用演绎原理 \\6.\quad {\lnot\lnot A}\vdash A\quad 根据 3、5 由归谬定理得出 \\7.\quad \vdash\lnot\lnot A\rightarrow A \quad 对 6 使用演绎定理 \end{array}$$</p>
+<p>证明 $\vdash (A\rightarrow C)\rightarrow((B\rightarrow C)\rightarrow((\lnot A\rightarrow B)\rightarrow C))$</p>
+<p>根据演绎定理，只需要证明 ${A\rightarrow C,B\rightarrow C,\lnot A\rightarrow B}\vdash C$</p>
+<p>在左边添加 $A$ ，由 $A$ 和 $A\rightarrow C$ 根据分离规则得 $C$</p>
+<p>在左边添加 $\lnot A$ ，由 $\lnot A\rightarrow B$ 、$\lnot A$、$B\rightarrow C$ 根据分离规则得 $C$ </p>
+<p>因此，根据穷举定理证明 ${A\rightarrow C, B\rightarrow C, \lnot A\rightarrow C}\vdash C$</p>
+<h3 id="定理判定问题"><a href="# 定理判定问题" class="headerlink" title="定理判定问题"></a>定理判定问题 </h3><p> 形式系统定义就是符号串集合的构造性定义。</p>
+<blockquote>
+<p>所谓构造性定义，就是提供一些规则从无到有，从少到多生成整个符号串集合</p>
+<p>符号体系规定了符号串可能包含的字符，例如命题变元、常元和公式定理</p>
+<p>公理规定了符号串的模式，例如 PC 中的公理，只要是符合公理模式的命题公式必定属于符号串集合中</p>
+<p>推理规则规定了从集合中已知符号变换生成集合中其他符号串的方法</p>
+</blockquote>
+<p>因此，形式系统中的定理就是集合中的符号串，定理的证明过程就是符号串的构造过程，这个过程必须在有限步内结束。</p>
+<p>能否单靠形式系统本身的公理和推理规则在有限步骤内判断一个符号串是否在符号串集合中？</p>
+<p>仅靠形式系统本身的公理和推理规则难以保证在有限步骤内判断一个符号串是否在符号串集合中的。</p>
+<p>解决方法就是依靠形式系统的同构，来判定。例如 PC 系统可以利用同构：真值函数运算系统，只需要用真值表判定命题公式对应的真值函数是否重言式，即可判定是否是 PC 中的定理。</p>
+<blockquote>
+<p>同构，意思就是结构是相同的，只是使用的符号不同</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Mathematical-Logic/Math-DL-01-数理逻辑简介.html" itemprop="url">
+                  数理逻辑简介 1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-25T20:16:13+08:00" content="2017-03-25">
+              2017-03-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mathematical-Logic/" itemprop="url" rel="index">
+                    <span itemprop="name">Mathematical Logic</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Mathematical-Logic/Math-DL-01-数理逻辑简介.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Mathematical-Logic/Math-DL-01-数理逻辑简介.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Mathematical-Logic/Math-DL-01-数理逻辑简介.html" class="leancloud_visitors" data-flag-title="数理逻辑简介 1">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="数理逻辑由来"><a href="# 数理逻辑由来" class="headerlink" title="数理逻辑由来"></a>数理逻辑由来 </h2><p> 说起数理逻辑就要先提下逻辑学。逻辑学是探索、阐述和确立有效 <strong> 推理规则 </strong> 的学科，最早由古希腊学者亚里士多德创立。 亚里士多德最重要的工作是提出三段论学说。一个三段论就是包括有大前提、小前提和结论三部分的论证。 </p>
+<p>逻辑学还是以自然语言来表述，可能会因为自然语言的 <strong> 模糊性 </strong> 损害其准确性和权威。在十七世纪的时候，就有人提出利用计算的方法来代替人们思维中的逻辑推理过程。莱布尼茨就曾设想能不能创造一种「通用的科学语言」，可以把推理过程象数学一样利用公式来进行计算，从而得出正确结论。由于当时的条件，他的想法没有实现。</p>
+<p>1847 年，英国数学家布尔 G.Boole 发表了《逻辑的数学分析》，建立了「布尔代数」。布尔创造了一套符号系统，利用符号来表示逻辑中的各种概念。还建立了一系列的运算法则，利用代数的方法研究逻辑问题，初步奠定了 <strong> 数理逻辑 </strong> 的基础。</p>
+<p>1884 年，德国数学家弗雷格在《数论基础》一书中引入了 <strong> 量词 </strong> 的符号，使得数理逻辑的符号系统更加完备。</p>
+<p>数理逻辑的最基本的理论基础逐步形成，成为一门独立的学科。  </p>
+<p>数理逻辑就是使用数学的方式来研究关于推理、证明等问题的学科。</p>
+<h2 id="数理逻辑的分支"><a href="# 数理逻辑的分支" class="headerlink" title="数理逻辑的分支"></a>数理逻辑的分支 </h2><p> 目前数理逻辑有四大分支，分别是：</p>
+<ul>
+<li>公理集合论：该分支是由于罗素的 <strong> 逻辑悖论</strong>，促使很多数学家去研究集合论的无矛盾性问题产生的。</li>
+<li>证明论：为了研究数学系统的无矛盾性问题，需要以数学理论体系的概念、命题、证明等作为研究对象，研究数学系统的逻辑结果和证明的规律，这样产生的。</li>
+<li>递归论：主要研究可计算性的理论，它和计算机的发展和应用有密切的关系</li>
+<li>模型论：主要是研究形式系统和数学模型之间的关系。</li>
+</ul>
+<p><strong>命题演算 </strong> 和<strong>谓词演算 </strong> 是各分支的共同基础部分。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Node/JavaScript-node-Mac 安装 Node.js .html" itemprop="url">
+                  Mac 下安装 Node.js
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-25T19:47:43+08:00" content="2017-03-25">
+              2017-03-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Node/JavaScript-node-Mac 安装 Node.js .html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Node/JavaScript-node-Mac 安装 Node.js .html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Node/JavaScript-node-Mac 安装 Node.js .html" class="leancloud_visitors" data-flag-title="Mac 下安装 Node.js">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言 </h2><p> 安装 Node.js （以下简称 node）有很多种方式。在 Mac 下常用的方式是使用 Homebrew 进行安装。不过由于 node 更新频繁，在开发过程中很有可能会有切换 node 版本的需求，因此建议使用 nvm 安装管理 node。Homebrew 上面虽然有 nvm 但是官方不建议使用 Homebrew 进行安装。我也用过 Homebrew 安装过，不过容易出问题，最终又卸载了。 </p>
+<p>本文包括两方面内容： </p>
+<ul>
+<li>安装 nvm</li>
+<li>使用 nvm 管理 node 版本</li>
+</ul>
+<h2 id="安装 -nvm"><a href="# 安装 -nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h2><p>如果用过 Homebrew 安装过 nvm 建议您卸载了，<code>brew uninstall nvm</code></p>
+<p>详细的安装流程可以参阅官方文档 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a></p>
+<p>安装命令如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash</div></pre></td></tr></table></figure>
+<p>安装完毕后，不需要额外的配置即可使用 ，以下内容会被自动的添加到 profile 文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</div><div class="line">[-s &quot;$NVM_DIR/nvm.sh&quot;] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm</div></pre></td></tr></table></figure>
+<h2 id="使用 -nvm- 管理 -Node-js"><a href="# 使用 -nvm- 管理 -Node-js" class="headerlink" title="使用 nvm 管理 Node.js"></a>使用 nvm 管理 Node.js</h2><p>nvm 切换 node 版本的原理无非通过是修改环境变量，指向不同版本的 node 所在的路径。</p>
+<p>以下是常有的 nvm 命令，更多命令参考 <a href="https://github.com/creationix/nvm/blob/master/README.markdown" target="_blank" rel="external">nvm github 地址</a></p>
+<p><code>nvm ls-remote</code> 查看可安装的版本</p>
+<p><code>nvm install &lt;version&gt;</code> 安装指定版本的 node</p>
+<p><code>nvm ls</code>  列出目前安装的版本</p>
+<p><code>nvm use &lt;version&gt;</code> 切换版本，<code>use</code>  命令只对当前 shell 窗口有效</p>
+<p><code>nvm alias default &lt;version&gt;</code> 设置默认的 node 版本，对所有 shell 窗口有效</p>
+<p><code>nvm install node</code>  安装最新的 node</p>
+<p><code>nvm use node</code>  使用最新的 node</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/Math/Math-DM-38-树的基本概念.html" itemprop="url">
-                  Math-DM-38- 树的基本概念
+                  离散数学学习笔记 树的基本概念 38
                 </a>
               
             
@@ -331,7 +1210,7 @@
 
           
           
-             <span id="/Math/Math-DM-38-树的基本概念.html" class="leancloud_visitors" data-flag-title="Math-DM-38- 树的基本概念">
+             <span id="/Math/Math-DM-38-树的基本概念.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 树的基本概念 38">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -355,7 +1234,7 @@
       
         
           
-            <h2 id="概述"><a href="# 概述" class="headerlink" title="概述"></a>概述 </h2><p><strong> 树</strong>是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。     </p>
+            <h2 id="概述"><a href="# 概述" class="headerlink" title="概述"></a>概述 </h2><p><strong> 树</strong>是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。      </p>
 <p>另一个定义是：一个无向图是树当且仅当它在每对顶点之间存在唯一简单通路。       </p>
 <h3 id="一些常用的术语"><a href="# 一些常用的术语" class="headerlink" title="一些常用的术语"></a>一些常用的术语 </h3><p><strong> 根树 </strong> 是指定一个顶点作为根并且每条边的方向都离开根的树。    </p>
 <p>若 $u$ 是 $T$ 里非根的顶点，则 $u$ 的 <strong> 父母 </strong> 是使得从 $u$ 到 $v$ 存在有向边的唯一的顶点 $u$ 。当 $u$ 是 $v$ 的父母时，$v$ 称为 $u$ 的 <strong> 子女 </strong>。具有相同父母的顶点称为<strong> 兄弟 </strong>。非根顶点的<strong> 祖先 </strong> 是从根到该顶点的通路上的顶点，不包括该顶点自身，但包括根。顶点 $v$ 的后代是以 $v$ 作为祖先的顶点。树的顶点若没有子女称为 <strong> 树叶 </strong>。有子女的顶点称为<strong> 内点</strong>。        </p>
@@ -364,25 +1243,16 @@
 <blockquote>
 <p>注意，在计算机科学中，二叉树的定义是每个内点不超过 2 个子女的树，也即 2 元树。</p>
 </blockquote>
-<h2 id="树的性质"><a href="# 树的性质" class="headerlink" title="树的性质"></a>树的性质</h2><ol>
-<li>带有 $n$ 个顶点的树含有 $n-1$ 条边。     </li>
-</ol>
-<ol>
-<li>带有 $i$ 个内点的正则 $m$ 元树含有 $n=mi+1$ 个顶点。    </li>
-</ol>
-<ol>
-<li>一个正则 $m$ 元树若带有 </li>
-</ol>
+<h2 id="树的性质"><a href="# 树的性质" class="headerlink" title="树的性质"></a>树的性质 </h2><p> 带有 $n$ 个顶点的树含有 $n-1$ 条边。     </p>
+<p>带有 $i$ 个内点的正则 $m$ 元树含有 $n=mi+1$ 个顶点。    </p>
+<p>一个正则 $m$ 元树若带有      </p>
 <ul>
 <li>$n$ 个顶点，则带有 $i=(n-1)/m$ 个内点和 $l=[(m-1)n+1]/m$ 个树叶； </li>
 <li>$i$  个内点，则带有 $n=mi+1$ 个顶点和 $l=(m-1)i+1$ 个树叶； </li>
 <li>$l$  个树叶，则带有 $n=(ml-1)/(m-1)$ 个顶点和 $i=(l-1)/(m-1)$ 个内点。    </li>
 </ul>
-<ol>
-<li>若一颗高度为 $h$ 的 $m$ 元树的所有顶点都在 $h$ 层或 $h-1$ 层，则这棵树是平衡的。  </li>
-<li>在高度为 $h$ 的 $m$ 元树里至多有 $m^h$ 个树叶。    </li>
-<li>若一个高度为 $h$ 的 $m$ 元树带有 $l$ 个树叶，则 $h\ge\lceil log_ml\rceil$。 若这个 $m$ 元树势正则和平衡的，则 $h=\lceil log_ml\rceil$ 。</li>
-</ol>
+<p>若一颗高度为 $h$ 的 $m$ 元树的所有顶点都在 $h$ 层或 $h-1$ 层，则这棵树是平衡的。<br>在高度为 $h$ 的 $m$ 元树里至多有 $m^h$ 个树叶。      </p>
+<p>若一个高度为 $h$ 的 $m$ 元树带有 $l$ 个树叶，则 $h\ge\lceil log_ml\rceil$。 若这个 $m$ 元树势正则和平衡的，则 $h=\lceil log_ml\rceil$ 。</p>
 
           
         
@@ -856,7 +1726,7 @@
 <p>若 $G$ 是带 $e$ 条边和 $z$ 个顶点的连通可平面简单图，其中 $v\ge 3$，则 $e\le 3v-6$。    </p>
 <p>若 $G$ 是连通简单可平面简单图，则 $G$ 有度数不超过 5 的顶点。    </p>
 <p>若连通可平面简单图有 $e$ 条边和 $v$ 个顶点，$v\ge 3$ 并且没有长度为 3 的回路，则 $e\le 2v-4$。  </p>
-<h3 id="库拉图斯基定理"><a href="# 库拉图斯基定理" class="headerlink" title="库拉图斯基定理"></a>库拉图斯基定理 </h3><p> 若一个图是可平面的，则通过删除一条边 $\{u,v\}$ 并且添加一个新顶点 $w$ 和两条边 $\{u,w\}$ 与 $\{w,v\}$，所获得的任何图也是可平面的。这样的操作称为 <strong> 初等细分 </strong>。若可以从相同的图通过一系列初等细分来获得图 $G_1=(\mathbf V_1,\mathbf E_1)$ 和图 $G_2=(\mathbf V_2,\mathbf E_2)$，则它们称为是<strong> 同胚 </strong> 的。      </p>
+<h3 id="库拉图斯基定理"><a href="# 库拉图斯基定理" class="headerlink" title="库拉图斯基定理"></a>库拉图斯基定理 </h3><p> 若一个图是可平面的，则通过删除一条边 ${u,v}$ 并且添加一个新顶点 $w$ 和两条边 ${u,w}$ 与 ${w,v}$，所获得的任何图也是可平面的。这样的操作称为 <strong> 初等细分 </strong>。若可以从相同的图通过一系列初等细分来获得图 $G_1=(\mathbf V_1,\mathbf E_1)$ 和图 $G_2=(\mathbf V_2,\mathbf E_2)$，则它们称为是<strong> 同胚 </strong> 的。      </p>
 <p><strong>库拉图斯基定理</strong>&ensp;&ensp; 一个图是非可平面的当且仅当它包含一个同胚于 $K_{3,3}$ 或 $K_5$ 的子图。     </p>
 
           
@@ -989,13 +1859,13 @@
             <h2 id="最短通路"><a href="# 最短通路" class="headerlink" title="最短通路"></a>最短通路 </h2><p> 带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   </p>
 <p>与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   </p>
 <h3 id="最短通路算法"><a href="# 最短通路算法" class="headerlink" title="最短通路算法"></a>最短通路算法 </h3><p> 最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最短通路问题。    </p>
-<h4 id="迪克斯特拉算法细节"><a href="# 迪克斯特拉算法细节" class="headerlink" title="迪克斯特拉算法细节"></a>迪克斯特拉算法细节 </h4><p> 它首先用 $0$ 标记 $a$ ，用 $\infty$ 标记其余的顶点。用记号 $L_0(a)=0$ 和 $L_0(v)=\infty$ 表示在没有发生任何迭代之前的这些标记，下标 0 表示第 0 次迭代。这些表示是从 $a$ 到这些顶点的最短通路的长度，其中这些通路只包含顶点 $a$ 。因为不存在从 $a$ 到其他顶点的这种通路，所以 $\infty$ 是 $a$ 与这样的顶点之间的最短通路的长度。<br>迪克斯特拉算法是通过形成特殊顶点的集合来进行的。设 $S_k$ 表示在标记过程 $k$ 次迭代之后的特殊顶点集。首先让 $S_0=\varnothing$ 。集合 $S_k$ 是通过把不属于 $S_{k-1}$ 的带最小标记的顶点 $u$ 添加到 $S_{k-1}$ 里形成的。一旦把 $u$ 添加到 $S_k$ 里，就更新所有不属于 $S_k$ 的顶点的标记，使得顶点 $v$ 在第 $k$ 个阶段的标记 $L_k(v)$ 是只包含 $S_k$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度。<br>设 $v$ 是不属于 $S_k$ 的一个顶点。为了更新 $v$ 的标记，注意 $L_k(v)$ 是只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路的长度。当利用下面的观察结果时，就可以有效地完成这个更新：只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是只包含 $S_{k-1}$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是在第 $k-1$ 阶段加上边 $(u,v)$ 的从 $a$ 到 $u$ 的最短通路。换句话说 $L_k(a,v)=min\{L_{k-1}(a,v),L_{k-1}(a,u)+w(u,v)\}$<br>这个过程这样迭代：相继添加顶点到特殊顶点集里，直到添加 $z$ 为止。当把 $z$ 添加到特殊顶点集里时，它的标记就是从 $a$ 到 $z$ 的最短通路的长度。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {Dijkstra} (G: 所有权都为正数的带权连通简单图)\\<br>\{G 带有顶点 a=v_0,v_1,\dots,v_n=z 和权 w(v_i,v_j), 其中若 \{v_i,v_j\}不是 G 里的边，则 w(v_i,v_j)=\infty\} \\<br>\mathbf {for}\; i:=1\;\mathbf {to}\;n \\<br>\qquad L(v_i):=\infty \\<br>L(a) :=0 \\<br>S:=\varnothing \\<br>\{现在初始化标记，使得 a 的标记为 0 而所有其余标记为 \infty，S 是空集合 \} \\<br>\mathbf {while}\; z\notin S\\<br>\mathbf {begin}<br>\qquad a:= 不属于 S 的 L(u)最小的一个顶点 \\<br>\qquad S:=S\cup\{u\} \\<br>\qquad\mathbf {for}\; 所有不属于 S 的顶点 v\\<br>\qquad\qquad\mathbf {if}\; L(u)+w(u,v)&lt;L(v)\quad\mathbf {then}\; L(v):=L(u)+w(u,v)\\<br>\qquad \{这样就给 S 里添加带最小标记的顶点，并且更新不在 S 里的顶点的标记 \} \\<br>\mathbf {end}\{L(z)= 从 a 到 z 的最短通路的长度 \}<br>\end{array}<br>$$</p>
+<h4 id="迪克斯特拉算法细节"><a href="# 迪克斯特拉算法细节" class="headerlink" title="迪克斯特拉算法细节"></a>迪克斯特拉算法细节 </h4><p> 它首先用 $0$ 标记 $a$ ，用 $\infty$ 标记其余的顶点。用记号 $L_0(a)=0$ 和 $L_0(v)=\infty$ 表示在没有发生任何迭代之前的这些标记，下标 0 表示第 0 次迭代。这些表示是从 $a$ 到这些顶点的最短通路的长度，其中这些通路只包含顶点 $a$ 。因为不存在从 $a$ 到其他顶点的这种通路，所以 $\infty$ 是 $a$ 与这样的顶点之间的最短通路的长度。<br>迪克斯特拉算法是通过形成特殊顶点的集合来进行的。设 $S_k$ 表示在标记过程 $k$ 次迭代之后的特殊顶点集。首先让 $S_0=\varnothing$ 。集合 $S_k$ 是通过把不属于 $S_{k-1}$ 的带最小标记的顶点 $u$ 添加到 $S_{k-1}$ 里形成的。一旦把 $u$ 添加到 $S_k$ 里，就更新所有不属于 $S_k$ 的顶点的标记，使得顶点 $v$ 在第 $k$ 个阶段的标记 $L_k(v)$ 是只包含 $S_k$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度。<br>设 $v$ 是不属于 $S_k$ 的一个顶点。为了更新 $v$ 的标记，注意 $L_k(v)$ 是只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路的长度。当利用下面的观察结果时，就可以有效地完成这个更新：只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是只包含 $S_{k-1}$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是在第 $k-1$ 阶段加上边 $(u,v)$ 的从 $a$ 到 $u$ 的最短通路。换句话说 $L_k(a,v)=min{L_{k-1}(a,v),L_{k-1}(a,u)+w(u,v)}$<br>这个过程这样迭代：相继添加顶点到特殊顶点集里，直到添加 $z$ 为止。当把 $z$ 添加到特殊顶点集里时，它的标记就是从 $a$ 到 $z$ 的最短通路的长度。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {Dijkstra} (G: 所有权都为正数的带权连通简单图)\ <br>{G 带有顶点 a=v_0,v_1,\dots,v_n=z 和权 w(v_i,v_j), 其中若 {v_i,v_j} 不是 G 里的边，则 w(v_i,v_j)=\infty} \\<br>\mathbf {for}\; i:=1\;\mathbf {to}\;n \\<br>\qquad L(v_i):=\infty \\<br>L(a) :=0 \\<br>S:=\varnothing \\<br>{现在初始化标记，使得 a 的标记为 0 而所有其余标记为 \infty，S 是空集合} \\<br>\mathbf {while}\; z\notin S\\<br>\mathbf {begin}<br>\qquad a:= 不属于 S 的 L(u)最小的一个顶点 \ <br>\qquad S:=S\cup{u} \\<br>\qquad\mathbf {for}\; 所有不属于 S 的顶点 v\\<br>\qquad\qquad\mathbf {if}\; L(u)+w(u,v)&lt;L(v)\quad\mathbf {then}\; L(v):=L(u)+w(u,v)\\<br>\qquad {这样就给 S 里添加带最小标记的顶点，并且更新不在 S 里的顶点的标记} \\<br>\mathbf {end}{L(z)= 从 a 到 z 的最短通路的长度}<br>\end{array}<br>$$</p>
 <h4 id="验证迪克斯拉特算法的正确性"><a href="# 验证迪克斯拉特算法的正确性" class="headerlink" title="验证迪克斯拉特算法的正确性"></a>验证迪克斯拉特算法的正确性 </h4><p> 下面用归纳论证来证明迪克斯特拉算法的正确性。用下列断言作为归纳假设：在第 $k$ 次迭代里   </p>
 <ol>
 <li>$S$ 里的顶点 $v(v=0)$ 的标记是从 $a$ 到这个顶点的最短通路的长度。    </li>
 <li>不在 $S$ 里的顶点的标记是 (这个顶点自身除外) 只包含 $S$ 里顶点的、从 $a$ 到这个顶点的最短通路的长度</li>
 </ol>
-<p>当 $k=0$ 时，在没有执行任何迭代之前，$S=\{a\}$，所以从 $a$ 到除 $a$ 外的顶点的最短通路的长度是 $\infty$。设 $v$ 是在第 $k+1$ 次迭代里添加到 $S$ 里的顶点，使得 $v$ 是在第 $k$ 次迭代结束时带最小标记的不在 $S$ 的顶点。<br>根据归纳假设，可以看出在第 $k+1$ 次迭代之前，$S$ 里的顶点都用从 $a$ 出发的最短通路的长度来标记。另外，必须用从 $a$ 到 $v$ 的最短通路的长度来标记 $v$。假如情况不是这样，那么在第 $k$ 次迭代结束时，就可能存在包含不在 $S$ 里的顶点的、长度小于 $L_k(v)$ 的通路（因为 $L_k(v)$ 是在第 $k$ 次迭代之后，只包含 $S$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度）。设 $u$ 是在这样的通路里不属于 $S$ 的第一个顶点。则存在一条只包含 $S$ 里顶点的、从 $a$ 到 $u$ 的长度小于 $L_k(v)$ 的通路。这与对 $v$ 的选择相矛盾。因此，在第 $k+1$ 次迭代结束时 (1) 成立。<br>设 $u$ 时在第 $k+1$ 次迭代之后不属于 $S$ 的一个顶点。只包含 $S$ 里顶点的从 $a$ 到 $u$ 的最短通路要么包含 $v$、要么不包含 $v$。若它不包含 $v$，则根据归纳假设，它的长度是 $L_k(u)$。若它确实包含 $v$，则它必然是这样组成的：一条只包含 $S$ 里除 $v$ 之外的顶点的、从 $a$ 到 $v$ 的、具有最短可能长度的通路，后面接着从 $v$ 到 $u$ 的边。在这种情形里它的长度是 $L_k(v)+w(v,u)$。这样就证明了 (2) 为真，因为 $L_{k+1}(u)=min\{L_k(u),L_k(v)+w(v,u)\}$。</p>
+<p>当 $k=0$ 时，在没有执行任何迭代之前，$S={a}$，所以从 $a$ 到除 $a$ 外的顶点的最短通路的长度是 $\infty$。设 $v$ 是在第 $k+1$ 次迭代里添加到 $S$ 里的顶点，使得 $v$ 是在第 $k$ 次迭代结束时带最小标记的不在 $S$ 的顶点。<br>根据归纳假设，可以看出在第 $k+1$ 次迭代之前，$S$ 里的顶点都用从 $a$ 出发的最短通路的长度来标记。另外，必须用从 $a$ 到 $v$ 的最短通路的长度来标记 $v$。假如情况不是这样，那么在第 $k$ 次迭代结束时，就可能存在包含不在 $S$ 里的顶点的、长度小于 $L_k(v)$ 的通路（因为 $L_k(v)$ 是在第 $k$ 次迭代之后，只包含 $S$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度）。设 $u$ 是在这样的通路里不属于 $S$ 的第一个顶点。则存在一条只包含 $S$ 里顶点的、从 $a$ 到 $u$ 的长度小于 $L_k(v)$ 的通路。这与对 $v$ 的选择相矛盾。因此，在第 $k+1$ 次迭代结束时 (1) 成立。<br>设 $u$ 时在第 $k+1$ 次迭代之后不属于 $S$ 的一个顶点。只包含 $S$ 里顶点的从 $a$ 到 $u$ 的最短通路要么包含 $v$、要么不包含 $v$。若它不包含 $v$，则根据归纳假设，它的长度是 $L_k(u)$。若它确实包含 $v$，则它必然是这样组成的：一条只包含 $S$ 里除 $v$ 之外的顶点的、从 $a$ 到 $v$ 的、具有最短可能长度的通路，后面接着从 $v$ 到 $u$ 的边。在这种情形里它的长度是 $L_k(v)+w(v,u)$。这样就证明了 (2) 为真，因为 $L_{k+1}(u)=min{L_k(u),L_k(v)+w(v,u)}$。</p>
 <h4 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h4><p> 迪克斯特拉算法使用 $O(n^2)$ 次运算来求出连通简单无向带权图里两个顶点之间最短通路的长度。    </p>
 <h2 id="旅行商问题"><a href="# 旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题 </h2><p> 旅行商问题是求最短回路，即求完全图里总权数最小的哈密顿回路。<br>旅行商问题同哈密顿回路一样，没有有效的算法，目前解决问题的实际方法是使用近似算法。</p>
 
@@ -1698,8 +2568,8 @@
 <blockquote>
 <p>假设多重图有从 $a$ 到 $b$ 的欧拉通路，但不是欧拉回路。通路的第一条边为 $a$ 贡献 1 度，此后每次经过 $a$ 都贡献 2 度。通路的最后一条边为 $b$ 的度贡献 1 度，此前每次经过 $b$ 都贡献 2 度，因此 $a$ 和 $b$ 必定是奇数度。    </p>
 </blockquote>
-<h3 id="构造欧拉回路"><a href="# 构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在 G 里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的 G \\<br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是 H 里的顶点也是 circuit 的边的端点处开始的 H 里的一条回路 \\<br>\quad H\; :=\; 删除 subcircuit 的边和所有孤立点之后的 H \\<br>\quad circuit\; :=\; 在适当顶点上插入 subcircuit 之后的 circuit\\<br>\mathbf {end}(circuit 是欧拉回路)<br>\end{array}$$</p>
-<h2 id="哈密顿通路"><a href="# 哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路 </h2><p> 在图 $G=(\mathbf V,\mathbf E)$ 里，若 $\mathbf V=\{x_0,x_1,\dots,x_{n-1},x_n\}$ 并且对 $0\le i\lt j\le n$ 来说有 $x_j\neq x_i$，则通路 $x_0,x_1,\dots,x_{n-1},x_n$ 称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$ 称为哈密顿回路。    </p>
+<h3 id="构造欧拉回路"><a href="# 构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在 G 里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的 G \ <br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是 H 里的顶点也是 circuit 的边的端点处开始的 H 里的一条回路 \\<br>\quad H\; :=\; 删除 subcircuit 的边和所有孤立点之后的 H \\<br>\quad circuit\; :=\; 在适当顶点上插入 subcircuit 之后的 circuit\\<br>\mathbf {end}(circuit 是欧拉回路)<br>\end{array}$$</p>
+<h2 id="哈密顿通路"><a href="# 哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路 </h2><p> 在图 $G=(\mathbf V,\mathbf E)$ 里，若 $\mathbf V={x_0,x_1,\dots,x_{n-1},x_n}$ 并且对 $0\le i\lt j\le n$ 来说有 $x_j\neq x_i$，则通路 $x_0,x_1,\dots,x_{n-1},x_n$ 称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$ 称为哈密顿回路。    </p>
 <h3 id="求解哈密顿通路"><a href="# 求解哈密顿通路" class="headerlink" title="求解哈密顿通路"></a>求解哈密顿通路 </h3><p> 目前没有已知的简单的充要条件来判定哈密顿回路的存在性。不过有很多定理对哈密顿的存在性提供了充分条件，另外，某些性质可以用来证明一个图没有哈密顿回路。    </p>
 <p>带有一个顶点的图是没用哈密顿回路的。<br>图的边越多存在哈密顿回路的可能性就越大，尤其是每个顶点都加入边时。     </p>
 <h3 id="狄拉克定理"><a href="# 狄拉克定理" class="headerlink" title="狄拉克定理"></a>狄拉克定理 </h3><p> 如果 $G$ 是带 $n$ 个顶点的连通简单图，其中 $n\gt 3$，并且 $G$ 中每个顶点的度都至少为 $n/2$，则 $G$ 有哈密顿回路。    </p>
@@ -1833,7 +2703,7 @@
       
         
           
-            <h2 id="连通性"><a href="# 连通性" class="headerlink" title="连通性"></a>连通性 </h2><h3 id="定义和相关术语"><a href="# 定义和相关术语" class="headerlink" title="定义和相关术语"></a> 定义和相关术语 </h3><h4 id="无向图定义"><a href="# 无向图定义" class="headerlink" title="无向图定义"></a> 无向图定义 </h4><p> 设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$<strong>路径 </strong> 是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中 $x_0=u$ 而 $x_n=v$。当这个图是简单图时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即 $u=v$ 且长度大于 0，则它是一条 <strong> 封闭路径 </strong>。<br> 若通路径不包含重复的相同边，则它是 <strong> 路线 </strong> 。<br> 当没有必要区分多重边时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示路径。<br>通路表示没有重复顶点的路径。       </p>
+            <h2 id="连通性"><a href="# 连通性" class="headerlink" title="连通性"></a>连通性 </h2><h3 id="定义和相关术语"><a href="# 定义和相关术语" class="headerlink" title="定义和相关术语"></a> 定义和相关术语 </h3><h4 id="无向图定义"><a href="# 无向图定义" class="headerlink" title="无向图定义"></a> 无向图定义 </h4><p> 设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$<strong>路径 </strong> 是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)={x_0,x_1},f(e_2)={x_1,x_2},\dots,f(e_n)={x_{n-1},x_n}$，其中 $x_0=u$ 而 $x_n=v$。当这个图是简单图时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即 $u=v$ 且长度大于 0，则它是一条 <strong> 封闭路径 </strong>。<br> 若通路径不包含重复的相同边，则它是 <strong> 路线 </strong> 。<br> 当没有必要区分多重边时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示路径。<br>通路表示没有重复顶点的路径。       </p>
 <blockquote>
 <p>路径 (walk)、通路(path)，、封闭路径(closed walk)、回路(circuit)、路线(trail)<br> 上面定义的概念，有很多不同的术语， 因此需要注意以下几点： </p>
 <ul>
@@ -2175,7 +3045,7 @@
 </table>
 <h3 id="邻接矩阵"><a href="# 邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵 </h3><h4 id="基于顶点的相邻关系"><a href="# 基于顶点的相邻关系" class="headerlink" title="基于顶点的相邻关系"></a> 基于顶点的相邻关系 </h4><p> 假设 $G=(\mathbf V,\mathbf E)$ 是简单图，其中 $\mid\mathbf V\mid=m$。假设把 $G$ 的顶点任意地排列成 $v_1,v_2,\dots,v_n$。对这个顶点表来说，$G$ 的邻接矩阵 $\mathbf A$ 是一个 $n\times n$ 的 $0-1$ 矩阵，它满足这样的性质：当 $v_i$ 和 $v_j$ 相邻时第 $(i,j)$ 项是 1，当 $v_i$ 和 $v_j$ 不相邻时第 $(i,j)$ 项是 0。      </p>
 <p>图的邻接矩阵依赖于所选择顶点的顺序。因此带 $n$ 个顶点的图有 $n!$ 个不同的邻接矩阵，因为 $n$ 个顶点有 $n!$ 个不同的顺序。     </p>
-<p>邻接矩阵也可以用来表示带环和多重边的无向图。把顶点 $a_i$ 上的环表示成邻接矩阵第 $(i,i)$ 位置上 1，当出现多重边时，第 $(i,j)$ 项等于 $\{a_i,a_j\}$ 关联的边数。包括多重图和伪图在内的所有无向图都具有对称的邻接矩阵。      </p>
+<p>邻接矩阵也可以用来表示带环和多重边的无向图。把顶点 $a_i$ 上的环表示成邻接矩阵第 $(i,i)$ 位置上 1，当出现多重边时，第 $(i,j)$ 项等于 ${a_i,a_j}$ 关联的边数。包括多重图和伪图在内的所有无向图都具有对称的邻接矩阵。      </p>
 <p>有向图的邻接矩阵不必是对称的，因为当从 $a_i$ 到 $a_j$ 有边时，从 $a_j$ 到 $a_i$ 可以没边。    </p>
 <h4 id="关联矩阵"><a href="# 关联矩阵" class="headerlink" title="关联矩阵"></a>关联矩阵 </h4><p> 设 $G=(\mathbf V,\mathbf E)$ 是无向图。设 $v_1,v_2,\dots, v_n$，是顶点而 $e_1,e_2,\dots,e_n$ 是边。则相对于 $\mathbf V$ 和 $\mathbf E$ 的这个顺序的关联矩阵是 $n\times m$ 矩阵 $\mathbf M=[m_{ij}]$，其中 $$m_{ij} =\begin{cases}1\qquad 当边 e_j 关联 v_i 时 \\0\qquad 否则 \end{cases}$$<br>关联矩阵示例：<br><img src="../images/graph_06.png" alt=""></p>
 
@@ -2372,7 +3242,7 @@
 <li>是否存在环 </li>
 </ul>
 <h3 id="一些特殊的简单图"><a href="# 一些特殊的简单图" class="headerlink" title="一些特殊的简单图"></a>一些特殊的简单图 </h3><h4 id="完全图"><a href="# 完全图" class="headerlink" title="完全图"></a> 完全图</h4><p>$n$ 个顶点的完全图是在每对顶点之间都恰好有一条边的简单图。用 $K_n$ 表示。<br><img src="../images/graph_01.png" alt=""></p>
-<h4 id="圈图"><a href="# 圈图" class="headerlink" title="圈图"></a>圈图 </h4><p> 圈图是由 $n$ 个顶点 $v_1,v_2,\dots,v_n$ 以及边 $\{v_1,v_2\},\{v_2,v_3\},\dots, \{v_{n-1}, v_n\},\{v_n,v_1\}$ 组成的。用 $C_n$ 表示。<br><img src="../images/graph_02.png" alt=""></p>
+<h4 id="圈图"><a href="# 圈图" class="headerlink" title="圈图"></a>圈图 </h4><p> 圈图是由 $n$ 个顶点 $v_1,v_2,\dots,v_n$ 以及边 ${v_1,v_2},{v_2,v_3},\dots, {v_{n-1}, v_n},{v_n,v_1}$ 组成的。用 $C_n$ 表示。<br><img src="../images/graph_02.png" alt=""></p>
 <h4 id="轮图"><a href="# 轮图" class="headerlink" title="轮图"></a>轮图 </h4><p> 当给圈图添加另一个顶点，并且把这个新顶点与圈图里 $n$ 个顶点逐个连接时，就得出轮图。用 $W_n$ 表示。<br><img src="../images/graph_03.png" alt="">    </p>
 <h4 id="n 立方体图"><a href="#n 立方体图" class="headerlink" title="n 立方体图"></a>n 立方体图</h4><p>$n$ 立方体图是用顶点表示 $2^n$ 个长度为 $n$ 的位串的图。两个顶点相邻当且仅当它们所表示的位串恰恰相差一位。 可以从 $n$ 立方图 $Q_n$ 来构造 $(n+1)$ 立方体图 $Q_{n+1}$，方法是建立 $Q_n$ 的两个副本，在 $Q_n$ 的一个副本的顶点标记前加 0，在 $Q_n$ 的另一个副本的顶点标记前加 1，并且加入连接那些标志只在第一位不同的两个顶点的边。<br><img src="../images/graph_04.png" alt=""></p>
 <h4 id="偶图"><a href="# 偶图" class="headerlink" title="偶图"></a>偶图 </h4><p> 若把简单图 $G$ 的顶点集分成两个不相交的非空集合 $\mathbf V_1$ 和 $\mathbf V_2$，使得图的每一条边都连接着 $\mathbf V_1$ 里的一个顶点与 $\mathbf V_2$ 里的一个顶点。因此 $G$ 里没有边是连接着 $\mathbf V_1$ 里的两个顶点或 $\mathbf V_2$ 里的两个顶点。则 $G$ 称为偶图或者二分图。     </p>
@@ -2642,7 +3512,7 @@
           
             <h2 id="关系的闭包"><a href="# 关系的闭包" class="headerlink" title="关系的闭包"></a>关系的闭包 </h2><p> 一般来说，设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。$\mathbf R$ 可能具有或者不具有某些性质 $\mathbf P$，例如自反性、对称性或传递性。如果存在包含 $\mathbf R$ 的具有性质 $\mathbf P$ 的关系 $\mathbf S$，并且 $\mathbf S$ 是包含 $\mathbf R$ 且具有性质 $\mathbf P$ 的每一个关系的子集，那么 $\mathbf S$ 叫做 $\mathbf R$ 的关于 $\mathbf P$ 的闭包。</p>
 <h3 id="构造闭包"><a href="# 构造闭包" class="headerlink" title="构造闭包"></a>构造闭包 </h3><h4 id="自反闭包"><a href="# 自反闭包" class="headerlink" title="自反闭包"></a> 自反闭包 </h4><p> 给定集合 $\mathbf A$ 上的关系 $\mathbf R$，对于 $a\in\mathbf R$，可以通过把形如 $(a,a)$ 的所有的对，除了已在 $\mathbf R$ 中的之外，都加到 $\mathbf R$ 中，就构成了 $\mathbf R$ 的自反闭包。 </p>
-<h4 id="对称闭包"><a href="# 对称闭包" class="headerlink" title="对称闭包"></a>对称闭包</h4><p>$\mathbf R\cup\mathbf R^{-1}$ 是 $\mathbf R$ 的对称闭包，其中 $\mathbf R^{-1}=\{(b,a)\mid (a,b)\in\mathbf R\}$。     </p>
+<h4 id="对称闭包"><a href="# 对称闭包" class="headerlink" title="对称闭包"></a>对称闭包</h4><p>$\mathbf R\cup\mathbf R^{-1}$ 是 $\mathbf R$ 的对称闭包，其中 $\mathbf R^{-1}={(b,a)\mid (a,b)\in\mathbf R}$。     </p>
 <h4 id="传递闭包"><a href="# 传递闭包" class="headerlink" title="传递闭包"></a>传递闭包 </h4><p> 我们需要借助图来构造传递闭包，首先介绍几个关于图的术语。      </p>
 <ol>
 <li>在有向图 $G$ 中从 $a$ 到 $b$ 的一条路径是 $G$ 中一条或多条边的序列 $(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中 $x_0=a, x_n=b$。即一个边的序列，其中一条边的终点和路径中下一条边的始点相同。这条路记为 $x_0,x_1,\dots,x_{n-1},x_n$，长度为 $n$。    </li>
@@ -2780,7 +3650,7 @@
         
           
             <h2 id="关系的表示"><a href="# 关系的表示" class="headerlink" title="关系的表示"></a>关系的表示 </h2><p> 本文讨论用 $0-1$ 矩阵和有向图的方式表示关系。    </p>
-<h3 id="用矩阵表示关系"><a href="# 用矩阵表示关系" class="headerlink" title="用矩阵表示关系"></a>用矩阵表示关系 </h3><p> 假设 $\mathbf R$ 是从 $\mathbf A=\{a_1,a_2,\dots,a_m\}$ 到 $\mathbf B=\{b_1,b_2,\dots,b_n\}$ 的关系。关系 $\mathbf R$ 可以用矩阵 $\mathbf M_R=[m_{ij}]$ 来表示，其中 <br>$$m_{ij}=\begin{cases}1\qquad 如果(a_i,a_j)\in\mathbf R\\0\qquad 如果(a_i,b_j)\notin\mathbf R\end{cases}$$ 该表示方式，依赖于 $\mathbf A$ 和 $\mathbf B$ 的使用的排序。<br> 集合上的关系的矩阵是一个方阵，可以用矩阵来确定关系是否具有某种性质。<br>例如 $\mathbf R=\{(2,1),(3,1),(3,2)\}$, 关于 $\mathbf R$ 的矩阵是 $$\mathbf M_R=\begin{bmatrix}0&amp;0\\1&amp;0\\1&amp;1\end{bmatrix}$$   </p>
+<h3 id="用矩阵表示关系"><a href="# 用矩阵表示关系" class="headerlink" title="用矩阵表示关系"></a>用矩阵表示关系 </h3><p> 假设 $\mathbf R$ 是从 $\mathbf A={a_1,a_2,\dots,a_m}$ 到 $\mathbf B={b_1,b_2,\dots,b_n}$ 的关系。关系 $\mathbf R$ 可以用矩阵 $\mathbf M_R=[m_{ij}]$ 来表示，其中 <br>$$m_{ij}=\begin{cases}1\qquad 如果(a_i,a_j)\in\mathbf R\\0\qquad 如果(a_i,b_j)\notin\mathbf R\end{cases}$$ 该表示方式，依赖于 $\mathbf A$ 和 $\mathbf B$ 的使用的排序。<br> 集合上的关系的矩阵是一个方阵，可以用矩阵来确定关系是否具有某种性质。<br>例如 $\mathbf R={(2,1),(3,1),(3,2)}$, 关于 $\mathbf R$ 的矩阵是 $$\mathbf M_R=\begin{bmatrix}0&amp;0\\1&amp;0\\1&amp;1\end{bmatrix}$$   </p>
 <h4 id="自反关系的矩阵"><a href="# 自反关系的矩阵" class="headerlink" title="自反关系的矩阵"></a>自反关系的矩阵</h4><p>$\mathbf R$ 是自反的，当且仅当 $i=1,2,\dots,n,m_i=1$。换句话说，如果 $\mathbf M_R$ 的主对角线的所有元素都等于 1，那么 $\mathbf R$ 是自反的。    </p>
 <h4 id="对称关系的矩阵"><a href="# 对称关系的矩阵" class="headerlink" title="对称关系的矩阵"></a>对称关系的矩阵 </h4><p>$\mathbf R$ 是对称的，当且仅当对所有的整数对 $i，j$(其中 $i=1,2,\dots,n, j=1,2,\dots,m$) 都有 $m_{ij}=m_{ji}$。也就是说 $\mathbf R$ 是对称的当且仅当 $\mathbf M_R=(\mathbf M_R)^t$</p>
 <h4 id="反对称关系的矩阵"><a href="# 反对称关系的矩阵" class="headerlink" title="反对称关系的矩阵"></a>反对称关系的矩阵</h4><p>$\mathbf R$ 是反对称的，当 $i\neq j$ 时，$m_{ij}=0$ 或 $m_{ji}=0$</p>
@@ -2792,560 +3662,6 @@
 <li>一个关系是反对称的，当且仅当在不同的两个顶点之间不存在两条方向相反的边</li>
 <li>一个关系是传递的，当且仅当一条从顶点 $x$ 到顶点 $y$ 的边和一条顶点 $y$ 到顶点 $z$ 的边，就有一条从顶点 $x$ 到顶点 $z$ 的边(完成一个三角形，其中每条边都是具有正确方向的有向边)</li>
 </ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Math/Math-DM-27-关系及其性质.html" itemprop="url">
-                  离散数学学习笔记 关系及其性质 27
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-21T16:59:50+08:00" content="2017-01-21">
-              2017-01-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Math/Math-DM-27-关系及其性质.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-27-关系及其性质.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/Math/Math-DM-27-关系及其性质.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 关系及其性质 27">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="二元关系"><a href="# 二元关系" class="headerlink" title="二元关系"></a>二元关系 </h2><p> 关系是一种结构，通常用元组来表示关系。<br>集合之间的关系，是集合间的笛卡儿积的一个子集。<br>设 $\mathbf A$ 和 $\mathbf B$ 是集合，一个从 $\mathbf A$ 到 $\mathbf B$ 的二元关系是 $\mathbf A\times \mathbf B$ 的子集。<br>二元关系表示了两个集合的元素之间的关系。$n$ 元关系表示三个以上集合中元素之间的关系。    </p>
-<h3 id="函数作为关系"><a href="# 函数作为关系" class="headerlink" title="函数作为关系"></a>函数作为关系 </h3><p> 函数表示了这样一种关系，对于 $\mathbf A$ 中的每个元素恰好只有一个 $\mathbf B$ 中的元素与之相关。  </p>
-<h3 id="集合的关系"><a href="# 集合的关系" class="headerlink" title="集合的关系"></a>集合的关系 </h3><p> 集合的关系表示集合到它自身的关系。 例如，集合 $\mathbf A$ 的关系是从 $\mathbf A$ 到 $\mathbf A$ 的关系。    </p>
-<h4 id="集合关系的数量"><a href="# 集合关系的数量" class="headerlink" title="集合关系的数量"></a>集合关系的数量 </h4><p> 因为集合 $\mathbf A$ 上的关系是 $\mathbf A\times \mathbf A$ 的子集，$n$ 个元素集合的笛卡儿积有 $n^2$ 个元素，因此集合 $\mathbf A$ 存在 $2^{n^2}$ 个关系。    </p>
-<h3 id="关系的性质"><a href="# 关系的性质" class="headerlink" title="关系的性质"></a>关系的性质 </h3><h4 id="自反"><a href="# 自反" class="headerlink" title="自反"></a> 自反 </h4><p> 如果对每个元素 $a\in\mathbf A$ 有 $(a,a)\in\mathbf R$，那么集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做自反的。    </p>
-<h4 id="反自反"><a href="# 反自反" class="headerlink" title="反自反"></a>反自反 </h4><p> 如果对于每个 $a\in\mathbf A$，有 $(a,a)\notin\mathbf R$, 那么集合 $\mathbf A$ 上的关系 $\mathbf R$ 是反自反的，即没有 $\mathbf A$ 中的元素与自己有关系，关系 $\mathbf R$ 就是反自反的。</p>
-<h4 id="对称"><a href="# 对称" class="headerlink" title="对称"></a>对称 </h4><p> 对于 $a,b\in\mathbf A$，如果只要 $(a,b)\in\mathbf R$ 就有 $(b,a)\in\mathbf R$，则集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做对称的。$a$ 和 $b$ 可以是相等的。  </p>
-<h4 id="非对称的"><a href="# 非对称的" class="headerlink" title="非对称的"></a>非对称的 </h4><p> 如果 $(a,b)\in\mathbf R$ 推出 $(b,a)\notin\mathbf R$，关系 $\mathbf R$ 叫做非对称的。  </p>
-<h4 id="反对称"><a href="# 反对称" class="headerlink" title="反对称"></a>反对称 </h4><p> 如果对 $a,b\in\mathbf A$，仅当 $a=b$ 时 $(a,b)\in\mathbf R$ 和 $(b,a)\in\mathbf R$，则集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做反对称的。<br>只要关系 $\mathbf R$ 不存在这样的有序对: 即由 $a$ 和 $b$ 构成，并且 $a\neq b$，但是 $(a,b)\in\mathbf R$ 和 $(b,a)\in\mathbf R$。    </p>
-<h4 id="传递"><a href="# 传递" class="headerlink" title="传递"></a>传递 </h4><p> 如果对于 $a,b,c\in\mathbf A，(a,b)\in\mathbf R$ 并且 $(b,c)\in\mathbf R$ 则 $(a,c)\in\mathbf R$，那么集合 $\mathbf A$ 上的关系 $\mathbf R$ 叫做传递的</p>
-<h4 id="逆关系"><a href="# 逆关系" class="headerlink" title="逆关系"></a>逆关系 </h4><p> 设 $\mathbf R$ 是从集合 $\mathbf A$ 到集合 $\mathbf B$ 的关系。从 $\mathbf B$ 到 $\mathbf A$ 的逆关系是有序对的集合 $\{(b,a)\mid (a,b)\in\mathbf R\}$，记作 $\mathbf R^{-1}$。    </p>
-<h4 id="补关系"><a href="# 补关系" class="headerlink" title="补关系"></a>补关系 </h4><p> 补关系 $\overline {\mathbf R}$ 是有序对的集合 $\{(a,b)\mid (a,b)\notin\mathbf R\}$</p>
-<h3 id="关系的组合"><a href="# 关系的组合" class="headerlink" title="关系的组合"></a>关系的组合 </h3><p> 因为从 $\mathbf A$ 到 $\mathbf B$ 的关系是 $\mathbf A\times\mathbf B$ 的子集，可以按照两个集合组合的任何方式来组合两个从 $\mathbf A$ 到 $\mathbf B$ 的关系。例如 <br>$$\mathbf R_1\cup\mathbf  R_2 \\ \mathbf R_1\cap\mathbf R_2\\\mathbf R_1-\mathbf R_2\\\mathbf R_1\oplus\mathbf R_2$$<br> 另一种组合方式类似于复函数。<br>设 $\mathbf R$ 是从集合 $\mathbf A$ 到集合 $\mathbf B$ 的关系，$\mathbf S$ 是从集合 $\mathbf B$ 到集合 $\mathbf C$ 的关系。$\mathbf R$ 和 $\mathbf S$ 的合成是由有序对 $(a,c)$ 构成的关系，其中 $a\in\mathbf A，c\in\mathbf C$，并且对于它们存在一个元素 $b\in\mathbf B$ 使得 $(a,b)\in\mathbf R$ 和 $(b,c)\in\mathbf S$. 我们用 $\mathbf S\dots\mathbf R$ 表示 $\mathbf R$ 和 $\mathbf S$ 的合成。</p>
-<h4 id="自身的合成"><a href="# 自身的合成" class="headerlink" title="自身的合成"></a>自身的合成 </h4><p> 设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。幂 $\mathbf R^n, n=1,2,3,\dots,$ 递归的定义为 $$\mathbf R^1=\mathbf R\quad 和 \quad \mathbf R^{n+1}=\mathbf R^n\cdot \mathbf R $$</p>
-<h2 id="n 元关系"><a href="#n 元关系" class="headerlink" title="n 元关系"></a>n 元关系 </h2><p> 设 $\mathbf A_1,\mathbf A_2,\dots ,\mathbf A_n$ 是集合。在这些集合上的 $n$ 元关系是 $\mathbf A_1\times\mathbf A_2\times\dots\times\mathbf A_n$ 的子集。这些集合 $\mathbf A_1,\mathbf A_2,\dots,\mathbf A_n$ 叫做关系的域，$n$ 叫做它的阶。    </p>
-<h3 id="n 元关系运算"><a href="#n 元关系运算" class="headerlink" title="n 元关系运算"></a>n 元关系运算 </h3><h4 id="选择运算"><a href="# 选择运算" class="headerlink" title="选择运算"></a> 选择运算 </h4><p> 设 $\mathbf R$ 是 $n$ 元关系，$\mathbf C$ 是 $\mathbf R$ 中元素可能满足的一个条件。那么选择运算 $s_c$ 将 $n$ 元关系 $\mathbf R$ 映射到 $\mathbf R$ 中满足条件 $\mathbf C$ 的所有 $n$ 元组构成的 $n$ 元关系。    </p>
-<h4 id="投影"><a href="# 投影" class="headerlink" title="投影"></a>投影 </h4><p> 投影 $\mathbf P_{i_1,i_2,\dots,i_m}$ 将 $n$ 元组 $(a_1,a_2,\dots,a_n)$ 映到 $m$ 元组 $(a_{i_1},a_{i_2},\dots,a_{i_m})$，其中 $m\le n$。</p>
-<h4 id="连接运算"><a href="# 连接运算" class="headerlink" title="连接运算"></a>连接运算 </h4><p> 设 $\mathbf R$ 是 $m$ 元关系且 $\mathbf S$ 是 $n$ 元关系，其中 $p\le m$ 和 $p\le n$。连接 $\mathbf J_p(\mathbf R,\mathbf S)$ 是 $m+n-p$ 元关系，它包含了所有的 $(m+n-p)$ 元组 $(a_1,a_2,\dots,a_{m-p},c_1,c_2,\dots,c_p,b_1,b_2,\dots,b_{n-p})$，其中 $m$ 元组(a_1,a_2,\dots,a_{m-p},c_1,c_2,\dots,c_p)$ 属于 $\mathbf R$ 且 $n$ 元组 $(c_1,c_2,\dots,c_p,b_1,b_2,\dots,b_{n-p})$ 属于 $\mathbf S$。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/JavaScript/JavaScript-JavaScript-最佳实践.html" itemprop="url">
-                  JavaScript 最佳实践
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-17T14:25:53+08:00" content="2017-01-17">
-              2017-01-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/JavaScript/JavaScript-JavaScript-最佳实践.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="JavaScript/JavaScript-JavaScript-最佳实践.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/JavaScript/JavaScript-JavaScript-最佳实践.html" class="leancloud_visitors" data-flag-title="JavaScript 最佳实践">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="UI- 松耦合"><a href="#UI- 松耦合" class="headerlink" title="UI 松耦合"></a>UI 松耦合 </h2><h3 id="将 JavaScript 从 CSS 中抽离"><a href="# 将 JavaScript 从 CSS 中抽离" class="headerlink" title="将 JavaScript 从 CSS 中抽离"></a> 将 JavaScript 从 CSS 中抽离</h3><p>IE8 及更早版本的 IE 有一个特性，允许将 JavaScript 直接插入 CSS 中。虽然 IE9 已经不在支持这种特性，但应当注意不要在 CSS 中嵌入 JavaScript 代码</p>
-<h3 id="将 CSS 从 JavaScript 中抽离"><a href="# 将 CSS 从 JavaScript 中抽离" class="headerlink" title="将 CSS 从 JavaScript 中抽离"></a>将 CSS 从 JavaScript 中抽离 </h3><p> 所有的样式信息都应当保持在 CSS 中，当需要通过 JavaScript 来修改元素样式的时候，最佳方法是操作 CSS 的 <code>className</code>。<br> 有一种情形可以例外: 当需要给页面中的元素作定位，使其相对于另外一个元素或整个页面重新定位。这种计算是无法在 CSS 中完成的。    </p>
-<h3 id="将 JavaScript 从 HTML 中抽离"><a href="# 将 JavaScript 从 HTML 中抽离" class="headerlink" title="将 JavaScript 从 HTML 中抽离"></a>将 JavaScript 从 HTML 中抽离</h3><ul>
-<li>最好将所有的 JavaScript 代码都放入外置文件中，并在页面中通过 <code>&lt;script&gt;</code> 标签引用</li>
-<li>在 HTML 页面中，禁止使用 <code>on</code> 属性挂载事件处理程序。应当使用方法来添加事件</li>
-</ul>
-<h3 id="将 HTML 从 JavaScript 中抽离"><a href="# 将 HTML 从 JavaScript 中抽离" class="headerlink" title="将 HTML 从 JavaScript 中抽离"></a>将 HTML 从 JavaScript 中抽离 </h3><p> 尽量避免将 HTML 嵌入 JavaScript 代码中。</p>
-<h2 id="避免使用全局变量"><a href="# 避免使用全局变量" class="headerlink" title="避免使用全局变量"></a>避免使用全局变量 </h2><p> 全局变量和全局函数带来很多问题，例如命名冲突、代码脆弱性、难以测试、意外的 bug。    </p>
-<h3 id="零全局变量方式"><a href="# 零全局变量方式" class="headerlink" title="零全局变量方式"></a>零全局变量方式 </h3><p> 如果你的代码运行时不需要于其他代码产生交互，可以使用零全局变量方式 </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">win</span>) </span>&#123;</div><div class="line"><span class="meta">    "use strict"</span>;</div><div class="line">    <span class="comment">// body</span></div><div class="line">&#125;(<span class="built_in">window</span>));</div></pre></td></tr></table></figure>
-<p>如果项目中使用 jQuery 框架的话，一般用 <code>jQuery</code> 代替<code>window</code>。 </p>
-<h2 id="事件处理"><a href="# 事件处理" class="headerlink" title="事件处理"></a>事件处理 </h2><h3 id="隔离应用逻辑"><a href="# 隔离应用逻辑" class="headerlink" title="隔离应用逻辑"></a> 隔离应用逻辑 </h3><p> 将应用逻辑从事件处理程序中抽离出来有两点好处: 一是可重用，二是方便测试。  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">    popup.style.left = event.clientX + <span class="string">"px"</span>;</div><div class="line">    popup.style.top = event.clientY + <span class="string">"px"</span>;</div><div class="line">    popup.className = <span class="string">"reveal"</span>;</div><div class="line">&#125;</div><div class="line">addListener(element, <span class="string">"click"</span>, handleClick);</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> MyApplication = &#123;</div><div class="line">    handleClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.showPopup(event);</div><div class="line">    &#125;,</div><div class="line">    showPopup: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">        popup.style.left = event.clientX + <span class="string">"px"</span>;</div><div class="line">        popup.style.top = event.clientY + <span class="string">"px"</span>;</div><div class="line">        popup.className = <span class="string">"reveal"</span>;        </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">addListener(element, <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    MyApplication.handleClick(event);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="不要分发事件"><a href="# 不要分发事件" class="headerlink" title="不要分发事件"></a>不要分发事件 </h3><p> 上述实例代码还存在一个问题，即 <code>event</code> 被毫无节制地分发，应用逻辑不应当依赖于 <code>event</code> 对像，原因如下:      </p>
-<ul>
-<li>方法接口没有表明那些数据是必要的。好的 API 应该明确清楚表明回调传值的用处以及需要传那些值 </li>
-<li>最重要的一点是，如果想测试这个方法，必须重新创建一个 <code>event</code> 对象并将它作为参数传入。</li>
-</ul>
-<p>最佳方法是让事件处理程序使用 <code>event</code> 对象来处理事件，然后拿到所有需要的数据传给应用逻辑。<br>另外，如果需要对 <code>event</code> 执行任何必要的操作，包括阻止默认事件或阻止事件冒泡，都应该直接包含在事件处理程序中。  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MyApplication = &#123;</div><div class="line">    handleClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        event.preventDefault();</div><div class="line">        event.stopPropagation();</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.showPopup(event.clientX, event.clientY);</div><div class="line">    &#125;,</div><div class="line">    showPopup: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">        popup.style.left = x + <span class="string">"px"</span>;</div><div class="line">        popup.style.top = y +<span class="string">"px"</span>;</div><div class="line">        popup.className = <span class="string">"reveal"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="避免“空比较”"><a href="# 避免“空比较”" class="headerlink" title="避免“空比较”"></a>避免“空比较”</h2><h3 id="检测原始值"><a href="# 检测原始值" class="headerlink" title="检测原始值"></a>检测原始值 </h3><p> 如果你希望一个值是字符串、数字、布尔值或 <code>undefined</code>，最佳选择是使用<code>typeof</code> 运算符。<code>typeof</code>的独特之处在于，将其用于一个未声明的变量也不会报错。<br><code>null</code>一般不应用于检测语句，简单的和 <code>null</code> 比较通常不会包含足够的信息以判断值的类型是否合法。 但是如果所期望的值真的是 <code>null</code>，则可以直接和<code>null</code> 比较。这时应当使用 <code>===</code> 或<code>!==</code> 。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> name === <span class="string">"string"</span>) &#123;</div><div class="line">    anotherName = name.substirng(<span class="number">3</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> count === <span class="string">"number"</span>) &#123;</div><div class="line">    updateCount(count);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> found === <span class="string">"boolean"</span> &amp;&amp; found) &#123;</div><div class="line">    message(<span class="string">"Found!"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> MyApp === <span class="string">"undefined"</span>) &#123;</div><div class="line">    MyApp = &#123;&#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">// null</span></div><div class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"my-div"</span>);</div><div class="line"><span class="keyword">if</span> (element !== <span class="literal">null</span>) &#123;</div><div class="line">    element.className = <span class="string">"found"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="检测引用值"><a href="# 检测引用值" class="headerlink" title="检测引用值"></a>检测引用值</h3><ul>
-<li>杜绝使用 <code>typeof</code> 检测 <code>null</code> 的类型，因为 <code>typeof null</code> 会返回<code>object</code></li>
-<li>检测自定义类型或者内置类型可以使用 <code>value instanceof Object</code> 来判断，不过因为 <code>instanceof</code> 不仅检测对象的构造器，还检测原型链，因此使用时需注意 </li>
-</ul>
-<h3 id="检测函数"><a href="# 检测函数" class="headerlink" title="检测函数"></a>检测函数 </h3><p> 检测函数最好的方法是使用<code>typeof</code>。  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> myFunc === <span class="string">"function"</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h3 id="检测数组"><a href="# 检测数组" class="headerlink" title="检测数组"></a>检测数组 </h3><p> 检测数组最优雅的解决方案是:   </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value) === <span class="string">"[object Array]"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这种方式在识别内置对象时往往十分有用。<br>ECMAScript5 已经将 <code>Array.isArray</code> 正式引入 JavaScript。</p>
-<h3 id="检测属性"><a href="# 检测属性" class="headerlink" title="检测属性"></a>检测属性</h3><ul>
-<li>判断属性是否存在的最好办法是使用 <code>in</code> 运算符。<code>in</code>运算符仅仅简单的判断属性是否存在，而不会读取属性的值 </li>
-<li><code>in</code>运算符同时会检测对象的原型，如果只想检测实例对象的某个属性是否存在，则使用 <code>hasOwnProperty()</code> 方法</li>
-</ul>
-<h2 id="将配置数据从代码中分离出来"><a href="# 将配置数据从代码中分离出来" class="headerlink" title="将配置数据从代码中分离出来"></a>将配置数据从代码中分离出来 </h2><p> 配置数据示例:     </p>
-<ul>
-<li>URL</li>
-<li>需要展现给用户的字符串</li>
-<li>重复的值</li>
-<li>设置(比如每页的配置项)</li>
-<li>任何可能发生变更的值</li>
-</ul>
-<p>最好将配置数据抽离出来，可以放在文件最前面，或者单独一个文件。好处是不用修改 JavaScript 源码已、方便修改和防止漏改。   </p>
-<h2 id="抛出自定义错误"><a href="# 抛出自定义错误" class="headerlink" title="抛出自定义错误"></a>抛出自定义错误 </h2><h3 id="抛出错误的方式"><a href="# 抛出错误的方式" class="headerlink" title="抛出错误的方式"></a> 抛出错误的方式 </h3><p> 抛出错误时，最好抛出 <code>Error</code> 类型对象</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Something bad happened'</span>);</div></pre></td></tr></table></figure>
-<h3 id="抛出错误的好处"><a href="# 抛出错误的好处" class="headerlink" title="抛出错误的好处"></a>抛出错误的好处 </h3><p> 抛出错误有助于调试，例如:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDivs</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (element &amp;&amp; element.getElementsByTagName) &#123;</div><div class="line">        <span class="keyword">return</span> element.getElementsByTagName(<span class="string">"div"</span>);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"getDivs() : Argument must be a DOM element."</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="何时检查错误"><a href="# 何时检查错误" class="headerlink" title="何时检查错误"></a>何时检查错误</h3><ul>
-<li>如果一个函数被已知的实体调用，错误检查很可能没有必要，一般情况下该函数为私有函数</li>
-<li>如果不能确定函数被调用的所有地方，则需要进行一些错误检查</li>
-<li>抛出错误最佳的地方是在工具函数中  </li>
-<li>一旦修复了一个很难调试的错误，尝试增加一两个自定义错误，当再次发生错误时，这将有助于更容易的解决问题</li>
-<li>如果正在编写代码，思考一下: “我希望 [某些事情] 不会发生，如果发生，我的代码会一团糟糕”。这时，如果“某些事情”发生，就抛出一个错误</li>
-<li>如果正在编写的代码别人也会使用，思考一下他们使用的方式在特定的情况下抛出错误</li>
-<li>抛出错误的目的不是防止错误，而是在错误发生时能更加容易地调试</li>
-</ul>
-<h3 id="错误类型"><a href="# 错误类型" class="headerlink" title="错误类型"></a>错误类型</h3><ul>
-<li>可以用 <code>instanceof</code> 判断错误类型，从而处理特定的错误</li>
-<li>自定义错误类型可以区别于浏览器抛出的错误</li>
-<li>不要将 <code>try-catch</code> 中的 <code>catch</code> 块留空</li>
-</ul>
-<h2 id="直接量"><a href="# 直接量" class="headerlink" title="直接量"></a>直接量 </h2><h3 id="数字"><a href="# 数字" class="headerlink" title="数字"></a> 数字 </h3><p> 禁止八进制直接量</p>
-<h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>以下场景应当使用<code>null</code></p>
-<ul>
-<li>用来初始化一个变量</li>
-<li>用来和一个已初始化的变量比较</li>
-<li>当函数的入参和返回值</li>
-</ul>
-<p>以下场景不应当使用<code>null</code>   </p>
-<ul>
-<li>不要使用 <code>null</code> 来检测是否传入了某个参数 </li>
-<li>不要用 <code>null</code> 来检测一个未初始化的变量 <br> 理解 <code>null</code> 最好的方式是将它当作对象的占位符。    <h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3>避免在代码中使用<code>undefined</code>。  尤其不要将一个变量赋值为<code>undefined</code>。</li>
-</ul>
-<h3 id="对象直接量"><a href="# 对象直接量" class="headerlink" title="对象直接量"></a>对象直接量 </h3><p> 推荐使用对象直接量的方式创建一个对象。    </p>
-<h3 id="数组直接量"><a href="# 数组直接量" class="headerlink" title="数组直接量"></a>数组直接量 </h3><p> 推荐使用数组直接量的方式创建数组</p>
-<h2 id="语句"><a href="# 语句" class="headerlink" title="语句"></a>语句 </h2><h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><p> 任何情况下，都不应该省略 <code>default</code> 语句。    </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/JavaScript/JavaScript-JavaScript-编程风格.html" itemprop="url">
-                  JavaScript 编程风格
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-17T10:40:58+08:00" content="2017-01-17">
-              2017-01-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/JavaScript/JavaScript-JavaScript-编程风格.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="JavaScript/JavaScript-JavaScript-编程风格.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/JavaScript/JavaScript-JavaScript-编程风格.html" class="leancloud_visitors" data-flag-title="JavaScript 编程风格">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="编程风格"><a href="# 编程风格" class="headerlink" title="编程风格"></a>编程风格 </h2><h3 id="基本格式化"><a href="# 基本格式化" class="headerlink" title="基本格式化"></a> 基本格式化 </h3><h4 id="缩进"><a href="# 缩进" class="headerlink" title="缩进"></a> 缩进 </h4><p> 使用 4 个空格进行缩进     </p>
-<h4 id="语句结尾"><a href="# 语句结尾" class="headerlink" title="语句结尾"></a>语句结尾 </h4><p> 不要省略分号     </p>
-<h4 id="长度限制"><a href="# 长度限制" class="headerlink" title="长度限制"></a>长度限制 </h4><p> 每行的长度不要超过 100 字符  </p>
-<h4 id="换行"><a href="# 换行" class="headerlink" title="换行"></a>换行 </h4><p> 当需要换行时，最好在运算符后换行，下一行增加两个层级的缩进。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">callAFunction(<span class="built_in">document</span>, element, <span class="built_in">window</span>, <span class="string">"some string value"</span>, <span class="literal">true</span>, <span class="number">123</span>,</div><div class="line">        navigator);</div></pre></td></tr></table></figure>
-<p>例外: 当给变量赋值时，第二行的位置应当和赋值运算符的位置保持对齐，比如:      </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> result = something + anotherThing + yeAnotherTing + somethingElse + </div><div class="line">             anotherSomethingElse;</div></pre></td></tr></table></figure>
-<h4 id="空行"><a href="# 空行" class="headerlink" title="空行"></a>空行 </h4><p> 一般在以下场景中添加空行:      </p>
-<ul>
-<li>方法之间</li>
-<li>方法中的局部变量和第一条语句之间</li>
-<li>在多行或单行注释之前</li>
-<li>在方法内的逻辑片段之间插入空行，提高可读性</li>
-</ul>
-<h4 id="命名"><a href="# 命名" class="headerlink" title="命名"></a>命名</h4><ul>
-<li>遵照小驼峰式大小写命名法，即由小写字母开始，后续每个单词首字母都大写   </li>
-<li>变量尽量以名词作为前缀，函数以动词作为前缀  </li>
-<li>尽量在变量名中体现出值的数据类型，例如 <code>count</code>、<code>length</code> 和<code>size</code>表明数据类型是数字，<code>name</code>、<code>title</code>和 <code>message</code> 表明数据类型是字符串</li>
-<li>单个字符命名的变量，例如 <code>i</code>、<code>j</code> 和<code>k</code>通常在循环中使用   <h5 id="动词常见的约定"><a href="# 动词常见的约定" class="headerlink" title="动词常见的约定"></a>动词常见的约定</h5>| 动词 | 含义 |<br>|:–|:—|<br>|can| 函数返回一个布尔值 |<br>|has| 函数返回一个布尔值 |<br>|is | 函数返回一个布尔值 |<br>|get| 函数返回一个非布尔值 |<br>|set| 函数用来保存一个值 |</li>
-</ul>
-<h5 id="常量"><a href="# 常量" class="headerlink" title="常量"></a>常量 </h5><p> 使用大写字母和下划线 </p>
-<h5 id="构造函数"><a href="# 构造函数" class="headerlink" title="构造函数"></a>构造函数 </h5><p> 构造函数即前面冠以 <code>new</code> 运算符的函数，遵循大驼峰命名法，即以大写字母开始，后续每个单词首字母都大写。     </p>
-<h4 id="直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。"><a href="# 直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。" class="headerlink" title="直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。"></a>直接量字符串使用双引号，主要是因为方便在 <code>Java</code> 和<code>JavaScript</code>之间来回切换。</h4><p>禁止使用多行字符串，使用字符串连接符将字符串分成多份。     </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man \</span></div><div class="line">named Brady";</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man"</span> +</div><div class="line">                 <span class="string">"named Brady"</span>;</div></pre></td></tr></table></figure>
-<h3 id="注释"><a href="# 注释" class="headerlink" title="注释"></a>注释 </h3><h4 id="单行注释"><a href="# 单行注释" class="headerlink" title="单行注释"></a> 单行注释</h4><ul>
-<li>独占一行的注释，用来解释下一行代码。这行注释之前总是有一个空行，且缩进层级和下一行代码保持一致</li>
-<li>代码行尾部的注释。代码结束到注释之间至少有一个缩进。并且不应当超过单行最大字符数限制，如果超过了应该将注释放在代码行上方</li>
-<li>单行注释不应该以连续多行注释的形式出现，除非你注释掉一大段代码</li>
-</ul>
-<h4 id="多行注释"><a href="# 多行注释" class="headerlink" title="多行注释"></a>多行注释</h4><ul>
-<li>多行注释推荐使用 <code>Java</code> 的风格</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * 这是一段多行注释</div><div class="line"> * 这段注释包含两行文本</div><div class="line"> */</div></pre></td></tr></table></figure>
-<ul>
-<li>多行注释和代码之间没有空行，注释上方应当有一行空行，并且缩进层级和下放的代码保持一致</li>
-</ul>
-<h4 id="使用注释"><a href="# 使用注释" class="headerlink" title="使用注释"></a>使用注释</h4><ul>
-<li>难于理解的代码通常都应当加注释</li>
-<li>可能被误认为错误的代码，应当添加注释，防止被好心的开发者“修复”</li>
-</ul>
-<h2 id="语句和表达式"><a href="# 语句和表达式" class="headerlink" title="语句和表达式"></a>语句和表达式 </h2><p> 无论何种情况下，所有块语句都应当使用花括号，包括:</p>
-<ul>
-<li>if…else</li>
-<li>for</li>
-<li>while</li>
-<li>do…while</li>
-<li>try…catch…finally</li>
-</ul>
-<h3 id="花括号的对齐方式"><a href="# 花括号的对齐方式" class="headerlink" title="花括号的对齐方式"></a>花括号的对齐方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123;</div><div class="line">    doSomething();</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    doSomethingElse();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="switch 语句"><a href="#switch 语句" class="headerlink" title="switch 语句"></a>switch 语句 </h3><h4 id="缩进 -1"><a href="# 缩进 -1" class="headerlink" title="缩进"></a> 缩进</h4><ul>
-<li>每条 <code>case</code> 语句相对于 <code>switch</code> 关键字都缩进一个层级</li>
-<li>从第二条 <code>case</code> 语句开始，每条 <code>case</code> 语句前后各有一个空行</li>
-<li>连续的 <code>case</code> 语句之间省略空行</li>
-<li><code>default</code>语句是必须的</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span> (condition) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="string">"first"</span>:</div><div class="line">         <span class="comment">// 代码</span></div><div class="line">         <span class="keyword">break</span>;</div><div class="line"></div><div class="line">    <span class="keyword">case</span> <span class="string">"second"</span>:</div><div class="line">    <span class="keyword">case</span> <span class="string">"third"</span>:</div><div class="line">         <span class="comment">// 代码</span></div><div class="line">         <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span>: </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="变量、函数和运算符"><a href="# 变量、函数和运算符" class="headerlink" title="变量、函数和运算符"></a>变量、函数和运算符 </h2><h3 id="变量声明"><a href="# 变量声明" class="headerlink" title="变量声明"></a> 变量声明 </h3><p> 推荐将局部变量的定义作为函数内第一条语句。 并且推荐使用单 <code>var</code> 语句风格，每个变量的初始化独占一行，没有初始值的变量放在 <code>var</code> 语句的尾部。 例如:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomethingWithItems</span>(<span class="params">items</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> value = <span class="number">10</span>,</div><div class="line">        result = value + <span class="number">10</span>,</div><div class="line">        i, len;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>, len=items.length; i&lt;len; i++) &#123;</div><div class="line">        doSomething(items[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="函数声明"><a href="# 函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><ul>
-<li>推荐先声明函数，再使用</li>
-<li>对于函数内的局部函数，应该紧接着变量声明之后声明，之间用空行隔开</li>
-<li>函数声明禁止出现在 <code>if</code>、<code>while</code>、<code>for</code>、<code>try...catch</code>、<code>switch</code> 的语句块内</li>
-</ul>
-<h3 id="立即调用的函数"><a href="# 立即调用的函数" class="headerlink" title="立即调用的函数"></a>立即调用的函数 </h3><p> 为了让立即执行的函数能够被一眼看出来，将函数用一对圆括号包裹起来。比如:    </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> value = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 函数体</span></div><div class="line">    </div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        message: <span class="string">"Hi"</span></div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
-<h3 id="严格模式"><a href="# 严格模式" class="headerlink" title="严格模式"></a>严格模式 </h3><p> 最好不要在全局作用域使用<code>&quot;use strict&quot;</code>。 如果你将多个文件连接合并成一个文件时，当期中一个文件在全局作用域中启用了严格模式，则所有的代码都将以严格模式解析，这会很可能造成其他以非严格模式写的代码报错。     </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// code </span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">    "use strict"</span>;</div><div class="line">    <span class="comment">// code</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>推荐所有函数中都加上<code>&quot;use strict&quot;</code>。 </p>
-<h3 id="相等"><a href="# 相等" class="headerlink" title="相等"></a>相等 </h3><p> 因为强制类型转换的缘故，推荐使用 <code>===</code> 和<code>!==</code>，而不要使用 <code>==</code> 和<code>!=</code>。</p>
-<h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><ul>
-<li>尽量避免使用<code>eval()</code>，如果无它法，尽量在严格模式下使用<code>eval()</code></li>
-<li>严禁使用<code>Function</code> </li>
-<li>可以使用 <code>setTimeout()</code> 和<code>setInterval()</code>，但不要用字符串形式，要用函数</li>
-</ul>
-<h3 id="原始包装类型"><a href="# 原始包装类型" class="headerlink" title="原始包装类型"></a>原始包装类型 </h3><p> 禁止使用原始包装类型</p>
 
           
         
@@ -3419,7 +3735,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -3427,7 +3743,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -3436,7 +3752,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

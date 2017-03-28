@@ -92,16 +92,16 @@
 
 
 
-<meta name="description" content="序列  序列是用来表示有序表的离散结构。序列是从整数集合的子集 (通常是 $\{0,1,2,\dots \}$ 或 $\{1,2,3,\dots \}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。例如： 考虑序列 $\{a_n\}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_">
+<meta name="description" content="序列  序列是用来表示有序表的离散结构。序列是从整数集合的子集 (通常是 ${0,1,2,\dots}$ 或 ${1,2,3,\dots}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。例如： 考虑序列 ${a_n}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_4,\dots">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散数学学习笔记 序列求和 09">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-09-序列求和.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="序列  序列是用来表示有序表的离散结构。序列是从整数集合的子集 (通常是 $\{0,1,2,\dots \}$ 或 $\{1,2,3,\dots \}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。例如： 考虑序列 $\{a_n\}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_">
+<meta property="og:description" content="序列  序列是用来表示有序表的离散结构。序列是从整数集合的子集 (通常是 ${0,1,2,\dots}$ 或 ${1,2,3,\dots}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。例如： 考虑序列 ${a_n}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_4,\dots">
 <meta property="og:updated_time" content="2016-12-21T12:30:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学学习笔记 序列求和 09">
-<meta name="twitter:description" content="序列  序列是用来表示有序表的离散结构。序列是从整数集合的子集 (通常是 $\{0,1,2,\dots \}$ 或 $\{1,2,3,\dots \}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。例如： 考虑序列 $\{a_n\}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_">
+<meta name="twitter:description" content="序列  序列是用来表示有序表的离散结构。序列是从整数集合的子集 (通常是 ${0,1,2,\dots}$ 或 ${1,2,3,\dots}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。例如： 考虑序列 ${a_n}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_4,\dots">
 
 
 
@@ -349,7 +349,7 @@
       
 
       
-        <h2 id="序列"><a href="# 序列" class="headerlink" title="序列"></a>序列 </h2><p> 序列是用来表示有序表的离散结构。<br>序列是从整数集合的子集 (通常是 $\{0,1,2,\dots \}$ 或 $\{1,2,3,\dots \}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。<br>例如： 考虑序列 $\{a_n\}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_4,\dots $$ 开头是 $$1,{1\over 2},{1\over 3},{1\over 4},\dots $$  </p>
+        <h2 id="序列"><a href="# 序列" class="headerlink" title="序列"></a>序列 </h2><p> 序列是用来表示有序表的离散结构。<br>序列是从整数集合的子集 (通常是 ${0,1,2,\dots}$ 或 ${1,2,3,\dots}$) 到集合 $S$ 的函数。用记号 $a_n$ 表示整数 $n$ 的像，称 $a_n$ 为序列的一个项。<br>例如： 考虑序列 ${a_n}$，其中 $$a_n=1/n$$。 从 $a_1$ 开始的这个序列项的表，即 $$a_1,a_2,a_3,a_4,\dots $$ 开头是 $$1,{1\over 2},{1\over 3},{1\over 4},\dots $$  </p>
 <h3 id="几何序列"><a href="# 几何序列" class="headerlink" title="几何序列"></a>几何序列 </h3><p> 几何序列是如下形式的序列，$$a, ar, ar^2, \cdots ,ar^n, \cdots$$ 其中初项 $a$ 和公比 $r$ 都是实数。      </p>
 <blockquote>
 <p>几何序列是指数函数 $f(x)=ar^x$ 的离散对应物</p>
@@ -523,7 +523,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -531,7 +531,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -540,7 +540,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

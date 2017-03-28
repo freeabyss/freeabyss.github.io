@@ -779,7 +779,7 @@ $\p">
 </ul>
 <h3 id="实例"><a href="# 实例" class="headerlink" title="实例"></a>实例</h3><p><code>A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i</code><br>$$A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i$$<br><code>A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i</code><br>$$A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">\begin&#123;align&#125;</div><div class="line">\overline &#123;A\cap B&#125; &amp;= \&#123;x\mid x\notin A\cap B\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot(x\in(A\cap B))\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot(x\in A\land x\in B)\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot (x\in A)\lor \lnot(x\in B)\&#125;\\</div><div class="line">&amp;   =\&#123;x\mid x\notin A\lor x\notin B\&#125;\\</div><div class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\lor x\in \overline&#123;B&#125;\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\cup\overline&#123;B&#125;\&#125; \\</div><div class="line">&amp;   =\overline&#123;A&#125;\cup\overline&#123;B&#125;</div><div class="line">\end&#123;align&#125;</div></pre></td></tr></table></figure>
-<p>$$ \begin{align}<br>\overline {A\cap B} &amp;= \{x\mid x\notin A\cap B\} \\<br>&amp;   =\{x\mid \lnot(x\in(A\cap B))\} \\<br>&amp;   =\{x\mid \lnot(x\in A\land x\in B)\} \\<br>&amp;   =\{x\mid \lnot (x\in A)\lor \lnot(x\in B)\}\\<br>&amp;   =\{x\mid x\notin A\lor x\notin B\}\\<br>&amp;   =\{x\mid x\in \overline{A}\lor x\in \overline{B}\} \\<br>&amp;   =\{x\mid x\in \overline{A}\cup\overline{B}\} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
+<p>$$ \begin{align}<br>\overline {A\cap B} &amp;= {x\mid x\notin A\cap B} \\<br>&amp;   ={x\mid \lnot(x\in(A\cap B))} \\<br>&amp;   ={x\mid \lnot(x\in A\land x\in B)} \\<br>&amp;   ={x\mid \lnot (x\in A)\lor \lnot(x\in B)}\\<br>&amp;   ={x\mid x\notin A\lor x\notin B}\\<br>&amp;   ={x\mid x\in \overline{A}\lor x\in \overline{B}} \\<br>&amp;   ={x\mid x\in \overline{A}\cup\overline{B}} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">f(n) =</div><div class="line">\begin&#123;cases&#125;</div><div class="line">\frac&#123;n&#125;&#123;2&#125;,  &amp; \text&#123;if $n$ is even&#125; \\</div><div class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</div><div class="line">\end&#123;cases&#125;</div></pre></td></tr></table></figure>
 <p>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(x+y)^n=\sum_&#123;j=0&#125;^n\left(\begin&#123;array&#125;&#123;c&#125;n \\r\end&#123;array&#125;\right)x^&#123;n-1&#125;y^i</div></pre></td></tr></table></figure>
@@ -903,7 +903,7 @@ $\p">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -911,7 +911,7 @@ $\p">
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -920,7 +920,7 @@ $\p">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

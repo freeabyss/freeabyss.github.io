@@ -276,6 +276,673 @@
             
               
                 
+                <a class="post-title-link" href="/Math/Math-DM-07-集合.html" itemprop="url">
+                  离散数学学习笔记 集合 07
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-08T12:37:07+08:00" content="2016-12-08">
+              2016-12-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-07-集合.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-07-集合.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-07-集合.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 集合 07">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="集合"><a href="# 集合" class="headerlink" title="集合"></a>集合 </h2><p> 集合是一组无序的对象。</p>
+<blockquote>
+<p>该定义有逻辑悖论。以公理的基本假设为起点建立集合理论可以避免逻辑上的不一致。</p>
+</blockquote>
+<h3 id="集合概述"><a href="# 集合概述" class="headerlink" title="集合概述"></a>集合概述</h3><ul>
+<li>集合 $A$ 等于集合 $B$ 当且仅当 $∀x(x\in A↔︎x\in B)$</li>
+<li>集合 $A$ 是集合 $B$ 的子集当且仅当 $∀x(x\in A→x\in B)$</li>
+<li>集合 $A$ 是集合 $B$ 的真子集当且仅当 $∀x(x\in A→x\in B)∧∃x(x∈B∧x∉A)$</li>
+<li>幂集合：幂集合是集合 $S$ 所有子集的集合，包含空集合集合 $S$ 本身，用 $P(S)$ 表示<ul>
+<li>如果集合有 $n$ 个元素，那么幂集合的个数为 $2^n$ 个</li>
+</ul>
+</li>
+</ul>
+<h4 id="笛卡儿积"><a href="# 笛卡儿积" class="headerlink" title="笛卡儿积"></a>笛卡儿积 </h4><h5 id="元组"><a href="# 元组" class="headerlink" title="元组"></a> 元组 </h5><p> 有序 $n$ 元组，是由 $n$ 个元素构成的有序组，用括号表示：$(a_1,a_2,a_3,…,a_n)$。<br>只有在两个有序 $n$ 元组每一个对应的元素都相等时，它们才相等。二元组特称为有序偶。<br>令 $\mathbf A$ 和 $\mathbf B$ 为集合，$\mathbf A$ 和 $\mathbf B$ 的笛卡儿积用 $\mathbf A\times\mathbf B$ 表示，是所有有序偶 $(a,b)$ 的集合：<br>$$ \mathbf A\times\mathbf B={(a,b)\mid a\in \mathbf A\land b\in \mathbf B}$$</p>
+<p>集合 $A_1,A_2,\dots,A_n$ 的笛卡儿积用 $A_1\times A_2\times \dots \times A_n$ 表示，这是有序 $n$ 元组 $(a_1,a_2,\dots,a_n)$ 的集合，其中对于 $i=1,2,\dots,n, a_i∈A$<br>$$<br>    A_1\times A_2\times \dots \times A_n = {(a_1,a_2,\dots ,a_n)\mid a_i∈A,i=1,2,\dots,n}<br>$$</p>
+<h4 id="带量词的集合符合"><a href="# 带量词的集合符合" class="headerlink" title="带量词的集合符合"></a>带量词的集合符合</h4><ul>
+<li>$∀x∈S(P(x))$ 表示 $P(x)$ 的全称量化，论域是集合 $S$，等同于 $∀x(x∈S→P(x))$。</li>
+<li>$∃x∈S(P(x))$ 表示 $P(x)$ 的存在量化，论域是集合 $S$, 等同于 $∃x(x∈S∧P(x))$。</li>
+</ul>
+<h5 id="实例"><a href="# 实例" class="headerlink" title="实例"></a>实例</h5><p>$\forall x\in \mathbf R(x^2\ge 0)$ 的含义是：任意实数的平方是非负的。<br>$\exists x\in \mathbf Z(x^2=1)$ 的含义是：有某个整数的平方是 1。</p>
+<h4 id="量词的真值集合"><a href="# 量词的真值集合" class="headerlink" title="量词的真值集合"></a>量词的真值集合 </h4><p> 我们把集合理论和谓词逻辑的概念结合起来，给定谓词 $P$ 和论域 $D$，定义 $P$ 的真值集合:<br>$D$ 中元素 $x$ 使 $P(x)$ 为真的元素组成的集合。$P(x)$ 的真值集合记为 ${x\in D\mid P(x)}$。 </p>
+<blockquote>
+<p>在域 $\mathbf U$ 上，$\forall xP(x)$ 为真当且仅当 $P$ 的真值集合是集合 $U$。同样，域 $U$ 上 $\exists xP(x)$ 为真，当且仅当 $P$ 的真值集合非空。</p>
+</blockquote>
+<h4 id="常用集合表示"><a href="# 常用集合表示" class="headerlink" title="常用集合表示"></a>常用集合表示</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\mathbf Q$</td>
+<td style="text-align:left">有理数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf Q^+$</td>
+<td style="text-align:left">正有理数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf N$</td>
+<td style="text-align:left">自然数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf Z$</td>
+<td style="text-align:left">整数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf Z^+$</td>
+<td style="text-align:left">正整数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\mathbf R$</td>
+<td style="text-align:left">实数集</td>
+</tr>
+<tr>
+<td style="text-align:left">$\varnothing$</td>
+<td style="text-align:left">空集</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意，$\varnothing$ 不等于 ${\varnothing}$</p>
+</blockquote>
+<h3 id="集合运算"><a href="# 集合运算" class="headerlink" title="集合运算"></a>集合运算</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">运算</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">并集</td>
+<td style="text-align:left">$A\cup B={x\mid x\in A\lor x\in B}$</td>
+</tr>
+<tr>
+<td style="text-align:left">交集</td>
+<td style="text-align:left">$A\cap B={x\mid x\in A\land x\in B}$</td>
+</tr>
+<tr>
+<td style="text-align:left">差集</td>
+<td style="text-align:left">$A-B={x\in A\land x\notin B}$</td>
+</tr>
+<tr>
+<td style="text-align:left">补集</td>
+<td style="text-align:left">$\overline A={x\mid x\in U\land x\notin A}$</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>$U$ 为全集</p>
+</blockquote>
+<h4 id="集合恒等式"><a href="# 集合恒等式" class="headerlink" title="集合恒等式"></a>集合恒等式</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">等式</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$A∪\varnothing=A$ <br>$A\cap U=A$</td>
+<td style="text-align:left">恒等律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup U=U$<br>$A\cap \varnothing=\varnothing$</td>
+<td style="text-align:left">支配律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup A=A$<br>$A\cap A=A$</td>
+<td style="text-align:left">幂等律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline {(\bar A)}=A$</td>
+<td style="text-align:left">补集律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup B=B\cup A$<br>$A\cap B=B\cap A$</td>
+<td style="text-align:left">交换律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup (B\cup C)=(A\cup B)\cup C$<br>$A\cap(B\cap C)=(A\cap B)\cap C$</td>
+<td style="text-align:left">结合律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$<br>$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$</td>
+<td style="text-align:left">分配律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline{A\cup B}=\bar A\cap \bar B$<br>$\overline{A\cap B}=\bar A\cup \bar B$</td>
+<td style="text-align:left">德摩根定律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup(A\cap B)=A$<br>$A\cap(A\cup B)=A$</td>
+<td style="text-align:left">吸收律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A\cup \bar A=U$<br>$A\cap \bar A=\varnothing$</td>
+<td style="text-align:left">补集</td>
+</tr>
+</tbody>
+</table>
+<h5 id="证明集合相等的方法"><a href="# 证明集合相等的方法" class="headerlink" title="证明集合相等的方法"></a>证明集合相等的方法 </h5><p> 证明集合相等的一种方法是：证明两者中任何一个都是另一个的子集。<br>另外一种方法是：证明一个元素如果属于第一个集合，必定属于第二个集合。 </p>
+<h5 id="证明实例"><a href="# 证明实例" class="headerlink" title="证明实例"></a>证明实例</h5><p>$$ \begin{align}<br>\overline {A\cap B} &amp;= {x\mid x\notin A\cap B} \\<br>&amp;   ={x\mid \lnot(x\in(A\cap B))} \\<br>&amp;   ={x\mid \lnot(x\in A\land x\in B)} \\<br>&amp;   ={x\mid \lnot (x\in A)\lor \lnot(x\in B)}\\<br>&amp;   ={x\mid x\notin A\lor x\notin B}\\<br>&amp;   ={x\mid x\in \overline{A}\lor x\in \overline{B}} \\<br>&amp;   ={x\mid x\in \overline{A}\cup\overline{B}} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
+<h4 id="扩展的交集和并集"><a href="# 扩展的交集和并集" class="headerlink" title="扩展的交集和并集"></a>扩展的交集和并集</h4><ul>
+<li>一组集合的并集是包含哪些至少是这组集合中一个集合成员的元素的集合<br>$$<br>  A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i<br>$$</li>
+<li>一组集合的交集是包含哪些属于这组集合中所有成员集合的元素的集合<br>$$<br>  A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i<br>$$</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Math/Math-DM-06-证明导论.html" itemprop="url">
+                  离散数学学习笔记 证明导论 06
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-04T10:44:13+08:00" content="2016-12-04">
+              2016-12-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-06-证明导论.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-06-证明导论.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-06-证明导论.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 证明导论 06">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="证明"><a href="# 证明" class="headerlink" title="证明"></a>证明</h2><ul>
+<li>定理：是一个能够表明为真的语句，有时把不太重要的定理称为命题。</li>
+<li>引理：在其他结果证明中很有帮助的不大重要的定理</li>
+<li>推论：从定理直接建立被证明的定理</li>
+<li>猜想：被提出为真的命题，通常是在一些依据的基础上，启发式论证，未被证实。</li>
+</ul>
+<p>## 证明定理的方法</p>
+<h3 id="直接证明"><a href="# 直接证明" class="headerlink" title="直接证明"></a>直接证明 </h3><p> 直接证明用于 $p\rightarrow q$ 类型语句的方法。<br>第一步假设 $p$ 为真，然后用定理、定义和前面的证明过的定理以及推理规则，来证明出 $q$ 也肯定为真。</p>
+<h3 id="反证法"><a href="# 反证法" class="headerlink" title="反证法"></a>反证法 </h3><p> 反证法基于 $p\rightarrow q\equiv \lnot q\rightarrow \lnot p$，也就是说 $p\rightarrow q$ 可以用它的倒置 $\lnot q\rightarrow \lnot p$ 来证明。<br>在反证法中，将 $\lnot q$ 作为假设，用公理、定义和前面证明过的定理以及推理规则，证明 $\lnot p$。</p>
+<h4 id="例子"><a href="# 例子" class="headerlink" title="例子"></a>例子 </h4><p> 前提定义： 整数 $n$ 是偶数，如果存在一个整数 $k$ 使得 $n=2k$；整数 $n$ 是奇数，如果存在一个整数 $k$ 使得 $n=2k+1$。<br>证明”若 $\3n+2$ 是奇数，则 $n$ 也是奇数”。<br>假设 $n$ 为偶数，则有 $n=2k$，将其带入，得到 $3n+2=3(2k)+2=6k+2=2(3k+1)$，由偶数定义得知 $3n+2$ 是偶数，这与定理前提矛盾，因此 $n$ 是奇数。</p>
+<h3 id="空证明"><a href="# 空证明" class="headerlink" title="空证明"></a>空证明 </h3><p> 在条件语句 $p\rightarrow q$ 中，如果能够证明 $p$ 为假，那么 $p\rightarrow q$ 一定为真，这就得到证明 $p\rightarrow q$ 的证明方法。</p>
+<h3 id="平凡证明"><a href="# 平凡证明" class="headerlink" title="平凡证明"></a>平凡证明 </h3><p> 在条件语句 $p\rightarrow q$ 中，如果能够证明 $q$ 为假，那么 $p\rightarrow q$ 一定为真，这就得到证明 $p\rightarrow q$ 的证明方法。</p>
+<h3 id="归谬证明"><a href="# 归谬证明" class="headerlink" title="归谬证明"></a>归谬证明 </h3><p> 假设我们要证明 $p$ 是真的，我们可以假定 $\lnot p$ 为真，然后推导出一个矛盾式 $q$，使得 $\lnot p\rightarrow q$ 为真，因为 $\lnot p\rightarrow q$ 为真，$\lnot p$ 必然为假，从而得出 $p$ 为真。<br>也可用矛盾式证明 $p\rightarrow q$ 是真的，通过假设 $p$ 和 $\lnot q$ 都为真，来证明 $q$ 也一定为真。这意味着 $q$ 和 $\lnot q$ 都为真，矛盾。 </p>
+<h4 id="归谬证明实例"><a href="# 归谬证明实例" class="headerlink" title="归谬证明实例"></a>归谬证明实例 </h4><p> 前提定义：若存在整数 $p$ 和 $q(q\neq 0)$ 使得 $r=p/q$。实数 $r$ 是有理数。<br>证明：$\sqrt 2$ 是无理数 <br> 假定 $\sqrt 2$ 是有理数，则存在整数 $a$ 和 $b$ 满足 $\sqrt 2=a/b$，其中 $a$ 和 $b$ 没有公因子。<br>将等式两边平方，得 $2=a^2/b^2$ $2b^2=a^2$。<br>根据偶数定义，$a^2$ 是偶数，若 $a^2$ 是偶数，则 $a$ 也是偶数，那么存在一个整数 $c$，由 $a=2c$。因此 $2b^2=4c^2$。<br>等式两边除以 $2$，得到 $b^2=2c^2$。<br>由偶数定义，$b^2$ 是偶数，$b$ 也是偶数。<br>我们已经由 $\lnot p$ 得出等式 $\sqrt 2=a/b$，其中 $a$ 和 $b$ 没有公因子，这与 $a$ 和 $b$ 都是偶数矛盾，因此 $\lnot p$ 为假，从而得出 $p$ 为真。</p>
+<h3 id="等价性证明"><a href="# 等价性证明" class="headerlink" title="等价性证明"></a>等价性证明 </h3><p> 为了证明一个定理是双条件的，即形如 $p↔︎q$ 的语句，我们来证明 $p\rightarrow q$ 和 $q\rightarrow p$ 都是真的。这个方法的有效性基于:<br>$$ (p↔︎q)↔︎[(p\rightarrow q)\land (q\rightarrow p)]$$<br>有时候定理说几个命题都是等价的。这样的定理说命题 $p_1,p_2,p_3,…,p_n$ 都是等价的。这个定理可以写成: $$p_1↔︎p_2↔︎…↔︎p_n$$</p>
+<h3 id="反例"><a href="# 反例" class="headerlink" title="反例"></a>反例 </h3><p> 证明形如 $\forall xP(x)$ 的语句为假，只要能找到一个反例，即存在一个例子使 $P(x)$ 为假。</p>
+<h3 id="穷举证明"><a href="# 穷举证明" class="headerlink" title="穷举证明"></a>穷举证明 </h3><p> 有些定理能够通过有关的小数量例子测试来证明。这些证明通过穷举所有可能进行。穷举是分情形证明的特殊类型。</p>
+<h3 id="分情形证明"><a href="# 分情形证明" class="headerlink" title="分情形证明"></a>分情形证明 </h3><p> 为了证明形如 $(p_1 ∨ p_2 ∨ \dots ∨ p_n)→q$ 的条件语句，可以用永真式 $[(p_1 ∨ p_2 ∨ \dots ∨ p_n)→q]↔︎[(p_1 →q)∧(p_2 →q)∧\dots ∧(p_n →q)]$ 作为推理规则。这个推理规则说明，可以通过分别证明每个条件语句 $p_i→q$ 来证明命题 $p_1,p_2,\dots p_n$ 的析取式组成前提的原条件语句。</p>
+<h3 id="存在性证明"><a href="# 存在性证明" class="headerlink" title="存在性证明"></a>存在性证明 </h3><p> 对于形如 $∃P(x)$ 的命题的证明。</p>
+<ul>
+<li>构造性的存在性证明：找出一个使得 $P(x)$ 为真的元素 $a$。</li>
+<li>非构造性的存在性证明：一个普通方法是，使用归缪证明，证明该存在量词化的否定式蕴含着矛盾。</li>
+</ul>
+<h3 id="唯一性证明"><a href="# 唯一性证明" class="headerlink" title="唯一性证明"></a>唯一性证明 </h3><p> 断言具有特定性质的元素惟一存在。证明分为两部分：</p>
+<ul>
+<li>存在性：证明存在某个元素 $x$ 具有期望的性质</li>
+<li>唯一性：证明若 $y≠x$，则 $y$ 不具有期望的性质。或者我们可以证明如果 $x$ 和 $y$ 都具有期望的性质，则 $x=y$。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Math/Math-DM-05-推理规则.html" itemprop="url">
+                  离散数学学习笔记 推理规则 05
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-03T17:55:52+08:00" content="2016-12-03">
+              2016-12-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Math/Math-DM-05-推理规则.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-05-推理规则.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/Math/Math-DM-05-推理规则.html" class="leancloud_visitors" data-flag-title="离散数学学习笔记 推理规则 05">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="推理规则"><a href="# 推理规则" class="headerlink" title="推理规则"></a>推理规则 </h2><p> 证明是建立在数学命题真实性之上的有效论证。<br>为从已有的命题中推出新的命题，应用推理规则，它是构造有效论证的模板。推理规则是建立命题真实性的基本工具。     </p>
+<h3 id="命题逻辑的推理规则"><a href="# 命题逻辑的推理规则" class="headerlink" title="命题逻辑的推理规则"></a>命题逻辑的推理规则 </h3><p> 命理逻辑中的论证是一连串的命题。除了论证中最后一个命题外都叫前提，最后的命题叫结论。当所有前提为真意味着结论为真时，一个论证是有效的。<br>表示命题逻辑论证有效的关键是表示出它的 <strong> 论证形式 </strong> 有效。<br>我们可以先建立一些简单的论证形式，称为 <strong> 推理规则 </strong> 这些推理规则可以作为模板来构造更多复杂的有效论证形式。     </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">推理规则</th>
+<th style="text-align:left">永真式</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p \ &amp; \underline {p\rightarrow q} \ \therefore &amp; q \ \end{array}$</td>
+<td style="text-align:left">$[p\land(p\rightarrow q)]\rightarrow q$</td>
+<td style="text-align:left">假言推理</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp;\lnot p \ &amp; \underline {p\rightarrow q} \ \therefore &amp; \lnot p \ \end{array}$</td>
+<td style="text-align:left">$[\lnot q\land (p\rightarrow q)]\rightarrow \lnot p$</td>
+<td style="text-align:left">取拒式</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p\rightarrow q \ &amp; \underline {q\rightarrow r} \ \therefore &amp; p\rightarrow r \ \end{array}$</td>
+<td style="text-align:left">$[(p\rightarrow q)\land (q\rightarrow r)]\rightarrow (p\rightarrow r)$</td>
+<td style="text-align:left">假言三段论</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p\lor q \ &amp; \underline {\lnot p} \ \therefore &amp; q \ \end{array}$</td>
+<td style="text-align:left">$[(p\lor q)\land \lnot p]\rightarrow q$</td>
+<td style="text-align:left">析取三段论</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline p \ \therefore &amp; p\lor q \ \end{array}$</td>
+<td style="text-align:left">$p\rightarrow (p\lor q)$</td>
+<td style="text-align:left">附加</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp;\underline {p\land q} \\\therefore &amp; p\ \end{array}$</td>
+<td style="text-align:left">$(p\land q)\rightarrow p$</td>
+<td style="text-align:left">化简</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p \ &amp; \underline q \ \therefore &amp; p\land q \ \end{array}$</td>
+<td style="text-align:left">$(p\land q)\rightarrow (p\land q)$</td>
+<td style="text-align:left">合取</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; p\lor q \ &amp; \underline {\lnot p\lor r} \ \therefore &amp; q\lor r \ \end{array}$</td>
+<td style="text-align:left">$[(p\lor q)\land (\lnot p\lor r)]\rightarrow (q\lor r)$</td>
+<td style="text-align:left">消解</td>
+</tr>
+</tbody>
+</table>
+<h3 id="量词命题的推理规则"><a href="# 量词命题的推理规则" class="headerlink" title="量词命题的推理规则"></a>量词命题的推理规则</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">推理规则</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {\forall xP(x)} \ \therefore &amp; P(c) \ \end{array}$</td>
+<td style="text-align:left">全称示例</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {P(x), 任意 c} \ \therefore &amp; \forall xP(x)\ \end{array}$</td>
+<td style="text-align:left">全称生成</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {\exists P(x)} \ \therefore &amp; P(c), 对某个元素 \ \end{array}$</td>
+<td style="text-align:left">存在示例</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \underline {P(c), 对某个元素} \ \therefore &amp; \exists xP(x)\ \end{array}$</td>
+<td style="text-align:left">存在生成</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \ &amp; \underline {P(a), 其中 a 是论域中一个特定的元素} \ \therefore &amp; Q(a) \ \end{array}$</td>
+<td style="text-align:left">全称假言推理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="命题逻辑推理规则和量化语句的推理规则结合"><a href="# 命题逻辑推理规则和量化语句的推理规则结合" class="headerlink" title="命题逻辑推理规则和量化语句的推理规则结合"></a>命题逻辑推理规则和量化语句的推理规则结合</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">推理规则</th>
+<th style="text-align:left">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \ &amp; \underline {P(a), 其中 a 是论域中一个特定的元素} \ \therefore &amp; Q(a) \ \end{array}$</td>
+<td style="text-align:left">全称假言推理</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \ &amp; \underline {\lnot Q(a), 其中 a 是论域中一个特定的元素} \ \therefore &amp; \lnot P(a) \ \end{array}$</td>
+<td style="text-align:left">全称取拒推理</td>
+</tr>
+<tr>
+<td style="text-align:left">$\begin{array}{cl} &amp; \forall x(P(x)\rightarrow Q(x)) \ &amp; \underline {\forall x(Q(x)\rightarrow R(x))} \ \therefore &amp; \forall x(P(x)\rightarrow R(x)) \ \end{array}$</td>
+<td style="text-align:left">全称传递性</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/Math/Math-DM-04-嵌套量词.html" itemprop="url">
                   离散数学学习笔记 嵌套量词 04
                 </a>
@@ -905,32 +1572,32 @@
         
           
             <h2 id="命题逻辑"><a href="# 命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑 </h2><p> 逻辑的基本成分是命题，命题是一个或真或假的陈述语句，即一个陈述事实的句子，但不能既真又假。<br>涉及命题的逻辑领域称为命题演算或命题逻辑。</p>
-<h2 id="逻辑运算符"><a href="# 逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符 </h2><h3 id="非"><a href="# 非" class="headerlink" title="非"></a> 非</h3><p>令 $p$ 为一命题，则 $p$ 的否定表示为 $\lnot p$，命题 $\lnot p$ 读作”非 $p$”。</p>
+<h2 id="逻辑运算符"><a href="# 逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符 </h2><h3 id="非"><a href="# 非" class="headerlink" title="非"></a> 非</h3><p>令 $p$ 为一命题，则 $p$ 的否定表示为 $\lnot p$，命题 $\lnot p$ 读作「非 $p$」。</p>
 <h3 id="与 - 合取"><a href="# 与 - 合取" class="headerlink" title="与 (合取)"></a> 与(合取)</h3><p>令 $p$ 和 $q$ 为命题，$p、q$ 的合取用 $p\land q$ 表示。即命题 $p$ 并且 $q$。</p>
 <h3 id="或 - 析取"><a href="# 或 - 析取" class="headerlink" title="或 (析取)"></a> 或(析取)</h3><p>令 $p$ 和 $q$ 为命题，$p、q$ 的析取用 $p\lor q$ 表示。即命题 $p$ 或 $q$。</p>
 <h3 id="异或"><a href="# 异或" class="headerlink" title="异或"></a>异或 </h3><p> 令 $p$ 和 $q$ 为命题。$p$ 和 $q$ 的异或是一个命题。当 $p$ 和 $q$($p\oplus q$)中只有一个为真时命题为真，否则为假。</p>
-<h3 id="与非"><a href="# 与非" class="headerlink" title="与非"></a>与非 </h3><p> 命题 $p NAND q$(也记作 $p\vert q$)在 $p$ 和 $q$ 均为真时为假，否则为真。</p>
-<h3 id="或非"><a href="# 或非" class="headerlink" title="或非"></a>或非 </h3><p> 命题 $p NOR q $(也记作 $p\downarrow q$)在 $p$ 和 $q$ 均为假时为真，否则为假。</p>
-<h3 id="条件语句"><a href="# 条件语句" class="headerlink" title="条件语句"></a>条件语句 </h3><p> 令 $p$ 和 $q$ 为命题，条件语句 $p\rightarrow q$ 是命题“若 $p$，则 $q$”。    当 $p$ 为真而 $q$ 为假时，条件语句 $p\rightarrow q$ 为假，否则为真。<br>在条件语句 $p\rightarrow q$ 中，$p$ 称为假设、前提，$q$ 称为结论。<br>条件语句也称蕴含。</p>
+<h3 id="与非"><a href="# 与非" class="headerlink" title="与非"></a>与非 </h3><p> 命题 $p\;  NAND\;  q$(也记作 $p\mid q$)在 $p$ 和 $q$ 均为真时为假，否则为真。</p>
+<h3 id="或非"><a href="# 或非" class="headerlink" title="或非"></a>或非 </h3><p> 命题 $p\;  NOR\;  q $(也记作 $p\downarrow q$)在 $p$ 和 $q$ 均为假时为真，否则为假。</p>
+<h3 id="条件语句"><a href="# 条件语句" class="headerlink" title="条件语句"></a>条件语句 </h3><p> 令 $p$ 和 $q$ 为命题，条件语句 $p\rightarrow q$ 是命题「若 $p$，则 $q$」。    当 $p$ 为真而 $q$ 为假时，条件语句 $p\rightarrow q$ 为假，否则为真。<br>在条件语句 $p\rightarrow q$ 中，$p$ 称为假设、前提，$q$ 称为结论。条件语句也称蕴含。</p>
 <h4 id="逆、倒置和反"><a href="# 逆、倒置和反" class="headerlink" title="逆、倒置和反"></a>逆、倒置和反 </h4><p> 命题 $q\rightarrow p$ 称为 $p\rightarrow q$ 的逆蕴含。<br>命题 $\lnot q\rightarrow \lnot p$ 称为 $p\rightarrow q$ 的倒置蕴含。<br>命题 $\lnot p\rightarrow \lnot q$ 称为 $p\rightarrow q$ 的反蕴含。  </p>
-<h3 id="双条件语句"><a href="# 双条件语句" class="headerlink" title="双条件语句"></a>双条件语句 </h3><p> 令 $p$ 和 $q$ 为命题。双条件语句 $p↔︎q$ 是命题“$p$ 当且仅当 $q$”。当 $p$ 和 $q$ 有相同真值时，双条件语句为真，否则为假。<br>双条件语句也称双蕴含。  </p>
+<h3 id="双条件语句"><a href="# 双条件语句" class="headerlink" title="双条件语句"></a>双条件语句 </h3><p> 令 $p$ 和 $q$ 为命题。双条件语句 $p↔︎q$ 是命题「$p$ 当且仅当 $q$」。当 $p$ 和 $q$ 有相同真值时，双条件语句为真，否则为假。  双条件语句也称双蕴含。  </p>
 <h3 id="真值表"><a href="# 真值表" class="headerlink" title="真值表"></a>真值表</h3><table>
 <thead>
 <tr>
-<th style="text-align:center">p <span style="margin-left:20px">q</span></th>
+<th style="text-align:center">$p\qquad q$</th>
 <th style="text-align:center">$\lnot p$</th>
 <th style="text-align:center">$p\land q$</th>
 <th style="text-align:center">$p\lor q$</th>
 <th style="text-align:center">$p\oplus q$</th>
 <th style="text-align:center">$p\rightarrow q$</th>
 <th style="text-align:center">$p↔︎q$</th>
-<th style="text-align:center">$p \vert q$</th>
+<th style="text-align:center">$p\mid q$</th>
 <th style="text-align:center">$p\downarrow q$</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">T <span style="margin-left:20px">T</span></td>
+<td style="text-align:center">$T\qquad T$</td>
 <td style="text-align:center">F</td>
 <td style="text-align:center">T</td>
 <td style="text-align:center">T</td>
@@ -941,7 +1608,7 @@
 <td style="text-align:center">F</td>
 </tr>
 <tr>
-<td style="text-align:center">T <span style="margin-left:20px">F</span></td>
+<td style="text-align:center">$T\qquad F$</td>
 <td style="text-align:center">F</td>
 <td style="text-align:center">F</td>
 <td style="text-align:center">T</td>
@@ -952,7 +1619,7 @@
 <td style="text-align:center">F</td>
 </tr>
 <tr>
-<td style="text-align:center">F <span style="margin-left:20px">T</span></td>
+<td style="text-align:center">$F\qquad T$</td>
 <td style="text-align:center">T</td>
 <td style="text-align:center">F</td>
 <td style="text-align:center">T</td>
@@ -963,7 +1630,7 @@
 <td style="text-align:center">F</td>
 </tr>
 <tr>
-<td style="text-align:center">F <span style="margin-left:20px">F</span></td>
+<td style="text-align:center">$F\qquad F$</td>
 <td style="text-align:center">F</td>
 <td style="text-align:center">F</td>
 <td style="text-align:center">F</td>
@@ -980,6 +1647,7 @@
 <li>合取运算优先于析取运算。</li>
 <li>条件运算和双条件运算优先级低于合取和析取运算。</li>
 </ul>
+<h2 id="基本规律"><a href="# 基本规律" class="headerlink" title="基本规律"></a>基本规律 </h2><h3 id="排中律"><a href="# 排中律" class="headerlink" title="排中律"></a> 排中律 </h3><p> 一个命题非真即假。 反证法就是利用了排中律。   </p>
 
           
         
@@ -2793,7 +3461,7 @@
 </ul>
 <h3 id="实例"><a href="# 实例" class="headerlink" title="实例"></a>实例</h3><p><code>A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i</code><br>$$A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i$$<br><code>A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i</code><br>$$A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">\begin&#123;align&#125;</div><div class="line">\overline &#123;A\cap B&#125; &amp;= \&#123;x\mid x\notin A\cap B\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot(x\in(A\cap B))\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot(x\in A\land x\in B)\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid \lnot (x\in A)\lor \lnot(x\in B)\&#125;\\</div><div class="line">&amp;   =\&#123;x\mid x\notin A\lor x\notin B\&#125;\\</div><div class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\lor x\in \overline&#123;B&#125;\&#125; \\</div><div class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\cup\overline&#123;B&#125;\&#125; \\</div><div class="line">&amp;   =\overline&#123;A&#125;\cup\overline&#123;B&#125;</div><div class="line">\end&#123;align&#125;</div></pre></td></tr></table></figure>
-<p>$$ \begin{align}<br>\overline {A\cap B} &amp;= \{x\mid x\notin A\cap B\} \\<br>&amp;   =\{x\mid \lnot(x\in(A\cap B))\} \\<br>&amp;   =\{x\mid \lnot(x\in A\land x\in B)\} \\<br>&amp;   =\{x\mid \lnot (x\in A)\lor \lnot(x\in B)\}\\<br>&amp;   =\{x\mid x\notin A\lor x\notin B\}\\<br>&amp;   =\{x\mid x\in \overline{A}\lor x\in \overline{B}\} \\<br>&amp;   =\{x\mid x\in \overline{A}\cup\overline{B}\} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
+<p>$$ \begin{align}<br>\overline {A\cap B} &amp;= {x\mid x\notin A\cap B} \\<br>&amp;   ={x\mid \lnot(x\in(A\cap B))} \\<br>&amp;   ={x\mid \lnot(x\in A\land x\in B)} \\<br>&amp;   ={x\mid \lnot (x\in A)\lor \lnot(x\in B)}\\<br>&amp;   ={x\mid x\notin A\lor x\notin B}\\<br>&amp;   ={x\mid x\in \overline{A}\lor x\in \overline{B}} \\<br>&amp;   ={x\mid x\in \overline{A}\cup\overline{B}} \\<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">f(n) =</div><div class="line">\begin&#123;cases&#125;</div><div class="line">\frac&#123;n&#125;&#123;2&#125;,  &amp; \text&#123;if $n$ is even&#125; \\</div><div class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</div><div class="line">\end&#123;cases&#125;</div></pre></td></tr></table></figure>
 <p>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(x+y)^n=\sum_&#123;j=0&#125;^n\left(\begin&#123;array&#125;&#123;c&#125;n \\r\end&#123;array&#125;\right)x^&#123;n-1&#125;y^i</div></pre></td></tr></table></figure>
@@ -3089,7 +3757,7 @@
 <li>$H$ 对向量加法封闭，即对 $H$ 中任意向量 $\mathbf u,\mathbf v$，和 $\mathbf u+\mathbf v$ 仍在 $H$ 中</li>
 <li>$H$ 对标量乘法封闭，即对 $H$ 中任意向量 $\mathbf u$ 和任意标量 $c$，向量 $c\mathbf u$ 仍在 $H$ 中</li>
 </ul>
-<h3 id="矩阵的列空间"><a href="# 矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间 </h3><p>$m\times n$ 矩阵的列空间(记为 $ColA$) 是由 $A$ 的列的所有线性组合组成的集合，若 $A=[\mathbf a_1,\cdots,\mathbf a_n]$，则 $ColA = Span\{\mathbf a_1,\cdots,\mathbf a_n\}$<br>$ColA$)可写成 $A\mathbf x$ 的形式，其中 $\mathbf x$ 为某向量，$A\mathbf x$ 表示 $A$ 的列向量的一个线性组合，即<br>$$<br>    ColA = {\mathbf b:\mathbf b = A\mathbf x, \mathbf x \in \mathbb R^n}<br>$$<br>$m\times n$ 矩阵的列空间等于 $\mathbb R^m$ 当且仅当方程 $A\mathbf x=\mathbf b$ 对 $\mathbb R^m$ 中每个 $\mathbf b$ 有解</p>
+<h3 id="矩阵的列空间"><a href="# 矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间 </h3><p>$m\times n$ 矩阵的列空间(记为 $ColA$) 是由 $A$ 的列的所有线性组合组成的集合，若 $A=[\mathbf a_1,\cdots,\mathbf a_n]$，则 $ColA = Span{\mathbf a_1,\cdots,\mathbf a_n}$<br>$ColA$)可写成 $A\mathbf x$ 的形式，其中 $\mathbf x$ 为某向量，$A\mathbf x$ 表示 $A$ 的列向量的一个线性组合，即<br>$$<br>    ColA = {\mathbf b:\mathbf b = A\mathbf x, \mathbf x \in \mathbb R^n}<br>$$<br>$m\times n$ 矩阵的列空间等于 $\mathbb R^m$ 当且仅当方程 $A\mathbf x=\mathbf b$ 对 $\mathbb R^m$ 中每个 $\mathbf b$ 有解</p>
 <h3 id="NulA- 与 -ColA- 的对比"><a href="#NulA- 与 -ColA- 的对比" class="headerlink" title="$NulA$ 与 $ColA$ 的对比"></a>$NulA$ 与 $ColA$ 的对比 </h3><p> 对于 $m\times n$ 矩阵 $A$，$NulA$ 与 $ColA$ 之间的对比</p>
 <table>
 <thead>
@@ -3134,11 +3802,11 @@
 </tbody>
 </table>
 <h3 id="线性变换的核与值域"><a href="# 线性变换的核与值域" class="headerlink" title="线性变换的核与值域"></a>线性变换的核与值域 </h3><p> 由向量空间 $V$ 映射到向量空间 $W$ 内的线性变换 $T$ 是一个规则，它将 $V$ 中每个向量 $\mathbf x$ 映射城 $W$ 中惟一向量 $T(\mathbf x)$，且满足 <br>$$<br>    T(\mathbf u+\mathbf v) = T(\mathbf u)+T(\mathbf v), 对 V 中所有 \mathbf u,\mathbf v 均成立 \\<br>    T(c\mathbf u) = cT(\mathbf u), 对 V 中所有 \mathbf u 及所有数 c 均成立<br>$$<br> 线性变换 $T$ 的 <em> 核</em>(或称零空间)是 $V$ 中所有满足 $T(\mathbf u)=0$ 的向量 $\mathbf u$ 的集合。<br>$T$ 的 <em> 值域 </em> 是 $W$ 中所有具有形式 $T(\mathbf x)$ 的向量的集合。<br>如果 $T$ 是由一个矩阵变换得到的，例如 $T(\mathbf x)=A\mathbf x$，则 $T$ 的核与值域对应 $A$ 的零空间和列空间。 </p>
-<h2 id="线性无关集和基"><a href="# 线性无关集和基" class="headerlink" title="线性无关集和基"></a>线性无关集和基 </h2><h3 id="线性无关集"><a href="# 线性无关集" class="headerlink" title="线性无关集"></a> 线性无关集 </h3><p>$V$ 中向量的一个指标集 $\{\mathbf v_1,\cdots,\mathbf v_p\}$，称为线性无关的，如果向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p = 0<br>$$<br> 只有平凡解。<br><em>矩阵的行初等变换不影响矩阵的列的线性相关关系</em></p>
-<h3 id="基"><a href="# 基" class="headerlink" title="基"></a>基 </h3><p> 令 $H$ 是向量空间 $V$ 的一个子空间，$V$ 中向量的指标集 $B＝\{\mathbf b_1,\cdots,\mathbf b_p\}$ 称为 $H$ 的一个基，如果</p>
+<h2 id="线性无关集和基"><a href="# 线性无关集和基" class="headerlink" title="线性无关集和基"></a>线性无关集和基 </h2><h3 id="线性无关集"><a href="# 线性无关集" class="headerlink" title="线性无关集"></a> 线性无关集 </h3><p>$V$ 中向量的一个指标集 ${\mathbf v_1,\cdots,\mathbf v_p}$，称为线性无关的，如果向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p = 0<br>$$<br> 只有平凡解。<br><em>矩阵的行初等变换不影响矩阵的列的线性相关关系</em></p>
+<h3 id="基"><a href="# 基" class="headerlink" title="基"></a>基 </h3><p> 令 $H$ 是向量空间 $V$ 的一个子空间，$V$ 中向量的指标集 $B＝{\mathbf b_1,\cdots,\mathbf b_p}$ 称为 $H$ 的一个基，如果</p>
 <ul>
 <li>$B$ 是现象无关集</li>
-<li>由 $B$ 生成的子空间与 $H$ 相同，即 $H=Span\{\mathbf b_1,\cdots,\mathbf b_p\}$</li>
+<li>由 $B$ 生成的子空间与 $H$ 相同，即 $H=Span{\mathbf b_1,\cdots,\mathbf b_p}$</li>
 </ul>
 <h4 id="基的两个特性"><a href="# 基的两个特性" class="headerlink" title="基的两个特性"></a>基的两个特性</h4><blockquote>
 <ul>
@@ -3148,13 +3816,13 @@
 </blockquote>
 <h3 id="NulA- 和 -ColA- 的基"><a href="#NulA- 和 -ColA- 的基" class="headerlink" title="$NulA$ 和 $ColA$ 的基"></a>$NulA$ 和 $ColA$ 的基 </h3><p> 通过解 $A\mathbf x=0$ 的出的生成集总是线性无关的，即 $NulA$ 的基。<br>$ColA$ 的基由矩阵 $A$ 的主元列构成。</p>
 <h2 id="定理"><a href="# 定理" class="headerlink" title="定理"></a>定理</h2><ol>
-<li>若 $\mathbf v_1,\cdots,\mathbf v_p$ 在向量空间 $V$ 中，则 $Span\{\mathbf v_1,\cdots,\mathbf v_p\}$ 是 $V$ 的一个子空间</li>
+<li>若 $\mathbf v_1,\cdots,\mathbf v_p$ 在向量空间 $V$ 中，则 $Span{\mathbf v_1,\cdots,\mathbf v_p}$ 是 $V$ 的一个子空间</li>
 <li>$m\times n$ 矩阵 $A$ 的零空间是 $\mathbb R^n$ 的一个子空间，也就是说，$m$ 个方程、$n$ 个未知数的齐次线性方程组 $A\mathbf x=0$ 的全体解的集合是 $\mathbb R^n$ 的一个子空间。</li>
 <li>$m\times n$ 矩阵 $A$ 的列空间是 $\mathbb R^m$ 的一个子空间</li>
-<li>不少于两个有编号的向量的集合 $\{\mathbf v_1,\cdots,\mathbf v_p\}$，如果有 $\mathbf v_1 \neq0$，则 $\{\mathbf v_1,\cdots,\mathbf v_p\}$ 是线性相关的，当且仅当某 $\mathbf v_1(j&gt;1)$ 是其前面向量 $v_1,\cdots,v_{j-1}$ 的线性组合</li>
-<li>生成集定理: 令 $S=\{\mathbf v_1,\cdots,\mathbf v_p\}$ 是 $V$ 中的向量集，$H=Span\{\mathbf v_1,\cdots,\mathbf v_p\}$.<ul>
+<li>不少于两个有编号的向量的集合 ${\mathbf v_1,\cdots,\mathbf v_p}$，如果有 $\mathbf v_1 \neq0$，则 ${\mathbf v_1,\cdots,\mathbf v_p}$ 是线性相关的，当且仅当某 $\mathbf v_1(j&gt;1)$ 是其前面向量 $v_1,\cdots,v_{j-1}$ 的线性组合</li>
+<li>生成集定理: 令 $S={\mathbf v_1,\cdots,\mathbf v_p}$ 是 $V$ 中的向量集，$H=Span{\mathbf v_1,\cdots,\mathbf v_p}$.<ul>
 <li>若 $S$ 中某一向量，比如说 $v_k$，是 $S$ 中其余向量的线性组合，则 $S$ 中去掉 $v_k$ 之后形成的集合仍然可以生成 $H$。</li>
-<li>若 $H\neq\{0\}$，则 $S$ 的某一子集是 $H$ 的一个基<br>6. 矩阵 $A$ 的主元列构成 $ColA$ 的一个基</li>
+<li>若 $H\neq{0}$，则 $S$ 的某一子集是 $H$ 的一个基<br>6. 矩阵 $A$ 的主元列构成 $ColA$ 的一个基</li>
 </ul>
 </li>
 </ol>
@@ -3306,7 +3974,7 @@
 <li>克拉默法则，设 $A$ 是一个可逆的 $n\times n$ 矩阵，对 $R^n$ 中任意向量 $\mathbf b$，方程 $A\mathbf x=\mathbf b$ 的唯一解可由下式给出，其中 $detA_i(\mathbf b)$ 表示 $A$ 中第 $i$ 列由向量 $\mathbf b$ 替换得到的矩阵<br>$$<br> x_i = {detA_i(\mathbf b)\over {detA}}, i=1,2,\cdots,n<br>$$</li>
 <li>逆矩阵公式， 设 $A$ 是一个可逆的 $n\times n$ 矩阵，则 $A^{-1}={1\over detA}adjA$</li>
 <li>若 $A$ 是一个 $2\times 2$ 矩阵，则由 $A$ 的列确定的平行四边形的面积为 $|detA|$，若 $A$ 是一个 $3\times 3$ 矩阵，则由 $A$ 列确定的平行六面体的体积为 $|detA|$</li>
-<li>设 $T:R^2\to R^2$ 是由一个 $2\times 2$ 矩阵 $A$ 确定的线性变换，若 $S$ 是 $R^2$ 中一个平行四边形，则 <br>$$<br>\{T(S) 的面积 \}=|detA|\cdot\{S 的面积 \}<br>$$<br>若 $T$ 是一个由 $3\times 3$ 矩阵 $A$ 确定的线性变换，而 $S$ 是 $R^3$ 中的一个平行六面体，则 <br>$$<br>\{T(S) 的体积 \}=|detA|\cdot \{S 的体积 \}<br>$$</li>
+<li>设 $T:R^2\to R^2$ 是由一个 $2\times 2$ 矩阵 $A$ 确定的线性变换，若 $S$ 是 $R^2$ 中一个平行四边形，则 <br>$$<br>{T(S) 的面积}=|detA|\cdot{S 的面积}<br>$$<br>若 $T$ 是一个由 $3\times 3$ 矩阵 $A$ 确定的线性变换，而 $S$ 是 $R^3$ 中的一个平行六面体，则 <br>$$<br>{T(S) 的体积}=|detA|\cdot {S 的体积}<br>$$</li>
 </ol>
 <h2 id="推论"><a href="# 推论" class="headerlink" title="推论"></a>推论 </h2><h3 id="adjA- 可逆"><a href="#adjA- 可逆" class="headerlink" title="$adjA$ 可逆"></a>$adjA$ 可逆</h3><p> 若 $A$ 可逆，则 $adjA$ 也可逆，且 $(adjA)^{-1}={1\over detA}A$<br>$$<br>    A^{-1} = {1\over detA}adjA \\<br>    adjA = (detA)A^{-1} \\<br>    adjA(adjA)^{-1} = I \\<br>    adjA \cdot {1\over detA}A = I \\<br>    (detA)A^{-1} \cdot {1\over detA}A = I \\<br>    A^{-1}A = I<br>$$</p>
 
@@ -3505,7 +4173,7 @@
 <li>$(AB)^T=B^TA^T$</li>
 </ul>
 </blockquote>
-<p>4. 设 $A=\begin{bmatrix} a &amp; b\\ c &amp; d\\ \end{bmatrix}$, 若 $ad-bc\neq 0$，则 $A$ 可逆，且<br>$$<br>    A^{-1}={1\over{ad-bc}} \begin{bmatrix} d &amp; -b\\ -c &amp; a\\ \end{bmatrix}<br>$$</p>
+<p>4. 设 $A=\begin{bmatrix} a &amp; b\ c &amp; d\ \end{bmatrix}$, 若 $ad-bc\neq 0$，则 $A$ 可逆，且<br>$$<br>    A^{-1}={1\over{ad-bc}} \begin{bmatrix} d &amp; -b\ -c &amp; a\ \end{bmatrix}<br>$$</p>
 <p>5. 若 $A$ 是可逆 $n\times n$ 矩阵，则对每一个 $R^n$ 中的 $\mathbf b$，方程 $A\mathbf x=\mathbf b$ 有唯一解 $\mathbf x=A^{-1}\mathbf b$<br>6. 若 $A,B$ 为可逆矩阵，则</p>
 <blockquote>
 <ul>
@@ -3852,8 +4520,8 @@
 <li>把一般解 $\mathbf x$ 表示成向量，如果有自由变量，其元素依赖于自由变量</li>
 <li>把 $\mathbf x$ 分解为向量的线性组合，用自由变量作为参数</li>
 </ol>
-<h2 id="线性组合和线性变换"><a href="# 线性组合和线性变换" class="headerlink" title="线性组合和线性变换"></a>线性组合和线性变换 </h2><h3 id="线性组合"><a href="# 线性组合" class="headerlink" title="线性组合"></a> 线性组合 </h3><p> 给定 $R^n$ 中向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$ 和标量 $c_1,c_2,\cdots,c_p$, 向量 <br>$$<br>    \mathbf y=c_1\mathbf v_1+\cdots+c_p\mathbf v_p<br>$$<br> 称为向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$，以 $c_1,c_2,\cdots,c_p$ 为权的 <em> 线性组合</em>，其中所有向量 $y$ 的集合用记号 $Span\{\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p\}$ 表示。</p>
-<h3 id="线性相关"><a href="# 线性相关" class="headerlink" title="线性相关"></a>线性相关 </h3><p> 对于 $R^n$ 中一组向量 $\{\mathbf v_1,\cdots,\mathbf v_p\}$，若向量方程 <br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p=0<br>$$<br> 仅有平凡解，则称向量组 (集)$\{\mathbf v_1,\cdots,\mathbf v_p\}$ 线性无关，否则称为线性相关。<br> 由此可以推论出，当方程 $A\mathbf x=0$ 仅有平凡解时，矩阵 $A$ 中各列线性无关。</p>
+<h2 id="线性组合和线性变换"><a href="# 线性组合和线性变换" class="headerlink" title="线性组合和线性变换"></a>线性组合和线性变换 </h2><h3 id="线性组合"><a href="# 线性组合" class="headerlink" title="线性组合"></a> 线性组合 </h3><p> 给定 $R^n$ 中向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$ 和标量 $c_1,c_2,\cdots,c_p$, 向量 <br>$$<br>    \mathbf y=c_1\mathbf v_1+\cdots+c_p\mathbf v_p<br>$$<br> 称为向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$，以 $c_1,c_2,\cdots,c_p$ 为权的 <em> 线性组合</em>，其中所有向量 $y$ 的集合用记号 $Span{\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p}$ 表示。</p>
+<h3 id="线性相关"><a href="# 线性相关" class="headerlink" title="线性相关"></a>线性相关 </h3><p> 对于 $R^n$ 中一组向量 ${\mathbf v_1,\cdots,\mathbf v_p}$，若向量方程 <br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p=0<br>$$<br> 仅有平凡解，则称向量组 (集)${\mathbf v_1,\cdots,\mathbf v_p}$ 线性无关，否则称为线性相关。<br> 由此可以推论出，当方程 $A\mathbf x=0$ 仅有平凡解时，矩阵 $A$ 中各列线性无关。</p>
 <h3 id="线性变换"><a href="# 线性变换" class="headerlink" title="线性变换"></a>线性变换 </h3><p> 由 $R^n$ 到 $R^m$ 的一个变换 (映射、函数)$T$，它将 $R^n$ 中的每个向量 $\mathbf x$ 对应 $R^m$ 中的一个向量 $T(\mathbf x)$，集 $R^n$ 称为 $T$ 的定义域，$R^m$ 称为 $T$ 的语定义域。记作 $T:R^n \to R^m$<br>$R^m$ 中的向量 $T(\mathbf x)$ 称为 $\mathbf x$ 在 $T$ 作用下的像。<br> 若 $T$ 为线性的，则它满足以下性质<br>$$<br>    T(c\mathbf u+d\mathbf v)=cT(\mathbf u)+dT(\mathbf v)\\<br>    T(0)=0\\<br>    T(c\mathbf u)=cT(\mathbf u)\\<br>$$</p>
 <h4 id="线性变换中的矩阵"><a href="# 线性变换中的矩阵" class="headerlink" title="线性变换中的矩阵"></a>线性变换中的矩阵 </h4><p> 从 $R^n$ 到 $R^m$ 的每一个线性变换，实际上都是一个矩阵变换 $\mathbf x\mapsto A\mathbf x$。<br>$$<br>    T(\mathbf x)= A\mathbf x<br>$$</p>
 <h2 id="定理和性质"><a href="# 定理和性质" class="headerlink" title="定理和性质"></a>定理和性质 </h2><h3 id="定理"><a href="# 定理" class="headerlink" title="定理"></a> 定理</h3><ol>
@@ -3871,9 +4539,9 @@
 </li>
 <li>若 $A$ 是 $m\times n$ 矩阵，$\mathbf u$ 和 $\mathbf v$ 是 $R^n$ 的向量，$c$ 是标量，则<br>$$<br> A(\mathbf u+\mathbf v)=A\mathbf u + A\mathbf v\\<br> A(c\mathbf u)=c(A\mathbf u)<br>$$</li>
 <li>设方程 $A\mathbf x=\mathbf b$ 对某个 $\mathbf b$ 是相容的，$\mathbf p$ 作为一个特解，则 $A\mathbf x=\mathbf b$ 的解集是所有形如 $\mathbf w=\mathbf p+\mathbf v_h$ 的向量的集，其中，$\mathbf v_h$ 是齐次方程 $A\mathbf x=0$ 的任意一个解。</li>
-<li>线性相关集的特征：两个或更多个向量的集合 $S=\{\mathbf v_1,\cdots,\mathbf v_p\}$ 线性相关，当且仅当 $S$ 中至少有一个向量是其他向量的线性组合。事实上，若 $S$ 线性相关，且 $\mathbf v_1 \neq 0$，则某个 $\mathbf v_j (j&gt;1)$ 是它前面几个向量 $\mathbf v_1,\cdots,\mathbf v_{j-1}$ 的线性组合。</li>
-<li>若一个向量组的向量个数超过每个向量元素个数，那么这个向量组线性相关，就是说，$R^n$ 中任意向量组 $\{\mathbf v_1,\cdots,v_n\}$，当 $p&gt;n$ 时线性相关。</li>
-<li>若向量组 $S=\{\mathbf v_1,\cdots,v_n\}$ 包含零向量，则它线性相关。</li>
+<li>线性相关集的特征：两个或更多个向量的集合 $S={\mathbf v_1,\cdots,\mathbf v_p}$ 线性相关，当且仅当 $S$ 中至少有一个向量是其他向量的线性组合。事实上，若 $S$ 线性相关，且 $\mathbf v_1 \neq 0$，则某个 $\mathbf v_j (j&gt;1)$ 是它前面几个向量 $\mathbf v_1,\cdots,\mathbf v_{j-1}$ 的线性组合。</li>
+<li>若一个向量组的向量个数超过每个向量元素个数，那么这个向量组线性相关，就是说，$R^n$ 中任意向量组 ${\mathbf v_1,\cdots,v_n}$，当 $p&gt;n$ 时线性相关。</li>
+<li>若向量组 $S={\mathbf v_1,\cdots,v_n}$ 包含零向量，则它线性相关。</li>
 <li>设 $T:R^n \to R^m$ 线性变换，则存在唯一的矩阵 $A$，使 $T(\mathbf x)=A\mathbf x$，对 $R^n$ 中一切 $\mathbf x$。事实上，$A$ 是 $m\times n$ 矩阵，它的第 $j$ 列是向量 $T(\mathbf e_j)$，其中 $\mathbf e_j$ 是单位矩阵 $I_n$ 的第 $j$ 列：<br>$$<br>A=[T(\mathbf e_1) \cdots T(\mathbf e_n)]<br>$$</li>
 <li>设 $T:R^n \to R^m$ 为线性变换，则 $T$ 是一对一当且仅当方程 $A\mathbf x=0$ 仅有平凡解。</li>
 </ol>
@@ -3887,1012 +4555,6 @@
 <li>$c(d\mathbf u)=(cd)(\mathbf u)$</li>
 <li>$1\mathbf u=\mathbf y$</li>
 </ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/JavaScript/JavaScript之表达式和运算符.html" itemprop="url">
-                  JavaScript 之表达式和运算符
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-03T15:33:59+08:00" content="2016-09-03">
-              2016-09-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/JavaScript/JavaScript之表达式和运算符.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="JavaScript/JavaScript之表达式和运算符.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/JavaScript/JavaScript之表达式和运算符.html" class="leancloud_visitors" data-flag-title="JavaScript 之表达式和运算符">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1- 表达式"><a href="#1- 表达式" class="headerlink" title="1 表达式"></a>1 表达式</h1><ul>
-<li>数组初始化表达式中，逗号之间的元素可以省略，空位会填充<code>undefined</code>。 </li>
-<li>在对象初始化表达式中，属性名称可以是字符串而不是标识符。  </li>
-</ul>
-<h1 id="2- 运算符概述"><a href="#2- 运算符概述" class="headerlink" title="2 运算符概述"></a>2 运算符概述</h1><p>&emsp;&emsp; 类型列表示期望的操作数类型，以及运算符结果类型。lval 表示左值。  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">运算符</th>
-<th style="text-align:left">操作</th>
-<th style="text-align:left">A</th>
-<th style="text-align:left">N</th>
-<th style="text-align:left">类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">++</td>
-<td style="text-align:left">前 / 后增量</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">lval -&gt; num</td>
-</tr>
-<tr>
-<td style="text-align:left">–</td>
-<td style="text-align:left">前 / 后减量</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">lval -&gt; num</td>
-</tr>
-<tr>
-<td style="text-align:left">-</td>
-<td style="text-align:left">求反</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">num-&gt;num</td>
-</tr>
-<tr>
-<td style="text-align:left">+</td>
-<td style="text-align:left">转换为数字</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">num-&gt;num</td>
-</tr>
-<tr>
-<td style="text-align:left">~</td>
-<td style="text-align:left">按位求反</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">!</td>
-<td style="text-align:left">逻辑非</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">bool-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">delete</td>
-<td style="text-align:left">删除属性</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">lval-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">typeof</td>
-<td style="text-align:left">检测操作数类型</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">any-&gt;str</td>
-</tr>
-<tr>
-<td style="text-align:left">void</td>
-<td style="text-align:left">返回 undefined 值</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">any-&gt;undef</td>
-</tr>
-<tr>
-<td style="text-align:left">* 、／、％</td>
-<td style="text-align:left">乘、除、求余</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">num,num-&gt;num</td>
-</tr>
-<tr>
-<td style="text-align:left">+、－</td>
-<td style="text-align:left">加、减</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">num,num-&gt;num</td>
-</tr>
-<tr>
-<td style="text-align:left">+</td>
-<td style="text-align:left">字符串连接</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">str,str-&gt;str</td>
-</tr>
-<tr>
-<td style="text-align:left">&lt;&lt;</td>
-<td style="text-align:left">左移位</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">int,int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">&gt;&gt;</td>
-<td style="text-align:left">有符号右移</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">int,int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">&gt;&gt;&gt;</td>
-<td style="text-align:left">无符号右移</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">int,int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">&lt;、 &lt;=、&gt;、&gt;=</td>
-<td style="text-align:left">比较数字顺序</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">num,num-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">&lt;、 &lt;=、&gt;、&gt;=</td>
-<td style="text-align:left">比较在字母表中的顺序</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">str,str-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">instanceof</td>
-<td style="text-align:left">测试对象类</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">obj,func-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">in</td>
-<td style="text-align:left">测试属性是否存在</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">str,obj-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">==</td>
-<td style="text-align:left">判断相等</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">!=</td>
-<td style="text-align:left">判断不等</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">===</td>
-<td style="text-align:left">判断恒等</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-&gt;bool</td>
-</tr>
-<tr>
-<td style="text-align:left">!==</td>
-<td style="text-align:left">判断非恒等</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-bool</td>
-</tr>
-<tr>
-<td style="text-align:left">&amp;</td>
-<td style="text-align:left">按位与</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">int,int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">^</td>
-<td style="text-align:left">按位异或</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">int,int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">&#124;</td>
-<td style="text-align:left">按位或</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">int,int-&gt;int</td>
-</tr>
-<tr>
-<td style="text-align:left">&amp;&amp;</td>
-<td style="text-align:left">逻辑与</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-&gt;any</td>
-</tr>
-<tr>
-<td style="text-align:left">&#124; &#124;</td>
-<td style="text-align:left">逻辑或</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-&gt;any</td>
-</tr>
-<tr>
-<td style="text-align:left">? :</td>
-<td style="text-align:left">条件运算符</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">3</td>
-<td style="text-align:left">bool,any,any-&gt;any</td>
-</tr>
-<tr>
-<td style="text-align:left">=</td>
-<td style="text-align:left">变量赋值或对象属性赋值</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">lval,any-&gt;any</td>
-</tr>
-<tr>
-<td style="text-align:left">*= 、/=、%=、+=、-=、&amp;= <br> ^=、&#124;=、&lt;&lt;=、&gt;&gt;=、&gt;&gt;&gt;=</td>
-<td style="text-align:left">运算且赋值</td>
-<td style="text-align:left">R</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">lval,any-&gt;any</td>
-</tr>
-<tr>
-<td style="text-align:left">,</td>
-<td style="text-align:left">忽略第一个操作数，返回第二个操作数</td>
-<td style="text-align:left">L</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">any,any-&gt;any</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>属性访问表达式和调用表达式的优先级要比所有运算符都高。  </li>
-</ul>
-<h2 id="2-1- 左值"><a href="#2-1- 左值" class="headerlink" title="2.1 左值"></a>2.1 左值</h2><ul>
-<li>ECMAScript 规范允许内置函数返回一个左值，但是自定义函数不能返回左值，不过如果返回的是对象的话，可以访问其属性。   </li>
-</ul>
-<h2 id="2-2- 运算法"><a href="#2-2- 运算法" class="headerlink" title="2.2 + 运算法"></a>2.2 + 运算法</h2><ul>
-<li>+ 运算法即可以作为加法运算，也可以作为字符串连接，但是优先考虑字符串连接。  </li>
-<li>如果操作数中没有字符串，则都转化为数字。    </li>
-<li>加法操作符的行为表现为：<ul>
-<li>如果其中一个操作时是对象，则尊照对象到原始值的转换规则转为原始值。  </li>
-<li>转化为原始值后，如果其中一个操作数是字符串的话，则转化为字符串</li>
-<li>否则，两个操作数都转换为数字进行加法操作</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-3- 位运算符"><a href="#2-3- 位运算符" class="headerlink" title="2.3 位运算符"></a>2.3 位运算符</h2><ul>
-<li>位运算会将操作数转换为数字，并强制表示为 32 位整数，这会忽略原格式中的小数部分和任何超过 32 位的二进制。   </li>
-<li>移位运算符要求右操作数在 0～31 之间，在将其操作数转化为无符号 32 位整数后，将舍弃第 5 位之后的二进制数。   </li>
-<li>位运算会将 NaN、Infinity 和 -Infinity 转换为 0。   </li>
-</ul>
-<h2 id="2-4- 相等和不等运算"><a href="#2-4- 相等和不等运算" class="headerlink" title="2.4 相等和不等运算"></a>2.4 相等和不等运算</h2><h3 id="2-4-1- 严格相等运算符"><a href="#2-4-1- 严格相等运算符" class="headerlink" title="2.4.1 严格相等运算符"></a>2.4.1 严格相等运算符</h3><ul>
-<li>“===”首先计算操作数的值，然后比较这两个值，比较过程中没有任何类型转换。   </li>
-<li>如果两个值类型不相同，则它们不想等。  </li>
-<li>如果两个值都是 <code>null</code>或者都是 <code>undefined</code>，则它们相等，<code>null</code> 和<code>undefined</code>不相等。   </li>
-<li>如果其中一个值是 <code>NaN</code> 或者两个值都是<code>NaN</code>，则它们不相等。  </li>
-<li>如果两个值为数字且数值相等，则它们相等，<code>0===-0 = true</code>。</li>
-<li>如果两个值为字符串，且所含的对应位上的 16 位数完全相等，则它们相等。 </li>
-<li>如果两个引用值指向同一对象、数组或函数，则它们是相等的。</li>
-</ul>
-<h3 id="2-4-2- 相等运算符"><a href="#2-4-2- 相等运算符" class="headerlink" title="2.4.2 相等运算符"></a>2.4.2 相等运算符</h3><ul>
-<li>如果两个操作数类型一样，则执行严格相等一样的比较规则。   </li>
-<li>如果两个操作数的类型不一样，则遵守如下规则：<ul>
-<li><code>null==undefined = true</code></li>
-<li>字符串和数字比较时，将字符串转换为数字，再做比较</li>
-<li>如果其中一个操作数为布尔类型，则将其转换为数字再做比较。</li>
-<li>如果是对象和数字或字符串对比，按照对象转原始值的转换规则转换为原始值。  </li>
-<li>其它不同类型之间的比较均不相等。  </li>
-</ul>
-</li>
-</ul>
-<h2 id="2-5- 关系运算符"><a href="#2-5- 关系运算符" class="headerlink" title="2.5 关系运算符"></a>2.5 关系运算符</h2><ul>
-<li>只有数字和字符串才能真正的执行比较操作。    </li>
-<li>如果操作数中不都包含字符串时，则都转化为数字进行数值比较。  </li>
-<li>0 等于 -0，<code>Infinity</code>比任何数都大 (除了本身)，<code>-Infinity</code> 比任何数都小(除了本身)。</li>
-<li>其中一个操作数为<code>NaN</code>，比较操作符总是返回<code>false</code>。</li>
-</ul>
-<h2 id="2-6- 逻辑表达式"><a href="#2-6- 逻辑表达式" class="headerlink" title="2.6 逻辑表达式"></a>2.6 逻辑表达式</h2><ul>
-<li>在逻辑与运算中，JavaScript 先计算左操作数，如果为假植，则直接返回假植，如果为真值则返回右操作数的计算结果。  </li>
-<li>在逻辑或中，当左操作数为真值时，返回该值。 </li>
-</ul>
-<h2 id="2-7- 带操作的赋值运算"><a href="#2-7- 带操作的赋值运算" class="headerlink" title="2.7 带操作的赋值运算"></a>2.7 带操作的赋值运算</h2><ul>
-<li><code>a op= b</code>等价于 <code>a=a op b</code>。 <code>op</code>代表一个运算符。第一个表达式中 <code>a</code> 只计算了一次，第二个表达式中 <code>a</code> 计算了两次。  </li>
-<li>当 <code>a</code> 是带有副作用的表达式时，两者不等价。   </li>
-</ul>
-<h2 id="2-8-eval"><a href="#2-8-eval" class="headerlink" title="2.8 eval()"></a>2.8 eval()</h2><ul>
-<li>eval()是一个函数，但被当作运算符对待。   </li>
-<li>eval()只有一个参数，如果传入的参数不是字符串，只是简单的返回这个参数。   </li>
-<li>eval()将传入的字符串进行编译，编译失败抛出语法错误，编译成功则执行这段代码，并返回最后一个表达式或者语句的值，如果该语句没有值，则返回<code>undefined</code>。   </li>
-<li>eval()的字符串执行时的上下文环境和调用函数的上下文环境是一样的。  </li>
-<li>eval()的字符串必须在语法上讲的通。</li>
-<li>ECMAScript 3 规范规定不允许对 eval()赋予别名，实际上大多数实现很少这么做。  </li>
-<li>当通过别名调用时，eval()会将其字符串当成顶层的全局代码执行，执行的代码可能会修改或创建新的全局变量和全局函数，但不会使用主调函数的局部变量。  </li>
-<li>ECMAScript 5 规定，当直接使用 eval()时，在调用它的上下文作用域内执行，当使用别名调用时则使用全局对象作为上下文作用域，并且无法访问定义局部变量和函数。   </li>
-</ul>
-<h3 id="2-8-1- 严格模式下的 eval"><a href="#2-8-1- 严格模式下的 eval" class="headerlink" title="2.8.1 严格模式下的 eval"></a>2.8.1 严格模式下的 eval</h3><ul>
-<li>当在严格模式下，或者 eval()执行的代码段以 <code>&quot;use strict&quot;</code> 开头时，无法定义新的局部变量和函数，只能查询或更改局部变量。   </li>
-</ul>
-<h2 id="2-9-typeof- 运算符"><a href="#2-9-typeof- 运算符" class="headerlink" title="2.9 typeof 运算符"></a>2.9 typeof 运算符</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">x</th>
-<th style="text-align:left">typeof x</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">undefined</td>
-<td style="text-align:left">“undefined”</td>
-</tr>
-<tr>
-<td style="text-align:left">null</td>
-<td style="text-align:left">“object”</td>
-</tr>
-<tr>
-<td style="text-align:left">true 或 false</td>
-<td style="text-align:left">“boolean”</td>
-</tr>
-<tr>
-<td style="text-align:left">任意数字或 NaN、Infinity</td>
-<td style="text-align:left">“number”</td>
-</tr>
-<tr>
-<td style="text-align:left">任意字符串</td>
-<td style="text-align:left">“string”</td>
-</tr>
-<tr>
-<td style="text-align:left">任意函数</td>
-<td style="text-align:left">“function”</td>
-</tr>
-<tr>
-<td style="text-align:left">任意内置对象 非函数</td>
-<td style="text-align:left">“object”</td>
-</tr>
-<tr>
-<td style="text-align:left">任意宿主对象</td>
-<td style="text-align:left">由编译器各自实现的字符串 ，但不是 “undefined”、”boolean”、”number”、”string”</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>ECMAScript 3 规范规定所有内置可执行对象，typeof 一律返回”function”。</li>
-<li>ECMASCript 5 规范规定所有可执行对象，包括内置对象和数组对象一律返回”function”。</li>
-</ul>
-<h2 id="2-10-delete- 运算符"><a href="#2-10-delete- 运算符" class="headerlink" title="2.10 delete 运算符"></a>2.10 delete 运算符</h2><ul>
-<li>delete 删除属性成功将返回<code>true</code></li>
-<li>delete 无法删除内置核心、客户端属性、通过 <code>var</code> 声明的变量、<code>function</code>定义的函数、函数参数。</li>
-<li>在严格模式下，delete 的操作数是非法时，将抛出语法错误异常，如果操作数是不可配置的属性，将抛出类型错误异常。   </li>
-</ul>
-<h2 id="2-11-void- 运算符"><a href="#2-11-void- 运算符" class="headerlink" title="2.11 void 运算符"></a>2.11 void 运算符</h2><ul>
-<li>void 运算符出现在操作数之间，操作数会照常计算，但忽略计算结果并返回<code>undefined</code></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Java/对象的创建和销毁-《Effective-Java》笔记.html" itemprop="url">
-                  对象的创建和销毁 -《Effective Java》笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-18T18:18:03+08:00" content="2016-08-18">
-              2016-08-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Java/对象的创建和销毁-《Effective-Java》笔记.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Java/对象的创建和销毁-《Effective-Java》笔记.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/Java/对象的创建和销毁-《Effective-Java》笔记.html" class="leancloud_visitors" data-flag-title="对象的创建和销毁 -《Effective Java》笔记">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="使用静态方法代替构造器"><a href="# 使用静态方法代替构造器" class="headerlink" title="使用静态方法代替构造器"></a>使用静态方法代替构造器</h2><blockquote>
-<ul>
-<li>静态方法有名称，便于理解</li>
-<li>静态方法可以返回已存在的对象，避免创建不必要的重复对象</li>
-<li>静态方法可以返回原返回类型的任何子类型，增加灵活性</li>
-<li>在创建参数化类型实例的时候，使代码更加简洁</li>
-</ul>
-</blockquote>
-<h2 id="存在多个构造器参数时考虑使用构造器"><a href="# 存在多个构造器参数时考虑使用构造器" class="headerlink" title="存在多个构造器参数时考虑使用构造器"></a>存在多个构造器参数时考虑使用构造器</h2><blockquote>
-<ul>
-<li>易于阅读</li>
-<li>加强参数的约束条件，一旦有一个参数违反约束条件就创建不成功</li>
-<li>可以非常灵活的增加参数数量</li>
-<li>Builder 模式适用于有多个参数构造时使用，一般是 4 个或多个。</li>
-<li>通常最好一开始就使用 Builder 模式</li>
-</ul>
-</blockquote>
-<p>以下是使用构造器的示例</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NutritionFacts</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> calories;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> fat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> sodium;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> carbohydrate;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 带默认值的</div><div class="line">         */</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> calories = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> fat = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> sodium = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> carbohydrate = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(<span class="keyword">int</span> servingSize, <span class="keyword">int</span> servings)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.servings = servings;</div><div class="line">            <span class="keyword">this</span>.servingSize = servingSize;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">calories</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            calories=val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">fat</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            fat = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">carbohydrate</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            carbohydrate = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">sodium</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">            sodium = val;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="keyword">public</span>  NutritionFacts <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> NutritionFacts(<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NutritionFacts</span><span class="params">(Builder builder)</span> </span>&#123;</div><div class="line">        servings = builder.servings;</div><div class="line">        servingSize = builder.servingSize;</div><div class="line">        calories = builder.calories;</div><div class="line">        fat = builder.fat;</div><div class="line">        carbohydrate = builder.carbohydrate;</div><div class="line">        sodium = builder.sodium;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        NutritionFacts nutritionFacts = <span class="keyword">new</span> NutritionFacts.Builder(<span class="number">20</span>, <span class="number">20</span>)</div><div class="line">                .calories(<span class="number">10</span>).carbohydrate(<span class="number">12</span>).build();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="使用枚举类型实现单例模式"><a href="# 使用枚举类型实现单例模式" class="headerlink" title="使用枚举类型实现单例模式"></a>使用枚举类型实现单例模式</h2><blockquote>
-<p>单元素的枚举类型是实现单例模式的最佳方法 ，详情可参考 <a href="http://blog.csdn.net/abyss521/article/details/52232409" target="_blank" rel="external"> 设计模式之单例模式</a></p>
-</blockquote>
-<h2 id="对于不想被实例化的类添加私有构造器"><a href="# 对于不想被实例化的类添加私有构造器" class="headerlink" title="对于不想被实例化的类添加私有构造器"></a>对于不想被实例化的类添加私有构造器</h2><blockquote>
-<p>例如 <code>java.lang.Math</code> 这种的工具类，不希望被实例化，最好添加私有构造器避免被实例化</p>
-</blockquote>
-<h2 id="避免创建不必要的对象"><a href="# 避免创建不必要的对象" class="headerlink" title="避免创建不必要的对象"></a>避免创建不必要的对象</h2><blockquote>
-<p>尤其是要避免在大规模应用场景中使用字符串连接符 <code>+</code> 连接字符串，以及对包装类 <code>Integer</code>、<code>Long</code> 等类型使用运算符。 </p>
-</blockquote>
-<h2 id="避免使用 finalize"><a href="# 避免使用 finalize" class="headerlink" title="避免使用 finalize"></a>避免使用 finalize</h2><blockquote>
-<ul>
-<li><code>finalize()</code>不能保证被及时地执行，甚至根本不保证它们会执行</li>
-<li>在 <code>finalize()</code> 中创建和销毁对象对性能损耗非常大</li>
-<li>在<code>finalize()</code> 中抛出的异常会被忽略，使对象处于破坏状态</li>
-<li>假如需要释放资源，推荐使用<code>try-finally</code> </li>
-</ul>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Java/Java-Java-IO-概述.html" itemprop="url">
-                  Java I/O 类概述
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-29T12:08:34+08:00" content="2016-05-29">
-              2016-05-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Java/Java-Java-IO-概述.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Java/Java-Java-IO-概述.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/Java/Java-Java-IO-概述.html" class="leancloud_visitors" data-flag-title="Java I/O 类概述">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p>&ensp;&ensp; I/O 是 input 和 output 的简写，Java API 中，可以读入字节或字符序列的对象称为输入流，可以写入字节或字符序列的对象称为输出流。其来源地和目的地可以是文件，也可以是 socket、http、数组甚至是两个线程之间。   </p>
-<p>&ensp;&ensp; I/O 包下有几十个类文件，大概分为以下几种：   </p>
-<ul>
-<li>由 <code>InputStream</code>、<code>OutputStream</code>、<code>Reader</code>、<code>Writer</code> 为代表的 I/O 类 </li>
-<li>与文件系统相关的泪，例如 <code>File</code>、<code>FileFilter</code>、<code>RandomAccessFile</code> 等</li>
-<li>序列化相关的类 </li>
-<li>其他，例如工具类、异常类</li>
-</ul>
-<h2 id="流家族"><a href="# 流家族" class="headerlink" title="流家族"></a>流家族 </h2><p> 从<code>InputStream</code>和 <code>OutputStream</code> 中继承的类是用来处理字节流。从 <code>Reader</code> 和<code>Writer</code>继承的类是用来处理 Unicode 字符，这些类的读写操作都是基于 Unicode 码元的。通过 <code>InputStreamReader</code> 和<code>OutputStreamWriter</code>可以将字节流转为字符流。     </p>
-<p>流家族体系 <br><img src="../images/Java_IO_01.png" alt="Java_IO_01.png"><br> 上图中，红色的类表示已被弃用。    </p>
-<h3 id="字节流"><a href="# 字节流" class="headerlink" title="字节流"></a>字节流 </h3><h4 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h4><p><code>InputStream</code> 有几个常用的方法 ：  </p>
-<ul>
-<li>mark : <code>mark</code>方法用于标记当前读取的位置，与 <code>reset</code> 方法配合使用。   </li>
-<li>reset : 返回 <code>mark</code> 标记的位置，重新从该位置读取字节</li>
-<li>markSupported : 是否支持 mark/reset </li>
-<li>available : 剩余未读取的字节数</li>
-<li>skip : 跳过并丢弃指定的字节数</li>
-<li>read : 读取字节</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类</th>
-<th style="text-align:left">markSupported</th>
-<th style="text-align:left">skip</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ByteArrayInputStream</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">输入源，将 <code>byte[]</code> 作为输入源的类</td>
-</tr>
-<tr>
-<td style="text-align:left">FileInputStream</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">输入源，将文件作为输入源的类</td>
-</tr>
-<tr>
-<td style="text-align:left">PipedInputStream</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">输入源，用于进程间通信，与 <code>PipedOutputStream</code> 配合使用</td>
-</tr>
-<tr>
-<td style="text-align:left">SequenceInputStream</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">将多个输入源合并成一个输入源，<code>available</code>方法只返回当前输入源的<code>available</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="FilterInputStream"><a href="#FilterInputStream" class="headerlink" title="FilterInputStream"></a>FilterInputStream</h4><p>继承自 <code>FilterInputStream</code> 子类是装饰器类，它们不能自己产生字节序列，需要配合输入源才能使用，它们的主要作用是增加输入流的功能。在别的编程语言里，诸如缓冲机制和预览等细节都是自动处理的，相对而言，Java 就比较麻烦，必须配合装饰器类才能实现。但是这种方式带来极大的灵活性。   </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类</th>
-<th style="text-align:left">markSupported</th>
-<th style="text-align:left">skip</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">BufferedInputStream</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">给输入流增加缓冲机制</td>
-</tr>
-<tr>
-<td style="text-align:left">PushbackInputStream</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">给输入流增加推回功能，即将读取的字节推回到缓冲区</td>
-</tr>
-<tr>
-<td style="text-align:left">DataInputStream</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">允许应用程序以与机器无关方式从底层输入流中读取基本 Java 数据类型，一般与 <code>DataOutputStream</code> 配合使用，另外 <code>DataInputStream</code> 读取时采用的 Java 版的 UTF-8 编码，与标准 UTF-8 不同。所以 <code>DataInputStream</code> 读取的字节流必须时通过 <code>DataOutputStream</code> 写入的，不然会出问题</td>
-</tr>
-</tbody>
-</table>
-<h4 id="OutputStream"><a href="#OutputStream" class="headerlink" title="OutputStream"></a>OutputStream</h4><p><code>OutputStream</code>有几种常用的方法： </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ByteArrayOutputStream</td>
-<td style="text-align:left">将输出流转化为<code>byte[]</code></td>
-</tr>
-<tr>
-<td style="text-align:left">FileOutputStream</td>
-<td style="text-align:left">文件输出流</td>
-</tr>
-<tr>
-<td style="text-align:left">PipedOutputStream</td>
-<td style="text-align:left">管道输出流，与 <code>PipedOutputStream</code> 配合使用</td>
-</tr>
-</tbody>
-</table>
-<h4 id="FilterOutputStream"><a href="#FilterOutputStream" class="headerlink" title="FilterOutputStream"></a>FilterOutputStream</h4><p>类似于 <code>FilterInputStream</code>，<code>FilterOutputStream</code> 也是装饰器类的基类。    </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">BufferedOutputStream</td>
-<td style="text-align:left">给输出流增加缓冲机制</td>
-</tr>
-<tr>
-<td style="text-align:left">PrintStream</td>
-<td style="text-align:left">打印输出流 <br> 可直接输出至文件 (里面封装了<code>FileOutputStream</code>)<br> 自动刷新功能，遇到 <code>\n</code> 或者写入一个 <code>byte</code> 数组之后自动调用 <code>flush</code> 方法 <br> 可方便打印各种数据值表示形式 <br> 与其他输出流不同，它产生的 <code>IOException</code> 异常会被自身函数捕获，可以通过 <code>checkError</code> 检查是否发生过异常 <br> 通过 <code>format</code> 方法，支持格式化输出 <br> 打印的字符使用平台默认字符编码转换为字节，也可以指定编码类型 <br><code>null</code> 值会被转为 <code>null</code> 字符，布尔类型会被转为 <code>true</code> 和<code>false</code>字符</td>
-</tr>
-<tr>
-<td style="text-align:left">DataOutputStream</td>
-<td style="text-align:left">允许应用程序以与机器无关方式写入基本 Java 数据类型，配合 <code>DataInputStream</code> 使用。</td>
-</tr>
-</tbody>
-</table>
-<h4 id="ObjectOutput- 和 ObjectInput"><a href="#ObjectOutput- 和 ObjectInput" class="headerlink" title="ObjectOutput 和 ObjectInput"></a>ObjectOutput 和 ObjectInput</h4><p><code>ObjectInputStream</code>和 <code>ObjectOutputStream</code> 用于对象的序列化，可以将任何 Java 类型包括对象，序列化成字节序列。    </p>
-<h3 id="字符流"><a href="# 字符流" class="headerlink" title="字符流"></a>字符流 </h3><h4 id="Reader"><a href="#Reader" class="headerlink" title="Reader"></a>Reader</h4><p><code>Reader</code> 用于读取字符流的抽象类，使用字符流读取文件，比字节流更高效。可通过 <code>InputStreamReader</code> 将字节流转换为字符流。   </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类</th>
-<th style="text-align:left">markSupported</th>
-<th style="text-align:left">skip</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">CharArrayReader</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">输入源，将 <code>char[]</code> 作为输入源的类</td>
-</tr>
-<tr>
-<td style="text-align:left">StringReader</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">输入源，将 <code>String</code> 作为输入源的类</td>
-</tr>
-<tr>
-<td style="text-align:left">PipedReader</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">类似<code>PipedInputStream</code></td>
-</tr>
-<tr>
-<td style="text-align:left">FileReader</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">类似 <code>FileInputStream</code>，实际上就是在<code>FileInputStream</code> 外面套了 <code>InputStreamReader</code> 类</td>
-</tr>
-<tr>
-<td style="text-align:left">InputStreamReader</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">将字节流转为字符流，可以指定字符编码</td>
-</tr>
-<tr>
-<td style="text-align:left">BufferedReader</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">类似于<code>BufferedInputStream</code>，带有缓冲机制的字符流，需要提供输入源</td>
-</tr>
-<tr>
-<td style="text-align:left">PushbackReader</td>
-<td style="text-align:left">不支持</td>
-<td style="text-align:left">支持</td>
-<td style="text-align:left">类似<code>PushbackInputStream</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="Writer"><a href="#Writer" class="headerlink" title="Writer"></a>Writer</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">类</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">CharArrayWriter</td>
-<td style="text-align:left">将输出流转为 <code>char[]</code>。<code>null</code> 值被转为 <code>null</code> 字符串</td>
-</tr>
-<tr>
-<td style="text-align:left">StringWriter</td>
-<td style="text-align:left">将输出流转为 <code>String</code>。<code>null</code> 值被转为 <code>null</code> 字符串</td>
-</tr>
-<tr>
-<td style="text-align:left">PipedWriter</td>
-<td style="text-align:left">类似<code>PipedOutputStream</code></td>
-</tr>
-<tr>
-<td style="text-align:left">PrintWriter</td>
-<td style="text-align:left">类似<code>PrintStream</code></td>
-</tr>
-<tr>
-<td style="text-align:left">OutStreamWriter</td>
-<td style="text-align:left">将字节流转为字符流，可以指定字符编码</td>
-</tr>
-<tr>
-<td style="text-align:left">BufferedWriter</td>
-<td style="text-align:left">类似于<code>BufferedOutputStream</code>，带有缓冲机制的字符流，需要提供输入源</td>
-</tr>
-</tbody>
-</table>
 
           
         
@@ -4966,7 +4628,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -4974,7 +4636,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -4983,7 +4645,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

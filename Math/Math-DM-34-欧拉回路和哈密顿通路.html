@@ -373,8 +373,8 @@
 <blockquote>
 <p>假设多重图有从 $a$ 到 $b$ 的欧拉通路，但不是欧拉回路。通路的第一条边为 $a$ 贡献 1 度，此后每次经过 $a$ 都贡献 2 度。通路的最后一条边为 $b$ 的度贡献 1 度，此前每次经过 $b$ 都贡献 2 度，因此 $a$ 和 $b$ 必定是奇数度。    </p>
 </blockquote>
-<h3 id="构造欧拉回路"><a href="# 构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在 G 里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的 G \\<br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是 H 里的顶点也是 circuit 的边的端点处开始的 H 里的一条回路 \\<br>\quad H\; :=\; 删除 subcircuit 的边和所有孤立点之后的 H \\<br>\quad circuit\; :=\; 在适当顶点上插入 subcircuit 之后的 circuit\\<br>\mathbf {end}(circuit 是欧拉回路)<br>\end{array}$$</p>
-<h2 id="哈密顿通路"><a href="# 哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路 </h2><p> 在图 $G=(\mathbf V,\mathbf E)$ 里，若 $\mathbf V=\{x_0,x_1,\dots,x_{n-1},x_n\}$ 并且对 $0\le i\lt j\le n$ 来说有 $x_j\neq x_i$，则通路 $x_0,x_1,\dots,x_{n-1},x_n$ 称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$ 称为哈密顿回路。    </p>
+<h3 id="构造欧拉回路"><a href="# 构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在 G 里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的 G \ <br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是 H 里的顶点也是 circuit 的边的端点处开始的 H 里的一条回路 \\<br>\quad H\; :=\; 删除 subcircuit 的边和所有孤立点之后的 H \\<br>\quad circuit\; :=\; 在适当顶点上插入 subcircuit 之后的 circuit\\<br>\mathbf {end}(circuit 是欧拉回路)<br>\end{array}$$</p>
+<h2 id="哈密顿通路"><a href="# 哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路 </h2><p> 在图 $G=(\mathbf V,\mathbf E)$ 里，若 $\mathbf V={x_0,x_1,\dots,x_{n-1},x_n}$ 并且对 $0\le i\lt j\le n$ 来说有 $x_j\neq x_i$，则通路 $x_0,x_1,\dots,x_{n-1},x_n$ 称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$ 称为哈密顿回路。    </p>
 <h3 id="求解哈密顿通路"><a href="# 求解哈密顿通路" class="headerlink" title="求解哈密顿通路"></a>求解哈密顿通路 </h3><p> 目前没有已知的简单的充要条件来判定哈密顿回路的存在性。不过有很多定理对哈密顿的存在性提供了充分条件，另外，某些性质可以用来证明一个图没有哈密顿回路。    </p>
 <p>带有一个顶点的图是没用哈密顿回路的。<br>图的边越多存在哈密顿回路的可能性就越大，尤其是每个顶点都加入边时。     </p>
 <h3 id="狄拉克定理"><a href="# 狄拉克定理" class="headerlink" title="狄拉克定理"></a>狄拉克定理 </h3><p> 如果 $G$ 是带 $n$ 个顶点的连通简单图，其中 $n\gt 3$，并且 $G$ 中每个顶点的度都至少为 $n/2$，则 $G$ 有哈密顿回路。    </p>
@@ -499,7 +499,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -507,7 +507,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -516,7 +516,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

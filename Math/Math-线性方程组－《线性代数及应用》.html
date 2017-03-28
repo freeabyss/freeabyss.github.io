@@ -400,8 +400,8 @@
 <li>把一般解 $\mathbf x$ 表示成向量，如果有自由变量，其元素依赖于自由变量</li>
 <li>把 $\mathbf x$ 分解为向量的线性组合，用自由变量作为参数</li>
 </ol>
-<h2 id="线性组合和线性变换"><a href="# 线性组合和线性变换" class="headerlink" title="线性组合和线性变换"></a>线性组合和线性变换 </h2><h3 id="线性组合"><a href="# 线性组合" class="headerlink" title="线性组合"></a> 线性组合 </h3><p> 给定 $R^n$ 中向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$ 和标量 $c_1,c_2,\cdots,c_p$, 向量 <br>$$<br>    \mathbf y=c_1\mathbf v_1+\cdots+c_p\mathbf v_p<br>$$<br> 称为向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$，以 $c_1,c_2,\cdots,c_p$ 为权的 <em> 线性组合</em>，其中所有向量 $y$ 的集合用记号 $Span\{\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p\}$ 表示。</p>
-<h3 id="线性相关"><a href="# 线性相关" class="headerlink" title="线性相关"></a>线性相关 </h3><p> 对于 $R^n$ 中一组向量 $\{\mathbf v_1,\cdots,\mathbf v_p\}$，若向量方程 <br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p=0<br>$$<br> 仅有平凡解，则称向量组 (集)$\{\mathbf v_1,\cdots,\mathbf v_p\}$ 线性无关，否则称为线性相关。<br> 由此可以推论出，当方程 $A\mathbf x=0$ 仅有平凡解时，矩阵 $A$ 中各列线性无关。</p>
+<h2 id="线性组合和线性变换"><a href="# 线性组合和线性变换" class="headerlink" title="线性组合和线性变换"></a>线性组合和线性变换 </h2><h3 id="线性组合"><a href="# 线性组合" class="headerlink" title="线性组合"></a> 线性组合 </h3><p> 给定 $R^n$ 中向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$ 和标量 $c_1,c_2,\cdots,c_p$, 向量 <br>$$<br>    \mathbf y=c_1\mathbf v_1+\cdots+c_p\mathbf v_p<br>$$<br> 称为向量 $\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p$，以 $c_1,c_2,\cdots,c_p$ 为权的 <em> 线性组合</em>，其中所有向量 $y$ 的集合用记号 $Span{\mathbf v_1,\mathbf v_2,\cdots,\mathbf v_p}$ 表示。</p>
+<h3 id="线性相关"><a href="# 线性相关" class="headerlink" title="线性相关"></a>线性相关 </h3><p> 对于 $R^n$ 中一组向量 ${\mathbf v_1,\cdots,\mathbf v_p}$，若向量方程 <br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p=0<br>$$<br> 仅有平凡解，则称向量组 (集)${\mathbf v_1,\cdots,\mathbf v_p}$ 线性无关，否则称为线性相关。<br> 由此可以推论出，当方程 $A\mathbf x=0$ 仅有平凡解时，矩阵 $A$ 中各列线性无关。</p>
 <h3 id="线性变换"><a href="# 线性变换" class="headerlink" title="线性变换"></a>线性变换 </h3><p> 由 $R^n$ 到 $R^m$ 的一个变换 (映射、函数)$T$，它将 $R^n$ 中的每个向量 $\mathbf x$ 对应 $R^m$ 中的一个向量 $T(\mathbf x)$，集 $R^n$ 称为 $T$ 的定义域，$R^m$ 称为 $T$ 的语定义域。记作 $T:R^n \to R^m$<br>$R^m$ 中的向量 $T(\mathbf x)$ 称为 $\mathbf x$ 在 $T$ 作用下的像。<br> 若 $T$ 为线性的，则它满足以下性质<br>$$<br>    T(c\mathbf u+d\mathbf v)=cT(\mathbf u)+dT(\mathbf v)\\<br>    T(0)=0\\<br>    T(c\mathbf u)=cT(\mathbf u)\\<br>$$</p>
 <h4 id="线性变换中的矩阵"><a href="# 线性变换中的矩阵" class="headerlink" title="线性变换中的矩阵"></a>线性变换中的矩阵 </h4><p> 从 $R^n$ 到 $R^m$ 的每一个线性变换，实际上都是一个矩阵变换 $\mathbf x\mapsto A\mathbf x$。<br>$$<br>    T(\mathbf x)= A\mathbf x<br>$$</p>
 <h2 id="定理和性质"><a href="# 定理和性质" class="headerlink" title="定理和性质"></a>定理和性质 </h2><h3 id="定理"><a href="# 定理" class="headerlink" title="定理"></a> 定理</h3><ol>
@@ -419,9 +419,9 @@
 </li>
 <li>若 $A$ 是 $m\times n$ 矩阵，$\mathbf u$ 和 $\mathbf v$ 是 $R^n$ 的向量，$c$ 是标量，则<br>$$<br> A(\mathbf u+\mathbf v)=A\mathbf u + A\mathbf v\\<br> A(c\mathbf u)=c(A\mathbf u)<br>$$</li>
 <li>设方程 $A\mathbf x=\mathbf b$ 对某个 $\mathbf b$ 是相容的，$\mathbf p$ 作为一个特解，则 $A\mathbf x=\mathbf b$ 的解集是所有形如 $\mathbf w=\mathbf p+\mathbf v_h$ 的向量的集，其中，$\mathbf v_h$ 是齐次方程 $A\mathbf x=0$ 的任意一个解。</li>
-<li>线性相关集的特征：两个或更多个向量的集合 $S=\{\mathbf v_1,\cdots,\mathbf v_p\}$ 线性相关，当且仅当 $S$ 中至少有一个向量是其他向量的线性组合。事实上，若 $S$ 线性相关，且 $\mathbf v_1 \neq 0$，则某个 $\mathbf v_j (j&gt;1)$ 是它前面几个向量 $\mathbf v_1,\cdots,\mathbf v_{j-1}$ 的线性组合。</li>
-<li>若一个向量组的向量个数超过每个向量元素个数，那么这个向量组线性相关，就是说，$R^n$ 中任意向量组 $\{\mathbf v_1,\cdots,v_n\}$，当 $p&gt;n$ 时线性相关。</li>
-<li>若向量组 $S=\{\mathbf v_1,\cdots,v_n\}$ 包含零向量，则它线性相关。</li>
+<li>线性相关集的特征：两个或更多个向量的集合 $S={\mathbf v_1,\cdots,\mathbf v_p}$ 线性相关，当且仅当 $S$ 中至少有一个向量是其他向量的线性组合。事实上，若 $S$ 线性相关，且 $\mathbf v_1 \neq 0$，则某个 $\mathbf v_j (j&gt;1)$ 是它前面几个向量 $\mathbf v_1,\cdots,\mathbf v_{j-1}$ 的线性组合。</li>
+<li>若一个向量组的向量个数超过每个向量元素个数，那么这个向量组线性相关，就是说，$R^n$ 中任意向量组 ${\mathbf v_1,\cdots,v_n}$，当 $p&gt;n$ 时线性相关。</li>
+<li>若向量组 $S={\mathbf v_1,\cdots,v_n}$ 包含零向量，则它线性相关。</li>
 <li>设 $T:R^n \to R^m$ 线性变换，则存在唯一的矩阵 $A$，使 $T(\mathbf x)=A\mathbf x$，对 $R^n$ 中一切 $\mathbf x$。事实上，$A$ 是 $m\times n$ 矩阵，它的第 $j$ 列是向量 $T(\mathbf e_j)$，其中 $\mathbf e_j$ 是单位矩阵 $I_n$ 的第 $j$ 列：<br>$$<br>A=[T(\mathbf e_1) \cdots T(\mathbf e_n)]<br>$$</li>
 <li>设 $T:R^n \to R^m$ 为线性变换，则 $T$ 是一对一当且仅当方程 $A\mathbf x=0$ 仅有平凡解。</li>
 </ol>
@@ -552,7 +552,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -560,7 +560,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -569,7 +569,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

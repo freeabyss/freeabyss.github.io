@@ -379,7 +379,7 @@
 <li>$H$ 对向量加法封闭，即对 $H$ 中任意向量 $\mathbf u,\mathbf v$，和 $\mathbf u+\mathbf v$ 仍在 $H$ 中</li>
 <li>$H$ 对标量乘法封闭，即对 $H$ 中任意向量 $\mathbf u$ 和任意标量 $c$，向量 $c\mathbf u$ 仍在 $H$ 中</li>
 </ul>
-<h3 id="矩阵的列空间"><a href="# 矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间 </h3><p>$m\times n$ 矩阵的列空间(记为 $ColA$) 是由 $A$ 的列的所有线性组合组成的集合，若 $A=[\mathbf a_1,\cdots,\mathbf a_n]$，则 $ColA = Span\{\mathbf a_1,\cdots,\mathbf a_n\}$<br>$ColA$)可写成 $A\mathbf x$ 的形式，其中 $\mathbf x$ 为某向量，$A\mathbf x$ 表示 $A$ 的列向量的一个线性组合，即<br>$$<br>    ColA = {\mathbf b:\mathbf b = A\mathbf x, \mathbf x \in \mathbb R^n}<br>$$<br>$m\times n$ 矩阵的列空间等于 $\mathbb R^m$ 当且仅当方程 $A\mathbf x=\mathbf b$ 对 $\mathbb R^m$ 中每个 $\mathbf b$ 有解</p>
+<h3 id="矩阵的列空间"><a href="# 矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间 </h3><p>$m\times n$ 矩阵的列空间(记为 $ColA$) 是由 $A$ 的列的所有线性组合组成的集合，若 $A=[\mathbf a_1,\cdots,\mathbf a_n]$，则 $ColA = Span{\mathbf a_1,\cdots,\mathbf a_n}$<br>$ColA$)可写成 $A\mathbf x$ 的形式，其中 $\mathbf x$ 为某向量，$A\mathbf x$ 表示 $A$ 的列向量的一个线性组合，即<br>$$<br>    ColA = {\mathbf b:\mathbf b = A\mathbf x, \mathbf x \in \mathbb R^n}<br>$$<br>$m\times n$ 矩阵的列空间等于 $\mathbb R^m$ 当且仅当方程 $A\mathbf x=\mathbf b$ 对 $\mathbb R^m$ 中每个 $\mathbf b$ 有解</p>
 <h3 id="NulA- 与 -ColA- 的对比"><a href="#NulA- 与 -ColA- 的对比" class="headerlink" title="$NulA$ 与 $ColA$ 的对比"></a>$NulA$ 与 $ColA$ 的对比 </h3><p> 对于 $m\times n$ 矩阵 $A$，$NulA$ 与 $ColA$ 之间的对比</p>
 <table>
 <thead>
@@ -424,11 +424,11 @@
 </tbody>
 </table>
 <h3 id="线性变换的核与值域"><a href="# 线性变换的核与值域" class="headerlink" title="线性变换的核与值域"></a>线性变换的核与值域 </h3><p> 由向量空间 $V$ 映射到向量空间 $W$ 内的线性变换 $T$ 是一个规则，它将 $V$ 中每个向量 $\mathbf x$ 映射城 $W$ 中惟一向量 $T(\mathbf x)$，且满足 <br>$$<br>    T(\mathbf u+\mathbf v) = T(\mathbf u)+T(\mathbf v), 对 V 中所有 \mathbf u,\mathbf v 均成立 \\<br>    T(c\mathbf u) = cT(\mathbf u), 对 V 中所有 \mathbf u 及所有数 c 均成立<br>$$<br> 线性变换 $T$ 的 <em> 核</em>(或称零空间)是 $V$ 中所有满足 $T(\mathbf u)=0$ 的向量 $\mathbf u$ 的集合。<br>$T$ 的 <em> 值域 </em> 是 $W$ 中所有具有形式 $T(\mathbf x)$ 的向量的集合。<br>如果 $T$ 是由一个矩阵变换得到的，例如 $T(\mathbf x)=A\mathbf x$，则 $T$ 的核与值域对应 $A$ 的零空间和列空间。 </p>
-<h2 id="线性无关集和基"><a href="# 线性无关集和基" class="headerlink" title="线性无关集和基"></a>线性无关集和基 </h2><h3 id="线性无关集"><a href="# 线性无关集" class="headerlink" title="线性无关集"></a> 线性无关集 </h3><p>$V$ 中向量的一个指标集 $\{\mathbf v_1,\cdots,\mathbf v_p\}$，称为线性无关的，如果向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p = 0<br>$$<br> 只有平凡解。<br><em>矩阵的行初等变换不影响矩阵的列的线性相关关系</em></p>
-<h3 id="基"><a href="# 基" class="headerlink" title="基"></a>基 </h3><p> 令 $H$ 是向量空间 $V$ 的一个子空间，$V$ 中向量的指标集 $B＝\{\mathbf b_1,\cdots,\mathbf b_p\}$ 称为 $H$ 的一个基，如果</p>
+<h2 id="线性无关集和基"><a href="# 线性无关集和基" class="headerlink" title="线性无关集和基"></a>线性无关集和基 </h2><h3 id="线性无关集"><a href="# 线性无关集" class="headerlink" title="线性无关集"></a> 线性无关集 </h3><p>$V$ 中向量的一个指标集 ${\mathbf v_1,\cdots,\mathbf v_p}$，称为线性无关的，如果向量方程<br>$$<br>    c_1\mathbf v_1+c_2\mathbf v_2+\cdots+c_p\mathbf v_p = 0<br>$$<br> 只有平凡解。<br><em>矩阵的行初等变换不影响矩阵的列的线性相关关系</em></p>
+<h3 id="基"><a href="# 基" class="headerlink" title="基"></a>基 </h3><p> 令 $H$ 是向量空间 $V$ 的一个子空间，$V$ 中向量的指标集 $B＝{\mathbf b_1,\cdots,\mathbf b_p}$ 称为 $H$ 的一个基，如果</p>
 <ul>
 <li>$B$ 是现象无关集</li>
-<li>由 $B$ 生成的子空间与 $H$ 相同，即 $H=Span\{\mathbf b_1,\cdots,\mathbf b_p\}$</li>
+<li>由 $B$ 生成的子空间与 $H$ 相同，即 $H=Span{\mathbf b_1,\cdots,\mathbf b_p}$</li>
 </ul>
 <h4 id="基的两个特性"><a href="# 基的两个特性" class="headerlink" title="基的两个特性"></a>基的两个特性</h4><blockquote>
 <ul>
@@ -438,13 +438,13 @@
 </blockquote>
 <h3 id="NulA- 和 -ColA- 的基"><a href="#NulA- 和 -ColA- 的基" class="headerlink" title="$NulA$ 和 $ColA$ 的基"></a>$NulA$ 和 $ColA$ 的基 </h3><p> 通过解 $A\mathbf x=0$ 的出的生成集总是线性无关的，即 $NulA$ 的基。<br>$ColA$ 的基由矩阵 $A$ 的主元列构成。</p>
 <h2 id="定理"><a href="# 定理" class="headerlink" title="定理"></a>定理</h2><ol>
-<li>若 $\mathbf v_1,\cdots,\mathbf v_p$ 在向量空间 $V$ 中，则 $Span\{\mathbf v_1,\cdots,\mathbf v_p\}$ 是 $V$ 的一个子空间</li>
+<li>若 $\mathbf v_1,\cdots,\mathbf v_p$ 在向量空间 $V$ 中，则 $Span{\mathbf v_1,\cdots,\mathbf v_p}$ 是 $V$ 的一个子空间</li>
 <li>$m\times n$ 矩阵 $A$ 的零空间是 $\mathbb R^n$ 的一个子空间，也就是说，$m$ 个方程、$n$ 个未知数的齐次线性方程组 $A\mathbf x=0$ 的全体解的集合是 $\mathbb R^n$ 的一个子空间。</li>
 <li>$m\times n$ 矩阵 $A$ 的列空间是 $\mathbb R^m$ 的一个子空间</li>
-<li>不少于两个有编号的向量的集合 $\{\mathbf v_1,\cdots,\mathbf v_p\}$，如果有 $\mathbf v_1 \neq0$，则 $\{\mathbf v_1,\cdots,\mathbf v_p\}$ 是线性相关的，当且仅当某 $\mathbf v_1(j&gt;1)$ 是其前面向量 $v_1,\cdots,v_{j-1}$ 的线性组合</li>
-<li>生成集定理: 令 $S=\{\mathbf v_1,\cdots,\mathbf v_p\}$ 是 $V$ 中的向量集，$H=Span\{\mathbf v_1,\cdots,\mathbf v_p\}$.<ul>
+<li>不少于两个有编号的向量的集合 ${\mathbf v_1,\cdots,\mathbf v_p}$，如果有 $\mathbf v_1 \neq0$，则 ${\mathbf v_1,\cdots,\mathbf v_p}$ 是线性相关的，当且仅当某 $\mathbf v_1(j&gt;1)$ 是其前面向量 $v_1,\cdots,v_{j-1}$ 的线性组合</li>
+<li>生成集定理: 令 $S={\mathbf v_1,\cdots,\mathbf v_p}$ 是 $V$ 中的向量集，$H=Span{\mathbf v_1,\cdots,\mathbf v_p}$.<ul>
 <li>若 $S$ 中某一向量，比如说 $v_k$，是 $S$ 中其余向量的线性组合，则 $S$ 中去掉 $v_k$ 之后形成的集合仍然可以生成 $H$。</li>
-<li>若 $H\neq\{0\}$，则 $S$ 的某一子集是 $H$ 的一个基<br>6. 矩阵 $A$ 的主元列构成 $ColA$ 的一个基</li>
+<li>若 $H\neq{0}$，则 $S$ 的某一子集是 $H$ 的一个基<br>6. 矩阵 $A$ 的主元列构成 $ColA$ 的一个基</li>
 </ul>
 </li>
 </ol>
@@ -565,7 +565,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -573,7 +573,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -582,7 +582,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

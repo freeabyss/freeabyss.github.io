@@ -92,16 +92,16 @@
 
 
 
-<meta name="description" content="连通性  定义和相关术语  无向图定义  设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$路径  是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中 $x_0=u$ 而 $x_n=v">
+<meta name="description" content="连通性  定义和相关术语  无向图定义  设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$路径  是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)={x_0,x_1},f(e_2)={x_1,x_2},\dots,f(e_n)={x_{n-1},x_n}$，其中 $x_0=u$ 而 $x_n=v$。当这个图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散数学学习笔记 图的连通性 33">
 <meta property="og:url" content="http://blog.freeabyss.com/Math/Math-DM-33-图的连通性.html">
 <meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="连通性  定义和相关术语  无向图定义  设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$路径  是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中 $x_0=u$ 而 $x_n=v">
+<meta property="og:description" content="连通性  定义和相关术语  无向图定义  设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$路径  是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)={x_0,x_1},f(e_2)={x_1,x_2},\dots,f(e_n)={x_{n-1},x_n}$，其中 $x_0=u$ 而 $x_n=v$。当这个图">
 <meta property="og:updated_time" content="2017-02-25T08:31:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学学习笔记 图的连通性 33">
-<meta name="twitter:description" content="连通性  定义和相关术语  无向图定义  设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$路径  是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中 $x_0=u$ 而 $x_n=v">
+<meta name="twitter:description" content="连通性  定义和相关术语  无向图定义  设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$路径  是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)={x_0,x_1},f(e_2)={x_1,x_2},\dots,f(e_n)={x_{n-1},x_n}$，其中 $x_0=u$ 而 $x_n=v$。当这个图">
 
 
 
@@ -349,7 +349,7 @@
       
 
       
-        <h2 id="连通性"><a href="# 连通性" class="headerlink" title="连通性"></a>连通性 </h2><h3 id="定义和相关术语"><a href="# 定义和相关术语" class="headerlink" title="定义和相关术语"></a> 定义和相关术语 </h3><h4 id="无向图定义"><a href="# 无向图定义" class="headerlink" title="无向图定义"></a> 无向图定义 </h4><p> 设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$<strong>路径 </strong> 是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)=\{x_0,x_1\},f(e_2)=\{x_1,x_2\},\dots,f(e_n)=\{x_{n-1},x_n\}$，其中 $x_0=u$ 而 $x_n=v$。当这个图是简单图时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即 $u=v$ 且长度大于 0，则它是一条 <strong> 封闭路径 </strong>。<br> 若通路径不包含重复的相同边，则它是 <strong> 路线 </strong> 。<br> 当没有必要区分多重边时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示路径。<br>通路表示没有重复顶点的路径。       </p>
+        <h2 id="连通性"><a href="# 连通性" class="headerlink" title="连通性"></a>连通性 </h2><h3 id="定义和相关术语"><a href="# 定义和相关术语" class="headerlink" title="定义和相关术语"></a> 定义和相关术语 </h3><h4 id="无向图定义"><a href="# 无向图定义" class="headerlink" title="无向图定义"></a> 无向图定义 </h4><p> 设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$<strong>路径 </strong> 是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)={x_0,x_1},f(e_2)={x_1,x_2},\dots,f(e_n)={x_{n-1},x_n}$，其中 $x_0=u$ 而 $x_n=v$。当这个图是简单图时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即 $u=v$ 且长度大于 0，则它是一条 <strong> 封闭路径 </strong>。<br> 若通路径不包含重复的相同边，则它是 <strong> 路线 </strong> 。<br> 当没有必要区分多重边时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示路径。<br>通路表示没有重复顶点的路径。       </p>
 <blockquote>
 <p>路径 (walk)、通路(path)，、封闭路径(closed walk)、回路(circuit)、路线(trail)<br> 上面定义的概念，有很多不同的术语， 因此需要注意以下几点： </p>
 <ul>
@@ -487,7 +487,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">83</span>
+              <span class="site-state-item-count">86</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -495,7 +495,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -504,7 +504,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

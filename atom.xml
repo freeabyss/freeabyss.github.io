@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.freeabyss.com/"/>
-  <updated>2017-04-07T11:19:50.000Z</updated>
+  <updated>2017-08-15T02:38:11.000Z</updated>
   <id>http://blog.freeabyss.com/</id>
   
   <author>
@@ -16,589 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数理逻辑 谓词演算 03</title>
-    <link href="http://blog.freeabyss.com/Mathematical-Logic/Math-DL-03-%E8%B0%93%E8%AF%8D%E6%BC%94%E7%AE%97.html"/>
-    <id>http://blog.freeabyss.com/Mathematical-Logic/Math-DL-03-谓词演算.html</id>
-    <published>2017-03-28T02:55:23.000Z</published>
-    <updated>2017-04-07T11:19:50.000Z</updated>
+    <title>javassist 版本兼容问题</title>
+    <link href="http://blog.freeabyss.com/Java/Java-javassist%20%E7%9A%84%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html"/>
+    <id>http://blog.freeabyss.com/Java/Java-javassist 的版本兼容问题.html</id>
+    <published>2017-08-15T02:08:15.000Z</published>
+    <updated>2017-08-15T02:38:11.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="谓词和量词"><a href="# 谓词和量词" class="headerlink" title="谓词和量词"></a>谓词和量词 </h2><p> 命题是对确定的对象作出判断的陈述句。被判断的对象称为 <strong> 个体 </strong>，作出的判断称为<strong> 谓词 </strong>，个体的数量称为<strong> 量词 </strong>。其中确定的对象称为<strong> 个体常元 </strong>，不确定的对象称为<strong> 个体变元</strong>。而谓词逻辑将量词作用于个体，引入个体变元，讨论不确定的对象。</p>
-<p>谓语逻辑是一种更强类型的逻辑，它可以讨论不确定的对象，在不同条件下对象的判断以及建立命题之间的内在联系。</p>
-<p>例如，语句「$x$ 大于 $3$ 」包含两部分，其中 $x$ 是个体变元，「大于 $3$ 」是谓词。我们可以用 $P(x)$ 表示语句 「 $x$ 大于 $3$ 」，其中 $P$ 代表谓词 「大于 $3$ 」。也把 $P(x)$ 说成 <strong> 命题函数</strong> $P$ 在 $x$ 处的值。</p>
-<p>涉及 $n$ 个变量 $x_1,x_2,x_3,\dots,x_n$ 的语句可以用 $P(x_1,x_2,\dots,x_n)$ 表示，它是 命题函数 $P$ 在 $n$ 元组 $(x_1,x_2,\dots,x_n)$ 的值，$P$ 也称 $n$ 元谓词。</p>
-<blockquote>
-<p>有的教程里有 <strong> 谓词命名式 </strong> 和<strong>谓词填词 </strong> 的概念，在我的理解里谓词命名式相当于 $P(x)$，谓词填词就是把变量 $x$ 换成具体的对象。</p>
-</blockquote>
-<h3 id="全称量词和存在量词"><a href="# 全称量词和存在量词" class="headerlink" title="全称量词和存在量词"></a>全称量词和存在量词 </h3><p> 对于论域内的每一个 $x$，$P(x)$ 都为真值，记作 $\forall xP(x)$，其中 $\forall$ 称为 <strong> 全称量词</strong>。</p>
-<p>对于论域内至少有一个 $x$，使 $P(x)$ 为真，记作 $\exists xP(x)$，其中 $\exists$ 称为 <strong> 存在量词</strong>。</p>
-<p>除了全称量词和存在量词之外，还有其他量词，其中最常见的是唯一量词，用符号 $\exists !$ 或者 $\exists_1$ 表示。存在惟一一个 $x$ 使 $P(x)$ 为真，记作 $\exists!xP(x)$ 或 $\exists_1xP(x)$。</p>
-<p>量词所作用的谓词或者复合谓词表达式，称作量词的辖域。</p>
-<p>对于一元谓词，$\forall xP(x)$ 和 $\exists xP(x)$ 都是命题，对于有穷的个体域</p>
-<ul>
-<li>$\forall xP(x)$  等价于 $P(a_1)\land\dots\land P(a_n)$</li>
-<li>$\exists xP(x)$ 等价于 $P(a_1)\lor\dots\lor P(a_n)$</li>
-</ul>
-<h4 id="约束变元"><a href="# 约束变元" class="headerlink" title="约束变元"></a>约束变元 </h4><p> 量词作用于谓词时需要引入一个 <strong> 指导变元</strong>，放在量词后面：$\forall xP(x)$，$\exists xP(x)$</p>
-<p>指导变元不可取值代入的，称作约束变元，可以取之代入的个体变元称作自由变元。</p>
-<h4 id="约束论域的量词"><a href="# 约束论域的量词" class="headerlink" title="约束论域的量词"></a>约束论域的量词 </h4><p> 一个缩略符号通常用来约束量词的论域。 例如：$\forall x\lt 0(x^2 \gt 0)$ 表示对于每个实数 $x\lt 0$ 都有 $x^2 \gt 0$。<br>另外，全称量化的约束和一个条件语句的全称量化等价。例如：$\forall x\lt 0(x^2 \gt 0)$ 等价于 $\forall x(x\lt 0\rightarrow x^2 \gt 0)$   </p>
-<p>存在量词的约束和一个合取的存在量化等价。例如：$\exists z\gt 0(z^2 =2)$ 等价于 $\exists z(z\gt 0\land z^2 =2)$</p>
-<h3 id="谓词公式"><a href="# 谓词公式" class="headerlink" title="谓词公式"></a>谓词公式</h3><ol>
-<li>命题函数是公式、命题常用是公式，称作原子公式</li>
-<li>如果 $A$ 、$B$ 是公式，$x$ 为任一变元，那么 $(\lnot A)$，$(A\land B)$，$(A\lor B)$，$(A\rightarrow B)$，$(A\leftrightarrow B)$ 、$(\forall xA) $、$(\exists xA)$ 也是公式</li>
-<li>只有有限次使用上述规则形成的符号串是公式</li>
-</ol>
-<h2 id="永真式"><a href="# 永真式" class="headerlink" title="永真式"></a>永真式 </h2><p> 谓词公式称为命题，具有确定真值的条件：</p>
-<ul>
-<li>给定个体域</li>
-<li>公式中的所有谓词都有明确意义</li>
-<li>公式中所有自由变元取定个体</li>
-</ul>
-<h3 id="永真式 -1"><a href="# 永真式 -1" class="headerlink" title="永真式"></a>永真式 </h3><p> 永真式是逻辑中重要的概念，谓词公式有 4 个层次的「永真」。</p>
-<ul>
-<li>给定个体域 $D$ ，公式中各谓词符号的解释 $I$ ，如果 $A$ 中的自由变元 $x_1,\dots,x_n$ 分别取值 $u_1,\dots,u_n$ 时 $A$ 为真，称 $A$ 在 $u_1,\dots,u_n$ 处真</li>
-<li>如果 $A$ 在自由变元的任何取值下都真，称 $A$ 在解释 $I$ 下真</li>
-<li>如果 $A$ 在每个解释 $I$ 下均真，称 $A$ 在 $D$ 上永真</li>
-<li>如果 $A$ 在任何个体域 $D$ 永真，称 $A$ 永真</li>
-</ul>
-<h3 id="可满足式"><a href="# 可满足式" class="headerlink" title="可满足式"></a>可满足式 </h3><p> 如果对于某个个体域，谓词的某个解释，和自由变元的某个取值，公式 $A$ 在此处取值真，则称公式 $A$ 是可满足式</p>
-<h3 id="永假式"><a href="# 永假式" class="headerlink" title="永假式"></a>永假式 </h3><p> 公式 $A$ 不可满足时也称 $A$ 是永假式</p>
-<h2 id="逻辑等价和逻辑蕴含"><a href="# 逻辑等价和逻辑蕴含" class="headerlink" title="逻辑等价和逻辑蕴含"></a>逻辑等价和逻辑蕴含 </h2><p> 逻辑等价</p>
-<p>$A ⧦ B$ 当且仅当对一切域、解释和变元取值状况，$A$ 和 $B$ 都具有相同的真值。</p>
-<p>逻辑蕴含</p>
-<p>$A \models B$ 当且仅当对一切域、解释和变元取值使 $A$ 成真的变元取值状况均使 $B$ 成真。</p>
+    <content type="html"><![CDATA[<p> 项目使用 dubbo 2.5.3 作为分布式框架。 今天运行项目时发现 javassist 抛出一以下异常：</p>
+<p><code>java.lang.RuntimeException: java.io.IOException: invalid constant type: 18</code></p>
+<p> 回想起来周末的时候，顺手升级了 JDK，可能是因此造成的版本不兼容。根据网上回答，将 dubbo 引用的 javassist 版本升级到 3.18.0-GA 即可解决问题。</p>
+<p><strong> 注意 </strong> 不能升级到 3.20.0-GA ，我刚才开始也是直接升级到 3.20.0-GA，结果发现依然会抛出这个异常，直到降到 3.18.0-GA 才可以。</p>
+<h5 id="升级到 -3-18-0-GA- 的办法"><a href="# 升级到 -3-18-0-GA- 的办法" class="headerlink" title="升级到 3.18.0-GA 的办法"></a> 升级到 3.18.0-GA 的办法 </h5><p>dubbo 2.5.3 版本引用的 javassist 的版本是 3.15.0-GA , 在 maven 下升级到 3.18.0-GA 的方法就是排除 dubbo 的 javassist 依赖，重新引入 3.18.0-GA 版本的 javassist。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.5.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javassist<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javassist<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javassist<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javassist<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.18.0-GA<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<p> 另外贴一下，自己 JDK  的版本信息 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">java version &quot;1.8.0_121&quot;</div><div class="line">Java(TM) SE Runtime Environment (build 1.8.0_121-b13)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;谓词和量词&quot;&gt;&lt;a href=&quot;# 谓词和量词&quot; class=&quot;headerlink&quot; title=&quot;谓词和量词&quot;&gt;&lt;/a&gt;谓词和量词 &lt;/h2&gt;&lt;p&gt; 命题是对确定的对象作出判断的陈述句。被判断的对象称为 &lt;strong&gt; 个体 &lt;/strong&gt;，作出的判断称
+      &lt;p&gt; 项目使用 dubbo 2.5.3 作为分布式框架。 今天运行项目时发现 javassist 抛出一以下异常：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;java.lang.RuntimeException: java.io.IOException: invalid constant ty
     
     </summary>
     
-      <category term="Mathematical Logic" scheme="http://blog.freeabyss.com/categories/Mathematical-Logic/"/>
+      <category term="Java" scheme="http://blog.freeabyss.com/categories/Java/"/>
     
     
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+      <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
     
-      <category term="article" scheme="http://blog.freeabyss.com/tags/article/"/>
+      <category term="javassist" scheme="http://blog.freeabyss.com/tags/javassist/"/>
     
-  </entry>
-  
-  <entry>
-    <title>数理逻辑 命题演算 02</title>
-    <link href="http://blog.freeabyss.com/Mathematical-Logic/Math-DL-02-%E5%91%BD%E9%A2%98%E6%BC%94%E7%AE%97.html"/>
-    <id>http://blog.freeabyss.com/Mathematical-Logic/Math-DL-02-命题演算.html</id>
-    <published>2017-03-25T13:22:37.000Z</published>
-    <updated>2017-03-30T03:31:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概览"><a href="# 概览" class="headerlink" title="概览"></a>概览</h2><p><img src="../images/propostion_01.png" alt="概览图"></p>
-<h2 id="命题"><a href="# 命题" class="headerlink" title="命题"></a>命题 </h2><p> 命题是数理逻辑中最基本的概念，就好像自然数对于算数一样。</p>
-<p>对确定的对象作出判断的陈述句称作命题。 如果判断正确，称命题为 <strong> 真</strong>，否则为 <strong> 假</strong>。「真、假」是命题的属性，成为「真值」。</p>
-<p>命题要符合三个条件：</p>
-<ul>
-<li>必须是陈述句</li>
-<li>要做出判断</li>
-<li>要对确定的对象作出判断</li>
-</ul>
-<p>自相矛盾语句的不能作为命题，例如「这句话是错的」。</p>
-<h2 id="命题符号化"><a href="# 命题符号化" class="headerlink" title="命题符号化"></a>命题符号化 </h2><p><strong> 逻辑联结词 </strong> 是指，连接命题，对命题进行运算的词。<strong>原子命题 </strong> 是不含有逻辑联结词的命题。<strong>复合命题 </strong> 是包含了原子命题和逻辑联结词的命题。 </p>
-<p>原子命题一般用 $p$、$q$ 、$r$ 、$s$ 等小写字母表示。</p>
-<h3 id="逻辑联结词"><a href="# 逻辑联结词" class="headerlink" title="逻辑联结词"></a>逻辑联结词 </h3><p> 逻辑联结词是数理逻辑中的运算符号，就好像数学运算中的「加、减、乘、除」一样。</p>
-<p>常用的逻辑联结词有以下几种：</p>
-<ul>
-<li>非：表示命题的否定。记作 $\lnot p$</li>
-<li>合取：逻辑关系为两个命题同时成立，表示自然语言中「即…又…」、「不但…而且…」等并列的连接词。记作 $p\land q$ </li>
-<li>析取：逻辑关系为两个命题至少一个成立，表示自然语言中的「或」。记作 $p\lor q$ </li>
-<li>异或：有时自然语言中的「或」具有排斥性，例如「人固有一死，或重于泰山，或轻于鸿毛」这时就用异或表示，记作 $p\oplus q$ ，等价于 $(p\land\lnot q)\lor (\lnot p\land q)$</li>
-<li>蕴含：逻辑关系是 $p$ 是 $q$ 的充分条件，或者说 $q$ 是 $p$  的必要条件。记作 $p\rightarrow q$ </li>
-<li>双向蕴含：逻辑关系是 $p$ 和 $q$ 互为充分必要条件。记作 $p\leftrightarrow q$</li>
-<li>或非：也称 Peirce 记号。在 $p$ 和 $q$ 均为假时为真，相当于 $\lnot (p\lor q)$</li>
-<li>与非：在 $p$ 和 $q$ 均为真时为假，相当于 $\lnot (p\land q)$</li>
-</ul>
-<p>以下是几种逻辑联结词的真值表：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$p\qquad q$</th>
-<th style="text-align:center">$\lnot p$</th>
-<th style="text-align:center">$p\lor q$</th>
-<th style="text-align:center">$p\land q$</th>
-<th style="text-align:center">$p\oplus q$</th>
-<th style="text-align:center">$p\rightarrow q$</th>
-<th style="text-align:center">$p\leftrightarrow q$</th>
-<th style="text-align:center">$p\mid q$</th>
-<th style="text-align:center">$p\downarrow q$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$T\qquad T$</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">$T\qquad F$</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">$F\qquad T$</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">$F\qquad F$</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-</tbody>
-</table>
-<h3 id="命题公式"><a href="# 命题公式" class="headerlink" title="命题公式"></a>命题公式 </h3><p> 命题公式的组成：</p>
-<ul>
-<li>命题常元：即具体的命题和 $\mathbf T\quad \mathbf F$</li>
-<li>命题变元：以「真、假」为取值范围的变量</li>
-<li>命题公式：由命题常元、命题变元和联结词组成的形式更为复杂的命题</li>
-</ul>
-<p>命题公式的定义：</p>
-<ol>
-<li>命题变元和命题常元是命题公式，特别的称为原子公式或原子</li>
-<li>如果 $A$ ，$B$  是命题公式，那么 $(\lnot A)$，$(A\land B)$，$(A\lor B)$，$(A\rightarrow B)$，$(A\leftrightarrow B)$ 也是命题公式</li>
-<li>只有有限步骤引用上述两条所组成的符号串是命题公式</li>
-</ol>
-<p>命题公式简称公式，采用大写 $A$，$B$ 等表示。</p>
-<p>命题公式形式上是一个规则的字符串，内容上对应一个真值函数。</p>
-<h4 id="逻辑联结词优先级"><a href="# 逻辑联结词优先级" class="headerlink" title="逻辑联结词优先级"></a>逻辑联结词优先级 </h4><p> 严格按照定义的命题公式太过繁琐，为了简化括号，约定了逻辑联结词的优先级。</p>
-<p>我们定义优先级为：$\lnot$， $[\land\; \lor]$，$\rightarrow$，$\leftrightarrow$ </p>
-<h3 id="真值函数"><a href="# 真值函数" class="headerlink" title="真值函数"></a>真值函数 </h3><p> 我们可以将命题变元 $p_1, p_2, p_3,\dots,p_n$ 的公式 $A$ 看作是关于 $p_1, p_2, \dots, p_n$ 的一个真值函数。 每个变元的取值范围是 ${0, 1}$。 真值函数的取值范围也是 ${0,1}$ 。</p>
-<h4 id="赋值"><a href="# 赋值" class="headerlink" title="赋值"></a>赋值 </h4><p> 对任意给定的 $p_1,p_2,\dots,p_n$ 的一种取值状况组合，称为 <strong> 赋值</strong>。对于每个赋值，公式都有一个确定的真值。赋值用希腊字母 $\alpha\;\beta$ 表示。</p>
-<p>当公式 $A$ 对赋值 $\alpha$ 为真时，称 $\alpha$  是 $A$ 的 <strong> 成真赋值</strong>，或者 $\alpha$ 弄真 $A$ 记作 $\alpha(A)=1$ </p>
-<p>反之，称 $\alpha$  是 $A$ 的 <strong> 成假赋值</strong>，或者 $\alpha$ 弄假 $A$ 记作 $\alpha(A)=0$ </p>
-<h3 id="命题形式化"><a href="# 命题形式化" class="headerlink" title="命题形式化"></a>命题形式化 </h3><p> 由自然语言表述的命题，经过抽象，可以形式化为命题公式。形式化首先确定原子命题，其次确定联结词，最后处理命题之间的联结关系及顺序。</p>
-<p>有的语句形式化结果不是唯一的，可能具有不同形式，但逻辑上是等价的。</p>
-<h2 id="逻辑等价式和逻辑蕴涵式"><a href="# 逻辑等价式和逻辑蕴涵式" class="headerlink" title="逻辑等价式和逻辑蕴涵式"></a>逻辑等价式和逻辑蕴涵式 </h2><p> 命题公式可以从真值的角度进行分类：</p>
-<ul>
-<li>重言式：也称永真式，是指命题变元的所有赋值都是命题公式的成真赋值</li>
-<li>矛盾式：也称永假式，是指命题变元的所有赋值都是命题公式的成假赋值</li>
-<li>可满足式：命题公式至少又一个成真赋值</li>
-</ul>
-<h3 id="逻辑等价式"><a href="# 逻辑等价式" class="headerlink" title="逻辑等价式"></a>逻辑等价式 </h3><p> 当命题公式 $A\leftrightarrow B$ 是重言式时，则称 $A$ 逻辑等价于 $B$ ，记作 $A ⧦ B$，逻辑等价式。</p>
-<blockquote>
-<p>有的地方也记作 $A\equiv B$ </p>
-</blockquote>
-<p>也可以理解为公式 $A$ 和公式 $B$ 是等值的。逻辑等价式体现了，两个公式在任何情况下的赋值都具有相同的真值。</p>
-<h4 id="一些重要的逻辑等价式"><a href="# 一些重要的逻辑等价式" class="headerlink" title="一些重要的逻辑等价式"></a>一些重要的逻辑等价式</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">等价关系</th>
-<th style="text-align:left">名称</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$\lnot (A\land B) ⧦ \lnot A \lor \lnot B$ <br>  $\lnot (A\lor B) ⧦ \lnot A \land \lnot B$</td>
-<td style="text-align:left">摩根定律</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\land \mathbf T ⧦ A$ <br> $A\lor \mathbf F ⧦ A$</td>
-<td style="text-align:left">同一律（恒等律）</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\lor \mathbf T ⧦ \mathbf T$ <br> $A\land \mathbf F ⧦ \mathbf F$</td>
-<td style="text-align:left">支配律（零律）</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\land A ⧦ A$ <br> $A\lor A ⧦ A$</td>
-<td style="text-align:left">幂等律</td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot(\lnot A) ⧦ A$</td>
-<td style="text-align:left">双非律（双重否定律）</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\lor B ⧦ B\lor A$ <br> $A\land B⧦ B\land A$</td>
-<td style="text-align:left">交换律</td>
-</tr>
-<tr>
-<td style="text-align:left">$(A\lor B)\lor C⧦ A\lor (B\lor C)$ <br> $(A\land B)\land C⧦ A\land (B\land C)$</td>
-<td style="text-align:left">结合律</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\lor(B\land C) ⧦ (A\lor B)\land (A\lor C)$ <br>$A\land (B\lor C) ⧦ (A\land B)\lor (A\land C)$</td>
-<td style="text-align:left">分配律</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\lor (A\land B)⧦ A$ <br> $A\land (A\lor B)⧦ A$</td>
-<td style="text-align:left">吸收律</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\lor \lnot A⧦ \mathbf T$<br> $A\land \lnot A⧦ \mathbf F$</td>
-<td style="text-align:left">否定律（排中律和矛盾律）</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\rightarrow B⧦ \lnot A\lor B $</td>
-<td style="text-align:left">蕴含等值式</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\rightarrow B⧦ \lnot B\rightarrow \lnot A$</td>
-<td style="text-align:left">假言易位</td>
-</tr>
-<tr>
-<td style="text-align:left">$A\lor B⧦ \lnot A\rightarrow B$</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$A\land B⧦ \lnot(A\rightarrow \lnot B) $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot(A\rightarrow B)⧦ A\land \lnot B $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$(A\rightarrow B)\land (A\rightarrow C)⧦ A\rightarrow (B\land C) $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$(A\rightarrow C)\land (B\rightarrow C)⧦ (A\lor B)\rightarrow C $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$(A\rightarrow B)\lor (A\rightarrow C)⧦ A\rightarrow (B\lor C) $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$A\land B\rightarrow C⧦ A\rightarrow (B\rightarrow C)$</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$(A\rightarrow C)\lor (B\rightarrow C)⧦ (A\land B)\rightarrow C$</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$A \leftrightarrow B ⧦ (A\rightarrow B)\land (B\rightarrow A) $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$A \leftrightarrow B ⧦ \lnot A \leftrightarrow \lnot B $\</td>
-<td style="text-align:left"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left">$A \leftrightarrow B ⧦ (A \land B)\lor (\lnot A\land \lnot B) $</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">$\lnot (A \leftrightarrow B) ⧦ A \leftrightarrow\lnot B$</td>
-</tr>
-</tbody>
-</table>
-<h4 id="排中律"><a href="# 排中律" class="headerlink" title="排中律"></a>排中律 </h4><p> 排中律是数理逻辑的基本规律之一，数学证明中常用的「反证法」就是利用了排中律。</p>
-<h3 id="逻辑蕴涵式"><a href="# 逻辑蕴涵式" class="headerlink" title="逻辑蕴涵式"></a>逻辑蕴涵式 </h3><p> 当命题公式 $A\rightarrow B$ 是重言式时，则称 $A$ 逻辑蕴涵 $B$，记作 $A\models B$，称作逻辑蕴涵式。</p>
-<p>也可以理解为公式 $A$ 的所有成真赋值也是公式 $B$ 的所有成真赋值。</p>
-<p>每个逻辑等价式可以看作两个逻辑蕴涵式，即 $A⧦ B$ 也有 $A\models B$ 和 $B\models A$ </p>
-<p>逻辑蕴含式体现了，在任何赋值状况下只要 $A$ 为真，$B$ 就为真。  </p>
-<h4 id="一些重要的逻辑蕴涵式"><a href="# 一些重要的逻辑蕴涵式" class="headerlink" title="一些重要的逻辑蕴涵式"></a>一些重要的逻辑蕴涵式</h4><table>
-<thead>
-<tr>
-<th>逻辑蕴涵式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$A\models A\lor B$</td>
-</tr>
-<tr>
-<td>$A\lor B\models A$</td>
-</tr>
-<tr>
-<td>$A\land (A\rightarrow B)\models B$</td>
-</tr>
-<tr>
-<td>$(A\rightarrow B)\land\lnot B\models\lnot A$</td>
-</tr>
-<tr>
-<td>$\lnot A\land(A\lor B)\models B$</td>
-</tr>
-<tr>
-<td>$(A\rightarrow B)\land(B\rightarrow C)\models A\rightarrow C$</td>
-</tr>
-<tr>
-<td>$(A\rightarrow B)\land (C\rightarrow D)\models (A\land C)\rightarrow (B\land D)$</td>
-</tr>
-<tr>
-<td>$(A\leftrightarrow B)\land (B\leftrightarrow C)\models A\leftrightarrow C$</td>
-</tr>
-</tbody>
-</table>
-<h4 id="逻辑结果"><a href="# 逻辑结果" class="headerlink" title="逻辑结果"></a>逻辑结果 </h4><p> 逻辑蕴涵式经常被推广为 $\Gamma\models B$ 的形式，其中 $\Gamma$ 是一系列公式，表示 $B$ 是 $\Gamma $ 的逻辑结果。也即 $\Gamma$ 中所有公式的合取逻辑蕴涵 $B$ 。</p>
-<p>当 $\Gamma$ 中仅包含一个公式时，就是 $A\models B$ 。当 $\Gamma$ 为空时，记作 $\models B$ ，表示 $B$ 永真。</p>
-<h3 id="重要性质"><a href="# 重要性质" class="headerlink" title="重要性质"></a>重要性质 </h3><p> 逻辑等价式和逻辑蕴涵式的主要性质有自反、对称、传递等。</p>
-<ul>
-<li>$A⧦ B$ 当且仅当 $\models A\leftrightarrow B$ </li>
-<li>$A\models B$ 当且仅当 $\models A\rightarrow B$</li>
-<li>若 $A⧦ B$ ，则 $B⧦ A$</li>
-<li>若 $A⧦ B$ ，$B⧦ C$ ，则 $A⧦ C$</li>
-<li>若 $A\models B$ ，则 $\lnot B\models\lnot A$</li>
-<li>若 $A\models B$ ，$B\models C$ ，则 $A\models C$</li>
-<li>若 $A\models B$ ，$A⧦ A’$，$B⧦ B’$ ，则 $A’\models B’$</li>
-</ul>
-<h3 id="重言式代入原理"><a href="# 重言式代入原理" class="headerlink" title="重言式代入原理"></a>重言式代入原理 </h3><p> 将重言式 $A$ 中的某个命题变元 $p$ 的所有出现都代换为命题公式 $B$ ，得到的命题公式记作 $A(B/p)$，$A(B/p)$ 也是重言式。</p>
-<p>因为重言式 $A$ 的真值与 $p$ 的取值状况无关，恒为 $\mathbf T$，所以将 $p$ 全部代换后的公式 $A(B/p)$ 的真值也恒为 $\mathbf T$ 。</p>
-<h3 id="命题公式的替换原理"><a href="# 命题公式的替换原理" class="headerlink" title="命题公式的替换原理"></a>命题公式的替换原理 </h3><p> 将命题公式 $A$ 中的子公式 $C$ 的部分出现替换为和 $C$ 逻辑等价的公式 $D$ （$C⧦ D$ ），得到的命题公式记作 $B$ ，则 $A⧦ B$ 。</p>
-<p>因为 $C$ 和 $D$ 在任何赋值下等值，所以用 $D$ 替换 $C$ 不会改变 $A$ 的真值。</p>
-<h3 id="代入原理和替换原理的区别"><a href="# 代入原理和替换原理的区别" class="headerlink" title="代入原理和替换原理的区别"></a>代入原理和替换原理的区别</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>代入原理</th>
-<th>替换原理</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>使用对象</td>
-<td>任意永真式</td>
-<td>任意命题公式</td>
-</tr>
-<tr>
-<td>代换对象</td>
-<td>任意命题变元</td>
-<td>任意子公式</td>
-</tr>
-<tr>
-<td>代换物</td>
-<td>任意命题公式</td>
-<td>任意与代换对象等价的命题公式</td>
-</tr>
-<tr>
-<td>代换方式</td>
-<td>代换同一命题变元的所有出现</td>
-<td>代换子公式的某些出现</td>
-</tr>
-<tr>
-<td>代换结果</td>
-<td>仍为永真式</td>
-<td>与原公式等价</td>
-</tr>
-</tbody>
-</table>
-<h2 id="范式"><a href="# 范式" class="headerlink" title="范式"></a>范式 </h2><p> 每个命题公式都会存在很多与之逻辑等价的公式，<strong>范式 </strong> 就是在命题公式的多个逻辑等价的形式中，较为符合「标准」和「规范」的一种形式。</p>
-<p>范式所涉及的基本术语：</p>
-<ul>
-<li>文字：是指命题变元、命题常元以及它们的否定，前者称为正文字，后者称为负文字</li>
-<li>析取子句：文字或若干文字的析取，例如 $p$，$p\lor q$ </li>
-<li>合取子句：文字或若干文字的合取，例如 $p$ ，$p\land q$</li>
-<li>互补文字对：指一对正文字和负文字</li>
-<li>析取范式：公式 $A’$ 称作公式 $A$ 的析取范式，如果：$A’⧦ A$ ，且 $A’$ 为 <strong> 合取子句 </strong> 或者若干 <strong> 合取子句 </strong> 的<strong>析取</strong></li>
-<li>合取范式：公式 $A’$ 称作公式 $A$ 的合取范式，如果：$A’⧦ A$，且 $A’$ 为 <strong> 析取子句 </strong> 或者若干 <strong> 析取子句 </strong> 的<strong>合取</strong></li>
-</ul>
-<p>范式可以用来识别重言式和矛盾式：</p>
-<ul>
-<li>重言式识别：合取范式中每个析取子句都包含至少一个互补文字对</li>
-<li>矛盾式识别：析取范式中每个合取子句都包含至少一个互补文字对</li>
-</ul>
-<h3 id="求范式的一般步骤"><a href="# 求范式的一般步骤" class="headerlink" title="求范式的一般步骤"></a>求范式的一般步骤 </h3><p> 利用逻辑等价式、代入原理和替换原理，可以求出任一一个公式的析取范式和合取范式。</p>
-<p>具体步骤为：</p>
-<ul>
-<li>消去公式中的联结词 $\rightarrow $ 和 $\leftrightarrow$</li>
-<li>利用徳摩根律将否定联结词 $\lnot$ 向内深入，最后只作用于文字，再将 $\lnot\lnot p$ 化为 $p$</li>
-<li>利用分配律，最后得到需要的析取或者合取范式</li>
-</ul>
-<h3 id="主范式"><a href="# 主范式" class="headerlink" title="主范式"></a>主范式</h3><ul>
-<li>主析取范式：公式 $A’$ 称作公式 $A(p_1,p_2,\dots,p_n)$ 的主析取范式，如果 $A’$ 是 $A$ 的析取范式，$A’$ 中每一个合取子句里都要包含所有的命题变元，并且每一个命题变元恰好出现一次</li>
-<li>主合取范式：公式 $A’$ 称作公式 $A(p_1,p_2,\dots,p_n)$ 的主合取范式，如果 $A’$ 是 $A$ 的合取范式，$A’$ 中每一个析取子句里都要包含所有的命题变元，并且每一个命题变元恰好出现一次</li>
-</ul>
-<h4 id="主范式的唯一性证明"><a href="# 主范式的唯一性证明" class="headerlink" title="主范式的唯一性证明"></a>主范式的唯一性证明 </h4><p> 以主析取范式为例，证明主范式的唯一性。</p>
-<h5 id="约定"><a href="# 约定" class="headerlink" title="约定"></a>约定</h5><ul>
-<li>合取子句中的文字按照其包含的变元下标从小到大排列</li>
-<li>对于包含所有变元 $p_1,p_2,\dots,p_n$ 并且排列好文字顺序的合取子句，我们称之为极小项，记作 $m_i$</li>
-<li>其中 $i$ 是一个整数，$i$ 对应的 $n$ 位二进制表示描述了对应下标的变元在合取子句中的否定状态</li>
-<li>用 $1$ 表示该位是正文字，$0$ 表示该位是负文字。</li>
-<li>例如 $p_1\land p_2\land p_3$ 记作 $m_7(7=111)$ ，$p_1\land\lnot p_2\land\lnot p_3$ 记作 $m_4 (4=100)$</li>
-</ul>
-<p>主析取范式是极小项按照其下标从小到大排列的析取</p>
-<h5 id="极小项赋值引理"><a href="# 极小项赋值引理" class="headerlink" title="极小项赋值引理"></a>极小项赋值引理</h5><ul>
-<li>极小项只有唯一的成真赋值</li>
-<li>极小项的成真赋值中每个变元的取值等于极小项下标的二进制形式中变元下标所对应的二进制位的值</li>
-<li>例如 $p_1\land p_2\land p_3$ 的唯一成真赋值是 $p_1=1,p_2=1,p_3=1$ ；$p_1\land\lnot p_2\land\lnot p_3$ 的唯一成真赋值是 $p_1=1,p_2=0,p_3=0$ </li>
-</ul>
-<h5 id="极小项和主析取范式之间的关系"><a href="# 极小项和主析取范式之间的关系" class="headerlink" title="极小项和主析取范式之间的关系"></a>极小项和主析取范式之间的关系</h5><ul>
-<li>主析取范式包含的极小项的成真赋值也是主析取范式的成真赋值</li>
-<li>主析取范式的任一一个成真赋值是其包含的某个极小项的成真赋值</li>
-<li>主析取范式不包含的极小项的成真赋值是主析取范式的成假赋值</li>
-</ul>
-<h5 id="存在性证明"><a href="# 存在性证明" class="headerlink" title="存在性证明"></a>存在性证明 </h5><p> 假设 $A’$ 是公式 $A(p_1,p_2,\dots,p_n)$ 的析取范式，如果 $A’$ 中某个合取子句 $A_i$ 即不包含 $p_j$ 也不包含 $\lnot p_j$ ，那么我们将 $A_i$ 展成如下形式：$$\begin{array}{cl} A_i &amp; ⧦ A_i\land\mathbf T \\&amp; ⧦ A_i\land (p_j\lor\lnot p_j) \\&amp; ⧦ (A_i\land p_j)\lor (A_i\land\lnot p_j)\end{array}$$ </p>
-<p>将合取子句中重复出现的命题变元、矛盾式消去，将重复出现的合取子句消去。</p>
-<p>最后将所有的合取子句整理变元顺序，成为极小项，并得到主析取范式 $A’’$</p>
-<h5 id="唯一性证明"><a href="# 唯一性证明" class="headerlink" title="唯一性证明"></a>唯一性证明 </h5><p> 假设公式 $A(p_1,p_2,\dots,p_n)$ 存在两个不同的主析取范式 $B$ 和 $C$ 。由于 $A⧦B$ 且 $A⧦C$ 所以 $B⧦C$ 。</p>
-<p>因为 $B$ 和 $C$ 是两个不同的主析取范式，那么一定存在某个极小项 $m_i$ 只出现在 $B$ 或只出现在 $C$ 中，不妨假设 $m_i$ 只出现在 $B$ 中，不出现在 $C$ 中，这样 $m_i$ 的成真赋值是 $B$ 的成真赋值，却是 $C$ 的成假赋值，这与 $B⧦C$ 矛盾。      </p>
-<p>所以 $B$ 和 $C$ 必然相同，也就是说公式 $A(p_1,p_2,\dots,p_n)$ 的主析取范式是唯一的。</p>
-<h5 id="命题公式的等值分类"><a href="# 命题公式的等值分类" class="headerlink" title="命题公式的等值分类"></a>命题公式的等值分类 </h5><p> 具有相同主析取范式的公式都是等值的，属于同一个等值类，否则属于不同的等值类。</p>
-<p>虽然公式的数量无限多，但是等值类的数量是有限的。</p>
-<p>极小项的数量为 $N=2^n$ ，由极小项组合成的主析取范式的数量为 $2^N$，等值类的数量等于主析取范式的数量</p>
-<h5 id="主合取范式的证明"><a href="# 主合取范式的证明" class="headerlink" title="主合取范式的证明"></a>主合取范式的证明 </h5><p> 主合取范式具有和主析取范式对称的性质。</p>
-<p>主合取范式由极大项合取构成的。极大项具有唯一的成假赋值。</p>
-<h2 id="联结词集完备性"><a href="# 联结词集完备性" class="headerlink" title="联结词集完备性"></a>联结词集完备性 </h2><p> 每个等值类都对应唯一的真值函数，它们是一一对应的。真值函数与相应等值类的每个命题公式等值，尤其是主范式。</p>
-<h3 id="功能完备集"><a href="# 功能完备集" class="headerlink" title="功能完备集"></a>功能完备集 </h3><p> 如果任意一个真值函数都可以用仅包含某个联结词集中的联结词的命题公式表示，则称这个联结词集为功能完备集。${\lnot,\land,\lor,\rightarrow,\leftrightarrow}$、${\lnot,\land,\lor}$、${\lnot,\rightarrow}$、${\downarrow}$ 都是功能完备集。</p>
-<h3 id="冗余联结词"><a href="# 冗余联结词" class="headerlink" title="冗余联结词"></a>冗余联结词 </h3><p> 在一个联结词集中，如果某个联结词可以用集合中其他联结词来定义，则这个联结词称作冗余联结词</p>
-<p>如果一个功能完备集不包含冗余联结词，则称这个功能完备集是极小的。</p>
-<h3 id="功能完备集的证明"><a href="# 功能完备集的证明" class="headerlink" title="功能完备集的证明"></a>功能完备集的证明 </h3><p> 功能完备集的证明很简单：从一个已知的功能完备集中去掉冗余联结词，直到得到该功能完备集。</p>
-<p>非功能完备集的证明比较复杂，没有统一的证明方法。</p>
-<h2 id="命题演算形式系统"><a href="# 命题演算形式系统" class="headerlink" title="命题演算形式系统"></a>命题演算形式系统 </h2><h3 id="形式系统"><a href="# 形式系统" class="headerlink" title="形式系统"></a> 形式系统 </h3><p> 我们需要反应推理过程，需要严格化推理过程，需要像做计算一样进行推理，于是就有了形式系统。</p>
-<p>形式系统是一个符号系统，系统中的概念由符号表示，推理过程即符号变换的过程。</p>
-<p>形式系统应当包含以下要素：</p>
-<ul>
-<li>一群有限数量，可用于构建公式的符号集合</li>
-<li>一套文法，说明了如何以上述符号构建形式良好的公式</li>
-<li>一群公理模式的陈述，每个公理必须是公式</li>
-<li>一群推理规则</li>
-</ul>
-<p>公理和推理规则确保系统内由正确的前提总能得到正确的推理结果。</p>
-<h4 id="证明"><a href="# 证明" class="headerlink" title="证明"></a>证明 </h4><p> 公式序列 $A_1,A_2,\dots,A_m$ 称作 $A_m$ 的一个证明，如果 $A_i(1\le i\le m)$ 是公理，或者由 $A_{j1},A_{j2},\dots,A_{jk} (j1,\dots,jk &lt;i)$ 用推理规则推得。</p>
-<p>当这样的证明存在时，称 $A_m$ 为系统的定理，记作 $\vdash^\star A_m$ （* 是形式系统的名称），或者简记为 $\vdash A_m$</p>
-<h4 id="演绎"><a href="# 演绎" class="headerlink" title="演绎"></a>演绎 </h4><p> 设 $\Gamma$ 为一公式集合，公式序列 $A_1,A_2,\dots,A_m$ 称作 $A_m$ 的以 $\Gamma$ 为前提的演绎，如果 $A_i(1\le i\le m)$ 是 $\Gamma$ 中的公式（我们假设的前提），或是公理，或者由 $A_{j1},A_{j2},\dots,A_{jk} (j1,\dots,jk &lt;i)$ 用推理规则推得。</p>
-<p>当有这样的演绎时，$A_m$ 称作 $\Gamma$ 的演绎结果，记作 $\Gamma\vdash^\star A_m$ （* 是形式系统的名称），或者简记为 $\Gamma\vdash A_m$ 。称 $\Gamma$ 和 $\Gamma$ 的成员为 $A_m$ 的前提。</p>
-<p>证明是演绎在 $\Gamma$ 为空集时的特例。</p>
-<h3 id="命题演算形式系统 -PC-Propostion-Calculus"><a href="# 命题演算形式系统 -PC-Propostion-Calculus" class="headerlink" title="命题演算形式系统 PC(Propostion Calculus)"></a>命题演算形式系统 PC(Propostion Calculus)</h3><p>我们将命题以及重言式变换演绎构造为形式系统，成为命题演算形式系统，简称 PC。</p>
-<h4 id="PC- 的符号系统"><a href="#PC- 的符号系统" class="headerlink" title="PC 的符号系统"></a>PC 的符号系统</h4><ul>
-<li>命题变元：$p,q,r,s,p_1,q_1,\dots$</li>
-<li>命题常元：$\mathbf T\quad\mathbf F$</li>
-<li>联结词：$\lnot,\rightarrow$ (去掉了其他的联结词)</li>
-<li>括号</li>
-<li>命题公式：规定了单个字符的合法组成方式（也即文法）</li>
-</ul>
-<h4 id="PC- 的公理"><a href="#PC- 的公理" class="headerlink" title="PC 的公理"></a>PC 的公理</h4><p>$A$，$B$，$C$ 表示任意的公式</p>
-<ul>
-<li>$A\rightarrow (B\rightarrow A)$</li>
-<li>$(A\rightarrow (B\rightarrow C))\rightarrow ((A\rightarrow B)\rightarrow (A\rightarrow C))$</li>
-<li>$(\lnot A\rightarrow\lnot B)\rightarrow (B\rightarrow A)$</li>
-</ul>
-<h4 id="PC- 的推理规则"><a href="#PC- 的推理规则" class="headerlink" title="PC 的推理规则"></a>PC 的推理规则 </h4><p>$A$，$B$ 表示任意公式，PC 只有一条推理规则，分离规则。<br>$$A,A\rightarrow B/B$$<br> 由 $A$、$A\rightarrow B$ 得出 $B$。</p>
-<h4 id="PC- 的性质"><a href="#PC- 的性质" class="headerlink" title="PC 的性质"></a>PC 的性质 </h4><h5 id="合理性"><a href="# 合理性" class="headerlink" title="合理性"></a> 合理性</h5><ul>
-<li>如果公式 $A$ 是系统 PC 的定理，则 $A$ 是重言式。说白了就是如果 $A$ 是定理，则 $A$ 一定是成立的。任何一个定理都是由公式序列推理得来。也即，如果 $\vdash_{PC}A$ ，则 $\models A$</li>
-</ul>
-<ul>
-<li>如果 $A$ 是公式集合 $\Gamma$ 的演绎结果，那么 $A$ 是 $\Gamma$ 的逻辑结果。即，如果 $\Gamma\vdash_{PC}A$，则 $\Gamma\models A$ </li>
-</ul>
-<p>这说明了 PC 的定理和演绎结果都存在推导过程，都是合乎逻辑的。</p>
-<p>PC 中的三个公理都是重言式，并且 PC 的分离规则是「保真」的，就是如果 $A$ 为真，$A\rightarrow B$ 为真，总有 $B$ 为真。</p>
-<p>因此，由公理和规则导出的定理都是重言式；由 $\Gamma$、公理和规则导出的公式，在 $\Gamma$ 中的公式都为真时也为真。</p>
-<h5 id="一致性"><a href="# 一致性" class="headerlink" title="一致性"></a>一致性 </h5><p> 没有公式 $A$ 使得 $\vdash_{PC}A$ 和 $\vdash_{PC}\lnot A$ 同时成立，即不会出现自相矛盾。</p>
-<p>PC 的合理性表明只要你是定理就一定是逻辑真理，那么根据矛盾律不可能存在 $A$ 和 $\lnot A$ 都是逻辑真理的情况。</p>
-<h5 id="完备性"><a href="# 完备性" class="headerlink" title="完备性"></a>完备性 </h5><p> 如果公式 $A$ 是重言式，则 $A$ 一定是 PC 中的定理 （如果 $\models A$ ，则 $\vdash_{PC}A$ </p>
-<p>如果公式 $A$ 是公式集合 $\Gamma$ 的逻辑结果，则 $A$ 一定是 $\Gamma$ 的演绎结果（如果 $\Gamma\models A$ ，则 $\Gamma\models_{PC}A$ </p>
-<p>合乎逻辑的命题，在 PC 中一定能推导出来。</p>
-<h3 id="PC- 中的证明"><a href="#PC- 中的证明" class="headerlink" title="PC 中的证明"></a>PC 中的证明 </h3><h4 id="证明定理：-vdash-PC-A-rightarrow-A"><a href="# 证明定理：-vdash-PC-A-rightarrow-A" class="headerlink" title="证明定理：$\vdash_{PC}A\rightarrow A$"></a> 证明定理：$\vdash_{PC}A\rightarrow A$</h4><p>$$\begin{array}{l}1.\quad (A\rightarrow (\color{red}{(A\rightarrow A)}\rightarrow\color{blue}{A}))\rightarrow((A\rightarrow\color{red}{(A\rightarrow A)})\rightarrow(A\rightarrow\color{blue}{A}))\quad 公理 2 \\2.\quad A\rightarrow (\color{red}{(A\rightarrow A)}\rightarrow A)\quad 公理 1 \\3.\quad (A\rightarrow (A\rightarrow A))\rightarrow (A\rightarrow A)\quad 对 1、2 使用分离规则 \\4.\quad A\rightarrow (A\rightarrow A)\quad 公理 1\\5.\quad A\rightarrow A\quad 对 3、4 使用分离规则 \end{array}$$</p>
-<p>1、2、4 都是公理，不需要证明。上述 5 个公式序列即为证明。</p>
-<h4 id="演绎 -A-B-rightarrow-A-rightarrow-C-vdash-B-rightarrow-C"><a href="# 演绎 -A-B-rightarrow-A-rightarrow-C-vdash-B-rightarrow-C" class="headerlink" title="演绎 ${A,B\rightarrow(A\rightarrow C)}\vdash B\rightarrow C$"></a>演绎 ${A,B\rightarrow(A\rightarrow C)}\vdash B\rightarrow C$</h4><p>$$\begin{array}{l}1.\quad A\quad 前提 \\2.\quad B\rightarrow (A\rightarrow C)\quad 前提 \\3.\quad A\rightarrow (B\rightarrow A)\quad 公理 1\\4.\quad B\rightarrow A\quad 对 1、3 用分离规则 \\5.\quad (B\rightarrow (A\rightarrow C))\rightarrow ((B\rightarrow A)\rightarrow(B\rightarrow C))\quad 公理 2\\6.\quad (B\rightarrow A)\rightarrow (B\rightarrow C)\quad 对 2、5 用分离规则 \\7.\quad B\rightarrow C\quad 对 4、6 用分离规则 \end{array}$$</p>
-<h3 id="三个元定理"><a href="# 三个元定理" class="headerlink" title="三个元定理"></a>三个元定理 </h3><p> 三个元定理是为了让证明、演绎的过程更加简洁，快速。之所以叫元定理因为这是关于定理证明的定理。 </p>
-<h4 id="演绎定理"><a href="# 演绎定理" class="headerlink" title="演绎定理"></a>演绎定理 </h4><p> 对任意公式集合 $\Gamma$ 和公式 $A，B$，有 $\Gamma\vdash A\rightarrow B$ 当且仅当 $\Gamma\cup{A}\vdash B$</p>
-<p>当 $\Gamma=\varnothing$ 时，$\vdash A\rightarrow B$ 当且仅当 ${A}\vdash B$ ，或 $A\vdash B$ </p>
-<p>证明必要性：</p>
-<p>有 $A\rightarrow B$ ，加上 $A$ ，分离规则得到 $B$</p>
-<p>证明充分性：</p>
-<p>有 $B$ , 以及公理 $B\rightarrow (A\rightarrow B)$ ，分离规则得到 $A\rightarrow B$</p>
-<h4 id="归谬定理"><a href="# 归谬定理" class="headerlink" title="归谬定理"></a>归谬定理 </h4><p> 对任何公式集合 $\Gamma$ 和公式 $A、B$ ，若 $\Gamma\cup{\lnot A}\vdash B$ ，$\Gamma\cup{\lnot A}\vdash\lnot B$，那么 $\Gamma\vdash A$</p>
-<p>如果同一组前提能推导出相互矛盾的结果，说明这组前提之间相互不一致，也就是说总有一些前提是其余前提的对立面。</p>
-<h4 id="穷举定理"><a href="# 穷举定理" class="headerlink" title="穷举定理"></a>穷举定理 </h4><p> 对任何公式集合 $\Gamma$ 和公式 $A、B$，若 $\Gamma\cup{\lnot A}\vdash B$，$\Gamma\cup{A}\vdash B$ 那么 $\Gamma\vdash B$ 。</p>
-<p>如果一个前提能推出结论，这个前提的反面也能推出相同的结论，说明结论的成立与此前提是否成立无关。</p>
-<h4 id="元定理简化证明"><a href="# 元定理简化证明" class="headerlink" title="元定理简化证明"></a>元定理简化证明 </h4><p> 证明 $\vdash\lnot\lnot A\rightarrow A$</p>
-<p>$$\begin{array}{l}1.\quad \lnot\lnot A\rightarrow (\lnot A\rightarrow\lnot\lnot A)\quad 公理 1\\2.\quad \lnot\lnot A\vdash\lnot A\rightarrow\lnot\lnot A\quad 对 1 使用演绎定理 \\3.\quad{\lnot\lnot A,\lnot A}\vdash\lnot\lnot A\quad 对 2 再次使用演绎定理 \\4.\quad \lnot A\rightarrow (\lnot\lnot A\rightarrow\lnot A)\quad 公理 1\\5.\quad {\lnot A,\lnot\lnot A}\vdash \lnot A \quad 两次对 4 使用演绎原理 \\6.\quad {\lnot\lnot A}\vdash A\quad 根据 3、5 由归谬定理得出 \\7.\quad \vdash\lnot\lnot A\rightarrow A \quad 对 6 使用演绎定理 \end{array}$$</p>
-<p>证明 $\vdash (A\rightarrow C)\rightarrow((B\rightarrow C)\rightarrow((\lnot A\rightarrow B)\rightarrow C))$</p>
-<p>根据演绎定理，只需要证明 ${A\rightarrow C,B\rightarrow C,\lnot A\rightarrow B}\vdash C$</p>
-<p>在左边添加 $A$ ，由 $A$ 和 $A\rightarrow C$ 根据分离规则得 $C$</p>
-<p>在左边添加 $\lnot A$ ，由 $\lnot A\rightarrow B$ 、$\lnot A$、$B\rightarrow C$ 根据分离规则得 $C$ </p>
-<p>因此，根据穷举定理证明 ${A\rightarrow C, B\rightarrow C, \lnot A\rightarrow C}\vdash C$</p>
-<h3 id="定理判定问题"><a href="# 定理判定问题" class="headerlink" title="定理判定问题"></a>定理判定问题 </h3><p> 形式系统定义就是符号串集合的构造性定义。</p>
-<blockquote>
-<p>所谓构造性定义，就是提供一些规则从无到有，从少到多生成整个符号串集合</p>
-<p>符号体系规定了符号串可能包含的字符，例如命题变元、常元和公式定理</p>
-<p>公理规定了符号串的模式，例如 PC 中的公理，只要是符合公理模式的命题公式必定属于符号串集合中</p>
-<p>推理规则规定了从集合中已知符号变换生成集合中其他符号串的方法</p>
-</blockquote>
-<p>因此，形式系统中的定理就是集合中的符号串，定理的证明过程就是符号串的构造过程，这个过程必须在有限步内结束。</p>
-<p>能否单靠形式系统本身的公理和推理规则在有限步骤内判断一个符号串是否在符号串集合中？</p>
-<p>仅靠形式系统本身的公理和推理规则难以保证在有限步骤内判断一个符号串是否在符号串集合中的。</p>
-<p>解决方法就是依靠形式系统的同构，来判定。例如 PC 系统可以利用同构：真值函数运算系统，只需要用真值表判定命题公式对应的真值函数是否重言式，即可判定是否是 PC 中的定理。</p>
-<blockquote>
-<p>同构，意思就是结构是相同的，只是使用的符号不同</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;# 概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;../images/propostion_01.png&quot; alt=&quot;概览图&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;命题&quot;&gt;&lt;a 
-    
-    </summary>
-    
-      <category term="Mathematical Logic" scheme="http://blog.freeabyss.com/categories/Mathematical-Logic/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="article" scheme="http://blog.freeabyss.com/tags/article/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数理逻辑简介 1</title>
-    <link href="http://blog.freeabyss.com/Mathematical-Logic/Math-DL-01-%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91%E7%AE%80%E4%BB%8B.html"/>
-    <id>http://blog.freeabyss.com/Mathematical-Logic/Math-DL-01-数理逻辑简介.html</id>
-    <published>2017-03-25T12:16:13.000Z</published>
-    <updated>2017-03-25T13:22:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数理逻辑由来"><a href="# 数理逻辑由来" class="headerlink" title="数理逻辑由来"></a>数理逻辑由来 </h2><p> 说起数理逻辑就要先提下逻辑学。逻辑学是探索、阐述和确立有效 <strong> 推理规则 </strong> 的学科，最早由古希腊学者亚里士多德创立。 亚里士多德最重要的工作是提出三段论学说。一个三段论就是包括有大前提、小前提和结论三部分的论证。 </p>
-<p>逻辑学还是以自然语言来表述，可能会因为自然语言的 <strong> 模糊性 </strong> 损害其准确性和权威。在十七世纪的时候，就有人提出利用计算的方法来代替人们思维中的逻辑推理过程。莱布尼茨就曾设想能不能创造一种「通用的科学语言」，可以把推理过程象数学一样利用公式来进行计算，从而得出正确结论。由于当时的条件，他的想法没有实现。</p>
-<p>1847 年，英国数学家布尔 G.Boole 发表了《逻辑的数学分析》，建立了「布尔代数」。布尔创造了一套符号系统，利用符号来表示逻辑中的各种概念。还建立了一系列的运算法则，利用代数的方法研究逻辑问题，初步奠定了 <strong> 数理逻辑 </strong> 的基础。</p>
-<p>1884 年，德国数学家弗雷格在《数论基础》一书中引入了 <strong> 量词 </strong> 的符号，使得数理逻辑的符号系统更加完备。</p>
-<p>数理逻辑的最基本的理论基础逐步形成，成为一门独立的学科。  </p>
-<p>数理逻辑就是使用数学的方式来研究关于推理、证明等问题的学科。</p>
-<h2 id="数理逻辑的分支"><a href="# 数理逻辑的分支" class="headerlink" title="数理逻辑的分支"></a>数理逻辑的分支 </h2><p> 目前数理逻辑有四大分支，分别是：</p>
-<ul>
-<li>公理集合论：该分支是由于罗素的 <strong> 逻辑悖论</strong>，促使很多数学家去研究集合论的无矛盾性问题产生的。</li>
-<li>证明论：为了研究数学系统的无矛盾性问题，需要以数学理论体系的概念、命题、证明等作为研究对象，研究数学系统的逻辑结果和证明的规律，这样产生的。</li>
-<li>递归论：主要研究可计算性的理论，它和计算机的发展和应用有密切的关系</li>
-<li>模型论：主要是研究形式系统和数学模型之间的关系。</li>
-</ul>
-<p><strong>命题演算 </strong> 和<strong>谓词演算 </strong> 是各分支的共同基础部分。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数理逻辑由来&quot;&gt;&lt;a href=&quot;# 数理逻辑由来&quot; class=&quot;headerlink&quot; title=&quot;数理逻辑由来&quot;&gt;&lt;/a&gt;数理逻辑由来 &lt;/h2&gt;&lt;p&gt; 说起数理逻辑就要先提下逻辑学。逻辑学是探索、阐述和确立有效 &lt;strong&gt; 推理规则 &lt;/stron
-    
-    </summary>
-    
-      <category term="Mathematical Logic" scheme="http://blog.freeabyss.com/categories/Mathematical-Logic/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="article" scheme="http://blog.freeabyss.com/tags/article/"/>
+      <category term="dubbo" scheme="http://blog.freeabyss.com/tags/dubbo/"/>
     
   </entry>
   
@@ -644,53 +92,6 @@
       <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
     
       <category term="Node" scheme="http://blog.freeabyss.com/tags/Node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 树的基本概念 38</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-38-%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-38-树的基本概念.html</id>
-    <published>2017-03-21T12:13:04.000Z</published>
-    <updated>2017-04-26T13:33:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概述"><a href="# 概述" class="headerlink" title="概述"></a>概述 </h2><p><strong> 树</strong>是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。      </p>
-<p>另一个定义是：一个无向图是树当且仅当它在每对顶点之间存在唯一简单通路。       </p>
-<h3 id="一些常用的术语"><a href="# 一些常用的术语" class="headerlink" title="一些常用的术语"></a>一些常用的术语 </h3><p><strong> 根树 </strong> 是指定一个顶点作为根并且每条边的方向都离开根的树。    </p>
-<p>若 $u$ 是 $T$ 里非根的顶点，则 $u$ 的 <strong> 父母 </strong> 是使得从 $u$ 到 $v$ 存在有向边的唯一的顶点 $u$ 。当 $u$ 是 $v$ 的父母时，$v$ 称为 $u$ 的 <strong> 子女 </strong>。具有相同父母的顶点称为<strong> 兄弟 </strong>。非根顶点的<strong> 祖先 </strong> 是从根到该顶点的通路上的顶点，不包括该顶点自身，但包括根。顶点 $v$ 的后代是以 $v$ 作为祖先的顶点。树的顶点若没有子女称为 <strong> 树叶 </strong>。有子女的顶点称为<strong> 内点</strong>。        </p>
-<p>根树的 <strong> 层数 </strong> 是从根到任意顶点的最大通路的长度，或称为高度。任一顶点的层数是从根到顶点的唯一通路的长度。    </p>
-<p>若跟树的每个内点都有不超过 $m$ 个子女，则称它为 $m$ 元树。若该树的每个内点都恰好有 $m$ 个子女，则称它为 <strong> 正则 </strong> $m$ <strong> 元树 </strong> 。把 $m=2$ 的正则 $m$ 元树称为<strong> 二叉树</strong>。</p>
-<blockquote>
-<p>注意，在计算机科学中，二叉树的定义是每个内点不超过 2 个子女的树，也即 2 元树。</p>
-</blockquote>
-<h2 id="树的性质"><a href="# 树的性质" class="headerlink" title="树的性质"></a>树的性质 </h2><p> 带有 $n$ 个顶点的树含有 $n-1$ 条边。     </p>
-<p>带有 $i$ 个内点的正则 $m$ 元树含有 $n=mi+1$ 个顶点。    </p>
-<p>一个正则 $m$ 元树若带有      </p>
-<ul>
-<li>$n$ 个顶点，则带有 $i=(n-1)/m$ 个内点和 $l=[(m-1)n+1]/m$ 个树叶； </li>
-<li>$i$  个内点，则带有 $n=mi+1$ 个顶点和 $l=(m-1)i+1$ 个树叶； </li>
-<li>$l$  个树叶，则带有 $n=(ml-1)/(m-1)$ 个顶点和 $i=(l-1)/(m-1)$ 个内点。    </li>
-</ul>
-<p>若一颗高度为 $h$ 的 $m$ 元树的所有顶点都在 $h$ 层或 $h-1$ 层，则这棵树是平衡的。<br>在高度为 $h$ 的 $m$ 元树里至多有 $m^h$ 个树叶。      </p>
-<p>若一个高度为 $h$ 的 $m$ 元树带有 $l$ 个树叶，则 $h\ge\lceil log_ml\rceil$。 若这个 $m$ 元树是正则和平衡的，则 $h=\lceil log_ml\rceil$ 。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;# 概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt; 树&lt;/strong&gt;是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。 
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="tree" scheme="http://blog.freeabyss.com/tags/tree/"/>
     
   </entry>
   
@@ -784,128 +185,6 @@
       <category term="Java" scheme="http://blog.freeabyss.com/tags/Java/"/>
     
       <category term="IO" scheme="http://blog.freeabyss.com/tags/IO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 图着色 37</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-37-%E5%9B%BE%E7%9D%80%E8%89%B2.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-37-图着色.html</id>
-    <published>2017-03-01T13:55:38.000Z</published>
-    <updated>2017-03-06T13:57:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="图着色"><a href="# 图着色" class="headerlink" title="图着色"></a>图着色 </h2><p> 在图论中，有许多与地图区域着色相关的理论成果。当为一个地图着色时，具有公共边界的两个区域在传统上指定为不同的颜色。<br>平面里的每幅地图都可以表示成一个图，为了建立这种对应关系，地图的每个区域都表示成一个顶点，若两个顶点所表示的区域具有公共边界。则用边连接两个顶点。只相交于一个点的两个区域不算事相邻的。这样所得到的图称为这个地图的对偶图。这样区域着色的问题就等价于给对偶图的顶点着色，使没有两个相邻的顶点具有相同的颜色的问题。    </p>
-<p>简单图的着色是对该图的每个顶点都指定一种颜色，使得没有两个相邻的顶点颜色相同。    </p>
-<p>图的色数是着色这个图所需要的最少颜色数。    </p>
-<h3 id="一些结论"><a href="# 一些结论" class="headerlink" title="一些结论"></a>一些结论</h3><ul>
-<li><strong>四色定理</strong> 平面图的色数不超过 4。    </li>
-</ul>
-<blockquote>
-<p>证明一个图的色数为 <code>n</code> 需要做两件事情。首先必须证明：用 $n$ 种颜色可以着色这个图并且构造出这样的着色。其次证明：用少于 $n$ 种颜色不能着色这个图。    </p>
-</blockquote>
-<ul>
-<li>$K_n$ 的色数是 $n$。 该结论与四色定理并不矛盾，因为 $n\ge 5$ 时，$K_n$ 不是可平面图。    </li>
-<li>完全偶图 $K_{m,n}$ 只需要两种颜色。      </li>
-<li>圈图 $C_n$ 的色数分两种情况，当 $n$ 为偶数时需要两种颜色，当 $n$ 为奇数时需要三种颜色。    </li>
-</ul>
-<h3 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h3><p> 已知最好的求图的色数的算法具有指数的最坏情形时间复杂性。即使求色数的近似值也是很难的。</p>
-<h3 id="图着色的应用"><a href="# 图着色的应用" class="headerlink" title="图着色的应用"></a>图着色的应用 </h3><p> 图着色在与调度和分配相关的问题中具有多种应用。   </p>
-<h4 id="安排期末考试"><a href="# 安排期末考试" class="headerlink" title="安排期末考试"></a>安排期末考试 </h4><p> 安排一场期末考试，使得没有学生要同时考两门。<br>用图模型来解决： 用顶点表示科目，若有学生要考两门，则在表示考试科目的两个顶点之间有边。用不同的颜色表示期末考试的时间段。那么考试所需的时间段就是色数。    </p>
-<h4 id="变址寄存器"><a href="# 变址寄存器" class="headerlink" title="变址寄存器"></a>变址寄存器 </h4><p> 在有效的编译器中，当把频繁地使用的变量暂时保存在中央处理单元的变址寄存器里，而不是保存在常规内存时，可以加速循环的执行。对于给定的循环来说，需要多少个变址寄存器？<br>可以用图着色模型来讨论这个问题。为了建立这个模型，设图的每个顶点表示循环里的一个变量。若在循环执行期间两个顶点所表示的变量必须同时保存在变址寄存器里，则在这两个顶点之间有边。所以，这个图的色数就给出所需要的变址寄存器数，因为当表示变量的顶点在图中相邻时，就必须给这些变量分配不同的寄存器。    </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;图着色&quot;&gt;&lt;a href=&quot;# 图着色&quot; class=&quot;headerlink&quot; title=&quot;图着色&quot;&gt;&lt;/a&gt;图着色 &lt;/h2&gt;&lt;p&gt; 在图论中，有许多与地图区域着色相关的理论成果。当为一个地图着色时，具有公共边界的两个区域在传统上指定为不同的颜色。&lt;br&gt;平面
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 可平面图 36</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-36-%E5%8F%AF%E5%B9%B3%E9%9D%A2%E5%9B%BE.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-36-可平面图.html</id>
-    <published>2017-03-01T13:22:27.000Z</published>
-    <updated>2017-03-04T07:55:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="可平面图"><a href="# 可平面图" class="headerlink" title="可平面图"></a>可平面图 </h2><p> 若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是可平面的。这种画法称为这个图的平面表示。即使通常带交叉地画出了一个图，这个图也仍然可能是可平面的，这是因为有可能以不同的方式来不带交叉地画出这个图。     </p>
-<h3 id="欧拉公式"><a href="# 欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式 </h3><p> 设 $G$ 是带 $e$ 条边和 $v$ 个顶点的连通可平面简单图。设 $r$ 是 $G$ 的可平面表示里的面数，则 $r=e-v+2$。      </p>
-<p>若 $G$ 是带 $e$ 条边和 $z$ 个顶点的连通可平面简单图，其中 $v\ge 3$，则 $e\le 3v-6$。    </p>
-<p>若 $G$ 是连通简单可平面简单图，则 $G$ 有度数不超过 5 的顶点。    </p>
-<p>若连通可平面简单图有 $e$ 条边和 $v$ 个顶点，$v\ge 3$ 并且没有长度为 3 的回路，则 $e\le 2v-4$。  </p>
-<h3 id="库拉图斯基定理"><a href="# 库拉图斯基定理" class="headerlink" title="库拉图斯基定理"></a>库拉图斯基定理 </h3><p> 若一个图是可平面的，则通过删除一条边 ${u,v}$ 并且添加一个新顶点 $w$ 和两条边 ${u,w}$ 与 ${w,v}$，所获得的任何图也是可平面的。这样的操作称为 <strong> 初等细分 </strong>。若可以从相同的图通过一系列初等细分来获得图 $G_1=(\mathbf V_1,\mathbf E_1)$ 和图 $G_2=(\mathbf V_2,\mathbf E_2)$，则它们称为是<strong> 同胚 </strong> 的。      </p>
-<p><strong>库拉图斯基定理</strong>&ensp;&ensp; 一个图是非可平面的当且仅当它包含一个同胚于 $K_{3,3}$ 或 $K_5$ 的子图。     </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;可平面图&quot;&gt;&lt;a href=&quot;# 可平面图&quot; class=&quot;headerlink&quot; title=&quot;可平面图&quot;&gt;&lt;/a&gt;可平面图 &lt;/h2&gt;&lt;p&gt; 若可以在平面里画出一个图而边没有任何交叉（其中边的交叉是表示边的直线或弧线在它们的公共端点以外的地方相交），则这个图是
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 最短通路问题 35</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-35-%E6%9C%80%E7%9F%AD%E9%80%9A%E8%B7%AF%E9%97%AE%E9%A2%98.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-35-最短通路问题.html</id>
-    <published>2017-02-27T13:32:16.000Z</published>
-    <updated>2017-03-05T01:22:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="最短通路"><a href="# 最短通路" class="headerlink" title="最短通路"></a>最短通路 </h2><p> 带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   </p>
-<p>与带权图有关的其中一个问题就是，求两个顶点之间长度最短的通路，这里的长度指的是这条通路上各边的权的总和。   </p>
-<h3 id="最短通路算法"><a href="# 最短通路算法" class="headerlink" title="最短通路算法"></a>最短通路算法 </h3><p> 最短通路有几个不同的解法，这里给出迪克斯特拉算法。迪克斯特拉算法是求解无向带权图的最短通路算法，其中所有的权都是正数，可以很容易地将它修改后来解决有向图里的最短通路问题。    </p>
-<h4 id="迪克斯特拉算法细节"><a href="# 迪克斯特拉算法细节" class="headerlink" title="迪克斯特拉算法细节"></a>迪克斯特拉算法细节 </h4><p> 它首先用 $0$ 标记 $a$ ，用 $\infty$ 标记其余的顶点。用记号 $L_0(a)=0$ 和 $L_0(v)=\infty$ 表示在没有发生任何迭代之前的这些标记，下标 0 表示第 0 次迭代。这些表示是从 $a$ 到这些顶点的最短通路的长度，其中这些通路只包含顶点 $a$ 。因为不存在从 $a$ 到其他顶点的这种通路，所以 $\infty$ 是 $a$ 与这样的顶点之间的最短通路的长度。<br>迪克斯特拉算法是通过形成特殊顶点的集合来进行的。设 $S_k$ 表示在标记过程 $k$ 次迭代之后的特殊顶点集。首先让 $S_0=\varnothing$ 。集合 $S_k$ 是通过把不属于 $S_{k-1}$ 的带最小标记的顶点 $u$ 添加到 $S_{k-1}$ 里形成的。一旦把 $u$ 添加到 $S_k$ 里，就更新所有不属于 $S_k$ 的顶点的标记，使得顶点 $v$ 在第 $k$ 个阶段的标记 $L_k(v)$ 是只包含 $S_k$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度。<br>设 $v$ 是不属于 $S_k$ 的一个顶点。为了更新 $v$ 的标记，注意 $L_k(v)$ 是只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路的长度。当利用下面的观察结果时，就可以有效地完成这个更新：只包含 $S_k$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是只包含 $S_{k-1}$ 里顶点的从 $a$ 到 $v$ 的最短通路，要么是在第 $k-1$ 阶段加上边 $(u,v)$ 的从 $a$ 到 $u$ 的最短通路。换句话说 $L_k(a,v)=min{L_{k-1}(a,v),L_{k-1}(a,u)+w(u,v)}$<br>这个过程这样迭代：相继添加顶点到特殊顶点集里，直到添加 $z$ 为止。当把 $z$ 添加到特殊顶点集里时，它的标记就是从 $a$ 到 $z$ 的最短通路的长度。<br>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {Dijkstra} (G: 所有权都为正数的带权连通简单图)\ <br>{G 带有顶点 a=v_0,v_1,\dots,v_n=z 和权 w(v_i,v_j), 其中若 {v_i,v_j} 不是 G 里的边，则 w(v_i,v_j)=\infty} \\<br>\mathbf {for}\; i:=1\;\mathbf {to}\;n \\<br>\qquad L(v_i):=\infty \\<br>L(a) :=0 \\<br>S:=\varnothing \\<br>{现在初始化标记，使得 a 的标记为 0 而所有其余标记为 \infty，S 是空集合} \\<br>\mathbf {while}\; z\notin S\\<br>\mathbf {begin}<br>\qquad a:= 不属于 S 的 L(u)最小的一个顶点 \ <br>\qquad S:=S\cup{u} \\<br>\qquad\mathbf {for}\; 所有不属于 S 的顶点 v\\<br>\qquad\qquad\mathbf {if}\; L(u)+w(u,v)&lt;L(v)\quad\mathbf {then}\; L(v):=L(u)+w(u,v)\\<br>\qquad {这样就给 S 里添加带最小标记的顶点，并且更新不在 S 里的顶点的标记} \\<br>\mathbf {end}{L(z)= 从 a 到 z 的最短通路的长度}<br>\end{array}<br>$$</p>
-<h4 id="验证迪克斯拉特算法的正确性"><a href="# 验证迪克斯拉特算法的正确性" class="headerlink" title="验证迪克斯拉特算法的正确性"></a>验证迪克斯拉特算法的正确性 </h4><p> 下面用归纳论证来证明迪克斯特拉算法的正确性。用下列断言作为归纳假设：在第 $k$ 次迭代里   </p>
-<ol>
-<li>$S$ 里的顶点 $v(v=0)$ 的标记是从 $a$ 到这个顶点的最短通路的长度。    </li>
-<li>不在 $S$ 里的顶点的标记是 (这个顶点自身除外) 只包含 $S$ 里顶点的、从 $a$ 到这个顶点的最短通路的长度</li>
-</ol>
-<p>当 $k=0$ 时，在没有执行任何迭代之前，$S={a}$，所以从 $a$ 到除 $a$ 外的顶点的最短通路的长度是 $\infty$。设 $v$ 是在第 $k+1$ 次迭代里添加到 $S$ 里的顶点，使得 $v$ 是在第 $k$ 次迭代结束时带最小标记的不在 $S$ 的顶点。<br>根据归纳假设，可以看出在第 $k+1$ 次迭代之前，$S$ 里的顶点都用从 $a$ 出发的最短通路的长度来标记。另外，必须用从 $a$ 到 $v$ 的最短通路的长度来标记 $v$。假如情况不是这样，那么在第 $k$ 次迭代结束时，就可能存在包含不在 $S$ 里的顶点的、长度小于 $L_k(v)$ 的通路（因为 $L_k(v)$ 是在第 $k$ 次迭代之后，只包含 $S$ 里顶点的、从 $a$ 到 $v$ 的最短通路的长度）。设 $u$ 是在这样的通路里不属于 $S$ 的第一个顶点。则存在一条只包含 $S$ 里顶点的、从 $a$ 到 $u$ 的长度小于 $L_k(v)$ 的通路。这与对 $v$ 的选择相矛盾。因此，在第 $k+1$ 次迭代结束时 (1) 成立。<br>设 $u$ 时在第 $k+1$ 次迭代之后不属于 $S$ 的一个顶点。只包含 $S$ 里顶点的从 $a$ 到 $u$ 的最短通路要么包含 $v$、要么不包含 $v$。若它不包含 $v$，则根据归纳假设，它的长度是 $L_k(u)$。若它确实包含 $v$，则它必然是这样组成的：一条只包含 $S$ 里除 $v$ 之外的顶点的、从 $a$ 到 $v$ 的、具有最短可能长度的通路，后面接着从 $v$ 到 $u$ 的边。在这种情形里它的长度是 $L_k(v)+w(v,u)$。这样就证明了 (2) 为真，因为 $L_{k+1}(u)=min{L_k(u),L_k(v)+w(v,u)}$。</p>
-<h4 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h4><p> 迪克斯特拉算法使用 $O(n^2)$ 次运算来求出连通简单无向带权图里两个顶点之间最短通路的长度。    </p>
-<h2 id="旅行商问题"><a href="# 旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题 </h2><p> 旅行商问题是求最短回路，即求完全图里总权数最小的哈密顿回路。<br>旅行商问题同哈密顿回路一样，没有有效的算法，目前解决问题的实际方法是使用近似算法。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;最短通路&quot;&gt;&lt;a href=&quot;# 最短通路&quot; class=&quot;headerlink&quot; title=&quot;最短通路&quot;&gt;&lt;/a&gt;最短通路 &lt;/h2&gt;&lt;p&gt; 带权图是指给每条边赋上一个数的图。带权图可以为以下问题建模：城市之间的距离，计算机之间的通信成本等等。   &lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
     
   </entry>
   
@@ -1053,329 +332,6 @@
   </entry>
   
   <entry>
-    <title>离散数学学习笔记 欧拉回路和哈密顿通路 34</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-34-%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E5%92%8C%E5%93%88%E5%AF%86%E9%A1%BF%E9%80%9A%E8%B7%AF.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-34-欧拉回路和哈密顿通路.html</id>
-    <published>2017-02-25T08:31:37.000Z</published>
-    <updated>2017-02-26T06:07:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="欧拉回路"><a href="# 欧拉回路" class="headerlink" title="欧拉回路"></a>欧拉回路 </h2><p> 图 $G$ 的欧拉回路是包含着 $G$ 的每一条边的封闭路线。图 $G$ 里的欧拉通路是包含着 $G$ 的每一条边的路线。<br>欧拉回路和欧拉通路都是恰好包含图的每一条边且不重复，唯一的区别就是，欧拉回路回到原点，而欧拉通路不必回到原点。       </p>
-<blockquote>
-<p>通路 (path) 等同于路径 (walk)，回路(circuit) 等同于封闭路径(close walk)。是同一概念的不同术语。</p>
-</blockquote>
-<p>连通多重图具有欧拉回路当且仅当它的每个顶点都有偶数度。    </p>
-<blockquote>
-<p>假设一条欧拉回路从 $a$ 开始，开始时它为 $deg(a)$ 贡献一度，结束时为 $deg(a)$ 贡献一度，而每次经过 $a$ 以及其余的顶点时都贡献 2 度。    </p>
-</blockquote>
-<p>连通多重图具有欧拉通路但无欧拉回路，当且仅当它恰好有 2 个奇数度顶点。     </p>
-<blockquote>
-<p>假设多重图有从 $a$ 到 $b$ 的欧拉通路，但不是欧拉回路。通路的第一条边为 $a$ 贡献 1 度，此后每次经过 $a$ 都贡献 2 度。通路的最后一条边为 $b$ 的度贡献 1 度，此前每次经过 $b$ 都贡献 2 度，因此 $a$ 和 $b$ 必定是奇数度。    </p>
-</blockquote>
-<h3 id="构造欧拉回路"><a href="# 构造欧拉回路" class="headerlink" title="构造欧拉回路"></a>构造欧拉回路</h3><p>$$\begin{array}{l}<br>\mathbf {procedure}\;\mathcal Euler(G: 所有顶点有偶数度的连通多重图) \\<br>circuit \; :=\; 在 G 里任选的顶点开始，连续地加入边所形成的回到该顶点的回路 \\<br>H\; :=\; 删除这条回路的边之后的 G \ <br>\mathbf {while}\; H\; 还有边 \\<br>\mathbf {begin} \\<br>\quad subcircuit\; :=\; 在既是 H 里的顶点也是 circuit 的边的端点处开始的 H 里的一条回路 \\<br>\quad H\; :=\; 删除 subcircuit 的边和所有孤立点之后的 H \\<br>\quad circuit\; :=\; 在适当顶点上插入 subcircuit 之后的 circuit\\<br>\mathbf {end}(circuit 是欧拉回路)<br>\end{array}$$</p>
-<h2 id="哈密顿通路"><a href="# 哈密顿通路" class="headerlink" title="哈密顿通路"></a>哈密顿通路 </h2><p> 在图 $G=(\mathbf V,\mathbf E)$ 里，若 $\mathbf V={x_0,x_1,\dots,x_{n-1},x_n}$ 并且对 $0\le i\lt j\le n$ 来说有 $x_j\neq x_i$，则通路 $x_0,x_1,\dots,x_{n-1},x_n$ 称为哈密顿通路。$x_0,x_1,\dots,x_{n-1},x_n,x_0$ 称为哈密顿回路。    </p>
-<h3 id="求解哈密顿通路"><a href="# 求解哈密顿通路" class="headerlink" title="求解哈密顿通路"></a>求解哈密顿通路 </h3><p> 目前没有已知的简单的充要条件来判定哈密顿回路的存在性。不过有很多定理对哈密顿的存在性提供了充分条件，另外，某些性质可以用来证明一个图没有哈密顿回路。    </p>
-<p>带有一个顶点的图是没用哈密顿回路的。<br>图的边越多存在哈密顿回路的可能性就越大，尤其是每个顶点都加入边时。     </p>
-<h3 id="狄拉克定理"><a href="# 狄拉克定理" class="headerlink" title="狄拉克定理"></a>狄拉克定理 </h3><p> 如果 $G$ 是带 $n$ 个顶点的连通简单图，其中 $n\gt 3$，并且 $G$ 中每个顶点的度都至少为 $n/2$，则 $G$ 有哈密顿回路。    </p>
-<h3 id="奥尔定理"><a href="# 奥尔定理" class="headerlink" title="奥尔定理"></a>奥尔定理 </h3><p> 如果 $G$ 是带 $n$ 个顶点的连通简单图，其中 $n\gt 3$，并且对于 $G$ 中每一对不相邻的顶点 $u$ 和 $v$ 来说，都有 $deg(u)+deg(v)\gt n$，则 $G$ 有哈密顿回路。   </p>
-<h3 id="算法复杂度"><a href="# 算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度 </h3><p> 已知最好的求一个图里的哈密顿回路或判定这样的回路不存在的算法具有指数的最坏情形复杂性（相对于顶点数来讲）。找到具有多项式最坏情形时间复杂性的解决算法是 NP 复杂的。     </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;欧拉回路&quot;&gt;&lt;a href=&quot;# 欧拉回路&quot; class=&quot;headerlink&quot; title=&quot;欧拉回路&quot;&gt;&lt;/a&gt;欧拉回路 &lt;/h2&gt;&lt;p&gt; 图 $G$ 的欧拉回路是包含着 $G$ 的每一条边的封闭路线。图 $G$ 里的欧拉通路是包含着 $G$ 的每一条边的路
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 图的连通性 33</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-33-%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-33-图的连通性.html</id>
-    <published>2017-02-25T06:46:18.000Z</published>
-    <updated>2017-02-25T08:31:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="连通性"><a href="# 连通性" class="headerlink" title="连通性"></a>连通性 </h2><h3 id="定义和相关术语"><a href="# 定义和相关术语" class="headerlink" title="定义和相关术语"></a> 定义和相关术语 </h3><h4 id="无向图定义"><a href="# 无向图定义" class="headerlink" title="无向图定义"></a> 无向图定义 </h4><p> 设 $n$ 是非负整数且 $G$ 是无向图。在 $G$ 中从 $u$ 到 $v$ 的长度为 $n$<strong>路径 </strong> 是 $G$ 的 $n$ 条边 $e_1,\dots,e_n$ 的序列，使得 $f(e_1)={x_0,x_1},f(e_2)={x_1,x_2},\dots,f(e_n)={x_{n-1},x_n}$，其中 $x_0=u$ 而 $x_n=v$。当这个图是简单图时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示这条路径。<br>若一条路径在相同的顶点上开始和结束，即 $u=v$ 且长度大于 0，则它是一条 <strong> 封闭路径 </strong>。<br> 若通路径不包含重复的相同边，则它是 <strong> 路线 </strong> 。<br> 当没有必要区分多重边时，就用顶点序列 $x_0,x_1,\dots,x_n$ 表示路径。<br>通路表示没有重复顶点的路径。       </p>
-<blockquote>
-<p>路径 (walk)、通路(path)，、封闭路径(closed walk)、回路(circuit)、路线(trail)<br> 上面定义的概念，有很多不同的术语， 因此需要注意以下几点： </p>
-<ul>
-<li>是否起始和终止于相同的顶点</li>
-<li>是否有重复的相同边      </li>
-<li>是否有重复的顶点   </li>
-</ul>
-</blockquote>
-<h4 id="有向图定义"><a href="# 有向图定义" class="headerlink" title="有向图定义"></a>有向图定义 </h4><p> 在有向图 $G$ 中从 $a$ 到 $b$ 的一条路径是 $G$ 中一条或多条边的序列 $(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中 $x_0=a,x_n=b$。</p>
-<h3 id="无向图的连通性"><a href="# 无向图的连通性" class="headerlink" title="无向图的连通性"></a>无向图的连通性 </h3><p> 若无向图每一对不同的顶点之间都有路径，则该图称为 <strong> 连通 </strong> 的。     </p>
-<p>不连通的图是 2 个或 2 个以上连通子图之并，每一对子图都没有公共的顶点。这些不相交的连通子图称为图的连通分支。     </p>
-<p>删除一个顶点和它所关联的边，就产生带有比原图更多的连通分支的子图。把这样的顶点称为割点。    </p>
-<p>把一旦删除就产生带有比原图更多的连通分支的子图的边称为割边或桥。    </p>
-<h4 id="连通无向图的每一对不同顶点之间都存在路线"><a href="# 连通无向图的每一对不同顶点之间都存在路线" class="headerlink" title="连通无向图的每一对不同顶点之间都存在路线"></a>连通无向图的每一对不同顶点之间都存在路线 </h4><p> 证： 设 $u$ 和 $v$ 是连通无向图 $G=(\mathbf V,\mathbf E)$ 的两个不同的顶点。因为 $G$ 是连通的，所以 $u$ 和 $v$ 之间至少有 1 条路径。设 $x_0,x_1,\dots,x_n$ 是长度最短的路径的顶点序列，其中 $x_0=u$ 而 $x_n=v$。这条长度最短的路径是路线。假设它不是路线，则对满足 $0\le i\lt j$ 的某个 $i$ 和 $j$ 来说，有 $x_i=x_j$。这意味着通过删除顶点序列 $x_i,\dots,x_{j-1}$ 所对应的边，就获得了 带有顶点序列 $x_0,x_1,\dots,x_{i-1},x_j,\dots,x_n$ 的从 $u$ 到 $v$ 的更短的路线。     </p>
-<h3 id="有向图的连通性"><a href="# 有向图的连通性" class="headerlink" title="有向图的连通性"></a>有向图的连通性 </h3><p> 在有向图里有两种连通性的概念。若任意两顶点之间都有路径，则该有向图是 <strong> 弱连通性 </strong> 的。若任意两顶点 $a$ 和 $b$，其中从 $a$ 到 $b$ 和从 $b$ 到 $a$ 都有路径，则该图是 <strong> 强连通性</strong>。    </p>
-<p>$G$ 的子图是强连通图，则称为 $G$ 的强连通分支或强分枝。    </p>
-<h3 id="顶点之间的路径数"><a href="# 顶点之间的路径数" class="headerlink" title="顶点之间的路径数"></a>顶点之间的路径数 </h3><p> 设 $G$ 是带有相对于顶点顺序 $v_1,v_2,\dots,v_n$ 的邻接矩阵 $\mathbf A$ 的图（允许带有无向、有向、多重边、环）。从 $v_i$ 到 $v_j$ 的长度为 $r$ 的不同路径数目等于 $\mathb A^r$ 的第 $(i,j)项，其中 $r$ 是正整数。    </p>
-<h2 id="路径和同构"><a href="# 路径和同构" class="headerlink" title="路径和同构"></a>路径和同构 </h2><p> 有多种方式可以利用路径和封闭路径来帮助判定两个图是否同构。例如，具有特定长度的路线的存在性，就是一种可以用来证明两个图是不同构的有用的不变量。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;连通性&quot;&gt;&lt;a href=&quot;# 连通性&quot; class=&quot;headerlink&quot; title=&quot;连通性&quot;&gt;&lt;/a&gt;连通性 &lt;/h2&gt;&lt;h3 id=&quot;定义和相关术语&quot;&gt;&lt;a href=&quot;# 定义和相关术语&quot; class=&quot;headerlink&quot; title=&quot;定义和相
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 图的同构 32</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-32-%E5%9B%BE%E7%9A%84%E5%90%8C%E6%9E%84.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-32-图的同构.html</id>
-    <published>2017-02-25T04:02:03.000Z</published>
-    <updated>2017-02-25T06:46:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="同构"><a href="# 同构" class="headerlink" title="同构"></a>同构 </h2><p> 设 $G_1=(\mathbf V_1,\mathbf E_1)$ 和 $G_2=(\mathbf V_2,\mathbf E_2)$ 是简单图，若从 $\mathbf V_1$ 到 $\mathbf V_2$ 存在一对一的映射 $f$，且 $f$ 具有如下性质：对 $\mathbf V_1$ 里的所有的 $a$ 和 $b$ 来说，$a$ 和 $b$ 在 $G_1$ 里相邻当且仅当 $f(a)$ 和 $f(b)$ 在 $G_2$ 里相邻，就说 $G_1$ 和 $G_2$ 是同构的。这样的函数 $f$ 称为同构。简单来讲，当两个简单图同构时，两个图的顶点之间具有保持相邻关系的一一对应。      </p>
-<p>判断两个简单图是否同构常常是一件困难的事情。在两个带有 $n$ 个顶点的简单图顶点集之间有 $n!$ 钟可能的一一对应。若 $n$ 太大，则通过检验每一种对应来看它是否保持相邻关系是不可能的。      </p>
-<h3 id="判断同构的方法"><a href="# 判断同构的方法" class="headerlink" title="判断同构的方法"></a>判断同构的方法 </h3><p> 同构的简单图必然具有相同的顶点数、边数和顶点的度，这些被称为同构下的不变量。这些量有任何不同，则两个图就不是同构的，不过即使，这些量都是相同的，也不一定意味着两个图同构。目前没有已知的用来判定简单是否同构的不变量集。    </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;同构&quot;&gt;&lt;a href=&quot;# 同构&quot; class=&quot;headerlink&quot; title=&quot;同构&quot;&gt;&lt;/a&gt;同构 &lt;/h2&gt;&lt;p&gt; 设 $G_1=(\mathbf V_1,\mathbf E_1)$ 和 $G_2=(\mathbf V_2,\mathbf E_2)$
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 图的表示 31</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-31-%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-31-图的表示.html</id>
-    <published>2017-02-23T13:06:27.000Z</published>
-    <updated>2017-02-23T13:48:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="图的表示"><a href="# 图的表示" class="headerlink" title="图的表示"></a>图的表示 </h2><p> 图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     </p>
-<h3 id="邻接表"><a href="# 邻接表" class="headerlink" title="邻接表"></a>邻接表 </h3><p> 邻接表可以用来表示不带多重边的图，它规定了每个顶点相邻的顶点       </p>
-<h4 id="简单表的邻接表"><a href="# 简单表的邻接表" class="headerlink" title="简单表的邻接表"></a>简单表的邻接表</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">顶点</th>
-<th style="text-align:left">相邻的顶点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">a</td>
-<td style="text-align:left">b,c,e</td>
-</tr>
-<tr>
-<td style="text-align:left">b</td>
-<td style="text-align:left">a</td>
-</tr>
-<tr>
-<td style="text-align:left">c</td>
-<td style="text-align:left">a,d,e</td>
-</tr>
-<tr>
-<td style="text-align:left">d</td>
-<td style="text-align:left">c,e</td>
-</tr>
-<tr>
-<td style="text-align:left">e</td>
-<td style="text-align:left">a,c,d</td>
-</tr>
-</tbody>
-</table>
-<h4 id="有向图的邻接表"><a href="# 有向图的邻接表" class="headerlink" title="有向图的邻接表"></a>有向图的邻接表</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">起点</th>
-<th style="text-align:left">终点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">a</td>
-<td style="text-align:left">b,c,d,e</td>
-</tr>
-<tr>
-<td style="text-align:left">b</td>
-<td style="text-align:left">b,d</td>
-</tr>
-<tr>
-<td style="text-align:left">c</td>
-<td style="text-align:left">a,c,e</td>
-</tr>
-<tr>
-<td style="text-align:left">d</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">e</td>
-<td style="text-align:left">b,c,d</td>
-</tr>
-</tbody>
-</table>
-<h3 id="邻接矩阵"><a href="# 邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵 </h3><h4 id="基于顶点的相邻关系"><a href="# 基于顶点的相邻关系" class="headerlink" title="基于顶点的相邻关系"></a> 基于顶点的相邻关系 </h4><p> 假设 $G=(\mathbf V,\mathbf E)$ 是简单图，其中 $\mid\mathbf V\mid=m$。假设把 $G$ 的顶点任意地排列成 $v_1,v_2,\dots,v_n$。对这个顶点表来说，$G$ 的邻接矩阵 $\mathbf A$ 是一个 $n\times n$ 的 $0-1$ 矩阵，它满足这样的性质：当 $v_i$ 和 $v_j$ 相邻时第 $(i,j)$ 项是 1，当 $v_i$ 和 $v_j$ 不相邻时第 $(i,j)$ 项是 0。      </p>
-<p>图的邻接矩阵依赖于所选择顶点的顺序。因此带 $n$ 个顶点的图有 $n!$ 个不同的邻接矩阵，因为 $n$ 个顶点有 $n!$ 个不同的顺序。     </p>
-<p>邻接矩阵也可以用来表示带环和多重边的无向图。把顶点 $a_i$ 上的环表示成邻接矩阵第 $(i,i)$ 位置上 1，当出现多重边时，第 $(i,j)$ 项等于 ${a_i,a_j}$ 关联的边数。包括多重图和伪图在内的所有无向图都具有对称的邻接矩阵。      </p>
-<p>有向图的邻接矩阵不必是对称的，因为当从 $a_i$ 到 $a_j$ 有边时，从 $a_j$ 到 $a_i$ 可以没边。    </p>
-<h4 id="关联矩阵"><a href="# 关联矩阵" class="headerlink" title="关联矩阵"></a>关联矩阵 </h4><p> 设 $G=(\mathbf V,\mathbf E)$ 是无向图。设 $v_1,v_2,\dots, v_n$，是顶点而 $e_1,e_2,\dots,e_n$ 是边。则相对于 $\mathbf V$ 和 $\mathbf E$ 的这个顺序的关联矩阵是 $n\times m$ 矩阵 $\mathbf M=[m_{ij}]$，其中 $$m_{ij} =\begin{cases}1\qquad 当边 e_j 关联 v_i 时 \\0\qquad 否则 \end{cases}$$<br>关联矩阵示例：<br><img src="../images/graph_06.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;图的表示&quot;&gt;&lt;a href=&quot;# 图的表示&quot; class=&quot;headerlink&quot; title=&quot;图的表示&quot;&gt;&lt;/a&gt;图的表示 &lt;/h2&gt;&lt;p&gt; 图有很多种表示方式，本章介绍两种表示方法，一种是邻接表，一种是邻接矩阵。     &lt;/p&gt;
-&lt;h3 id=&quot;邻接表&quot;&gt;
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>离散数学学习笔记 图的基本概念 30</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-30-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-30-图的基本概念.html</id>
-    <published>2017-02-22T13:09:01.000Z</published>
-    <updated>2017-03-16T12:25:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="图定义"><a href="# 图定义" class="headerlink" title="图定义"></a>图定义 </h2><p> 一个图 $G$ 由顶点（或结点）的非空集 $\mathbf V$ 和边集 $\mathbf E$ 构成，每条边有一个或两个顶点与它相连，这样的顶点称为边的端点。边连接它的端点。    </p>
-<ul>
-<li>环：把一个顶点连接自身的边     </li>
-<li>多重边：$m$ 条不同的边连接相同的两个顶点称为多重边，也可以说该边是一条多重度为 $m$ 的边     </li>
-</ul>
-<h3 id="有向图"><a href="# 有向图" class="headerlink" title="有向图"></a>有向图 </h3><p> 一个有向图 $(\mathbf V,\mathbf E)$ 由一个非空顶点集 $\mathbf V$ 和一个有向边集 $\mathbf E$ 组成。每条有向边与一个顶点有序对相关联。认为与有序对 $u,v)$ 相关的有向边开始于 $u$，结束于 $v$。    </p>
-<h3 id="度"><a href="# 度" class="headerlink" title="度"></a>度 </h3><h4 id="无向图中顶点的度"><a href="# 无向图中顶点的度" class="headerlink" title="无向图中顶点的度"></a> 无向图中顶点的度 </h4><p> 在无向图里顶点的度是与该顶点关联的边的数目，例外的情形是，顶点上的环算为度数加 2。顶点 $v$ 的度表示成 $deg(v)$。</p>
-<h4 id="无向图中顶点的度的性质"><a href="# 无向图中顶点的度的性质" class="headerlink" title="无向图中顶点的度的性质"></a>无向图中顶点的度的性质 </h4><h5 id="握手定理"><a href="# 握手定理" class="headerlink" title="握手定理"></a> 握手定理 </h5><p> 设 $G=(\mathbf V,\mathbf E)$ 是有 $e$ 条边的无向图，则 $$2e=\sum_{v\in V}deg(v)$$</p>
-<h5 id="无向图有偶数个奇数度顶点"><a href="# 无向图有偶数个奇数度顶点" class="headerlink" title="无向图有偶数个奇数度顶点"></a>无向图有偶数个奇数度顶点 </h5><h4 id="有向图中顶点的度"><a href="# 有向图中顶点的度" class="headerlink" title="有向图中顶点的度"></a> 有向图中顶点的度 </h4><p> 当 $(u,v)$ 是有向边时，说 $u$ 邻接到 $v$，顶点 $u$ 称为 $(u,v)$ 的起点，$v$ 称为 $(u,v)$ 的终点。环的起点和终点相同。<br>在有向图中，顶点 $v$ 的入度是以 $v$ 作为终点的边数，表示成 $deg^-(v)$，顶点 $v$ 的出度是以 $v$ 作为起点的边数，表示成 $deg^+(v)$.<br>设 $G=(\mathbf V,\mathbf E)$ 是带有向边的图。于是 $$\sum_{v\in V}deg^-(v)=\sum_{v\in V}deg^+(v)=\mid E\mid$$</p>
-<h3 id="子图"><a href="# 子图" class="headerlink" title="子图"></a>子图 </h3><p> 图 $G=(\mathbf V,\mathbf E)$ 的子图是图 $H=(\mathbf W,\mathbf F)$，其中 $\mathbf W\subseteq\mathbf F$ 而且 $\mathbf F\subseteq\mathbf E$。</p>
-<h3 id="并图"><a href="# 并图" class="headerlink" title="并图"></a>并图 </h3><p> 两个简单图 $G_1=(\mathbf V_1,\mathbf E_1)$ 和 $G_2=(\mathbf V_2,\mathbf E_2)$ 的并图是带有顶点集 $\mathbf V_1\cup\mathbf V_2$ 和边集 $\mathbf E_1\cup\mathbf E_2$ 的简单图。$G_1$ 和 $G_2$ 的并图表示成 $G_1\cup G_2$。</p>
-<h2 id="图的类型"><a href="# 图的类型" class="headerlink" title="图的类型"></a>图的类型</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">类型</th>
-<th style="text-align:left">边</th>
-<th style="text-align:left">多重边</th>
-<th style="text-align:left">环</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">简单图</td>
-<td style="text-align:left">无向</td>
-<td style="text-align:left">否</td>
-<td style="text-align:left">否</td>
-</tr>
-<tr>
-<td style="text-align:left">多重图</td>
-<td style="text-align:left">无向</td>
-<td style="text-align:left">是</td>
-<td style="text-align:left">否</td>
-</tr>
-<tr>
-<td style="text-align:left">伪图</td>
-<td style="text-align:left">无向</td>
-<td style="text-align:left">是</td>
-<td style="text-align:left">是</td>
-</tr>
-<tr>
-<td style="text-align:left">有向图</td>
-<td style="text-align:left">有向</td>
-<td style="text-align:left">否</td>
-<td style="text-align:left">是</td>
-</tr>
-<tr>
-<td style="text-align:left">有向多重图</td>
-<td style="text-align:left">有向</td>
-<td style="text-align:left">是</td>
-<td style="text-align:left">是</td>
-</tr>
-<tr>
-<td style="text-align:left">混合图</td>
-<td style="text-align:left">有向 + 无向</td>
-<td style="text-align:left">是</td>
-<td style="text-align:left">是</td>
-</tr>
-</tbody>
-</table>
-<p>因为图论在各个行业中广泛应用，不同行业之间术语有些差异。尽管图的术语可能差异很大，但有三个需要注意的地方：    </p>
-<ul>
-<li>图的边是无向还是有向，又或者两者皆有</li>
-<li>是否存在多重边或多重有向边</li>
-<li>是否存在环 </li>
-</ul>
-<h3 id="一些特殊的简单图"><a href="# 一些特殊的简单图" class="headerlink" title="一些特殊的简单图"></a>一些特殊的简单图 </h3><h4 id="完全图"><a href="# 完全图" class="headerlink" title="完全图"></a> 完全图</h4><p>$n$ 个顶点的完全图是在每对顶点之间都恰好有一条边的简单图。用 $K_n$ 表示。<br><img src="../images/graph_01.png" alt=""></p>
-<h4 id="圈图"><a href="# 圈图" class="headerlink" title="圈图"></a>圈图 </h4><p> 圈图是由 $n$ 个顶点 $v_1,v_2,\dots,v_n$ 以及边 ${v_1,v_2},{v_2,v_3},\dots, {v_{n-1}, v_n},{v_n,v_1}$ 组成的。用 $C_n$ 表示。<br><img src="../images/graph_02.png" alt=""></p>
-<h4 id="轮图"><a href="# 轮图" class="headerlink" title="轮图"></a>轮图 </h4><p> 当给圈图添加另一个顶点，并且把这个新顶点与圈图里 $n$ 个顶点逐个连接时，就得出轮图。用 $W_n$ 表示。<br><img src="../images/graph_03.png" alt="">    </p>
-<h4 id="n 立方体图"><a href="#n 立方体图" class="headerlink" title="n 立方体图"></a>n 立方体图</h4><p>$n$ 立方体图是用顶点表示 $2^n$ 个长度为 $n$ 的位串的图。两个顶点相邻当且仅当它们所表示的位串恰恰相差一位。 可以从 $n$ 立方图 $Q_n$ 来构造 $(n+1)$ 立方体图 $Q_{n+1}$，方法是建立 $Q_n$ 的两个副本，在 $Q_n$ 的一个副本的顶点标记前加 0，在 $Q_n$ 的另一个副本的顶点标记前加 1，并且加入连接那些标志只在第一位不同的两个顶点的边。<br><img src="../images/graph_04.png" alt=""></p>
-<h4 id="偶图"><a href="# 偶图" class="headerlink" title="偶图"></a>偶图 </h4><p> 若把简单图 $G$ 的顶点集分成两个不相交的非空集合 $\mathbf V_1$ 和 $\mathbf V_2$，使得图的每一条边都连接着 $\mathbf V_1$ 里的一个顶点与 $\mathbf V_2$ 里的一个顶点。因此 $G$ 里没有边是连接着 $\mathbf V_1$ 里的两个顶点或 $\mathbf V_2$ 里的两个顶点。则 $G$ 称为偶图或者二分图。     </p>
-<h5 id="判断简单图是偶图的准则"><a href="# 判断简单图是偶图的准则" class="headerlink" title="判断简单图是偶图的准则"></a>判断简单图是偶图的准则 </h5><p> 对图中的每个顶点赋以两种不同的颜色，而不让相邻接的顶点被赋以相同的颜色。     </p>
-<h5 id="完全偶图"><a href="# 完全偶图" class="headerlink" title="完全偶图"></a>完全偶图 </h5><p> 完全偶图 $K_{m,n}是顶点集分成分别含有 $m$ 和 $n$ 个顶点的两个子集的图。两个顶点之间有边当且仅当一个顶点属于第一个子集而另外一个顶点属于第二个子集。<br><img src="../images/graph_05.png" alt=""></p>
-<h3 id="度序列"><a href="# 度序列" class="headerlink" title="度序列"></a>度序列 </h3><p> 一个图的度序列是由该图的各节点的度按递减顺序排列的序列。其中，如果一个序列是简单图的度序列，那么该序列是 <strong> 成图 </strong> 的</p>
-<h3 id="正则"><a href="# 正则" class="headerlink" title="正则"></a>正则 </h3><p> 若简单图每个顶点的度都相同，则这个图称为正则的。若正则图的每个顶点的度都为 $n$，则这个图称为 $n$ 正则。   </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;图定义&quot;&gt;&lt;a href=&quot;# 图定义&quot; class=&quot;headerlink&quot; title=&quot;图定义&quot;&gt;&lt;/a&gt;图定义 &lt;/h2&gt;&lt;p&gt; 一个图 $G$ 由顶点（或结点）的非空集 $\mathbf V$ 和边集 $\mathbf E$ 构成，每条边有一个或两个顶点
-    
-    </summary>
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
-    
-    
-      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
-    
-      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
-    
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
-    
-      <category term="graph" scheme="http://blog.freeabyss.com/tags/graph/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Mac-Mac 下制作 MacOS 启动盘</title>
     <link href="http://blog.freeabyss.com/Mac/Mac-Mac%E4%B8%8B%E5%88%B6%E4%BD%9CMacOS%E5%90%AF%E5%8A%A8%E7%9B%98.html"/>
     <id>http://blog.freeabyss.com/Mac/Mac-Mac下制作MacOS启动盘.html</id>
@@ -1410,28 +366,276 @@
   </entry>
   
   <entry>
-    <title>离散数学学习笔记 关系的闭包 29</title>
-    <link href="http://blog.freeabyss.com/Math/Math-DM-29-%E5%85%B3%E7%B3%BB%E7%9A%84%E9%97%AD%E5%8C%85.html"/>
-    <id>http://blog.freeabyss.com/Math/Math-DM-29-关系的闭包.html</id>
-    <published>2017-01-27T08:32:03.000Z</published>
-    <updated>2017-02-23T12:57:05.000Z</updated>
+    <title>JavaScript 最佳实践</title>
+    <link href="http://blog.freeabyss.com/JavaScript/JavaScript-JavaScript-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html"/>
+    <id>http://blog.freeabyss.com/JavaScript/JavaScript-JavaScript-最佳实践.html</id>
+    <published>2017-01-17T06:25:53.000Z</published>
+    <updated>2017-01-18T07:48:17.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="关系的闭包"><a href="# 关系的闭包" class="headerlink" title="关系的闭包"></a>关系的闭包 </h2><p> 一般来说，设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。$\mathbf R$ 可能具有或者不具有某些性质 $\mathbf P$，例如自反性、对称性或传递性。如果存在包含 $\mathbf R$ 的具有性质 $\mathbf P$ 的关系 $\mathbf S$，并且 $\mathbf S$ 是包含 $\mathbf R$ 且具有性质 $\mathbf P$ 的每一个关系的子集，那么 $\mathbf S$ 叫做 $\mathbf R$ 的关于 $\mathbf P$ 的闭包。</p>
-<h3 id="构造闭包"><a href="# 构造闭包" class="headerlink" title="构造闭包"></a>构造闭包 </h3><h4 id="自反闭包"><a href="# 自反闭包" class="headerlink" title="自反闭包"></a> 自反闭包 </h4><p> 给定集合 $\mathbf A$ 上的关系 $\mathbf R$，对于 $a\in\mathbf R$，可以通过把形如 $(a,a)$ 的所有的对，除了已在 $\mathbf R$ 中的之外，都加到 $\mathbf R$ 中，就构成了 $\mathbf R$ 的自反闭包。 </p>
-<h4 id="对称闭包"><a href="# 对称闭包" class="headerlink" title="对称闭包"></a>对称闭包</h4><p>$\mathbf R\cup\mathbf R^{-1}$ 是 $\mathbf R$ 的对称闭包，其中 $\mathbf R^{-1}={(b,a)\mid (a,b)\in\mathbf R}$。     </p>
-<h4 id="传递闭包"><a href="# 传递闭包" class="headerlink" title="传递闭包"></a>传递闭包 </h4><p> 我们需要借助图来构造传递闭包，首先介绍几个关于图的术语。      </p>
-<ol>
-<li>在有向图 $G$ 中从 $a$ 到 $b$ 的一条路径是 $G$ 中一条或多条边的序列 $(x_0,x_1),(x_1,x_2),(x_2,x_3),\dots,(x_{n-1},x_n)$，其中 $x_0=a, x_n=b$。即一个边的序列，其中一条边的终点和路径中下一条边的始点相同。这条路记为 $x_0,x_1,\dots,x_{n-1},x_n$，长度为 $n$。    </li>
-<li>在同一顶点开始和结束的路径叫做回路或圈。       </li>
-<li>有向图的一条路径可以多次通过一个顶点。此外，有向图的一条边也可以多次出现在一条路径中。     </li>
-<li>设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。从 $a$ 到 $b$ 存在一条长为 $n$ 的路径，当且仅当 $(a,b)\in\mathbf R$。      </li>
-</ol>
-<p>现在证明找一个关系的传递闭包与在相关的有向图中确定哪些顶点对被路径连接是等价的。由此要定义一个新的关系。<br>连通性关系: 设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系，连通性关系 $\mathbf R^<em>$ 由对 $(a,b)$ 构成，使得在 $\mathbf R$ 中从顶点 $a$ 到 $b$ 之间存在一条至少长为 1 的路径。<br>因为 $\mathbf R^n$ 由对 $(a,b)$ 构成，使得存在一条从 $a$ 到 $b$ 的长为 $n$ 的路径，从而 $\mathbf R^</em>$ 是所有集合 $\mathbf R^n$ 的并。即 $$\mathbf R^<em>=\bigcup^\infty_{n=1}\mathbf R^n$$<br>关系 $\mathbf R$ 的传递闭包等于连通性关系 $\mathbf R^</em>$。     </p>
+    <content type="html"><![CDATA[<h2 id="UI- 松耦合"><a href="#UI- 松耦合" class="headerlink" title="UI 松耦合"></a>UI 松耦合 </h2><h3 id="将 JavaScript 从 CSS 中抽离"><a href="# 将 JavaScript 从 CSS 中抽离" class="headerlink" title="将 JavaScript 从 CSS 中抽离"></a> 将 JavaScript 从 CSS 中抽离</h3><p>IE8 及更早版本的 IE 有一个特性，允许将 JavaScript 直接插入 CSS 中。虽然 IE9 已经不在支持这种特性，但应当注意不要在 CSS 中嵌入 JavaScript 代码</p>
+<h3 id="将 CSS 从 JavaScript 中抽离"><a href="# 将 CSS 从 JavaScript 中抽离" class="headerlink" title="将 CSS 从 JavaScript 中抽离"></a>将 CSS 从 JavaScript 中抽离 </h3><p> 所有的样式信息都应当保持在 CSS 中，当需要通过 JavaScript 来修改元素样式的时候，最佳方法是操作 CSS 的 <code>className</code>。<br> 有一种情形可以例外: 当需要给页面中的元素作定位，使其相对于另外一个元素或整个页面重新定位。这种计算是无法在 CSS 中完成的。    </p>
+<h3 id="将 JavaScript 从 HTML 中抽离"><a href="# 将 JavaScript 从 HTML 中抽离" class="headerlink" title="将 JavaScript 从 HTML 中抽离"></a>将 JavaScript 从 HTML 中抽离</h3><ul>
+<li>最好将所有的 JavaScript 代码都放入外置文件中，并在页面中通过 <code>&lt;script&gt;</code> 标签引用</li>
+<li>在 HTML 页面中，禁止使用 <code>on</code> 属性挂载事件处理程序。应当使用方法来添加事件</li>
+</ul>
+<h3 id="将 HTML 从 JavaScript 中抽离"><a href="# 将 HTML 从 JavaScript 中抽离" class="headerlink" title="将 HTML 从 JavaScript 中抽离"></a>将 HTML 从 JavaScript 中抽离 </h3><p> 尽量避免将 HTML 嵌入 JavaScript 代码中。</p>
+<h2 id="避免使用全局变量"><a href="# 避免使用全局变量" class="headerlink" title="避免使用全局变量"></a>避免使用全局变量 </h2><p> 全局变量和全局函数带来很多问题，例如命名冲突、代码脆弱性、难以测试、意外的 bug。    </p>
+<h3 id="零全局变量方式"><a href="# 零全局变量方式" class="headerlink" title="零全局变量方式"></a>零全局变量方式 </h3><p> 如果你的代码运行时不需要于其他代码产生交互，可以使用零全局变量方式 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">win</span>) </span>&#123;</div><div class="line"><span class="meta">    "use strict"</span>;</div><div class="line">    <span class="comment">// body</span></div><div class="line">&#125;(<span class="built_in">window</span>));</div></pre></td></tr></table></figure>
+<p>如果项目中使用 jQuery 框架的话，一般用 <code>jQuery</code> 代替<code>window</code>。 </p>
+<h2 id="事件处理"><a href="# 事件处理" class="headerlink" title="事件处理"></a>事件处理 </h2><h3 id="隔离应用逻辑"><a href="# 隔离应用逻辑" class="headerlink" title="隔离应用逻辑"></a> 隔离应用逻辑 </h3><p> 将应用逻辑从事件处理程序中抽离出来有两点好处: 一是可重用，二是方便测试。  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">    popup.style.left = event.clientX + <span class="string">"px"</span>;</div><div class="line">    popup.style.top = event.clientY + <span class="string">"px"</span>;</div><div class="line">    popup.className = <span class="string">"reveal"</span>;</div><div class="line">&#125;</div><div class="line">addListener(element, <span class="string">"click"</span>, handleClick);</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> MyApplication = &#123;</div><div class="line">    <span class="attr">handleClick</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.showPopup(event);</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">showPopup</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">        popup.style.left = event.clientX + <span class="string">"px"</span>;</div><div class="line">        popup.style.top = event.clientY + <span class="string">"px"</span>;</div><div class="line">        popup.className = <span class="string">"reveal"</span>;        </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">addListener(element, <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    MyApplication.handleClick(event);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="不要分发事件"><a href="# 不要分发事件" class="headerlink" title="不要分发事件"></a>不要分发事件 </h3><p> 上述实例代码还存在一个问题，即 <code>event</code> 被毫无节制地分发，应用逻辑不应当依赖于 <code>event</code> 对像，原因如下:      </p>
+<ul>
+<li>方法接口没有表明那些数据是必要的。好的 API 应该明确清楚表明回调传值的用处以及需要传那些值 </li>
+<li>最重要的一点是，如果想测试这个方法，必须重新创建一个 <code>event</code> 对象并将它作为参数传入。</li>
+</ul>
+<p>最佳方法是让事件处理程序使用 <code>event</code> 对象来处理事件，然后拿到所有需要的数据传给应用逻辑。<br>另外，如果需要对 <code>event</code> 执行任何必要的操作，包括阻止默认事件或阻止事件冒泡，都应该直接包含在事件处理程序中。  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MyApplication = &#123;</div><div class="line">    <span class="attr">handleClick</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        event.preventDefault();</div><div class="line">        event.stopPropagation();</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.showPopup(event.clientX, event.clientY);</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">showPopup</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> popup = <span class="built_in">document</span>.getElementById(<span class="string">"popup"</span>);</div><div class="line">        popup.style.left = x + <span class="string">"px"</span>;</div><div class="line">        popup.style.top = y +<span class="string">"px"</span>;</div><div class="line">        popup.className = <span class="string">"reveal"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="避免“空比较”"><a href="# 避免“空比较”" class="headerlink" title="避免“空比较”"></a>避免“空比较”</h2><h3 id="检测原始值"><a href="# 检测原始值" class="headerlink" title="检测原始值"></a>检测原始值 </h3><p> 如果你希望一个值是字符串、数字、布尔值或 <code>undefined</code>，最佳选择是使用<code>typeof</code> 运算符。<code>typeof</code>的独特之处在于，将其用于一个未声明的变量也不会报错。<br><code>null</code>一般不应用于检测语句，简单的和 <code>null</code> 比较通常不会包含足够的信息以判断值的类型是否合法。 但是如果所期望的值真的是 <code>null</code>，则可以直接和<code>null</code> 比较。这时应当使用 <code>===</code> 或<code>!==</code> 。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> name === <span class="string">"string"</span>) &#123;</div><div class="line">    anotherName = name.substirng(<span class="number">3</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> count === <span class="string">"number"</span>) &#123;</div><div class="line">    updateCount(count);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> found === <span class="string">"boolean"</span> &amp;&amp; found) &#123;</div><div class="line">    message(<span class="string">"Found!"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> MyApp === <span class="string">"undefined"</span>) &#123;</div><div class="line">    MyApp = &#123;&#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">// null</span></div><div class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"my-div"</span>);</div><div class="line"><span class="keyword">if</span> (element !== <span class="literal">null</span>) &#123;</div><div class="line">    element.className = <span class="string">"found"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="检测引用值"><a href="# 检测引用值" class="headerlink" title="检测引用值"></a>检测引用值</h3><ul>
+<li>杜绝使用 <code>typeof</code> 检测 <code>null</code> 的类型，因为 <code>typeof null</code> 会返回<code>object</code></li>
+<li>检测自定义类型或者内置类型可以使用 <code>value instanceof Object</code> 来判断，不过因为 <code>instanceof</code> 不仅检测对象的构造器，还检测原型链，因此使用时需注意 </li>
+</ul>
+<h3 id="检测函数"><a href="# 检测函数" class="headerlink" title="检测函数"></a>检测函数 </h3><p> 检测函数最好的方法是使用<code>typeof</code>。  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> myFunc === <span class="string">"function"</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<h3 id="检测数组"><a href="# 检测数组" class="headerlink" title="检测数组"></a>检测数组 </h3><p> 检测数组最优雅的解决方案是:   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value) === <span class="string">"[object Array]"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种方式在识别内置对象时往往十分有用。<br>ECMAScript5 已经将 <code>Array.isArray</code> 正式引入 JavaScript。</p>
+<h3 id="检测属性"><a href="# 检测属性" class="headerlink" title="检测属性"></a>检测属性</h3><ul>
+<li>判断属性是否存在的最好办法是使用 <code>in</code> 运算符。<code>in</code>运算符仅仅简单的判断属性是否存在，而不会读取属性的值 </li>
+<li><code>in</code>运算符同时会检测对象的原型，如果只想检测实例对象的某个属性是否存在，则使用 <code>hasOwnProperty()</code> 方法</li>
+</ul>
+<h2 id="将配置数据从代码中分离出来"><a href="# 将配置数据从代码中分离出来" class="headerlink" title="将配置数据从代码中分离出来"></a>将配置数据从代码中分离出来 </h2><p> 配置数据示例:     </p>
+<ul>
+<li>URL</li>
+<li>需要展现给用户的字符串</li>
+<li>重复的值</li>
+<li>设置(比如每页的配置项)</li>
+<li>任何可能发生变更的值</li>
+</ul>
+<p>最好将配置数据抽离出来，可以放在文件最前面，或者单独一个文件。好处是不用修改 JavaScript 源码已、方便修改和防止漏改。   </p>
+<h2 id="抛出自定义错误"><a href="# 抛出自定义错误" class="headerlink" title="抛出自定义错误"></a>抛出自定义错误 </h2><h3 id="抛出错误的方式"><a href="# 抛出错误的方式" class="headerlink" title="抛出错误的方式"></a> 抛出错误的方式 </h3><p> 抛出错误时，最好抛出 <code>Error</code> 类型对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Something bad happened'</span>);</div></pre></td></tr></table></figure>
+<h3 id="抛出错误的好处"><a href="# 抛出错误的好处" class="headerlink" title="抛出错误的好处"></a>抛出错误的好处 </h3><p> 抛出错误有助于调试，例如:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDivs</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (element &amp;&amp; element.getElementsByTagName) &#123;</div><div class="line">        <span class="keyword">return</span> element.getElementsByTagName(<span class="string">"div"</span>);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"getDivs() : Argument must be a DOM element."</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="何时检查错误"><a href="# 何时检查错误" class="headerlink" title="何时检查错误"></a>何时检查错误</h3><ul>
+<li>如果一个函数被已知的实体调用，错误检查很可能没有必要，一般情况下该函数为私有函数</li>
+<li>如果不能确定函数被调用的所有地方，则需要进行一些错误检查</li>
+<li>抛出错误最佳的地方是在工具函数中  </li>
+<li>一旦修复了一个很难调试的错误，尝试增加一两个自定义错误，当再次发生错误时，这将有助于更容易的解决问题</li>
+<li>如果正在编写代码，思考一下: “我希望 [某些事情] 不会发生，如果发生，我的代码会一团糟糕”。这时，如果“某些事情”发生，就抛出一个错误</li>
+<li>如果正在编写的代码别人也会使用，思考一下他们使用的方式在特定的情况下抛出错误</li>
+<li>抛出错误的目的不是防止错误，而是在错误发生时能更加容易地调试</li>
+</ul>
+<h3 id="错误类型"><a href="# 错误类型" class="headerlink" title="错误类型"></a>错误类型</h3><ul>
+<li>可以用 <code>instanceof</code> 判断错误类型，从而处理特定的错误</li>
+<li>自定义错误类型可以区别于浏览器抛出的错误</li>
+<li>不要将 <code>try-catch</code> 中的 <code>catch</code> 块留空</li>
+</ul>
+<h2 id="直接量"><a href="# 直接量" class="headerlink" title="直接量"></a>直接量 </h2><h3 id="数字"><a href="# 数字" class="headerlink" title="数字"></a> 数字 </h3><p> 禁止八进制直接量</p>
+<h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>以下场景应当使用<code>null</code></p>
+<ul>
+<li>用来初始化一个变量</li>
+<li>用来和一个已初始化的变量比较</li>
+<li>当函数的入参和返回值</li>
+</ul>
+<p>以下场景不应当使用<code>null</code>   </p>
+<ul>
+<li>不要使用 <code>null</code> 来检测是否传入了某个参数 </li>
+<li>不要用 <code>null</code> 来检测一个未初始化的变量 <br> 理解 <code>null</code> 最好的方式是将它当作对象的占位符。    <h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3>避免在代码中使用<code>undefined</code>。  尤其不要将一个变量赋值为<code>undefined</code>。</li>
+</ul>
+<h3 id="对象直接量"><a href="# 对象直接量" class="headerlink" title="对象直接量"></a>对象直接量 </h3><p> 推荐使用对象直接量的方式创建一个对象。    </p>
+<h3 id="数组直接量"><a href="# 数组直接量" class="headerlink" title="数组直接量"></a>数组直接量 </h3><p> 推荐使用数组直接量的方式创建数组</p>
+<h2 id="语句"><a href="# 语句" class="headerlink" title="语句"></a>语句 </h2><h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><p> 任何情况下，都不应该省略 <code>default</code> 语句。    </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;关系的闭包&quot;&gt;&lt;a href=&quot;# 关系的闭包&quot; class=&quot;headerlink&quot; title=&quot;关系的闭包&quot;&gt;&lt;/a&gt;关系的闭包 &lt;/h2&gt;&lt;p&gt; 一般来说，设 $\mathbf R$ 是集合 $\mathbf A$ 上的关系。$\mathbf R$ 可能具
+      &lt;h2 id=&quot;UI- 松耦合&quot;&gt;&lt;a href=&quot;#UI- 松耦合&quot; class=&quot;headerlink&quot; title=&quot;UI 松耦合&quot;&gt;&lt;/a&gt;UI 松耦合 &lt;/h2&gt;&lt;h3 id=&quot;将 JavaScript 从 CSS 中抽离&quot;&gt;&lt;a href=&quot;# 将 JavaScrip
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
+    
+      <category term="effective" scheme="http://blog.freeabyss.com/tags/effective/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 编程风格</title>
+    <link href="http://blog.freeabyss.com/JavaScript/JavaScript-JavaScript-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC.html"/>
+    <id>http://blog.freeabyss.com/JavaScript/JavaScript-JavaScript-编程风格.html</id>
+    <published>2017-01-17T02:40:58.000Z</published>
+    <updated>2017-01-17T07:12:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="编程风格"><a href="# 编程风格" class="headerlink" title="编程风格"></a>编程风格 </h2><h3 id="基本格式化"><a href="# 基本格式化" class="headerlink" title="基本格式化"></a> 基本格式化 </h3><h4 id="缩进"><a href="# 缩进" class="headerlink" title="缩进"></a> 缩进 </h4><p> 使用 4 个空格进行缩进     </p>
+<h4 id="语句结尾"><a href="# 语句结尾" class="headerlink" title="语句结尾"></a>语句结尾 </h4><p> 不要省略分号     </p>
+<h4 id="长度限制"><a href="# 长度限制" class="headerlink" title="长度限制"></a>长度限制 </h4><p> 每行的长度不要超过 100 字符  </p>
+<h4 id="换行"><a href="# 换行" class="headerlink" title="换行"></a>换行 </h4><p> 当需要换行时，最好在运算符后换行，下一行增加两个层级的缩进。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">callAFunction(<span class="built_in">document</span>, element, <span class="built_in">window</span>, <span class="string">"some string value"</span>, <span class="literal">true</span>, <span class="number">123</span>,</div><div class="line">        navigator);</div></pre></td></tr></table></figure>
+<p>例外: 当给变量赋值时，第二行的位置应当和赋值运算符的位置保持对齐，比如:      </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> result = something + anotherThing + yeAnotherTing + somethingElse + </div><div class="line">             anotherSomethingElse;</div></pre></td></tr></table></figure>
+<h4 id="空行"><a href="# 空行" class="headerlink" title="空行"></a>空行 </h4><p> 一般在以下场景中添加空行:      </p>
+<ul>
+<li>方法之间</li>
+<li>方法中的局部变量和第一条语句之间</li>
+<li>在多行或单行注释之前</li>
+<li>在方法内的逻辑片段之间插入空行，提高可读性</li>
+</ul>
+<h4 id="命名"><a href="# 命名" class="headerlink" title="命名"></a>命名</h4><ul>
+<li>遵照小驼峰式大小写命名法，即由小写字母开始，后续每个单词首字母都大写   </li>
+<li>变量尽量以名词作为前缀，函数以动词作为前缀  </li>
+<li>尽量在变量名中体现出值的数据类型，例如 <code>count</code>、<code>length</code> 和<code>size</code>表明数据类型是数字，<code>name</code>、<code>title</code>和 <code>message</code> 表明数据类型是字符串</li>
+<li>单个字符命名的变量，例如 <code>i</code>、<code>j</code> 和<code>k</code>通常在循环中使用   <h5 id="动词常见的约定"><a href="# 动词常见的约定" class="headerlink" title="动词常见的约定"></a>动词常见的约定</h5>| 动词 | 含义 |<br>|:–|:—|<br>|can| 函数返回一个布尔值 |<br>|has| 函数返回一个布尔值 |<br>|is | 函数返回一个布尔值 |<br>|get| 函数返回一个非布尔值 |<br>|set| 函数用来保存一个值 |</li>
+</ul>
+<h5 id="常量"><a href="# 常量" class="headerlink" title="常量"></a>常量 </h5><p> 使用大写字母和下划线 </p>
+<h5 id="构造函数"><a href="# 构造函数" class="headerlink" title="构造函数"></a>构造函数 </h5><p> 构造函数即前面冠以 <code>new</code> 运算符的函数，遵循大驼峰命名法，即以大写字母开始，后续每个单词首字母都大写。     </p>
+<h4 id="直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。"><a href="# 直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。" class="headerlink" title="直接量字符串使用双引号，主要是因为方便在 Java 和 JavaScript 之间来回切换。"></a>直接量字符串使用双引号，主要是因为方便在 <code>Java</code> 和<code>JavaScript</code>之间来回切换。</h4><p>禁止使用多行字符串，使用字符串连接符将字符串分成多份。     </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man \</span></div><div class="line">named Brady";</div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> longString = <span class="string">"Here's the sotry, of a man"</span> +</div><div class="line">                 <span class="string">"named Brady"</span>;</div></pre></td></tr></table></figure>
+<h3 id="注释"><a href="# 注释" class="headerlink" title="注释"></a>注释 </h3><h4 id="单行注释"><a href="# 单行注释" class="headerlink" title="单行注释"></a> 单行注释</h4><ul>
+<li>独占一行的注释，用来解释下一行代码。这行注释之前总是有一个空行，且缩进层级和下一行代码保持一致</li>
+<li>代码行尾部的注释。代码结束到注释之间至少有一个缩进。并且不应当超过单行最大字符数限制，如果超过了应该将注释放在代码行上方</li>
+<li>单行注释不应该以连续多行注释的形式出现，除非你注释掉一大段代码</li>
+</ul>
+<h4 id="多行注释"><a href="# 多行注释" class="headerlink" title="多行注释"></a>多行注释</h4><ul>
+<li>多行注释推荐使用 <code>Java</code> 的风格</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * 这是一段多行注释</div><div class="line"> * 这段注释包含两行文本</div><div class="line"> */</div></pre></td></tr></table></figure>
+<ul>
+<li>多行注释和代码之间没有空行，注释上方应当有一行空行，并且缩进层级和下放的代码保持一致</li>
+</ul>
+<h4 id="使用注释"><a href="# 使用注释" class="headerlink" title="使用注释"></a>使用注释</h4><ul>
+<li>难于理解的代码通常都应当加注释</li>
+<li>可能被误认为错误的代码，应当添加注释，防止被好心的开发者“修复”</li>
+</ul>
+<h2 id="语句和表达式"><a href="# 语句和表达式" class="headerlink" title="语句和表达式"></a>语句和表达式 </h2><p> 无论何种情况下，所有块语句都应当使用花括号，包括:</p>
+<ul>
+<li>if…else</li>
+<li>for</li>
+<li>while</li>
+<li>do…while</li>
+<li>try…catch…finally</li>
+</ul>
+<h3 id="花括号的对齐方式"><a href="# 花括号的对齐方式" class="headerlink" title="花括号的对齐方式"></a>花括号的对齐方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123;</div><div class="line">    doSomething();</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    doSomethingElse();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="switch 语句"><a href="#switch 语句" class="headerlink" title="switch 语句"></a>switch 语句 </h3><h4 id="缩进 -1"><a href="# 缩进 -1" class="headerlink" title="缩进"></a> 缩进</h4><ul>
+<li>每条 <code>case</code> 语句相对于 <code>switch</code> 关键字都缩进一个层级</li>
+<li>从第二条 <code>case</code> 语句开始，每条 <code>case</code> 语句前后各有一个空行</li>
+<li>连续的 <code>case</code> 语句之间省略空行</li>
+<li><code>default</code>语句是必须的</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span> (condition) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="string">"first"</span>:</div><div class="line">         <span class="comment">// 代码</span></div><div class="line">         <span class="keyword">break</span>;</div><div class="line"></div><div class="line">    <span class="keyword">case</span> <span class="string">"second"</span>:</div><div class="line">    <span class="keyword">case</span> <span class="string">"third"</span>:</div><div class="line">         <span class="comment">// 代码</span></div><div class="line">         <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span>: </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="变量、函数和运算符"><a href="# 变量、函数和运算符" class="headerlink" title="变量、函数和运算符"></a>变量、函数和运算符 </h2><h3 id="变量声明"><a href="# 变量声明" class="headerlink" title="变量声明"></a> 变量声明 </h3><p> 推荐将局部变量的定义作为函数内第一条语句。 并且推荐使用单 <code>var</code> 语句风格，每个变量的初始化独占一行，没有初始值的变量放在 <code>var</code> 语句的尾部。 例如:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomethingWithItems</span>(<span class="params">items</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> value = <span class="number">10</span>,</div><div class="line">        result = value + <span class="number">10</span>,</div><div class="line">        i, len;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>, len=items.length; i&lt;len; i++) &#123;</div><div class="line">        doSomething(items[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="函数声明"><a href="# 函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><ul>
+<li>推荐先声明函数，再使用</li>
+<li>对于函数内的局部函数，应该紧接着变量声明之后声明，之间用空行隔开</li>
+<li>函数声明禁止出现在 <code>if</code>、<code>while</code>、<code>for</code>、<code>try...catch</code>、<code>switch</code> 的语句块内</li>
+</ul>
+<h3 id="立即调用的函数"><a href="# 立即调用的函数" class="headerlink" title="立即调用的函数"></a>立即调用的函数 </h3><p> 为了让立即执行的函数能够被一眼看出来，将函数用一对圆括号包裹起来。比如:    </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> value = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 函数体</span></div><div class="line">    </div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">message</span>: <span class="string">"Hi"</span></div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
+<h3 id="严格模式"><a href="# 严格模式" class="headerlink" title="严格模式"></a>严格模式 </h3><p> 最好不要在全局作用域使用<code>&quot;use strict&quot;</code>。 如果你将多个文件连接合并成一个文件时，当期中一个文件在全局作用域中启用了严格模式，则所有的代码都将以严格模式解析，这会很可能造成其他以非严格模式写的代码报错。     </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// code </span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">    "use strict"</span>;</div><div class="line">    <span class="comment">// code</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>推荐所有函数中都加上<code>&quot;use strict&quot;</code>。 </p>
+<h3 id="相等"><a href="# 相等" class="headerlink" title="相等"></a>相等 </h3><p> 因为强制类型转换的缘故，推荐使用 <code>===</code> 和<code>!==</code>，而不要使用 <code>==</code> 和<code>!=</code>。</p>
+<h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><ul>
+<li>尽量避免使用<code>eval()</code>，如果无它法，尽量在严格模式下使用<code>eval()</code></li>
+<li>严禁使用<code>Function</code> </li>
+<li>可以使用 <code>setTimeout()</code> 和<code>setInterval()</code>，但不要用字符串形式，要用函数</li>
+</ul>
+<h3 id="原始包装类型"><a href="# 原始包装类型" class="headerlink" title="原始包装类型"></a>原始包装类型 </h3><p> 禁止使用原始包装类型</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;编程风格&quot;&gt;&lt;a href=&quot;# 编程风格&quot; class=&quot;headerlink&quot; title=&quot;编程风格&quot;&gt;&lt;/a&gt;编程风格 &lt;/h2&gt;&lt;h3 id=&quot;基本格式化&quot;&gt;&lt;a href=&quot;# 基本格式化&quot; class=&quot;headerlink&quot; title=&quot;基本格式
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
+    
+      <category term="style guideline" scheme="http://blog.freeabyss.com/tags/style-guideline/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Window 10 快速安装.NET 3.5</title>
+    <link href="http://blog.freeabyss.com/Window/Window-Windows-10-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85-NET-3-5.html"/>
+    <id>http://blog.freeabyss.com/Window/Window-Windows-10-快速安装-NET-3-5.html</id>
+    <published>2017-01-16T03:49:25.000Z</published>
+    <updated>2017-02-26T07:09:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>加载 windows 10 镜像文件到光驱</li>
+<li>按<code>Win</code>+<code>X</code>，选择’命令提示符(管理员)’ </li>
+<li>输入以下命令，其中 <code>D:</code> 代表光驱盘符 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dism.exe /online /enable-feature /featurename:netfx3 /Source:D:\sources\sxs</div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;加载 windows 10 镜像文件到光驱&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;Win&lt;/code&gt;+&lt;code&gt;X&lt;/code&gt;，选择’命令提示符(管理员)’ &lt;/li&gt;
+&lt;li&gt;输入以下命令，其中 &lt;code&gt;D:&lt;/code&gt; 代表光驱盘符 &lt;figure c
+    
+    </summary>
+    
+      <category term="Window" scheme="http://blog.freeabyss.com/categories/Window/"/>
+    
+    
+      <category term="Window" scheme="http://blog.freeabyss.com/tags/Window/"/>
+    
+      <category term="os" scheme="http://blog.freeabyss.com/tags/os/"/>
+    
+      <category term="tools" scheme="http://blog.freeabyss.com/tags/tools/"/>
+    
+      <category term=".net" scheme="http://blog.freeabyss.com/tags/net/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm 概述</title>
+    <link href="http://blog.freeabyss.com/JavaScript/JavaScript-NPM-%E6%A6%82%E8%BF%B0.html"/>
+    <id>http://blog.freeabyss.com/JavaScript/JavaScript-NPM-概述.html</id>
+    <published>2017-01-08T04:24:29.000Z</published>
+    <updated>2017-01-17T06:29:40.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://blog.freeabyss.com/tags/JavaScript/"/>
+    
+      <category term="npm" scheme="http://blog.freeabyss.com/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二进制运算</title>
+    <link href="http://blog.freeabyss.com/Math/Function-05-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97.html"/>
+    <id>http://blog.freeabyss.com/Math/Function-05-二进制运算.html</id>
+    <published>2016-12-22T14:52:26.000Z</published>
+    <updated>2016-12-24T09:58:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="整数相加"><a href="# 整数相加" class="headerlink" title="整数相加"></a>整数相加</h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \; \mathcal {add} (a, b:integer)\ <br>{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2} \\<br>c:= 0  \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad d:=\lfloor (a_j+b_j+c)/2\rfloor \\<br>\qquad s_j:=a_j+b_j+c-2d \\<br>\qquad c:=d \\<br>\mathbf {end}  \\<br>s_n := c \\<br>{和数的二进制展开是(s_ns_{n-1}\dots s_0)_2}<br>\end{array}<br>$$</p>
+<h2 id="整数相乘"><a href="# 整数相乘" class="headerlink" title="整数相乘"></a>整数相乘 </h2><p>$$<br>\begin{array}{l}<br>\mathbf {procedure} \;\mathcal {multiply} (a, b:integer)\ <br>{a 和 b 的二进制展开分别是(a_{n-1}a_{n-2}\dots a_1a_0)_2 和(b_{n-1}b_{n-2}\dots b_1b_0)_2} \\<br>\mathbf {for}\; j:=0 \;\mathbf {to}\; n-1 \\<br>\mathbf {begin} \\<br>\qquad \mathbf {if}\; b_j=1\;\mathbf {then}\; c_j:=a\;shifted\; j places \\<br>\qquad \mathbf{else}\; c_j:=0\\<br>\mathbf {end} \\<br>{c_0,c_1,\dots,c_{n-1} 是部分乘积} \\<br>p:=0\\<br>\mathbf {for}\; j:=0\;\mathbf {to}\; n-1 \\<br>\qquad p:=p+c_j \\<br>{p 是 ab 的值}<br>\end{array}<br>$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;整数相加&quot;&gt;&lt;a href=&quot;# 整数相加&quot; class=&quot;headerlink&quot; title=&quot;整数相加&quot;&gt;&lt;/a&gt;整数相加&lt;/h2&gt;&lt;p&gt;$$&lt;br&gt;\begin{array}{l}&lt;br&gt;\mathbf {procedure} \; \mathcal {ad
     
     </summary>
     
@@ -1440,11 +644,378 @@
     
       <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
     
+      <category term="function" scheme="http://blog.freeabyss.com/tags/function/"/>
+    
+      <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最大公约数和最小公倍数算法</title>
+    <link href="http://blog.freeabyss.com/Math/Function-04-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0%E7%AE%97%E6%B3%95.html"/>
+    <id>http://blog.freeabyss.com/Math/Function-04-最大公约数和最小公倍数算法.html</id>
+    <published>2016-12-22T13:28:03.000Z</published>
+    <updated>2016-12-22T13:50:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="因数分解"><a href="# 因数分解" class="headerlink" title="因数分解"></a>因数分解 </h2><h3 id="最大公约数"><a href="# 最大公约数" class="headerlink" title="最大公约数"></a> 最大公约数 </h3><p> 假定两个不全为 $0$ 的整数 $a$ 和 $b$ 的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \\<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在 $a$ 和 $b$ 分解中的所有素数都包含在两个分解之中，必要时以 0 为指数出现。于是 $gcd(a, b)$ 由下面的公式给出 <br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br> 例如，求 $120$ 和 $500$ 的最大公约数：<br>$$<br>    120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\\<br>    gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\\<br>    = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</p>
+<h3 id="最小公倍数"><a href="# 最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数 </h3><p> 因素分解也可以用来求最大公倍数，求 $a$ 和 $b$ 的最小公倍数的公式为:<br>$$lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}$$</p>
+<h2 id="欧几里得算法"><a href="# 欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法 </h2><p> 欧几里德算法又称辗转相除法，用于计算两个整数 a,b 的最大公约数。其计算原理依赖于下面的定理：<br>定理：$gcd(a,b) = gcd(b,a\;\mathbf{mod}\; b)$<br>证明：$a$ 可以表示成 $a = kb + r$，则 $r = a\;\mathbf{mod}\;b$<br>假设 $\;d$ 是 $a$,$b$ 的一个公约数，则有 $d\mid a$, $d\mid b$，而 $r= a - kb$，因此 $d\mid r$<br>因此 $\;d$ 是 $(b,a\;\mathbf{mod}\; b)$ 的公约数 <br> 假设 $\;d$ 是 $(b,a\;\mathbf{mod}\;b)$ 的公约数，则 $d\mid b$ ,$d\mid r$ ，但是 $a = kb +r$<br>因此 $\;d$ 也是 $(a,b)$ 的公约数</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;因数分解&quot;&gt;&lt;a href=&quot;# 因数分解&quot; class=&quot;headerlink&quot; title=&quot;因数分解&quot;&gt;&lt;/a&gt;因数分解 &lt;/h2&gt;&lt;h3 id=&quot;最大公约数&quot;&gt;&lt;a href=&quot;# 最大公约数&quot; class=&quot;headerlink&quot; title=&quot;最大公约
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="function" scheme="http://blog.freeabyss.com/tags/function/"/>
+    
+      <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性同余法生成伪随机数</title>
+    <link href="http://blog.freeabyss.com/Math/Function-03-%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E6%B3%95%E7%94%9F%E6%88%90%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0.html"/>
+    <id>http://blog.freeabyss.com/Math/Function-03-线性同余法生成伪随机数.html</id>
+    <published>2016-12-21T13:49:30.000Z</published>
+    <updated>2016-12-24T09:20:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="线性同余法"><a href="# 线性同余法" class="headerlink" title="线性同余法"></a>线性同余法 </h2><p> 选择四个数: 模数 $m$、乘数 $a$、增量 $c$、和种子 $x_0$，使得 $2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列 ${x_n}$，使得对所有 $n$，$0\le x_n \lt m$。生成的办法是逐次同余：$$x_{n+1} = (ax_n +c)\;\mathbf {mod}\; m$$。   </p>
+<h3 id="示例"><a href="# 示例" class="headerlink" title="示例"></a>示例 </h3><p> 例如，选取 $m=9,a=7,c=4,x_0=3$，产生的伪随机数序列如下:<br>$$<br>    x_1 = 7x_0+4\;\mathbf {mod}\; 9 = 25\;\mathbf {mod}\; 9=7\\<br>    x_2 = 7x_1+4\;\mathbf {mod}\; 9 = 53\;\mathbf {mod}\; 9=8\\<br>    …<br>$$<br>常使用的线性同余发生器的增量 $c=0$。这样的发生器称为 <strong> 纯乘式发生器</strong>。例如以 $2^{31}-1$ 为模，以 $7^5$ 为乘数的纯乘式发生器就广为采用。会产生 $2^{31}-2$ 个数，然后开始重复。      </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;线性同余法&quot;&gt;&lt;a href=&quot;# 线性同余法&quot; class=&quot;headerlink&quot; title=&quot;线性同余法&quot;&gt;&lt;/a&gt;线性同余法 &lt;/h2&gt;&lt;p&gt; 选择四个数: 模数 $m$、乘数 $a$、增量 $c$、和种子 $x_0$，使得 $2\le a\lt m$，
+    
+    </summary>
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/categories/Math/"/>
+    
+    
+      <category term="Math" scheme="http://blog.freeabyss.com/tags/Math/"/>
+    
+      <category term="function" scheme="http://blog.freeabyss.com/tags/function/"/>
+    
+      <category term="Alg" scheme="http://blog.freeabyss.com/tags/Alg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML Schema 指示器 04</title>
+    <link href="http://blog.freeabyss.com/XML/Web-XML-Schema-04-%E6%8C%87%E7%A4%BA%E5%99%A8.html"/>
+    <id>http://blog.freeabyss.com/XML/Web-XML-Schema-04-指示器.html</id>
+    <published>2016-12-17T06:35:57.000Z</published>
+    <updated>2017-02-22T13:11:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="指示器"><a href="# 指示器" class="headerlink" title="指示器"></a>指示器 </h2><p> 通过指示器可以控制在文档中使用元素的方式。    </p>
+<h3 id="Order- 指示器"><a href="#Order- 指示器" class="headerlink" title="Order 指示器"></a>Order 指示器</h3><p>Order 用于定义元素的顺序</p>
+<h4 id="All"><a href="#All" class="headerlink" title="All"></a>All</h4><p><code>&lt;all&gt;</code>指示器规定子元素可以按照任意顺序出现，且每个子元素必须只能出现一次。 </p>
+<blockquote>
+<p>当使用 <code>&lt;all&gt;</code> 指示器时，你可以把 <code>&lt;minOccurs&gt;</code>设置为 0 或者 1，而只能把 <code>&lt;maxOccurs&gt;</code> 指示器设置为 1 </p>
+<h4 id="Choice"><a href="#Choice" class="headerlink" title="Choice"></a>Choice</h4><p><code>&lt;choice&gt;</code>指示器规定可出现某个子元素或者可出现另外一个子元素（非此即彼）。 </p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:choice</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"employee"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"member"</span> <span class="attr">type</span>=<span class="string">"member"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:choice</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>如需设置子元素出现任意次数，可将 <code>&lt;maxOccurs&gt;</code>设置为 <code>unbounded</code>（无限次）。</p>
+</blockquote>
+<h4 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence"></a>Sequence</h4><p><code>&lt;sequence&gt;</code> 规定子元素必须按照特定的顺序出现。</p>
+<h3 id="Occurrence- 指示器"><a href="#Occurrence- 指示器" class="headerlink" title="Occurrence 指示器"></a>Occurrence 指示器</h3><p>Occurrence 指示器用于定义某个元素出现的频率。    </p>
+<blockquote>
+<p>对于所有的 “Order” 和 “Group” 指示器（any、all、choice、sequence、group name 以及 group reference），其中的 maxOccurs 以及 minOccurs 的默认值均为 1。</p>
+</blockquote>
+<h4 id="maxOccurs"><a href="#maxOccurs" class="headerlink" title="maxOccurs"></a>maxOccurs</h4><p><code>&lt;maxOccurs&gt;</code> 指示器可规定某个元素可出现的最大次数。如需使某个元素的出现次数不受限制，请使用<code>maxOccurs=&quot;unbounded&quot;</code> 这个声明</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"full_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"child_name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">maxOccurs</span>=<span class="string">"10"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="minOccurs"><a href="#minOccurs" class="headerlink" title="minOccurs"></a>minOccurs</h4><p><code>&lt;minOccurs&gt;</code> 指示器可规定某个元素能够出现的最小次数。</p>
+<h3 id="Group 指示器"><a href="#Group 指示器" class="headerlink" title="Group 指示器"></a>Group 指示器 </h3><p>Group 指示器用于定义相关的数批元素。<br> 您必须在 <code>group</code> 声明内部定义一个 <code>all</code>、<code>choice</code> 或者 <code>sequence</code> 元素。</p>
+<h4 id="元素组"><a href="# 元素组" class="headerlink" title="元素组"></a>元素组 </h4><p> 把 group 定义完毕以后，就可以在另一个定义中引用它了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">name</span>=<span class="string">"persongroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:group</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:group</span> <span class="attr">ref</span>=<span class="string">"persongroup"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="属性组"><a href="# 属性组" class="headerlink" title="属性组"></a>属性组 </h4><p> 已定义完毕属性组之后，就可以在另一个定义中引用它了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">name</span>=<span class="string">"personattrgroup"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"birthday"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:attributeGroup</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"person"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attributeGroup</span> <span class="attr">ref</span>=<span class="string">"personattrgroup"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;指示器&quot;&gt;&lt;a href=&quot;# 指示器&quot; class=&quot;headerlink&quot; title=&quot;指示器&quot;&gt;&lt;/a&gt;指示器 &lt;/h2&gt;&lt;p&gt; 通过指示器可以控制在文档中使用元素的方式。    &lt;/p&gt;
+&lt;h3 id=&quot;Order- 指示器&quot;&gt;&lt;a href=&quot;#Ord
+    
+    </summary>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
+    
+    
       <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
     
-      <category term="Discrete Mathematics" scheme="http://blog.freeabyss.com/tags/Discrete-Mathematics/"/>
+      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
     
-      <category term="Relations" scheme="http://blog.freeabyss.com/tags/Relations/"/>
+      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML Schema 限定 02</title>
+    <link href="http://blog.freeabyss.com/XML/Web-XML-Schema-02-%E9%99%90%E5%AE%9A.html"/>
+    <id>http://blog.freeabyss.com/XML/Web-XML-Schema-02-限定.html</id>
+    <published>2016-12-17T06:34:55.000Z</published>
+    <updated>2017-02-22T13:11:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="限定"><a href="# 限定" class="headerlink" title="限定"></a>限定 </h2><p> 限定用于限制元素和属性可接受的值，对元素的限定被称为 facet。<br>关于限定的详细列子，请参考该链接<a href="http://www.w3school.com.cn/schema/schema_facets.asp" target="_blank" rel="external">XSD 限定 / Facets</a>    </p>
+<h3 id="限定定义"><a href="# 限定定义" class="headerlink" title="限定定义"></a>限定定义</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">"120"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面的列子定义了 <code>age</code> 元素的值，不能低于 0 或者高于 120. 下面的列子具有同样的效果，只是类型 <code>ageType</code> 可被其他元素使用。 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"ageType"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span> <span class="attr">name</span>=<span class="string">"ageType"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:minInclusive</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:maxInclusive</span> <span class="attr">value</span>=<span class="string">"120"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="枚举约束"><a href="# 枚举约束" class="headerlink" title="枚举约束"></a>枚举约束 </h3><p> 将 XML 元素的内容限制为一组可接受的值。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:simpleType</span> <span class="attr">name</span>=<span class="string">"carType"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:string"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"Audi"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"Golf"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:enumeration</span> <span class="attr">value</span>=<span class="string">"BMW"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:simpleType</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="数据类型限定"><a href="# 数据类型限定" class="headerlink" title="数据类型限定"></a>数据类型限定</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">限定</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">enumeration</td>
+<td style="text-align:left">定义可接受值的一个列表</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">fractionDigits</td>
+<td style="text-align:left">定义所允许的最大的小数位数。必须大于等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">定义所允许的字符或者列表项目的精确数目。必须大于或等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">maxExclusive</td>
+<td style="text-align:left">定义数值的上限。所允许的值必须小于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">maxInclusive</td>
+<td style="text-align:left">定义数值的上限。所允许的值必须小于或等于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">maxLength</td>
+<td style="text-align:left">定义所允许的字符或者列表项目的最大数目。必须大于或等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minExclusive</td>
+<td style="text-align:left">定义数值的下限。所允许的值必需大于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minInclusive</td>
+<td style="text-align:left">定义数值的下限。所允许的值必需大于或等于此值。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minLength</td>
+<td style="text-align:left">定义所允许的字符或者列表项目的最小数目。必须大于或等于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">pattern</td>
+<td style="text-align:left">定义可接受的字符的精确序列。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">totalDigits</td>
+<td style="text-align:left">定义所允许的阿拉伯数字的精确位数。必须大于 0。</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">whiteSpace</td>
+<td style="text-align:left">定义空白字符（换行、回车、空格以及制表符）的处理方式。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>whiteSpace 的取值：  </p>
+<ul>
+<li>collapse: 移除所有空白字符（换行、回车、空格以及制表符会被替换为空格，开头和结尾的空格会被移除，而多个连续的空格会被缩减为一个单一的空格)</li>
+<li>replace: 除所有空白字符（换行、回车、空格以及制表符)</li>
+<li>preserve: 不会移除任何空白字符</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;限定&quot;&gt;&lt;a href=&quot;# 限定&quot; class=&quot;headerlink&quot; title=&quot;限定&quot;&gt;&lt;/a&gt;限定 &lt;/h2&gt;&lt;p&gt; 限定用于限制元素和属性可接受的值，对元素的限定被称为 facet。&lt;br&gt;关于限定的详细列子，请参考该链接&lt;a href=&quot;http:
+    
+    </summary>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
+    
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML Schema 复合元素 05</title>
+    <link href="http://blog.freeabyss.com/XML/Web-XML-Schema-05-%E5%A4%8D%E5%90%88%E5%85%83%E7%B4%A0.html"/>
+    <id>http://blog.freeabyss.com/XML/Web-XML-Schema-05-复合元素.html</id>
+    <published>2016-12-17T06:33:09.000Z</published>
+    <updated>2017-02-22T13:11:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="复合元素"><a href="# 复合元素" class="headerlink" title="复合元素"></a>复合元素 </h2><p> 复合元素包含其他元素及属性的 XML 元素。 复合元素包括：   </p>
+<ul>
+<li>空元素</li>
+<li>包含其他元素的元素</li>
+<li>仅包含文本的元素</li>
+<li>包含元素和文本的元素</li>
+<li>上述所有元素均可包含属性</li>
+</ul>
+<h3 id="仅包含元素的复合元素"><a href="# 仅包含元素的复合元素" class="headerlink" title="仅包含元素的复合元素"></a>仅包含元素的复合元素 </h3><p> 复合元素声明有两种方式，第二种方式可用于其他元素。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"personinfo"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>还可以在已有复合元素的基础上，添加一些元素。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"employee"</span> <span class="attr">type</span>=<span class="string">"fullpersoninfo"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"firstname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">name</span>=<span class="string">"fullpersoninfo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:extension</span> <span class="attr">base</span>=<span class="string">"personinfo"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"address"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"city"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:extension</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexContent</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>&lt;sequence&gt;</code>是指示器，这意味着子元素必须按照声明的次序出现。   </p>
+<h3 id="仅包含属性的复合元素"><a href="# 仅包含属性的复合元素" class="headerlink" title="仅包含属性的复合元素"></a>仅包含属性的复合元素 </h3><p> 空的复合元素只能包含属性不能包含其他内容。<br>一个空的 XML 元素:   </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">product</span> <span class="attr">prodid</span>=<span class="string">"1345"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p>声明如下：    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:restriction</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"prodid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:restriction</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:complexContent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>或者更紧凑的写法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"prodid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="包含文本和属性的复合元素"><a href="# 包含文本和属性的复合元素" class="headerlink" title="包含文本和属性的复合元素"></a>包含文本和属性的复合元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">shoesize</span> <span class="attr">country</span>=<span class="string">"france"</span>&gt;</span>35<span class="tag">&lt;/<span class="name">shoesize</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"shoesize"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:simpleContent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:extension</span> <span class="attr">base</span>=<span class="string">"xs:integer"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"country"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> /&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">xs:extension</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:simpleContent</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>请使用<code>extension</code> 或 <code>restriction</code> 元素来扩展或限制元素的基本简易类型</p>
+</blockquote>
+<h3 id="包含文本和元素的复合元素"><a href="# 包含文本和元素的复合元素" class="headerlink" title="包含文本和元素的复合元素"></a>包含文本和元素的复合元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">letter</span>&gt;</span></div><div class="line">Dear Mr.<span class="tag">&lt;<span class="name">name</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">name</span>&gt;</span>.</div><div class="line">Your order <span class="tag">&lt;<span class="name">orderid</span>&gt;</span>1032<span class="tag">&lt;/<span class="name">orderid</span>&gt;</span></div><div class="line">will be shipped on <span class="tag">&lt;<span class="name">shipdate</span>&gt;</span>2001-07-13<span class="tag">&lt;/<span class="name">shipdate</span>&gt;</span>.</div><div class="line"><span class="tag">&lt;/<span class="name">letter</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"letter"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">xs:complexType</span> <span class="attr">mixed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">xs:sequence</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"orderid"</span> <span class="attr">type</span>=<span class="string">"xs:positiveInteger"</span>/&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"shipdate"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">xs:sequence</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">xs:complexType</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">xs:element</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>为了使字符数据可以出现在 “letter” 的子元素之间，mixed 属性必须被设置为 “true”。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;复合元素&quot;&gt;&lt;a href=&quot;# 复合元素&quot; class=&quot;headerlink&quot; title=&quot;复合元素&quot;&gt;&lt;/a&gt;复合元素 &lt;/h2&gt;&lt;p&gt; 复合元素包含其他元素及属性的 XML 元素。 复合元素包括：   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;空元素&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
+    
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML Schema 简易元素及属性 03</title>
+    <link href="http://blog.freeabyss.com/XML/Web-XML-Schema-03-%E7%AE%80%E6%98%93%E5%85%83%E7%B4%A0%E5%8F%8A%E5%B1%9E%E6%80%A7.html"/>
+    <id>http://blog.freeabyss.com/XML/Web-XML-Schema-03-简易元素及属性.html</id>
+    <published>2016-12-17T06:31:52.000Z</published>
+    <updated>2017-02-22T13:11:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简易元素"><a href="# 简易元素" class="headerlink" title="简易元素"></a>简易元素 </h2><p> 简易元素是指只包含文本的元素，不包括其他元素或者属性。  </p>
+<h4 id="简易元素的语法"><a href="# 简易元素的语法" class="headerlink" title="简易元素的语法"></a>简易元素的语法</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p><code>xxx</code>是指元素的名称，<code>yyy</code>是指元素数据类型 <br> 例如 ：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">lastname</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">lastname</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dateborn</span>&gt;</span>1980-03-27<span class="tag">&lt;/<span class="name">dateborn</span>&gt;</span></div><div class="line">``</div><div class="line">对应       </div><div class="line">```xml</div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"lastname"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">type</span>=<span class="string">"xs:integer"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"dateborn"</span> <span class="attr">type</span>=<span class="string">"xs:date"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="常用的数据类型"><a href="# 常用的数据类型" class="headerlink" title="常用的数据类型"></a>常用的数据类型</h4><ul>
+<li>xs:string</li>
+<li>xs:decimal</li>
+<li>xs:integer</li>
+<li>xs:boolean</li>
+<li>xs:date</li>
+<li>xs:time</li>
+</ul>
+<h4 id="固定值和默认值"><a href="# 固定值和默认值" class="headerlink" title="固定值和默认值"></a>固定值和默认值 </h4><p> 固定值会自动分配给元素，并且您无法规定另外一个值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"red"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:element</span> <span class="attr">name</span>=<span class="string">"color"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"red"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="属性"><a href="# 属性" class="headerlink" title="属性"></a>属性 </h2><p> 简易元素无法拥有属性，但是属性总是作为简易类型被声明。     </p>
+<h4 id="声明属性"><a href="# 声明属性" class="headerlink" title="声明属性"></a>声明属性</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">type</span>=<span class="string">"yyy"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p>属性的数据类型参见简易元素的数据类型。<br>属性同样可以拥有固定值和默认值<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">default</span>=<span class="string">"EN"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">fixed</span>=<span class="string">"EN"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p>属性默认是可选的，如规定属性必选，请使用 <code>use</code> 属性：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">xs:attribute</span> <span class="attr">name</span>=<span class="string">"lang"</span> <span class="attr">type</span>=<span class="string">"xs:string"</span> <span class="attr">use</span>=<span class="string">"required"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简易元素&quot;&gt;&lt;a href=&quot;# 简易元素&quot; class=&quot;headerlink&quot; title=&quot;简易元素&quot;&gt;&lt;/a&gt;简易元素 &lt;/h2&gt;&lt;p&gt; 简易元素是指只包含文本的元素，不包括其他元素或者属性。  &lt;/p&gt;
+&lt;h4 id=&quot;简易元素的语法&quot;&gt;&lt;a href=
+    
+    </summary>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
+    
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML Schema 简要 01</title>
+    <link href="http://blog.freeabyss.com/XML/Web-XML-Schema-01-%E7%AE%80%E8%A6%81.html"/>
+    <id>http://blog.freeabyss.com/XML/Web-XML-Schema-01-简要.html</id>
+    <published>2016-12-16T14:41:28.000Z</published>
+    <updated>2017-02-22T13:10:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="# 前言" class="headerlink" title="前言"></a>前言</h2><p>XML Schema 语言即 XML Schema Definition(XSD)，是基于 XML 格式，用于描述 XML 结构的文档，也是 DTD 的替代者。    </p>
+<h2 id="XML-Schema 的作用"><a href="#XML-Schema 的作用" class="headerlink" title="XML Schema 的作用"></a>XML Schema 的作用</h2><ul>
+<li>定义可出现在文档中的元素</li>
+<li>定义可出现在文档中的属性</li>
+<li>定义哪个元素是子元素 </li>
+<li>定义子元素的次序</li>
+<li>定义子元素的数目 </li>
+<li>定义元素是否为空，或者是否可包含文本</li>
+<li>定义元素和属性的数据类型</li>
+<li>定义元素和属性的默认值以及固定值 </li>
+</ul>
+<h2 id="XML-Schema- 引用"><a href="#XML-Schema- 引用" class="headerlink" title="XML Schema 引用"></a>XML Schema 引用 </h2><h3 id="schema- 元素"><a href="#schema- 元素" class="headerlink" title="schema 元素"></a>schema 元素</h3><p><code>&lt;schema&gt;</code> 元素是每一个 XML Schema 的根元素。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">xs:schema</span> <span class="attr">xmlns:xs</span>=<span class="string">"http://www.w3.org/2001/XMLSchema"</span></span></div><div class="line"><span class="attr">targetNamespace</span>=<span class="string">"http://www.w3school.com.cn"</span></div><div class="line"><span class="attr">xmlns</span>=<span class="string">"http://www.w3school.com.cn"</span></div><div class="line"><span class="attr">elementFormDefault</span>=<span class="string">"qualified"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">xs:schema</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns:xs="http://www.w3.org/2001/XMLSchema"</div></pre></td></tr></table></figure>
+<p>显示 <code>schema</code> 中用到的元素和 数据类型来自命名空间<code>http://www.w3.org/2001/XMLSchema</code>。同时它还规定了来自该命名空间的元素和数据类型应该使用前缀<code>xs</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">targetNamespace="http://www.w3school.com.cn"</div></pre></td></tr></table></figure>
+<p>显示被此 <code>schema</code> 定义的元素来自命名空间<code>http://www.w3school.com.cn</code>。    </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns="http://www.w3school.com.cn"</div></pre></td></tr></table></figure>
+<p>指出默认的命名空间是<code>http://www.w3school.com.cn</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">elementFormDefault="qualified"</div></pre></td></tr></table></figure>
+<p>指出任何 XML 实例文档所使用的且在此 schema 中声明过的元素必须被命名空间限定。    </p>
+<h3 id="引用 XSD"><a href="# 引用 XSD" class="headerlink" title="引用 XSD"></a>引用 XSD</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">note</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3school.com.cn"</span></span></div><div class="line"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line"><span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.w3school.com.cn/note.xsd"</span>&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">to</span>&gt;</span>George<span class="tag">&lt;/<span class="name">to</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">from</span>&gt;</span>John<span class="tag">&lt;/<span class="name">from</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">heading</span>&gt;</span>Reminder<span class="tag">&lt;/<span class="name">heading</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>Don't forget the meeting!<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">note</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns="http://www.w3school.com.cn"</div></pre></td></tr></table></figure>
+<p>规定了默认命名空间的声明。此声明会告知 schema 验证器，在此 XML 文档中使用的所有元素都被声明于 <code>http://www.w3school.com.cn</code> 这个命名空间。 一旦您拥有了可用的 XML Schema 实例命名空间：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</div></pre></td></tr></table></figure></p>
+<p>您就可以使用 schemaLocation 属性了。此属性有两个值。第一个值是需要使用的命名空间。第二个值是供命名空间使用的 XML schema 的位置：</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;# 前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;XML Schema 语言即 XML Schema Definition(XSD)，是基于 XML 格式，用于描述 XML 结构的文档，也
+    
+    </summary>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/categories/XML/"/>
+    
+    
+      <category term="note" scheme="http://blog.freeabyss.com/tags/note/"/>
+    
+      <category term="Web" scheme="http://blog.freeabyss.com/tags/Web/"/>
+    
+      <category term="XML" scheme="http://blog.freeabyss.com/tags/XML/"/>
     
   </entry>
   

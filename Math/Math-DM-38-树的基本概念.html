@@ -104,7 +104,7 @@
 另一个定义是：一个无向图是树当且仅当它在每对顶点之间存在唯一简单通路。       
 一些常用的术语  根树  是指定一个顶点作为根并且每条边的方向都离开根的树。    
 若 $u$ 是 $T$ 里非根的顶点，则 $u$ 的  父母  是使得从 $u$ 到 $v$ 存在有向边的唯">
-<meta property="og:updated_time" content="2017-03-21T13:13:05.000Z">
+<meta property="og:updated_time" content="2017-04-26T13:33:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散数学学习笔记 树的基本概念 38">
 <meta name="twitter:description" content="概述  树是没有简单回路的连通无向图。 因为树没有简单回路，所以树不含多重边或环，因此任何树必然是简单图。      
@@ -362,7 +362,7 @@
 <p>另一个定义是：一个无向图是树当且仅当它在每对顶点之间存在唯一简单通路。       </p>
 <h3 id="一些常用的术语"><a href="# 一些常用的术语" class="headerlink" title="一些常用的术语"></a>一些常用的术语 </h3><p><strong> 根树 </strong> 是指定一个顶点作为根并且每条边的方向都离开根的树。    </p>
 <p>若 $u$ 是 $T$ 里非根的顶点，则 $u$ 的 <strong> 父母 </strong> 是使得从 $u$ 到 $v$ 存在有向边的唯一的顶点 $u$ 。当 $u$ 是 $v$ 的父母时，$v$ 称为 $u$ 的 <strong> 子女 </strong>。具有相同父母的顶点称为<strong> 兄弟 </strong>。非根顶点的<strong> 祖先 </strong> 是从根到该顶点的通路上的顶点，不包括该顶点自身，但包括根。顶点 $v$ 的后代是以 $v$ 作为祖先的顶点。树的顶点若没有子女称为 <strong> 树叶 </strong>。有子女的顶点称为<strong> 内点</strong>。        </p>
-<p>根树的 <strong> 层数 </strong> 是从根到任意顶点的最大通路的长度。   </p>
+<p>根树的 <strong> 层数 </strong> 是从根到任意顶点的最大通路的长度，或称为高度。任一顶点的层数是从根到顶点的唯一通路的长度。    </p>
 <p>若跟树的每个内点都有不超过 $m$ 个子女，则称它为 $m$ 元树。若该树的每个内点都恰好有 $m$ 个子女，则称它为 <strong> 正则 </strong> $m$ <strong> 元树 </strong> 。把 $m=2$ 的正则 $m$ 元树称为<strong> 二叉树</strong>。</p>
 <blockquote>
 <p>注意，在计算机科学中，二叉树的定义是每个内点不超过 2 个子女的树，也即 2 元树。</p>
@@ -376,7 +376,7 @@
 <li>$l$  个树叶，则带有 $n=(ml-1)/(m-1)$ 个顶点和 $i=(l-1)/(m-1)$ 个内点。    </li>
 </ul>
 <p>若一颗高度为 $h$ 的 $m$ 元树的所有顶点都在 $h$ 层或 $h-1$ 层，则这棵树是平衡的。<br>在高度为 $h$ 的 $m$ 元树里至多有 $m^h$ 个树叶。      </p>
-<p>若一个高度为 $h$ 的 $m$ 元树带有 $l$ 个树叶，则 $h\ge\lceil log_ml\rceil$。 若这个 $m$ 元树势正则和平衡的，则 $h=\lceil log_ml\rceil$ 。</p>
+<p>若一个高度为 $h$ 的 $m$ 元树带有 $l$ 个树叶，则 $h\ge\lceil log_ml\rceil$。 若这个 $m$ 元树是正则和平衡的，则 $h=\lceil log_ml\rceil$ 。</p>
 
       
     </div>

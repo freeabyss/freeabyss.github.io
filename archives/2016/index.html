@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,107 +34,95 @@
 
 
 
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
   
   
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-
-  <meta name="keywords" content="abyss, blog, note" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Abyss's blog" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.0.1" />
 
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
 
 
-<meta name="description" content="苟利国家生死以，岂因祸福避趋之">
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="分享我的读书笔记和经验总结">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Abyss's blog">
-<meta property="og:url" content="http://blog.freeabyss.com/archives/2016/index.html">
-<meta property="og:site_name" content="Abyss's blog">
-<meta property="og:description" content="苟利国家生死以，岂因祸福避趋之">
+<meta property="og:title" content="Abyss&#39;s blog">
+<meta property="og:url" content="http://blog.freeabyss.science/archives/2016/index.html">
+<meta property="og:site_name" content="Abyss&#39;s blog">
+<meta property="og:description" content="分享我的读书笔记和经验总结">
+<meta property="article:author" content="Abyss">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Abyss's blog">
-<meta name="twitter:description" content="苟利国家生死以，岂因祸福避趋之">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"hide"},
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
+  <link rel="canonical" href="http://blog.freeabyss.science/archives/2016/"/>
 
-  <link rel="canonical" href="http://blog.freeabyss.com/archives/2016/"/>
 
-  <title> 归档 | Abyss's blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+
+  <title>归档 | Abyss's blog</title>
   
 
 
@@ -137,36 +132,42 @@
 
 
 
+<meta name="generator" content="Hexo 4.2.0"></head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Abyss's blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abyss's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java程序员</p>
+      
   </div>
-  <p class="site-subtitle">随笔</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -186,28 +187,8 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -216,22 +197,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            关于
+            分类
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            公益404
+            归档
           </a>
         </li>
       
@@ -243,6 +224,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -252,48 +235,584 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-    <span class="archive-page-counter">
-      
-      
-      
+      <span class="archive-page-counter">
         
-      
-      嗯..! 目前共计 27 篇日志。 继续努力。
-    </span>
-
-    
-
-      
-      
-      
-
-      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
+         
+        
+        OK! 目前共计 48 篇日志。 继续努力。
+      </span>
 
       
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2016">2016</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/08/Math-DM-07-集合/" itemprop="url">
+            <a class="post-title-link" href="/Math/Function-05-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97.html" itemprop="url">
+              
+                <span itemprop="name">二进制运算</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-22T22:52:26+08:00"
+              content="2016-12-22" >
+          12-22
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Math/Function-04-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0%E7%AE%97%E6%B3%95.html" itemprop="url">
+              
+                <span itemprop="name">最大公约数和最小公倍数算法</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-22T21:28:03+08:00"
+              content="2016-12-22" >
+          12-22
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Math/Function-03-%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E6%B3%95%E7%94%9F%E6%88%90%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0.html" itemprop="url">
+              
+                <span itemprop="name">线性同余法生成伪随机数</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-21T21:49:30+08:00"
+              content="2016-12-21" >
+          12-21
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/XML/Web-XML-Schema-04-%E6%8C%87%E7%A4%BA%E5%99%A8.html" itemprop="url">
+              
+                <span itemprop="name">XML Schema 指示器 04</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-17T14:35:57+08:00"
+              content="2016-12-17" >
+          12-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/XML/Web-XML-Schema-02-%E9%99%90%E5%AE%9A.html" itemprop="url">
+              
+                <span itemprop="name">XML Schema 限定 02</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-17T14:34:55+08:00"
+              content="2016-12-17" >
+          12-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/XML/Web-XML-Schema-05-%E5%A4%8D%E5%90%88%E5%85%83%E7%B4%A0.html" itemprop="url">
+              
+                <span itemprop="name">XML Schema 复合元素 05</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-17T14:33:09+08:00"
+              content="2016-12-17" >
+          12-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/XML/Web-XML-Schema-03-%E7%AE%80%E6%98%93%E5%85%83%E7%B4%A0%E5%8F%8A%E5%B1%9E%E6%80%A7.html" itemprop="url">
+              
+                <span itemprop="name">XML Schema 简易元素及属性 03</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-17T14:31:52+08:00"
+              content="2016-12-17" >
+          12-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/XML/Web-XML-Schema-01-%E7%AE%80%E8%A6%81.html" itemprop="url">
+              
+                <span itemprop="name">XML Schema 简要 01</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-16T22:41:28+08:00"
+              content="2016-12-16" >
+          12-16
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/XML/Web-XML%E8%AF%A6%E8%A7%A3.html" itemprop="url">
+              
+                <span itemprop="name">XML简要</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-15T21:44:31+08:00"
+              content="2016-12-15" >
+          12-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Math/Function-01-%E5%BA%B7%E6%89%98%E5%B0%94%E5%AF%B9%E8%A7%92%E5%8C%96%E8%AE%BA%E8%AF%81.html" itemprop="url">
+              
+                <span itemprop="name">康托尔对角化论证</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-15T20:47:43+08:00"
+              content="2016-12-15" >
+          12-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Math/Function-02-%E5%8F%96%E6%95%B4%E5%87%BD%E6%95%B0.html" itemprop="url">
+              
+                <span itemprop="name">取整函数</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-14T20:41:20+08:00"
+              content="2016-12-14" >
+          12-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Java/Java-Log4j-properties%E9%85%8D%E7%BD%AE%E8%A7%A3%E9%87%8A.html" itemprop="url">
+              
+                <span itemprop="name">Log4j.properties配置解释</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-13T20:32:41+08:00"
+              content="2016-12-13" >
+          12-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Java/Java-Java8%E4%B8%8B%E4%BD%BF%E7%94%A8wsdl2java%E5%91%BD%E4%BB%A4%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html" itemprop="url">
+              
+                <span itemprop="name">Java8下使用wsdl2java命令报错解决方案</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-13T20:23:40+08:00"
+              content="2016-12-13" >
+          12-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/shell/Linux-%E6%B8%85%E7%A9%BA%E6%88%96%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6.html" itemprop="url">
+              
+                <span itemprop="name">Linux 清空或删除文件</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+     
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-09T22:35:00+08:00"
+              content="2016-12-09" >
+          12-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Math/Math-DM-07-%E9%9B%86%E5%90%88.html" itemprop="url">
               
                 <span itemprop="name">Math-DM-07-集合</span>
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
+     
         <time class="post-time" itemprop="dateCreated"
               datetime="2016-12-08T12:37:07+08:00"
               content="2016-12-08" >
@@ -306,31 +825,32 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/04/Math-DM-06-证明导论/" itemprop="url">
+            <a class="post-title-link" href="/Math/Math-DM-06-%E8%AF%81%E6%98%8E%E5%AF%BC%E8%AE%BA.html" itemprop="url">
               
                 <span itemprop="name">Math-DM-06-证明导论</span>
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
+     
         <time class="post-time" itemprop="dateCreated"
               datetime="2016-12-04T10:44:13+08:00"
               content="2016-12-04" >
@@ -343,31 +863,32 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/03/Math-DM-05-推理规则/" itemprop="url">
+            <a class="post-title-link" href="/Math/Math-DM-05-%E6%8E%A8%E7%90%86%E8%A7%84%E5%88%99.html" itemprop="url">
               
                 <span itemprop="name">Math-DM-05-推理规则</span>
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
+     
         <time class="post-time" itemprop="dateCreated"
               datetime="2016-12-03T17:55:52+08:00"
               content="2016-12-03" >
@@ -380,31 +901,32 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/03/Math-DM-04-嵌套量词/" itemprop="url">
+            <a class="post-title-link" href="/Math/Math-DM-04-%E5%B5%8C%E5%A5%97%E9%87%8F%E8%AF%8D.html" itemprop="url">
               
                 <span itemprop="name">Math-DM-04-嵌套量词</span>
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
+     
         <time class="post-time" itemprop="dateCreated"
               datetime="2016-12-03T10:51:05+08:00"
               content="2016-12-03" >
@@ -417,31 +939,32 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/11/30/Math-DM-03-谓词逻辑/" itemprop="url">
+            <a class="post-title-link" href="/Math/Math-DM-03-%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91.html" itemprop="url">
               
                 <span itemprop="name">Math-DM-03-谓词逻辑</span>
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
+     
         <time class="post-time" itemprop="dateCreated"
               datetime="2016-11-30T21:45:35+08:00"
               content="2016-11-30" >
@@ -454,31 +977,32 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/11/26/Math-DM-02-逻辑等价/" itemprop="url">
+            <a class="post-title-link" href="/Math/Math-DM-02-%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7.html" itemprop="url">
               
                 <span itemprop="name">Math-DM-02-逻辑等价</span>
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
+     
         <time class="post-time" itemprop="dateCreated"
               datetime="2016-11-26T16:58:58+08:00"
               content="2016-11-26" >
@@ -491,531 +1015,17 @@
 
 
 
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/26/Math-DM-01-基本逻辑/" itemprop="url">
-              
-                <span itemprop="name">Math-DM-01-基本逻辑</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-26T16:33:43+08:00"
-              content="2016-11-26" >
-          11-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/26/Application/" itemprop="url">
-              
-                <span itemprop="name">软件推荐</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-26T14:56:00+08:00"
-              content="2016-11-26" >
-          11-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/05/Math-算法-整数－矩阵/" itemprop="url">
-              
-                <span itemprop="name">算法-整数－矩阵</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-05T10:36:08+08:00"
-              content="2016-10-05" >
-          10-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/02/Math-集合-函数-数列/" itemprop="url">
-              
-                <span itemprop="name">集合-函数-数列</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-02T22:32:10+08:00"
-              content="2016-10-02" >
-          10-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/13/Sublime-Text之OmniMarkupPreviewer/" itemprop="url">
-              
-                <span itemprop="name">Sublime Text之OmniMarkupPreviewer</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-13T21:37:44+08:00"
-              content="2016-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/13/My-Sublime-Text-Setting/" itemprop="url">
-              
-                <span itemprop="name">My Sublime Text Setting</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-13T21:30:25+08:00"
-              content="2016-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/13/Sublime-Text之Evernote/" itemprop="url">
-              
-                <span itemprop="name">Sublime Text之Evernote</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-13T21:27:26+08:00"
-              content="2016-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/13/Python资料收集/" itemprop="url">
-              
-                <span itemprop="name">Python资料收集</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-13T21:18:05+08:00"
-              content="2016-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/12/设计模式概述/" itemprop="url">
-              
-                <span itemprop="name">设计模式概述</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-12T23:21:32+08:00"
-              content="2016-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/11/MathJax-tutorial/" itemprop="url">
-              
-                <span itemprop="name">MathJax tutorial</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-11T20:04:07+08:00"
-              content="2016-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/11/Math-直线与方程/" itemprop="url">
-              
-                <span itemprop="name">直线与方程</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-11T19:56:42+08:00"
-              content="2016-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/10/Math-向量空间－《线性代数及应用》/" itemprop="url">
-              
-                <span itemprop="name">向量空间－《线性代数及应用》</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-10T20:02:45+08:00"
-              content="2016-09-10" >
-          09-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
       
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/08/Math-行列式－《线性代数及应用》/" itemprop="url">
-              
-                <span itemprop="name">行列式－《线性代数及应用》</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-08T20:44:04+08:00"
-              content="2016-09-08" >
-          09-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/04/Math-矩阵代数－《线性代数及应用》/" itemprop="url">
-              
-                <span itemprop="name">矩阵代数－《线性代数及应用》</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-04T16:27:24+08:00"
-              content="2016-09-04" >
-          09-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
 
-  </section>
+    </div>
+  </div>
+  
+  
+  
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/page/2/">&gt;</a>
   </nav>
 
 
@@ -1040,88 +1050,78 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpeg"
-               alt="Abyss" />
-          <p class="site-author-name" itemprop="name">Abyss</p>
-          <p class="site-description motion-element" itemprop="description">苟利国家生死以，岂因祸福避趋之</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">27</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="Abyss" />
+            
+              <p class="site-author-name" itemprop="name">Abyss</p>
+              <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
           </div>
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
+          <nav class="site-state motion-element">
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">24</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/freeabyss" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
-              </span>
+              </div>
             
-              <span class="links-of-author-item">
-                <a href="http://blog.csdn.net/abyss521" target="_blank" title="CSDN">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  CSDN
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
-              </span>
+              </div>
             
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
           
+
+          
+
+          
+          
+
+          
+          
+
+          
+
         </div>
-
-        
-        
-
-        
-        
-
       </section>
+
+      
 
       
 
@@ -1135,36 +1135,50 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Abyss</span>
+
+  
 </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
 
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
@@ -1187,56 +1201,71 @@
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
 
   
   
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -1261,7 +1290,8 @@
 
   
     
-    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
     <script src="/js/src/hook-duoshuo.js"></script>
   
 
@@ -1270,136 +1300,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
   
   
 
   
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("L4IfM4XyHhsJ9gGw14b8NeaF-gzGzoHsz", "496gaC9t2IQ9Kw3iPzPVSY3T");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-
 
   
 

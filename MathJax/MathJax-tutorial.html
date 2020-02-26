@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MathJax,markdown," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="字符希腊字母   $\alpha$ $\beta$ $\gamma$ $\delta$ $\epsilon$ $\zeta$ $\eta$ $\theta$    \alpha \beta \gamma \delta \epsilon \zeta \eta \theta   $\iota$ $\kappa$ $\lambda$ $\mu$ $\nu$ $\xi$ $\omicron$ $\pi$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MathJax tutorial">
+<meta property="og:url" content="http://blog.freeabyss.science/MathJax/MathJax-tutorial.html">
+<meta property="og:site_name" content="Abyss&#39;s blog">
+<meta property="og:description" content="字符希腊字母   $\alpha$ $\beta$ $\gamma$ $\delta$ $\epsilon$ $\zeta$ $\eta$ $\theta$    \alpha \beta \gamma \delta \epsilon \zeta \eta \theta   $\iota$ $\kappa$ $\lambda$ $\mu$ $\nu$ $\xi$ $\omicron$ $\pi$">
+<meta property="article:published_time" content="2016-09-11T12:04:07.000Z">
+<meta property="article:modified_time" content="2020-02-26T14:51:35.721Z">
+<meta property="article:author" content="Abyss">
+<meta property="article:tag" content="MathJax">
+<meta property="article:tag" content="markdown">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.science/MathJax/MathJax-tutorial.html"/>
+
+
+
+
+
+  <title>MathJax tutorial | Abyss's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abyss's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.freeabyss.science/MathJax/MathJax-tutorial.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abyss">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abyss's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MathJax tutorial</h1>
+        
+        
+        <div class="post-meta">
+        
+         
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-11T20:04:07+08:00">
+                2016-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MathJax/" itemprop="url" rel="index">
+                    <span itemprop="name">MathJax</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/MathJax/MathJax-tutorial.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="MathJax/MathJax-tutorial.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><table>
+<thead>
+<tr>
+<th align="center">$\alpha$</th>
+<th align="center">$\beta$</th>
+<th align="center">$\gamma$</th>
+<th align="center">$\delta$</th>
+<th align="center">$\epsilon$</th>
+<th align="center">$\zeta$</th>
+<th align="center">$\eta$</th>
+<th align="center">$\theta$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\alpha</td>
+<td align="center">\beta</td>
+<td align="center">\gamma</td>
+<td align="center">\delta</td>
+<td align="center">\epsilon</td>
+<td align="center">\zeta</td>
+<td align="center">\eta</td>
+<td align="center">\theta</td>
+</tr>
+<tr>
+<td align="center">$\iota$</td>
+<td align="center">$\kappa$</td>
+<td align="center">$\lambda$</td>
+<td align="center">$\mu$</td>
+<td align="center">$\nu$</td>
+<td align="center">$\xi$</td>
+<td align="center">$\omicron$</td>
+<td align="center">$\pi$</td>
+</tr>
+<tr>
+<td align="center">\iota</td>
+<td align="center">\kappa</td>
+<td align="center">\lambda</td>
+<td align="center">\mu</td>
+<td align="center">\nu</td>
+<td align="center">\xi</td>
+<td align="center">\omicron</td>
+<td align="center">\pi</td>
+</tr>
+<tr>
+<td align="center">$\rho$</td>
+<td align="center">$\sigma$</td>
+<td align="center">$\tau$</td>
+<td align="center">$\upsilon$</td>
+<td align="center">$\phi$</td>
+<td align="center">$\chi$</td>
+<td align="center">$\psi$</td>
+<td align="center">$\omega$</td>
+</tr>
+<tr>
+<td align="center">\rho</td>
+<td align="center">\sigma</td>
+<td align="center">\tau</td>
+<td align="center">\upsilon</td>
+<td align="center">\phi</td>
+<td align="center">\chi</td>
+<td align="center">\psi</td>
+<td align="center">\omega</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\Gamma$</th>
+<th align="center">$\Delta$</th>
+<th align="center">$\Theta$</th>
+<th align="center">$\Lambda$</th>
+<th align="center">$\Xi$</th>
+<th align="center">$\Pi$</th>
+<th align="center">$\Phi$</th>
+<th align="center">$\Psi$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\Gamma</td>
+<td align="center">\Delta</td>
+<td align="center">\Theta</td>
+<td align="center">\Lambda</td>
+<td align="center">\Xi</td>
+<td align="center">\Pi</td>
+<td align="center">\Phi</td>
+<td align="center">\Psi</td>
+</tr>
+<tr>
+<td align="center">$\Sigma$</td>
+<td align="center">$\Upsilon$</td>
+<td align="center">$\Omega$</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">\Sigma</td>
+<td align="center">\Upsilon</td>
+<td align="center">\Omega</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><table>
+<thead>
+<tr>
+<th align="center">$\lt$</th>
+<th align="center">$\gt$</th>
+<th align="center">$\le$</th>
+<th align="center">$\ge$</th>
+<th align="center">$\neq$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\lt</td>
+<td align="center">\gt</td>
+<td align="center">\le</td>
+<td align="center">\ge</td>
+<td align="center">\neq</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\times$</th>
+<th align="center">$\div$</th>
+<th align="center">$\pm$</th>
+<th align="center">$\mp$</th>
+<th align="center">$\cdot$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\times</td>
+<td align="center">\div</td>
+<td align="center">\pm</td>
+<td align="center">\mp</td>
+<td align="center">\cdot</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\cup$</th>
+<th align="center">$\cap$</th>
+<th align="center">$\setminus$</th>
+<th align="center">$\subset$</th>
+<th align="center">$\subseteq$</th>
+<th align="center">$\subsetneq$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\cup</td>
+<td align="center">\cap</td>
+<td align="center">\setminus</td>
+<td align="center">\subset</td>
+<td align="center">\subseteq</td>
+<td align="center">\subsetneq</td>
+</tr>
+<tr>
+<td align="center">$\supset$</td>
+<td align="center">$\in$</td>
+<td align="center">$\notin$</td>
+<td align="center">$\emptyset$</td>
+<td align="center">$\varnothing$</td>
+<td align="center">$\mid$</td>
+</tr>
+<tr>
+<td align="center">\supset</td>
+<td align="center">\in</td>
+<td align="center">\notin</td>
+<td align="center">\emptyset</td>
+<td align="center">\varnothing</td>
+<td align="center">\mid</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\to$</th>
+<th align="center">$\rightarrow$</th>
+<th align="center">$\leftarrow$</th>
+<th align="center">$\Rightarrow$</th>
+<th align="center">$\Leftarrow$</th>
+<th align="center">$\mapsto$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\to</td>
+<td align="center">\rightarrow</td>
+<td align="center">\leftarrow</td>
+<td align="center">\Rightarrow</td>
+<td align="center">\Leftarrow</td>
+<td align="center">\mapsto</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\land$</th>
+<th align="center">$\lor$</th>
+<th align="center">$\lnot$</th>
+<th align="center">$\forall$</th>
+<th align="center">$\exists$</th>
+<th align="center">$\top$</th>
+<th align="center">$\bot$</th>
+<th align="center">$\vdash$</th>
+<th align="center">$\vDash$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\land</td>
+<td align="center">\lor</td>
+<td align="center">\lnot</td>
+<td align="center">\forall</td>
+<td align="center">\exists</td>
+<td align="center">\top</td>
+<td align="center">\bot</td>
+<td align="center">\vdash</td>
+<td align="center">\vDash</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\star$</th>
+<th align="center">$\ast$</th>
+<th align="center">$\oplus$</th>
+<th align="center">$\circ$</th>
+<th align="center">$\bullet$</th>
+<th align="center">$\odot$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\star</td>
+<td align="center">\ast</td>
+<td align="center">\oplus</td>
+<td align="center">\circ</td>
+<td align="center">\bullet</td>
+<td align="center">\odot</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\approx$</th>
+<th align="center">$\sim$</th>
+<th align="center">$\simeq$</th>
+<th align="center">$\cong$</th>
+<th align="center">$\equiv$</th>
+<th align="center">$\prec$</th>
+<th align="center">$\lhd$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\approx</td>
+<td align="center">\sim</td>
+<td align="center">\simeq</td>
+<td align="center">\cong</td>
+<td align="center">\equiv</td>
+<td align="center">\prec</td>
+<td align="center">\lhd</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\infty$</th>
+<th align="center">$\aleph_0$</th>
+<th align="center">$\nabla$</th>
+<th align="center">$\partial$</th>
+<th align="center">$\Im$</th>
+<th align="center">$\Re$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\infty</td>
+<td align="center">\aleph_0</td>
+<td align="center">\nabla</td>
+<td align="center">\partial</td>
+<td align="center">\Im</td>
+<td align="center">\Re</td>
+</tr>
+</tbody></table>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>|$\ldots$|$\ell$|$\epsilon$|$\varepsilon$|$\varphi$|<br>|:——:|:—-:|:——–:|:———–:|:——-:|<br>|\ldots|\ell|\epsilon|\varepsilon|\varphi|<br>=======<br>|$\ldots$|$\ell$|$\epsilon$|$\varepsilon$|$\varphi$|$\lceil x \rceil$|$\lfloor x \rfloor$|<br>|:——:|:—-:|:——–:|:———–:|:——-:|:—————-|:–|<br>|\ldots|\ell|\epsilon|\varepsilon|\varphi|\lceil x \rceil|\lfloor x \rfloor|</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><ul>
+<li>blackboard bold: \mathbb or\Bbb $\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>boldface: \mathbf $\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>typewriter: \mathtt $\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>roman font: \mathrm $\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>sans-serif font: \mathsf $\mathsf {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>calligraphic: \mathcal $\mathcal {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>script:\mathscr $\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+<li>Fraktur:\mathfrak $\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz}$</li>
+</ul>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p><code>A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i</code><br>$$A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i$$<br><code>A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i</code><br>$$A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i$$<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">=======</span><br><span class="line"></span><br><span class="line">```math</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt;&gt;&gt; master</span></span><br><span class="line">\begin&#123;align&#125;</span><br><span class="line">\overline &#123;A\cap B&#125; &amp;= \&#123;x\mid x\notin A\cap B\&#125; \\</span><br><span class="line">&amp;   =\&#123;x\mid \lnot(x\in(A\cap B))\&#125; \\</span><br><span class="line">&amp;   =\&#123;x\mid \lnot(x\in A\land x\in B)\&#125; \\</span><br><span class="line">&amp;   =\&#123;x\mid \lnot (x\in A)\lor \lnot(x\in B)\&#125;\\</span><br><span class="line">&amp;   =\&#123;x\mid x\notin A\lor x\notin B\&#125;\\</span><br><span class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\lor x\in \overline&#123;B&#125;\&#125; \\</span><br><span class="line">&amp;   =\&#123;x\mid x\in \overline&#123;A&#125;\cup\overline&#123;B&#125;\&#125; \\</span><br><span class="line">&amp;   =\overline&#123;A&#125;\cup\overline&#123;B&#125;</span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure>
+<p>$$ \begin{align}<br>\overline {A\cap B} &amp;= {x\mid x\notin A\cap B} \<br>&amp;   ={x\mid \lnot(x\in(A\cap B))} \<br>&amp;   ={x\mid \lnot(x\in A\land x\in B)} \<br>&amp;   ={x\mid \lnot (x\in A)\lor \lnot(x\in B)}\<br>&amp;   ={x\mid x\notin A\lor x\notin B}\<br>&amp;   ={x\mid x\in \overline{A}\lor x\in \overline{B}} \<br>&amp;   ={x\mid x\in \overline{A}\cup\overline{B}} \<br>&amp;   =\overline{A}\cup\overline{B}<br>\end{align}<br>$$</p>
+<h1 id="lt-lt-lt-lt-lt-lt-lt-HEAD"><a href="#lt-lt-lt-lt-lt-lt-lt-HEAD" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f(n) &#x3D;</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">\frac&#123;n&#125;&#123;2&#125;,  &amp; \text&#123;if $n$ is even&#125; \\</span><br><span class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</span><br><span class="line">\end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
+<p>$$<br>f(n) =<br>\begin{cases}<br>\frac{n}{2},  &amp; \text{if $n$ is even} \<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(x+y)^n&#x3D;\sum_&#123;j&#x3D;0&#125;^n\left(\begin&#123;array&#125;&#123;c&#125;n \\r\end&#123;array&#125;\right)x^&#123;n-1&#125;y^i</span><br></pre></td></tr></table></figure>
+<p>$$(x+y)^n=\sum_{j=0}^n\left(\begin{array}{c}n \r\end{array}\right)x^{n-1}y^i$$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\left(</span><br><span class="line">    \begin&#123;array&#125;&#123;c&#125;</span><br><span class="line">    n \\</span><br><span class="line">    r</span><br><span class="line">    \end&#123;array&#125;</span><br><span class="line">\right)</span><br></pre></td></tr></table></figure>
+<p>$$\left(\begin{array}{c}n \r\end{array}\right)$$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f(x)&#x3D;\begin&#123;cases&#125;x^2+5\qquad x&lt;0\\</span><br><span class="line">x^3+5x+6\qquad x&gt;0 \end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
+<p>$$f(x)=\begin{cases}x^2+5\qquad x&lt;0\<br>x^3+5x+6\qquad x&gt;0 \end{cases}$$</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master<br><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">更多</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MathJax/" rel="tag"># MathJax</a>
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JavaScript/JavaScript%E4%B9%8B%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6.html" rel="next" title="JavaScript之表达式和运算符">
+                <i class="fa fa-chevron-left"></i> JavaScript之表达式和运算符
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0.html" rel="prev" title="设计模式概述">
+                设计模式概述 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="MathJax/MathJax-tutorial.html"
+           data-title="MathJax tutorial" data-url="http://blog.freeabyss.science/MathJax/MathJax-tutorial.html">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="Abyss" />
+            
+              <p class="site-author-name" itemprop="name">Abyss</p>
+              <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符"><span class="nav-number">1.</span> <span class="nav-text">字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#希腊字母"><span class="nav-number">1.1.</span> <span class="nav-text">希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符号"><span class="nav-number">1.2.</span> <span class="nav-text">运算符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体"><span class="nav-number">1.3.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">1.4.</span> <span class="nav-text">实例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-lt-lt-lt-lt-lt-HEAD"><span class="nav-number"></span> <span class="nav-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

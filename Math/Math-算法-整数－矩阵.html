@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="算法常用算法搜索算法 线性搜索或顺序搜索 二分搜索：用于搜索排序后的集合  排序 冒泡排序 插入排序  贪心算法每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列 函数的增长$\mathrm O$记号用于描述$g(x)$的上限，$\Omega$用于描述$g(x)$的下限，$\Theta$用于描述$g(x)$的上下限。  令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法-整数－矩阵">
+<meta property="og:url" content="http://blog.freeabyss.science/Math/Math-%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%EF%BC%8D%E7%9F%A9%E9%98%B5.html">
+<meta property="og:site_name" content="Abyss&#39;s blog">
+<meta property="og:description" content="算法常用算法搜索算法 线性搜索或顺序搜索 二分搜索：用于搜索排序后的集合  排序 冒泡排序 插入排序  贪心算法每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列 函数的增长$\mathrm O$记号用于描述$g(x)$的上限，$\Omega$用于描述$g(x)$的下限，$\Theta$用于描述$g(x)$的上下限。  令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常">
+<meta property="article:published_time" content="2016-10-05T02:36:08.000Z">
+<meta property="article:modified_time" content="2020-02-26T14:51:27.220Z">
+<meta property="article:author" content="Abyss">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="Discrete Mathematics">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.science/Math/Math-算法-整数－矩阵.html"/>
+
+
+
+
+
+  <title>算法-整数－矩阵 | Abyss's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abyss's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.freeabyss.science/Math/Math-%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%EF%BC%8D%E7%9F%A9%E9%98%B5.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abyss">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abyss's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">算法-整数－矩阵</h1>
+        
+        
+        <div class="post-meta">
+        
+         
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-05T10:36:08+08:00">
+                2016-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Math/Math-%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%EF%BC%8D%E7%9F%A9%E9%98%B5.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-算法-整数－矩阵.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="常用算法"><a href="#常用算法" class="headerlink" title="常用算法"></a>常用算法</h3><h4 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h4><ul>
+<li>线性搜索或顺序搜索</li>
+<li>二分搜索：用于搜索排序后的集合</li>
+</ul>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><ul>
+<li>冒泡排序</li>
+<li>插入排序</li>
+</ul>
+<h4 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h4><p>每一步都选择最好的选项，而不考虑可能导致最优解的所有步骤序列</p>
+<h3 id="函数的增长"><a href="#函数的增长" class="headerlink" title="函数的增长"></a>函数的增长</h3><p>$\mathrm O$记号用于描述$g(x)$的上限，$\Omega$用于描述$g(x)$的下限，$\Theta$用于描述$g(x)$的上下限。</p>
+<ul>
+<li>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果存在正常数$C$和$k$，使得只要$x&gt;k$，就有<br>$$<br>  \mid f(x)\mid \le C\mid g(x)\mid<br>$$我们就说$f(x)$是$\mathrm O(g(x))$    </li>
+<li>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果有常数$C$和$k$，使得只要$x&gt;k$，就有<br>$$<br>  \mid f(x)\mid\ge C\mid g(x)\mid<br>$$</li>
+<li>令$f$和$g$为从整数集合或实数集合到实数集合的函数，如果$f(x)$是$\mathrm O(g(x))$及$f(x)$是$\Omega (g(x))$，就说$f(x)$是$\Theta (g(x))$。</li>
+</ul>
+<h4 id="函数的组合增长"><a href="#函数的组合增长" class="headerlink" title="函数的组合增长"></a>函数的组合增长</h4><ul>
+<li>假定$f_1(x)$是$\mathrm O(g_1(x))$，$f_2(x)$是$\mathrm O(g_2(x))$，那么$(f_1+f_2)(x)$是<br>$$<br>  \mathrm O(max(\mid g_1(x)\mid , \mid g_2(x)\mid))<br>$$</li>
+<li>假定$f_1(x)$是$\mathrm O(g_1(x))$，$f_2(x)$是$\mathrm O(g_2(x))$，那么$(f_1 f_2)(x)$是$\mathrm O(g_1(x)g_2(x))$</li>
+</ul>
+<h3 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h3><table>
+<thead>
+<tr>
+<th align="left">复杂度</th>
+<th align="left">术语</th>
+<th align="left">复杂度</th>
+<th align="left">术语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$\Theta (1)$</td>
+<td align="left">常数复杂度</td>
+<td align="left">$\Theta (n^b)$</td>
+<td align="left">多项式复杂度</td>
+</tr>
+<tr>
+<td align="left">$\Theta (logn)$</td>
+<td align="left">对数复杂度</td>
+<td align="left">$\Theta (b^n),b&gt;1$</td>
+<td align="left">指数复杂度</td>
+</tr>
+<tr>
+<td align="left">$\Theta (n)$</td>
+<td align="left">线性复杂度</td>
+<td align="left">$\Theta (n!)$</td>
+<td align="left">阶乘复杂度</td>
+</tr>
+<tr>
+<td align="left">$\Theta (nlogn)$</td>
+<td align="left">$nlogn$复杂度</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>一般来讲，能用多项式复杂度的算法解决的问题都是易解的，反之是难解的。   </li>
+<li>能用多项式时间验证解的问题属于NP类，易解的问题属于P类。</li>
+<li>NP完全问题，这类问题的性质是，只要其中任何一个问题能用一个多项式时间最坏情形算法来解答，那么所有这些问题都能用多项式时间最坏情形算法解答。</li>
+</ul>
+<h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><ul>
+<li>如果$a$和$b$是整数，$a\neq 0$，若有整数$c$使$b=ac$，就说$a$整除$b$。在$a$整除$b$时，$a$是$b$的一个因子，$b$是$a$的倍数，符号$a\mid b$表示$a$整除$b$。当$a$不能整除$b$时写成$a∤b$</li>
+<li>$a\mid b$也可以表示成$\exists c(ac=b)$，论域是整个整数集合。</li>
+<li>令$a$，$b$，$c$为整数。则<ul>
+<li>若$a\mid b$和$a\mid c$，则$a\mid (b+c)$；</li>
+<li>若$a\mid b$和$a\mid c$，则$a\mid mb+nc$，其中$m$和$n$为整数；</li>
+<li>若$a\mid b$，那么对所有整数$c$都有$a\mid bc$；</li>
+<li>若$a\mid b$，$b\mid c$，则$a\mid c$；</li>
+</ul>
+</li>
+</ul>
+<h3 id="同余"><a href="#同余" class="headerlink" title="同余"></a>同余</h3><ul>
+<li>带余除法：令$a$为整数，$d$为正整数，有唯一的整数$q$和$r$，并且$0\le rlt d$，满足$a=dq+r$。</li>
+<li>若$a$和$b$为整数而$m$为正整数，如果$m$整除$a-b$，就说$a$模m同余$b$。用$a\equiv b\pmod m$。也就是说$a\equiv b\pmod m$当且仅当$a \mod m=b\mod m$</li>
+<li>令$m$为正整数，整数$a$和$b$模$m$同余的充分必要条件是存在整数$k$，使$a=b+km$</li>
+<li>整数$a$模$m$所有整数同余的集合称为$a$模$m$的同余类</li>
+<li>令$m$为正整数。若$a\equiv b\pmod m$，$c\equiv d\pmod m$，那么<br>$$<br>  a+c\equiv b+d\pmod m\<br>  ac\equiv bd\pmod m<br>$$</li>
+<li>令$m$是正整数，$a$和$b$是整数，则有<br>$$<br>  (a+b)\mod m = ((a\mod m)+(b\mod m))\mod m\<br>  ab\mod m = ((a\mod m)(b\mod m))mod m<br>$$</li>
+<li>根据$\mod m$和关于模$m$同余的定义，可得$a\equiv (a\mod m)(\mod m)$，并且$b\equiv (b\mod m)(\mod m)$，因此<br>$$<br>  a+b\equiv (a\mod m)+(b\mod m)(\mod m)\<br>  ab\equiv (a\mod m)(b\mod m)(\mod m)<br>$$</li>
+</ul>
+<h3 id="同余应用"><a href="#同余应用" class="headerlink" title="同余应用"></a>同余应用</h3><ul>
+<li>散列函数</li>
+<li>伪随机数</li>
+</ul>
+<blockquote>
+<p>最常用的产生伪随机数的过程称为线性同余。选择4个数：模数$m$，乘数$a$，增量$c$和种子$x_0$，使得$2\le a\lt m$，$0\le c\lt m$，$0\le x_0 m$。生成伪随机序列${x_n}$，使得对所有$n$，$0\le x_n \lt m$。生成的办法是逐次同余：<br>$$<br>x_{n+1} = (ax_n +c)\mod m<br>$$</p>
+</blockquote>
+<ul>
+<li>密码学</li>
+</ul>
+<blockquote>
+<p>凯撒密码：<br>$$<br>  f(p)=(p+k)\mod 26\<br>  f(p)=(ap+b)\mod 26<br>$$</p>
+</blockquote>
+<h3 id="素数和最大公约数"><a href="#素数和最大公约数" class="headerlink" title="素数和最大公约数"></a>素数和最大公约数</h3><ul>
+<li>每个大于1的正整数都可以唯一写为素数的乘积。对大整数进行素因子分解所需的时限在密码学中起着重要的作用。</li>
+<li>如果$n$是个合数，那么$n$必有小于或等于$\sqrt n$的一个素因子。</li>
+<li>梅森素数，是形如$2^p-1$这样的整数。目前已知最大的素数都是这种形式，可用卢卡斯－莱莫尔(Lucas-Lehmer)检验的方法判断$2^p-1$是否为素数。</li>
+<li>素数定理：当$x$无限增长时，不超过$x$的素数个数与$x/Inx$之比趋于1。</li>
+<li>令$a$和$b$是不全为$0$的两个整数。能使$d\mid a$和$d\mid b$的最大整数$d$称为$a$和$b$的最大公约数。$a$和$b$的_最大公约数_用$gcd(a, b)$表示。</li>
+<li>如果整数$a$和$b$的最大公约数是$1$，就说它们是互素的。</li>
+<li>整数$a_1,a_2,\cdots,a_n$是两两互素的，如果只要$1\le i\lt j\le n$，就有$gcd(a_i, b_j)=1$</li>
+<li>正整数$a$和$b$的_最小公倍数_是能被$a$和$b$整除的最小正整数。$a$和$b$的最小公倍数用$lcm(a, b)$表示。</li>
+<li>令$a$和$b$为正整数，则$ab = gcd(a, b)\cdot lcm(a, b)$</li>
+</ul>
+<h4 id="求最大公约数算法"><a href="#求最大公约数算法" class="headerlink" title="求最大公约数算法"></a>求最大公约数算法</h4><ul>
+<li>假定两个不全为$0$的整数$a$和$b$的素因子分解为：<br>$$<br>a=p_1^{a_1}p_2^{a_2}\dots p_n^{a_n} \<br>b=p_1^{b_1}p_2^{b_2}\dots p_n^{b_n}<br>$$<br>每个整数都是非负整数，而且出现在$a$和$b$分解中的所有素数都包含在两个分解之中，必要时以0为指数出现。于是$gcd(a, b)$由下面的公式给出<br>$$<br>gcd(a, b) = p_1^{min(a_1,b_1)}p_2^{min(a_2, b_2)}\dots p_n^{min(a_n,b_n)}<br>$$<br>例如，求$120$和$500$的最大公约数：<br>$$<br>  120 = 2^3\cdot 3\cdot 5 , 500 = 2^2\cdot 5^3\<br>  gcd(120, 500) = 2^{min(3,2)}\cdot 3^{min(1,0)}\cdot 5^{min(1,3)}\<br>  = 2^3\cdot 3^0\cdot 5^1 = 20<br>$$</li>
+<li>另一个求最大公约数的算法就是欧几里得算法。</li>
+<li>令$a=bq+r$，其中$a,b,c,q$均为整数，则$gcd(a, b)＝gcd(b,r)$。</li>
+</ul>
+<h4 id="求最小公倍数算法"><a href="#求最小公倍数算法" class="headerlink" title="求最小公倍数算法"></a>求最小公倍数算法</h4><p>同最大公约数算法类似，最小公倍数的由以下公式给出：<br>$$<br>lcm(a, b) = p_1^{max(a_1,b_1)}p_2^{max(a_2, b_2)}\dots p_n^{max(a_n,b_n)}<br>$$</p>
+<h3 id="整数和进制"><a href="#整数和进制" class="headerlink" title="整数和进制"></a>整数和进制</h3><p>令$b$为不等于$1$的正整数，那么如果$n$是个正整数，就可以唯一地表示为下面的形式：<br>$$<br>    n = a_kb^k+a_{k-1}b^{k-1}+\cdots +a_1b+a_0<br>$$<br>其中$k$是非负整数，$a_0,a_1,\cdots,a_k$是小于$b$的非负整数，$a_k\neq 0$。该形式被称为$n$的$b$进制展开。</p>
+<h3 id="数论应用"><a href="#数论应用" class="headerlink" title="数论应用"></a>数论应用</h3><p>*$a$和$b$为正整数，则存在整数$s$和$t$，使得为$gcd(a,b)=sa+tb$。</p>
+<ul>
+<li>如果$a,b,c$为正整数，使得$gcd(a, b)=1$且$a\mid bc$，那么$a\mid c$。</li>
+<li>如果$p$是素数，且$p\mid a_1a_2\cdots a_n$，其中$a_j$为整数，则对某个$i$，$p\mid a_i$</li>
+<li>令$m$为正整数，$a,b,c$为整数，如果$ac\equiv bc\pmod m$且$gcd(c, m)=1$，那么$a\equiv b\pmod m$</li>
+<li></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag"># Math</a>
+          
+            <a href="/tags/note/" rel="tag"># note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag"># Discrete Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/Math-%E9%9B%86%E5%90%88-%E5%87%BD%E6%95%B0-%E6%95%B0%E5%88%97.html" rel="next" title="集合-函数-数列">
+                <i class="fa fa-chevron-left"></i> 集合-函数-数列
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/JavaScript/Application.html" rel="prev" title="软件推荐">
+                软件推荐 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="Math/Math-算法-整数－矩阵.html"
+           data-title="算法-整数－矩阵" data-url="http://blog.freeabyss.science/Math/Math-%E7%AE%97%E6%B3%95-%E6%95%B4%E6%95%B0%EF%BC%8D%E7%9F%A9%E9%98%B5.html">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="Abyss" />
+            
+              <p class="site-author-name" itemprop="name">Abyss</p>
+              <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用算法"><span class="nav-number">1.1.</span> <span class="nav-text">常用算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索算法"><span class="nav-number">1.1.1.</span> <span class="nav-text">搜索算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.1.2.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贪心算法"><span class="nav-number">1.1.3.</span> <span class="nav-text">贪心算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的增长"><span class="nav-number">1.2.</span> <span class="nav-text">函数的增长</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的组合增长"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数的组合增长</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法复杂度"><span class="nav-number">1.3.</span> <span class="nav-text">算法复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整数"><span class="nav-number">2.</span> <span class="nav-text">整数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同余"><span class="nav-number">2.1.</span> <span class="nav-text">同余</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同余应用"><span class="nav-number">2.2.</span> <span class="nav-text">同余应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#素数和最大公约数"><span class="nav-number">2.3.</span> <span class="nav-text">素数和最大公约数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#求最大公约数算法"><span class="nav-number">2.3.1.</span> <span class="nav-text">求最大公约数算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求最小公倍数算法"><span class="nav-number">2.3.2.</span> <span class="nav-text">求最小公倍数算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数和进制"><span class="nav-number">2.4.</span> <span class="nav-text">整数和进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数论应用"><span class="nav-number">2.5.</span> <span class="nav-text">数论应用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

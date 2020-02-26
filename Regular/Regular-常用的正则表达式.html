@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Regular," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="匹配HTML标签1&lt;\\&#x2F;?\\w+((\\s+\\w+(\\s*&#x3D;\\s*(?:&quot;.*?&quot;|&#39;.*?&#39;|[\\^&#39;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\&#x2F;?&gt;  抽取注释1&lt;!--(.*?)--&gt; 查找 CSS 属性1^\\s*[a-zA-Z\\-]+\\s*[:]&amp;#123;1&amp;#125;\\s[a-zA-Z0-9\\s.#]+[;]&amp;#123;1&amp;#1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的正则表达式">
+<meta property="og:url" content="http://blog.freeabyss.science/Regular/Regular-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html">
+<meta property="og:site_name" content="Abyss&#39;s blog">
+<meta property="og:description" content="匹配HTML标签1&lt;\\&#x2F;?\\w+((\\s+\\w+(\\s*&#x3D;\\s*(?:&quot;.*?&quot;|&#39;.*?&#39;|[\\^&#39;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\&#x2F;?&gt;  抽取注释1&lt;!--(.*?)--&gt; 查找 CSS 属性1^\\s*[a-zA-Z\\-]+\\s*[:]&amp;#123;1&amp;#125;\\s[a-zA-Z0-9\\s.#]+[;]&amp;#123;1&amp;#1">
+<meta property="article:published_time" content="2017-02-26T07:28:46.000Z">
+<meta property="article:modified_time" content="2020-02-26T14:51:35.552Z">
+<meta property="article:author" content="Abyss">
+<meta property="article:tag" content="Regular">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.science/Regular/Regular-常用的正则表达式.html"/>
+
+
+
+
+
+  <title>常用的正则表达式 | Abyss's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abyss's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.freeabyss.science/Regular/Regular-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abyss">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abyss's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用的正则表达式</h1>
+        
+        
+        <div class="post-meta">
+        
+         
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T15:28:46+08:00">
+                2017-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Regular/" itemprop="url" rel="index">
+                    <span itemprop="name">Regular</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Regular/Regular-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Regular/Regular-常用的正则表达式.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="匹配HTML标签"><a href="#匹配HTML标签" class="headerlink" title="匹配HTML标签"></a>匹配HTML标签</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:<span class="string">".*?"</span>|<span class="string">'.*?'</span>|[\\^<span class="string">'"&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="抽取注释"><a href="#抽取注释" class="headerlink" title="抽取注释"></a>抽取注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--(.*?)--&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="查找-CSS-属性"><a href="#查找-CSS-属性" class="headerlink" title="查找 CSS 属性"></a>查找 CSS 属性</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\\s*[a-zA-Z\\-]+\\s*[:]&#123;1&#125;\\s[a-zA-Z0-9\\s.#]+[;]&#123;1&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="提取网页中所有图片信息"><a href="#提取网页中所有图片信息" class="headerlink" title="提取网页中所有图片信息"></a>提取网页中所有图片信息</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\<span class="string">"\\']&#123;0,1&#125;([^\\"</span>\\<span class="string">'\\ &gt;]*)</span></span><br></pre></td></tr></table></figure>
+<h3 id="提取-html-中的超链接"><a href="#提取-html-中的超链接" class="headerlink" title="提取 html 中的超链接"></a>提取 html 中的超链接</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="xml"><span class="tag">&lt;<span class="name">a\\s*(?!.*\\brel=)[^</span>&gt;</span>]*)(href="https?:\\/\\/)((?!(?:(?:www\\.)?'.implode('|(?:www\\.)?', $follow_list).'))[^"]+)"((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="抽取网页中的颜色代码"><a href="#抽取网页中的颜色代码" class="headerlink" title="抽取网页中的颜色代码"></a>抽取网页中的颜色代码</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^#([A-Fa-f0-9]&#123;6&#125;|[A-Fa-f0-9]&#123;3&#125;)$</span><br></pre></td></tr></table></figure>
+<h3 id="验证-windows-下文件路径和扩展名"><a href="#验证-windows-下文件路径和扩展名" class="headerlink" title="验证 windows 下文件路径和扩展名"></a>验证 windows 下文件路径和扩展名</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?<span class="string">"&lt;&gt;|]+\\.txt(l)?$</span></span><br></pre></td></tr></table></figure>
+<h3 id="提取-URL-链接"><a href="#提取-URL-链接" class="headerlink" title="提取 URL 链接"></a>提取 URL 链接</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(f|ht)&#123;<span class="number">1</span>&#125;(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?</span><br></pre></td></tr></table></figure>
+<h3 id="校验IP地址"><a href="#校验IP地址" class="headerlink" title="校验IP地址"></a>校验IP地址</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ip-v4</span></span><br><span class="line">\\b(?:(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\\.)&#123;<span class="number">3</span>&#125;(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\\b</span><br><span class="line"><span class="comment">// ip-v6</span></span><br><span class="line">(([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">7</span>,<span class="number">7</span>&#125;[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">7</span>&#125;:|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">6</span>&#125;:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">5</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">3</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">3</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">5</span>&#125;|[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:((:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">6</span>&#125;)|:((:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">1</span>,<span class="number">7</span>&#125;|:)|fe80:(:[<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">0</span>,<span class="number">4</span>&#125;)&#123;<span class="number">0</span>,<span class="number">4</span>&#125;%[<span class="number">0</span><span class="number">-9</span>a-zA-Z]&#123;<span class="number">1</span>,&#125;|::(ffff(:<span class="number">0</span>&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)&#123;<span class="number">0</span>,<span class="number">1</span>&#125;:)&#123;<span class="number">0</span>,<span class="number">1</span>&#125;((<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])\\.)&#123;<span class="number">3</span>,<span class="number">3</span>&#125;(<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])|([<span class="number">0</span><span class="number">-9</span>a-fA-F]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:)&#123;<span class="number">1</span>,<span class="number">4</span>&#125;:((<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])\\.)&#123;<span class="number">3</span>,<span class="number">3</span>&#125;(<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|(<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>]|<span class="number">1</span>&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>])&#123;<span class="number">0</span>,<span class="number">1</span>&#125;[<span class="number">0</span><span class="number">-9</span>]))</span><br></pre></td></tr></table></figure>
+<h3 id="判断-IE-的版本"><a href="#判断-IE-的版本" class="headerlink" title="判断 IE 的版本"></a>判断 IE 的版本</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^.*MSIE [<span class="number">5</span><span class="number">-8</span>](?:\\.[<span class="number">0</span><span class="number">-9</span>]+)?(?!.*Trident\\/[<span class="number">5</span><span class="number">-9</span>]\\<span class="number">.0</span>).*$</span><br></pre></td></tr></table></figure>
+<h3 id="校验手机号"><a href="#校验手机号" class="headerlink" title="校验手机号"></a>校验手机号</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(<span class="number">13</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">14</span>[<span class="number">5</span>|<span class="number">7</span>]|<span class="number">15</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>]|<span class="number">18</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>])\\d&#123;<span class="number">8</span>&#125;$</span><br></pre></td></tr></table></figure>
+<h3 id="校验金额"><a href="#校验金额" class="headerlink" title="校验金额"></a>校验金额</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[<span class="number">0</span><span class="number">-9</span>]+(.[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;)?$</span><br></pre></td></tr></table></figure>
+
+<h3 id="校验身份证号码"><a href="#校验身份证号码" class="headerlink" title="校验身份证号码"></a>校验身份证号码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 15位</span></span><br><span class="line">^[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">7</span>&#125;((<span class="number">0</span>\\d)|(<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>]))(([<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>]\\d)|<span class="number">3</span>[<span class="number">0</span><span class="number">-1</span>])\\d&#123;<span class="number">3</span>&#125;$</span><br><span class="line"><span class="comment">// 18位</span></span><br><span class="line">^[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">5</span>&#125;[<span class="number">1</span><span class="number">-9</span>]\\d&#123;<span class="number">3</span>&#125;((<span class="number">0</span>\\d)|(<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>]))(([<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>]\\d)|<span class="number">3</span>[<span class="number">0</span><span class="number">-1</span>])\\d&#123;<span class="number">3</span>&#125;([<span class="number">0</span><span class="number">-9</span>]|X)$</span><br></pre></td></tr></table></figure>
+<h3 id="校验日期"><a href="#校验日期" class="headerlink" title="校验日期"></a>校验日期</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?:(?!<span class="number">0000</span>)[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">4</span>&#125;-(?:(?:<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>])-(?:<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-8</span>])|(?:<span class="number">0</span>[<span class="number">13</span><span class="number">-9</span>]|<span class="number">1</span>[<span class="number">0</span><span class="number">-2</span>])-(?:<span class="number">29</span>|<span class="number">30</span>)|(?:<span class="number">0</span>[<span class="number">13578</span>]|<span class="number">1</span>[<span class="number">02</span>])<span class="number">-31</span>)|(?:[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;(?:<span class="number">0</span>[<span class="number">48</span>]|[<span class="number">2468</span>][<span class="number">048</span>]|[<span class="number">13579</span>][<span class="number">26</span>])|(?:<span class="number">0</span>[<span class="number">48</span>]|[<span class="number">2468</span>][<span class="number">048</span>]|[<span class="number">13579</span>][<span class="number">26</span>])<span class="number">00</span>)<span class="number">-02</span><span class="number">-29</span>)$</span><br></pre></td></tr></table></figure>
+<h3 id="校验-mail地址"><a href="#校验-mail地址" class="headerlink" title="校验 mail地址"></a>校验 mail地址</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[\\w!#$%&amp;'*+/=?^_`&#123;|&#125;~-]+(?:\\.[\\w!#$%&amp;'*+/=?^_`&#123;|&#125;~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?</span><br></pre></td></tr></table></figure>
+<h3 id="由数字、26-个英文字母或下划线组成的字符串"><a href="#由数字、26-个英文字母或下划线组成的字符串" class="headerlink" title="由数字、26 个英文字母或下划线组成的字符串"></a>由数字、26 个英文字母或下划线组成的字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\\w+$</span><br></pre></td></tr></table></figure>
+<h3 id="校验中文"><a href="#校验中文" class="headerlink" title="校验中文"></a>校验中文</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[\\u4e00-\\u9fa5]&#123;<span class="number">0</span>,&#125;$</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Regular/" rel="tag"># Regular</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Window/Window-Window%E4%B8%8B%E5%B0%86%E8%84%9A%E6%9C%AC%E6%88%96%E7%A8%8B%E5%BA%8F%E6%B3%A8%E5%86%8C%E6%88%90%E6%9C%8D%E5%8A%A1.html" rel="next" title="Window下将脚本注册成服务">
+                <i class="fa fa-chevron-left"></i> Window下将脚本注册成服务
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/MySQL/MySQL-ERROR-01.html" rel="prev" title="The server time zone value 'CST' is unrecognized or represents more than one time zone.">
+                The server time zone value 'CST' is unrecognized or represents more than one time zone. <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="Regular/Regular-常用的正则表达式.html"
+           data-title="常用的正则表达式" data-url="http://blog.freeabyss.science/Regular/Regular-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="Abyss" />
+            
+              <p class="site-author-name" itemprop="name">Abyss</p>
+              <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配HTML标签"><span class="nav-number">1.</span> <span class="nav-text">匹配HTML标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽取注释"><span class="nav-number">2.</span> <span class="nav-text">抽取注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找-CSS-属性"><span class="nav-number">3.</span> <span class="nav-text">查找 CSS 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取网页中所有图片信息"><span class="nav-number">4.</span> <span class="nav-text">提取网页中所有图片信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取-html-中的超链接"><span class="nav-number">5.</span> <span class="nav-text">提取 html 中的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽取网页中的颜色代码"><span class="nav-number">6.</span> <span class="nav-text">抽取网页中的颜色代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证-windows-下文件路径和扩展名"><span class="nav-number">7.</span> <span class="nav-text">验证 windows 下文件路径和扩展名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取-URL-链接"><span class="nav-number">8.</span> <span class="nav-text">提取 URL 链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验IP地址"><span class="nav-number">9.</span> <span class="nav-text">校验IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断-IE-的版本"><span class="nav-number">10.</span> <span class="nav-text">判断 IE 的版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验手机号"><span class="nav-number">11.</span> <span class="nav-text">校验手机号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验金额"><span class="nav-number">12.</span> <span class="nav-text">校验金额</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验身份证号码"><span class="nav-number">13.</span> <span class="nav-text">校验身份证号码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验日期"><span class="nav-number">14.</span> <span class="nav-text">校验日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验-mail地址"><span class="nav-number">15.</span> <span class="nav-text">校验 mail地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#由数字、26-个英文字母或下划线组成的字符串"><span class="nav-number">16.</span> <span class="nav-text">由数字、26 个英文字母或下划线组成的字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验中文"><span class="nav-number">17.</span> <span class="nav-text">校验中文</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

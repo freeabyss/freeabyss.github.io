@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Math,note,Discrete Mathematics," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="引言复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。 逻辑等价在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。用如下定义这一概念：    如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。 符号$\equiv$不是逻辑链接符，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Math-DM-02-逻辑等价">
+<meta property="og:url" content="http://blog.freeabyss.science/Math/Math-DM-02-%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7.html">
+<meta property="og:site_name" content="Abyss&#39;s blog">
+<meta property="og:description" content="引言复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。 逻辑等价在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。用如下定义这一概念：    如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。 符号$\equiv$不是逻辑链接符，">
+<meta property="article:published_time" content="2016-11-26T08:58:58.000Z">
+<meta property="article:modified_time" content="2020-02-26T14:51:27.218Z">
+<meta property="article:author" content="Abyss">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="Discrete Mathematics">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.freeabyss.science/Math/Math-DM-02-逻辑等价.html"/>
+
+
+
+
+
+  <title>Math-DM-02-逻辑等价 | Abyss's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Abyss's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Java程序员</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.freeabyss.science/Math/Math-DM-02-%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abyss">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Abyss's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Math-DM-02-逻辑等价</h1>
+        
+        
+        <div class="post-meta">
+        
+         
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-26T16:58:58+08:00">
+                2016-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Math/Math-DM-02-%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Math/Math-DM-02-逻辑等价.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>复合命题中如果无论其中出现的命题的真值是什么，它的真值总是真，称为永真式。真值永远为假的复合命题称为矛盾。最后，既不是永真式又不是矛盾的命题称为可能式。</p>
+<h3 id="逻辑等价"><a href="#逻辑等价" class="headerlink" title="逻辑等价"></a>逻辑等价</h3><p>在所有可能的情况下都有相同真值的两个复合命题称为逻辑等价。用如下定义这一概念：  </p>
+<ul>
+<li>如果$p↔︎q$是永真式。命题$p$和$q$称为逻辑等价的。记作$p\equiv q$，有时也记作$p⇔q$。<blockquote>
+<p>符号$\equiv$不是逻辑链接符，因为$p\equiv q$不是复合命题。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="摩根定律及应用"><a href="#摩根定律及应用" class="headerlink" title="摩根定律及应用"></a>摩根定律及应用</h2><p>$\mathbf T$表示永远为真的复合命题，$\mathbf F$表示永远为假的复合命题。</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">等价关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">摩根定律</td>
+<td align="left">$\lnot (p\land q) \equiv \lnot p \lor \lnot q$ <br> $\lnot (p\lor q) \equiv \lnot p \land \lnot q$</td>
+</tr>
+<tr>
+<td align="left">恒等律</td>
+<td align="left">$p\land \mathbf T \equiv p$ <br> $p\lor \mathbf F \equiv p$</td>
+</tr>
+<tr>
+<td align="left">支配律</td>
+<td align="left">$p\lor \mathbf T \equiv \mathbf T$ <br> $p\land \mathbf F \equiv \mathbf F$</td>
+</tr>
+<tr>
+<td align="left">幂等律</td>
+<td align="left">$p\land p \equiv p$ <br> $p\lor p \equiv p$</td>
+</tr>
+<tr>
+<td align="left">双非律</td>
+<td align="left">$\lnot(\lnot p) \equiv p$</td>
+</tr>
+<tr>
+<td align="left">交换律</td>
+<td align="left">$p\lor q \equiv q\lor p$ <br> $p\land q\equiv q\land p$</td>
+</tr>
+<tr>
+<td align="left">结合律</td>
+<td align="left">$(p\lor q)\lor r\equiv p\lor (q\lor r)$ <br> $(p\land q)\land r\equiv p\land (q\land r)$</td>
+</tr>
+<tr>
+<td align="left">分配律</td>
+<td align="left">$p\lor(q\land r) \equiv (p\lor q)\land (p\lor r)$ <br> $p\land (q\lor r) \equiv (p\land q)\lor (p\land r)$</td>
+</tr>
+<tr>
+<td align="left">吸收律</td>
+<td align="left">$p\lor (p\land q)\equiv p$ <br> $p\land (p\lor q)\equiv p$</td>
+</tr>
+<tr>
+<td align="left">否定律</td>
+<td align="left">$p\lor \lnot p\equiv \mathbf T$<br> $p\land \lnot p\equiv \mathbf F$</td>
+</tr>
+</tbody></table>
+<h3 id="涉及条件语句的逻辑等价"><a href="#涉及条件语句的逻辑等价" class="headerlink" title="涉及条件语句的逻辑等价"></a>涉及条件语句的逻辑等价</h3><table>
+<thead>
+<tr>
+<th align="left">等价关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$p\rightarrow q\equiv \lnot p\lor q $</td>
+</tr>
+<tr>
+<td align="left">$p\rightarrow q\equiv \lnot q\rightarrow \lnot p$</td>
+</tr>
+<tr>
+<td align="left">$p\lor q\equiv \lnot p\rightarrow q$</td>
+</tr>
+<tr>
+<td align="left">$p\land q\equiv \lnot(p\rightarrow \lnot q) $</td>
+</tr>
+<tr>
+<td align="left">$\lnot(p\rightarrow q)\equiv p\land \lnot q $</td>
+</tr>
+<tr>
+<td align="left">$(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r) $</td>
+</tr>
+<tr>
+<td align="left">$(p\rightarrow r)\land (q\rightarrow r)\equiv (p\lor q)\rightarrow r $</td>
+</tr>
+<tr>
+<td align="left">$(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r) $</td>
+</tr>
+<tr>
+<td align="left">$(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$</td>
+</tr>
+</tbody></table>
+<h3 id="涉及双条件语句的逻辑等价"><a href="#涉及双条件语句的逻辑等价" class="headerlink" title="涉及双条件语句的逻辑等价"></a>涉及双条件语句的逻辑等价</h3><table>
+<thead>
+<tr>
+<th align="left">等价关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$p↔︎q \equiv (p\rightarrow q)\land (q\rightarrow p) $</td>
+</tr>
+<tr>
+<td align="left">$p↔︎q \equiv \lnot p↔︎ \lnot q $</td>
+</tr>
+<tr>
+<td align="left">$p↔︎q \equiv (p \land q)\lor (\lnot p\land \lnot q) $</td>
+</tr>
+<tr>
+<td align="left">$\lnot (p↔︎q) \equiv p↔︎\lnot q $</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Math/" rel="tag"># Math</a>
+          
+            <a href="/tags/note/" rel="tag"># note</a>
+          
+            <a href="/tags/Discrete-Mathematics/" rel="tag"># Discrete Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/Math-DM-01-%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91.html" rel="next" title="Math-DM-01-基本逻辑">
+                <i class="fa fa-chevron-left"></i> Math-DM-01-基本逻辑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/Math-DM-03-%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91.html" rel="prev" title="Math-DM-03-谓词逻辑">
+                Math-DM-03-谓词逻辑 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="Math/Math-DM-02-逻辑等价.html"
+           data-title="Math-DM-02-逻辑等价" data-url="http://blog.freeabyss.science/Math/Math-DM-02-%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7.html">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="Abyss" />
+            
+              <p class="site-author-name" itemprop="name">Abyss</p>
+              <p class="site-description motion-element" itemprop="description">分享我的读书笔记和经验总结</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑等价"><span class="nav-number">1.1.</span> <span class="nav-text">逻辑等价</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#摩根定律及应用"><span class="nav-number">2.</span> <span class="nav-text">摩根定律及应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#涉及条件语句的逻辑等价"><span class="nav-number">2.1.</span> <span class="nav-text">涉及条件语句的逻辑等价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#涉及双条件语句的逻辑等价"><span class="nav-number">2.2.</span> <span class="nav-text">涉及双条件语句的逻辑等价</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abyss</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"freeabyss"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

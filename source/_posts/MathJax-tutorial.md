@@ -44,9 +44,9 @@ categories: MathJax
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |\land|\lor|\lnot|\forall|\exists|\top|\bot|\vdash|\vDash|
 
-|$\star$|$\ast$|$\oplus$|$\circ$|$\bullet$|
-|:-----:|:----:|:------:|:-----:|:-------:|
-|\star|\ast|\oplus|\circ|\bullet|
+|$\star$|$\ast$|$\oplus$|$\circ$|$\bullet$|$\odot$|
+|:-----:|:----:|:------:|:-----:|:-------:|:---:|
+|\star|\ast|\oplus|\circ|\bullet|\odot|
 
 |$\approx$|$\sim$|$\simeq$|$\cong$|$\equiv$|$\prec$|$\lhd$|
 |:-------:|:----:|:------:|:-----:|:------:|:-----:|:----:|
@@ -56,9 +56,9 @@ categories: MathJax
 |:------:|:--------:|:------:|:--------:|:---:|:---:|
 |\infty|\aleph_0|\nabla|\partial|\Im|\Re|
 
-|$\ldots$|$\ell$|$\epsilon$|$\varepsilon$|$\varphi$|
-|:------:|:----:|:--------:|:-----------:|:-------:|
-|\ldots|\ell|\epsilon|\varepsilon|\varphi|
+|$\ldots$|$\ell$|$\epsilon$|$\varepsilon$|$\varphi$|$\lceil x \rceil$|$\lfloor x \rfloor$|
+|:------:|:----:|:--------:|:-----------:|:-------:|:----------------|:--|
+|\ldots|\ell|\epsilon|\varepsilon|\varphi|\lceil x \rceil|\lfloor x \rfloor|
 
 
 ### 字体
@@ -76,7 +76,8 @@ categories: MathJax
 $$A_i\cap A_2\cap \cdots\cap A_n=\underset{i=1}{\overset{n}\bigcap}A_i$$
 `A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i`
 $$A_1\cup A_2\cup \cdots\cup A_n=\underset{i=1}{\overset{n}\bigcup}A_i$$
-```shell
+
+```math
 \begin{align}
 \overline {A\cap B} &= \{x\mid x\notin A\cap B\} \\
 &   =\{x\mid \lnot(x\in(A\cap B))\} \\
@@ -100,4 +101,40 @@ $$ \begin{align}
 \end{align}
 $$
 
+```math
+f(n) =
+\begin{cases}
+\frac{n}{2},  & \text{if $n$ is even} \\
+3n+1, & \text{if $n$ is odd}
+\end{cases}
+```
+$$
+f(n) =
+\begin{cases}
+\frac{n}{2},  & \text{if $n$ is even} \\
+3n+1, & \text{if $n$ is odd}
+\end{cases}
+$$
+
+```math
+(x+y)^n=\sum_{j=0}^n\left(\begin{array}{c}n \\r\end{array}\right)x^{n-1}y^i
+```
+$$(x+y)^n=\sum_{j=0}^n\left(\begin{array}{c}n \\r\end{array}\right)x^{n-1}y^i$$
+
+```math
+\left(
+    \begin{array}{c}
+    n \\
+    r
+    \end{array}
+\right)
+```
+$$\left(\begin{array}{c}n \\r\end{array}\right)$$
+
+```math
+f(x)=\begin{cases}x^2+5\qquad x<0\\
+x^3+5x+6\qquad x>0 \end{cases}
+```
+$$f(x)=\begin{cases}x^2+5\qquad x<0\\
+x^3+5x+6\qquad x>0 \end{cases}$$
 [更多](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)

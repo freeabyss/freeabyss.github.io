@@ -4,8 +4,8 @@
 
 # Site
 title: Abyss's blog
-subtitle: 随笔
-description: 读书笔记和个人总结
+subtitle: Java程序员
+description: 分享我的读书笔记和经验总结
 author: Abyss
 language: zh-Hans
 timezone: Asia/Shanghai
@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.freeabyss.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title.html
 permalink_defaults:
 
 # Directory
@@ -37,11 +37,13 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+auto_spacing : true
 highlight:
   enable: true
   line_number: true
   auto_detect: false
   tab_replace:
+plugins: hexo-math
 
 # Category & Tag
 default_category: uncategorized

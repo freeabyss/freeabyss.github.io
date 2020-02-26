@@ -24,4 +24,16 @@ categories: JavaScript
 |[noodle](https://itunes.apple.com/cn/app/noodle/id1048842988?mt=12&ign-mpt=uo%3D8) |SSH 连接工具|Mac|
 |[Minity](https://minifyapp.com/)|代码压缩 |Mac|
 |AVPlayer| 视频播放器，可通过FTP，web等多种方式播放视频| iOS|
+|[Aria2](https://aria2.github.io/)|实现百度云、迅雷离线满速下载| Window, Mac, iOS|
+
+
+## Chrome 插件
+|名称|描述|
+|:--|:--|
+|[Simple Blocker](https://chrome.google.com/webstore/detail/simple-blocker/akfbkbiialncppkngofjpglbbobjoeoe/related) | 禁止浏览器访问指定的软件|
+|Evernote Web Clipper | 收藏网页内容至印象笔记|
+|[Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc/related?hl=ja) | 方便查看github项目中的文件    |
+|[Page Ruler](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc/related?hl=ja)|网页标尺，查看尺寸|
+|[BuiltWith Technology Profiler](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn?hl=zh-CN)|查看网站用了那些技术|
+|[Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf)|增强Github体验，方便下载文件|
 

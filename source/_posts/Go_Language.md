@@ -156,89 +156,9 @@ go get golang.org/x/sync/semaphore
 
 对于一个独立的程序来说，命令源码文件有且只能有一个。 
 
-#### 命令源码文件如何接受参数
-
-Go 语言标准库中有一个代码包专门用于接收和解析命令参数，这个代码包叫做`flag`。
-
-```go
-
-import (
-    "flag"
-    "fmt"
-)
-var name string
-func init() {
-    flag.StringVar(&name, "name", "everyone", "The greeting object.")
-}
-func main() {
-    flag.Parse()
-    fmt.Printf("Hello , %s!\n", name)
-}
-
-```
-
-可以使用`help`查看参数说明 。 `go run demo.go --help`。
-
-`go build demo.go` 在当前目录下构建一个可执行文件。 
-
-`go run demo.go` 也会先构建一个可执行文件放在临时目录，然后执行该文件。
-
-### 自定义命令源码文件的参数说明
-
-#### 使用 flag.Usage
-
-```go
-
-flag.Usage = func() {
-
-    fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
-
-    flag.PrintDefaults()
-
-}
-
-```
-
-该代码要放在`flag.Parse()`之前，当 运行`go run demo.go --help`时，`Fprintf`的内容将输出到终端上。 
-
-#### flag.CommandLine
-
-我们调用`flag`包的一些函数的时候，实际上是在调用`flag.CommandLine`变量的对应方法。对`flag.CommandLine`重新赋值可以更深层次的定制当前命令源码文件的参数说明。 在`init()`函数开始处添加以下代码：
-
-```go
-
-    flag.CommandLine = flag.NewFlagSet("", flag.ExitOnError)
-    flag.CommandLine.Usage = func() {
-        fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
-        flag.PrintDefaults()
-    }
-
-```
-
 
 
 ### 私有的命令参数容器
-
-好处是保留了定制命令参数容器的灵活性，且不会影响全局变量`flag.CommandLine`
-
-```go
-
-package main
-import (
-    "flag"
-    "fmt"
-    "os"
-)
-var name string
-var cmdLine = flag.NewFlagSet("question", flag.ExitOnError)
-func init() {
-    cmdLine.StringVar(&name, "name", "everyone", "The greeting object.")
-}
-func main() {
-    cmdLine.Parse(os.Args[1:])
-    fmt.Printf("Hello , %s!\n", name)
-}
-```
 
 
 
@@ -1090,63 +1010,61 @@ distance := Point.Distance // 方法表达式
 fmt.Println(distance(p, q))
 ```
 
-
-
 ## 接口
 
-* 接口类型是由一组方法签名定义的集合。接口类型变量可以保存任何实现这些方法的值。
+接口类型是对其他类型行为的概括和抽象。通过接口可以写出更加灵活和通用的函数，这些函数不必绑定在特定的类型实现上。
 
-* 类型通过实现一个接口的所有方法来实现该接口。
+Golang 的接口是隐式实现的，对于一个具体类型，无须声明它实现了哪些接口，只要提供接口所必须的方法即可。
 
 ```go
-type I interface {
-    M()
-    L()
-}
-type T struct {
-    S string
-}
-// 此方法表示类型 T 实现了接口 I，但我们无需显式声明此事。
-func (t *T) M() {
-    fmt.Println(t.S)
-    t.S = "M"
-}
-func (t *T) L() {
-    fmt.Println("L = " + t.S)
-}
-func main() {
-    i:= T{"hello"}
-    i.M()
-    i.L()
+type Writer interface {
+  Write(p []byte)(n int, err error)
 }
 ```
+
+与结构体类似，接口也可以通过组合已有接口得到新的接口。
+
+```go
+type ReadWriter interface {
+  Reader
+  Writer
+}
+```
+
+一个具体类型通过实现一个接口的所有方法来实现该接口。仅当一个表达式实现了一个接口时，这个表达式才可以赋给该接口。
+
+`interface{}`空接口类型不包含任何实现，所以任何值都可以赋给空接口类型。
+
+断言某个类型实现了每个接口
+
+```go
+var _ io.Writer = (*bytes.Buffer)(nil)
+```
+
+### 接口值
+
+一个接口类型的值分为两部分，一个具体类型和该类型的值，称为接口的动态类型和动态值。
+
+类型描述符提供每个类型的具体信息，包含它的名称和方法。
+
+```go
+var w io.Writer //动态类型和值都设为 nil
+w = os.Stdout 
+
+```
+
+赋值把一个具体类型隐式转换为一个接口类型，与显示转换`io.Writer(os.Stdout) `等价。接口值的动态类型会设置为指针类型`*os.File`的类型描述符，它的动态值会设置为`os.Stdout`的副本，即一个指向代表进程的标准输出的`os.File`类型的指针。
+
+
 
 * 在内部，接口值可以看做包含值和具体类型的元组。接口值保存了一个具体类型的具体值。接口调用方法时会执行其底层的同名方法。
-
 * 即便接口内的具体值为`nil`，方法依然会被`nil`接受者调用不会触发空指针异常。
-
-```go
-
-func main() {
-    var i I
-    var t *T
-    i = t
-     fmt.Printf("(%v, %T)\n", i, i) //(<nil>, *main.T)
-
-    i.M()  //<nil>
-
-    i = &T{"hello"}
-    describe(i)
-    i.M()
-}
-
-```
 
 * 接口的具体值和具体类型都为`nil`的话，调用方法会抛出异常。
 
 * 指定零个方法的接口值被称为空接口，空接口可保存任何类型的值。
 
-* 类型断言提供了访问接口值底层具体值的方式。 `t := i.(T)
+* 类型断言提供了访问接口值底层具体值的方式。 `t := i.(T)`
 
 ```go
 
@@ -1201,4 +1119,74 @@ v := <-ch // 从 ch 接收值并赋予 v。
 
 * 信道使用前必须创建，`ch := make(chan int)`
 * 信道两端未准备好之前是阻塞的，可设置信道的缓冲，缓冲区填满后才会阻塞。缓冲区为空时，接收方会阻塞。
+
+## 标准库
+
+### flag
+
+Go 语言标准库中有一个代码包专门用于接收和解析命令参数，这个代码包叫做`flag`。
+
+```go
+import (
+    "flag"
+    "fmt"
+)
+var name string
+func init() {
+    flag.StringVar(&name, "name", "everyone", "The greeting object.")
+}
+func main() {
+    flag.Parse()
+    fmt.Printf("Hello , %s!\n", name)
+}
+
+```
+
+#### 使用 flag.Usage
+
+```go
+flag.Usage = func() {
+
+    fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
+
+    flag.PrintDefaults()
+
+}
+
+```
+
+该代码要放在`flag.Parse()`之前，当 运行`go run demo.go --help`时，`Fprintf`的内容将输出到终端上。 
+
+#### flag.CommandLine
+
+我们调用`flag`包的一些函数的时候，实际上是在调用`flag.CommandLine`变量的对应方法。对`flag.CommandLine`重新赋值可以更深层次的定制当前命令源码文件的参数说明。 在`init()`函数开始处添加以下代码：
+
+```go
+    flag.CommandLine = flag.NewFlagSet("", flag.ExitOnError)
+    flag.CommandLine.Usage = func() {
+        fmt.Fprintf(os.Stderr, "Usage of %s:\n", "question")
+        flag.PrintDefaults()
+    }
+
+```
+
+好处是保留了定制命令参数容器的灵活性，且不会影响全局变量`flag.CommandLine`
+
+```go
+package main
+import (
+    "flag"
+    "fmt"
+    "os"
+)
+var name string
+var cmdLine = flag.NewFlagSet("question", flag.ExitOnError)
+func init() {
+    cmdLine.StringVar(&name, "name", "everyone", "The greeting object.")
+}
+func main() {
+    cmdLine.Parse(os.Args[1:])
+    fmt.Printf("Hello , %s!\n", name)
+}
+```
 
